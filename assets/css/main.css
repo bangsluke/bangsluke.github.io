@@ -2635,6 +2635,7 @@
 	padding: 0 0 1em 0;
 	opacity: 1;
 	filter: none;
+	color: rgba(0, 0, 0, 0.65);
 	-moz-transition: opacity 1s ease, -moz-filter 1s ease;
 	-webkit-transition: opacity 1s ease, -webkit-filter 1s ease;
 	-ms-transition: opacity 1s ease, -ms-filter 1s ease;
