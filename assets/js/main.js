@@ -47,3 +47,21 @@ $(function() {
 		});
 
 });
+
+// Search box
+// JavaScript for reacting to the user pressing Enter.
+// https://stackoverflow.com/questions/7060750/detect-the-enter-key-in-a-text-input-field
+// e.key is the modern way of detecting keys
+// e.keyCode is deprecated (left here for for legacy browsers support)
+// keyup is not compatible with Jquery select(), Keydown is.
+$(".searchbox").on('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+		// Get the string that the user searched for.
+		var searchString = document.getElementById('SearchBox').value;
+		// Modify the string to make it a search query in Ecosia.
+		var searchURL = 'https://www.ecosia.org/search?q=' + searchString;
+		// Load the search URL in the current window.
+		window.location.href = searchURL;
+    }
+});
+
