@@ -52,6 +52,9 @@ header {
 
 nav {
     background-color: var(--accent-color-blue, grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 nav ul {
