@@ -1,0 +1,80 @@
+/* CodeLearningPage Styling Guide. */
+/* The main css style file used for the Code Learning Page styling. */
+
+/*
+Key CSS Notes:
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+*/
+
+/*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #2a3950;
+    /*CSS variable*/
+    --accent-color-blue: #41436A;
+    /*CSS variable*/
+    --accent-color-darkred: #974063;
+    /*CSS variable*/
+    --accent-color-red: #f54768;
+    /*CSS variable*/
+    --accent-color-orange: #ff9678;
+    /*CSS variable*/
+    --accent-color-green: #99b998;
+    /*CSS variable*/
+    --accent-color-white: #ffffff;
+    /*CSS variable*/
+    --main-font-family: 'Calibri', sans-serif;
+    /*CSS variable*/
+    line-height: 15px;
+}
+
+/*Main page background colour*/
+
+body {
+    background-color: var(--main-style-color, black);
+    font-family: sans-serif;
+    /*For older browsers*/
+    font-family: var(--main-font-family, sans-serif);
+    z-order: 0;
+}
+
+/*Styling for all images on page*/
+
+img {
+    width: auto;
+    height: 100px;
+    border: 10px sold white;
+}
+
+/*Styling for images on hover over*/
+
+.img:hover {
+    max-width: 100%;
+    height: auto;
+    border: 10px sold white;
+    /*transform: scale(1.1)*/
+    ;
+}
+
+/*Text styling*/
+
+h1 {
+    font-size: 40pt;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--accent-color-white, white);
+}
+
+h2 {
+    font-size: 30pt;
+    font-weight: 400;
+    color: var(--accent-color-orange, white);
+}
+
+h3 {
+    font-size: 20pt;
+    font-weight: 400;
+    color: var(--accent-color-green, white);
+}

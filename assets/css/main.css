@@ -1,3 +1,6 @@
+/* Main Styling Guide. */
+/* The main css style file used for all Website styling. */
+
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
@@ -1872,8 +1875,16 @@
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
-		margin: 0 0 1em 0;
+		margin: 0 0 0 0;
 	}
+
+		@media screen and (max-width: 736px) {
+
+			.icon {
+				margin: 0 0 1em 0;
+			}
+
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
