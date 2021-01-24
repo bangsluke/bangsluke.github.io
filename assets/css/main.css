@@ -1872,6 +1872,7 @@
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		margin: 0 0 1em 0;
 	}
 
 		.icon:before {
@@ -2392,6 +2393,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-wrap: wrap;
 		-moz-flex-direction: row;
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
@@ -2571,7 +2573,6 @@
 		padding: 0;
 		opacity: 1;
 		filter: none;
-		wrap: "hard";
 		-moz-transition: opacity 1s ease, -moz-filter 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-filter 1s ease;
 		-ms-transition: opacity 1s ease, -ms-filter 1s ease;
