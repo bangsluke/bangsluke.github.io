@@ -26,7 +26,7 @@ body {
     font-family: sans-serif;
     /*For older browsers*/
     font-family: var(--main-font-family, sans-serif);
-    z-order: 0;
+    z-index: 0;
 }
 
 /*Main left/right ids*/
@@ -135,6 +135,7 @@ a:active {
 
 #nav-bar {
     color: var(--main-accent-color, black);
+    display: inline;
     animation: appear 5s;
     animation-fill-mode: forwards;
 }

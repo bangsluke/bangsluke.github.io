@@ -38,7 +38,31 @@ body {
     font-family: sans-serif;
     /*For older browsers*/
     font-family: var(--main-font-family, sans-serif);
-    z-order: 0;
+    z-index: 0;
+}
+
+/* Top header */
+
+header {
+    background-color: var(--accent-color-blue, grey);
+    color: #FFFFFF;
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: var(--accent-color-blue, grey);
+}
+
+nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+    color: white;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
 }
 
 /*Styling for all images on page*/
@@ -66,21 +90,18 @@ h1 {
     font-weight: 400;
     text-transform: uppercase;
     color: var(--accent-color-white, white);
-    text-decoration: none! important;
 }
 
 h2 {
     font-size: 30pt;
     font-weight: 400;
     color: var(--accent-color-orange, white);
-    text-decoration: none! important;
 }
 
 h3 {
     font-size: 20pt;
     font-weight: 400;
     color: var(--accent-color-green, white);
-    text-decoration: none! important;
 }
 
 p {
