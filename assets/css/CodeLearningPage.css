@@ -1,4 +1,5 @@
 /* CodeLearningPage Styling Guide. */
+
 /* The main css style file used for the Code Learning Page styling. */
 
 /*
@@ -65,16 +66,62 @@ h1 {
     font-weight: 400;
     text-transform: uppercase;
     color: var(--accent-color-white, white);
+    text-decoration: none! important;
 }
 
 h2 {
     font-size: 30pt;
     font-weight: 400;
     color: var(--accent-color-orange, white);
+    text-decoration: none! important;
 }
 
 h3 {
     font-size: 20pt;
     font-weight: 400;
     color: var(--accent-color-green, white);
+    text-decoration: none! important;
+}
+
+p {
+    font-size: 12pt;
+    font-weight: 400;
+    color: white;
+}
+
+.CodeTypeSection {
+    padding: 0 0 1em 0;
+}
+
+footer {
+    font-size: 12pt;
+    font-weight: 400;
+    text-align: center;
+    color: var(--accent-color-white, white);
+}
+
+/* Hyperlink Formatting */
+
+a {
+    color: var(--accent-color-orange, white);
+}
+
+a:link {
+    /* normal link */
+    color: var(--accent-color-orange, white);
+}
+
+a:visited {
+    /* visited link */
+    color: var(--accent-color-darkred, white);
+}
+
+a:hover {
+    /* hover over link */
+    color: var(--accent-color-red, white);
+}
+
+a:active {
+    /* selected link */
+    color: var(--accent-color-red, white);
 }
