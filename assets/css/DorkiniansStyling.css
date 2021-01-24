@@ -1,4 +1,5 @@
 /* Dorkinians Styling Guide. */
+
 /* The main css style file used for all Dorkinians Website styling. */
 
 /* 
@@ -72,6 +73,18 @@ p {
     height: 200px;
 }
 
+button {
+    margin-top: 30px;
+    float: left;
+    height: 20px;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 .section {
     background-color: #1c8841;
     padding: 15px;
@@ -101,7 +114,7 @@ p {
 
 #header {
     background-color: #1c8841;
-    /* background-image: url("https://pbs.twimg.com/media/C-us83nXoAERQmV.jpg"); */
+    /* <--! background-image: url("https://pbs.twimg.com/media/C-us83nXoAERQmV.jpg"); --> */
     background-size: cover;
 }
 

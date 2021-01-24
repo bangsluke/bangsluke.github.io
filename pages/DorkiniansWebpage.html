@@ -5,160 +5,169 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Old Dorkinian FC</title>
-        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
-        
-        <!-- Link to CSS styling -->
-		<!-- Starting with "/" moves back to root directory. -->
-		<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-		<link rel="stylesheet" href="/assets/css/DorkiniansStyling.css" />
 
-	</head>
-	
-	<body>
+<head>
+	<title>Old Dorkinian FC</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="functions.js"></script>
+
+	<!-- Add a Navigation bar section like here: 
+		https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/adjust-the-tone-of-a-color
+		-->
+
+</head>
+
+<body>
+	<div id="header" class="headersection">
 		<!-- header start -->
-		<div id="header" class="headersection">
-			<a href="#" target="_blank">
-					<img alt="" class="img-circle" src="https://pbs.twimg.com/profile_images/781928814964273152/AmqCuXBP.jpg"/>
-			</a>
-			<!-- "https://code.sololearn.com/Icons/Avatars/0.jpg" -->
-			<h2>Old Dorkinian FC</h2>
-		</div>
-		<!-- header end -->
-		
+		<a href="#" target="_blank">
+			<img alt="Dorkinians Logo" class="img-circle" src="https://i.imgur.com/bzeHl4g.png" />
+		</a>
+		<!-- "https://code.sololearn.com/Icons/Avatars/0.jpg" -->
+		<h2>Dorkinian FC</h2>
+	</div> <!-- header end -->
+
+	<div class="section">
+		<button onclick="prev()"> Prev </button>
+		<img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" />
+		<button onclick="next()"> Next </button>
+	</div>
+
+	<div class="section">
 		<!-- About Me section start -->
-		<div class="section">
-			<h1><span>About ODs</span></h1>
-			<p align="center">
-				 <Strong> Dorkinian F.C. </Strong> <br> Pixham Lane Sports Club <br> Pixham Lane <br> Dorking <br> Surrey <br> RH4 1PQ <br> View with Google Maps <br>  Tel: 01306 889728
-			</p>
-			<br>
-			<a href="http://www.dorkiniansfc.co.uk/photos/" target="_blank">
-					<img align="center" alt="" class="img-circle" height="20 px" src="http://www.free-icons-download.net/images/digital-camera-icon-77736.png"/>
-			</a>
-			<p class="quote">"#ForzaODs"</p>
-		</div>
-		<!-- About Me section end -->
-		
+		<h1><span>About ODs</span></h1>
+		<p align="center">
+			<Strong> Dorkinian F.C. </Strong> <br> Pixham Lane Sports Club <br> Pixham Lane <br> Dorking <br> Surrey
+			<br> RH4 1PQ <br> View with Google Maps <br>  Tel: 01306 889728
+		</p>
+		<br>
+		<a href="http://www.dorkiniansfc.co.uk/photos/" target="_blank">
+			<img align="center" alt="" class="img-circle" height="20 px"
+				src="http://www.free-icons-download.net/images/digital-camera-icon-77736.png" />
+		</a>
+		<p class="quote">"#ForzaODs"</p>
+	</div> <!-- About Me section end -->
+
+	<div class="section">
 		<!-- Team Links section start -->
-		<div class="section">
-			<h1><span>Old Dorkinian F.C. Squads</span></h1>
-			<p>
-				 <strong> 1st XI </strong> - Est. 1930 <a class="hyperlinktext" align="center" href="http://www.dorkiniansfc.co.uk/teams/106922" target="_blank"> Team Page </a> <br>
-				 <strong> 2nd XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107143" target="_blank"> Team Page </a> <br>
-				 <strong> 3rd XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107144" target="_blank"> Team Page </a> <br>
-				 <strong> 4th XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107145" target="_blank"> Team Page </a> <br>
-				 <strong> 5th XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107146" target="_blank"> Team Page </a> <br>
-				 <strong> 6th XI </strong> - Est. 2016 <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/165419" target="_blank"> Team Page </a> <br>
-			</p>
-		</div>
-		<!-- Team Links section end -->
-		
+		<h1><span>Old Dorkinian F.C. Squads</span></h1>
+		<p>
+			<strong> 1st XI </strong> - Est. 1930 <a class="hyperlinktext" align="center"
+				href="http://www.dorkiniansfc.co.uk/teams/106922" target="_blank"> Team Page </a> <br>
+			<strong> 2nd XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107143"
+				target="_blank"> Team Page </a> <br>
+			<strong> 3rd XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107144"
+				target="_blank"> Team Page </a> <br>
+			<strong> 4th XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107145"
+				target="_blank"> Team Page </a> <br>
+			<strong> 5th XI </strong> <a class="hyperlinktext" href="http://www.dorkiniansfc.co.uk/teams/107146"
+				target="_blank"> Team Page </a> <br>
+			<strong> 6th XI </strong> - Est. 2016 <a class="hyperlinktext"
+				href="http://www.dorkiniansfc.co.uk/teams/165419" target="_blank"> Team Page </a> <br>
+		</p>
+	</div> <!-- Team Links section end -->
+
+	<div class="section3">
 		<!-- My Schedule section start -->
-		<div class="section3">
-			<h1><span>Training & Matches</span></h1>
-			<table>
-				<tr>
-					<th>Day</th>
-					<th>Location</th>
-					<th>Mon</th>
-					<th>Tue</th>
-					<th>Wed</th>
-					<th>Thu</th>
-					<th>Fri</th>
-					<th>Sat</th>
-					<th>Sun</th>
-				</tr>
-				<tr>
-					<td>9-10:30am</td>
-					<td>Pixham</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected">Matches</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>6:45-8pm</td>
-					<td>Westhumble</td>
-					<td></td>
-					<td class="selected">Training</td>
-					<td></td>
-					<td class="selected">Training</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-		<!-- My Schedule section end -->
-		
-		
+		<h1><span>Training & Matches</span></h1>
+		<table>
+			<tr>
+				<th>Day</th>
+				<th>Location</th>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri</th>
+				<th>Sat</th>
+				<th>Sun</th>
+			</tr>
+			<tr>
+				<td>9-10:30am</td>
+				<td>Pixham</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="selected">Matches</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>6:45-8pm</td>
+				<td>Westhumble</td>
+				<td></td>
+				<td class="selected">Training</td>
+				<td></td>
+				<td class="selected">Training</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div> <!-- My Schedule section end -->
+
+	<div class="section">
 		<!-- My Skills section start -->
-		<div class="section">
-			<h1><span>My Skills</span></h1>
-			<ul>
-				<li>HTML <br />
-					<progress min="0" max="100" value="1"></progress>
-				</li>
-				<li>JavaScript <br />
-					<progress min="0" max="100" value="0"></progress>
-				</li>
-				<li>Python <br />
-					<progress min="0" max="100" value="0"></progress>
-				</li>
-			</ul>
-		</div>
-		<!-- My Skills section end -->
-		
-		
-		 <!-- Media section start -->
-		<div class="section">
-			<h1><span>My Media</span></h1>
-			<iframe height="150" width="300" src="https://www.youtube.com/embed/Q6_5InVJZ88" allowfullscreen frameborder="0"></iframe>
-		</div>
-		<!-- Media section end -->
-		
+		<h1><span>My Skills</span></h1>
+		<ul>
+			<li>HTML <br />
+				<progress min="0" max="100" value="1"></progress>
+			</li>
+			<li>JavaScript <br />
+				<progress min="0" max="100" value="0"></progress>
+			</li>
+			<li>Python <br />
+				<progress min="0" max="100" value="0"></progress>
+			</li>
+		</ul>
+	</div> <!-- My Skills section end -->
+
+	<div class="section">
+		<!-- Media section start -->
+		<h1><span>My Media</span></h1>
+		<iframe height="150" width="300" src="https://www.youtube.com/embed/Q6_5InVJZ88" allowfullscreen
+			frameborder="0"></iframe>
+	</div> <!-- Media section end -->
+
+	<div class="section">
 		<!-- Form section start -->
-	   <div class="section">
-			<h1><span>Contact Us</span></h1>
-			
-			<form>
-				<input name="name" placeholder="Name" type="text" required /><br/>
-				<input name="email" placeholder="Email" type="email" required /><br/>
-				<textarea name="message" placeholder="Message" required ></textarea>
-				<input type="submit" value="SEND" class="submit" />
-			</form>
-		</div>
-		<!-- Form section end -->
-		
+		<h1><span>Contact Us</span></h1>
+
+		<form>
+			<input name="name" placeholder="Name" type="text" required /><br />
+			<input name="email" placeholder="Email" type="email" required /><br />
+			<textarea name="message" placeholder="Message" required></textarea>
+			<input type="submit" value="SEND" class="submit" />
+		</form>
+	</div> <!-- Form section end -->
+
+	<div class="section2" id="contacts">
 		<!-- Contacts section start -->
-		<div class="section2" id="contacts">
-			<h3><span>Follow Us</span></h3>
-			<div>
-				<a href="https://www.sololearn.com/" target="_blank">
-				    <img alt="Old Dorkinians" class="img-circle" src="https://pbs.twimg.com/profile_images/781928814964273152/AmqCuXBP.jpg">
-				</a>
-				<a href="https://twitter.com/dorkiniansFC" target="_blank">
-					<img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
-				</a>
-				<a href="https://www.instagram.com/dorkinianfc/?hl=en" target="_blank">
-					<img alt="Facebook" class="img-circle" src="https://image.freepik.com/free-vector/instagram-icon_1057-2227.jpg"/>
-				</a>
-			</div>
+		<h3><span>Follow Us</span></h3>
+		<div>
+			<a href="https://www.sololearn.com/" target="_blank">
+				<img alt="Old Dorkinians" class="img-circle"
+					src="https://pbs.twimg.com/profile_images/781928814964273152/AmqCuXBP.jpg">
+			</a>
+			<a href="https://twitter.com/dorkiniansFC" target="_blank">
+				<img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+			</a>
+			<a href="https://www.instagram.com/dorkinianfc/?hl=en" target="_blank">
+				<img alt="Facebook" class="img-circle"
+					src="https://image.freepik.com/free-vector/instagram-icon_1057-2227.jpg" />
+			</a>
 		</div>
-		<!-- Contacts section end -->
-		
-		<div class ="copyright">
-		    &copy; Luke Bangs
-		</div>
-		
-		<div class="copyright">
-			&copy; 2017 Old Dorkinian FC. All rights reserved.
-		</div>
-		
-	</body>
+	</div> <!-- Contacts section end -->
+
+	<div class="copyright">
+		&copy; Luke Bangs
+	</div>
+
+	<div class="copyright">
+		&copy; 2017 Old Dorkinian FC. All rights reserved.
+	</div>
+
+</body>
+
 </html>
