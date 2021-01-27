@@ -1,0 +1,180 @@
+/* SDP Styling Guide. */
+
+/* The main css style file used for SDP Content. */
+
+/*
+Key CSS Notes:
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+*/
+
+/*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /*CSS variable - SDP purple*/
+    --accent-color-purple: #8F23FF;
+    /*CSS variable - SDP blue*/
+    --accent-color-blue: #4254FF;
+    /*CSS variable - SDP pink*/
+    --accent-color-pink: #F575FF;
+    /*CSS variable - Sidebar grey*/
+    --background-color-grey: #282828;
+    --main-font-family: 'Calibri', sans-serif;
+    /*CSS variable*/
+    font-family: var(--main-font-family, sans-serif);
+}
+
+/*Container original size for most screens.*/
+
+.container {
+    font-size: 1.5em;
+    min-height: 800px;
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: 80%;
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: 10%;
+    background: LightGray;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 50px;
+    grid-template-areas: "header" "content" "footer";
+}
+
+/* Header Sections */
+
+.header {
+    background: LightSkyBlue;
+    grid-area: header;
+    min-height: 10px;
+    /*Controls the main width of the header section within the container.*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas: "header-logo-section" "header-line-break-section" "header-name-section";
+}
+
+/* Content Sections */
+
+.content {
+    background: PaleTurquoise;
+    grid-area: content;
+    min-height: 300px;
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: 80%;
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas: "content-header-section" "content-navigation-section" "content-acronym-section";
+}
+
+.content-header-section {
+    background: LightSkyBlue;
+    grid-area: content-header-section;
+    min-height: 50px;
+    height: max-content;
+}
+
+.content-navigation-section {
+    background: LightSalmon;
+    grid-area: content-navigation-section;
+    min-height: 50px;
+    height: max-content;
+    display: flex;
+    flex-direction:row;
+}
+
+.content-acronym-section {
+    background: blue;
+    grid-area: content-acronym-section;
+    min-height: 500px;
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: 80%;
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-rows: repeat(auto-fill, minmax(60px, 1fr)); */
+    grid-template-rows: repeat(20, auto);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    /* grid-template-areas: repeat(9, "acronym-starting-letter acronym-shortTerm acronym-longTerm"); */
+    /* grid-template-areas: "acronym-shortTerm acronym-longTerm"; */
+}
+
+/* .acronym-starting-letter {
+    background: LightSkyBlue;
+    grid-area: acronym-starting-letter;
+    min-height: 20px;
+    height: max-content;
+} */
+
+/* .acronym-shortTerm {
+    background: LightSalmon;
+    grid-area: acronym-shortTerm;
+    min-height: 20px;
+    height: max-content;
+} */
+
+/* .acronym-longTerm {
+    background: green;
+    grid-area: acronym-longTerm;
+    min-height: 20px;
+    height: max-content;
+} */
+
+/* Footer Section */
+
+.footer {
+    background: lightpink;
+    grid-area: footer;
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "footer-details-section footer-button-section footer-icons-section";
+}
+
+/*Text styling*/
+
+h1 {
+    font-size: 40pt;
+    font-weight: 400;
+    color: var(--background-color-grey, black);
+    margin: 20px 0px 0px 0px;
+    text-align: left;
+    line-height: 15px;
+}
+
+h2 {
+    font-size: 30pt;
+    font-weight: 400;
+    color: var(--main-style-color, black);
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: 400;
+    padding: 0px 0px 0px 0px;
+    line-height: 20px;
+    color: var(--accent-color-purple, black);
+    text-align: left;
+}
+
+.bold{
+    font-size: 24pt;
+    font-weight: 400;
+    font-weight: bold;
+    color: var(--accent-color-purple, black);
+}
