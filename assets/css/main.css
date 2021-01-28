@@ -2196,6 +2196,23 @@ body.is-covered #wrapper {
 	background-color: rgba(255, 255, 255, 0.075);
 }
 
+/* Add an id for fading in an item over two seconds. */
+#fadein {
+    animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+
+}
+
 #header .avatar img {
 	border-radius: 100%;
 	display: block;

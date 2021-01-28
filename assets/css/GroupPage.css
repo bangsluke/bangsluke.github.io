@@ -28,13 +28,59 @@ Key CSS Notes:
     /*CSS variable*/
     --main-font-family: 'Calibri', sans-serif;
     /*CSS variable*/
-    line-height: 15px;
+    /* line-height: 15px; */
 }
 
 /*Main page background colour*/
 
 body {
     background-image:url("/images/GroupPage/Background.JPG");
-    background-color: var(--main-style-color, black);
-    background-blend-mode: darken;
+    /* background-color: var(--main-style-color, black); */
+    background-blend-mode: screen;
+}
+
+body > #bg {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    
+    /* https://cssgradient.io/ */
+    background: rgb(42,57,80);
+    background: linear-gradient(34deg, rgba(42,57,80,1) 0%, rgba(65,67,106,1) 35%, rgba(151,64,99,1) 100%);
+    /* Test out clip path. */
+    /* https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit */
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 100%, 94% 35%, 0 19%);
+    position: absolute;
+    z-index: -1;
+}
+
+.avatar {
+    width:100px;
+    height:auto;
+    border-radius: 100%;
+	display: inline-block;
+	margin: 0 0 2em 0;
+	padding: 0.2em;
+	border: solid 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+    
+}
+
+/* Add an id for fading in an item over three seconds. */
+#fadein {
+    animation: fadein 3s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+
 }
