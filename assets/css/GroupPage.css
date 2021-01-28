@@ -34,7 +34,7 @@ Key CSS Notes:
 /*Main page background colour*/
 
 body {
-    background-image: 
+    background-image:url("/images/GroupPage/Background.JPG");
     background-color: var(--main-style-color, black);
     background-blend-mode: darken;
 }
