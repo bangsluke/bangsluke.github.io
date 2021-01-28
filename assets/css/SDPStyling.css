@@ -19,6 +19,8 @@ Key CSS Notes:
     --accent-color-pink: #F575FF;
     /*CSS variable - Sidebar grey*/
     --background-color-grey: #282828;
+    /*CSS variable - Background grey*/
+    --background-color-lightgrey: #CCCCCC;
     --main-font-family: 'Calibri', sans-serif;
     /*CSS variable*/
     font-family: var(--main-font-family, sans-serif);
@@ -35,6 +37,7 @@ Key CSS Notes:
     /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
     margin-left: 10%;
     background: LightGray;
+    background: white;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr;
@@ -46,10 +49,12 @@ Key CSS Notes:
 
 .header {
     background: LightSkyBlue;
+    background: white;
     grid-area: header;
     min-height: 10px;
     /*Controls the main width of the header section within the container.*/
     width: 100%;
+    padding: 10px 0px 0px 0px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -61,6 +66,7 @@ Key CSS Notes:
 
 .content {
     background: PaleTurquoise;
+    background: white;
     grid-area: content;
     min-height: 300px;
     height: max-content;
@@ -77,6 +83,7 @@ Key CSS Notes:
 
 .content-header-section {
     background: LightSkyBlue;
+    background: var(--background-color-lightgrey, grey);
     grid-area: content-header-section;
     min-height: 50px;
     height: max-content;
@@ -84,15 +91,21 @@ Key CSS Notes:
 
 .content-navigation-section {
     background: LightSalmon;
+    background: white;
     grid-area: content-navigation-section;
-    min-height: 50px;
+    min-height: 30px;
+    line-height: 10px;
+    letter-spacing: 15px;
+    text-align: center;
     height: max-content;
+    width: max-content;
     display: flex;
     flex-direction:row;
 }
 
 .content-acronym-section {
     background: blue;
+    background: white;
     grid-area: content-acronym-section;
     min-height: 500px;
     height: max-content;
@@ -149,6 +162,7 @@ Key CSS Notes:
 h1 {
     font-size: 40pt;
     font-weight: 400;
+    font-weight: bold;
     color: var(--background-color-grey, black);
     margin: 20px 0px 0px 0px;
     text-align: left;
@@ -172,9 +186,14 @@ h3 {
     text-align: left;
 }
 
-.bold{
+.bold {
     font-size: 24pt;
     font-weight: 400;
     font-weight: bold;
     color: var(--accent-color-purple, black);
+}
+
+.img-Logo {
+    height: 60px;
+    width: auto;
 }
