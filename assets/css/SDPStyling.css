@@ -8,44 +8,214 @@ Key CSS Notes:
 - CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
 */
 
-/*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+/* Import the Open Sans font. */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
 :root {
-    /*CSS variable - SDP purple*/
+    /* CSS variable - SDP purple */
     --accent-color-purple: #8F23FF;
-    /*CSS variable - SDP blue*/
+    /* CSS variable - SDP blue */
     --accent-color-blue: #4254FF;
-    /*CSS variable - SDP pink*/
+    /* CSS variable - SDP pink */
     --accent-color-pink: #F575FF;
-    /*CSS variable - Sidebar grey*/
+    /* CSS variable - Sidebar grey */
     --background-color-grey: #282828;
-    /*CSS variable - Background grey*/
+    /* CSS variable - Background grey */
     --background-color-lightgrey: #CCCCCC;
-    --main-font-family: 'Calibri', sans-serif;
-    /*CSS variable*/
+    --background-color-light-theme: #FFFFFF;
+    --main-font-family: 'Open Sans', 'Calibri', sans-serif;
+    /* CSS font variables */
     font-family: var(--main-font-family, sans-serif);
+    font-size: 10pt;
+    /* CSS width and offset variables */
+    --width: 80%;
+    --margin-left: 10%;
 }
 
-/*Container original size for most screens.*/
+@media screen and (max-width: 500px) {
+    :root {
+        /* CSS width and offset variables */
+        --width: 90%;
+        --margin-left: 5%;
+    }
+}
+
+/* Header Sections */
+
+/* The full header covers from the very top of the page to the top line of the acronym table. It is all fixed positioning. */
+
+.header {
+    background: pink;
+    background: var(--background-color-light-theme, white);
+    min-height: 10px;
+    height: max-content;
+    /*Controls the main width of the header section.*/
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+}
+
+/* The header logo section contains the logo and the border line. */
+
+.header-logo-section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.logo {
+    width: 90%;
+    margin-left: 4.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img-Logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Content Header Section */
+
+/* The header toptext section contains all text down to the top row of the table, up to the frozen border line. */
+
+.header-toptext-section {
+    /* background: red; */
+    min-height: 50px;
+    margin-top: 30px;
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: var(--width, 80%);
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: var(--margin-left, 10%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* The header toptext grey section contains the h1 header of "SDP Acronyms". */
+
+.header-toptext-grey-section {
+    /* background: LightSkyBlue; */
+    background: var(--background-color-lightgrey, grey);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h1 {
+    font-size: 14pt;
+    font-weight: 400;
+    font-weight: bold;
+    /* color: var(--background-color-grey, black); */
+    padding: 30px 50px 30px 0px;
+    margin-left: 30px;
+    line-height: 15px;
+}
+
+/* The header navigation section is a container for the next content div. */
+
+.header-navigation-section {
+    /* background: greenyellow; */
+    /* background: white; */
+    min-height: 30px;
+    line-height: 10px;
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: var(--width, 80%);
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: var(--margin-left, 10%);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-top: -10px;
+}
+
+/* The header navigation content contains the alphabet hyperlinks. */
+
+.header-navigation-content {
+    /* background: LightSalmon; */
+    /* background: white; */
+    word-spacing: 20px;
+    text-align: center;
+    height: max-content;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    text-justify: auto;
+}
+
+h2 {
+    font-size: 14pt;
+    font-weight: 400;
+    font-weight: bold;
+    /* padding: 0px 0px 0px 0px; */
+    line-height: 20px;
+    color: var(--accent-color-purple, black);
+    text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+    .header-navigation-content {
+        word-spacing: 2px;
+    }
+    h2 {
+        font-size: 12pt;
+    }
+}
+
+/* Top table line containing "#", "Short Term" and "Long Term". */
+
+.top-grid-row {
+    /* background: yellow; */
+    /* background: white; */
+    height: max-content;
+    /*Controls the main width of the page.*/
+    width: var(--width, 80%);
+    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
+    margin-left: var(--margin-left, 10%);
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*Text styling*/
+
+.bold {
+    font-size: 14pt;
+    font-weight: 400;
+    font-weight: bold;
+    color: var(--accent-color-purple, black);
+}
+
+/* Container original size for most screens. */
+
+/* The container holds all content below the header section and above the footer. */
 
 .container {
     font-size: 1.5em;
     min-height: 800px;
+    /* Controls the offset of the container from behind the header. */
+    padding-top: 300px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
     height: max-content;
     /*Controls the main width of the page.*/
-    width: 80%;
+    width: var(--width, 80%);
     /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
-    margin-left: 10%;
+    margin-left: var(--margin-left, 10%);
     background: LightGray;
     background: white;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 50px;
-    grid-template-areas: "header" "content" "footer";
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15);
+    border-radius: 10px;
 }
 
 /* Add an id for fading in an item over two seconds. */
+
 #fadein {
     animation: fadein 2s ease forwards;
 }
@@ -59,158 +229,124 @@ Key CSS Notes:
         display: block;
         opacity: 1;
     }
-
-}
-
-/* Header Sections */
-
-.header {
-    background: LightSkyBlue;
-    background: white;
-    grid-area: header;
-    min-height: 10px;
-    /*Controls the main width of the header section within the container.*/
-    width: 100%;
-    padding: 10px 0px 0px 0px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    grid-template-areas: "header-logo-section" "header-line-break-section" "header-name-section";
 }
 
 /* Content Sections */
 
 .content {
-    background: PaleTurquoise;
-    background: white;
-    grid-area: content;
-    min-height: 300px;
+    /* background: PaleTurquoise; */
+    /* background: white; */
+    /* min-height: 300px; */
     height: max-content;
     /*Controls the main width of the page.*/
-    width: 80%;
+    width: var(--width, 80%);
     /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
-    margin-left: 10%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-gap: 10px;
-    grid-template-areas: "content-header-section" "content-navigation-section" "content-acronym-section";
+    margin-left: var(--margin-left, 10%);
 }
 
-.content-header-section {
-    background: LightSkyBlue;
-    background: var(--background-color-lightgrey, grey);
-    grid-area: content-header-section;
-    min-height: 50px;
-    height: max-content;
-}
-
-.content-navigation-section {
-    background: LightSalmon;
-    background: white;
-    grid-area: content-navigation-section;
-    min-height: 30px;
-    line-height: 10px;
-    letter-spacing: 15px;
-    text-align: center;
-    height: max-content;
-    width: max-content;
-    display: flex;
-    flex-direction:row;
-}
-
-.content-acronym-section {
-    background: blue;
-    background: white;
-    grid-area: content-acronym-section;
-    min-height: 500px;
+.acronym-grid-section {
+    /* background: blue; */
+    /* min-height: 500px; */
     height: max-content;
     /*Controls the main width of the page.*/
-    width: 80%;
+    width: var(--width, 80%);
     /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
-    margin-left: 10%;
+    margin-left: var(--margin-left, 10%);
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    /* grid-template-rows: repeat(auto-fill, minmax(60px, 1fr)); */
-    grid-template-rows: repeat(20, auto);
+    grid-template-columns: 60px auto 70%;
     grid-auto-rows: auto;
     grid-gap: 10px;
-    /* grid-template-areas: repeat(9, "acronym-starting-letter acronym-shortTerm acronym-longTerm"); */
-    /* grid-template-areas: "acronym-shortTerm acronym-longTerm"; */
 }
-
-/* .acronym-starting-letter {
-    background: LightSkyBlue;
-    grid-area: acronym-starting-letter;
-    min-height: 20px;
-    height: max-content;
-} */
-
-/* .acronym-shortTerm {
-    background: LightSalmon;
-    grid-area: acronym-shortTerm;
-    min-height: 20px;
-    height: max-content;
-} */
-
-/* .acronym-longTerm {
-    background: green;
-    grid-area: acronym-longTerm;
-    min-height: 20px;
-    height: max-content;
-} */
 
 /* Footer Section */
 
 .footer {
-    background: lightpink;
-    grid-area: footer;
+    /* background: lightpink; */
+    background: white;
+    /*Controls the main width of the header section.*/
     width: 100%;
+    min-height: 10px;
     height: max-content;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 1fr;
-    grid-template-areas: "footer-details-section footer-button-section footer-icons-section";
+    grid-template-columns: auto 3fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: "footer-left-text footer-blank-section footer-RLE-text";
+    /* background: var(--background-color-light-theme, white); */
+    left: 0px;
+    top: 0px;
+    /* position: fixed; */
+    /* z-index: 1; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding-bottom: -20px;
+    line-height: 10px;
+    font-size: 12pt;
+    font-weight: 400;
+    font-family: var(--main-font-family, sans-serif);
 }
 
-/*Text styling*/
-
-h1 {
-    font-size: 40pt;
-    font-weight: 400;
-    font-weight: bold;
-    color: var(--background-color-grey, black);
-    margin: 20px 0px 0px 0px;
-    text-align: left;
-    line-height: 15px;
+.footer-left-text {
+    display: flex;
+    flex-direction: row;
+    /* word-spacing: 20px; */
+    margin-left: 30px;
 }
 
-h2 {
-    font-size: 30pt;
-    font-weight: 400;
-    color: var(--main-style-color, black);
-    margin: 0px 0px 0px 0px;
-    text-align: left;
+.footer-RLE-text {
+    display: flex;
+    flex-direction: row;
+    /* word-spacing: 20px; */
+    margin-right: 30px;
 }
 
 h3 {
-    font-size: 24pt;
+    font-size: 12pt;
     font-weight: 400;
-    padding: 0px 0px 0px 0px;
-    line-height: 20px;
+    font-family: var(--main-font-family, sans-serif);
+}
+
+#left {
     color: var(--accent-color-purple, black);
     text-align: left;
 }
 
-.bold {
-    font-size: 24pt;
-    font-weight: 400;
-    font-weight: bold;
-    color: var(--accent-color-purple, black);
+#right {
+    color: var(--background-color-grey, black);
+    text-align: right;
 }
 
-.img-Logo {
-    height: 60px;
-    width: auto;
+/* Hyperlink formatting. */
+
+a:link {
+    /* normal link */
+    /* color: var(--main-accent-color, black); */
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    /* visited link */
+    /* color: var(--main-accent-color, black); */
+    text-decoration: none;
+}
+
+a:hover {
+    /* hover over link */
+    color: var(--main-accent-color, black);
+    color: green;
+    /* font-size: 12pt; */
+    /* font-style: italic; */
+}
+
+a:active {
+    /* selected link */
+    color: var(--main-accent-color, black);
+}
+
+div {
+    font-size: 12pt;
 }
