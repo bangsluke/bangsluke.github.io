@@ -6,6 +6,7 @@
 Key CSS Notes:
 - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
 - CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- See the bottom of this file for key tips and tricks.
 */
 
 /* Import the Open Sans font. */
@@ -349,4 +350,19 @@ a:active {
 
 div {
     font-size: 12pt;
+}
+
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+/* h1::selection {
+	background: var(--accent-color-orange, orange);
+} */
+
+/* Smooth the scrolling function of any internal hyperlinks. */
+
+html{
+	scroll-behavior: smooth;
 }

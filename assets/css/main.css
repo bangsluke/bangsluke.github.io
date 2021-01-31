@@ -2,6 +2,13 @@
 
 /* The main css style file used for all Website styling. */
 
+/*
+Key CSS Notes:
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- See the bottom of this file for key tips and tricks.
+*/
+
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
@@ -44,8 +51,6 @@
     /*CSS variable*/
 	--accent-color-white: #ffffff;
 }
-
-
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
@@ -1236,24 +1241,6 @@ h1 {
 	font-size: 1.75em;
 }
 
-/* Change the background colour of when a user highlights text to orange. */
-
-h1::selection {
-	background: var(--accent-color-orange, orange);
-}
-
-strong::selection {
-	background: var(--accent-color-orange, orange);
-}
-
-a::selection {
-	background: var(--accent-color-orange, orange);
-}
-
-p::selection {
-	background: var(--accent-color-orange, orange);
-}
-
 @media screen and (max-width: 980px) {
 	h1 {
 		font-size: 1.5em;
@@ -2305,4 +2292,30 @@ body.is-covered #wrapper {
 	#footer {
 		padding: 2em 0 2em 0;
 	}
+}
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+h1::selection {
+	background: var(--accent-color-orange, orange);
+}
+
+strong::selection {
+	background: var(--accent-color-orange, orange);
+}
+
+a::selection {
+	background: var(--accent-color-orange, orange);
+}
+
+p::selection {
+	background: var(--accent-color-orange, orange);
+}
+
+/* Smooth the scrolling function of any internal hyperlinks. */
+
+html{
+	scroll-behavior: smooth;
 }
