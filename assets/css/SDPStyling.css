@@ -352,7 +352,6 @@ div {
     font-size: 12pt;
 }
 
-
 /* CSS Tips and Tricks. */
 
 /* Change the background colour of when a user highlights text to orange. */
@@ -363,6 +362,6 @@ div {
 
 /* Smooth the scrolling function of any internal hyperlinks. */
 
-html{
-	scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
