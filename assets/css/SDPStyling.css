@@ -144,12 +144,12 @@ h1 {
 }
 
 h2 {
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 400;
     font-weight: bold;
     /* padding: 0px 0px 0px 0px; */
     line-height: 20px;
-    color: var(--accent-color-purple, black);
+    color: var(--accent-color-blue, black);
     text-align: left;
     text-decoration: underline;
 }
@@ -179,10 +179,17 @@ h2 {
 /*Text styling*/
 
 .bold {
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 400;
     font-weight: bold;
     color: var(--accent-color-purple, black);
+}
+
+.bold-blue {
+    font-size: 12pt;
+    font-weight: 400;
+    font-weight: bold;
+    color: var(--accent-color-blue, black);
 }
 
 h3 {
@@ -391,6 +398,9 @@ html {
         line-height: 10px;
     }
     .bold {
+        font-size: 8pt;
+    }
+    .bold-blue {
         font-size: 8pt;
     }
     h3 {
