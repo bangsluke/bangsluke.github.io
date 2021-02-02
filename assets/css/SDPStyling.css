@@ -439,3 +439,4 @@ html {
         background: var(--background-color-grey, #282828);
         filter: invert(1) hue-rotate(180deg);
     }
+}
