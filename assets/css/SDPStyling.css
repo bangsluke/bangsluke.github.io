@@ -331,16 +331,19 @@ a:active {
 /* Change the background colour of when a user highlights text to orange. */
 
 h1::selection {
-	background: var(--accent-color-pink, #F575FF);
+    background: var(--accent-color-pink, #F575FF);
 }
+
 h2::selection {
-	background: var(--accent-color-pink, #F575FF);
+    background: var(--accent-color-pink, #F575FF);
 }
+
 h3::selection {
-	background: var(--accent-color-pink, #F575FF);
+    background: var(--accent-color-pink, #F575FF);
 }
+
 div::selection {
-	background: var(--accent-color-pink, #F575FF);
+    background: var(--accent-color-pink, #F575FF);
 }
 
 /* Smooth the scrolling function of any internal hyperlinks. */
@@ -373,9 +376,8 @@ html {
 
 /* https://codeconvey.com/responsive-media-queries-for-all-devices/ */
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     :root {
-        /* CSS width variables */
         --width: 90%;
         --margin-left: 5%;
         --width-content: 450px;
@@ -419,36 +421,112 @@ html {
     html {
         scroll-padding-top: 204px;
     }
-}
+} */
 
 /* Smartphones */
-/* Covers most phones. */
+
+/* Covers most phones such as iPhone SE (my phone). */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Styles */
     :root {
         background: blue;
+        --width: 90%;
+        --margin-left: auto;
+        --width-content: 320px;
+        font-size: 8pt;
+    }
+    .img-Logo {
+        height: 20px;
+    }
+    h1 {
+        font-size: 10pt;
+        line-height: 15px;
+        padding: 15px 50px 15px 0px;
+    }
+    h2 {
+        font-size: 9pt;
+        line-height: 10px;
+    }
+    .bold {
+        font-size: 8pt;
+    }
+    .bold-blue {
+        font-size: 8pt;
+    }
+    h3 {
+        font-size: 8pt;
+    }
+    div {
+        font-size: 8pt;
+    }
+    .acronym-grid-section {
+        grid-template-columns: 30px auto 70%;
+        grid-gap: 5px;
+    }
+    .header-navigation-content {
+        word-spacing: 3px;
+    }
+    .container {
+        padding-top: 210px;
+        padding-bottom: 10px;
+    }
+    html {
+        scroll-padding-top: 212px;
     }
 }
-
-/* Larger smartphones */
-/* Includes larger screen mobiles such as iPhone SE (my phone). */
-
-@media only screen and (min-device-width: 480px) and (max-device-width: 767px) {
-    /* Styles */
-    :root {
-        background: lightblue;
-    }
-}
-
 
 /* Reduced windows on Desktops and Laptops */
+
 /* For when a user reduces the size of their window. */
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
     /* Styles */
     :root {
         background: orange;
+        --width: 90%;
+        --margin-left: auto;
+        --width-content: 450px;
+        /* --width-content: 80%; */
+        font-size: 8pt;
+    }
+    .img-Logo {
+        height: 20px;
+    }
+    h1 {
+        font-size: 12pt;
+        line-height: 15px;
+        padding: 15px 50px 15px 0px;
+    }
+    h2 {
+        font-size: 10pt;
+        line-height: 10px;
+    }
+    .bold {
+        font-size: 8pt;
+    }
+    .bold-blue {
+        font-size: 8pt;
+    }
+    h3 {
+        font-size: 8pt;
+    }
+    div {
+        font-size: 8pt;
+    }
+    .acronym-grid-section {
+        grid-template-columns: 30px auto 70%;
+        grid-gap: 5px;
+    }
+    .header-navigation-content {
+        word-spacing: 3px;
+    }
+    .container {
+        padding-top: 200px;
+        padding-bottom: 10px;
+    }
+    html {
+        scroll-padding-top: 204px;
     }
 }
 
@@ -458,12 +536,53 @@ html {
     /* Styles */
     :root {
         background: green;
+        --width: 90%;
+        --margin-left: auto;
+        --width-content: 450px;
+        font-size: 8pt;
+    }
+    .img-Logo {
+        height: 20px;
+    }
+    h1 {
+        font-size: 12pt;
+        line-height: 15px;
+        padding: 15px 50px 15px 0px;
+    }
+    h2 {
+        font-size: 10pt;
+        line-height: 10px;
+    }
+    .bold {
+        font-size: 8pt;
+    }
+    .bold-blue {
+        font-size: 8pt;
+    }
+    h3 {
+        font-size: 8pt;
+    }
+    div {
+        font-size: 8pt;
+    }
+    .acronym-grid-section {
+        grid-template-columns: 30px auto 70%;
+        grid-gap: 5px;
+    }
+    .header-navigation-content {
+        word-spacing: 3px;
+    }
+    .container {
+        padding-top: 200px;
+        padding-bottom: 10px;
+    }
+    html {
+        scroll-padding-top: 204px;
     }
 }
 
-
-
 /* Desktops and Laptops */
+
 /* For most normal size screen desktops and laptops. */
 
 @media only screen and (min-width: 1224px) {
@@ -471,16 +590,20 @@ html {
     :root {
         background: red;
     }
+    /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
 
 /* Large Screens */
+
 /* For larger monitors and displays. */
 
 @media only screen and (min-width: 1824px) {
     /* Styles */
     :root {
         background: yellow;
+        --width: 70%;
     }
+    /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
 
 /* Add a set up for media devices with preference for dark mode. */
