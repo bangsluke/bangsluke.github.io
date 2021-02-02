@@ -4,9 +4,11 @@
 
 /*
 Key CSS Notes:
+- Design for Mobile size first! Then scale up.
 - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
-- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." 
 - For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
 - See the bottom of this file for key tips and tricks
 */
 
