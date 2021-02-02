@@ -35,6 +35,7 @@ Key CSS Notes:
     --width: 80%;
     /* CSS width variable for main rounded corner square shape. */
     --width-content: 1200px;
+    /* background: var(--background-color-light-theme, white); */
 }
 
 /* Header Sections */
@@ -43,7 +44,7 @@ Key CSS Notes:
 
 .header {
     /* background: pink; */
-    background: var(--background-color-light-theme, white);
+    /* background: var(--background-color-light-theme, white); */
     min-height: 10px;
     height: max-content;
     /*Controls the main width of the header section.*/
@@ -127,7 +128,7 @@ h1 {
 
 .header-navigation-content {
     /* background: LightSalmon; */
-    background: white;
+    /* background: white; */
     word-spacing: 20px;
     text-align: center;
     height: max-content;
@@ -168,7 +169,7 @@ h2 {
 
 .top-grid-row {
     /* background: yellow; */
-    background: white;
+    /* background: white; */
     height: max-content;
     /* Controls the main width of the page and sets an auto margin to center within the container. */
     width: var(--width, 80%);
@@ -209,7 +210,7 @@ div {
 
 .container {
     /* background: LightGray; */
-    background: white;
+    /* background: white; */
     font-size: 1.5em;
     min-height: 800px;
     /* Controls the offset of the container from behind the header. */
@@ -245,7 +246,7 @@ div {
 
 .content {
     /* background: PaleTurquoise; */
-    background: white;
+    /* background: white; */
     /* min-height: 300px; */
     height: max-content;
     /* Controls the main width of the page and sets an auto margin to center within the container. */
@@ -382,6 +383,8 @@ html {
 
 /* Responsive scaling for devices. */
 
+/* https://codeconvey.com/responsive-media-queries-for-all-devices/ */
+
 @media screen and (max-width: 500px) {
     :root {
         /* CSS width variables */
@@ -427,6 +430,51 @@ html {
     }
     html {
         scroll-padding-top: 204px;
+    }
+}
+
+/* Smartphones */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+    :root {
+        background: blue;
+    }
+}
+
+/* iPads */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+    :root {
+        background: green;
+    }
+}
+
+/* Reduced windows on Desktops and Laptops */
+
+@media only screen and (min-width: 500px) {
+    /* Styles */
+    :root {
+        background: orange;
+    }
+}
+
+/* Desktops and Laptops */
+
+@media only screen and (min-width: 1224px) {
+    /* Styles */
+    :root {
+        background: red;
+    }
+}
+
+/* Large Screens */
+
+@media only screen and (min-width: 1824px) {
+    /* Styles */
+    :root {
+        background: yellow;
     }
 }
 
