@@ -4,9 +4,10 @@
 
 /*
 Key CSS Notes:
-- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
 - CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
-- See the bottom of this file for key tips and tricks.
+- For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- See the bottom of this file for key tips and tricks
 */
 
 /* Import the Open Sans font. */
@@ -295,26 +296,26 @@ div {
     text-align: right;
 }
 
-/* Hyperlink formatting. */
-
-a:link {
-    /* normal link */
-    /* color: var(--main-accent-color, black); */
-    text-decoration: none;
-}
+/* Hyperlink (anchor) formatting. */
 
 a {
     text-decoration: none;
 }
 
+a:link {
+    /* Normal link */
+    /* color: var(--main-accent-color, black); */
+    text-decoration: none;
+}
+
 a:visited {
-    /* visited link */
+    /* Visited link */
     /* color: var(--main-accent-color, black); */
     text-decoration: none;
 }
 
 a:hover {
-    /* hover over link */
+    /* Hover over link */
     color: var(--main-accent-color, black);
     color: green;
     /* font-size: 12pt; */
@@ -322,7 +323,7 @@ a:hover {
 }
 
 a:active {
-    /* selected link */
+    /* Selected link */
     color: var(--main-accent-color, black);
 }
 

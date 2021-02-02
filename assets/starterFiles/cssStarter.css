@@ -1,0 +1,130 @@
+/* Title: CSS Start file. */
+
+/* Description: The file from which to build all CSS files from. */
+
+/*
+Key CSS Notes:
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- See the bottom of this file for key tips and tricks
+*/
+
+/* Import the Open Sans font or another font from Google fonts. */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /* CSS variables - Add variables below like the given example. */
+    /* --accent-color-purple: #8F23FF; */
+}
+
+/* Add code below. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Resizing the webpage for all devices. */
+
+/* Smartphones */
+
+/* Covers most phones such as iPhone SE (my phone). */
+
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+} */
+
+/* Reduced windows on Desktops and Laptops */
+
+/* For when a user reduces the size of their window. */
+
+/* @media only screen and (min-width: 480px) and (max-width: 1223px) {
+
+} */
+
+/* iPads */
+
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+} */
+
+/* Desktops and Laptops */
+
+/* For most normal size screen desktops and laptops. */
+
+/* @media only screen and (min-width: 1224px) {
+
+} */
+
+/* Large Screens */
+
+/* For larger monitors and displays. */
+
+/* @media only screen and (min-width: 1824px) {
+
+} */
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+/* h1::selection {
+    background: var(--accent-color-pink, #F575FF);
+} */
+
+/* HTML updates to cover the full webpage. */
+
+/* Smooth the scrolling function of any internal hyperlinks. */
+
+/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+
+/* html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 260px;
+} */
+
+/* Add an id for fading in an item over two seconds. */
+
+/* #fadein {
+    animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+} */
+
+/* Add a set up for media devices with preference for dark mode. */
+
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        background: var(--background-color-grey, #282828);
+        filter: invert(1) hue-rotate(180deg);
+    }
+} */
