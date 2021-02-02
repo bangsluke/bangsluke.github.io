@@ -35,7 +35,7 @@ Key CSS Notes:
     --width: 80%;
     /* CSS width variable for main rounded corner square shape. */
     --width-content: 1200px;
-    /* background: var(--background-color-light-theme, white); */
+    background: var(--background-color-light-theme, white);
 }
 
 /* Header Sections */
@@ -156,15 +156,6 @@ h2 {
     color: black;
 }
 
-@media screen and (max-width: 500px) {
-    .header-navigation-content {
-        word-spacing: 2px;
-    }
-    h2 {
-        font-size: 12pt;
-    }
-}
-
 /* Top table line containing "#", "Short Term" and "Long Term". */
 
 .top-grid-row {
@@ -223,23 +214,6 @@ div {
     margin-bottom: 50px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15);
     border-radius: 10px;
-}
-
-/* Add an id for fading in an item over two seconds. */
-
-#fadein {
-    animation: fadein 2s ease forwards;
-}
-
-@keyframes fadein {
-    from {
-        display: none;
-        opacity: 0;
-    }
-    to {
-        display: block;
-        opacity: 1;
-    }
 }
 
 /* Content Sections */
@@ -352,25 +326,22 @@ a:active {
     color: var(--main-accent-color, black);
 }
 
-/* Offset where the anchor link takes the user to account for the fixed header. */
-
-/* https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
-
-a.anchor {
-    display: block;
-    position: relative;
-    /* The below value offsets in a negative fashion, i.e. -20px would be 20 pixels higher. */
-    top: -50px;
-    visibility: hidden;
-}
-
 /* CSS Tips and Tricks. */
 
 /* Change the background colour of when a user highlights text to orange. */
 
-/* h1::selection {
-	background: var(--accent-color-orange, orange);
-} */
+h1::selection {
+	background: var(--accent-color-pink, #F575FF);
+}
+h2::selection {
+	background: var(--accent-color-pink, #F575FF);
+}
+h3::selection {
+	background: var(--accent-color-pink, #F575FF);
+}
+div::selection {
+	background: var(--accent-color-pink, #F575FF);
+}
 
 /* Smooth the scrolling function of any internal hyperlinks. */
 
@@ -379,6 +350,23 @@ html {
     /* Offset all anchor links by the height of the fixed header. */
     /* https://stackoverflow.com/a/56467997/14290169 */
     scroll-padding-top: 260px;
+}
+
+/* Add an id for fading in an item over two seconds. */
+
+#fadein {
+    animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
 }
 
 /* Responsive scaling for devices. */
@@ -434,11 +422,33 @@ html {
 }
 
 /* Smartphones */
+/* Covers most phones. */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Styles */
     :root {
         background: blue;
+    }
+}
+
+/* Larger smartphones */
+/* Includes larger screen mobiles such as iPhone SE (my phone). */
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 767px) {
+    /* Styles */
+    :root {
+        background: lightblue;
+    }
+}
+
+
+/* Reduced windows on Desktops and Laptops */
+/* For when a user reduces the size of their window. */
+
+@media only screen and (min-width: 500px) {
+    /* Styles */
+    :root {
+        background: orange;
     }
 }
 
@@ -451,16 +461,10 @@ html {
     }
 }
 
-/* Reduced windows on Desktops and Laptops */
 
-@media only screen and (min-width: 500px) {
-    /* Styles */
-    :root {
-        background: orange;
-    }
-}
 
 /* Desktops and Laptops */
+/* For most normal size screen desktops and laptops. */
 
 @media only screen and (min-width: 1224px) {
     /* Styles */
@@ -470,6 +474,7 @@ html {
 }
 
 /* Large Screens */
+/* For larger monitors and displays. */
 
 @media only screen and (min-width: 1824px) {
     /* Styles */
