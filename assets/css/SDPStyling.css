@@ -57,19 +57,15 @@ Key CSS Notes:
 /* The header logo section contains the logo and the border line. */
 
 .header-logo-section {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    /* background: orange; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .logo {
     width: 90%;
-    margin-left: 4.5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.img-Logo {
+    margin-left: 5%;
     height: 40px;
     width: auto;
 }
@@ -109,14 +105,14 @@ h1 {
     /* color: var(--background-color-grey, black); */
     padding: 30px 50px 30px 0px;
     margin-left: 30px;
-    line-height: 15px;
+    line-height: 10px;
 }
 
 /* The header navigation section is a container for the next content div. */
 
 .header-navigation-section {
     /* background: greenyellow; */
-    background: white;
+    /* background: white; */
     min-height: 30px;
     line-height: 10px;
     height: max-content;
@@ -153,6 +149,12 @@ h2 {
     text-align: left;
     text-decoration: underline;
 }
+
+#deadHeaderLink {
+    text-decoration: none;
+    color: black;
+}
+
 
 @media screen and (max-width: 500px) {
     .header-navigation-content {
@@ -373,6 +375,9 @@ a.anchor {
 
 html {
     scroll-behavior: smooth;
+    /* Offset all anchor links by the height of the fixed header. */
+    /* https://stackoverflow.com/a/56467997/14290169 */
+    scroll-padding-top: 260px;
 }
 
 /* Responsive scaling for devices. */
