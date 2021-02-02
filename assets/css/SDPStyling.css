@@ -155,7 +155,6 @@ h2 {
     color: black;
 }
 
-
 @media screen and (max-width: 500px) {
     .header-navigation-content {
         word-spacing: 2px;
@@ -353,7 +352,9 @@ a:active {
 }
 
 /* Offset where the anchor link takes the user to account for the fixed header. */
+
 /* https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+
 a.anchor {
     display: block;
     position: relative;
@@ -361,7 +362,6 @@ a.anchor {
     top: -50px;
     visibility: hidden;
 }
-
 
 /* CSS Tips and Tricks. */
 
@@ -425,4 +425,17 @@ html {
         padding-top: 180px;
         padding-bottom: 10px;
     }
+    html {
+        scroll-padding-top: 204px;
+    }
 }
+
+/* Add a set up for media devices with preference for dark mode. */
+
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background: var(--background-color-grey, #282828);
+        filter: invert(1) hue-rotate(180deg);
+    }
