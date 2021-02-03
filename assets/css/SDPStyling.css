@@ -7,6 +7,7 @@ Key CSS Notes:
 - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
 - CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
 - For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- Remember that for margins and padding, it goes (top, right, bottom and left).
 - See the bottom of this file for key tips and tricks
 */
 
@@ -35,9 +36,38 @@ Key CSS Notes:
     /* Note - don't use margin-left with a defined value, instead use margin-auto. */
     --width: 80%;
     /* CSS width variable for main rounded corner square shape. */
-    --width-content: 1200px;
+    /* --width-content: 1200px; */
     background: var(--background-color-light-theme, white);
 }
+
+/* Reset all body positioning, margins (body starts with a 8px margin) and padding. */
+body {
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Add three classes for managing the width of elements. */
+
+.fullwidth {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.reducedwidth {
+    left: 0px;
+    top: 0px;
+    width: 80%;
+}
+
+.contentwidth {
+    left: 0px;
+    top: 0px;
+    width: max-content;
+}
+
 
 /* Header Sections */
 
@@ -45,13 +75,9 @@ Key CSS Notes:
 
 .header {
     /* background: pink; */
-    /* background: var(--background-color-light-theme, white); */
+    background: var(--background-color-light-theme, white);
     min-height: 10px;
     height: max-content;
-    /*Controls the main width of the header section.*/
-    width: 100%;
-    left: 0px;
-    top: 0px;
     position: fixed;
     z-index: 1;
 }
@@ -66,7 +92,6 @@ Key CSS Notes:
 }
 
 .logo {
-    width: 90%;
     margin-left: 5%;
     height: 40px;
     width: auto;
@@ -80,8 +105,6 @@ Key CSS Notes:
     /* background: red; */
     min-height: 30px;
     height: max-content;
-    /* Controls the main width of the page and sets an auto margin to center within the container. */
-    width: var(--width-content, 80%);
     margin: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -94,20 +117,18 @@ Key CSS Notes:
 .header-toptext-grey-section {
     /* background: LightSkyBlue; */
     background: var(--background-color-lightgrey, grey);
+    min-height: 30px;
+    height: max-content;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 0px;
-    margin: 0px;
+    padding: 10px 0px 10px 30px;
+    margin: 20px 0px 0px;
 }
 
 h1 {
     font-size: 14pt;
     font-weight: 400;
     font-weight: bold;
-    /* color: var(--background-color-grey, black); */
-    padding: 30px 50px 30px 0px;
-    margin-left: 30px;
-    line-height: 10px;
 }
 
 /* The header navigation section is a container for the next content div. */
@@ -115,14 +136,12 @@ h1 {
 .header-navigation-section {
     /* background: greenyellow; */
     /* background: white; */
-    min-height: 30px;
-    line-height: 10px;
+    min-height: 20px;
+    line-height: 0px;
     height: max-content;
-    /* Controls the main width of the page and sets an auto margin to center within the container. */
-    width: var(--width, 80%);
     margin: auto;
+    margin-top: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    margin-top: -10px;
 }
 
 /* The header navigation content contains the alphabet hyperlinks. */
@@ -133,7 +152,6 @@ h1 {
     word-spacing: 20px;
     text-align: center;
     height: max-content;
-    width: max-content;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -145,8 +163,6 @@ h2 {
     font-size: 12pt;
     font-weight: 400;
     font-weight: bold;
-    /* padding: 0px 0px 0px 0px; */
-    line-height: 20px;
     color: var(--accent-color-blue, black);
     text-align: left;
     text-decoration: underline;
@@ -163,11 +179,9 @@ h2 {
     /* background: yellow; */
     /* background: white; */
     height: max-content;
-    /* Controls the main width of the page and sets an auto margin to center within the container. */
-    width: var(--width, 80%);
     margin: auto;
-    margin-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*Text styling*/
@@ -186,14 +200,14 @@ h2 {
     color: var(--accent-color-blue, black);
 }
 
-h3 {
-    font-size: 10pt;
-    font-weight: 400;
-    font-family: var(--main-font-family, sans-serif);
-}
-
 div {
     font-size: 12pt;
+}
+
+.content {
+    left: 0px;
+    top: 0px;
+    width: 100%;
 }
 
 /* Container original size for most screens. */
@@ -201,42 +215,38 @@ div {
 /* The container holds all content below the header section and above the footer. */
 
 .container {
-    /* background: LightGray; */
+    /* background: green; */
     /* background: white; */
-    font-size: 1.5em;
     min-height: 800px;
-    /* Controls the offset of the container from behind the header. */
-    padding-top: 280px;
-    padding-bottom: 30px;
     height: max-content;
-    /* Controls the main width of the page and sets an auto margin to center within the container. */
-    width: var(--width-content, 80%);
+    left: 0px;
+    top: 0px;
+    /* Controls the offset of the container from behind the header. */
+    padding-top: 250px;
+    /* Controls the offset of the footer below the content. */
+    padding-bottom: 30px;
     margin: auto;
     margin-bottom: 50px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15);
     border-radius: 10px;
+    position: static;
 }
 
-/* Content Sections */
+/* Container Content Sections */
 
-.content {
+.container-content {
     /* background: PaleTurquoise; */
     /* background: white; */
-    /* min-height: 300px; */
+    min-height: 300px;
     height: max-content;
-    /* Controls the main width of the page and sets an auto margin to center within the container. */
-    width: var(--width, 80%);
     margin: auto;
 }
 
 .acronym-grid-section {
     /* background: blue; */
-    /* min-height: 500px; */
     height: max-content;
-    /*Controls the main width of the page.*/
     width: var(--width, 80%);
-    /*Offsets the page by 10% of the width of the whole screen to center it as width is 80%.*/
-    margin-left: var(--margin-left, 10%);
+    width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: 60px auto 70%;
@@ -247,43 +257,36 @@ div {
 /* Footer Section */
 
 .footer {
-    /* background: lightpink; */
-    background: white;
-    /*Controls the main width of the header section.*/
-    width: 100%;
+    background: lightpink;
     min-height: 10px;
     height: max-content;
     display: grid;
     grid-template-columns: auto 3fr auto;
     grid-template-rows: auto;
     grid-template-areas: "footer-left-text footer-blank-section footer-RLE-text";
-    /* background: var(--background-color-light-theme, white); */
-    left: 0px;
-    top: 0px;
-    /* position: fixed; */
-    /* z-index: 1; */
-    /* margin-top: 10px; */
-    /* margin-bottom: 10px; */
-    border-top: 1px solid rgba(0, 0, 0, .1);
     padding-bottom: -20px;
     line-height: 10px;
-    font-size: 12pt;
-    font-weight: 400;
-    font-family: var(--main-font-family, sans-serif);
+    border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .footer-left-text {
     display: flex;
     flex-direction: row;
-    /* word-spacing: 20px; */
     margin-left: 30px;
 }
 
 .footer-RLE-text {
     display: flex;
     flex-direction: row;
-    /* word-spacing: 20px; */
     margin-right: 30px;
+}
+
+/* h3 is only used in the footer. */
+
+h3 {
+    font-size: 10pt;
+    font-weight: 400;
+    font-family: var(--main-font-family, sans-serif);
 }
 
 #left {
@@ -351,8 +354,7 @@ div::selection {
 
 html {
     scroll-behavior: smooth;
-    /* Offset all anchor links by the height of the fixed header. */
-    /* https://stackoverflow.com/a/56467997/14290169 */
+    /* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
     scroll-padding-top: 260px;
 }
 
@@ -373,56 +375,7 @@ html {
     }
 }
 
-/* Responsive scaling for devices. */
-
-/* https://codeconvey.com/responsive-media-queries-for-all-devices/ */
-
-/* @media screen and (max-width: 500px) {
-    :root {
-        --width: 90%;
-        --margin-left: 5%;
-        --width-content: 450px;
-        font-size: 8pt;
-    }
-    .img-Logo {
-        height: 20px;
-    }
-    h1 {
-        font-size: 12pt;
-        line-height: 15px;
-        padding: 15px 50px 15px 0px;
-    }
-    h2 {
-        font-size: 10pt;
-        line-height: 10px;
-    }
-    .bold {
-        font-size: 8pt;
-    }
-    .bold-blue {
-        font-size: 8pt;
-    }
-    h3 {
-        font-size: 8pt;
-    }
-    div {
-        font-size: 8pt;
-    }
-    .acronym-grid-section {
-        grid-template-columns: 30px auto 70%;
-        grid-gap: 5px;
-    }
-    .header-navigation-content {
-        word-spacing: 3px;
-    }
-    .container {
-        padding-top: 180px;
-        padding-bottom: 10px;
-    }
-    html {
-        scroll-padding-top: 204px;
-    }
-} */
+/* Responsive scaling for devices. https://codeconvey.com/responsive-media-queries-for-all-devices/ */
 
 /* Smartphones */
 
