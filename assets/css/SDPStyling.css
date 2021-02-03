@@ -376,6 +376,7 @@ html {
     }
     body {
         /* background: blue; */
+        font-size: 8pt;
     }
     .img-Logo {
         height: 20px;
@@ -437,6 +438,7 @@ html {
     }
     body {
         /* background: orange; */
+        font-size: 8pt;
     }
     .img-Logo {
         height: 20px;
@@ -496,6 +498,7 @@ html {
     }
     body {
         /* background: green; */
+        font-size: 8pt;
     }
     .img-Logo {
         height: 20px;
@@ -553,6 +556,7 @@ html {
     /* Styles */
     body {
         /* background: red; */
+        font-size: 10pt;
     }
     /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
@@ -568,6 +572,7 @@ html {
     }
     body {
         /* background: yellow; */
+        font-size: 10pt;
     }
     .header-navigation-content {
         grid-template-columns: repeat(auto-fit, 24px);
