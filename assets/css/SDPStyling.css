@@ -231,7 +231,8 @@ div {
 
 .container {
     /* background: green; */
-    background: var(--background-color-light-theme, white);
+    /* background: var(--background-color-light-theme, white); */
+    background: inherit;
     min-height: 800px;
     height: max-content;
     left: 0px;
@@ -251,6 +252,7 @@ div {
 
 .container-content {
     /* background: PaleTurquoise; */
+    background: inherit;
     min-height: 300px;
     height: max-content;
     margin: auto;
