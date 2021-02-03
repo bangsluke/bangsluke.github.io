@@ -586,6 +586,6 @@ html {
         filter: invert(1) hue-rotate(180deg);
     }
     .container {
-        background: var(--background-color-grey, #282828);
+        background: var(--background-color-light-theme, white);
     }
 }
