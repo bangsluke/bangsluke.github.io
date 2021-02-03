@@ -141,6 +141,7 @@ h1 {
     height: max-content;
     margin: auto;
     margin-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -148,7 +149,6 @@ h1 {
 
 .header-navigation-content {
     /* background: LightSalmon; */
-    /* background: white; */
     word-spacing: 20px;
     text-align: center;
     height: max-content;
@@ -177,7 +177,6 @@ h2 {
 
 .top-grid-row {
     /* background: yellow; */
-    /* background: white; */
     height: max-content;
     margin: auto;
     margin-top: 10px;
@@ -204,12 +203,6 @@ div {
     font-size: 12pt;
 }
 
-.content {
-    left: 0px;
-    top: 0px;
-    width: 100%;
-}
-
 /* Container original size for most screens. */
 
 /* The container holds all content below the header section and above the footer. */
@@ -222,7 +215,7 @@ div {
     left: 0px;
     top: 0px;
     /* Controls the offset of the container from behind the header. */
-    padding-top: 250px;
+    padding-top: 260px;
     /* Controls the offset of the footer below the content. */
     padding-bottom: 30px;
     margin: auto;
@@ -245,8 +238,6 @@ div {
 .acronym-grid-section {
     /* background: blue; */
     height: max-content;
-    width: var(--width, 80%);
-    width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: 60px auto 70%;
@@ -257,7 +248,7 @@ div {
 /* Footer Section */
 
 .footer {
-    background: lightpink;
+    /* background: lightpink; */
     min-height: 10px;
     height: max-content;
     display: grid;
@@ -384,7 +375,7 @@ html {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Styles */
     :root {
-        background: blue;
+        /* background: blue; */
         --width: 90%;
         --margin-left: auto;
         --width-content: 320px;
