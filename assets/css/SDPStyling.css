@@ -231,6 +231,7 @@ div {
 
 .container {
     /* background: green; */
+    background: var(--background-color-light-theme, white);
     min-height: 800px;
     height: max-content;
     left: 0px;
