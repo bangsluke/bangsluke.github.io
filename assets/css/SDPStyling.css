@@ -35,13 +35,14 @@ Key CSS Notes:
     /* CSS width variables */
     /* Note - don't use margin-left with a defined value, instead use margin-auto. */
     --width: 80%;
-    /* CSS width variable for main rounded corner square shape. */
-    /* --width-content: 1200px; */
     background: var(--background-color-light-theme, white);
 }
 
 /* Reset all body positioning, margins (body starts with a 8px margin) and padding. */
+
 body {
+    /* background-color: darkcyan; */
+    background: var(--background-color-light-theme, white);
     left: 0px;
     top: 0px;
     margin: 0px;
@@ -59,7 +60,7 @@ body {
 .reducedwidth {
     left: 0px;
     top: 0px;
-    width: 80%;
+    width: var(--width, 80%);
 }
 
 .contentwidth {
@@ -67,7 +68,6 @@ body {
     top: 0px;
     width: max-content;
 }
-
 
 /* Header Sections */
 
@@ -135,7 +135,6 @@ h1 {
 
 .header-navigation-section {
     /* background: greenyellow; */
-    /* background: white; */
     min-height: 20px;
     line-height: 0px;
     height: max-content;
@@ -145,16 +144,24 @@ h1 {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
+.centerer {
+    /* background: orangered; */
+    width: 95%;
+    margin: auto;
+}
+
 /* The header navigation content contains the alphabet hyperlinks. */
 
 .header-navigation-content {
     /* background: LightSalmon; */
-    word-spacing: 20px;
     text-align: center;
     height: max-content;
     margin: auto;
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20px);
+    grid-template-rows: 20px;
+    grid-gap: 10px;
     text-align: justify;
     text-justify: auto;
 }
@@ -168,12 +175,27 @@ h2 {
     text-decoration: underline;
 }
 
-#deadHeaderLink {
+h2:hover {
+    /* Hover over link */
+    color: var(--accent-color-pink, black);
+}
+
+.deadHeaderLink {
     text-decoration: none;
     color: black;
 }
 
-/* Top table line containing "#", "Short Term" and "Long Term". */
+.deadHeaderLink:hover {
+    color: black;
+}
+
+/* Hyperlink (anchor) formatting. */
+
+a {
+    text-decoration: none;
+}
+
+/* Top table line containing "", "Short Term" and "Long Term". */
 
 .top-grid-row {
     /* background: yellow; */
@@ -209,7 +231,6 @@ div {
 
 .container {
     /* background: green; */
-    /* background: white; */
     min-height: 800px;
     height: max-content;
     left: 0px;
@@ -229,7 +250,6 @@ div {
 
 .container-content {
     /* background: PaleTurquoise; */
-    /* background: white; */
     min-height: 300px;
     height: max-content;
     margin: auto;
@@ -285,40 +305,13 @@ h3 {
     text-align: left;
 }
 
+#left:hover {
+    color: var(--accent-color-pink, black);
+}
+
 #right {
     color: var(--background-color-grey, black);
     text-align: right;
-}
-
-/* Hyperlink (anchor) formatting. */
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    /* Normal link */
-    /* color: var(--main-accent-color, black); */
-    text-decoration: none;
-}
-
-a:visited {
-    /* Visited link */
-    /* color: var(--main-accent-color, black); */
-    text-decoration: none;
-}
-
-a:hover {
-    /* Hover over link */
-    color: var(--main-accent-color, black);
-    color: green;
-    /* font-size: 12pt; */
-    /* font-style: italic; */
-}
-
-a:active {
-    /* Selected link */
-    color: var(--main-accent-color, black);
 }
 
 /* CSS Tips and Tricks. */
@@ -375,23 +368,37 @@ html {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Styles */
     :root {
-        /* background: blue; */
-        --width: 90%;
-        --margin-left: auto;
-        --width-content: 320px;
+        --width: 95%;
         font-size: 8pt;
+    }
+    body {
+        /* background: blue; */
     }
     .img-Logo {
         height: 20px;
     }
+    .header-toptext-grey-section {
+        min-height: 30px;
+        padding: 5px 0px 5px 20px;
+        margin: 20px 0px 0px;
+    }
     h1 {
         font-size: 10pt;
         line-height: 15px;
-        padding: 15px 50px 15px 0px;
+    }
+    .header-navigation-content {
+        grid-template-columns: repeat(auto-fit, 16px);
+        grid-template-rows: 15px;
+        grid-gap: 5px;
+        margin-bottom: 0px;
     }
     h2 {
-        font-size: 9pt;
+        font-size: 8pt;
         line-height: 10px;
+    }
+    .acronym-grid-section {
+        grid-template-columns: 20px auto 70%;
+        grid-gap: 5px;
     }
     .bold {
         font-size: 8pt;
@@ -399,25 +406,19 @@ html {
     .bold-blue {
         font-size: 8pt;
     }
-    h3 {
-        font-size: 8pt;
-    }
     div {
         font-size: 8pt;
     }
-    .acronym-grid-section {
-        grid-template-columns: 30px auto 70%;
-        grid-gap: 5px;
-    }
-    .header-navigation-content {
-        word-spacing: 3px;
-    }
     .container {
-        padding-top: 210px;
-        padding-bottom: 10px;
+        padding-top: 240px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
     }
     html {
-        scroll-padding-top: 212px;
+        scroll-padding-top: 235px;
+    }
+    h3 {
+        font-size: 6pt;
     }
 }
 
@@ -428,50 +429,57 @@ html {
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
     /* Styles */
     :root {
-        background: orange;
         --width: 90%;
-        --margin-left: auto;
-        --width-content: 450px;
-        /* --width-content: 80%; */
         font-size: 8pt;
+    }
+    body {
+        /* background: orange; */
     }
     .img-Logo {
         height: 20px;
     }
+    .header-toptext-grey-section {
+        min-height: 30px;
+        padding: 5px 0px 5px 20px;
+        margin: 20px 0px 0px;
+    }
     h1 {
         font-size: 12pt;
         line-height: 15px;
-        padding: 15px 50px 15px 0px;
+    }
+    .header-navigation-content {
+        grid-template-columns: repeat(auto-fit, 18px);
+        grid-template-rows: 20px;
+        grid-gap: 10px;
+        margin-bottom: 0px;
     }
     h2 {
         font-size: 10pt;
         line-height: 10px;
     }
-    .bold {
-        font-size: 8pt;
-    }
-    .bold-blue {
-        font-size: 8pt;
-    }
-    h3 {
-        font-size: 8pt;
-    }
-    div {
-        font-size: 8pt;
-    }
     .acronym-grid-section {
         grid-template-columns: 30px auto 70%;
         grid-gap: 5px;
     }
-    .header-navigation-content {
-        word-spacing: 3px;
+    .bold {
+        font-size: 10pt;
+    }
+    .bold-blue {
+        font-size: 10pt;
+    }
+    div {
+        font-size: 10pt;
     }
     .container {
-        padding-top: 200px;
-        padding-bottom: 10px;
+        padding-top: 262px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
     }
     html {
-        scroll-padding-top: 204px;
+        scroll-padding-top: 258px;
+    }
+    h3 {
+        font-size: 8pt;
     }
 }
 
@@ -480,49 +488,57 @@ html {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /* Styles */
     :root {
-        background: green;
         --width: 90%;
-        --margin-left: auto;
-        --width-content: 450px;
         font-size: 8pt;
+    }
+    body {
+        /* background: green; */
     }
     .img-Logo {
         height: 20px;
     }
+    .header-toptext-grey-section {
+        min-height: 30px;
+        padding: 10px 0px 10px 30px;
+        margin: 20px 0px 0px;
+    }
     h1 {
         font-size: 12pt;
         line-height: 15px;
-        padding: 15px 50px 15px 0px;
+    }
+    .header-navigation-content {
+        grid-template-columns: repeat(auto-fit, 14px);
+        grid-template-rows: 20px;
+        grid-gap: 10px;
+        margin-bottom: 10px;
     }
     h2 {
-        font-size: 10pt;
+        font-size: 12pt;
         line-height: 10px;
-    }
-    .bold {
-        font-size: 8pt;
-    }
-    .bold-blue {
-        font-size: 8pt;
-    }
-    h3 {
-        font-size: 8pt;
-    }
-    div {
-        font-size: 8pt;
     }
     .acronym-grid-section {
         grid-template-columns: 30px auto 70%;
         grid-gap: 5px;
     }
-    .header-navigation-content {
-        word-spacing: 3px;
+    .bold {
+        font-size: 12pt;
+    }
+    .bold-blue {
+        font-size: 12pt;
+    }
+    div {
+        font-size: 12pt;
     }
     .container {
-        padding-top: 200px;
-        padding-bottom: 10px;
+        padding-top: 246px;
+        padding-bottom: 30px;
+        margin-bottom: 50px;
     }
     html {
-        scroll-padding-top: 204px;
+        scroll-padding-top: 240px;
+    }
+    h3 {
+        font-size: 10pt;
     }
 }
 
@@ -532,8 +548,8 @@ html {
 
 @media only screen and (min-width: 1224px) {
     /* Styles */
-    :root {
-        background: red;
+    body {
+        /* background: red; */
     }
     /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
@@ -545,8 +561,14 @@ html {
 @media only screen and (min-width: 1824px) {
     /* Styles */
     :root {
-        background: yellow;
         --width: 70%;
+    }
+    body {
+        /* background: yellow; */
+    }
+    .header-navigation-content {
+        grid-template-columns: repeat(auto-fit, 24px);
+        grid-gap: 10px;
     }
     /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
