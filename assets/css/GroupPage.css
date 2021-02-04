@@ -4,105 +4,31 @@
 
 /*
 Key CSS Notes:
+- Design for Mobile size first! Then scale up.
 - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." 
 - For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- Remember that for margins and padding, it goes (top, right, bottom and left).
 - CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
 - See the bottom of this file for key tips and tricks
 */
 
-/*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+/* Import the Open Sans font or another font from Google fonts. */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
 :root {
-    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-    --main-style-color: #2a3950;
-    /*CSS variable*/
-    --accent-color-blue: #41436A;
-    /*CSS variable*/
-    --accent-color-darkred: #974063;
-    /*CSS variable*/
-    --accent-color-red: #f54768;
-    /*CSS variable*/
-    --accent-color-orange: #ff9678;
-    /*CSS variable*/
-    --accent-color-green: #99b998;
-    /*CSS variable*/
-    --accent-color-white: #ffffff;
-    /*CSS variable*/
-    --main-font-family: 'Calibri', sans-serif;
-    /*CSS variable*/
-    /* line-height: 15px; */
+    /* CSS variables - Add variables below like the given example. */
+    /* --accent-color-purple: #8F23FF; */
 }
 
-/* Header area styling. */
+/* Add code below. */
 
-.header-area {
-    position: fixed;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-style-color, #2a3950);
-    transition: 0.5s;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
 
-/* Navigation bar styling */
 
-/* .navbar {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    z-index: 1;
-    background-color: var(--main-style-color, #2a3950);
-} */
-
-.navbar-text {
-    font-size: 20px;
-    font-family: var(--main-font-family, 'Calibri', sans-serif);
-    font-weight: 400;
-    color: var(--accent-color-green, white);
-}
-
-/* Add a filler div to add height to the page for testing scrolling. */
-
-.filler {
-    height: 1500px;
-}
-
-/*Main page background colour*/
-
-body {
-    background-image: url("/images/GroupPage/Background.JPG");
-    /* background-color: var(--main-style-color, black); */
-    background-blend-mode: screen;
-}
-
-body>#bg {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    /* https://cssgradient.io/ */
-    background: rgb(42, 57, 80);
-    background: linear-gradient(34deg, rgba(42, 57, 80, 1) 0%, rgba(65, 67, 106, 1) 35%, rgba(151, 64, 99, 1) 100%);
-    /* Test out clip path. */
-    /* https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit */
-    /* https://bennettfeely.com/clippy/ */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 100%, 94% 35%, 0 19%);
-    position: absolute;
-    z-index: -1;
-}
 
 .avatar {
     width: 100px;
@@ -115,36 +41,82 @@ body>#bg {
     background-color: rgba(255, 255, 255, 0.075);
 }
 
-/* Hyperlink (anchor) formatting. */
 
-a:link {
-    /* Normal link */
-    color: var(--accent-color-green, greenyellow);
-    text-decoration: none;
+
+
+
+
+
+
+
+
+
+
+
+
+/* Resizing the webpage for all devices. */
+
+/* Smartphones */
+
+/* Covers most phones such as iPhone SE (my phone). */
+
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+} */
+
+/* Reduced windows on Desktops and Laptops */
+
+/* For when a user reduces the size of their window. */
+
+/* @media only screen and (min-width: 480px) and (max-width: 1223px) {
+
+} */
+
+/* iPads */
+
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+} */
+
+/* Desktops and Laptops */
+
+/* For most normal size screen desktops and laptops. */
+
+/* @media only screen and (min-width: 1224px) {
+
+} */
+
+/* Large Screens */
+
+/* For larger monitors and displays. */
+
+/* @media only screen and (min-width: 1824px) {
+
+} */
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+/* h1::selection {
+    background: var(--accent-color-pink, #F575FF);
+} */
+
+/* HTML updates to cover the full webpage. */
+
+/* Smooth the scrolling function of any internal hyperlinks. */
+
+/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+
+html {
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 260px; */
 }
 
-a:visited {
-    /* Visited link */
-    color: var(--accent-color-orange, orange);
-    text-decoration: none;
-}
-
-a:hover {
-    /* Hover over link */
-    color: var(--accent-color-orange, orange);
-    text-decoration: none;
-}
-
-a:active {
-    /* Selected link */
-    color: var(--accent-color-orange, orange);
-    text-decoration: none;
-}
-
-/* Add an id for fading in an item over three seconds. */
+/* Add an id for fading in an item over two seconds. */
 
 #fadein {
-    animation: fadein 3s ease forwards;
+    animation: fadein 2s ease forwards;
 }
 
 @keyframes fadein {
@@ -156,32 +128,6 @@ a:active {
         display: block;
         opacity: 1;
     }
-}
-
-/* CSS Tips and Tricks. */
-
-/* Change the background colour of when a user highlights text to orange. */
-
-h1::selection {
-    background: var(--accent-color-orange, orange);
-}
-
-strong::selection {
-    background: var(--accent-color-orange, orange);
-}
-
-a::selection {
-    background: var(--accent-color-orange, orange);
-}
-
-p::selection {
-    background: var(--accent-color-orange, orange);
-}
-
-/* Smooth the scrolling function of any internal hyperlinks. */
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* Add a set up for media devices with preference for dark mode. */
