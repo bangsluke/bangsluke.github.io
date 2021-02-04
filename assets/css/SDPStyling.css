@@ -91,7 +91,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
-.logo {
+#SDPLogo {
     margin-left: 5%;
     height: 40px;
     width: auto;
@@ -187,6 +187,10 @@ h2:hover {
 
 .deadHeaderLink:hover {
     color: black;
+}
+
+.isDisabled {
+    pointer-events: none;
 }
 
 /* Hyperlink (anchor) formatting. */
@@ -586,11 +590,24 @@ html {
 /* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        background: var(--background-color-grey, #282828);
+    html {
+        /* background: var(--background-color-grey, #282828); */
+        background: var(--background-color-grey, #000000);
         filter: invert(1) hue-rotate(180deg);
     }
     .container {
         background: var(--background-color-light-theme, white);
+    }
+    .header-logo-section {
+        /* background: white; */
+        filter: invert(1) hue-rotate(180deg);
+        /* filter: none; */
+    }
+    #SDPLogo {
+        /* filter: hue-rotate(350deg); */
+        /* height: 100px; */
+        /* filter: none; */
+        filter: invert(1) hue-rotate(180deg);
+        /* filter: hue-rotate(180deg); */
     }
 }
