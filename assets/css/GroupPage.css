@@ -57,13 +57,17 @@ body {
 
 /* Have the homepage body in grid display to allow smooth layout changes from web to mobile. */
 
-.homepage-body {
+.body-homepage {
     display: grid;
     grid-template-columns: 100%;
     /* The below properties are commented out as the body structure is organised in media queries at bottom of file. */
     /* grid-gap: 20px; */
     /* grid-template-rows: auto auto; */
     /* grid-template-areas: "header" "footer"; */
+}
+
+.body-individuals {
+    background: var(--accent-color-blue, #41436A);
 }
 
 /* Header styling. */
@@ -74,6 +78,22 @@ body {
     height: 200px;
     width: 100%;
     color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header-subpage {
+    background: #ff9678;
+    height: 50px;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0px;
+    top: 0px;
 }
 
 /* Content styling. */
@@ -83,6 +103,15 @@ body {
     background: #f54768;
     height: 200px;
     width: 100%;
+    color: #ffffff;
+}
+
+.content-individuals {
+    background: #f54768;
+    height: max-content;
+    width: 100%;
+    top: 100px;
+    left: 0px;
     color: #ffffff;
 }
 
@@ -111,6 +140,22 @@ body {
     align-content: center;
 }
 
+.footer-subpage {
+    background: #974063;
+    height: max-content;
+    width: 100%;
+    color: #ffffff;
+    justify-self: center;
+    align-content: center;
+}
+
+/* Text styling. */
+
+h6 {
+    font-size: 12pt;
+}
+
+
 /* Resizing the webpage for all devices. */
 
 /* Smartphones */
@@ -119,9 +164,9 @@ body {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     html {
-        background: blue;
+        /* background: blue; */
     }
-    .homepage-body {
+    .body-homepage {
         grid-gap: 20px;
         grid-template-rows: auto auto;
         grid-template-areas: "header" "footer";
@@ -136,7 +181,7 @@ body {
     html {
         background: green;
     }
-    .homepage-body {
+    .body-homepage {
         grid-gap: 20px;
         grid-template-rows: 20% 90% auto;
         grid-template-areas: "header" "content" "footer";
@@ -149,7 +194,7 @@ body {
     html {
         background: orange;
     }
-    .homepage-body {
+    .body-homepage {
         grid-gap: 20px;
         grid-template-rows: 20% 90% auto;
         grid-template-areas: "header" "content" "footer";
@@ -164,7 +209,7 @@ body {
     html {
         background: red;
     }
-    .homepage-body {
+    .body-homepage {
         grid-gap: 20px;
         grid-template-rows: 20% 90% auto;
         grid-template-areas: "header" "content" "footer";
@@ -179,7 +224,7 @@ body {
     html {
         background: yellow;
     }
-    .homepage-body {
+    .body-homepage {
         grid-gap: 20px;
         grid-template-rows: 20% 90% auto;
         grid-template-areas: "header" "content" "footer";
