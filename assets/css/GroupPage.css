@@ -155,7 +155,7 @@ h6 {
     font-size: 12pt;
 }
 
-p { 
+p {
     color: white;
 }
 
@@ -164,6 +164,21 @@ ul {
 }
 
 /* Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+240 pixels (old Android portrait mode)
+320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+384 pixels (Android Nexus portrait)
+414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+480 pixels (iPhone 3 and 4 landscape mode)
+568 pixels (iPhone 5 and iPhone SE landscape)
+600 pixels (Android Nexus landscape, Kindle portrait)
+667 pixels (iPhone 6, 7 and 8 landscape)
+736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+768 pixels (iPad portrait)
+812 pixels (iPhone X landscape)
+1024 pixels (iPad landscape) */
 
 /* Smartphones */
 
@@ -265,11 +280,19 @@ ul {
 
 /* Add a set up for media devices with preference for dark mode. */
 
-/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/
+https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9 */
 
 @media (prefers-color-scheme: dark) {
     :root {
-        background: var(--background-color-grey, #282828);
+        background: #000000;
         filter: invert(1) hue-rotate(180deg);
+    }
+    img {
+        opacity: .75;
+        transition: opacity .5s ease-in-out;
+    }
+    img:hover {
+        opacity: 1;
     }
 }
