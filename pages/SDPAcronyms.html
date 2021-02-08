@@ -43,7 +43,11 @@
 
 			<!-- RLE Logo -->
 			<a href="https://sdp.rle.de/#home" target="_blank">
-				<img alt="SDP Logo & Text" id="SDPLogo" src="/images/SDP/SDP Logo and Text.png" />
+				<picture>
+					<source media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)" srcset="/images/SDP/SDP Logo and Text.png">
+					<source media="(prefers-color-scheme: dark)" srcset="/images/SDP/SDP Dark Mode Logo.png">
+					<img alt="SDP Logo & Text" id="SDPLogo" src="/images/SDP/SDP Logo and Text.png">
+				</picture>
 			</a>
 
 		</div>
