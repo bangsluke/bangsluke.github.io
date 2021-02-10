@@ -276,7 +276,7 @@ div {
 
 .footer {
     /* background: lightpink; */
-    min-height: 10px;
+    min-height: 20px;
     height: max-content;
     display: grid;
     grid-template-columns: auto 3fr auto;
