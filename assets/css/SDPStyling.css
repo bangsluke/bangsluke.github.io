@@ -153,7 +153,7 @@ h1 {
 /* The header navigation content contains the alphabet hyperlinks. */
 
 .header-navigation-content {
-    background: LightSalmon;
+    /* background: LightSalmon; */
     text-align: center;
     height: max-content;
     margin: auto;
@@ -167,7 +167,7 @@ h1 {
 }
 
 .hyperlink-grid-cell {
-    background: yellow;
+    /* background: yellow; */
     /* text-align: center; */
     /* text-justify: center; */
     justify-items: center;
@@ -444,12 +444,12 @@ html {
         font-size: 8pt;
     }
     .container {
-        padding-top: 240px;
+        padding-top: 286px;
         padding-bottom: 20px;
         margin-bottom: 30px;
     }
     html {
-        scroll-padding-top: 235px;
+        scroll-padding-top: 282px;
     }
     h3 {
         font-size: 6pt;
