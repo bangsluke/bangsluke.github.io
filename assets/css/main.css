@@ -61,6 +61,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline;
 }
 
+
+.weather {
+	margin: 0 0 2em 0;
+}
+
+#images {
+	padding: 1em 0 0 0;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -2207,7 +2216,8 @@ body.is-covered #wrapper {
 
 #header {
 	text-align: center;
-	padding: 6em 0 4em 0;
+	/* padding: 6em 0 4em 0; */
+	padding: 5em 0 1em 0;
 }
 
 #header h1 {
