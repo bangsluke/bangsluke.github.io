@@ -1590,6 +1590,9 @@ input[type="radio"]+label:before {
 	position: relative;
 	margin: 0 0 0 0;
 }
+.icon:hover {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
+}
 
 @media screen and (max-width: 736px) {
 	.icon {
@@ -1598,6 +1601,21 @@ input[type="radio"]+label:before {
 }
 
 .icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none !important;
+}
+
+.footericon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	margin: 0 0 0 0;
+}
+.footericon:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
@@ -2239,6 +2257,9 @@ body.is-covered #wrapper {
 	padding: 0.2em;
 	border: solid 1px rgba(255, 255, 255, 0.25);
 	background-color: rgba(255, 255, 255, 0.075);
+}
+#header .avatar:hover {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
 }
 
 /* Add an id for fading in an item over two seconds. */
