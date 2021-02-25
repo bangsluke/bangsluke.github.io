@@ -69,6 +69,32 @@ body {
 	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
 }
 
+/* Add a id for all content div. */
+
+.allcontent {
+	width: 100%;
+}
+
+/* Avatar class for the main image. */
+
+.avatar {
+	width: 100px;
+	height: auto;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 0 2em 0;
+	padding: 0.2em;
+	border: solid 1px #FF3CAC;
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.avatar {
+		width: 70px;
+	}
+}
+
 .sideMenu {
 	height: 100%;
 	width: 0;
@@ -120,6 +146,8 @@ body {
 	padding: 0.2em;
 }
 
+/* All content styling. */
+
 #content-area {
 	transition: margin-left .5s;
 	padding: 16px;
@@ -149,8 +177,31 @@ body {
 	font-size: 45px;
 	margin: 10px;
 	letter-spacing: 3px;
-
 }
+
+/* Content media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	#content-area {
+		padding: 10px;
+	}
+	.content-text {
+		padding: 10px 10px;
+	}
+	.content-text h2 {
+		padding: 5px 10px;
+		font-size: 20px;
+	}
+	.content-text h3 {
+		font-size: 15px;
+		margin: 5px;
+		letter-spacing: 3px;
+	}
+}
+
+
+
 
 .firstpageimagetest {
 	background-image: url("/pages/GroupPage/assets/images/Background.JPG");
@@ -158,15 +209,14 @@ body {
 	width: 500px;
 	margin: auto;
 	/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-
 }
+
 .firstpageimagetest p {
 	color: white;
 	font-size: 30px;
 	text-transform: uppercase;
 	padding: 1em;
 }
-
 
 #burgericon {
 	/* background: blue; */
@@ -180,19 +230,6 @@ body {
 
 #burgericon:hover {
 	color: #784BA0;
-}
-
-/* Avatar class for the main image. */
-
-.avatar {
-	width: 100px;
-	height: auto;
-	border-radius: 100%;
-	display: inline-block;
-	margin: 0 0 2em 0;
-	padding: 0.2em;
-	border: solid 1px rgba(255, 255, 255, 0.25);
-	background-color: rgba(255, 255, 255, 0.075);
 }
 
 /* Footer styling. */
@@ -211,12 +248,25 @@ body {
 .footer a {
 	color: #ffffff;
 	text-decoration: none;
+	font-size: 20px;
 }
 
 .footer a:hover {
 	color: #FF3CAC;
 	text-decoration: #FFFFFF;
 }
+
+/* Footer media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.footer a {
+		font-size: 10px;
+	}
+}
+
+
+
 
 /* Resizing the webpage for all devices. */
 
@@ -235,49 +285,36 @@ body {
 	812 pixels (iPhone X landscape)
 	1024 pixels (iPad landscape) */
 
-/* Smartphones */
-
-/* Covers most phones such as iPhone SE (my phone). */
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 	html {
 		/* background: blue; */
 	}
 }
 
-/* Reduced windows on Desktops and Laptops */
-
-/* For when a user reduces the size of their window. */
-
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 	html {
 		/* background: green; */
 	}
 }
 
-/* iPads */
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
 	html {
 		/* background: orange; */
 	}
 }
 
-/* Desktops and Laptops */
-
-/* For most normal size screen desktops and laptops. */
-
 @media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	html {
 		/* background: red; */
 	}
 }
 
-/* Large Screens */
-
-/* For larger monitors and displays. */
-
 @media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
 	html {
 		/* background: yellow; */
 	}
