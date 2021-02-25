@@ -1,0 +1,137 @@
+/* GroupPage Styling Guide. */
+
+/* The main css style file used for the Group Page styling. */
+
+/*
+Key CSS Notes:
+- Design for Mobile size first! Then scale up.
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." 
+- For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- Remember that for margins and padding, it goes (top, right, bottom and left).
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- See the bottom of this file for key tips and tricks
+*/
+
+/* Import the Open Sans font or another font from Google fonts. */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /* CSS variables - Add variables below like the given example. */
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #2a3950;
+    --main-background-color: #2a3950;
+    --accent-color-blue: #41436A;
+    --accent-color-darkred: #974063;
+    --accent-color-red: #f54768;
+    --accent-color-orange: #ff9678;
+    --accent-color-green: #99b998;
+    --accent-color-white: #ffffff;
+    --main-font-family: 'Calibri', sans-serif;
+    /* line-height: 15px; */
+}
+
+/* HTML updates to cover the full webpage. */
+
+html {
+    background: var(--main-background-color, #2a3950);
+    /* Smooth the scrolling function of any internal hyperlinks. */
+    scroll-behavior: smooth;
+    /* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+    /* scroll-padding-top: 260px; */
+}
+
+/* Add code below. */
+
+/* Everything below initially designed for mobile. */
+
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background: darksalmon;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.main-menu h2 {
+	text-align: center;
+	letter-spacing: 7px;
+	color: #fff;
+	background: #111;
+	padding: 20px 0;
+}
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.sideMenu a i {
+	padding-right: 15px;
+}
+.main-menu a:hover {
+	color: #f1f1f1;
+	background: #111;
+}
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#content-area {
+	transition: margin-left .5s;
+	padding: 16px;
+}
+.content-text {
+	padding: 100px 180px;
+	text-align: center;
+}
+.content-text h2 {
+	background: darksalmon;
+	display: inline-block;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: #fff;
+}
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 45px;
+	margin: 0;
+	letter-spacing: 3px;
+}
+
+
+
+/* Avatar class for the main image. */
+
+.avatar {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0.2em;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+}

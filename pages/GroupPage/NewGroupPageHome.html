@@ -1,0 +1,104 @@
+<!-- GroupPageHome.html -->
+<!-- The home page for the best friendship group in the world. -->
+<!-- Initial basis started from https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. -->
+	<title>GroupPageHome</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Link into font-awesome logos and icons. -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Link to CSS styling -->
+	<!-- Starting with "/" moves back to root directory. -->
+	<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet">
+
+	<!-- Link to JavaScript scripts -->
+	<!-- Starting with "/" moves back to root directory. -->
+	<script src="/pages/GroupPage/assets/js/jGroupPage.js"></script>
+
+	<!-- Favicon Image -->
+	<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/images/Favicon.png" />
+
+</head>
+
+<html>
+
+<body>
+
+
+	<a href="/Homepage.html"><img class="avatar" src="/images/OnlineProfilePicture.png" alt="bangsluke Online Profile Photo"></a>
+
+
+	<!-- Header -->
+
+	<div class="sideMenu" id="side-menu">
+
+		<!-- The x close button. -->
+		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+
+		<!-- The main side bar menu. -->
+		<div class="main-menu">
+			<h2>SideMenu</h2>
+			<a href="#"><i class="fa fa-home"></i>Home</a>
+			<a href="#"><i class="fa fa-users"></i>About</a>
+			<a href="#"><i class="fa fa-book"></i>Portfolio</a>
+			<a href="#"><i class="fa fa-file-o"></i>Services</a>
+			<a href="#"><i class="fa fa-phone"></i>Contact</a>
+		</div>
+	</div>
+
+	<!-- All Page Content. -->
+	<div id="content-area">
+
+		<!-- Top burger menu clickable icon to open the menu. -->
+		<span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+
+		<!-- Main content section. -->
+		<div class="content-text">
+			<h2>Tits Group Page</h2>
+			<h3>Lets go bitches</h3>
+		</div>
+
+	</div>
+
+
+	<!-- <script>
+		function openNav() {
+			document.getElementById("side-menu").style.width = "300px";
+			document.getElementById("content-area").style.marginRight = "300px";
+		}
+		function closeNav() {
+			document.getElementById("side-menu").style.width = "0";
+			document.getElementById("content-area").style.marginRight = "0";
+		}
+	</script> -->
+
+	<!-- Footer -->
+
+	<footer class="footer">
+
+		Test - should be visible on mobile and webpage.
+
+		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+		<a href="https://github.com/bangsluke/bangsluke">&copy; 2020-2021 bangsluke designs.</a>
+		<a href="#">&nbsp</a>
+		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+	</footer>
+
+
+</body>
+
+</html>

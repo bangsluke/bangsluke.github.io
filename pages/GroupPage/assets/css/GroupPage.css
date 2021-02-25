@@ -49,11 +49,27 @@ html {
 
 /* Everything below initially designed for mobile. */
 
+/* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
     background: #41436A;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    font-family: var(--main-font-family, sans-serif);
+    width: 100%;
+    min-height: 100vh;
+    font-size: 25px;
 }
+
+
 
 /* Have the homepage body in grid display to allow smooth layout changes from web to mobile. */
 
