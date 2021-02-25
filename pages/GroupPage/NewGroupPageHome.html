@@ -29,17 +29,11 @@
 
 	<!-- Favicon Image -->
 	<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/images/Favicon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
 
 </head>
 
-<html>
-
 <body>
-
-
-	<a href="/Homepage.html"><img class="avatar" src="/images/OnlineProfilePicture.png" alt="bangsluke Online Profile Photo"></a>
-
 
 	<!-- Header -->
 
@@ -48,55 +42,54 @@
 		<!-- The x close button. -->
 		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 
-		<!-- The main side bar menu. -->
+		<!-- The main side bar menu options. -->
 		<div class="main-menu">
-			<h2>SideMenu</h2>
+			<h2>Menu</h2>
 			<a href="#"><i class="fa fa-home"></i>Home</a>
 			<a href="#"><i class="fa fa-users"></i>About</a>
 			<a href="#"><i class="fa fa-book"></i>Portfolio</a>
 			<a href="#"><i class="fa fa-file-o"></i>Services</a>
 			<a href="#"><i class="fa fa-phone"></i>Contact</a>
 		</div>
+
 	</div>
 
 	<!-- All Page Content. -->
 	<div id="content-area">
 
 		<!-- Top burger menu clickable icon to open the menu. -->
-		<span onclick="openNav()" style="font-size:30px;cursor:pointer">☰ MENU</span>
+		<span id="burgericon" onclick="openNav()" >☰ MENU</span>
+
+		<!-- style="font-size:30px;cursor:pointer" -->
+
+		<a href="/Homepage.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="bangsluke Online Profile Photo"></a>
 
 		<!-- Main content section. -->
-		<div class="content-text">
+		<div class="content-text"  id="fadein">
 			<h2>Tits Group Page</h2>
 			<h3>Lets go bitches</h3>
 		</div>
 
+		<!-- Try to add a spotify style image. -->
+		<!-- <div class="firstpageimagetest">
+			<p>Click to enter</p>
+		</div> -->
+
+		<br>
+
+		<!-- Footer -->
+		<!-- Note that the footer sits inside id content-area so it inherits its scaling. -->
+
+		<footer class="footer">
+
+			<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+			<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+			<a href="#">&nbsp</a>
+			<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+		</footer>
+
 	</div>
-
-
-	<!-- <script>
-		function openNav() {
-			document.getElementById("side-menu").style.width = "300px";
-			document.getElementById("content-area").style.marginRight = "300px";
-		}
-		function closeNav() {
-			document.getElementById("side-menu").style.width = "0";
-			document.getElementById("content-area").style.marginRight = "0";
-		}
-	</script> -->
-
-	<!-- Footer -->
-
-	<footer class="footer">
-
-		Test - should be visible on mobile and webpage.
-
-		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-		<a href="https://github.com/bangsluke/bangsluke">&copy; 2020-2021 bangsluke designs.</a>
-		<a href="#">&nbsp</a>
-		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
-
-	</footer>
 
 
 </body>

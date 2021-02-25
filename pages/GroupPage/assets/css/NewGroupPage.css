@@ -2,6 +2,8 @@
 
 /* The main css style file used for the Group Page styling. */
 
+/* Initial basis started from https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html */
+
 /*
 Key CSS Notes:
 - Design for Mobile size first! Then scale up.
@@ -21,39 +23,52 @@ Key CSS Notes:
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
 :root {
-    /* CSS variables - Add variables below like the given example. */
-    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-    --main-style-color: #2a3950;
-    --main-background-color: #2a3950;
-    --accent-color-blue: #41436A;
-    --accent-color-darkred: #974063;
-    --accent-color-red: #f54768;
-    --accent-color-orange: #ff9678;
-    --accent-color-green: #99b998;
-    --accent-color-white: #ffffff;
-    --main-font-family: 'Calibri', sans-serif;
-    /* line-height: 15px; */
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #2a3950;
+	--main-background-color: #2a3950;
+	--accent-color-blue: #41436A;
+	--accent-color-darkred: #974063;
+	--accent-color-red: #f54768;
+	--accent-color-orange: #ff9678;
+	--accent-color-green: #99b998;
+	--accent-color-white: #ffffff;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
 }
 
 /* HTML updates to cover the full webpage. */
 
 html {
-    background: var(--main-background-color, #2a3950);
-    /* Smooth the scrolling function of any internal hyperlinks. */
-    scroll-behavior: smooth;
-    /* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
-    /* scroll-padding-top: 260px; */
+	background: var(--main-background-color, #2a3950);
+	/* Smooth the scrolling function of any internal hyperlinks. */
+	scroll-behavior: smooth;
+	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+	/* scroll-padding-top: 260px; */
 }
 
 /* Add code below. */
 
 /* Everything below initially designed for mobile. */
 
+/* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Generic body class for all HTML pages using this CSS format. */
 
 body {
 	margin: 0;
 	font-family: sans-serif;
+	/* https://www.grabient.com/ */
+	background-color: #FF3CAC;
+	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
 }
+
 .sideMenu {
 	height: 100%;
 	width: 0;
@@ -61,11 +76,12 @@ body {
 	z-index: 1;
 	top: 0;
 	right: 0;
-	background: darksalmon;
+	background: #784BA0;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
 }
+
 .main-menu h2 {
 	text-align: center;
 	letter-spacing: 7px;
@@ -73,6 +89,7 @@ body {
 	background: #111;
 	padding: 20px 0;
 }
+
 .sideMenu a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -84,54 +101,228 @@ body {
 	text-transform: uppercase;
 	font-weight: 900;
 }
+
 .sideMenu a i {
 	padding-right: 15px;
 }
+
 .main-menu a:hover {
-	color: #f1f1f1;
+	color: #784BA0;
 	background: #111;
 }
+
 .sideMenu .closebtn {
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
+	padding: 0.2em;
 }
+
 #content-area {
 	transition: margin-left .5s;
 	padding: 16px;
 }
+
 .content-text {
 	padding: 100px 180px;
 	text-align: center;
 }
+
 .content-text h2 {
-	background: darksalmon;
+	background: #FF3CAC;
 	display: inline-block;
 	padding: 15px 35px;
 	text-transform: uppercase;
 	font-size: 50px;
 	color: #fff;
+	transition: transform 250ms;
 }
+
+.content-text h2:hover {
+	transform: translateY(-5px);
+}
+
 .content-text h3 {
 	text-transform: uppercase;
 	font-size: 45px;
-	margin: 0;
+	margin: 10px;
 	letter-spacing: 3px;
+
+}
+
+.firstpageimagetest {
+	background-image: url("/pages/GroupPage/assets/images/Background.JPG");
+	height: 300px;
+	width: 500px;
+	margin: auto;
+	/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
+
+}
+.firstpageimagetest p {
+	color: white;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 1em;
 }
 
 
+#burgericon {
+	/* background: blue; */
+	color: white;
+	position: absolute;
+	right: 0px;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 0.5em;
+}
+
+#burgericon:hover {
+	color: #784BA0;
+}
 
 /* Avatar class for the main image. */
 
 .avatar {
-    width: 100px;
-    height: auto;
-    border-radius: 100%;
-    display: inline-block;
-    margin: 0 0 2em 0;
-    padding: 0.2em;
-    border: solid 1px rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.075);
+	width: 100px;
+	height: auto;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 0 2em 0;
+	padding: 0.2em;
+	border: solid 1px rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+/* Footer styling. */
+
+.footer {
+	grid-area: footer;
+	/* background: #974063; */
+	height: max-content;
+	width: 100%;
+	color: #ffffff;
+	justify-self: center;
+	align-content: center;
+	text-align: center;
+}
+
+.footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #FF3CAC;
+	text-decoration: #FFFFFF;
+}
+
+/* Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+/* Smartphones */
+
+/* Covers most phones such as iPhone SE (my phone). */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	html {
+		/* background: blue; */
+	}
+}
+
+/* Reduced windows on Desktops and Laptops */
+
+/* For when a user reduces the size of their window. */
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	html {
+		/* background: green; */
+	}
+}
+
+/* iPads */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	html {
+		/* background: orange; */
+	}
+}
+
+/* Desktops and Laptops */
+
+/* For most normal size screen desktops and laptops. */
+
+@media only screen and (min-width: 1224px) {
+	html {
+		/* background: red; */
+	}
+}
+
+/* Large Screens */
+
+/* For larger monitors and displays. */
+
+@media only screen and (min-width: 1824px) {
+	html {
+		/* background: yellow; */
+	}
+}
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+/* h1::selection {
+    background: var(--accent-color-pink, #F575FF);
+} */
+
+/* Add an id for fading in an item over two seconds. */
+
+#fadein {
+	animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+	from {
+		display: none;
+		opacity: 0;
+	}
+	to {
+		display: block;
+		opacity: 1;
+	}
+}
+
+/* Add a set up for media devices with preference for dark mode. */
+
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/
+https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9 */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		background: #000000;
+		filter: invert(1) hue-rotate(180deg);
+	}
+	img {
+		opacity: .75;
+		transition: opacity .5s ease-in-out;
+	}
+	img:hover {
+		opacity: 1;
+	}
 }
