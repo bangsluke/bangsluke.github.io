@@ -15,21 +15,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- Link into font-awesome logos and icons. -->
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-	<!-- Link to CSS styling -->
-	<!-- Starting with "/" moves back to root directory. -->
-	<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet">
 
-	<!-- Link to JavaScript scripts -->
-	<!-- Starting with "/" moves back to root directory. -->
-	<script src="/pages/GroupPage/assets/js/jGroupPage.js"></script>
+	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
+    <script src="/pages/GroupPage/assets/js/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+    <script src="/pages/GroupPage/assets/js/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
 
-	<!-- Favicon Image -->
-	<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
+
+    <!-- Link into font-awesome logos and icons. -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -61,14 +59,15 @@
 		<div id="content-area">
 
 			<!-- Top burger menu clickable icon to open the menu. -->
-			<span id="burgericon" onclick="openNav()" >☰ MENU</span>
+			<span id="burgericon" onclick="openNav()">☰ MENU</span>
 
 			<!-- style="font-size:30px;cursor:pointer" -->
 
-			<a href="/Homepage.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="bangsluke Online Profile Photo"></a>
+			<a href="/Homepage.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg"
+					alt="bangsluke Online Profile Photo"></a>
 
 			<!-- Main content section. -->
-			<div class="content-text"  id="fadein">
+			<div class="content-text" id="fadein">
 				<h2>Tits Group Page</h2>
 				<h3>Lets go bitches</h3>
 			</div>
@@ -79,40 +78,6 @@
 			</div> -->
 
 			<br>
-
-
-			<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
-			<snap-tabs>
-				<header class="snaptabsHeader">
-				  <nav>
-					<a href="#responsive"></a>
-					<a href="#accessible"></a>
-					<a href="#overscroll"></a>
-					<a href="#more"></a>
-				  </nav>
-				  <span class="snap-indicator"></span>
-				</header>
-				<section>
-				  <article id="responsive">
-					<h2>Responsive</h2>  
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  </article>
-				  <article id="accessible">
-					<h2>Accessible</h2>  
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  </article>
-				  <article id="overscroll">
-					<h2>Overscroll</h2>  
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  </article>
-				  <article id="more">
-					<h2>More</h2>  
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				  </article>
-				</section>
-			  </snap-tabs>
-
-
 
 			<br>
 

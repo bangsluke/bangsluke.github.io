@@ -1,3 +1,7 @@
+// jSideBar.js JavaScript Functions
+
+// Side bar scripts
+// https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
 
 function openNav() {
 	document.getElementById("side-menu").style.width = "300px";

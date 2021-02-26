@@ -1,0 +1,167 @@
+<!-- IndividualsPage.html -->
+<!-- The personalised individuals page for each member of the group. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. -->
+	<title>IndividualsPage</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet">
+
+	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
+    <script src="/pages/GroupPage/assets/js/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+    <script src="/pages/GroupPage/assets/js/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
+
+	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
+
+    <!-- Link into font-awesome logos and icons. -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- All Page Content. -->
+	<div id="allcontent">
+
+		<!-- Header -->
+
+		<div class="sideMenu" id="side-menu">
+
+			<!-- The x close button. -->
+			<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+
+			<!-- The main side bar menu options. -->
+			<div class="main-menu">
+				<h2>Menu</h2>
+				<a href="#"><i class="fa fa-home"></i>Home</a>
+				<a href="#"><i class="fa fa-users"></i>About</a>
+				<a href="#"><i class="fa fa-book"></i>Portfolio</a>
+				<a href="#"><i class="fa fa-file-o"></i>Services</a>
+				<a href="#"><i class="fa fa-phone"></i>Contact</a>
+			</div>
+
+		</div>
+
+		<!-- Main Page Content. -->
+		<div id="content-area">
+
+			<!-- Top burger menu clickable icon to open the menu. -->
+			<span id="burgericon" onclick="openNav()">☰ MENU</span>
+
+			<!-- style="font-size:30px;cursor:pointer" -->
+
+			<a href="/Homepage.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg"
+					alt="bangsluke Online Profile Photo"></a>
+
+
+			<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
+			
+			<!-- Add an initial div to hold the snap tabs. -->
+			
+			<div class="snap-tabsContainer">
+
+				<snap-tabs>
+					<header class="scroll-snap-x">
+						<nav>
+							<a active href="#responsive">Responsive</a>
+							<a href="#accessible">Accessible</a>
+							<a href="#overscroll">Horizontal Overscroll Ready</a>
+							<a href="#more">
+								<svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+									<path
+										d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+									</path>
+								</svg>
+							</a>
+						</nav>
+						<span class="snap-indicator"></span>
+					</header>
+					<section class="scroll-snap-x">
+						<article id="responsive">
+							<h2>Sit dolor</h2>
+							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+							<h2>Lore sf</h2>
+							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+						</article>
+						<article id="accessible">
+							<h2>Tenetur</h2>
+							<p>Lorem ipsum dolor sit amet consectet adipisicing elit. Sit molestiae itaque rem optio
+								molestias voluptati obcaecati!</p>
+							<h2>Tenet urs</h2>
+							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<h2>Lore s sdf</h2>
+							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+						</article>
+						<article id="overscroll">
+							<h2>Lorems dolor</h2>
+							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
+							<ul>
+								<li>Lorem</li>
+								<li>ipsum</li>
+								<li>dolor</li>
+							</ul>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+						</article>
+						<article id="more">
+							<h2>Lore s sdf</h2>
+							<ul>
+								<li>Lorem</li>
+								<li>ipsum</li>
+								<li>dolor</li>
+								<li>Lorem</li>
+								<li>ipsum</li>
+								<li>dolor</li>
+							</ul>
+							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+						</article>
+					</section>
+				</snap-tabs>
+
+			</div>
+
+
+			<br>
+
+			<!-- Footer -->
+			<!-- Note that the footer sits inside id content-area so it inherits its scaling. -->
+
+			<footer class="footer">
+
+				<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+				<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+				<a href="#">&nbsp</a>
+				<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+			</footer>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
