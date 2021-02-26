@@ -230,16 +230,16 @@ https://devresourc.es/
 
 ### CSS
 
-#### CSS Best Coding Practice
+ #### CSS Best Coding Practice
 
-##### CSS Variables
-- In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where the value after the common is in case the variable isn't available.
-##### CSS Classes & Selectors
-- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
-- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
-- If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
-- If you separate CSS classes with spaces, your rules are applied slightly different. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
-- :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+  ##### CSS Variables
+   - In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where  the value after the common is in case the variable isn't available.
+  ##### CSS Classes & Selectors
+   - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+   - "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+   - If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
+   - If you separate CSS classes with spaces, your rules are applied slightly different. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+   - :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
 ##### CSS Comments
 - In CSS a comment is within the following characters: /* text */
 ##### Key CSS Notes
