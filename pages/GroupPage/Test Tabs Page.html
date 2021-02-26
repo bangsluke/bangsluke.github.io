@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. -->
+	<title>GroupPageHome</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Link to CSS styling -->
+	<!-- Starting with "/" moves back to root directory. -->
+	<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link href="/pages/GroupPage/assets/css/TestTabs.css" rel="stylesheet">
+
+	<!-- Link to JavaScript scripts -->
+	<!-- Starting with "/" moves back to root directory. -->
+	<script src="/pages/GroupPage/assets/js/TestTabs.js"></script>
+
+
+</head>
+
+<body>
+
+
+	<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
+	<snap-tabs>
+		<header class="scroll-snap-x">
+			<nav>
+				<a active href="#responsive">Responsive</a>
+				<a href="#accessible">Accessible</a>
+				<a href="#overscroll">Horizontal Overscroll Ready</a>
+				<a href="#more"></a>
+			</nav>
+			<span class="snap-indicator"></span>
+		</header>
+		<section class="scroll-snap-x">
+			<article id="responsive">
+				<h2>Responsive</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2>Responsive</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2>Responsive</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article id="accessible">
+				<h2>Accessible</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article id="overscroll">
+				<h2>Overscroll</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article id="more">
+				<h2>More</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+					culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+	</snap-tabs>
+
+
+</body>
+
+</html>

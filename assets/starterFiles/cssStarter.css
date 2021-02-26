@@ -2,21 +2,13 @@
 
 /* Description: The file from which to build all CSS files from. */
 
-/*
-Key CSS Notes:
-- Design for Mobile size first! Then scale up.
-- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
-- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." 
-- For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
-- Remember that for margins and padding, it goes (top, right, bottom and left).
-- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
-- See the bottom of this file for key tips and tricks
+/* CSS Best Coding Practice
+	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
 */
 
-/* Import the Open Sans font or another font from Google fonts. */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
- */
+/* Import the Open Sans font or another font from Google fonts.
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*/
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 

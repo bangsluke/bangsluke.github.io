@@ -2,11 +2,8 @@
 
 /* The main css style file used for all Website styling. */
 
-/*
-Key CSS Notes:
-- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
-- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
-- See the bottom of this file for key tips and tricks.
+/* CSS Best Coding Practice
+	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
 */
 
 @charset "UTF-8";

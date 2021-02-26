@@ -1,0 +1,159 @@
+/* Web tabs styling. https://web.dev/building-a-tabs-component/. */
+
+snap-tabs {
+	--hue: 328deg;
+	--accent: var(--hue) 100% 54%;
+	--indicator-size: 2px;
+
+	--space-1: .5rem;
+	--space-2: 1rem;
+	--space-3: 1.5rem;
+	
+	display: flex;
+	flex-direction: column;
+	/* Establish primary containing box */
+	overflow: hidden;
+	position: relative;
+	
+	& :matches(header, nav, section, article, a) {
+		outline-color: hsl(var(--accent));
+		outline-offset: -5px;
+	}
+	
+	/* & > section { */
+	/* be pushy about consuming all space */
+	/* block-size: 100%; */
+	/* } */
+	/* & > header { */
+	/* defend against <section> needing 100% */
+	/* flex-shrink: 0; */
+	/* fixes cross browser quarks */
+	/* min-block-size: fit-content; */
+	/* } */
+}
+
+.scroll-snap-x {
+	/* browser decide if x is ok to scroll and show bars on, y hidden */
+	overflow: auto hidden;
+	/* prevent scroll chaining on x scroll */
+	overscroll-behavior-x: contain;
+	/* scrolling should snap children on x */
+	scroll-snap-type: x mandatory;
+	
+	/* Add a media query for dealing with users who want reduced motion. */
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+
+	@media (hover: none) {
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+}
+
+snap-tabs > header {
+	--text-color: hsl(var(--hue) 5% 40%);
+	--text-active-color: hsl(var(--hue) 20% 10%);
+	
+	/* defend against <section> needing 100% */
+	flex-shrink: 0;
+	/* fixes cross browser quarks */
+	min-block-size: fit-content;
+
+	display: flex;
+	flex-direction: column;
+
+
+	& > nav {
+		display: flex;
+	}
+
+	& a {
+		scroll-snap-align: start;
+		display: inline-flex;
+		align-items: center;
+		white-space: nowrap;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+snap-tabs.section {
+	/* be pushy about consuming all space */
+	block-size: 100%;
+}
+
+
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+	block-size: 100%;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 100%;
+}
+
+article {
+	scroll-snap-align: start;
+  
+	overflow-y: auto;
+	overscroll-behavior-y: contain;
+  }
+
+  
+
+  @media (prefers-reduced-motion: reduce) {
+	snap-tabs > header a {
+	  border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
+	  transition: color .7s ease, border-color .5s ease;
+  
+	  /* &:is(:target,:active,[active]) {
+		color: var(--text-active-color);
+		border-block-end-color: hsl(var(--accent));
+	  } */
+	}
+  
+	snap-tabs .snap-indicator {
+	  visibility: hidden;
+	}
+  }
+
+
+
+
+
