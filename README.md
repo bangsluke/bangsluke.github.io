@@ -10,7 +10,7 @@ My largest collection of work hosted via GitHub.
   * [Places To Learn Coding](#places-to-learn-coding)
   * [Getting Set Up](#getting-set-up)
   * [Website Tools](#website-tools)
-
+* [Languages](#languages)
 
 # Introduction
 
@@ -230,21 +230,31 @@ https://devresourc.es/
 
 ### CSS
 
- #### CSS Best Coding Practice
+#### CSS Best Coding Practice
 
-  ##### CSS Variables
-   - In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where  the value after the common is in case the variable isn't available.
-  ##### CSS Classes & Selectors
-   - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
-   - "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
-   - If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
-   - If you separate CSS classes with spaces, your rules are applied slightly different. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
-   - :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+##### CSS Variables
+ - In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where  the value after the common is in case the variable isn't available.
+##### CSS Classes & Selectors
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
+- If you separate CSS classes with spaces, your rules are applied slightly different. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+- :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
 ##### CSS Comments
 - In CSS a comment is within the following characters: /* text */
 ##### Key CSS Notes
 - Design for Mobile size first! Then scale up.
 - Remember that for margins and padding, it goes (top, right, bottom and left).
+
+#### CSS Preprocessors
+
+##### SCSS
+- What is the difference between CSS and SCSS?: https://www.geeksforgeeks.org/what-is-the-difference-between-css-and-scss/
+- SCSS to CSS compiler: https://www.cssportal.com/scss-to-css/
+##### SASS
+- SASS - CSS with superpowers: https://sass-lang.com/
+##### LESS
+- Differences between SCSS and LESS: https://stackoverflow.com/questions/52003198/differences-between-scss-and-less
 
 ### HTML & CSS Code Examples
 - HTML Boilerplates: https://htmlboilerplates.com/
@@ -268,9 +278,7 @@ https://devresourc.es/
 - A Guide To FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
 - Container Query Solutions with CSS Grid and Flexbox: https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/
-#### SCSS
-- What is the difference between CSS and SCSS?: https://www.geeksforgeeks.org/what-is-the-difference-between-css-and-scss/
-- SCSS to CSS compiler: https://www.cssportal.com/scss-to-css/
+
 
 
 ## JavaScript
