@@ -243,8 +243,10 @@ https://devresourc.es/
 ##### CSS Classes & Selectors
 - Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
 - "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
-- If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
-- If you separate CSS classes with spaces, your rules are applied slightly different. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+- Or selector (,): Select elements that match any selector in the list. If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
+- And selector (.): Select elements that match all the selector combinations. If you separate CSS classes with full stops, your rules are applied slightly different. E.g. section.feature-box { would mean you're apply the rules to all section elements that have the class "feature-box".
+- Descendant selector ( ): Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
+- Direct Child (>): Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
 - :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
 ##### CSS Comments
 - In CSS a comment is within the following characters: /* text */
