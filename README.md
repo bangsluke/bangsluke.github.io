@@ -11,6 +11,12 @@ My largest collection of work hosted via GitHub.
   * [Getting Set Up](#getting-set-up)
   * [Website Tools](#website-tools)
 * [Languages](#languages)
+  * [Combined Code Examples](#combined-code-examples)
+  * [HTML & CSS](#html-&-CSS)
+    * [HTML](#html)
+    * [CSS](#css)
+  * [JavaScript](#javascript)
+  * [Python](#python)
 
 # Introduction
 
