@@ -1,0 +1,10 @@
+/* LoginPage styling */
+
+/* The css styling used for the login page. */
+
+.loginContainer {
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
