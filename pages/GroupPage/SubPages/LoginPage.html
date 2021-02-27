@@ -31,37 +31,61 @@
 <body>
 
 	<!-- All Page Content. -->
-	<div id="allcontent">
+	<div class="allContentFrame wrapper">
 
 		<!-- Header -->
 
-		<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg"
-				alt="Group Page Logo"></a>
+		<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar center fadein"
+				src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
+		<div class="loginContainer fadein">
+			<h1 class="center">Login</h1>
+			<div class="userdropdown center">
+				<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
+				<form>
+					User:
+					<select name="User">
+						<option value="Alex">Althom</option>
+						<option value="Ali">Pea</option>
+						<option value="Andy">Higgins</option>
+						<option value="Dom">DP</option>
+						<option value="Jon">Big Nose</option>
+						<option value="Kieran">Karen</option>
+						<option value="Luke">Bongo</option>
+						<option value="Oli">OG</option>
+					</select>
+				</form>
 
-		<a href="/pages/GroupPage/SubPages/NewIndividualsPage.html">
-			<div class="loginContainer">
-				Add login greyed out login div.
 			</div>
-		</a>
+			<div class="passwordbox center">
+				<!-- Add a password input box - https://www.w3schools.com/Tags/att_input_type_password.asp -->
+				<label for="pwd">Password:</label>
+				<input type="password" id="pwd" name="pwd">
+			</div>
+			<div class="loginbuttondiv center">
+				<a href="/pages/GroupPage/SubPages/NewIndividualsPage.html">
+					<button class="loginbutton">Login</button>
+				</a>
+			</div>
+		</div>
 
-		<br>
 
-		<br>
-
-		<!-- Footer -->
-		<!-- Note that the footer sits inside id content-area so it inherits its scaling. -->
-
-		<footer class="footer">
-
-			<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-			<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
-			<a href="#">&nbsp</a>
-			<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
-
-		</footer>
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+		<div class="push"></div>
 
 	</div>
+
+	<!-- Footer -->
+	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+	<footer class="footer fadein">
+
+		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+		<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+		<a href="#">&nbsp</a>
+		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+	</footer>
 
 </body>
 

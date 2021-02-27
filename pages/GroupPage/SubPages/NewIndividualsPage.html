@@ -34,7 +34,7 @@
 <body>
 
 	<!-- All Page Content. -->
-	<div id="allcontent">
+	<div class="allContentFrame wrapper">
 
 		<!-- Header -->
 
@@ -56,21 +56,21 @@
 		</div>
 
 		<!-- Main Page Content. -->
-		<div id="content-area">
+		<div class="all-content-area">
 
 			<!-- Top burger menu clickable icon to open the menu. -->
-			<span id="burgericon" onclick="openNav()">☰ MENU</span>
+			<span class="burgericon fadein" onclick="openNav()">☰</span>
 
 			<!-- style="font-size:30px;cursor:pointer" -->
 
-			<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+			<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
 
 			<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 			
 			<!-- Add an initial div to hold the snap tabs. -->
 			
-			<div class="snap-tabsContainer">
+			<div class="snap-tabsContainer fadein">
 
 				<snap-tabs>
 					<header class="scroll-snap-x">
@@ -143,24 +143,24 @@
 
 			</div>
 
-
-			<br>
-
-			<!-- Footer -->
-			<!-- Note that the footer sits inside id content-area so it inherits its scaling. -->
-
-			<footer class="footer">
-
-				<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-				<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
-				<a href="#">&nbsp</a>
-				<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
-
-			</footer>
-
 		</div>
 
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+		<div class="push"></div>
+
 	</div>
+
+    <!-- Footer -->
+	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+	<footer class="footer fadein">
+
+		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+		<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+		<a href="#">&nbsp</a>
+		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+	</footer>
 
 </body>
 

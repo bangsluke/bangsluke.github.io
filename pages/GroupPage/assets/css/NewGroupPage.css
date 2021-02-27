@@ -17,14 +17,13 @@
 :root {
 	/* CSS variables - Add variables below like the given example. */
 	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-	--main-style-color: #2a3950;
-	--main-background-color: #2a3950;
-	--accent-color-blue: #41436A;
-	--accent-color-darkred: #974063;
-	--accent-color-red: #f54768;
-	--accent-color-orange: #ff9678;
-	--accent-color-green: #99b998;
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
 }
@@ -32,11 +31,14 @@
 /* HTML updates to cover the full webpage. */
 
 html {
-	background: var(--main-background-color, #2a3950);
+	background: var(--main-background-color, var(--accent-color-1));
+	/* background: orange; */
 	/* Smooth the scrolling function of any internal hyperlinks. */
 	scroll-behavior: smooth;
 	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
 	/* scroll-padding-top: 260px; */
+	block-size: 100%;
+	inline-size: 100%;
 }
 
 /* Add code below. */
@@ -54,17 +56,42 @@ html {
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
-	margin: 0;
-	font-family: sans-serif;
 	/* https://www.grabient.com/ */
-	background-color: #FF3CAC;
-	background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+	background-color: var(--accent-color-2);
+	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+	/* background: orange; */
+	margin: 0;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	font-family: sans-serif;
+	min-block-size: 100%;
+	min-inline-size: 100%;
+	margin: 0;
+}
+
+/* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
+
+html, body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px;
+	/* The bottom margin is the negative value of the footer's height */
 }
 
 /* Add a id for all content div. */
 
-.allcontent {
-	width: 100%;
+.allContentFrame {
+	/* background: yellow; */
+	width: 100vw;
+	height: 100%;
+	top: 0px;
+	left: 0px;
 }
 
 /* Avatar class for the main image. */
@@ -76,7 +103,7 @@ body {
 	display: inline-block;
 	margin: 0 0 2em 0;
 	padding: 0.2em;
-	border: solid 1px #FF3CAC;
+	border: solid 1px var(--accent-color-1);
 	background-color: rgba(255, 255, 255, 0.075);
 }
 
@@ -84,10 +111,25 @@ body {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 	.avatar {
 		width: 70px;
+		margin: 0.3em 0.7em;
 	}
 }
 
 /* Side Menu CSS */
+
+.burgericon {
+	/* background: blue; */
+	color: var(--accent-color-white);
+	position: absolute;
+	right: 0px;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 0.5em;
+}
+
+.burgericon:hover {
+	color: var(--accent-color-2);
+}
 
 .sideMenu {
 	height: 100%;
@@ -96,24 +138,25 @@ body {
 	z-index: 1;
 	top: 0;
 	right: 0;
-	background: #784BA0;
+	background: var(--accent-color-black);
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
+	border-left: solid 1px var(--accent-color-1);
 }
 
 .main-menu h2 {
 	text-align: center;
 	letter-spacing: 7px;
-	color: #fff;
-	background: #111;
+	color: var(--accent-color-white);
+	background: var(--accent-color-1);
 	padding: 20px 0;
 }
 
 .sideMenu a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	color: #fff;
+	color: var(--accent-color-white);
 	display: block;
 	transition: 0.3s;
 	font-size: 18px;
@@ -127,8 +170,8 @@ body {
 }
 
 .main-menu a:hover {
-	color: #784BA0;
-	background: #111;
+	color: var(--accent-color-2);
+	background: var(--accent-color-white);
 }
 
 .sideMenu .closebtn {
@@ -140,25 +183,47 @@ body {
 	padding: 0.2em;
 }
 
+/* Side menu media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.burgericon {
+		/* background: blue; */
+		font-size: 40px;
+		padding: 0.3em 0.7em;
+	}
+}
+
 /* All content styling. */
 
-#content-area {
+.all-content-area {
+	/* background: lightblue; */
 	transition: margin-left .5s;
-	padding: 16px;
+	padding: 15px;
 }
 
 .content-text {
-	padding: 100px 180px;
+	/* background-color: blue; */
+	height: 400px;
+	width: 100%;
+	/* Note padding in all-content-area limiting width */
 	text-align: center;
 }
 
+.headercontainer {
+	background: var(--accent-color-1);
+	/* background-color: red; */
+	width: max-content;
+	padding: 5px;
+	margin: 30% auto 0.2em auto;
+}
+
 .content-text h2 {
-	background: #FF3CAC;
 	display: inline-block;
 	padding: 15px 35px;
 	text-transform: uppercase;
 	font-size: 50px;
-	color: #fff;
+	color: var(--accent-color-white);
 	transition: transform 250ms;
 }
 
@@ -185,10 +250,10 @@ body {
 	}
 	.content-text h2 {
 		padding: 5px 10px;
-		font-size: 20px;
+		font-size: 30px;
 	}
 	.content-text h3 {
-		font-size: 15px;
+		font-size: 25px;
 		margin: 5px;
 		letter-spacing: 3px;
 	}
@@ -209,42 +274,37 @@ body {
 	padding: 1em;
 }
 
-#burgericon {
-	/* background: blue; */
-	color: white;
-	position: absolute;
-	right: 0px;
-	font-size: 30px;
-	cursor: pointer;
-	padding: 0.5em;
-}
-
-#burgericon:hover {
-	color: #784BA0;
-}
-
 /* Footer styling. */
 
 .footer {
+	/* background-color: green; */
+	background: var(--accent-color-black);
 	grid-area: footer;
-	/* background: #974063; */
-	height: max-content;
 	width: 100%;
-	color: #ffffff;
+	top: 90%;
+	color: var(--accent-color-white);
 	justify-self: center;
 	align-content: center;
 	text-align: center;
+	padding: auto;
+}
+
+/* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
+
+.footer, .push {
+	height: 30px;
+	/* .push must be the same height as .footer */
 }
 
 .footer a {
-	color: #ffffff;
+	color: var(--accent-color-white);
 	text-decoration: none;
 	font-size: 20px;
 }
 
 .footer a:hover {
-	color: #FF3CAC;
-	text-decoration: #FFFFFF;
+	color: var(--accent-color-1);
+	text-decoration: var(--accent-color-white);
 }
 
 /* Footer media queries. */
@@ -254,6 +314,15 @@ body {
 	.footer a {
 		font-size: 10px;
 	}
+}
+
+/* Other classes and styles. */
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 /* Resizing the webpage for all devices. */
@@ -318,7 +387,7 @@ body {
 
 /* Add an id for fading in an item over two seconds. */
 
-#fadein {
+.fadein {
 	animation: fadein 2s ease forwards;
 }
 

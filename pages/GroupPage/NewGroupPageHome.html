@@ -20,13 +20,13 @@
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
-    <script src="/pages/GroupPage/assets/js/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
-    <script src="/pages/GroupPage/assets/js/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
+	<script src="/pages/GroupPage/assets/js/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+	<script src="/pages/GroupPage/assets/js/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
 
-    <!-- Link into font-awesome logos and icons. -->
+	<!-- Link into font-awesome logos and icons. -->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
@@ -34,7 +34,7 @@
 <body>
 
 	<!-- All Page Content. -->
-	<div id="allcontent">
+	<div class="allContentFrame wrapper">
 
 		<!-- Header -->
 
@@ -56,18 +56,23 @@
 		</div>
 
 		<!-- Main Page Content. -->
-		<div id="content-area">
+		<div class="all-content-area">
 
 			<!-- Top burger menu clickable icon to open the menu. -->
-			<span id="burgericon" onclick="openNav()">☰ MENU</span>
+			<span class="burgericon fadein" onclick="openNav()">☰</span>
 
 			<!-- style="font-size:30px;cursor:pointer" -->
 
-			<a href="/Homepage.html"><img class="avatar" id="fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+			<a href="/Homepage.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg"
+					alt="Group Page Logo"></a>
 
 			<!-- Main content section. -->
-			<div class="content-text" id="fadein">
-				<a href="/pages/GroupPage/SubPages/LoginPage.html"><h2>Tits Group Page</h2></a>
+			<div class="content-text fadein">
+				<a href="/pages/GroupPage/SubPages/LoginPage.html">
+					<div class="headercontainer">
+						<h2>Tits Group Page</h2>
+					</div>
+				</a>
 				<h3>Lets go bitches</h3>
 			</div>
 
@@ -80,21 +85,24 @@
 
 			<br>
 
-			<!-- Footer -->
-			<!-- Note that the footer sits inside id content-area so it inherits its scaling. -->
-
-			<footer class="footer">
-
-				<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-				<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
-				<a href="#">&nbsp</a>
-				<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
-
-			</footer>
-
 		</div>
 
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+		<div class="push"></div>
+
 	</div>
+
+	<!-- Footer -->
+	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+	<footer class="footer fadein">
+
+		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+		<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+		<a href="#">&nbsp</a>
+		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+
+	</footer>
 
 </body>
 
