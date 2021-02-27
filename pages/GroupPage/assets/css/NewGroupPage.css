@@ -194,9 +194,9 @@ html, body {
 	}
 }
 
-/* All content styling. */
+/* Main content styling. */
 
-.all-content-area {
+.main-content-area {
 	/* background: lightblue; */
 	transition: margin-left .5s;
 	padding: 15px;
