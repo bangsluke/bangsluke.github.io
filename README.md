@@ -177,7 +177,6 @@ https://devresourc.es/
 - Wannathis (3d Illustrations and freebies): https://wannathis.one/
 - CSS Clippy Tool used to create interesting shapes: https://bennettfeely.com/clippy/
 - Unsplash free images: https://unsplash.com/
-- Icons: https://feather.com/
 - Material Design Icons: https://material.io/resources/icons/?style=baseline
 
 ### Colour Tools
@@ -198,7 +197,7 @@ https://devresourc.es/
 - Weather Widget: https://weatherwidget.io/
 
 ### Footers
-- 50 free footer templats: https://www.figma.com/community/file/941725495131361898
+- 50 free footer templates: https://www.figma.com/community/file/941725495131361898
 - The Best Website Footer Design Examples and Best Practices: https://www.sliderrevolution.com/design/website-footer/
 
 
