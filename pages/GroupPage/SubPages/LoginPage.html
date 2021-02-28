@@ -39,30 +39,52 @@
 			<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar center fadein"
 					src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
+			<!-- Create a large transparent login container. -->
 			<div class="loginContainer fadein">
-				<h1 class="center">Login</h1>
-				<div class="userdropdown center">
-					<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
-					<form>
-						User:
-						<select name="User">
-							<option value="Alex">Althom</option>
-							<option value="Ali">Pea</option>
-							<option value="Andy">Higgins</option>
-							<option value="Dom">DP</option>
-							<option value="Jon">Big Nose</option>
-							<option value="Kieran">Karen</option>
-							<option value="Luke">Bongo</option>
-							<option value="Oli">OG</option>
-						</select>
-					</form>
 
+				<!-- Add a heading. -->
+				<h1 class="center">Login</h1>
+
+				<!-- Add a container to split the text and items apart. -->
+				<div class="center-container">
+					<div class="left-text-container right-align">
+						<div class="usertext-container">
+							<p>User:</p>
+						</div>
+						<div class="passwordtext-container">
+							<p>Password:</p>
+						</div>
+					</div>
+					<div class="right-items-container left-align">
+
+						<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
+						<div class="userdropdown-container">
+							<form class="userdropdown">
+								<select name="User">
+									<option value="Alex">Althom</option>
+									<option value="Ali">Pea</option>
+									<option value="Andy">Higgins</option>
+									<option value="Dom">DP</option>
+									<option value="Jon">Big Nose</option>
+									<option value="Kieran">Karen</option>
+									<option value="Luke">Bongo</option>
+									<option value="Oli">OG</option>
+								</select>
+							</form>
+						</div>
+
+						<!-- Add a password input box - https://www.w3schools.com/Tags/att_input_type_password.asp -->
+						<div class="passwordbox-container">
+							<!-- <label for="pwd"></label> -->
+							<input type="password" id="pwd" name="pwd">
+						</div>
+
+					</div>
 				</div>
-				<div class="passwordbox center">
-					<!-- Add a password input box - https://www.w3schools.com/Tags/att_input_type_password.asp -->
-					<label for="pwd">Password:</label>
-					<input type="password" id="pwd" name="pwd">
-				</div>
+
+
+
+
 				<div class="loginbuttondiv center">
 					<a href="/pages/GroupPage/SubPages/NewIndividualsPage.html">
 						<button class="loginbutton">Login</button>
