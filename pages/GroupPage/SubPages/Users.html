@@ -16,6 +16,7 @@
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet"> <!-- Main CSS styling -->
+	<link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
@@ -61,8 +62,12 @@
 				<!-- Top burger menu clickable icon to open the menu. -->
 				<span class="burgericon fadein" onclick="openNav()">☰</span>
 
-				<!-- Add a homepage link by adding a group icon image. -->
-				<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+				<div class="avatar-container">
+					
+					<!-- Add a homepage link by adding a group icon image. -->
+					<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+
+				</div>
 
 				<!-- Add some heading text. -->
 				<h1 class="center subpage-header-text">Users</h1>

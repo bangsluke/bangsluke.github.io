@@ -1,0 +1,99 @@
+/* SideMenu styling */
+
+/* The css styling used for the side menu. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+}
+
+/* Side Menu CSS */
+
+.burgericon {
+	background: blue;
+	color: var(--accent-color-white);
+	position: absolute;
+	height: 30px;
+	right: 0px;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 0.5em;
+}
+
+.burgericon:hover {
+	color: var(--accent-color-2);
+}
+
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background: var(--accent-color-black);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	border-left: solid 1px var(--accent-color-1);
+}
+
+.main-menu h2 {
+	text-align: center;
+	letter-spacing: 7px;
+	color: var(--accent-color-white);
+	background: var(--accent-color-1);
+	padding: 20px 0;
+}
+
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: var(--accent-color-white);
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.sideMenu a i {
+	padding-right: 15px;
+}
+
+.main-menu a:hover {
+	color: var(--accent-color-2);
+	background: var(--accent-color-white);
+}
+
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	padding: 0.2em;
+}
+
+/* Side menu media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.burgericon {
+		/* background: blue; */
+		font-size: 40px;
+		padding: 0.3em 0.7em;
+	}
+}

@@ -16,6 +16,7 @@
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet"> <!-- Main CSS styling -->
+    <link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
     <link href="/pages/GroupPage/assets/css/SnapTabs.css" rel="stylesheet"> <!-- SnapTabs styling -->
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
@@ -58,13 +59,19 @@
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
 
-			<!-- Top burger menu clickable icon to open the menu. -->
-			<span class="burgericon fadein" onclick="openNav()">☰</span>
+            <!-- Add a header area at the top of the subpage. -->
+			<div class="subpage-header-area">
 
-			<!-- style="font-size:30px;cursor:pointer" -->
+				<!-- Top burger menu clickable icon to open the menu. -->
+				<span class="burgericon fadein" onclick="openNav()">☰</span>
 
-			<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+				<!-- Add a homepage link by adding a group icon image. -->
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar fadein" src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
+				<!-- Add some heading text. -->
+				<h1 class="center subpage-header-text">Individuals Page</h1>
+
+			</div>
 
 			<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 			
@@ -73,7 +80,8 @@
 			<div class="snap-tabsContainer fadein">
 
 				<snap-tabs>
-					<header class="scroll-snap-x">
+					
+                    <header class="scroll-snap-x">
 						<nav>
 							<a active href="#responsive">Responsive</a>
 							<a href="#accessible">Accessible</a>
@@ -88,8 +96,10 @@
 						</nav>
 						<span class="snap-indicator"></span>
 					</header>
+
 					<section class="scroll-snap-x">
-						<article id="responsive">
+						
+                        <article id="responsive">
 							<h2>Sit dolor</h2>
 							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
 							<h2>Lore sf</h2>
@@ -101,7 +111,8 @@
 							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
 							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
 						</article>
-						<article id="accessible">
+						
+                        <article id="accessible">
 							<h2>Tenetur</h2>
 							<p>Lorem ipsum dolor sit amet consectet adipisicing elit. Sit molestiae itaque rem optio
 								molestias voluptati obcaecati!</p>
@@ -114,7 +125,8 @@
 							<p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
 							<p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
 						</article>
-						<article id="overscroll">
+						
+                        <article id="overscroll">
 							<h2>Lorems dolor</h2>
 							<p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
 							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
@@ -126,7 +138,8 @@
 							</ul>
 							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
 						</article>
-						<article id="more">
+						
+                        <article id="more">
 							<h2>Lore s sdf</h2>
 							<ul>
 								<li>Lorem</li>
@@ -138,7 +151,9 @@
 							</ul>
 							<p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
 						</article>
-					</section>
+					
+                    </section>
+        
 				</snap-tabs>
 
 			</div>
