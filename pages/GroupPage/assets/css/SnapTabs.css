@@ -20,7 +20,7 @@
 
 
     /* Additional snap tabs variables. */
-    --snap-tabs-height: 540px;
+    --snap-tabs-height: 450px;
 
 }
 
@@ -68,7 +68,7 @@ p+p {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     -webkit-margin-after: .5rem;
     margin-block-end: .5rem;
     line-height: 1;
@@ -83,7 +83,7 @@ h2:first-of-type {
 article {
     box-sizing: border-box;
     font-family: var(--main-font-family);
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1;
     color: var(--accent-color-white);
 }
