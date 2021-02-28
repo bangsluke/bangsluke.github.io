@@ -296,6 +296,12 @@ html, body {
 	text-align: center;
 }
 
+.individuals-picture {
+	height: 100px;
+	width: auto;
+	border-radius: 5px;
+}
+
 /* Resizing the webpage for all devices. */
 
 /* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
