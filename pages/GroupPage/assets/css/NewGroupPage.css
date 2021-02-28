@@ -24,6 +24,7 @@
 	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
+	--accent-color-black-rgb: 34,34,34;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
 }
@@ -80,7 +81,7 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -30px;
+	margin: 0 auto -25px;
 	/* The bottom margin is the negative value of the footer's height */
 }
 
@@ -122,7 +123,7 @@ html, body {
 	height: 66px;
 	width: auto;
 	border-radius: 100%;
-	padding: 0.2em;
+	/* padding: 0.2em; */
 	border: solid 1px var(--accent-color-1);
 	cursor: pointer;
 }
@@ -247,7 +248,8 @@ html, body {
 
 .footer {
 	/* background-color: green; */
-	background: var(--accent-color-black);
+	/* background: var(--accent-color-black); */
+	background-color: rgba(var(--accent-color-black-rgb), 0.5);
 	grid-area: footer;
 	width: 100%;
 	top: 90%;
@@ -261,7 +263,7 @@ html, body {
 /* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
 
 .footer, .push {
-	height: 30px;
+	height: 25px;
 	/* .push must be the same height as .footer */
 }
 

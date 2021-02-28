@@ -17,6 +17,11 @@
 	--accent-color-black: #222222;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
+
+
+    /* Additional snap tabs variables. */
+    --snap-tabs-height: 540px;
+
 }
 
 /* html {
@@ -28,17 +33,33 @@ body {
     /* min-block-size: 100%;
     min-inline-size: 100%;
     margin: 0; */
+    /* box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; */
+}
+
+.snap-tabs-container {
+    /* background-color: mediumorchid; */
+    width: 100%;
+    height: var(--snap-tabs-height);
+    /* Below is copied from body above. */
     box-sizing: border-box;
     display: grid;
     align-content: center;
     justify-content: center;
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    /* font-family: var(--main-font-family); */
 }
+
 
 p {
     max-inline-size: 35ch;
     margin-block: .5ch;
+    font-family: var(--main-font-family);
 }
 
 p+p {
@@ -51,6 +72,7 @@ h2 {
     -webkit-margin-after: .5rem;
     margin-block-end: .5rem;
     line-height: 1;
+    font-family: var(--main-font-family);
 }
 
 h2:first-of-type {
@@ -60,7 +82,7 @@ h2:first-of-type {
 
 article {
     box-sizing: border-box;
-    font-family: Blokk;
+    font-family: var(--main-font-family);
     font-size: 1.25rem;
     line-height: 1;
     color: var(--accent-color-white);
@@ -70,7 +92,7 @@ article {
 
 snap-tabs {
     --hue: 328deg;
-    --accent: var(--hue) 100% 54%;
+    --accent: var(--hue) 100% 54%; 
     --indicator-size: 2px;
     --space-1: .5rem;
     --space-2: 1rem;
@@ -79,6 +101,7 @@ snap-tabs {
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    height: var(--snap-tabs-height);
 }
 
 snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
@@ -176,13 +199,13 @@ snap-tabs>section>article {
 
 @media (prefers-reduced-motion:reduce) {
     snap-tabs>header a {
-        -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
-        border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
+        -webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
+        border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
         transition: color .7s ease, border-color .5s ease;
     }
     snap-tabs>header a:active, snap-tabs>header a:target, snap-tabs>header a[active] {
         color: var(--text-active-color);
-        border-block-end-color: hsl(var(--accent));
+        border-block-start-color: hsl(var(--accent));
     }
     snap-tabs .snap-indicator {
         visibility: hidden;

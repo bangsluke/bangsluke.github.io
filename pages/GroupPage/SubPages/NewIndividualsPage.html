@@ -72,7 +72,9 @@
             <div class="burgericon-container">
 
                 <!-- Add burger icon with JavaScript functionality. -->
-                <span class="burgericon fadein" onclick="openNav()">☰</span>
+                <!-- <span class="burgericon fadein" onclick="openNav()">☰</span> -->
+                <img class="center burgericon fadein" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
+                    alt="Burger Menu Icon" onclick="openNav()">
 
             </div>
 
@@ -105,25 +107,9 @@
 
             <!-- Add an initial div to hold the snap tabs. -->
 
-            <div class="snap-tabsContainer fadein">
+            <div class="snap-tabs-container fadein">
 
                 <snap-tabs>
-
-                    <header class="scroll-snap-x">
-                        <nav>
-                            <a active href="#profile">Profile</a>
-                            <a href="#accessible">Accessible</a>
-                            <a href="#overscroll">Horizontal Overscroll Ready</a>
-                            <a href="#more">
-                                <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
-                                    <path
-                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </nav>
-                        <span class="snap-indicator"></span>
-                    </header>
 
                     <section class="scroll-snap-x">
 
@@ -134,7 +120,7 @@
 
                             <br>
 
-                            <h1>Name: Luke Bangs</h1>
+                            <h2>Name: Luke Bangs</h2>
 
                             <p>Height: 1.94cm</p>
                             <p>Weight: 92KG</p>
@@ -142,8 +128,13 @@
                             <p>Chat Level: 7/10</p>
                             <p>Looks: Solid 6</p>
                             <p>Ashcombe Year Book Quote: </p>
+                            <p>Need to find quote...</p>
 
-                            <br>
+                        </article>
+
+                        <article id="widgets">
+
+                            <h2>Tenetur</h2>
 
                             <!-- Weather widget and code. https://weatherwidget.io/ -->
                             <!-- Add weather forecast at their location using https://weatherwidget.io/ -->
@@ -160,20 +151,6 @@
                                 </script>
                             </section>
 
-                        </article>
-
-                        <article id="accessible">
-                            <h2>Tenetur</h2>
-                            <p>Lorem ipsum dolor sit amet consectet adipisicing elit. Sit molestiae itaque rem optio
-                                molestias voluptati obcaecati!</p>
-                            <h2>Tenet urs</h2>
-                            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
-                            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
-                            <h2>Lore s sdf</h2>
-                            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
-                            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
-                            <p>Ipsum, a? Tenetur aut a nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
-                            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
                         </article>
 
                         <article id="overscroll">
@@ -203,6 +180,24 @@
                         </article>
 
                     </section>
+
+                    <!-- The horizontal scrollable section. -->
+                    <header class="scroll-snap-x">
+                        <nav>
+                            <a active href="#profile">Profile</a>
+                            <a href="#widgets">Widgets</a>
+                            <a href="#overscroll">Horizontal Overscroll Ready</a>
+                            <a href="#more">
+                                <!-- Turn off the final three dots at the end of the horizontal scroll bar. -->
+                                <!-- <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+                                    <path
+                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                    </path>
+                                </svg> -->
+                            </a>
+                        </nav>
+                        <span class="snap-indicator"></span>
+                    </header>
 
                 </snap-tabs>
 
