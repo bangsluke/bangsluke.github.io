@@ -293,12 +293,16 @@ https://devresourc.es/
 
 ### JavaScript Best Coding Practice
 
-#### JavaScriptFunctions and Variables
+#### JavaScript Functions and Variables
 - Use camelCase for defining functions and variables, e.g. “firstName”.
-#### JavaScriptConstants
+#### JavaScript Constants
 - Use capitals and underscores for constants, e.g. “CONSTANT” or “CONSTANT_NAME”.
-#### JavaScriptComments
+#### JavaScript Comments
 - Use // for comments.
+#### JavaScript Messages
+- Use alert() to ensure that information gets through to a user. When an alert box pops up, the user must click OK to proceed. Alert takes a single string parameter of text to display.
+- Use var x = prompt() to have the user input a value and press OK or Cancel. OK returns the input value, Cancel returns null. Prompt takes two parameters; a string label to display and an optional string to display in the input box.
+- Use var x = confirm() to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
 
 ### JavaScript Code Examples
 - Console Timer: https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/. Image: https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311
