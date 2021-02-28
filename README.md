@@ -275,6 +275,7 @@ https://devresourc.es/
 - Sticky CSS: https://css-tricks.com/position-sticky-2/
 - CSS tips: https://markodenic.com/css-tips/
 - CSS buttons: https://www.codingflicks.com/2021/01/css-buttons.html
+- CSS position: https://webdevsimplified.com/css-position.html
 - CSS loading page: https://www.codingflicks.com/2020/12/pure-css-loading-animation.html
 - Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 #### CSS Grid & Flexbox
