@@ -3,6 +3,21 @@
 /* The css styling used for SnapTabs. */
 /* https://web.dev/building-a-tabs-component/. */
 
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+}
 
 /* html {
     block-size: 100%;
@@ -48,7 +63,7 @@ article {
     font-family: Blokk;
     font-size: 1.25rem;
     line-height: 1;
-    color: #333;
+    color: var(--accent-color-white);
 }
 
 /* Specific snap-tabs styling with elements not used elsewhere on site. */
@@ -97,8 +112,10 @@ snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs secti
 }
 
 snap-tabs>header {
-    --text-color: hsl(var(--hue) 5% 40%);
-    --text-active-color: hsl(var(--hue) 20% 10%);
+    /* --text-color: hsl(var(--hue) 5% 40%); */
+    /* --text-active-color: hsl(var(--hue) 20% 10%); */
+    --text-color: var(--accent-color-black);
+    --text-active-color: var(--accent-color-white);
     flex-shrink: 0;
     min-block-size: -webkit-fit-content;
     min-block-size: -moz-fit-content;
