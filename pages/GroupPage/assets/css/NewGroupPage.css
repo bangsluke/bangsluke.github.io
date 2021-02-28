@@ -97,7 +97,7 @@ html, body {
 /* Header styling. */
 
 .subpage-header-area {
-	background-color: lightcoral;
+	/* background-color: lightcoral; */
 	left: 0px;
 	top: 0px;
 	height: 80px;
@@ -112,14 +112,14 @@ html, body {
 /* Avatar class for the main image. */
 
 .avatar-container {
-	background-color: maroon;
+	/* background-color: maroon; */
 	height: 70px;
-	width: 80px;
+	width: 70px;
 }
 
 .avatar {
 	background-color: rgba(255, 255, 255, 0.075);
-	height: 70px;
+	height: 66px;
 	width: auto;
 	border-radius: 100%;
 	padding: 0.2em;
@@ -130,7 +130,7 @@ html, body {
 /* Main subpage header text class. */
 
 .heading-container {
-	background-color: grey;
+	/* background-color: grey; */
 	height: max-content;
 	margin: auto;
 }

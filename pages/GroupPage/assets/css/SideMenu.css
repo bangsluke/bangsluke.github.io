@@ -21,17 +21,12 @@
 /* Side Menu CSS */
 
 .burgericon-container {
-	background: blue;
-	/* position: absolute;
-	top: 0px;
-	right: 0px; */
+	/* background: blue; */
 	height: 70px;
 	width: 70px;
-	/* margin: 0.5em; */
 }
 
 .burgericon {
-	/* background: blue; */
 	color: var(--accent-color-white);
 	font-size: 30px;
 	cursor: pointer;
