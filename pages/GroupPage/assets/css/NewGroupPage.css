@@ -88,7 +88,7 @@ html, body {
 
 .allContentFrame {
 	/* background: yellow; */
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	top: 0px;
 	left: 0px;
@@ -105,39 +105,37 @@ html, body {
 	border-bottom: solid 2px var(--accent-color-white);
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	padding: 5px;
 }
 
 /* Avatar class for the main image. */
 
 .avatar-container {
 	background-color: maroon;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	height: 80px;
+	height: 70px;
 	width: 80px;
-	/* padding: 0.5em; */
-	margin: 0.5em;
-	
 }
 
 .avatar {
 	background-color: rgba(255, 255, 255, 0.075);
-	/* background-color: magenta; */
-	width: 100px;
-	height: auto;
+	height: 70px;
+	width: auto;
 	border-radius: 100%;
-	/* display: inline-block; */
 	padding: 0.2em;
-	/* margin: 0 0 2em 0; */
 	border: solid 1px var(--accent-color-1);
 	cursor: pointer;
 }
 
 /* Main subpage header text class. */
 
+.heading-container {
+	background-color: grey;
+	height: max-content;
+	margin: auto;
+}
+
 .subpage-header-text {
-	background-color: lightseagreen;
 	color: var(--accent-color-white);
 	text-decoration: none;
 	text-transform: uppercase;
