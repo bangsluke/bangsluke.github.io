@@ -279,6 +279,7 @@ https://devresourc.es/
 - CSS position: https://webdevsimplified.com/css-position.html
 - CSS loading page: https://www.codingflicks.com/2020/12/pure-css-loading-animation.html
 - CSS Spotify Style Image Gradient Overlay: https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- CSS easing gradients: https://larsenwork.com/easing-gradients/
 - Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 #### CSS Grid & Flexbox
 - Learn Flexbox In 20 Minutes | Learn HTML & CSS | Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
