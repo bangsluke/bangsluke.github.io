@@ -234,21 +234,6 @@ a {
 	}
 }
 
-.firstpageimagetest {
-	background-image: url("/pages/GroupPage/assets/images/Background.JPG");
-	height: 300px;
-	width: 500px;
-	margin: auto;
-	/* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-}
-
-.firstpageimagetest p {
-	color: white;
-	font-size: 30px;
-	text-transform: uppercase;
-	padding: 1em;
-}
-
 /* Footer styling. */
 
 .footer {

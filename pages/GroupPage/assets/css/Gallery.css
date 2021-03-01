@@ -1,0 +1,54 @@
+/* Gallery styling */
+
+/* The css styling used for the Gallery page. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+    
+    --gallery-image-height: 200px;
+}
+
+/* Add custom gallery page styling. */
+
+.gallery-cover-container {
+    height: var(--gallery-image-height);
+    width: var(--gallery-image-height);
+    margin: auto;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+}
+
+.gallery-cover-image {
+    height: var(--gallery-image-height);
+    width: var(--gallery-image-height);
+    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+}
+
+.gallery-cover-text {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 140px;
+    padding: 1em;
+    position: absolute;
+}
+
+a {
+    cursor: pointer;
+}

@@ -18,6 +18,7 @@
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/GroupPage/assets/css/TopMenu.css" rel="stylesheet"> <!-- Top Menu styling -->
 	<link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
+	<link href="/pages/GroupPage/assets/css/Gallery.css" rel="stylesheet"> <!-- Gallery styling -->
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
@@ -25,7 +26,7 @@
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
 
-    <!-- Link into font-awesome logos and icons. -->
+	<!-- Link into font-awesome logos and icons. -->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
@@ -36,46 +37,46 @@
 	<div class="allContentFrame wrapper">
 
 		<!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
-        <div class="subpage-header-area">
+		<div class="subpage-header-area">
 
-            <!-- Add a homepage link by adding a group icon image. Add it within a container. -->
-            <div class="avatar-container">
+			<!-- Add a homepage link by adding a group icon image. Add it within a container. -->
+			<div class="avatar-container">
 
-                <!-- Add group icon image. -->
-                <a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar center fadein"
-                        src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+				<!-- Add group icon image. -->
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar center fadein"
+						src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
-            </div>
+			</div>
 
-            <!-- Add some heading text. Add it within a container. -->
-            <div class="heading-container">
-                <!-- Add some heading text. -->
-                <h1 class="center subpage-header-text fadein">Gallery</h1>
-            </div>
+			<!-- Add some heading text. Add it within a container. -->
+			<div class="heading-container">
+				<!-- Add some heading text. -->
+				<h1 class="center subpage-header-text fadein">Gallery</h1>
+			</div>
 
-            <!-- Top Menu - not considered part of the "main-content-area" -->
+			<!-- Top Menu - not considered part of the "main-content-area" -->
 
-            <div class="topMenu" id="top-menu">
-                <!-- The main top nav bar options. -->
-                <a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
-                <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-                <a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
-                <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-                <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-                <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
-            </div>
+			<div class="topMenu" id="top-menu">
+				<!-- The main top nav bar options. -->
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
+				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
+				<a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
+				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+			</div>
 
-            <!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
-            <div class="burgericon-container">
+			<!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
+			<div class="burgericon-container">
 
-                <!-- Add burger icon with JavaScript functionality. -->
-                <!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
-				<img class="center burgericon fadein"
-                        src="/pages/GroupPage/assets/images/Burger Menu Icon.png" alt="Burger Menu Icon" onclick="openNav()">
+				<!-- Add burger icon with JavaScript functionality. -->
+				<!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
+				<img class="center burgericon fadein" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
+					alt="Burger Menu Icon" onclick="openNav()">
 
-            </div>
+			</div>
 
-        </div>
+		</div>
 
 		<!-- Side Menu - not considered part of the "main-content-area" -->
 
@@ -88,11 +89,11 @@
 			<div class="main-menu">
 				<h2>Menu</h2>
 				<a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
-                <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-                <a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
-                <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-                <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-                <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
+				<a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
+				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
 			</div>
 
 		</div>
@@ -100,17 +101,36 @@
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
 
-			
+
 
 			<div class="subpage-content-area fadein">
 
-				
+				<!-- Try to add a spotify style image. -->
 
-				<p>Add spotify style album covers leading to alnums of images.</p>
+				<!-- Glastonbury Album Cover -->
+				<div class="gallery-cover-container fadein">
+
+					<a href="#">
+						<h2 class="gallery-cover-text">Glastonbury</h2>
+						<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Glastonbury Cover.jpg"
+							alt="Glastonbury Album Cover">
+					</a>
+
+				</div>
+
+
+
+
+
+				<br>
+
+
+				<!-- https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf -->
+				<p>Add spotify style album covers leading to albums of images.</p>
 
 			</div>
 
-			
+
 		</div>
 
 		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
@@ -118,7 +138,7 @@
 
 	</div>
 
-    <!-- Footer -->
+	<!-- Footer -->
 	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
 
 	<footer class="footer fadein">
