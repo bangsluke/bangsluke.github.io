@@ -219,6 +219,7 @@ https://devresourc.es/
 - Clip.path pop out example: https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Build Web Tabs: https://web.dev/building-a-tabs-component/
 - Build from scratch React sidebar navigation with CSS Grid & Flexbox: https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps
+- How to build an unfolding tooltip with CSS clip-path: https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode
 
 
 ## HTML & CSS
@@ -277,6 +278,7 @@ https://devresourc.es/
 - CSS buttons: https://www.codingflicks.com/2021/01/css-buttons.html
 - CSS position: https://webdevsimplified.com/css-position.html
 - CSS loading page: https://www.codingflicks.com/2020/12/pure-css-loading-animation.html
+- CSS Spotify Style Image Gradient Overlay: https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 #### CSS Grid & Flexbox
 - Learn Flexbox In 20 Minutes | Learn HTML & CSS | Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
@@ -312,6 +314,9 @@ https://devresourc.es/
 - JavaScript Object Cheatsheet: https://i.redd.it/9nxtqtho6q861.jpg
 - JavaScript errors: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
 - Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- Swipeable cards (Tinder Style): https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js): https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1
+- Create a chart of data in JavaScript (Chart JS For Beginners): https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
 - Python vs JavaScript: https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/
 
 ### React
