@@ -21,6 +21,7 @@
 
     /* Additional snap tabs variables. */
     --snap-tabs-height: 450px;
+    --main-style-color-rgb: 255,60,172;
 
 }
 
@@ -92,7 +93,8 @@ article {
 
 snap-tabs {
     --hue: 328deg;
-    --accent: var(--hue) 100% 54%; 
+    --accent: var(--hue) 100% 54%;
+    --accent-reduced: var(--hue) 90% 90%; 
     --indicator-size: 2px;
     --space-1: .5rem;
     --space-2: 1rem;
@@ -206,6 +208,8 @@ snap-tabs>section>article {
         transition: color .7s ease, border-color .5s ease;
     }
     snap-tabs>header a:active, snap-tabs>header a:target, snap-tabs>header a[active] {
+        /* background-color: hsl(var(--accent-reduced)); */
+        background-color: rgba(var(--main-style-color-rgb), 0.2);
         color: var(--text-active-color);
         /* border-block-start-color: hsl(var(--accent)); */
         border-block-end-color: hsl(var(--accent));
