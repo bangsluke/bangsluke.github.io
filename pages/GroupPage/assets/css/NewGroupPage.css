@@ -228,7 +228,7 @@ html, body {
 	margin: 30% auto 0.2em auto;
 }
 
-.content-text h2 {
+.content-text h1 {
 	display: inline-block;
 	padding: 15px 35px;
 	text-transform: uppercase;
@@ -237,7 +237,7 @@ html, body {
 	transition: transform 250ms;
 }
 
-.content-text h2:hover {
+.content-text h1:hover {
 	transform: translateY(-5px);
 }
 
@@ -263,14 +263,14 @@ a {
 	.content-text {
 		padding: 10px 10px;
 	}
-	.content-text h2 {
+	.content-text h1 {
 		padding: 5px 10px;
 		font-size: 30px;
 	}
 	.content-text h3 {
 		font-size: 25px;
 		margin: 5px;
-		letter-spacing: 3px;
+		letter-spacing: 2px;
 	}
 }
 
