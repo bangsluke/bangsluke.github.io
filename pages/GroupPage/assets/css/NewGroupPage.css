@@ -27,8 +27,6 @@
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
-
-
 	--user-image-height: 100px;
 }
 
@@ -119,7 +117,6 @@ html, body {
 	padding: 15px;
 }
 
-
 /* Avatar class for the main image. */
 
 .avatar-container {
@@ -202,15 +199,17 @@ html, body {
 	}
 }
 
-
-
-
 /* Main content styling. */
 
 .main-content-area {
 	/* background: lightblue; */
 	transition: margin-left .5s;
 	padding: 15px;
+	min-height: 570px;
+	height: max-content;
+	overflow-y: scroll;
+	/* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
+	scroll-behavior: smooth;
 }
 
 .subpage-content-area {
@@ -386,24 +385,25 @@ fieldset {
 	align-content: center;
 }
 
-.user-image-container{
+.user-image-container {
 	/* background-color: blueviolet; */
 	display: inline;
 	height: var(--user-image-height);
-    width: var(--user-image-height);
+	width: var(--user-image-height);
 }
 
 .user-text-container {
 	/* background-color: burlywood; */
 	display: inline;
 	height: var(--user-image-height);
-    width: var(--user-image-height);
+	width: var(--user-image-height);
 }
 
 .user-image {
 	height: var(--user-image-height);
-    width: var(--user-image-height);
-    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+	width: var(--user-image-height);
+	object-fit: cover;
+	/* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
 }
 
 .user-text {
@@ -411,9 +411,31 @@ fieldset {
 	display: inline-block;
 }
 
+/* Table classes */
 
+table {
+	width: 98%;
+	text-align: center;
+}
 
+.titanTable {
+	/* background-color: white; */
+	color: var(--accent-color-white);;
+}
 
+th {
+	font-style: bold;
+}
+
+.thTitanHeader {
+	border-bottom: 4px solid var(--accent-color-1);
+}
+
+.titanTable tr:hover {
+	background-color: var(--accent-color-1);
+	color: var(--accent-color-white);
+	font: bold;
+}
 
 /* Resizing the webpage for all devices. */
 
