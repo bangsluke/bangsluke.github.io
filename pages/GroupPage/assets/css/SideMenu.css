@@ -22,10 +22,10 @@
 
 .burgericon-container {
 	/* background: blue; */
-	height: 70px;
-	width: 70px;
+	height: 55px;
+	width: 55px;
 	/* padding-right: 40px; */
-	margin-right: 20px;
+	/* margin-right: 0px; */
 }
 
 .burgericon {
@@ -33,10 +33,10 @@
 	top: 0px;
 	left: 0px;
 	display: block;
-	font-size: 30px;
+	font-size: 40px;
 	cursor: pointer;
 	padding: 0.5em;
-	height: 70px;
+	height: 55px;
 	width: auto;
 	margin: 0;
 	padding: 0;
@@ -61,6 +61,7 @@
 	transition: 0.5s;
 	padding-top: 60px;
 	border-left: solid 1px var(--accent-color-1);
+	display: inline;
 }
 
 .main-menu h2 {
@@ -103,18 +104,13 @@
 
 /* Side menu media queries. */
 
+/* Mobile size. */
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-	.burgericon {
-		/* background: blue; */
-		font-size: 40px;
-		padding: 0.3em 0.7em;
-	}
-	.sideMenu {
-		display: inline;
-		/* Show the side menu for smaller screens. */
-	}
 }
+
+/* Scale up for screens larger than mobile. */
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
 	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
