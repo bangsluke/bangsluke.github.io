@@ -17,12 +17,13 @@
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
     
-    --gallery-image-height: 200px;
+    --gallery-image-height: 180px;
 }
 
 /* Add custom gallery page styling. */
 
 .album-covers-container {
+    /* background-color: burlywood; */
     height: max-content;
     width: 100%;
     margin: auto;
@@ -35,20 +36,15 @@
 }
 
 .gallery-cover-container {
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    /* background-color: purple; */
     height: var(--gallery-image-height);
+    /* height: 200px; */
     width: var(--gallery-image-height);
+    /* width: 200px; */
     margin: 5px;
-    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
-}
-
-.gallery-cover-image {
-    height: var(--gallery-image-height);
-    width: var(--gallery-image-height);
-    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
-    margin: auto;
-    position: absolute;
-    z-index: -1;
-    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    cursor: pointer;
+    position: relative; /* This parent needs to be relative to give it a position in the document flow, so that it's children items can be set as position: absolute. */
 }
 
 .gallery-cover-text {
@@ -56,9 +52,23 @@
     font-size: 20px;
     text-transform: uppercase;
     text-align: left;
-    margin-top: 140px;
+    margin-top: 110px;
     padding: 1em;
-    position: absolute;
+
+    position: relative;
+}
+
+.gallery-cover-image {
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    height: var(--gallery-image-height);
+    width: var(--gallery-image-height);
+    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+    /* margin: auto; */
+    position: absolute; /* By making this position absolute (and having its parent as relative), we're defining this item to have position absolute in relation to its parent. */
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    /* Find a way to add a filter over the top of these gallery images to make the text easier to read. */
 }
 
 a {
