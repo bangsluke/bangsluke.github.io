@@ -281,6 +281,9 @@ https://devresourc.es/
 - CSS Spotify Style Image Gradient Overlay: https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - CSS easing gradients: https://larsenwork.com/easing-gradients/
 - Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+#### HTML
+- 5 Must Know HTML Tags That Almost Nobody Knows: https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified
+- 
 #### CSS Grid & Flexbox
 - Learn Flexbox In 20 Minutes | Learn HTML & CSS | Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
 - Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ || CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
@@ -289,7 +292,7 @@ https://devresourc.es/
 - A Guide To FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
 - Container Query Solutions with CSS Grid and Flexbox: https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/
-
+- Must-Know CSS Flexbox Responsive Multi-Column Layout Explained: https://www.softauthor.com/css-flexbox-responsive-multi-column-layout/
 
 
 ## JavaScript
