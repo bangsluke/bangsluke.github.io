@@ -22,10 +22,20 @@
 
 /* Add custom gallery page styling. */
 
+.album-covers-container {
+    height: max-content;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
 .gallery-cover-container {
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
-    margin: auto;
+    margin: 5px;
     background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
 }
 

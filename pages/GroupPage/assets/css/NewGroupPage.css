@@ -277,6 +277,15 @@ a {
 	}
 }
 
+/* Text styling. */
+
+p {
+	color: var(--accent-color-white);
+}
+
+
+
+
 /* Other classes and styles. */
 
 .center {
