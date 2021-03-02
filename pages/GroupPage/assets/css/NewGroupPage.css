@@ -113,6 +113,13 @@ html, body {
 	padding: 2px;
 }
 
+.subpage-header-area.homepage {
+	/* background-color: lightcoral; */
+	height: 80px;
+	padding: 15px;
+}
+
+
 /* Avatar class for the main image. */
 
 .avatar-container {
