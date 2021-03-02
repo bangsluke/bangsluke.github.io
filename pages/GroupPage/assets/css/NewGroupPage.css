@@ -279,7 +279,7 @@ a {
 
 /* Text styling. */
 
-p, h1, h2 {
+p, h1, h2, ul {
 	color: var(--accent-color-white);
 }
 
