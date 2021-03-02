@@ -62,7 +62,7 @@
                 <!-- The main top nav bar options. -->
                 <a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
                 <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-                <a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
+                <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
                 <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
                 <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
                 <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
@@ -92,7 +92,7 @@
                 <h2>Menu</h2>
                 <a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
                 <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-                <a href="/pages/GroupPage/SubPages/Calendar.html"><i class="fa fa-calendar"></i>Calendar</a>
+                <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
                 <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
                 <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
                 <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
@@ -111,6 +111,32 @@
 
                 <snap-tabs>
 
+                    <!-- The horizontal scrollable section. -->
+                    <header class="scroll-snap-x">
+
+                        <nav>
+
+                            <a active href="#profile">Profile</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#widgets">Widgets</a>
+                            <a href="#stats">Stats Summary</a>
+                            <a href="#titan">Titan Status</a>
+
+                            <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
+                            <!-- <a href="#more">
+                                <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
+                                    <path
+                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                    </path>
+                                </svg>
+                            </a> -->
+
+                        </nav>
+
+                        <span class="snap-indicator"></span>
+
+                    </header>
+
                     <section class="scroll-snap-x">
 
                         <article id="profile">
@@ -122,15 +148,27 @@
 
                             <h2>Name: Luke Bangs</h2>
 
-                            <p>An individual page for each member providing them details pertinent to them (their address, their favourite teams league position and upcoming fixtures).</p>
+                            <p>An individual page for each member providing them details pertinent to them (their
+                                address, their favourite teams league position and upcoming fixtures).</p>
 
                             <p>Height: 1.94cm</p>
-                            <p>Weight: 92KG</p>
-                            <!-- Add Andy as 3 foot. -->
+                            <p>Weight: 92KG</p> <!-- Add Andy as 3 foot. -->
                             <p>Chat Level: 7/10</p>
                             <p>Looks: Solid 6</p>
                             <p>Ashcombe Year Book Quote: </p>
                             <p>Need to find quote...</p>
+
+                        </article>
+
+                        <article id="contact">
+
+                            <h2>Name: Luke Bangs</h2>
+
+                            <p>Add contact details;</p>
+                            <p>- Phone Number</p>
+                            <p>- Twitter handle</p>
+                            <p>- Instagram handle</p>
+                            <p> https://elfsight.com/click-to-call-widget/html/ </p>
 
                         </article>
 
@@ -153,22 +191,31 @@
                                 </script>
                             </section>
 
+                            <p>- Add snapshot of where football team is in Prem.</p>
+                            <img src="/pages/GroupPage/assets/images/Premier League.png"
+                                class="league-picture center fadein" alt="Liverpool Prem Position">
+                            <p>- Add snapshot of where Dorkinians team is</p>
+                            <img src="/pages/GroupPage/assets/images/Dorkinians League.png"
+                                class="league-picture center fadein" alt="Dorkinians 3s Position">
+                            <p>- Use GeoLocation to confirm weather where the user is?</p>
+                            <p> http://100widgets.com/maps/202-geo-location-map.html </p>
+
+
                         </article>
 
-                        <article id="overscroll">
-                            <h2>Lorems dolor</h2>
-                            <p>Lorem ipsum dolor sit amet consectet adipisicing elit</p>
-                            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
-                            <p>nisi, aspernatur earum eligendi id quam nihil sint quas?</p>
-                            <ul>
-                                <li>Lorem</li>
-                                <li>ipsum</li>
-                                <li>dolor</li>
-                            </ul>
-                            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
+                        <article id="stats">
+                            <h2>Stats</h2>
+                            <p>Add high level summary of key stats of user.</p>
                         </article>
 
-                        <article id="more">
+                        <article id="titan">
+                            <h2>Titan Status</h2>
+                            <p>- Have a summary of number of Titan spots owned.</p>
+                            <p>- Add biggest Titan lead?</p>
+                        </article>
+
+                        <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
+                        <!-- <article id="more">
                             <h2>Lore s sdf</h2>
                             <ul>
                                 <li>Lorem</li>
@@ -179,27 +226,9 @@
                                 <li>dolor</li>
                             </ul>
                             <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
-                        </article>
+                        </article> -->
 
                     </section>
-
-                    <!-- The horizontal scrollable section. -->
-                    <header class="scroll-snap-x">
-                        <nav>
-                            <a active href="#profile">Profile</a>
-                            <a href="#widgets">Widgets</a>
-                            <a href="#overscroll">Horizontal Overscroll Ready</a>
-                            <a href="#more">
-                                <!-- Turn off the final three dots at the end of the horizontal scroll bar. -->
-                                <!-- <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
-                                    <path
-                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                    </path>
-                                </svg> -->
-                            </a>
-                        </nav>
-                        <span class="snap-indicator"></span>
-                    </header>
 
                 </snap-tabs>
 

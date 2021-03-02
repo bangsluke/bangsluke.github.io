@@ -292,6 +292,12 @@ a {
 	border-radius: 5px;
 }
 
+.league-picture {
+	height: auto;
+	width: 100%;
+	border-radius: 3px;
+}
+
 /* Resizing the webpage for all devices. */
 
 /* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
