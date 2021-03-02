@@ -1,0 +1,155 @@
+/* Dom's Corner styling */
+
+/* The css styling used for Dom's Corner page. */
+/* https://karvitt.com/widgets/html-code/math-game-code */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /* CSS variables - Add variables below like the given example. */
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #FF3CAC;
+    --main-background-color: #FF3CAC;
+    --accent-color-1: #FF3CAC;
+    --accent-color-2: #784BA0;
+    --accent-color-3: #2B86C5;
+    --accent-color-white: #ffffff;
+    --accent-color-black: #222222;
+    --main-font-family: 'Calibri', sans-serif;
+    /* line-height: 15px; */
+    --gallery-image-height: 200px;
+}
+
+/* Add custom Dom's Corner page styling. */
+
+#outer {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    margin: 0 auto
+}
+
+#cover {
+    border: 2px solid #111;
+    padding: 15px 0
+}
+
+.main {
+    table-layout: fixed;
+    width: 94%;
+    border: 0;
+    border-collapse: collapse;
+    margin: 0 auto
+}
+
+.main td {
+    padding: 0 8px;
+    vertical-align: middle;
+    border: 0
+}
+
+.main input {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 2px 0;
+    padding: 0 2%;
+    height: 22px;
+    text-align: right
+}
+
+.ac {
+    text-align: center
+}
+
+.b {
+    font-weight: bold
+}
+
+.main select {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 2px 0;
+    background: #fff;
+    height: 22px
+}
+
+.w50 {
+    width: 50%
+}
+
+.main button {
+    width: 100%;
+    font-weight: bold;
+    margin: 3px 0
+}
+
+#box1, #tab0, #tab1 {
+    width: 100%
+}
+
+.main {
+    width: 90%
+}
+
+.main td {
+    width: 25%
+}
+
+.Answer {
+    text-shadow: 0 0;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none
+}
+
+.Question {
+    text-shadow: 0 0;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #f00
+}
+
+.Sign {
+    text-shadow: 0 0;
+    letter-spacing: 1px;
+    text-align: center
+}
+
+.High {
+    letter-spacing: 1px;
+    text-align: center
+}
+
+#tx, #tx1 {
+    text-align: center;
+    letter-spacing: 1px
+}
+
+#sans {
+    text-align: center;
+    letter-spacing: 1px;
+    color: #00f
+}
+
+.w25 {
+    width: 25%
+}
+
+.ar {
+    text-align: right
+}
+
+#tab1 {
+    display: none;
+    width: 100%
+}
+
+#tab0 td, #tab1 td {
+    padding: 2px
+}
+
+.response {
+    text-shadow: 0 0;
+    letter-spacing: 1px;
+    text-align: center
+}

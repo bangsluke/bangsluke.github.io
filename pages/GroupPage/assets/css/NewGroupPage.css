@@ -279,10 +279,9 @@ a {
 
 /* Text styling. */
 
-p {
+p, h1, h2 {
 	color: var(--accent-color-white);
 }
-
 
 
 

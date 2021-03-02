@@ -1,5 +1,5 @@
-<!-- Gallery.html -->
-<!-- A gallery of the groups most flattering images. -->
+<!-- Ideas.html -->
+<!-- An area to save up ideas for the full site. -->
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
 <head>
 
 	<!-- Website Title - shows up in tab at top of page. -->
-	<title>Gallery</title>
+	<title>Ideas</title>
 
 	<!-- Initial Meta Data -->
 	<meta charset="utf-8" />
@@ -18,10 +18,11 @@
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/GroupPage/assets/css/TopMenu.css" rel="stylesheet"> <!-- Top Menu styling -->
 	<link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
-	<link href="/pages/GroupPage/assets/css/Gallery.css" rel="stylesheet"> <!-- Gallery styling -->
+	<link href="/pages/GroupPage/assets/css/DomsCorner.css" rel="stylesheet"> <!-- Dom's Corner styling -->
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
+	<script src="/pages/GroupPage/assets/js/jDomsCorner.js"></script> <!-- Get Dom's Corner JS -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
@@ -51,7 +52,7 @@
 			<!-- Add some heading text. Add it within a container. -->
 			<div class="heading-container">
 				<!-- Add some heading text. -->
-				<h1 class="center subpage-header-text fadein">Gallery</h1>
+				<h1 class="center subpage-header-text fadein">Ideas</h1>
 			</div>
 
 			<!-- Top Menu - not considered part of the "main-content-area" -->
@@ -103,100 +104,113 @@
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
 
-
-
 			<div class="subpage-content-area fadein">
 
-				<!-- Try to add spotify style images gallery. -->
-
-				<div class="album-covers-container fadein">
-
-					<!-- Croatia Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">Croatia</h2>
-							<!-- <img class="gallery-cover-image"
-								src="/pages/GroupPage/assets/images/Gallery/Croatia Cover.JPG"
-								alt="Croatia Album Cover"> -->
-							<img class="gallery-cover-image"
-								src="/pages/GroupPage/assets/images/Gallery/Croatia Pea Cover.JPG"
-								alt="Croatia Pea Album Cover">
-						</a>
-
+				<h2>Dom's Corner</h2>
+				<br>
+				<!-- https://karvitt.com/widgets/html-code/math-game-code -->
+				<div id=outer>
+					<div class='ac b'>Math Game</div>
+					<div id=cover>
+						<form name=Flash>
+							<table class=main>
+								<col class=w25 span=4>
+								<tr>
+									<td colspan=2>Difficulty
+									<td colspan=2><select id=diff>
+											<option value=10 selected>Easy
+											<option value=20>Medium
+											<option value=50>Hard
+											<option value=100>Expert
+										</select>
+								<tr>
+									<td colspan=2>Math Function
+									<td colspan=2><select id=func>
+											<option value=Add selected>Add
+											<option value=Subt>Subtract
+											<option value=Mult>Multiply
+											<option value=Rnd>Add & Subtract
+											<option value=RndAll>All
+										</select>
+								<tr>
+									<td colspan=2><button type=button onclick=StartGame();>Start</button>
+									<td colspan=2><button type=button onclick=ResetGame();>Reset</button>
+								<tr id=qrow>
+									<td class=ac colspan=2>   <span id=Q1 class=Question> </span>    <span id=Sign
+											class=Question> </span>    <span id=Q2 class=Question> </span>
+									<td class=ac><span id=equal class=Question> </span>
+									<td class=ac><span id=quesmark class=Question> </span>
+								<tr>
+									<td id=sans colspan=4> 
+								<tr class=sect2>
+									<td>
+										<div id=Ans1 class=Answer> </div>
+									<td>
+										<div id=Ans2 class=Answer> </div>
+									<td>
+										<div id=Ans3 class=Answer> </div>
+									<td>
+										<div id=Ans4 class=Answer> </div>
+								<tr id=arow>
+									<td><button type=button id=A1 onclick=guessThis(this.guess)>A</button>
+									<td><button type=button id=A2 onclick=guessThis(this.guess)>B</button>
+									<td><button type=button id=A3 onclick=guessThis(this.guess)>C</button>
+									<td><button type=button id=A4 onclick=guessThis(this.guess)>D</button>
+								<tr>
+									<td colspan=4>
+										<div id=Response class=response> </div>
+								<tr>
+									<td colspan=4 id=tx>Score:
+								<tr>
+									<td class=ar colspan=2><b>Correct</b> :
+									<td colspan=2 class=ac>
+										<div id=Correct class=Answer>0</div>
+								<tr>
+									<td class=ar colspan=2><b>Incorrect</b> :
+									<td colspan=2 class=ac>
+										<div id=Missed class=Answer>0</div>
+								<tr>
+									<td class=ar colspan=2><b>Accuracy</b> :
+									<td class=ar colspan=2>
+										<div id=Accuracy class=Answer>0 %</div>
+								<tr>
+									<td class=ar colspan=2><b>Speed</b> :
+									<td colspan=2 class=ac>
+										<div id=Speed class=Answer>0 sec</div>
+							</table>
+						</form>
 					</div>
-
-					<!-- Glastonbury Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">Glastonbury</h2>
-							<!-- <img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/Glastonbury Cover.jpg"
-								alt="Glastonbury Album Cover"> -->
-							<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/Glastonbury Pea Cover.JPG"
-								alt="Glastonbury Pea Album Cover">
-						</a>
-
-					</div>
-
-					<!-- Big Nights Out Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">Big Nights Out</h2>
-							<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/Big Nights Out Pea Cover.JPG"
-								alt="Big Nights Out Pea Album Cover">
-						</a>
-
-					</div>
-
-					<!-- Lockdown Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">Lockdown</h2>
-							<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/Lockdown Pea Cover.jpg"
-								alt="Lockdown Pea Album Cover">
-						</a>
-
-					</div>
-
-					<!-- Pagham Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">Pagham</h2>
-							<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/Pagham Pea Cover.JPG"
-								alt="Pagham Pea Album Cover">
-						</a>
-
-					</div>
-
-					<!-- General Album Cover -->
-					<div class="gallery-cover-container fadein">
-
-						<a href="#">
-							<h2 class="gallery-cover-text">General</h2>
-							<img class="gallery-cover-image" src="/pages/GroupPage/assets/images/Gallery/General Pea Cover.JPG"
-								alt="General Pea Album Cover">
-						</a>
-
-					</div>
-
-
 				</div>
 
-
-
+				<br>
 				<br>
 
-
-				<!-- https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf -->
-				<p>Add spotify style album covers leading to albums of images.</p>
-				<p>- Gallery Widget https://elfsight.com/photo-gallery-widget/html/</p>
-				<p>- Add trigger to turn on/off specific Pea cover images?</p>
-
-
+				<h2>Ideas</h2>
+				<p>- On Homepage add counter widget with ridiculous stats (messages sent, shots completed, goals scored)
+				</p>
+				<p>- https://elfsight.com/number-counter-widget/html/ </p>
+				<p>- Add WhatsApp chat widget </p>
+				<p>https://elfsight.com/html-widgets/ </p>
+				<p>- Add visitor counter somewhere.</p>
+				<p>https://elfsight.com/visitor-counter-widget/html/ </p>
+				<p>- Show live user counter</p>
+				<p>http://100widgets.com/informers/129-flag-counter.html </p>
+				<p>- Add search feature somewhere (sidebar and top bar)</p>
+				<p>https://elfsight.com/search-widget/html/ </p>
+				<p>- Embed a Spotify playlist </p>
+				<p>https://www.jimdo.com/blog/embed-spotify-playlist-on-website/ </p>
+				<p>- Add Dom’s corner page</p>
+				<p>https://karvitt.com/widgets/html-code/math-game-code </p>
+				<!-- <p>- Add Bitcoin widget</p>
+				<p>http://100widgets.com/informers/286-crypto-widget.html</p>
+				<p>http://100widgets.com/informers/262-bitcoin-widgets.html </p>
+				<p>- Add gold price</p>
+				<p>http://100widgets.com/informers/119-gold-price.html </p> -->
+				<p>- Add Comments section</p>
+				<p>http://100widgets.com/others/234-comments-widgets-for-page.html </p>
+				<p>- Add a quote of the day area that cycles through funny things said by the group? </p>
+				<p>- Possible widget site:</p>
+				<p>https://www.powr.io/ </p>
 
 			</div>
 
