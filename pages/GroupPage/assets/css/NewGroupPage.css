@@ -394,7 +394,7 @@ fieldset {
 
 .user-text-container {
 	/* background-color: burlywood; */
-	display: inline;
+	/* display: inline; */
 	height: var(--user-image-height);
 	width: var(--user-image-height);
 }
