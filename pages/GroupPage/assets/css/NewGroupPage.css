@@ -27,6 +27,8 @@
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
+
+	--user-image-height: 100px;
 }
 
 /* HTML updates to cover the full webpage. */
@@ -317,6 +319,56 @@ fieldset {
 	width: 100%;
 	border-radius: 3px;
 }
+
+/* Users page styling */
+
+.all-users-container {
+	/* background-color: antiquewhite; */
+	height: max-content;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-container {
+	/* background-color: aqua; */
+	width: 100%;
+	height: max-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+}
+
+.user-image-container{
+	/* background-color: blueviolet; */
+	display: inline;
+	height: var(--user-image-height);
+    width: var(--user-image-height);
+}
+
+.user-text-container {
+	/* background-color: burlywood; */
+	display: inline;
+	height: var(--user-image-height);
+    width: var(--user-image-height);
+}
+
+.user-image {
+	height: var(--user-image-height);
+    width: var(--user-image-height);
+    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+}
+
+.user-text {
+	/* background-color: bisque; */
+	display: inline-block;
+}
+
+
+
+
 
 /* Resizing the webpage for all devices. */
 
