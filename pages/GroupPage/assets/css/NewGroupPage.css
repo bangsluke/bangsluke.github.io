@@ -377,24 +377,28 @@ fieldset {
 .user-container {
 	/* background-color: aqua; */
 	width: 100%;
-	height: max-content;
+	height: var(--user-image-height);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
-	align-content: center;
+	justify-content: space-evenly; /* Centers the content centrally. */
+	margin-bottom: 10px;
+}
+
+.user-container.reverse {
+	flex-direction: row-reverse;
 }
 
 .user-image-container {
 	/* background-color: blueviolet; */
-	display: inline;
 	height: var(--user-image-height);
 	width: var(--user-image-height);
+	justify-content: center;
+	align-content: center;
 }
 
 .user-text-container {
 	/* background-color: burlywood; */
-	/* display: inline; */
 	height: var(--user-image-height);
 	width: var(--user-image-height);
 }
@@ -408,7 +412,9 @@ fieldset {
 
 .user-text {
 	/* background-color: bisque; */
-	display: inline-block;
+	text-align: center;
+	margin: auto;
+	display: block;
 }
 
 /* Table classes */
