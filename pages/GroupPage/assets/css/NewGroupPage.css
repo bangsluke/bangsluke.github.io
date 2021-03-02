@@ -24,7 +24,7 @@
 	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
-	--accent-color-black-rgb: 34,34,34;
+	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
 }
@@ -279,11 +279,9 @@ a {
 
 /* Text styling. */
 
-p, h1, h2, ul {
+p, h1, h2, ul, legend {
 	color: var(--accent-color-white);
 }
-
-
 
 /* Other classes and styles. */
 
@@ -292,6 +290,20 @@ p, h1, h2, ul {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border: 1px solid var(--accent-color-white);
+	padding: 0.5em;
+}
+
+.fieldset-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .individuals-picture {
