@@ -205,7 +205,7 @@ html, body {
 	/* background: lightblue; */
 	transition: margin-left .5s;
 	padding: 15px;
-	min-height: 570px;
+	min-height: 580px;
 	height: max-content;
 	overflow-y: scroll;
 	/* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */

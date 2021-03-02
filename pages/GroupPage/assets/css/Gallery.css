@@ -17,7 +17,7 @@
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
     
-    --gallery-image-height: 180px;
+    --gallery-image-height: 160px;
 }
 
 /* Add custom gallery page styling. */
@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    overflow: auto;
+    /* overflow: auto; */
 }
 
 .gallery-cover-container {
