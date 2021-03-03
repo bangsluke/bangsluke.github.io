@@ -185,8 +185,11 @@ https://devresourc.es/
 - Coolors: https://coolors.co/
 - Contrast Checker: https://webaim.org/resources/contrastchecker/
 - Colour Tool: https://material.io/resources/color/#!/?view.left=0&view.right=0
+#### CSS Gradients (best to worst)
+- Gradient Generator Tool: https://learnui.design/tools/gradient-generator.html
 - CSS Gradient Tool: https://cssgradient.io/
 - Grabient: https://www.grabient.com/
+- CSS easing gradients: https://larsenwork.com/easing-gradients/
 
 ### Structure & Website Set Up
 - Google Check website is mobile friendly: https://search.google.com/test/mobile-friendly
@@ -214,12 +217,18 @@ https://devresourc.es/
 - Loading Spinners: https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Beautiful Transparent Login Form Using Simple HTML & CSS: https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode
 - Feedback Button: https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf (https://github.com/dulajkavinda/minimal-feedback).
-- Resizable header: https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html
 - Dark/Light mode example: https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9
 - Clip.path pop out example: https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Build Web Tabs: https://web.dev/building-a-tabs-component/
 - Build from scratch React sidebar navigation with CSS Grid & Flexbox: https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps
 - How to build an unfolding tooltip with CSS clip-path: https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode
+- Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT: https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+#### Header Set Ups
+- Resizable Header Code - https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html
+- Make Drop Down Menu - https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html
+- Responsive Homepage - https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html 
+#### Side Bar
+- Toggable Side Navigation Bar - https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
 
 
 ## HTML & CSS
@@ -279,11 +288,10 @@ https://devresourc.es/
 - CSS position: https://webdevsimplified.com/css-position.html
 - CSS loading page: https://www.codingflicks.com/2020/12/pure-css-loading-animation.html
 - CSS Spotify Style Image Gradient Overlay: https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- CSS easing gradients: https://larsenwork.com/easing-gradients/
 - Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- 10 modern layouts in 1 line of CSS: https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers
 #### HTML
 - 5 Must Know HTML Tags That Almost Nobody Knows: https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified
-- 
 #### CSS Grid & Flexbox
 - Learn Flexbox In 20 Minutes | Learn HTML & CSS | Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
 - Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ || CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
@@ -293,6 +301,7 @@ https://devresourc.es/
 - FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
 - Container Query Solutions with CSS Grid and Flexbox: https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/
 - Must-Know CSS Flexbox Responsive Multi-Column Layout Explained: https://www.softauthor.com/css-flexbox-responsive-multi-column-layout/
+- Sort out CSS vh and vw to work better on all devices - https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9
 
 
 ## JavaScript
@@ -330,6 +339,17 @@ React is an open-source, front end, JavaScript library for building user interfa
 - React spring cheatsheet: https://storage.googleapis.com/joshwcomeau/react-spring.pdf
 - How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
 
+### AngularJS
+AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
+
+### Node.js
+Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+
+### JQuery
+jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
+
+### Typescript
+TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
 ### Google Apps Script
 Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
