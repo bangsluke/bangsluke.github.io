@@ -1,0 +1,169 @@
+/* SDPSideMenu styling */
+
+/* The css styling used for the SDP side menu. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variable - SDP purple */
+	--accent-color-purple: #8F23FF;
+	/* CSS variable - SDP blue */
+	--accent-color-blue: #4254FF;
+	/* CSS variable - SDP pink */
+	--accent-color-pink: #F575FF;
+	/* CSS variable - Sidebar grey */
+	--background-color-grey: #282828;
+	/* CSS variable - Background grey */
+	--background-color-lightgrey: #CCCCCC;
+	--background-color-light-theme: #FFFFFF;
+	--main-font-family: 'Open Sans', 'Calibri', sans-serif;
+	/* CSS font variables */
+	font-family: var(--main-font-family, sans-serif);
+	font-size: 10pt;
+	/* CSS width variables */
+	/* Note - don't use margin-left with a defined value, instead use margin-auto. */
+	--width: 80%;
+	background: var(--background-color-light-theme, white);
+}
+
+.header-logo-section {
+	/* background: orange; */
+	display: flex;
+}
+
+/* Position burger icon at far right. https://stackoverflow.com/questions/33924655/position-last-flex-item-at-the-end-of-container */
+
+.last-item {
+	/* background-color: red; */
+	margin-left: auto;
+}
+
+/* Side Menu CSS */
+
+.burgericon-container {
+	/* background: blue; */
+	height: 40px;
+	width: 40px;
+	margin-right: 5%;
+}
+
+.burgericon {
+	color: var(--accent-color-white);
+	top: 0px;
+	left: 0px;
+	display: block;
+	font-size: 40px;
+	cursor: pointer;
+	padding: 0.5em;
+	height: 40px;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.burgericon:hover {
+	color: var(--accent-color-2);
+}
+
+.sideMenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background: var(--background-color-lightgrey);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	border-left: solid 1px var(--accent-color-purple);
+	display: inline;
+}
+
+.main-menu h2 {
+	text-align: center;
+	letter-spacing: 7px;
+	color: var(--accent-color-white);
+	background: var(--accent-color-purple);
+	padding: 20px 0;
+}
+
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: var(--accent-color-white);
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.sideMenu a i {
+	padding-right: 15px;
+}
+
+.main-menu a:hover {
+	color: var(--accent-color-2);
+	background: var(--accent-color-white);
+}
+
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	padding: 0.2em;
+}
+
+/* Side menu media queries. */
+
+/* Mobile size. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+}
+
+/* Scale up for screens larger than mobile. */
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
+}

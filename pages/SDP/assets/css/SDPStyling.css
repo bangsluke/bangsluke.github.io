@@ -353,9 +353,9 @@ html {
     scroll-padding-top: 260px;
 }
 
-/* Add an id for fading in an item over two seconds. */
+/* Add a class for fading in an item over two seconds. */
 
-#fadein {
+.fadein {
     animation: fadein 2s ease forwards;
 }
 
