@@ -1,0 +1,179 @@
+<!-- SDP Documentation.html -->
+<!-- The full documentation page for how to use SDP. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. -->
+	<title>SDP Documentation</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Add Open Graph Meta Tags - https://ahrefs.com/blog/open-graph-meta-tags/ -->
+	<meta property="og:site_name" content="SDP">
+	<meta property="og:url" content="https://sdp.rle.de/#home">
+	<meta property="og:title" content="SDP Documentation">
+	<meta property="og:image" content="https://i.imgur.com/GuCDjQN.png">
+
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link rel="stylesheet" href="/pages/SDP/assets/css/SDPStyling.css" /> <!-- Main SDP CSS styling -->
+
+	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+	<script src="/pages/SDP/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
+
+	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/pages/SDP/assets/images/Acronym Sheet favicon.png" />
+
+</head>
+
+<body>
+
+	<!-- All Page Content. -->
+	<div class="allContentFrame wrapper">
+
+		<!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
+		<div class="subpage-header-area">
+
+			<!-- Add a homepage link by adding a group icon image. Add it within a container. -->
+			<div class="avatar-container">
+
+				<!-- Add group icon image. -->
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><img class="avatar center fadein"
+						src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+
+			</div>
+
+			<!-- Add some heading text. Add it within a container. -->
+			<div class="heading-container">
+				<!-- Add some heading text. -->
+				<h1 class="center subpage-header-text fadein">Events</h1>
+			</div>
+
+			<!-- Top Menu - not considered part of the "main-content-area" -->
+
+			<div class="topMenu" id="top-menu">
+				<!-- The main top nav bar options. -->
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
+				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
+				<a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
+				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+				<a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a>
+			</div>
+
+			<!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
+			<div class="burgericon-container">
+
+				<!-- Add burger icon with JavaScript functionality. -->
+				<!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
+				<img class="center burgericon fadein" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
+					alt="Burger Menu Icon" onclick="openNav()">
+
+			</div>
+
+		</div>
+
+		<!-- Side Menu - not considered part of the "main-content-area" -->
+
+		<div class="sideMenu" id="side-menu">
+
+			<!-- The x close button. -->
+			<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+
+			<!-- The main side bar menu options. -->
+			<div class="main-menu">
+				<h2>Menu</h2>
+				<a href="/pages/GroupPage/NewGroupPageHome.html"><i class="fa fa-home"></i>Home</a>
+				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
+				<a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
+				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+				<a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a>
+			</div>
+
+		</div>
+
+		<!-- Main Page Content. -->
+		<div class="main-content-area">
+
+			<div class="subpage-content-area fadein">
+
+				<h2>Calendar</h2>
+				<p>Add group Google Calendar that everyone can sync to.</p>
+				<p>A single combined list of upcoming events for the group.</p>
+
+				<br>
+
+				<!-- Add a fieldset divider area where the user can add a new event to the group calendar. https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified -->
+				<fieldset>
+
+					<!-- Add a legend title into the fieldset. -->
+					<legend>Add Event</legend>
+
+					<!-- Provide inputs for the user to select. -->
+
+					<div class="fieldset-row">
+						<p>Event Name:</p><input type="text">
+					</div>
+					<div class="fieldset-row">
+						<p>URL:</p><input type="url">
+					</div>
+					<div class="fieldset-row">
+						<p>Date:</p><input type="datetime-local">
+					</div>
+					<div class="fieldset-row">
+						<p>Event Colour:</p><input type="color">
+					</div>
+					<br>
+					<div class="fieldset-row center">
+						<input type="submit">
+					</div>
+
+				</fieldset>
+
+				<br>
+				<br>
+				<br>
+
+				<h2>Ideas</h2>
+				<p>Add football matches for everyone's teams to Google Calendar.</p>
+				<p>- Show list or calendar of national holidays. Show upcoming big sporting events etc</p>
+				<p>- Add countdown timer widget to next event</p>
+				<p>https://elfsight.com/countdown-timer-widget/html/</p>
+				<p>- Add calendar widget</p>
+				<p>https://elfsight.com/event-calendar-widget/html/</p>
+				<p>http://100widgets.com/calendars/104-month-calendar.html</p>
+
+
+			</div>
+
+
+		</div>
+
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+		<div class="push"></div>
+
+	</div>
+
+	<!-- Footer -->
+	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+	<footer class="footer fadein">
+
+		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+		<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
+		<a href="#">&nbsp</a>
+		<a href="mailto:bangsluke@gmail.com" class="icon fa fa-envelope">&nbsp</a>
+
+	</footer>
+
+</body>
+
+</html>
