@@ -27,22 +27,22 @@ My GitHub io page contains a number of projects that I am working on.
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
 
-### [- Homepage](https://bangsluke.github.io/Homepage.html)
+### [Homepage](https://bangsluke.github.io/Homepage.html)
 > Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
+### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
 > Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
+### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
 > [A list of links to coding resources and useful sites](https://github.com/bangsluke/bangsluke.github.io/edit/main/README.md). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
+### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
 > Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
+### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
+### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 
@@ -71,17 +71,16 @@ All useful links for various different coding languages.
 
 ### Current Courses Following
 
-#### [- freeCodeCamp](https://www.freecodecamp.org/learn)
-
-#### [- The Odin Project](https://theodinproject.com/dashboard)
+#### * [freeCodeCamp](https://www.freecodecamp.org/learn)
+#### * [The Odin Project](https://theodinproject.com/dashboard)
 
 ##### Archive
 
-#### Codedamn (52 week course)
+###### Codedamn (52 week course)
 - https://codedamn.com/news/full-stack-web-developer-2021
 - https://github.com/bangsluke/bangsluke-Test-Site/blob/master/Coding%2052%20Week%20Development%20Course.md
 
-#### Classcentral (3 week course)
+###### Classcentral (3 week course)
 - https://www.classcentral.com/course/introduction-to-web-development-17895
 
 ### Other Learning Links
