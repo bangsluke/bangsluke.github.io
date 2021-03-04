@@ -40,6 +40,7 @@ My GitHub io page contains a number of projects that I am working on.
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
+> ![SDP Logo](https://i.imgur.com/GuCDjQN.png)
 > Pages to support my work project. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
