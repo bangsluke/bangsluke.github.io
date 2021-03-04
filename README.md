@@ -28,32 +28,30 @@ My GitHub io page contains a number of projects that I am working on.
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
 
 ### [- Homepage](https://bangsluke.github.io/Homepage.html)
-_Homepage for accessing all of my created pages. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [- Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
-_Learning HTML and CSS. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [- Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
-_[A list of links to coding resources and useful sites](https://github.com/bangsluke/bangsluke.github.io/edit/main/README.md). Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_[A list of links to coding resources and useful sites](https://github.com/bangsluke/bangsluke.github.io/edit/main/README.md). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [- New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
-_Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [- Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
-_The best friends website ever created. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [- Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
-_Full on database driven site for multiple users to visit. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+_Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
 [To Top](#table-of-contents)
 
-To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
+To set up and begin using this page as your New tab page in Google Chrome, you need to add a [Chrome extension](chrome-extension://icpgjfneehieebagbmdbhnlpiopdcmna/options.html).
 
-I've used the aptly named "New Tab Redirect". See the link below.
-
-chrome-extension://icpgjfneehieebagbmdbhnlpiopdcmna/options.html
+I've used the aptly named "New Tab Redirect". See the link provided above.
 
 The other projects do not yet have set up instructions.
 
@@ -73,11 +71,9 @@ All useful links for various different coding languages.
 
 ### Current Courses Following
 
-#### freeCodeCamp
-- https://www.freecodecamp.org/learn
+#### [- freeCodeCamp](https://www.freecodecamp.org/learn)
 
-#### The Odin Project
-- https://theodinproject.com/dashboard
+#### [- The Odin Project](https://theodinproject.com/dashboard)
 
 ##### Archive
 
