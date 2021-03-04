@@ -60,7 +60,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 
 .weather {
-	margin: 0 0 2em 0;
+	margin: 0 auto 2em auto;
+	width: 90%;
 }
 
 .weather:hover {
@@ -68,6 +69,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 #images {
+	/* background-color: red; */
 	padding: 1em 0 0 0;
 }
 
@@ -2037,6 +2039,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 /* Thumbnails */
 
 .thumbnails {
+	/* background-color: blue; */
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -2047,7 +2050,7 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	-ms-flex-direction: row;
 	flex-direction: row;
 	position: relative;
-	margin: 0 0 2em -2em;
+	margin: 0 0 2em -2em; /* */
 }
 
 .thumbnails a {
@@ -2068,7 +2071,17 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	overflow: hidden;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.thumbnails {
+		/* background-color: brown; */
+		width: 95%;
+		left: 5%;
+	}
+}
+
 .thumbnails a img {
+	/* background-color: green; */
 	display: block;
 	width: 100%;
 	border-top-left-radius: 4px;
@@ -2245,7 +2258,7 @@ body.is-covered #wrapper {
 #header .avatar {
 	border-radius: 100%;
 	display: inline-block;
-	margin: 0 0 2em 0;
+	margin: 0 0 1.5em 0;
 	padding: 0.2em;
 	border: solid 1px rgba(255, 255, 255, 0.25);
 	background-color: rgba(255, 255, 255, 0.075);
