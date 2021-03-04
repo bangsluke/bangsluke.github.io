@@ -19,7 +19,7 @@ My largest collection of work hosted via GitHub.
   * [JavaScript](#javascript)
   * [Python](#python)
 
-# Introduction
+# [Introduction](https://bangsluke.github.io/#introduction)
 
 My GitHub io page contains a number of projects that I am working on.
 
