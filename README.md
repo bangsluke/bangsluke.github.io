@@ -40,7 +40,7 @@ My GitHub io page contains a number of projects that I am working on.
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
-> Pages to support my work project. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
@@ -50,7 +50,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
-[To Top](#table-of-contents)
+######[To Top](#table-of-contents)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
