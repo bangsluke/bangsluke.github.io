@@ -229,6 +229,7 @@ https://devresourc.es/
 - Responsive Homepage - https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html 
 #### Side Bar
 - Toggable Side Navigation Bar - https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+- Circular Expansion Navigation Bar - https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd
 
 
 ## HTML & CSS
