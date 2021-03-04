@@ -387,12 +387,8 @@ html {
 812 pixels (iPhone X landscape)
 1024 pixels (iPad landscape) */
 
-/* Smartphones */
-
-/* Covers most phones such as iPhone SE (my phone). */
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* Styles */
+    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
     :root {
         --width: 95%;
         font-size: 8pt;
@@ -451,12 +447,8 @@ html {
     }
 }
 
-/* Reduced windows on Desktops and Laptops */
-
-/* For when a user reduces the size of their window. */
-
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
-    /* Styles */
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
     :root {
         --width: 90%;
         font-size: 8pt;
@@ -513,10 +505,8 @@ html {
     }
 }
 
-/* iPads */
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    /* Styles */
+    /* Covers iPads and other tablets. */
     :root {
         --width: 90%;
         font-size: 8pt;
@@ -573,12 +563,8 @@ html {
     }
 }
 
-/* Desktops and Laptops */
-
-/* For most normal size screen desktops and laptops. */
-
 @media only screen and (min-width: 1224px) {
-    /* Styles */
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
     body {
         /* background: red; */
         font-size: 10pt;
@@ -586,12 +572,8 @@ html {
     /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
 
-/* Large Screens */
-
-/* For larger monitors and displays. */
-
 @media only screen and (min-width: 1824px) {
-    /* Styles */
+    /* Desktops and Laptops - For larger monitors and displays. */
     :root {
         --width: 70%;
     }
@@ -606,11 +588,8 @@ html {
     /* No additional styling required as the main CSS styles were designed for this screen size. */
 }
 
-/* Add a set up for media devices with preference for dark mode. */
-
-/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
-
 @media (prefers-color-scheme: dark) {
+    /* Add a set up for media devices with preference for dark mode - https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
     html {
         /* background: var(--background-color-grey, #282828); */
         background: var(--background-color-grey, #000000);
