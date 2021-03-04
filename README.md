@@ -115,19 +115,47 @@ All useful links for various different coding languages.
 
 ### Sandbox Sites
 These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
-- SoloLearn https://www.sololearn.com/
-- repl.it https://repl.it/~
-- Codedamn https://codedamn.com/playgrounds
+- [SoloLearn](https://code.sololearn.com/web)
+- [repl.it](https://repl.it/~)
+- [codepen.io](https://codepen.io/pen/)
+- [Codedamn](https://codedamn.com/playgrounds)
 
 ### Git and GitHub
-- Git & GitHub explained: https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
-- Git Commands Cheat Sheet: https://training.github.com/
-- GitHub Explained: https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/
-- Git and GitHub training: https://www.classcentral.com/course/introduction-git-github-18060
+[Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+[GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+#### Git and GitHub Learning
+- [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+- [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
+- [Git and GitHub training](https://www.classcentral.com/course/introduction-git-github-18060)
+- [Git Commands Cheat Sheet](https://training.github.com/)
 
 ### Support Sites
-- Stack Overflow: https://stackoverflow.com/
-- Discord: https://discord.com/channels/@me
+
+#### [Stack Overflow](https://stackoverflow.com/)
+Stack Overflow is a question and answer site for professional and enthusiast programmers.
+
+### Reddit Threads
+Reddit is a network of communities based on people's interests.
+<img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
+- [r/Learn Programming](https://www.reddit.com/r/learnprogramming/)
+- HTML: https://www.reddit.com/r/HTML/
+- HTML5: https://www.reddit.com/r/html5/
+- CSS: https://www.reddit.com/r/css/
+- JavaScript: https://www.reddit.com/r/javascript/
+- Learn JavaScript: https://www.reddit.com/r/learnjavascript/
+- Learn ReactJS: https://www.reddit.com/r/learnreactjs/
+- Python: https://www.reddit.com/r/Python/
+- Learn Python: https://www.reddit.com/r/learnpython/
+- Frontend: https://www.reddit.com/r/Frontend/
+- Backend: https://www.reddit.com/r/Backend/
+- Web Design: https://www.reddit.com/r/web_design/
+- Web Dev: https://www.reddit.com/r/webdev/
+- Indie Web Dev: https://www.reddit.com/r/Indiewebdev/
+- freeCodeCamp: https://www.reddit.com/r/FreeCodeCamp/
+
+
+#### [Discord](https://discord.com/channels/@me)
+Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
 
 ### Setting Up A Webiste
 - How To Build A Website: How to put a website online. This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/
@@ -146,25 +174,6 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 
 ### Understanding the Internet
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-
-### Reddit Threads
-<img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
-- Learn Programming: https://www.reddit.com/r/learnprogramming/
-- HTML: https://www.reddit.com/r/HTML/
-- HTML5: https://www.reddit.com/r/html5/
-- CSS: https://www.reddit.com/r/css/
-- JavaScript: https://www.reddit.com/r/javascript/
-- Learn JavaScript: https://www.reddit.com/r/learnjavascript/
-- Learn ReactJS: https://www.reddit.com/r/learnreactjs/
-- Python: https://www.reddit.com/r/Python/
-- Learn Python: https://www.reddit.com/r/learnpython/
-- Frontend: https://www.reddit.com/r/Frontend/
-- Backend: https://www.reddit.com/r/Backend/
-- Web Design: https://www.reddit.com/r/web_design/
-- Web Dev: https://www.reddit.com/r/webdev/
-- Indie Web Dev: https://www.reddit.com/r/Indiewebdev/
-- freeCodeCamp: https://www.reddit.com/r/FreeCodeCamp/
-
 
 ## [Website Tools](https://bangsluke.github.io/#website-tools)
 ###### [To Top](#table-of-contents)
