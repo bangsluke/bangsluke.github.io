@@ -148,7 +148,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ### Reddit Threads
-https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/250px-Reddit_logo_new.svg.png
+![Reddit Logo](https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/250px-Reddit_logo_new.svg.png)
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
 - HTML5: https://www.reddit.com/r/html5/
