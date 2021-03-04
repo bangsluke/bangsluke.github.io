@@ -14,8 +14,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- Link to CSS styling -->
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link rel="stylesheet" href="assets/css/main.css" /> <!-- Main CSS styling -->
+	<link rel="stylesheet" href="assets/css/Homepage.css" /> <!-- Homepage specific CSS styling -->
+
 
 	<!-- Favicon Image -->
 	<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
@@ -29,7 +31,7 @@
 	<div id="wrapper">
 
 		<!-- Header -->
-		<header id="header">
+		<header id="header" class="fadein">
 
 			<!-- Profile Picture -->
 			<span class="avatar" id="fadein"><a href="Homepage.html"><img src="images/OnlineProfilePicture.png"
@@ -39,60 +41,96 @@
 			<!-- Welcome Text -->
 			<h1>Welcome <strong>@bangsluke</strong> to your website.</h1>
 
-			<h2>New Tab</h2>
-
-			<a href="pages/NewTab.html" id="underline">New Tab Page</a>
-
-			<h2>Online Portfolio</h2>
-
-			<a href="pages/OnlinePortfolio.html" id="underline">Online Portfolio</a>
-
-			<br>
-
-			<a href="pages/OnlinePort2.html" id="underline">Online Portfolio Redesign</a>
-
-			<h2>Code Learning Page</h2>
-
-			<a href="https://bangsluke.github.io/" id="underline">bangsluke.github.io</a>
-			
-			<br>
-			
-			<a href="pages/CodeLearningPage.html" id="underline">Code Learning Page</a>
-
-			<h2>SDP</h2>
-
-			<a href="pages/SDP/SDPAcronyms.html" id="underline">SDP Acronyms</a>
-
-			<br>
-
-			<a href="pages/SDP/SDPDocumentation.html" id="underline">SDP Documentation</a>
-
-			<h2>Group Page</h2>
-
-			<a href="pages/GroupPage/NewGroupPageHome.html" id="underline">New Group Page Home</a>
-
-			<br>
-
-			<a href="pages/GroupPage/GroupPageHome.html" id="underline">Group Page Home</a>
-
-			<br>
-
-			<a href="pages/GroupPage/GroupPageTestArea.html" id="underline">Group Page Test Area</a>
-
-			<h2>Dorkinians Webpage</h2>
-
-			<a href="pages/DorkiniansWebpage.html" id="underline">Dorkinians Webpage</a>
-
 		</header>
 
 		<!-- Main -->
-		<section id="main">
+		<section id="main" class="fadein">
+
+			<!-- Add all links to other sites. -->
+
+			<!-- Main container holds all three columns. -->
+
+			<div class="main-link-container">
+
+				<!-- Add a column container for Development. -->
+
+				<div class="column-link-container">
+
+					<h2 class="center"><strong>Development</strong></h2>
+
+					<h2>New Tab</h2>
+
+					<span><a href="pages/NewTab.html" class="offset" id="underline">New Tab Page</a></span>
+
+					<h2>Code Learning Page</h2>
+
+					<span><a href="https://bangsluke.github.io/" class="offset"
+							id="underline">bangsluke.github.io</a></span>
+
+					<h2>Group Page</h2>
+
+					<span><a href="pages/GroupPage/NewGroupPageHome.html" class="offset" id="underline">New Group Page
+							Home</a></span>
+
+					<span><a href="pages/GroupPage/GroupPageHome.html" class="offset" id="underline">Group Page
+							Home</a></span>
+
+					<span><a href="pages/GroupPage/GroupPageTestArea.html" class="offset" id="underline">Group Page Test
+							Area</a></span>
+
+					<h2>Dorkinians Webpage</h2>
+
+					<span><a href="pages/DorkiniansWebpage.html" class="offset" id="underline">Dorkinians
+							Webpage</a></span>
+
+				</div>
+
+				<!-- Add a column container for Work. -->
+
+				<div class="column-link-container">
+
+					<h2 class="center"><strong>Work</strong></h2>
+
+					<h2>Online Portfolio</h2>
+
+					<span><a href="pages/OnlinePortfolio.html" class="offset" id="underline">Online Portfolio</a></span>
+
+					<span><a href="pages/OnlinePort2.html" class="offset" id="underline">Online Portfolio
+							Redesign</a></span>
+
+					<h2>SDP</h2>
+
+					<span><a href="pages/SDP/SDPAcronyms.html" class="offset" id="underline">SDP Acronyms</a></span>
+
+					<span><a href="pages/SDP/SDPDocumentation.html" class="offset" id="underline">SDP
+							Documentation</a></span>
+
+				</div>
+
+				<!-- Add a column container for Archive. -->
+
+				<div class="column-link-container">
+
+					<h2 class="center"><strong>Archive</strong></h2>
+
+					<h2>Code Learning Page</h2>
+
+					<span><a href="pages/CodeLearningPage.html" class="offset" id="underline">Code Learning
+							Page</a></span>
+
+				</div>
+
+			</div>
 
 			<!-- Weather widget and code. https://weatherwidget.io/ -->
 			<section class="weather">
-				<a class="weatherwidget-io" href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/" data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather" data-icons="Climacons Animated" data-theme="original" data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)" data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678" data-cloudfill="#494A66" data-raincolor="#99b998" >SOUTH WOODHAM FERRERS Weather</a>
+				<a class="weatherwidget-io" href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+					data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather" data-icons="Climacons Animated"
+					data-theme="original" data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+					data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678" data-cloudfill="#494A66"
+					data-raincolor="#99b998">SOUTH WOODHAM FERRERS Weather</a>
 				<script>
-					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+					!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
 				</script>
 			</section>
 
