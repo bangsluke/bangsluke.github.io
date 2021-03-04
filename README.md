@@ -14,7 +14,7 @@ My largest collection of work hosted via GitHub.
   * [Website Tools](#website-tools)
 * [Languages](#languages)
   * [Combined Code Examples](#combined-code-examples)
-  * [HTML & CSS](#html-&-css)
+  * [HTML & CSS](#HTML-&-CSS)
     * [HTML](#html)
     * [CSS](#css)
   * [JavaScript](#javascript)
