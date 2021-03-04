@@ -97,6 +97,7 @@ All useful links for various different coding languages.
 
 ### Other Learning Links
 - [SoloLearn](https://www.sololearn.com/)
+- [w3schools](https://www.w3schools.com/)
 - [Bigs On Dev - Front End Development](https://bigsondev.com/)
 - [Upskill Courses](https://upskillcourses.com/courses)
 - [JavaScript Introduction Video from Microsoft](https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo)
@@ -114,98 +115,120 @@ All useful links for various different coding languages.
 ###### [To Top](#table-of-contents)
 
 ### Sandbox Sites
-These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
-- SoloLearn https://www.sololearn.com/
-- repl.it https://repl.it/~
-- Codedamn https://codedamn.com/playgrounds
+> These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
+- [SoloLearn](https://code.sololearn.com/web)
+- [repl.it](https://repl.it/~)
+- [codepen.io](https://codepen.io/pen/)
+- [Codedamn](https://codedamn.com/playgrounds)
 
 ### Git and GitHub
-- Git & GitHub explained: https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
-- Git Commands Cheat Sheet: https://training.github.com/
-- GitHub Explained: https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/
-- Git and GitHub training: https://www.classcentral.com/course/introduction-git-github-18060
+> [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+<img src="http://blog.novatec-gmbh.de/wp-content/uploads/2013/07/logo-git.png" width="50" height="50"> 
+
+> [GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+<img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50">  
+
+#### Git and GitHub Learning
+- [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+- [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
+- [Git and GitHub training](https://www.classcentral.com/course/introduction-git-github-18060)
+- [Git Commands Cheat Sheet](https://training.github.com/)
 
 ### Support Sites
-- Stack Overflow: https://stackoverflow.com/
-- Discord: https://discord.com/channels/@me
 
-### Setting Up A Webiste
-- How To Build A Website: How to put a website online. This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/
-- What is Open Source? https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/
-- Web Design in 4 minutes: https://jgthms.com/web-design-in-4-minutes/
-- Making A Website Accessible To All: How to make your website more accessible for people with disabilities. This course will cover some core HTML elements, some useful JavaScript features, and styling with Sass. (2 hour YouTube course). https://www.freecodecamp.org/news/build-an-accessible-web-app-with-html-sass-and-javascript/
-- Website starter templates: https://templated.co/
-- DOM Manipulation: https://www.freecodecamp.org/news/how-to-manipulate-the-dom-beginners-guide/
-- Mobile phone screen sizes for scaling CSS: https://viewportsizer.com/devices/
-- 18 Tips to make websites look better and a request for help: https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- How to plan and build a full project: https://www.reddit.com/r/learnprogramming/comments/lfxwa4/how_to_plan_and_build_a_project/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- What is an API and cheatsheet: https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/
-- Creating an Effective Portfolio: https://www.joshwcomeau.com/effective-portfolio/download-book/
-- 10 Design Tips for Projects: https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project
-- Maximally optimizing image loading for the web in 2021: https://www.industrialempathy.com/posts/image-optimizations/
-
-### Understanding the Internet
-- Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+#### [Stack Overflow](https://stackoverflow.com/)
+> Stack Overflow is a question and answer site for professional and enthusiast programmers.
+<img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50">  
 
 ### Reddit Threads
+Reddit is a network of communities based on people's interests.
 <img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
-- Learn Programming: https://www.reddit.com/r/learnprogramming/
-- HTML: https://www.reddit.com/r/HTML/
-- HTML5: https://www.reddit.com/r/html5/
-- CSS: https://www.reddit.com/r/css/
-- JavaScript: https://www.reddit.com/r/javascript/
-- Learn JavaScript: https://www.reddit.com/r/learnjavascript/
-- Learn ReactJS: https://www.reddit.com/r/learnreactjs/
-- Python: https://www.reddit.com/r/Python/
-- Learn Python: https://www.reddit.com/r/learnpython/
-- Frontend: https://www.reddit.com/r/Frontend/
-- Backend: https://www.reddit.com/r/Backend/
-- Web Design: https://www.reddit.com/r/web_design/
-- Web Dev: https://www.reddit.com/r/webdev/
-- Indie Web Dev: https://www.reddit.com/r/Indiewebdev/
-- freeCodeCamp: https://www.reddit.com/r/FreeCodeCamp/
+- [r/Learn Programming](https://www.reddit.com/r/learnprogramming/)
+- [r/HTML](https://www.reddit.com/r/HTML/)
+- [r/HTML5](https://www.reddit.com/r/html5/)
+- [r/CSS](https://www.reddit.com/r/css/)
+- [r/JavaScript](https://www.reddit.com/r/javascript/)
+- [r/Learn JavaScript](https://www.reddit.com/r/learnjavascript/)
+- [r/Learn ReactJS](https://www.reddit.com/r/learnreactjs/)
+- [r/Python](https://www.reddit.com/r/Python/)
+- [r/Learn Python](https://www.reddit.com/r/learnpython/)
+- [r/Frontend](https://www.reddit.com/r/Frontend/)
+- [r/Backend](https://www.reddit.com/r/Backend/)
+- [r/Web Design](https://www.reddit.com/r/web_design/)
+- [r/Web Dev](https://www.reddit.com/r/webdev/)
+- [r/Indie Web Dev](https://www.reddit.com/r/Indiewebdev/)
+- [r/freeCodeCamp](https://www.reddit.com/r/FreeCodeCamp/)
 
+#### [Discord](https://discord.com/channels/@me)
+> Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
+<img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50">
+
+### Setting Up A Webiste
+- [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
+- [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
+- [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
+- [Making A Website Accessible To All: How to make your website more accessible for people with disabilities](https://www.freecodecamp.org/news/build-an-accessible-web-app-with-html-sass-and-javascript/). This course will cover some core HTML elements, some useful JavaScript features, and styling with Sass. (2 hour YouTube course).
+- [DOM Manipulation](https://www.freecodecamp.org/news/how-to-manipulate-the-dom-beginners-guide/)
+- [18 Tips to make websites look better and a request for help](https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [How to plan and build a full project](https://www.reddit.com/r/learnprogramming/comments/lfxwa4/how_to_plan_and_build_a_project/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
+- [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
+- [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
+
+#### Responsive Design
+- [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
+
+### Understanding the Internet
+- [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
 
 ## [Website Tools](https://bangsluke.github.io/#website-tools)
 ###### [To Top](#table-of-contents)
 
 ### Everything
-https://devresourc.es/
+- [Multiple Developer Resources](https://devresourc.es/)
+
+### Starter Templates
+- [w3schools Responsive Web Design Templates](https://www.w3schools.com/csS/css_rwd_templates.asp)
+- [Website starter templates](https://templated.co/)
 
 ### Fonts
-- Google Fonts: https://fonts.google.com/
-- Font Pairs: https://fontpair.co/
+- [Google Fonts](https://fonts.google.com/)
+- [Font Pairs](https://fontpair.co/)
 
 ### Images & Shapes
-- Shapefest (library of free 3D shapes): https://www.shapefest.com/
-- Wannathis (3d Illustrations and freebies): https://wannathis.one/
-- CSS Clippy Tool used to create interesting shapes: https://bennettfeely.com/clippy/
-- Unsplash free images: https://unsplash.com/
-- Material Design Icons: https://material.io/resources/icons/?style=baseline
+- [Shapefest (library of free 3D shapes)](https://www.shapefest.com/)
+- [Wannathis (3d Illustrations and freebies)](https://wannathis.one/)
+- [CSS Clippy Tool used to create interesting shapes](https://bennettfeely.com/clippy/)
+- [Unsplash free images](https://unsplash.com/)
+- [Material Design Icons](https://material.io/resources/icons/?style=baseline)
 
 ### Colour Tools
-- Microsoft Fluent UI Theme Designer: https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/7.0/theming-designer/index.html
-- HTML Color Codes: To find nice complimentary colours. https://www.hexcolortool.com/
-- Coolors: https://coolors.co/
-- Contrast Checker: https://webaim.org/resources/contrastchecker/
-- Colour Tool: https://material.io/resources/color/#!/?view.left=0&view.right=0
+- [Microsoft Fluent UI Theme Designer](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/7.0/theming-designer/index.html)
+- [HTML Color Codes: To find nice complimentary colours](https://www.hexcolortool.com/)
+- [Coolors](https://coolors.co/)
+- [Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Colour Tool](https://material.io/resources/color/#!/?view.left=0&view.right=0)
+
 #### CSS Gradients (best to worst)
-- Gradient Generator Tool: https://learnui.design/tools/gradient-generator.html
-- CSS Gradient Tool: https://cssgradient.io/
-- Grabient: https://www.grabient.com/
-- CSS easing gradients: https://larsenwork.com/easing-gradients/
+- [Gradient Generator Tool](https://learnui.design/tools/gradient-generator.html)
+- [CSS Gradient Tool](https://cssgradient.io/)
+- [Grabient](https://www.grabient.com/)
+- [CSS easing gradients](https://larsenwork.com/easing-gradients/)
 
 ### Structure & Website Set Up
-- Google Check website is mobile friendly: https://search.google.com/test/mobile-friendly
-- Mobile Responsive designs: https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
-- CSS grid tool: https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/
+- [Mobile Responsive designs](https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml)
+- [CSS grid tool](https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/)
 
 ### Widgets & Components
-- Weather Widget: https://weatherwidget.io/
+- [Weather Widget](https://weatherwidget.io/)
 
 ### Footers
-- 50 free footer templates: https://www.figma.com/community/file/941725495131361898
-- The Best Website Footer Design Examples and Best Practices: https://www.sliderrevolution.com/design/website-footer/
+- [50 free footer templates](https://www.figma.com/community/file/941725495131361898)
+- [The Best Website Footer Design Examples and Best Practices](https://www.sliderrevolution.com/design/website-footer/)
+
+### Website Testing
+- Google Check website is mobile friendly: https://search.google.com/test/mobile-friendly
 
 
 # [Languages](https://bangsluke.github.io/#languages)
