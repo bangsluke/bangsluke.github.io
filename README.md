@@ -191,6 +191,7 @@ Reddit is a network of communities based on people's interests.
 ### Starter Templates
 - [w3schools Responsive Web Design Templates](https://www.w3schools.com/csS/css_rwd_templates.asp)
 - [Website starter templates](https://templated.co/)
+- [HTML Boilerplates](https://htmlboilerplates.com/)
 
 ### Fonts
 - [Google Fonts](https://fonts.google.com/)
@@ -228,7 +229,7 @@ Reddit is a network of communities based on people's interests.
 - [The Best Website Footer Design Examples and Best Practices](https://www.sliderrevolution.com/design/website-footer/)
 
 ### Website Testing
-- Google Check website is mobile friendly: https://search.google.com/test/mobile-friendly
+- [Google Check website is mobile friendly](https://search.google.com/test/mobile-friendly)
 
 # [Languages](https://bangsluke.github.io/#languages)
 ###### [To Top](#table-of-contents)
@@ -243,13 +244,13 @@ Reddit is a network of communities based on people's interests.
 - [Input Box Caret colour](https://www.reddit.com/r/web_design/comments/kmi92t/there_are_css_properties_i_never_heard_of_before/)
 - [Loading Spinners](https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Beautiful Transparent Login Form Using Simple HTML & CSS](https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode)
-- [Feedback Button](https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf (https://github.com/dulajkavinda/minimal-feedback).)
+- [Feedback Button](https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf). [GitHub Link](https://github.com/dulajkavinda/minimal-feedback)
 - [Clip.path pop out example](https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Build Web Tabs](https://web.dev/building-a-tabs-component/)
 - [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
 - [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
-- [Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
+- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
 
 #### Header Set Ups
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
@@ -288,19 +289,26 @@ Reddit is a network of communities based on people's interests.
 
 ##### CSS Classes & Selectors
 > Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+
 > "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+
 > **Or selector (,)**: Select elements that match any selector in the list. If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
+
 > **And selector (.)**: Select elements that match all the selector combinations. If you separate CSS classes with full stops, your rules are applied slightly different. E.g. section.feature-box { would mean you're apply the rules to all section elements that have the class "feature-box".
+
 > **Descendant selector ( )**: Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
+
 > **Direct Child (>)**: Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+
 > **:root** is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
 
 ##### CSS Comments
 > In CSS a comment is within the following characters: **/* text */**
 
 ##### Key CSS Notes
-- Design for Mobile size first! Then scale up.
-- Remember that for margins and padding, it goes (top, right, bottom and left).
+> Design for Mobile size first! Then scale up.
+
+> Remember that for margins and padding, it goes (top, right, bottom and left).
 
 #### CSS Preprocessors
 
@@ -309,12 +317,11 @@ Reddit is a network of communities based on people's interests.
 - SCSS to CSS compiler: https://www.cssportal.com/scss-to-css/
 ##### SASS
 - SASS - CSS with superpowers: https://sass-lang.com/
-- Learn Sass In 20 Minutes | Sass Crash Course: https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd
+- Learn Sass In 20 Minutes - Sass Crash Course: https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd
 ##### LESS
 - Differences between SCSS and LESS: https://stackoverflow.com/questions/52003198/differences-between-scss-and-less
 
 ### HTML & CSS Code Examples
-- HTML Boilerplates: https://htmlboilerplates.com/
 - CSS Grids: https://jst.hashnode.dev/css-grid-tutorial
 - CSS Zen Garden: http://www.csszengarden.com/
 - CSS Transitions: https://www.joshwcomeau.com/animation/css-transitions/
@@ -333,9 +340,9 @@ Reddit is a network of communities based on people's interests.
 #### HTML
 - 5 Must Know HTML Tags That Almost Nobody Knows: https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified
 #### CSS Grid & Flexbox
-- Learn Flexbox In 20 Minutes | Learn HTML & CSS | Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
-- Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ || CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
-- Responsive Navigation Menu 2021🎖️ || CSS JS 2021: https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb
+- Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
+- Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
+- Responsive Navigation Menu 2021🎖️ - CSS JS 2021: https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb
 - Flexbox Tutorial: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
 - A Guide To FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
