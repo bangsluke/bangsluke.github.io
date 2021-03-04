@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/61457009/109976729-043e7a80-7cf4-11eb-9d45-6c4bee009e09.png)
+![image](https://user-images.githubusercontent.com/61457009/109993389-25a76280-7d04-11eb-93f3-a981ccd4f842.png)
 # [bangsluke.github.io](https://bangsluke.github.io/)
 
 My largest collection of work hosted via GitHub.
@@ -21,66 +21,69 @@ My largest collection of work hosted via GitHub.
   * [Python](#python)
 
 # [Introduction](https://bangsluke.github.io/#introduction)
+[To Top](#table-of-contents)
 
 My GitHub io page contains a number of projects that I am working on.
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
 
-### [- Homepage](https://bangsluke.github.io/Homepage.html)
-_Homepage for accessing all of my created pages. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [Homepage](https://bangsluke.github.io/Homepage.html)
+> Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
-_Learning HTML and CSS. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
+> Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
-_[A list of links to coding resources and useful sites](https://github.com/bangsluke/bangsluke.github.io/edit/main/README.md). Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
+> Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
-_Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
+> A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
-_The best friends website ever created. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
+> Pages to support my work project. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [- Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
-_Full on database driven site for multiple users to visit. Page stored within https://github.com/bangsluke/bangsluke.github.io_
+### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
+> The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+
+### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
+> Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
+[To Top](#table-of-contents)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
-I've used the aptly named "New Tab Redirect". See the link below.
-
-chrome-extension://icpgjfneehieebagbmdbhnlpiopdcmna/options.html
+I've used the aptly named "New Tab Redirect". See the [link](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) provided.
 
 The other projects do not yet have set up instructions.
 
 
 # [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
+[To Top](#table-of-contents)
 
 @bangsluke - for coding next steps see phone notes
 
 
 # [Useful Links](https://bangsluke.github.io/#useful-links)
+[To Top](#table-of-contents)
+
 All useful links for various different coding languages.
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
 
 ### Current Courses Following
 
-#### freeCodeCamp
-- https://www.freecodecamp.org/learn
-
-#### The Odin Project
-- https://theodinproject.com/dashboard
+#### * [freeCodeCamp](https://www.freecodecamp.org/learn)
+#### * [The Odin Project](https://theodinproject.com/dashboard)
 
 ##### Archive
 
-#### Codedamn (52 week course)
+###### Codedamn (52 week course)
 - https://codedamn.com/news/full-stack-web-developer-2021
 - https://github.com/bangsluke/bangsluke-Test-Site/blob/master/Coding%2052%20Week%20Development%20Course.md
 
-#### Classcentral (3 week course)
+###### Classcentral (3 week course)
 - https://www.classcentral.com/course/introduction-to-web-development-17895
 
 ### Other Learning Links
@@ -148,6 +151,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ### Reddit Threads
+![Reddit Logo](https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/250px-Reddit_logo_new.svg.png)
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
 - HTML5: https://www.reddit.com/r/html5/
