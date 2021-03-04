@@ -104,21 +104,11 @@ All useful links for various different coding languages.
 - [Interneting Is Hard](https://www.internetingishard.com/html-and-css/)
 - [Udemy Web Developer Course](https://www.udemy.com/course/the-web-developer-bootcamp/)
 - [Java5cript](https://www.java5cript.com/)
-
-
-- Learn Linux Basics: https://www.freecodecamp.org/news/the-linux-commands-handbook/
-- HTML, CSS and Javascript (2 week course): https://www.classcentral.com/course/learn-to-code-for-the-web-17489
-- HTML, CSS and Javascript (3 week course): https://www.classcentral.com/course/introduction-to-web-development-17895
-- Databases and SQL: https://www.classcentral.com/course/edx-databases-relational-databases-and-sql-19468
-- Codedamn.com (52 week course): https://codedamn.com/news/full-stack-web-developer-2021
-- I love Coding course: https://ilovecoding.org/courses/htmlcss2
-- freecodecamp 5 hour full development video: https://www.freecodecamp.org/news/how-to-make-a-landing-page-using-html-scss-and-javascript/
-- JavaScript console: https://markodenic.com/use-console-log-like-a-pro/
-- Hacking With Swift: https://www.hackingwithswift.com/
-- iOS & Swift - The Complete iOS App Development Bootcamp: https://www.udemy.com/course/ios-13-app-development-bootcamp/
-- Learn React for Free: https://scrimba.com/learn/learnreact
-- Bootstrap Cheat Sheet: https://bootstrap-cheatsheet.themeselection.com/
-
+- [Class Central HTML, CSS and Javascript (2 week course)](https://www.classcentral.com/course/learn-to-code-for-the-web-17489)
+- [Class Central HTML, CSS and Javascript (3 week course)](https://www.classcentral.com/course/introduction-to-web-development-17895)
+- [Databases and SQL](https://www.classcentral.com/course/edx-databases-relational-databases-and-sql-19468)
+- [I Love Coding Course](https://ilovecoding.org/courses/htmlcss2)
+- [freecodecamp 5 hour full development video](https://www.freecodecamp.org/news/how-to-make-a-landing-page-using-html-scss-and-javascript/)
 
 ## [Getting Set Up](https://bangsluke.github.io/#getting-set-up)
 ###### [To Top](#table-of-contents)
@@ -350,7 +340,7 @@ https://devresourc.es/
 - Error Handling in JavaScript: https://www.valentinog.com/blog/error/
 - Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Swipeable cards (Tinder Style): https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js): https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1
+- JavaScript console: https://markodenic.com/use-console-log-like-a-pro/
 - Create a chart of data in JavaScript (Chart JS For Beginners): https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
 - Python vs JavaScript: https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/
 
@@ -364,18 +354,24 @@ React is an open-source, front end, JavaScript library for building user interfa
 - How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
 - Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
+- Learn React for Free: https://scrimba.com/learn/learnreact
 
 ### AngularJS
 AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
 ### Node.js
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+- [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
 ### JQuery
 jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
 ### Typescript
 TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
+
+### Bootstrap
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+- [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ### Google Apps Script
 Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
@@ -384,9 +380,14 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 - Apps Script Samples: https://github.com/googleworkspace/apps-script-samples
 - Apps Script Awesome List: https://github.com/contributorpw/google-apps-script-awesome-list
 
-##### Sidebars
+###### Sidebars
 - https://www.benlcollins.com/spreadsheets/index-sheet/#indexSidebar
 - https://yagisanatode.com/2018/04/15/google-apps-script-how-to-create-javascript-and-css-files-for-a-sidebar-project-in-google-apps-script/
+
+
+
+
+
 
 
 
@@ -401,3 +402,21 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 - Use capitals and underscores for constants, e.g. “CONSTANT” or “CONSTANT_NAME”.
 #### Comments
 - Use # for comments.
+
+
+## [Swift](https://bangsluke.github.io/#swift)
+###### [To Top](#table-of-contents)
+
+### Swift Learning
+- [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
+- [Hacking With Swift](https://www.hackingwithswift.com/)
+
+
+## [Linux](https://bangsluke.github.io/#linux)
+###### [To Top](#table-of-contents)
+
+### Linux Learning
+- Learn Linux Basics: https://www.freecodecamp.org/news/the-linux-commands-handbook/
+
+
+
