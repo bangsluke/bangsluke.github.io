@@ -114,15 +114,19 @@ All useful links for various different coding languages.
 ###### [To Top](#table-of-contents)
 
 ### Sandbox Sites
-These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
+> These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
 - [SoloLearn](https://code.sololearn.com/web)
 - [repl.it](https://repl.it/~)
 - [codepen.io](https://codepen.io/pen/)
 - [Codedamn](https://codedamn.com/playgrounds)
 
 ### Git and GitHub
-[Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-[GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+> [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+<img src="http://blog.novatec-gmbh.de/wp-content/uploads/2013/07/logo-git.png" width="50" height="50"> 
+
+> [GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+<img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50">  
+
 #### Git and GitHub Learning
 - [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
@@ -132,7 +136,8 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 ### Support Sites
 
 #### [Stack Overflow](https://stackoverflow.com/)
-Stack Overflow is a question and answer site for professional and enthusiast programmers.
+> Stack Overflow is a question and answer site for professional and enthusiast programmers.
+<img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50">  
 
 ### Reddit Threads
 Reddit is a network of communities based on people's interests.
@@ -153,9 +158,10 @@ Reddit is a network of communities based on people's interests.
 - Indie Web Dev: https://www.reddit.com/r/Indiewebdev/
 - freeCodeCamp: https://www.reddit.com/r/FreeCodeCamp/
 
-
 #### [Discord](https://discord.com/channels/@me)
-Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
+> Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
+<img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50">
+
 
 ### Setting Up A Webiste
 - How To Build A Website: How to put a website online. This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/
