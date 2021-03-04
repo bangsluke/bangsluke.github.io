@@ -3,7 +3,7 @@
 
 My largest collection of work hosted via GitHub.
 
-# Table of contents
+# Table Of Contents
 * [Introduction](#introduction)
   * [Projects Contained](#projects-contained) 
 * [Set Up](#set-up)
@@ -14,7 +14,7 @@ My largest collection of work hosted via GitHub.
   * [Website Tools](#website-tools)
 * [Languages](#languages)
   * [Combined Code Examples](#combined-code-examples)
-  * [HTML & CSS](#HTML-&-CSS)
+  * HTML & CSS
     * [HTML](#html)
     * [CSS](#css)
   * [JavaScript](#javascript)
@@ -236,7 +236,7 @@ https://devresourc.es/
 
 ## HTML & CSS
 
-### HTML
+### [HTML](https://bangsluke.github.io/#html)
 
 #### HTML Best Coding Practice
 
@@ -246,7 +246,7 @@ https://devresourc.es/
 ##### HTML Comments
 - In HTML a comment is within the following characters: <! text >
 
-### CSS
+### [CSS](https://bangsluke.github.io/#css)
 
 #### CSS Best Coding Practice
 
@@ -308,7 +308,7 @@ https://devresourc.es/
 - Sort out CSS vh and vw to work better on all devices - https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9
 
 
-## JavaScript
+## [JavaScript](https://bangsluke.github.io/#javascript)
 
 ### JavaScript Best Coding Practice
 
@@ -369,7 +369,7 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 
 
 
-## Python
+## [Python](https://bangsluke.github.io/#python)
 
 ### Python Best Coding Practice
 
