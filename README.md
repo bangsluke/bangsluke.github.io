@@ -141,7 +141,7 @@ All useful links for various different coding languages.
 <img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50">  
 
 ### Reddit Threads
-Reddit is a network of communities based on people's interests.
+> Reddit is a network of communities based on people's interests.
 <img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
 - [r/Learn Programming](https://www.reddit.com/r/learnprogramming/)
 - [r/HTML](https://www.reddit.com/r/HTML/)
