@@ -47,6 +47,7 @@ _Full on database driven site for multiple users to visit. Page stored within ht
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
+[To Top](#table-of-contents)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
@@ -58,11 +59,14 @@ The other projects do not yet have set up instructions.
 
 
 # [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
+[To Top](#table-of-contents)
 
 @bangsluke - for coding next steps see phone notes
 
 
 # [Useful Links](https://bangsluke.github.io/#useful-links)
+[To Top](#table-of-contents)
+
 All useful links for various different coding languages.
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
