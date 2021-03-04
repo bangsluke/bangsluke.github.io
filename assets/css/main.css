@@ -2325,6 +2325,7 @@ body.is-covered #wrapper {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 0 20px;
+	margin: 0 auto 0 auto;
 }
 
 .icon-container {
@@ -2332,6 +2333,44 @@ body.is-covered #wrapper {
 	width: max-content;
 	margin: 0px 5px
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.all-icons-container {
+		width: 100%;
+		padding: 0 10px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	.all-icons-container {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	.all-icons-container {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.all-icons-container {
+		width: 72%;
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.all-icons-container {
+		width: 70%;
+	}
+}
+
 
 /* Footer */
 
