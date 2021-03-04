@@ -49,7 +49,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
-<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50" margin-left="auto" margin-right="auto">
+<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
@@ -89,26 +89,23 @@ All useful links for various different coding languages.
 ##### Archive
 
 ###### Codedamn (52 week course)
-- https://codedamn.com/news/full-stack-web-developer-2021
-- https://github.com/bangsluke/bangsluke-Test-Site/blob/master/Coding%2052%20Week%20Development%20Course.md
+- [Full Stack Web Developer Course](https://codedamn.com/news/full-stack-web-developer-2021)
+- [Course Layout](https://github.com/bangsluke/bangsluke-Test-Site/blob/master/Coding%2052%20Week%20Development%20Course.md)
 
 ###### Classcentral (3 week course)
-- https://www.classcentral.com/course/introduction-to-web-development-17895
+- [Introduction To Web Development](https://www.classcentral.com/course/introduction-to-web-development-17895)
 
 ### Other Learning Links
-- freeCodeCamp: https://www.freecodecamp.org/
-- SoloLearn: https://www.sololearn.com/
-- Front End Development: https://bigsondev.com/
-- Upskill: https://upskillcourses.com/courses
-- JavaScript Introduction Video from Microsoft: https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo
-- CS50's Introduction to Computer Science: https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/
-- Interneting Is Hard: https://www.internetingishard.com/html-and-css/
-- Udemy Web Developer Course: https://www.udemy.com/course/the-web-developer-bootcamp/
-- Java5cript: https://www.java5cript.com/
-- React JavaScript Course: https://www.freecodecamp.org/news/react-10-hour-course/
-- Error Handling in JavaScript: https://www.valentinog.com/blog/error/
-- Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
+- [SoloLearn](https://www.sololearn.com/)
+- [Bigs On Dev - Front End Development](https://bigsondev.com/)
+- [Upskill Courses](https://upskillcourses.com/courses)
+- [JavaScript Introduction Video from Microsoft](https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo)
+- [CS50's Introduction to Computer Science](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/)
+- [Interneting Is Hard](https://www.internetingishard.com/html-and-css/)
+- [Udemy Web Developer Course](https://www.udemy.com/course/the-web-developer-bootcamp/)
+- [Java5cript](https://www.java5cript.com/)
+
+
 - Learn Linux Basics: https://www.freecodecamp.org/news/the-linux-commands-handbook/
 - HTML, CSS and Javascript (2 week course): https://www.classcentral.com/course/learn-to-code-for-the-web-17489
 - HTML, CSS and Javascript (3 week course): https://www.classcentral.com/course/introduction-to-web-development-17895
@@ -350,6 +347,7 @@ https://devresourc.es/
 - How to Create Native Drag and Drop Functionality in JavaScript: https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript
 - JavaScript Object Cheatsheet: https://i.redd.it/9nxtqtho6q861.jpg
 - JavaScript errors: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
+- Error Handling in JavaScript: https://www.valentinog.com/blog/error/
 - Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Swipeable cards (Tinder Style): https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js): https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1
@@ -360,9 +358,12 @@ https://devresourc.es/
 React is an open-source, front end, JavaScript library for building user interfaces or UI components.
 
 #### React Examples
+- [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
 - React spring cheatsheet: https://storage.googleapis.com/joshwcomeau/react-spring.pdf
 - Build A Todo App With REACT | React Project For Beginners (FULL): https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd
 - How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
+- Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
 
 ### AngularJS
 AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
