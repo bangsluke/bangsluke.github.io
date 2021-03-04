@@ -30,14 +30,17 @@ My GitHub io page contains a number of projects that I am working on.
 ### [Homepage](https://bangsluke.github.io/Homepage.html)
 > Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
+### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
+> Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+
 ### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
 > Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
-### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
-> Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
+> Pages to support my work project. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
