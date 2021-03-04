@@ -1,0 +1,53 @@
+/* Collapsible styling */
+
+/* The css styling used for collapsible menus. */
+
+/* https://www.w3schools.com/howto/howto_js_collapsible.asp */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* Note that CSS variables flow through CSS style sheets, so the variables defined in earlier CSS style sheets are applied in this CSS file. */
+}
+
+/* Style the button that is used to open and close the collapsible content */
+
+.collapsible {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active, .collapsible:hover {
+	background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+
+.content {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+  }
+
+.collapsible:after {
+	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	font-size: 13px;
+	color: white;
+	float: right;
+	margin-left: 5px;
+  }
+  
+  .active:after {
+	content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
