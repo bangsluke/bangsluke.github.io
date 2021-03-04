@@ -1268,13 +1268,8 @@ h1 {
 }
 
 h2 {
-	font-size: 1.35em;
-}
-
-@media screen and (max-width: 736px) {
-	h2 {
-		font-size: 1em;
-	}
+	font-size: 1em;
+	margin-top: 1.5em;
 }
 
 h3 {
