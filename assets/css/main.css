@@ -2296,11 +2296,11 @@ body.is-covered #wrapper {
 	}
 }
 
-/* SearchBox */
+/* New Tab searchbox styling */
 
 #SearchBox {
 	max-width: 40em;
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 1em 1em 1em 1em;
 	opacity: 1;
@@ -2315,6 +2315,22 @@ body.is-covered #wrapper {
 	-webkit-transition: opacity 1s ease, -webkit-filter 1s ease;
 	-ms-transition: opacity 1s ease, -ms-filter 1s ease;
 	transition: opacity 1s ease, filter 1s ease;
+}
+
+/* New tab icons styling */
+
+.all-icons-container {
+	/* background-color: #ff9678; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 20px;
+}
+
+.icon-container {
+	/* background-color: #ff496e; */
+	width: max-content;
+	margin: 0px 5px
 }
 
 /* Footer */
