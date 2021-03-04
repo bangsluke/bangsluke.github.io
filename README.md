@@ -41,12 +41,16 @@ My GitHub io page contains a number of projects that I am working on.
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
+<img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
+
 > Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
+<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
+
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 
@@ -154,7 +158,6 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ### Reddit Threads
-![Reddit Logo](https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api)
 <img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
