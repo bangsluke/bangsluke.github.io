@@ -1,4 +1,4 @@
-![image](https://github.com/bangsluke/bangsluke.github.io/blob/main/images/GitHub%20Page%20Header.png)
+![image](https://user-images.githubusercontent.com/61457009/109993389-25a76280-7d04-11eb-93f3-a981ccd4f842.png)
 # [bangsluke.github.io](https://bangsluke.github.io/)
 
 My largest collection of work hosted via GitHub.
@@ -34,7 +34,7 @@ My GitHub io page contains a number of projects that I am working on.
 > Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
-> [A list of links to coding resources and useful sites](https://github.com/bangsluke/bangsluke.github.io/edit/main/README.md). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
 > Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
@@ -148,6 +148,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ### Reddit Threads
+https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/250px-Reddit_logo_new.svg.png
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
 - HTML5: https://www.reddit.com/r/html5/
