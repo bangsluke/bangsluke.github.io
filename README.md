@@ -144,20 +144,35 @@ All useful links for various different coding languages.
 > Reddit is a network of communities based on people's interests.
 <img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
 - [r/Learn Programming](https://www.reddit.com/r/learnprogramming/) 
+
 - [r/HTML](https://www.reddit.com/r/HTML/) 
+
 - [r/HTML5](https://www.reddit.com/r/html5/) 
+
 - [r/CSS](https://www.reddit.com/r/css/) 
+
 - [r/JavaScript](https://www.reddit.com/r/javascript/) 
+
 - [r/Learn JavaScript](https://www.reddit.com/r/learnjavascript/) 
+
 - [r/Learn ReactJS](https://www.reddit.com/r/learnreactjs/) 
+
 - [r/Python](https://www.reddit.com/r/Python/) 
+
 - [r/Learn Python](https://www.reddit.com/r/learnpython/) 
+
 - [r/Frontend](https://www.reddit.com/r/Frontend/) 
+
 - [r/Backend](https://www.reddit.com/r/Backend/) 
+
 - [r/Web Design](https://www.reddit.com/r/web_design/) 
+
 - [r/Web Dev](https://www.reddit.com/r/webdev/) 
+
 - [r/Indie Web Dev](https://www.reddit.com/r/Indiewebdev/) 
+
 - [r/freeCodeCamp](https://www.reddit.com/r/FreeCodeCamp/) 
+
 
 #### [Discord](https://discord.com/channels/@me)
 > Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
