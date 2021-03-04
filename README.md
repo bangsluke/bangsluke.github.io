@@ -49,7 +49,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
-<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
+<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50" margin-left="auto" margin-right="auto">
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
