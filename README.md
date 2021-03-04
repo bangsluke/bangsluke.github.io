@@ -152,6 +152,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 
 ### Reddit Threads
 ![Reddit Logo](https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api)
+<img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="100" height="100">
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
 - HTML5: https://www.reddit.com/r/html5/
