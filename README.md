@@ -14,7 +14,7 @@ My largest collection of work hosted via GitHub.
   * [Website Tools](#website-tools)
 * [Languages](#languages)
   * [Combined Code Examples](#combined-code-examples)
-  * [HTML & CSS](#html-&-CSS)
+  * [HTML & CSS](#html-&-css)
     * [HTML](#html)
     * [CSS](#css)
   * [JavaScript](#javascript)
@@ -208,7 +208,7 @@ https://devresourc.es/
 
 # [Languages](https://bangsluke.github.io/#languages)
 
-## Combined Code Examples
+## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
 
 ### HTML, CSS and JavaScript Combined Examples
 - Check Password Strength example: https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar
