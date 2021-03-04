@@ -41,17 +41,15 @@ My GitHub io page contains a number of projects that I am working on.
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
-<img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
-
 > Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+<img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
-<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
-
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
@@ -80,8 +78,13 @@ All useful links for various different coding languages.
 
 ### Current Courses Following
 
-#### * [freeCodeCamp](https://www.freecodecamp.org/learn)
-#### * [The Odin Project](https://theodinproject.com/dashboard)
+#### [freeCodeCamp](https://www.freecodecamp.org/learn)
+> An awesome learning environment for me so far.
+<img src="https://avatars3.githubusercontent.com/u/9892522?s=280&v=4" width="50" height="50"> 
+
+#### [The Odin Project](https://theodinproject.com/dashboard)
+> Slightly more difficult but just as rewarding.
+<img src="https://amrelshenawy.github.io/google-resultspage/images/odin.jpg" width="50" height="50"> 
 
 ##### Archive
 
