@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- SidebarSQL.html -->
+<!-- The html content file for creating the SQL Sidebar. -->
+
+<!-- Include the CSS formatting. -->
+<?!= include('css') ?> <!-- We grab our css.html file and add it to the <head> -->
+
+<!-- Add the SDP image. -->
+<img src="https://i.postimg.cc/FzZxdqLG/SDP-Main-Image-High-Res.png" alt="https://sites.google.com/rle.co.uk/sdp-team-site/home" width="250" height="80">
+
+<!-- Add a top heading. -->
+<!-- <h1>SQL Code Generator:</h1> -->
+
+<!-- Add some buttons to the sidebar. -->
+<div class="centerwrapper"> <!-- Center the button using the centerwrapper class. -->
+     <!-- Add a button to take the user to the SQL sidebar. -->
+     <input type="button" value="Index" onclick="google.script.run.showIndexSidebar()" />
+     <!-- Add a button to close the sidebar menu. -->
+     <input type="button" value="Close" onclick="google.script.host.close()" />
+</div>
+
+<div id="results">
+  
+  <!-- Add a frame with possible SQL options for running the code. -->
+  <fieldset id="Output Options">
+    <legend>Options</legend>
+    <table>
+      <input type="checkbox" name="NormalCheckBox" id="NormalCheckBox" value="Normal" checked>
+      <label for="NormalCheckBox"> Generate Normal SQL</label><br>
+      <input type="checkbox" name="TestingCheckBox" id="TestingCheckBox" value="Testing">
+      <label for="TestingCheckBox"> Generate Testing SQL</label><br>
+      <tbody></tbody>
+      
+        <!-- Make an interactive button for writing the SQL code. -->
+        <!-- https://www.geeksforgeeks.org/html-dom-input-checkbox-value-property/#:~:text=The%20Input%20Checkbox%20Value%20property,information%20sent%20to%20the%20server. -->
+        <div class="centerwrapper"> <!-- Center the button using the centerwrapper class. -->
+            <button onclick="getOutputType()"> 
+                Submit 
+            </button>
+        </div>
+          
+        <p id="sudo" style="color:green;font-size:30px;"></p>
+        
+        
+        <!-- Script to return Input Checkbox value Property -->
+        <script> 
+            function getOutputType() { 
+                var NormalCheckBoxValue = document.getElementById("NormalCheckBox").value; 
+                var TestingCheckBoxValue = document.getElementById("TestingCheckBox").value;
+                if (NormalCheckBoxValue = "TRUE") {
+                   var OutputType = "Normal";
+                } elseif (TestingCheckBoxValue = "TRUE") {
+                   var OutputType = "Testing";
+                } else {
+                   throw 'No option selected.'
+                }
+                document.getElementById("sudo").innerHTML = OutputType;
+                
+                call.WriteSQLFileNew(OutputType)
+                
+            } 
+        </script> 
+      
+      
+    </table>
+  </fieldset>
+  
+  <!-- Add a frame which displays the running SQL code. -->
+  <fieldset id="Output">
+    <legend>Output</legend>
+    <table>
+      <tr>
+        <td><label>SQL Generator Code Output:</label></td>
+        
+        <script>
+        var bodyText = "<?=bodyText?>"; 
+        </script>
+        
+      </tr>
+    </table>
+  </fieldset>
+  
+</div>
+
+<!-- Old Code Lines -->
+<!-- 
+Add to Favourites Button
+<input class="favorite styled" type="button" value="Add to favorites">
+
+A stop button with a square box, which switches to resume on click.
+<button id="toggle" onclick="toggleRefresh();" data-stoptext="◾ Stop" data-resumetext="▶ Resume">◾ Stop</button>
+-->
+
+
+<!-- HTML Interesting Ideas -->
+<!-- https://github.com/bangsluke/bangsluke/blob/master/HTML%20Interesting%20Ideas -->

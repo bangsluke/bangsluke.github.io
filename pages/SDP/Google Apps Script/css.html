@@ -1,0 +1,210 @@
+<style>
+
+	/* SDP Styling Guide. */
+	/* The main css style file used for all SDP styling. */
+
+	/*
+	Key CSS Notes:
+	- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids.
+	- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+	*/
+
+	/* SDP Colours */
+	/* SDP Logo Top Blue = #4254FF. */
+	/* SDP Logo Middle Purple = #8F23FF. */
+	/* SDP Logo Bottom Pink = #F575FF. */
+	/* SDP Grey Background = #282828. */
+
+	/* SDP Font */
+	/* SDP Main Font = TT Norms. */
+	/* SDP Backup Font = Arial. */
+	/* SDP Backup Font Family = sans-serif. */
+
+	/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+	/* Reset */
+
+	:root {
+		background-color: #282828;
+		/* SDP Grey Background = #282828. */
+		font-family: "TT Norms Light", Arial, sans-serif;
+		/* Get SDP font and list out in priority order. Finish with default of sans-serif. */
+		line-height: 5px;
+	}
+
+	html {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	/* Body text */
+	body {
+		/* background-color: blue; */
+		font-size: 10px;
+		color: white;
+		height: 100%;
+		padding: 10px 12px;
+		margin: 0px;
+		left: 0;
+		top: 0;
+	}
+
+	/* Main Background */
+	.background-div {
+    background-color: #282828; /* SDP Grey Background = #282828. */
+		/* background-color: green; */
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 92%;
+		padding: 20px;
+		margin: 0px;
+	}
+
+
+	/* Header section with logo. */
+	.header {
+		text-align: "right";
+		height: 40px;
+		width: 90%;
+		margin: auto;
+		left: 0;
+		top: 0;
+		/* background-color: blue; */
+	}
+
+	/* Logo formatting. */
+	#SDPLogo {
+		height: 40px;
+		width: auto;
+		float: right;
+	}
+
+	/* Header 1 section with text. */
+	.h1-section {
+		text-align: "left";
+		height: 40px;
+		width: 95%;
+		margin: auto;
+		left: 0;
+		top: 0;
+	}
+
+	/* Top summary section with text. */
+	.top-summary-section {
+		text-align: "left";
+		height: auto;
+		width: 95%;
+		margin: auto;
+		display: inline-block;
+		left: 0;
+		top: 0;
+	}
+
+	/* Status block to separate the status text from the title. */
+	.status-block {
+		/* background: red; */
+		display: grid;
+		grid-template-columns: 2fr 5fr;
+		grid-template-rows: max-content;
+    grid-gap: 10px;
+    grid-template-areas: "statustitle" "statustext";
+		margin-top: -10px;
+	}
+
+	.statustitle {
+		grid-area: "statustitle";
+		/* text-align: justify; */
+    /* text-justify: auto; */
+	}
+	.statustext {
+		grid-area: "statustext";
+		/* text-align: justify; */
+    /* text-justify: auto; */
+	}
+
+	/* Top summary section with text. */
+	.tab-status-section {
+		text-align: "left";
+		height: auto;
+		width: 95%;
+		margin: auto;
+		left: 0;
+		top: 0;
+	}
+
+	/* Bottom final summary section with text. */
+	.final-summary-section {
+		text-align: "left";
+		height: auto;
+		width: 95%;
+		margin: auto;
+		left: 0;
+		top: 0;
+	}
+
+	/* Bottom final link section with text. */
+	.final-link-section {
+		height: auto;
+		width: max-content;
+		margin: auto;
+		left: 0;
+		top: 0;
+	}
+
+	/* Heading 1 text */
+	h1 {
+		/* color: #4254FF; */
+		color: white;
+		/* SDP Logo Top Blue = #4254FF. */
+		font-size: 26px;
+		vertical-align: top;
+		font-weight: bold;
+		margin-bottom: -20px;
+	}
+
+	/* Heading 2 text */
+	h2 {
+		color: #8F23FF;
+		/* SDP Logo Middle Purple = #8F23FF. */
+		font-size: 18px;
+		margin-bottom: -10px;
+	}
+
+	/* Heading 3 text */
+	h3 {
+		color: #F575FF;
+		/* SDP Logo Bottom Pink = #F575FF. */
+		font-size: 16px;
+		margin-bottom: -10px;
+	}
+
+	/* Central alignment div */
+	body.centerwrapper {
+		text-align: center;
+		padding: 1em 0 1em 0;
+		/* padding: 0 0 0 0; is defining the top, right, bottom, and left (clockwise) padding. */
+	}
+
+	/* Paragraph text */
+	p {
+		color: white;
+		font-size: 16px;
+	}
+
+	a {
+		color: white;
+	}
+
+	ul {
+		color: white;
+		list-style-type: circle;
+		font-size: 16px;
+	}
+
+  img {
+    width: 800px;
+    height: auto;
+  }
+
+</style>

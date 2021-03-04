@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- SidebarIndex.html -->
+<!-- The html content file for creating the Index Sidebar. -->
+
+<!-- Include the CSS formatting. -->
+<?!= include('css') ?> <!-- We grab our css.html file and add it to the <head>. Only used in Apps Script. -->
+
+<!-- Add the SDP image. -->
+<img src="https://lh4.googleusercontent.com/cMfqt_sDeujYYQjYmXLv6d0CBXT_OlHcLqZ0qB9s9e7JxYeZ6TaCygzdT2EtNoQ5t_dC7hS3_TXhE9xzBjAS_MG7W38m5qmeB5mKRQGHrI4mNLJbIAQ=w1280" alt="https://sites.google.com/rle.co.uk/sdp-team-site/home" width="250" height="80">
+
+<!-- Add a top heading. -->
+<!-- <h1>SDP Data Sheet Index:</h1> -->
+
+<!-- Add some buttons to the sidebar. -->
+<div class="centerwrapper"> <!-- Center the button using the centerwrapper class. -->
+     <!-- Add a button for the user to sign in with. -->
+     <input type="button" value="Sign In" onclick="google.script.run.userSignIn()" />
+     <!-- Add a button to take the user to the SQL sidebar. -->
+     <input type="button" value="SQL Generator" onclick="google.script.run.showSQLSidebar()" />
+     <!-- Add a button to close the sidebar menu. -->
+     <input type="button" value="Close" onclick="google.script.host.close()" />
+</div>
+
+<!-- Add a list of all sheet names with hyperlinks. -->
+<ol>
+<?!= getSheetNames().map(function(d) {
+    return "<li><a href='https://docs.google.com/spreadsheets/d/1ImpsL9U05lIKKQxlBgeskuOmGaQhR_y_336D3H_rmYU/edit#gid=" + d[1] + "&range=A1' target='_blank'>" + d[0] + "</a></li>";
+    }).join(''); ?>
+</ol>
+
+<!-- Javascript -->
+<!-- HtmlService.createHtmlOutputFromFile('sidebarContent.js').getContent(); -->
+
+
+<!-- Old Code Lines -->
+<!-- 
+return "<li><a href='https://docs.google.com/spreadsheets/d/1ImpsL9U05lIKKQxlBgeskuOmGaQhR_y_336D3H_rmYU/edit#gid=" + d[1] + "' target='_blank'>" + d[0] + "</a></li>";
+return "<li><a href='#gid=" + d[1] + "' target='_blank'>" + d[0] + "</a></li>";
+return "<li><a href='https://docs.google.com/spreadsheets/d/1ImpsL9U05lIKKQxlBgeskuOmGaQhR_y_336D3H_rmYU/edit#gid=" + d[1] + "&range=A1' target='_blank'>" + d[0] + "</a></li>"; 
+-->
+
+<!-- HTML Interesting Ideas -->
+<!-- https://github.com/bangsluke/bangsluke/blob/master/HTML%20Interesting%20Ideas -->

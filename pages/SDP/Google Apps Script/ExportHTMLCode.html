@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    Download CSV?
+    <form>
+      <input type="button" value="ok" onclick="google.script.run
+                                              .withSuccessHandler(executeDownload)
+                                              .saveAsCSV();" />
+    </form>
+  </body>
+  <script>
+    function executeDownload(url) {
+      window.location.href = url;
+    }
+  </script>
+</html>
