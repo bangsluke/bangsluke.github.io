@@ -21,6 +21,7 @@ My largest collection of work hosted via GitHub.
   * [Python](#python)
 
 # [Introduction](https://bangsluke.github.io/#introduction)
+[To Top](#table-of-contents)
 
 My GitHub io page contains a number of projects that I am working on.
 
