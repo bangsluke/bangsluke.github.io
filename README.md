@@ -230,7 +230,6 @@ Reddit is a network of communities based on people's interests.
 ### Website Testing
 - Google Check website is mobile friendly: https://search.google.com/test/mobile-friendly
 
-
 # [Languages](https://bangsluke.github.io/#languages)
 ###### [To Top](#table-of-contents)
 
@@ -238,59 +237,67 @@ Reddit is a network of communities based on people's interests.
 ###### [To Top](#table-of-contents)
 
 ### HTML, CSS and JavaScript Combined Examples
-- Check Password Strength example: https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar
-- Search Box example: https://www.youtube.com/watch?v=eHtR2P9qnfA&feature=youtu.be&ab_channel=DeepakKaranjekar
-- Floating Button example: https://www.youtube.com/watch?v=FhyyB8sqfuQ&feature=youtu.be&ab_channel=DeepakKaranjekar
-- Light/Dark Mode Toggle Button: https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Input Box Caret colour: https://www.reddit.com/r/web_design/comments/kmi92t/there_are_css_properties_i_never_heard_of_before/
-- Loading Spinners: https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Beautiful Transparent Login Form Using Simple HTML & CSS: https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode
-- Feedback Button: https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf (https://github.com/dulajkavinda/minimal-feedback).
-- Dark/Light mode example: https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9
-- Clip.path pop out example: https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Build Web Tabs: https://web.dev/building-a-tabs-component/
-- Build from scratch React sidebar navigation with CSS Grid & Flexbox: https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps
-- How to build an unfolding tooltip with CSS clip-path: https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode
-- Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT: https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+- [Check Password Strength example](https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Search Box example](https://www.youtube.com/watch?v=eHtR2P9qnfA&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Floating Button example](https://www.youtube.com/watch?v=FhyyB8sqfuQ&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Input Box Caret colour](https://www.reddit.com/r/web_design/comments/kmi92t/there_are_css_properties_i_never_heard_of_before/)
+- [Loading Spinners](https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Beautiful Transparent Login Form Using Simple HTML & CSS](https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode)
+- [Feedback Button](https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf (https://github.com/dulajkavinda/minimal-feedback).)
+- [Clip.path pop out example](https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Build Web Tabs](https://web.dev/building-a-tabs-component/)
+- [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
+- [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
+- [Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
+
 #### Header Set Ups
-- Resizable Header Code - https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html
-- Make Drop Down Menu - https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html
-- Responsive Homepage - https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html 
+- [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
+- [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
+- [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
+
 #### Side Bar
-- Toggable Side Navigation Bar - https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
-- Circular Expansion Navigation Bar - https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd
+- [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
+- [Circular Expansion Navigation Bar](https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd)
 
 
 ## HTML & CSS
 ###### [To Top](#table-of-contents)
 
 ### [HTML](https://bangsluke.github.io/#html)
+> Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
+<img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png" width="50" height="50">
 
 #### HTML Best Coding Practice
 
 ##### HTML Classes
-- To assign an element multiple classes, separate the classes with a space. E.g. class="feature-box sales" would apply the style rules from class "feature-box" and also "sales".
+> To assign an element multiple classes, separate the classes with a space. E.g. class="feature-box sales" would apply the style rules from class "feature-box" and also "sales".
 
 ##### HTML Comments
-- In HTML a comment is within the following characters: <! text >
+> In HTML a comment is within the following characters: <! text >
 
 ### [CSS](https://bangsluke.github.io/#css)
 ###### [To Top](#table-of-contents)
+> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+<img src="https://maxcdn.icons8.com/Share/icon/Logos/css31600.png" width="50" height="50">
 
 #### CSS Best Coding Practice
 
 ##### CSS Variables
- - In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where  the value after the common is in case the variable isn't available.
+> In CSS, a variable can be defined as "--accent-color-purple: #8F23FF" and then used later on by assigning a property the value of "var(--accent-color-purple, white)" where  the value after the common is in case the variable isn't available.
+
 ##### CSS Classes & Selectors
-- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
-- "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
-- Or selector (,): Select elements that match any selector in the list. If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
-- And selector (.): Select elements that match all the selector combinations. If you separate CSS classes with full stops, your rules are applied slightly different. E.g. section.feature-box { would mean you're apply the rules to all section elements that have the class "feature-box".
-- Descendant selector ( ): Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
-- Direct Child (>): Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
-- :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+> Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+> "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+> **Or selector (,)**: Select elements that match any selector in the list. If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
+> **And selector (.)**: Select elements that match all the selector combinations. If you separate CSS classes with full stops, your rules are applied slightly different. E.g. section.feature-box { would mean you're apply the rules to all section elements that have the class "feature-box".
+> **Descendant selector ( )**: Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
+> **Direct Child (>)**: Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+> **:root** is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
+
 ##### CSS Comments
-- In CSS a comment is within the following characters: /* text */
+> In CSS a comment is within the following characters: **/* text */**
+
 ##### Key CSS Notes
 - Design for Mobile size first! Then scale up.
 - Remember that for margins and padding, it goes (top, right, bottom and left).
@@ -378,6 +385,7 @@ React is an open-source, front end, JavaScript library for building user interfa
 - Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
 - Learn React for Free: https://scrimba.com/learn/learnreact
+- [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
 ### AngularJS
 AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
