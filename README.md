@@ -229,6 +229,7 @@ https://devresourc.es/
 - Responsive Homepage - https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html 
 #### Side Bar
 - Toggable Side Navigation Bar - https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+- Circular Expansion Navigation Bar - https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd
 
 
 ## HTML & CSS
@@ -270,6 +271,7 @@ https://devresourc.es/
 - SCSS to CSS compiler: https://www.cssportal.com/scss-to-css/
 ##### SASS
 - SASS - CSS with superpowers: https://sass-lang.com/
+- Learn Sass In 20 Minutes | Sass Crash Course: https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd
 ##### LESS
 - Differences between SCSS and LESS: https://stackoverflow.com/questions/52003198/differences-between-scss-and-less
 
@@ -337,6 +339,7 @@ React is an open-source, front end, JavaScript library for building user interfa
 
 #### React Examples
 - React spring cheatsheet: https://storage.googleapis.com/joshwcomeau/react-spring.pdf
+- Build A Todo App With REACT | React Project For Beginners (FULL): https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd
 - How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
 
 ### AngularJS
