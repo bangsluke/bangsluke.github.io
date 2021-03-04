@@ -50,7 +50,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
-######[To Top](#table-of-contents)
+###### [To Top](#table-of-contents)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
