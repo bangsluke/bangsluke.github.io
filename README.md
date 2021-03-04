@@ -21,11 +21,12 @@ My largest collection of work hosted via GitHub.
   * [Python](#python)
 
 # [Introduction](https://bangsluke.github.io/#introduction)
-[To Top](#table-of-contents)
+###### [To Top](#table-of-contents)
 
 My GitHub io page contains a number of projects that I am working on.
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
+###### [To Top](#table-of-contents)
 
 ### [Homepage](https://bangsluke.github.io/Homepage.html)
 > Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
@@ -40,17 +41,21 @@ My GitHub io page contains a number of projects that I am working on.
 > A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
-> Pages to support my work project. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+<img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
+
+> Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
+<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
+
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
-[To Top](#table-of-contents)
+###### [To Top](#table-of-contents)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
@@ -60,17 +65,18 @@ The other projects do not yet have set up instructions.
 
 
 # [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
-[To Top](#table-of-contents)
+###### [To Top](#table-of-contents)
 
 @bangsluke - for coding next steps see phone notes
 
 
 # [Useful Links](https://bangsluke.github.io/#useful-links)
-[To Top](#table-of-contents)
+###### [To Top](#table-of-contents)
 
 All useful links for various different coding languages.
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
+###### [To Top](#table-of-contents)
 
 ### Current Courses Following
 
@@ -115,6 +121,7 @@ All useful links for various different coding languages.
 
 
 ## [Getting Set Up](https://bangsluke.github.io/#getting-set-up)
+###### [To Top](#table-of-contents)
 
 ### Sandbox Sites
 These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
@@ -151,7 +158,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - Status Codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ### Reddit Threads
-![Reddit Logo](https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/250px-Reddit_logo_new.svg.png)
+<img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
 - Learn Programming: https://www.reddit.com/r/learnprogramming/
 - HTML: https://www.reddit.com/r/HTML/
 - HTML5: https://www.reddit.com/r/html5/
@@ -170,6 +177,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 
 
 ## [Website Tools](https://bangsluke.github.io/#website-tools)
+###### [To Top](#table-of-contents)
 
 ### Everything
 https://devresourc.es/
@@ -211,8 +219,10 @@ https://devresourc.es/
 
 
 # [Languages](https://bangsluke.github.io/#languages)
+###### [To Top](#table-of-contents)
 
 ## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
+###### [To Top](#table-of-contents)
 
 ### HTML, CSS and JavaScript Combined Examples
 - Check Password Strength example: https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar
@@ -239,6 +249,7 @@ https://devresourc.es/
 
 
 ## HTML & CSS
+###### [To Top](#table-of-contents)
 
 ### [HTML](https://bangsluke.github.io/#html)
 
@@ -251,6 +262,7 @@ https://devresourc.es/
 - In HTML a comment is within the following characters: <! text >
 
 ### [CSS](https://bangsluke.github.io/#css)
+###### [To Top](#table-of-contents)
 
 #### CSS Best Coding Practice
 
@@ -313,6 +325,7 @@ https://devresourc.es/
 
 
 ## [JavaScript](https://bangsluke.github.io/#javascript)
+###### [To Top](#table-of-contents)
 
 ### JavaScript Best Coding Practice
 
@@ -374,6 +387,7 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 
 
 ## [Python](https://bangsluke.github.io/#python)
+###### [To Top](#table-of-contents)
 
 ### Python Best Coding Practice
 
