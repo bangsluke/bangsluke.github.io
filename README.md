@@ -5,6 +5,7 @@ My largest collection of work hosted via GitHub.
 
 # Table of contents
 * [Introduction](#introduction)
+  * [Projects Contained](#projects-contained) 
 * [Set Up](#set-up)
 * [Coding Next Steps](#coding-next-steps)
 * [Useful Links](#useful-links)
@@ -23,7 +24,7 @@ My largest collection of work hosted via GitHub.
 
 My GitHub io page contains a number of projects that I am working on.
 
-## Projects Contained
+## [Projects Contained](https://bangsluke.github.io/#projects-contained)
 
 ### [- Homepage](https://bangsluke.github.io/Homepage.html)
 _Homepage for accessing all of my created pages. Page stored within https://github.com/bangsluke/bangsluke.github.io_
@@ -44,7 +45,7 @@ _The best friends website ever created. Page stored within https://github.com/ba
 _Full on database driven site for multiple users to visit. Page stored within https://github.com/bangsluke/bangsluke.github.io_
 
 
-# Set Up
+# [Set Up](https://bangsluke.github.io/#set-up)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
@@ -55,15 +56,15 @@ chrome-extension://icpgjfneehieebagbmdbhnlpiopdcmna/options.html
 The other projects do not yet have set up instructions.
 
 
-# Coding Next Steps
+# [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
 
-For Coding Next Steps - See Phone Notes
+@bangsluke - for coding next steps see phone notes
 
 
-# Useful Links
+# [Useful Links](https://bangsluke.github.io/#useful-links)
 All useful links for various different coding languages.
 
-## Places To Learn Coding
+## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
 
 ### Current Courses Following
 
@@ -110,7 +111,7 @@ All useful links for various different coding languages.
 - Bootstrap Cheat Sheet: https://bootstrap-cheatsheet.themeselection.com/
 
 
-## Getting Set Up
+## [Getting Set Up](https://bangsluke.github.io/#getting-set-up)
 
 ### Sandbox Sites
 These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
@@ -164,7 +165,7 @@ These are site where you can learn to develop HTML, CSS and Javascript all on on
 - freeCodeCamp: https://www.reddit.com/r/FreeCodeCamp/
 
 
-## Website Tools
+## [Website Tools](https://bangsluke.github.io/#website-tools)
 
 ### Everything
 https://devresourc.es/
@@ -205,7 +206,7 @@ https://devresourc.es/
 - The Best Website Footer Design Examples and Best Practices: https://www.sliderrevolution.com/design/website-footer/
 
 
-# Languages
+# [Languages](https://bangsluke.github.io/#languages)
 
 ## Combined Code Examples
 
