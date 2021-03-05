@@ -21,62 +21,74 @@ My largest collection of work hosted via GitHub.
   * [Python](#python)
 
 # [Introduction](https://bangsluke.github.io/#introduction)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
-My GitHub io page contains a number of projects that I am working on.
+My GitHub io page contains a number of projects that I am working on, including both personal and work projects.
+
+I have also updated the repositories README.md file to contain a large list of links to resources I use and plan to use in my coding development.
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### [Homepage](https://bangsluke.github.io/Homepage.html)
-> Homepage for accessing all of my created pages. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Homepage for accessing all of my created pages. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
+
+![image](https://user-images.githubusercontent.com/61457009/110144401-358c7880-7dd0-11eb-9ede-7d0f51d01587.png)
+
 
 ### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
-> Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Place with all key links to favourite sites and key information to be used for new tab loading page. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
+
+![image](https://user-images.githubusercontent.com/61457009/110144484-4e952980-7dd0-11eb-8376-801be4f2eb96.png)
+
 
 ### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
-> Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Learning HTML and CSS with basic structure set up. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
-> A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> A list of links to coding resources and useful sites. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
-> Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Pages to support my work project, [SDP](https://sdp.rle.de/#home). <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
-> The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> The best friends website ever created. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
-> Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Full on database driven site for multiple users to visit. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
+
+## [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
 
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
 I've used the aptly named "New Tab Redirect". See the [link](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) provided.
 
+## Other Projects
+
 The other projects do not yet have set up instructions.
 
 
 # [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 @bangsluke - for coding next steps, see phone notes
 
 
 # [Useful Links](https://bangsluke.github.io/#useful-links)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 All useful links for various different coding languages.
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### Current Courses Following
 
@@ -98,6 +110,7 @@ All useful links for various different coding languages.
 - [Introduction To Web Development](https://www.classcentral.com/course/introduction-to-web-development-17895)
 
 ### Other Learning Links
+###### <sup>[To Top](#table-of-contents)</sup>
 - [SoloLearn](https://www.sololearn.com/)
 - [w3schools](https://www.w3schools.com/)
 - [Bigs On Dev - Front End Development](https://bigsondev.com/)
@@ -114,7 +127,7 @@ All useful links for various different coding languages.
 - [freecodecamp 5 hour full development video](https://www.freecodecamp.org/news/how-to-make-a-landing-page-using-html-scss-and-javascript/)
 
 ## [Getting Set Up](https://bangsluke.github.io/#getting-set-up)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### Sandbox Sites
 > These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
@@ -122,6 +135,18 @@ All useful links for various different coding languages.
 - [repl.it](https://repl.it/~)
 - [codepen.io](https://codepen.io/pen/)
 - [Codedamn](https://codedamn.com/playgrounds)
+
+
+### Source Code Editor
+###### <sup>[To Top](#table-of-contents)</sup>
+
+#### Visual Studio Code
+> Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="50" height="50"> 
+
+- [Visual Studio Code site](https://code.visualstudio.com/)
+- [Visual Studio Code Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 ### Git and GitHub
 > [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
@@ -136,9 +161,11 @@ All useful links for various different coding languages.
 - [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Git and GitHub training](https://www.classcentral.com/course/introduction-git-github-18060)
-- [Git Commands Cheat Sheet](https://training.github.com/)
+- [Git Commands Training](https://training.github.com/)
+- [Git Commands Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 
 ### Support Sites
+###### <sup>[To Top](#table-of-contents)</sup>
 
 #### [Stack Overflow](https://stackoverflow.com/)
 > Stack Overflow is a question and answer site for professional and enthusiast programmers.
@@ -173,6 +200,7 @@ All useful links for various different coding languages.
 <img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50">
 
 ### Setting Up A Webiste
+###### <sup>[To Top](#table-of-contents)</sup>
 - [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
 - [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
@@ -184,15 +212,12 @@ All useful links for various different coding languages.
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
 
-#### Responsive Design
-- [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
-
 ### Understanding the Internet
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
 
 ## [Website Tools](https://bangsluke.github.io/#website-tools)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### Everything
 - [Multiple Developer Resources](https://devresourc.es/)
@@ -228,6 +253,7 @@ All useful links for various different coding languages.
 
 ### Structure & Website Set Up
 - [Mobile Responsive designs](https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml)
+- [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
 - [CSS grid tool](https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/)
 
 ### Widgets & Components
@@ -241,10 +267,10 @@ All useful links for various different coding languages.
 - [Google Check website is mobile friendly](https://search.google.com/test/mobile-friendly)
 
 # [Languages](https://bangsluke.github.io/#languages)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### HTML, CSS and JavaScript Combined Examples
 - [Check Password Strength example](https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar)
@@ -259,21 +285,21 @@ All useful links for various different coding languages.
 - [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
 - [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
-- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
+- [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 #### Header Set Ups
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
 - [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
 - [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
 - [Responsive Navigation Menu 2021🎖️ - CSS JS 2021](https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb)
+- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
 
 #### Side Bar
 - [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
 - [Circular Expansion Navigation Bar](https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd)
 
-
 ## HTML & CSS
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### [HTML](https://bangsluke.github.io/#html)
 > Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
@@ -289,7 +315,7 @@ All useful links for various different coding languages.
 > In HTML a comment is within the following characters: <! text >
 
 ### [CSS](https://bangsluke.github.io/#css)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 > Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
 
 <img src="https://maxcdn.icons8.com/Share/icon/Logos/css31600.png" width="50" height="50">
@@ -323,6 +349,7 @@ All useful links for various different coding languages.
 > Remember that for margins and padding, it goes (top, right, bottom and left).
 
 #### CSS Preprocessors
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ##### SCSS
 > With a few small exceptions, SCSS is a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.
@@ -339,19 +366,23 @@ All useful links for various different coding languages.
 - [Differences between SCSS and LESS](https://stackoverflow.com/questions/52003198/differences-between-scss-and-less)
 
 #### CSS Frameworks
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ##### Tailwind CSS
 > Tailwind UI is a collection of beautiful, fully responsive UI components, designed and developed by us, the creators of Tailwind CSS.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [I met my first love of my life through Tailwind CSS](https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
-##### Bootsrtap
+##### Bootstrap
 > Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 - [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
+- [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ### HTML & CSS Code Examples
+###### <sup>[To Top](#table-of-contents)</sup>
 
 #### HTML Examples
+- [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html#HTML)
 - [5 Must Know HTML Tags That Almost Nobody Knows](https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified)
 
 #### CSS Examples
@@ -390,12 +421,11 @@ All useful links for various different coding languages.
 - [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 
-
 ## [JavaScript](https://bangsluke.github.io/#javascript)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 > JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
 
-<img src="https://f1.pngfuel.com/png/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clip-art.png" width="50" height="50">
+<img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" width="50" height="50">
 
 ### JavaScript Best Coding Practice
 
@@ -416,6 +446,9 @@ All useful links for various different coding languages.
 > Use **var x = confirm()** to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
 
 ### JavaScript Code Examples
+- [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html#JavaScript)
+- [JavaScript Cheat Sheet Repository](https://github.com/alhassy/JavaScriptCheatSheet)
+- [JavaScript Cheat Sheet](https://alhassy.github.io/JavaScriptCheatSheet/CheatSheet.pdf)
 - [Python vs JavaScript](https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/)
 
 #### JavaScript Objects and Arrays
@@ -432,42 +465,56 @@ All useful links for various different coding languages.
 - [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311)
 - [How to Create Native Drag and Drop Functionality in JavaScript](https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript)
 - [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-- Create a chart of data in JavaScript (Chart JS For Beginners): https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
-- Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-
+- [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
+- [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 ### React
-React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+###### <sup>[To Top](#table-of-contents)</sup>
+> React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+
+<img src="http://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png" width="50" height="50">
 
 #### React Examples
+- [Learn React for Free](https://scrimba.com/learn/learnreact)
 - [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
 - [React spring cheatsheet](https://storage.googleapis.com/joshwcomeau/react-spring.pdf)
 - [Build A Todo App With REACT - React Project For Beginners (FULL)](https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd)
-- How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
-- Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
-- Learn React for Free: https://scrimba.com/learn/learnreact
+- [How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/react-and-googlesheets/)
+- [Styled CSS components in React Video](https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [JavaScript React Library](https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/)
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
 ### AngularJS
+###### <sup>[To Top](#table-of-contents)</sup>
 > AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="50" height="50">
+
 ### Node.js
+###### <sup>[To Top](#table-of-contents)</sup>
 > Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+
+<img src="http://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" width="50" height="50">
+
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
 ### JQuery
+###### <sup>[To Top](#table-of-contents)</sup>
 > jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
+<img src="http://pluspng.com/img-png/jquery-logo-png--512.png" width="50" height="50">
+
 ### Typescript
+###### <sup>[To Top](#table-of-contents)</sup>
 > TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
-### Bootstrap
-> Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
-- [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50">
 
 ### Google Apps Script
-> Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
+###### <sup>[To Top](#table-of-contents)</sup>
+> Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform.
+
+<img src="https://www.gstatic.com/images/branding/product/2x/apps_script_64dp.png" width="50" height="50">
 
 ##### Apps Script Examples
 - [Apps Script Samples](https://github.com/googleworkspace/apps-script-samples)
@@ -479,7 +526,10 @@ React is an open-source, front end, JavaScript library for building user interfa
 
 
 ## [Python](https://bangsluke.github.io/#python)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
+> Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+
+<img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50">
 
 ### Python Best Coding Practice
 
@@ -494,7 +544,10 @@ React is an open-source, front end, JavaScript library for building user interfa
 
 
 ## [Swift](https://bangsluke.github.io/#swift)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
+> Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.
+
+<img src="https://www.wamatechnology.com/wp-content/uploads/2019/07/1138px-Swift_logo.svg_.png" width="50" height="50">
 
 ### Swift Learning
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
@@ -502,8 +555,30 @@ React is an open-source, front end, JavaScript library for building user interfa
 
 
 ## [Linux](https://bangsluke.github.io/#linux)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
+> Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution.
+
+<img src="http://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" width="50" height="50">
 
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 
+
+# Databases
+###### <sup>[To Top](#table-of-contents)</sup>
+
+## SQL
+> SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
+
+<img src="http://www.faceofit.com/wp-content/uploads/2016/04/logoAzureSql.png" width="50" height="50">
+
+- [SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
+
+## Amazon Web Services
+> Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
+
+<img src="https://lavca.org/wp-content/uploads/2019/10/aws-logo-square.png" width="50" height="50">
+
+- [AWS Training – Learn the Basics of Amazon Web Services](https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/)
+
+###### <sub>[To Top](#table-of-contents)</sub>
