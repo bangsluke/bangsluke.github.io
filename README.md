@@ -137,7 +137,8 @@ All useful links for various different coding languages.
 - [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Git and GitHub training](https://www.classcentral.com/course/introduction-git-github-18060)
-- [Git Commands Cheat Sheet](https://training.github.com/)
+- [Git Commands Training](https://training.github.com/)
+- [Git Commands Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 
 ### Support Sites
 
