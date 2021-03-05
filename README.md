@@ -37,27 +37,27 @@ I have also updated the repositories README.md file to contain a large list of l
 
 
 ### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
-> Place with all key links to favourite sites and key information to be used for new tab loading page. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Place with all key links to favourite sites and key information to be used for new tab loading page. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ![image](https://user-images.githubusercontent.com/61457009/110144484-4e952980-7dd0-11eb-8376-801be4f2eb96.png)
 
 
 ### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
-> Learning HTML and CSS. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Learning HTML and CSS with basic structure set up. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
-> A list of links to coding resources and useful sites. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> A list of links to coding resources and useful sites. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
-> Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Pages to support my work project, [SDP](https://sdp.rle.de/#home). <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
-> The best friends website ever created. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> The best friends website ever created. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
-> Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+> Full on database driven site for multiple users to visit. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
 
