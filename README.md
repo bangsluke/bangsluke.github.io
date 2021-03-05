@@ -61,7 +61,7 @@ I have also updated the repositories README.md file to contain a large list of l
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
-<img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
+<div style="text-align:center"><img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50"></div>
 
 
 # [Set Up](https://bangsluke.github.io/#set-up)
@@ -97,12 +97,12 @@ All useful links for various different coding languages.
 #### [freeCodeCamp](https://www.freecodecamp.org/learn)
 > An awesome learning environment for me so far.
 
-<img src="https://avatars3.githubusercontent.com/u/9892522?s=280&v=4" width="50" height="50"> 
+<div style="text-align:center"><img src="https://avatars3.githubusercontent.com/u/9892522?s=280&v=4" width="50" height="50"></div>
 
 #### [The Odin Project](https://theodinproject.com/dashboard)
 > Slightly more difficult but just as rewarding.
 
-<img src="https://amrelshenawy.github.io/google-resultspage/images/odin.jpg" width="50" height="50"> 
+<div style="text-align:center"><img src="https://amrelshenawy.github.io/google-resultspage/images/odin.jpg" width="50" height="50"></div>
 
 ##### Archive
 
@@ -147,7 +147,7 @@ All useful links for various different coding languages.
 #### Visual Studio Code
 > Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="50" height="50"> 
+<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="50" height="50"></div>
 
 - [Visual Studio Code site](https://code.visualstudio.com/)
 - [Visual Studio Code Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
@@ -155,11 +155,11 @@ All useful links for various different coding languages.
 ### Git and GitHub
 > [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-<img src="http://blog.novatec-gmbh.de/wp-content/uploads/2013/07/logo-git.png" width="50" height="50"> 
+<div style="text-align:center"><img src="http://blog.novatec-gmbh.de/wp-content/uploads/2013/07/logo-git.png" width="50" height="50"></div>
 
 > [GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
 
-<img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50">  
+<div style="text-align:center"><img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50"></div>
 
 #### Git and GitHub Learning
 - [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
@@ -174,12 +174,12 @@ All useful links for various different coding languages.
 #### [Stack Overflow](https://stackoverflow.com/)
 > Stack Overflow is a question and answer site for professional and enthusiast programmers.
 
-<img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50">  
+<div style="text-align:center"><img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50"></div>
 
 ### Reddit Threads
 > Reddit is a network of communities based on people's interests.
 
-<img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
+<div style="text-align:center"><img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50"></div>
 
 - [r/Learn Programming](https://www.reddit.com/r/learnprogramming/) 
 - [r/HTML](https://www.reddit.com/r/HTML/) 
@@ -201,7 +201,7 @@ All useful links for various different coding languages.
 #### [Discord](https://discord.com/channels/@me)
 > Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
 
-<img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50">
+<div style="text-align:center"><img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50"></div>
 
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -308,7 +308,7 @@ All useful links for various different coding languages.
 ### [HTML](https://bangsluke.github.io/#html)
 > Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
 
-<img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png" width="50" height="50">
+<div style="text-align:center"><img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png" width="50" height="50"></div>
 
 #### HTML Best Coding Practice
 
@@ -322,7 +322,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
 
-<img src="https://maxcdn.icons8.com/Share/icon/Logos/css31600.png" width="50" height="50">
+<div style="text-align:center"><img src="https://maxcdn.icons8.com/Share/icon/Logos/css31600.png" width="50" height="50"></div>
 
 #### CSS Best Coding Practice
 
@@ -362,6 +362,9 @@ All useful links for various different coding languages.
 
 ##### SASS
 > Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.
+
+<div style="text-align:center"><img src="http://vanseodesign.com/blog/wp-content/uploads/2015/09/sass-logo-2.png" width="50" height="50"></div>
+
 - [SASS - CSS with superpowers](https://sass-lang.com/)
 - [Learn Sass In 20 Minutes - Sass Crash Course](https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd)
 
@@ -374,11 +377,17 @@ All useful links for various different coding languages.
 
 ##### Tailwind CSS
 > Tailwind UI is a collection of beautiful, fully responsive UI components, designed and developed by us, the creators of Tailwind CSS.
+
+<div style="text-align:center"><img src="https://dancolonna.com/wp-content/uploads/2019/10/tailwind-logo.png" width="50" height="50"></div>
+
 - [Tailwind CSS](https://tailwindcss.com/)
 - [I met my first love of my life through Tailwind CSS](https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 ##### Bootstrap
 > Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+
+<div style="text-align:center"><img src="https://dotnetnuke.nl/Portals/16/EasyDNNnews/18/bootstrap-social-logo.png" width="50" height="50"></div>
+
 - [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
 - [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
@@ -429,7 +438,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
 
-<img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" width="50" height="50">
+<div style="text-align:center"><img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" width="50" height="50"></div>
 
 ### JavaScript Best Coding Practice
 
@@ -476,7 +485,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > React is an open-source, front end, JavaScript library for building user interfaces or UI components.
 
-<img src="http://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png" width="50" height="50">
+<div style="text-align:center"><img src="http://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png" width="50" height="50"></div>
 
 #### React Examples
 - [Learn React for Free](https://scrimba.com/learn/learnreact)
@@ -492,13 +501,13 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="50" height="50">
+<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="50" height="50"></div>
 
 ### Node.js
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 
-<img src="http://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" width="50" height="50">
+<div style="text-align:center"><img src="http://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" width="50" height="50"></div>
 
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
@@ -506,19 +515,19 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
-<img src="http://pluspng.com/img-png/jquery-logo-png--512.png" width="50" height="50">
+<div style="text-align:center"><img src="http://pluspng.com/img-png/jquery-logo-png--512.png" width="50" height="50"></div>
 
 ### Typescript
 ###### <sup>[To Top](#table-of-contents)</sup>
 > TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50">
+<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50"></div>
 
 ### Google Apps Script
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform.
 
-<img src="https://www.gstatic.com/images/branding/product/2x/apps_script_64dp.png" width="50" height="50">
+<div style="text-align:center"><img src="https://www.gstatic.com/images/branding/product/2x/apps_script_64dp.png" width="50" height="50"></div>
 
 ##### Apps Script Examples
 - [Apps Script Samples](https://github.com/googleworkspace/apps-script-samples)
@@ -533,7 +542,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
 
-<img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50">
+<div style="text-align:center"><img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50"></div>
 
 ### Python Best Coding Practice
 
@@ -551,7 +560,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.
 
-<img src="https://www.wamatechnology.com/wp-content/uploads/2019/07/1138px-Swift_logo.svg_.png" width="50" height="50">
+<div style="text-align:center"><img src="https://www.wamatechnology.com/wp-content/uploads/2019/07/1138px-Swift_logo.svg_.png" width="50" height="50"></div>
 
 ### Swift Learning
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
@@ -562,7 +571,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 > Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution.
 
-<img src="http://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" width="50" height="50">
+<div style="text-align:center"><img src="http://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" width="50" height="50"></div>
 
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
@@ -574,14 +583,14 @@ All useful links for various different coding languages.
 ## SQL
 > SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
 
-<img src="http://www.faceofit.com/wp-content/uploads/2016/04/logoAzureSql.png" width="50" height="50">
+<div style="text-align:center"><img src="http://www.faceofit.com/wp-content/uploads/2016/04/logoAzureSql.png" width="50" height="50"></div>
 
 - [SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
 
 ## Amazon Web Services
 > Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
 
-<img src="https://lavca.org/wp-content/uploads/2019/10/aws-logo-square.png" width="50" height="50">
+<div style="text-align:center"><img src="https://lavca.org/wp-content/uploads/2019/10/aws-logo-square.png" width="50" height="50"></div>
 
 - [AWS Training – Learn the Basics of Amazon Web Services](https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/)
 
