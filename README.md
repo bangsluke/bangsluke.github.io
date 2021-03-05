@@ -20,7 +20,7 @@ My largest collection of work hosted via GitHub.
   * [JavaScript](#javascript)
   * [Python](#python)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="300" height="10">
+<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
 # [Introduction](https://bangsluke.github.io/#introduction)
 ###### <sup>[To Top](#table-of-contents)</sup>
