@@ -53,7 +53,7 @@ I have also updated the repositories README.md file to contain a large list of l
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
 > Pages to support my work project, [SDP](https://sdp.rle.de/#home). <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
-<img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
+<div style="text-align:center"><img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50"></div>
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
