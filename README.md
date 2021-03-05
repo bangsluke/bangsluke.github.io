@@ -346,9 +346,10 @@ All useful links for various different coding languages.
 - [Tailwind CSS](https://tailwindcss.com/)
 - [I met my first love of my life through Tailwind CSS](https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
-##### Bootsrtap
+##### Bootstrap
 > Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 - [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
+- [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ### HTML & CSS Code Examples
 
@@ -462,10 +463,6 @@ All useful links for various different coding languages.
 
 ### Typescript
 > TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
-
-### Bootstrap
-> Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
-- [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ### Google Apps Script
 > Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
