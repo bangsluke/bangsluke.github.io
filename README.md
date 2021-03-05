@@ -393,6 +393,9 @@ All useful links for various different coding languages.
 
 ## [JavaScript](https://bangsluke.github.io/#javascript)
 ###### [To Top](#table-of-contents)
+> JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+
+<img src="https://f1.pngfuel.com/png/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clip-art.png" width="50" height="50">
 
 ### JavaScript Best Coding Practice
 
@@ -407,22 +410,31 @@ All useful links for various different coding languages.
 
 #### JavaScript Messages
 > Use **alert()** to ensure that information gets through to a user. When an alert box pops up, the user must click OK to proceed. Alert takes a single string parameter of text to display.
+
 > Use **var x = prompt()** to have the user input a value and press OK or Cancel. OK returns the input value, Cancel returns null. Prompt takes two parameters; a string label to display and an optional string to display in the input box.
+
 > Use **var x = confirm()** to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
 
 ### JavaScript Code Examples
-- [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311).
-- JavaScript Arrays: https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/
-- JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples: https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/
-- How to Create Native Drag and Drop Functionality in JavaScript: https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript
-- JavaScript Object Cheatsheet: https://i.redd.it/9nxtqtho6q861.jpg
-- JavaScript errors: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
-- Error Handling in JavaScript: https://www.valentinog.com/blog/error/
-- Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Swipeable cards (Tinder Style): https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- JavaScript console: https://markodenic.com/use-console-log-like-a-pro/
+- [Python vs JavaScript](https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/)
+
+#### JavaScript Objects and Arrays
+- [JavaScript Object Cheatsheet](https://i.redd.it/9nxtqtho6q861.jpg)
+- [JavaScript Arrays](https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/)
+- [JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/)
+
+#### JavaScript Debugging & Errors
+- [JavaScript console](https://markodenic.com/use-console-log-like-a-pro/)
+- [JavaScript errors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+- [Error Handling in JavaScript](https://www.valentinog.com/blog/error/)
+
+#### JavaScript Components
+- [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311)
+- [How to Create Native Drag and Drop Functionality in JavaScript](https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript)
+- [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - Create a chart of data in JavaScript (Chart JS For Beginners): https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
-- Python vs JavaScript: https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/
+- Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+
 
 ### React
 React is an open-source, front end, JavaScript library for building user interfaces or UI components.
