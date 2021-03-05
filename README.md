@@ -124,6 +124,17 @@ All useful links for various different coding languages.
 - [codepen.io](https://codepen.io/pen/)
 - [Codedamn](https://codedamn.com/playgrounds)
 
+
+### Source Code Editor
+
+#### Visual Studio Code
+> Visual Studio Code is a freeware source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="50" height="50"> 
+
+- [Visual Studio Code site](https://code.visualstudio.com/)
+- [Visual Studio Code Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
 ### Git and GitHub
 > [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
@@ -357,6 +368,7 @@ All useful links for various different coding languages.
 ### HTML & CSS Code Examples
 
 #### HTML Examples
+- [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html#HTML)
 - [5 Must Know HTML Tags That Almost Nobody Knows](https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified)
 
 #### CSS Examples
@@ -421,6 +433,9 @@ All useful links for various different coding languages.
 > Use **var x = confirm()** to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
 
 ### JavaScript Code Examples
+- [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html#JavaScript)
+- [JavaScript Cheat Sheet Repository](https://github.com/alhassy/JavaScriptCheatSheet)
+- [JavaScript Cheat Sheet](https://alhassy.github.io/JavaScriptCheatSheet/CheatSheet.pdf)
 - [Python vs JavaScript](https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/)
 
 #### JavaScript Objects and Arrays
