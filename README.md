@@ -19,6 +19,11 @@ My largest collection of work hosted via GitHub.
     * [CSS](#css)
   * [JavaScript](#javascript)
   * [Python](#python)
+  * [Swift](#swift)
+  * [Linux](#linux)
+* [Databases](#databases)
+  * [SQL](#sql)
+  * [Amazon Web Services](#amazon-web-services)
 
 <img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
