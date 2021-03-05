@@ -24,6 +24,7 @@ My largest collection of work hosted via GitHub.
 ###### [To Top](#table-of-contents)
 
 My GitHub io page contains a number of projects that I am working on, including both personal and work projects.
+
 I have also updated the repositories README.md file to contain a large list of links to resources I use and plan to use in my coding development.
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
