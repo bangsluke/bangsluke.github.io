@@ -412,7 +412,7 @@ All useful links for various different coding languages.
 ###### [To Top](#table-of-contents)
 > JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
 
-<img src="https://f1.pngfuel.com/png/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clip-art.png" width="50" height="50">
+<img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" width="50" height="50">
 
 ### JavaScript Best Coding Practice
 
@@ -457,7 +457,10 @@ All useful links for various different coding languages.
 
 
 ### React
+###### [To Top](#table-of-contents)
 > React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+
+<img src="http://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png" width="50" height="50">
 
 #### React Examples
 - [Learn React for Free](https://scrimba.com/learn/learnreact)
@@ -470,20 +473,36 @@ All useful links for various different coding languages.
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
 ### AngularJS
+###### [To Top](#table-of-contents)
 > AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="50" height="50">
+
 ### Node.js
+###### [To Top](#table-of-contents)
 > Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+
+<img src="http://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" width="50" height="50">
+
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
 ### JQuery
+###### [To Top](#table-of-contents)
 > jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
+<img src="http://pluspng.com/img-png/jquery-logo-png--512.png" width="50" height="50">
+
 ### Typescript
+###### [To Top](#table-of-contents)
 > TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50">
+
 ### Google Apps Script
-> Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
+###### [To Top](#table-of-contents)
+> Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform.
+
+<img src="https://www.gstatic.com/images/branding/product/2x/apps_script_64dp.png" width="50" height="50">
 
 ##### Apps Script Examples
 - [Apps Script Samples](https://github.com/googleworkspace/apps-script-samples)
@@ -496,6 +515,9 @@ All useful links for various different coding languages.
 
 ## [Python](https://bangsluke.github.io/#python)
 ###### [To Top](#table-of-contents)
+> Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+
+<img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50">
 
 ### Python Best Coding Practice
 
@@ -511,6 +533,9 @@ All useful links for various different coding languages.
 
 ## [Swift](https://bangsluke.github.io/#swift)
 ###### [To Top](#table-of-contents)
+> Swift is a powerful and intuitive programming language for macOS, iOS, watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.
+
+<img src="https://www.wamatechnology.com/wp-content/uploads/2019/07/1138px-Swift_logo.svg_.png" width="50" height="50">
 
 ### Swift Learning
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
@@ -519,6 +544,9 @@ All useful links for various different coding languages.
 
 ## [Linux](https://bangsluke.github.io/#linux)
 ###### [To Top](#table-of-contents)
+> Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution.
+
+<img src="http://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" width="50" height="50">
 
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
@@ -527,9 +555,15 @@ All useful links for various different coding languages.
 # Databases
 
 ## SQL
->
+> SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
+
+<img src="http://www.faceofit.com/wp-content/uploads/2016/04/logoAzureSql.png" width="50" height="50">
+
 - [SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
 
 ## Amazon Web Services
->
+> Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
+
+<img src="https://lavca.org/wp-content/uploads/2019/10/aws-logo-square.png" width="50" height="50">
+
 - [AWS Training – Learn the Basics of Amazon Web Services](https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/)
