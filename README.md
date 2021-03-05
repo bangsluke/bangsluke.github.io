@@ -84,7 +84,7 @@ The other projects do not yet have set up instructions.
 All useful links for various different coding languages.
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
-###### [To Top](#table-of-contents)
+###### <sup>[To Top](#table-of-contents)</sup>
 
 ### Current Courses Following
 
