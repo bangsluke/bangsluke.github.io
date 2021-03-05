@@ -432,21 +432,21 @@ All useful links for various different coding languages.
 - [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311)
 - [How to Create Native Drag and Drop Functionality in JavaScript](https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript)
 - [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-- Create a chart of data in JavaScript (Chart JS For Beginners): https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
-- Greate JavaScript example repository: https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
+- [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 
 ### React
-React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+> React is an open-source, front end, JavaScript library for building user interfaces or UI components.
 
 #### React Examples
+- [Learn React for Free](https://scrimba.com/learn/learnreact)
 - [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
 - [React spring cheatsheet](https://storage.googleapis.com/joshwcomeau/react-spring.pdf)
 - [Build A Todo App With REACT - React Project For Beginners (FULL)](https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd)
-- How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
-- Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
-- Learn React for Free: https://scrimba.com/learn/learnreact
+- [How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/react-and-googlesheets/)
+- [Styled CSS components in React Video](https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [JavaScript React Library](https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/)
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
 ### AngularJS
