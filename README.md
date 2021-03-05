@@ -261,13 +261,15 @@ All useful links for various different coding languages.
 - [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
 - [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
-- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
+- [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+
 
 #### Header Set Ups
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
 - [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
 - [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
 - [Responsive Navigation Menu 2021🎖️ - CSS JS 2021](https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb)
+- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
 
 #### Side Bar
 - [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
