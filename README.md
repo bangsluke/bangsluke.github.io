@@ -65,7 +65,7 @@ The other projects do not yet have set up instructions.
 # [Coding Next Steps](https://bangsluke.github.io/#coding-next-steps)
 ###### [To Top](#table-of-contents)
 
-@bangsluke - for coding next steps see phone notes
+@bangsluke - for coding next steps, see phone notes
 
 
 # [Useful Links](https://bangsluke.github.io/#useful-links)
@@ -258,6 +258,7 @@ All useful links for various different coding languages.
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
 - [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
 - [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
+- [Responsive Navigation Menu 2021🎖️ - CSS JS 2021](https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb)
 
 #### Side Bar
 - [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
@@ -292,7 +293,7 @@ All useful links for various different coding languages.
 ##### CSS Classes & Selectors
 > Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
 
-> "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+> "The difference is that CSS class applies a style to multiple elements. ID, on the other hand, applies a style to one unique element." Use classes wherever possible and try to avoid ids in the most case. For details on class vs ids see [here](https://careerkarma.com/blog/css-class-vs-id-2/).
 
 > **Or selector (,)**: Select elements that match any selector in the list. If you separate CSS classes with commas, your rules are applied to all the class in the list. E.g. section, div { would mean apply all rules to section elements and div elements.
 
@@ -315,44 +316,70 @@ All useful links for various different coding languages.
 #### CSS Preprocessors
 
 ##### SCSS
+> With a few small exceptions, SCSS is a superset of CSS, which means essentially all valid CSS is valid SCSS as well. Because of its similarity to CSS, it’s the easiest syntax to get used to and the most popular.
 - [What is the difference between CSS and SCSS?](https://www.geeksforgeeks.org/what-is-the-difference-between-css-and-scss/)
 - [SCSS to CSS compiler](https://www.cssportal.com/scss-to-css/)
 
 ##### SASS
+> Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.
 - [SASS - CSS with superpowers](https://sass-lang.com/)
 - [Learn Sass In 20 Minutes - Sass Crash Course](https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd)
 
 ##### LESS
-- Differences between SCSS and LESS: https://stackoverflow.com/questions/52003198/differences-between-scss-and-less
+> Less is a dynamic preprocessor style sheet language that can be compiled into Cascading Style Sheets and run on the client side or server side.
+- [Differences between SCSS and LESS](https://stackoverflow.com/questions/52003198/differences-between-scss-and-less)
+
+#### CSS Frameworks
+
+##### Tailwind CSS
+> Tailwind UI is a collection of beautiful, fully responsive UI components, designed and developed by us, the creators of Tailwind CSS.
+- [Tailwind CSS](https://tailwindcss.com/)
+- [I met my first love of my life through Tailwind CSS](https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+
+##### Bootsrtap
+> Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+- [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
 
 ### HTML & CSS Code Examples
-- CSS Grids: https://jst.hashnode.dev/css-grid-tutorial
-- CSS Zen Garden: http://www.csszengarden.com/
-- CSS Transitions: https://www.joshwcomeau.com/animation/css-transitions/
-- CSS Transitions examples: https://www.freecodecamp.org/news/css-transition-examples/
-- 5 CSS tricks every Web Developer should know in 2021: https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit
-- Centering in CSS: https://moderncss.dev/complete-guide-to-centering-in-css/
-- Shrink Text on Hover: https://www.codingflicks.com/2021/02/shrink-text-on-hover.html
-- Sticky CSS: https://css-tricks.com/position-sticky-2/
-- CSS tips: https://markodenic.com/css-tips/
-- CSS buttons: https://www.codingflicks.com/2021/01/css-buttons.html
-- CSS position: https://webdevsimplified.com/css-position.html
-- CSS loading page: https://www.codingflicks.com/2020/12/pure-css-loading-animation.html
-- CSS Spotify Style Image Gradient Overlay: https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- Tailwind CSS: https://www.reddit.com/r/learnprogramming/comments/lbm8pn/i_met_my_first_love_of_my_life_through/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-- 10 modern layouts in 1 line of CSS: https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers
-#### HTML
-- 5 Must Know HTML Tags That Almost Nobody Knows: https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified
-#### CSS Grid & Flexbox
+
+#### HTML Examples
+- [5 Must Know HTML Tags That Almost Nobody Knows](https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified)
+
+#### CSS Examples
+
+##### CSS Formatting
+- [Centering in CSS](https://moderncss.dev/complete-guide-to-centering-in-css/)
+- [CSS position](https://webdevsimplified.com/css-position.html)
+- [Sticky CSS](https://css-tricks.com/position-sticky-2/)
+- [Sort out CSS vh and vw to work better on all devices](https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9)
+- [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
+
+##### CSS Styles
+- [CSS Zen Garden](http://www.csszengarden.com/)
+- [CSS Spotify Style Image Gradient Overlay](https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+
+##### CSS Transitions
+- [CSS Transitions](https://www.joshwcomeau.com/animation/css-transitions/)
+- [CSS Transitions examples](https://www.freecodecamp.org/news/css-transition-examples/)
+
+##### CSS Component Examples
+- [Shrink Text on Hover](https://www.codingflicks.com/2021/02/shrink-text-on-hover.html)
+- [CSS buttons](https://www.codingflicks.com/2021/01/css-buttons.html)
+- [CSS loading page](https://www.codingflicks.com/2020/12/pure-css-loading-animation.html)
+
+##### CSS Grid & Flexbox
 - Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
 - Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
-- Responsive Navigation Menu 2021🎖️ - CSS JS 2021: https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb
 - Flexbox Tutorial: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
 - A Guide To FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
 - Container Query Solutions with CSS Grid and Flexbox: https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/
 - Must-Know CSS Flexbox Responsive Multi-Column Layout Explained: https://www.softauthor.com/css-flexbox-responsive-multi-column-layout/
-- Sort out CSS vh and vw to work better on all devices - https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9
+
+##### CSS Tips and Tricks
+- [CSS tips](https://markodenic.com/css-tips/)
+- [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
+- [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 
 
 ## [JavaScript](https://bangsluke.github.io/#javascript)
