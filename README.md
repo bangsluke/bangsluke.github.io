@@ -89,7 +89,7 @@ All projects are very much WIP so feel free to ignore how terrible they may look
 # [Set Up](https://bangsluke.github.io/#set-up)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
 
@@ -97,7 +97,7 @@ To set up and begin using this page as your New tab page in Google Chrome, you n
 
 I've used the aptly named "New Tab Redirect". See the [link](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) provided.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## Other Projects
 
@@ -117,7 +117,7 @@ The other projects do not yet have set up instructions.
 
 All useful links for various different coding languages.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -164,7 +164,7 @@ All useful links for various different coding languages.
 - [I Love Coding Course](https://ilovecoding.org/courses/htmlcss2)
 - [freecodecamp 5 hour full development video](https://www.freecodecamp.org/news/how-to-make-a-landing-page-using-html-scss-and-javascript/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Getting Set Up](https://bangsluke.github.io/#getting-set-up)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -270,7 +270,7 @@ Below are my recommended places to start learning and building.
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Website Tools](https://bangsluke.github.io/#website-tools)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -349,7 +349,7 @@ A collection of tools to support web development. Some are very much untried.
 # [Languages](https://bangsluke.github.io/#languages)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## HTML & CSS
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -489,7 +489,7 @@ A collection of tools to support web development. Some are very much untried.
 - [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [JavaScript](https://bangsluke.github.io/#javascript)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -608,7 +608,7 @@ A collection of tools to support web development. Some are very much untried.
 - [indexSidebar](https://www.benlcollins.com/spreadsheets/index-sheet/#indexSidebar)
 - [Google Apps Script – How to create Javascript and CSS files for a Sidebar Project in Google Apps Script](https://yagisanatode.com/2018/04/15/google-apps-script-how-to-create-javascript-and-css-files-for-a-sidebar-project-in-google-apps-script/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Python](https://bangsluke.github.io/#python)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -629,7 +629,7 @@ A collection of tools to support web development. Some are very much untried.
 #### Comments
 > Use # for comments.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Swift](https://bangsluke.github.io/#swift)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -643,7 +643,7 @@ A collection of tools to support web development. Some are very much untried.
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
 - [Hacking With Swift](https://www.hackingwithswift.com/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Linux](https://bangsluke.github.io/#linux)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -656,7 +656,7 @@ A collection of tools to support web development. Some are very much untried.
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -696,7 +696,7 @@ Some glorious examples of when languages come together.
 # Databases
 ###### <sup>[To Top](#table-of-contents)</sup>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## SQL
 > SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system.
@@ -705,7 +705,7 @@ Some glorious examples of when languages come together.
 
 - [SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## Amazon Web Services
 > Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
