@@ -34,14 +34,14 @@ My GitHub io page contains a number of projects that I am working on, including 
 
 I have also updated the repositories README.md file to contain a large list of links to resources I use and plan to use in my coding development.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
 ## [Projects Contained](https://bangsluke.github.io/#projects-contained)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
 All projects are very much WIP so feel free to ignore how terrible they may look. One day they'll be awesome.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="http://www.clker.com/cliparts/T/3/v/8/2/h/blue-rectangle-md.png" width="1000" height="1">
 
 ### [Homepage](https://bangsluke.github.io/Homepage.html)
 > Homepage for accessing all of my created pages. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
