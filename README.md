@@ -13,7 +13,7 @@ My largest collection of work hosted via GitHub.
   * [Getting Set Up](#getting-set-up)
   * [Website Tools](#website-tools)
 * [Languages](#languages)
-  * HTML & CSS
+  * [HTML and CSS](#html-and-css)
     * [HTML](#html)
     * [CSS](#css)
       * [CSS Best Coding Practice](#CSS-Best-Coding-Practice)
@@ -21,7 +21,16 @@ My largest collection of work hosted via GitHub.
       * [CSS Frameworks](#CSS-Frameworks)
     * [HTML and CSS Code Examples](#HTML-and-CSS-Code-Examples)
   * [JavaScript](#javascript)
+    * [JavaScript Best Coding Practice](#JavaScript-Best-Coding-Practice)
+    * [JavaScript Code Examples](#JavaScript-Code-Examples)
+    * [React](#react)
+    * [AngularJS](#angularjs)
+    * [Node.js](#node.js)
+    * [JQuery](#jquery)
+    * [Typescript](#typescript)
+    * [Google Apps Script](#google-apps-script)
   * [Python](#python)
+    * [Python Best Coding Practice](#Python-Best-Coding-Practice) 
   * [Swift](#swift)
   * [Linux](#linux)
   * [Combined Code Examples](#combined-code-examples)
@@ -355,7 +364,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
-## HTML & CSS
+## HTML and CSS
 ###### <sup>[To Top](#table-of-contents)</sup>
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
