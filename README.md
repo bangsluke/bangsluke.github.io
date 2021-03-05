@@ -417,8 +417,8 @@ React is an open-source, front end, JavaScript library for building user interfa
 
 #### React Examples
 - [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
-- React spring cheatsheet: https://storage.googleapis.com/joshwcomeau/react-spring.pdf
-- Build A Todo App With REACT | React Project For Beginners (FULL): https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd
+- [React spring cheatsheet](https://storage.googleapis.com/joshwcomeau/react-spring.pdf)
+- [Build A Todo App With REACT - React Project For Beginners (FULL)](https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd)
 - How to Turn Google Sheets into a REST API and Use it with a React Application: https://www.freecodecamp.org/news/react-and-googlesheets/
 - Styled CSS components in React Video: https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 - JavaScript React Library: https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/
@@ -426,38 +426,32 @@ React is an open-source, front end, JavaScript library for building user interfa
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
 ### AngularJS
-AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
+> AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.
 
 ### Node.js
-Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+> Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
 ### JQuery
-jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
+> jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 
 ### Typescript
-TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
+> TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
 ### Bootstrap
-Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+> Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 - [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 ### Google Apps Script
-Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
+> Also known As GAS, Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform..
 
 ##### Apps Script Examples
-- Apps Script Samples: https://github.com/googleworkspace/apps-script-samples
-- Apps Script Awesome List: https://github.com/contributorpw/google-apps-script-awesome-list
+- [Apps Script Samples](https://github.com/googleworkspace/apps-script-samples)
+- [Apps Script Awesome List](https://github.com/contributorpw/google-apps-script-awesome-list)
 
 ###### Sidebars
-- https://www.benlcollins.com/spreadsheets/index-sheet/#indexSidebar
-- https://yagisanatode.com/2018/04/15/google-apps-script-how-to-create-javascript-and-css-files-for-a-sidebar-project-in-google-apps-script/
-
-
-
-
-
-
+- [indexSidebar](https://www.benlcollins.com/spreadsheets/index-sheet/#indexSidebar)
+- [Google Apps Script – How to create Javascript and CSS files for a Sidebar Project in Google Apps Script](https://yagisanatode.com/2018/04/15/google-apps-script-how-to-create-javascript-and-css-files-for-a-sidebar-project-in-google-apps-script/)
 
 
 ## [Python](https://bangsluke.github.io/#python)
@@ -466,11 +460,13 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 ### Python Best Coding Practice
 
 #### Functions and Variables
-- Use lower case and underscores for defining functions and variables, e.g. “first_name”.
+> Use lower case and underscores for defining functions and variables, e.g. “first_name”.
+
 #### Constants
-- Use capitals and underscores for constants, e.g. “CONSTANT” or “CONSTANT_NAME”.
+> Use capitals and underscores for constants, e.g. “CONSTANT” or “CONSTANT_NAME”.
+
 #### Comments
-- Use # for comments.
+> Use # for comments.
 
 
 ## [Swift](https://bangsluke.github.io/#swift)
@@ -485,7 +481,5 @@ Also known As GAS, Apps Script is a scripting platform developed by Google for l
 ###### [To Top](#table-of-contents)
 
 ### Linux Learning
-- Learn Linux Basics: https://www.freecodecamp.org/news/the-linux-commands-handbook/
-
-
+- [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 
