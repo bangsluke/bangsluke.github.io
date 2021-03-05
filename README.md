@@ -19,7 +19,7 @@ My largest collection of work hosted via GitHub.
       * [CSS Best Coding Practice](#CSS-Best-Coding-Practice)
       * [CSS Preprocessors](#CSS-Preprocessors)
       * [CSS Frameworks](#CSS-Frameworks)
-    * [HTML & CSS Code Examples](#HTML-&-CSS-Code-Examples)
+    * [HTML and CSS Code Examples](#HTML-and-CSS-Code-Examples)
   * [JavaScript](#javascript)
   * [Python](#python)
   * [Swift](#swift)
@@ -450,7 +450,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
-### HTML & CSS Code Examples
+### HTML and CSS Code Examples
 ###### <sup>[To Top](#table-of-contents)</sup>
 
 #### HTML Examples
