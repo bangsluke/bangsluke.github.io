@@ -506,3 +506,13 @@ All useful links for various different coding languages.
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 
+
+# Databases
+
+## SQL
+>
+- [SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
+
+## Amazon Web Services
+>
+- [AWS Training – Learn the Basics of Amazon Web Services](https://www.freecodecamp.org/news/learn-the-basics-of-amazon-web-services/)
