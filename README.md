@@ -16,6 +16,7 @@ My largest collection of work hosted via GitHub.
   * HTML & CSS
     * [HTML](#html)
     * [CSS](#css)
+      * [CSS Best Coding Practice](#CSS-Best-Coding-Practice)  
   * [JavaScript](#javascript)
   * [Python](#python)
   * [Swift](#swift)
