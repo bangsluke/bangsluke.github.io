@@ -41,7 +41,7 @@ I have also updated the repositories README.md file to contain a large list of l
 
 All projects are very much WIP so feel free to ignore how terrible they may look. One day they'll be awesome.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/F1_light_blue_flag.svg/2000px-F1_light_blue_flag.svg.png" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Homepage](https://bangsluke.github.io/Homepage.html)
 > Homepage for accessing all of my created pages. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
