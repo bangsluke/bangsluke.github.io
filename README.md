@@ -65,9 +65,13 @@ I have also updated the repositories README.md file to contain a large list of l
 # [Set Up](https://bangsluke.github.io/#set-up)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
+## [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
+
 To set up and begin using this page as your New tab page in Google Chrome, you need to add a Chrome extension.
 
 I've used the aptly named "New Tab Redirect". See the [link](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) provided.
+
+## Other Projects
 
 The other projects do not yet have set up instructions.
 
