@@ -42,6 +42,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
 > Pages to support my work project, [SDP](https://sdp.rle.de/#home). Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+
 <img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50">
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
@@ -49,6 +50,7 @@ My GitHub io page contains a number of projects that I am working on.
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).
+
 <img src="https://i.imgur.com/bzeHl4g.png" width="50" height="50">
 
 
@@ -123,9 +125,11 @@ All useful links for various different coding languages.
 
 ### Git and GitHub
 > [Git](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
 <img src="http://blog.novatec-gmbh.de/wp-content/uploads/2013/07/logo-git.png" width="50" height="50"> 
 
 > [GitHub](https://github.com/) is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+
 <img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50">  
 
 #### Git and GitHub Learning
@@ -138,10 +142,12 @@ All useful links for various different coding languages.
 
 #### [Stack Overflow](https://stackoverflow.com/)
 > Stack Overflow is a question and answer site for professional and enthusiast programmers.
+
 <img src="https://tse3.mm.bing.net/th?id=OIP.0beqHcmIZ5nox9DrrsadoQAAAA&pid=Api" width="50" height="50">  
 
 ### Reddit Threads
 > Reddit is a network of communities based on people's interests.
+
 <img src="https://tse1.mm.bing.net/th?id=OIP.ngTdHWBWJVS8KFgzBDohDAAAAA&pid=Api" width="50" height="50">
 
 - [r/Learn Programming](https://www.reddit.com/r/learnprogramming/) 
@@ -163,6 +169,7 @@ All useful links for various different coding languages.
 
 #### [Discord](https://discord.com/channels/@me)
 > Discord is an American VoIP, instant messaging and digital distribution platform designed for creating communities.
+
 <img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50">
 
 ### Setting Up A Webiste
@@ -270,6 +277,7 @@ All useful links for various different coding languages.
 
 ### [HTML](https://bangsluke.github.io/#html)
 > Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
+
 <img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_badge.png" width="50" height="50">
 
 #### HTML Best Coding Practice
@@ -283,6 +291,7 @@ All useful links for various different coding languages.
 ### [CSS](https://bangsluke.github.io/#css)
 ###### [To Top](#table-of-contents)
 > Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+
 <img src="https://maxcdn.icons8.com/Share/icon/Logos/css31600.png" width="50" height="50">
 
 #### CSS Best Coding Practice
@@ -352,7 +361,6 @@ All useful links for various different coding languages.
 - [CSS position](https://webdevsimplified.com/css-position.html)
 - [Sticky CSS](https://css-tricks.com/position-sticky-2/)
 - [Sort out CSS vh and vw to work better on all devices](https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9)
-- [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
 
 ##### CSS Styles
 - [CSS Zen Garden](http://www.csszengarden.com/)
@@ -368,13 +376,14 @@ All useful links for various different coding languages.
 - [CSS loading page](https://www.codingflicks.com/2020/12/pure-css-loading-animation.html)
 
 ##### CSS Grid & Flexbox
-- Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial: https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd
-- Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
-- Flexbox Tutorial: https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb
-- A Guide To FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- FlexBox cheatsheet: https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl
-- Container Query Solutions with CSS Grid and Flexbox: https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/
-- Must-Know CSS Flexbox Responsive Multi-Column Layout Explained: https://www.softauthor.com/css-flexbox-responsive-multi-column-layout/
+- [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
+- [Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial](https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd)
+- [Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
+- [Flexbox Tutorial](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
+- [A Guide To FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [FlexBox cheatsheet](https://dev.to/joyshaheb/flexbox-cheat-sheets-in-2021-css-2021-3edl)
+- [Container Query Solutions with CSS Grid and Flexbox](https://moderncss.dev/container-query-solutions-with-css-grid-and-flexbox/)
+- [Must-Know CSS Flexbox Responsive Multi-Column Layout Explained](https://www.softauthor.com/css-flexbox-responsive-multi-column-layout/)
 
 ##### CSS Tips and Tricks
 - [CSS tips](https://markodenic.com/css-tips/)
@@ -388,18 +397,21 @@ All useful links for various different coding languages.
 ### JavaScript Best Coding Practice
 
 #### JavaScript Functions and Variables
-- Use camelCase for defining functions and variables, e.g. “firstName”.
+> Use **camelCase** for defining functions and variables, e.g. “**firstName**”.
+
 #### JavaScript Constants
-- Use capitals and underscores for constants, e.g. “CONSTANT” or “CONSTANT_NAME”.
+> Use **capitals** and **underscores** for constants, e.g. “**CONSTANT**” or “**CONSTANT_NAME**”.
+
 #### JavaScript Comments
-- Use // for comments.
+> Use **//** for comments.
+
 #### JavaScript Messages
-- Use alert() to ensure that information gets through to a user. When an alert box pops up, the user must click OK to proceed. Alert takes a single string parameter of text to display.
-- Use var x = prompt() to have the user input a value and press OK or Cancel. OK returns the input value, Cancel returns null. Prompt takes two parameters; a string label to display and an optional string to display in the input box.
-- Use var x = confirm() to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
+> Use **alert()** to ensure that information gets through to a user. When an alert box pops up, the user must click OK to proceed. Alert takes a single string parameter of text to display.
+> Use **var x = prompt()** to have the user input a value and press OK or Cancel. OK returns the input value, Cancel returns null. Prompt takes two parameters; a string label to display and an optional string to display in the input box.
+> Use **var x = confirm()** to have the user provide a boolean result from an OK or Cancel button. Confirm returns true if the user selected OK, or false if they selected Cancel. Confirm takes a single string parameter of text to display.
 
 ### JavaScript Code Examples
-- Console Timer: https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/. Image: https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311
+- [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311).
 - JavaScript Arrays: https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/
 - JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples: https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/
 - How to Create Native Drag and Drop Functionality in JavaScript: https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript
