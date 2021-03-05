@@ -212,9 +212,6 @@ All useful links for various different coding languages.
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
 
-#### Responsive Design
-- [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
-
 ### Understanding the Internet
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
@@ -256,6 +253,7 @@ All useful links for various different coding languages.
 
 ### Structure & Website Set Up
 - [Mobile Responsive designs](https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml)
+- [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
 - [CSS grid tool](https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/)
 
 ### Widgets & Components
