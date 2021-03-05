@@ -13,7 +13,6 @@ My largest collection of work hosted via GitHub.
   * [Getting Set Up](#getting-set-up)
   * [Website Tools](#website-tools)
 * [Languages](#languages)
-  * [Combined Code Examples](#combined-code-examples)
   * HTML & CSS
     * [HTML](#html)
     * [CSS](#css)
@@ -21,6 +20,7 @@ My largest collection of work hosted via GitHub.
   * [Python](#python)
   * [Swift](#swift)
   * [Linux](#linux)
+  * [Combined Code Examples](#combined-code-examples)
 * [Databases](#databases)
   * [SQL](#sql)
   * [Amazon Web Services](#amazon-web-services)
@@ -282,35 +282,6 @@ All useful links for various different coding languages.
 
 # [Languages](https://bangsluke.github.io/#languages)
 ###### <sup>[To Top](#table-of-contents)</sup>
-
-## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
-###### <sup>[To Top](#table-of-contents)</sup>
-
-### HTML, CSS and JavaScript Combined Examples
-- [Check Password Strength example](https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar)
-- [Search Box example](https://www.youtube.com/watch?v=eHtR2P9qnfA&feature=youtu.be&ab_channel=DeepakKaranjekar)
-- [Floating Button example](https://www.youtube.com/watch?v=FhyyB8sqfuQ&feature=youtu.be&ab_channel=DeepakKaranjekar)
-- [Input Box Caret colour](https://www.reddit.com/r/web_design/comments/kmi92t/there_are_css_properties_i_never_heard_of_before/)
-- [Loading Spinners](https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-- [Beautiful Transparent Login Form Using Simple HTML & CSS](https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode)
-- [Feedback Button](https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf). [GitHub Link](https://github.com/dulajkavinda/minimal-feedback)
-- [Clip.path pop out example](https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-- [Build Web Tabs](https://web.dev/building-a-tabs-component/)
-- [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
-- [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-- [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
-- [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-
-#### Header Set Ups
-- [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
-- [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
-- [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
-- [Responsive Navigation Menu 2021🎖️ - CSS JS 2021](https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb)
-- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
-
-#### Side Bar
-- [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
-- [Circular Expansion Navigation Bar](https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd)
 
 ## HTML & CSS
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -592,6 +563,37 @@ All useful links for various different coding languages.
 
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
+
+<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="2">
+
+## [Combined Code Examples](https://bangsluke.github.io/#combined-code-examples)
+###### <sup>[To Top](#table-of-contents)</sup>
+
+### HTML, CSS and JavaScript Combined Examples
+- [Check Password Strength example](https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Search Box example](https://www.youtube.com/watch?v=eHtR2P9qnfA&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Floating Button example](https://www.youtube.com/watch?v=FhyyB8sqfuQ&feature=youtu.be&ab_channel=DeepakKaranjekar)
+- [Input Box Caret colour](https://www.reddit.com/r/web_design/comments/kmi92t/there_are_css_properties_i_never_heard_of_before/)
+- [Loading Spinners](https://www.reddit.com/r/html5/comments/kvx9np/loading_spinners_for_websites_animejs_tutorial/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Beautiful Transparent Login Form Using Simple HTML & CSS](https://www.youtube.com/watch?v=4tbB99BXChA&feature=share&ab_channel=MysteryCode)
+- [Feedback Button](https://www.reddit.com/r/Frontend/comments/las17v/i_needed_a_feedback_component_for_my_projects/?utm_source=share&utm_medium=ios_app&utm_name=iossmf). [GitHub Link](https://github.com/dulajkavinda/minimal-feedback)
+- [Clip.path pop out example](https://www.reddit.com/r/webdev/comments/lewtp6/chrome_88_now_supports_clippath_path_now_all_the/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Build Web Tabs](https://web.dev/building-a-tabs-component/)
+- [How to build an unfolding tooltip with CSS clip-path](https://www.youtube.com/watch?v=hEm2td0g60g&feature=youtu.be&ab_channel=crayoncode)
+- [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
+- [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+
+#### Header Set Ups
+- [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
+- [Make Drop Down Menu](https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html)
+- [Responsive Homepage](https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html) 
+- [Responsive Navigation Menu 2021🎖️ - CSS JS 2021](https://www.youtube.com/watch?v=dmrigoFKlLc&ab_channel=JoyShaheb)
+- [Responsive Navigation Bar Tutorial - HTML CSS JAVASCRIPT](https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd)
+
+#### Side Bar
+- [Toggable Side Navigation Bar](https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html)
+- [Circular Expansion Navigation Bar](https://www.youtube.com/watch?v=H4MkGzoACpQ&ab_channel=DevEd)
 
 <img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
