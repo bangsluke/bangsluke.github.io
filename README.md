@@ -48,36 +48,36 @@ All projects are very much WIP so feel free to ignore how terrible they may look
 
 ![image](https://user-images.githubusercontent.com/61457009/110144401-358c7880-7dd0-11eb-9ede-7d0f51d01587.png)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [New Tab Screen](https://bangsluke.github.io/pages/NewTab.html)
 > Place with all key links to favourite sites and key information to be used for new tab loading page. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 ![image](https://user-images.githubusercontent.com/61457009/110144484-4e952980-7dd0-11eb-8376-801be4f2eb96.png)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Online Portfolio](https://bangsluke.github.io/pages/OnlinePort2.html)
 > Learning HTML and CSS with basic structure set up. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html)
 > A list of links to coding resources and useful sites. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [SDP](https://bangsluke.github.io/pages/SDP/SDPDocumentation.html)
 > Pages to support my work project, [SDP](https://sdp.rle.de/#home). <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <div style="text-align:center"><img src="https://i.imgur.com/GuCDjQN.png" width="60" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Group Page](https://bangsluke.github.io/pages/GroupPage/GroupPageHome.html)
 > The best friends website ever created. Shhh. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Dorkinians Stats Site](https://bangsluke.github.io/pages/DorkiniansWebpage.html)
 > Full on database driven site for multiple users to visit. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
@@ -122,7 +122,7 @@ All useful links for various different coding languages.
 ## [Places To Learn Coding](https://bangsluke.github.io/#places-to-learn-coding)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Current Courses Following
 
@@ -145,7 +145,7 @@ All useful links for various different coding languages.
 ###### Classcentral (3 week course)
 - [Introduction To Web Development](https://www.classcentral.com/course/introduction-to-web-development-17895)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Other Learning Links
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -171,7 +171,7 @@ All useful links for various different coding languages.
 
 Below are my recommended places to start learning and building.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Sandbox Sites
 > These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
@@ -180,7 +180,7 @@ Below are my recommended places to start learning and building.
 - [codepen.io](https://codepen.io/pen/)
 - [Codedamn](https://codedamn.com/playgrounds)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Source Code Editor
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -193,7 +193,7 @@ Below are my recommended places to start learning and building.
 - [Visual Studio Code site](https://code.visualstudio.com/)
 - [Visual Studio Code Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Change Control
 
@@ -213,7 +213,7 @@ Below are my recommended places to start learning and building.
 - [Git Commands Training](https://training.github.com/)
 - [Git Commands Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Support Sites
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -249,7 +249,7 @@ Below are my recommended places to start learning and building.
 
 <div style="text-align:center"><img src="http://media.moddb.com/images/members/4/3865/3864912/profile/Icon-Discord.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -264,7 +264,7 @@ Below are my recommended places to start learning and building.
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Understanding the Internet
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
@@ -277,25 +277,25 @@ Below are my recommended places to start learning and building.
 
 A collection of tools to support web development. Some are very much untried.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Everything
 - [Multiple Developer Resources](https://devresourc.es/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Starter Templates
 - [w3schools Responsive Web Design Templates](https://www.w3schools.com/csS/css_rwd_templates.asp)
 - [Website starter templates](https://templated.co/)
 - [HTML Boilerplates](https://htmlboilerplates.com/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Fonts
 - [Google Fonts](https://fonts.google.com/)
 - [Font Pairs](https://fontpair.co/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Images & Shapes
 - [Shapefest (library of free 3D shapes)](https://www.shapefest.com/)
@@ -304,7 +304,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Unsplash free images](https://unsplash.com/)
 - [Material Design Icons](https://material.io/resources/icons/?style=baseline)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Colour Tools
 - [Microsoft Fluent UI Theme Designer](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/7.0/theming-designer/index.html)
@@ -313,7 +313,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Colour Tool](https://material.io/resources/color/#!/?view.left=0&view.right=0)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 #### CSS Gradients (best to worst)
 - [Gradient Generator Tool](https://learnui.design/tools/gradient-generator.html)
@@ -321,25 +321,25 @@ A collection of tools to support web development. Some are very much untried.
 - [Grabient](https://www.grabient.com/)
 - [CSS easing gradients](https://larsenwork.com/easing-gradients/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Structure & Website Set Up
 - [Mobile Responsive designs](https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml)
 - [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
 - [CSS grid tool](https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Widgets & Components
 - [Weather Widget](https://weatherwidget.io/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Footers
 - [50 free footer templates](https://www.figma.com/community/file/941725495131361898)
 - [The Best Website Footer Design Examples and Best Practices](https://www.sliderrevolution.com/design/website-footer/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Website Testing
 - [Google Check website is mobile friendly](https://search.google.com/test/mobile-friendly)
@@ -354,7 +354,7 @@ A collection of tools to support web development. Some are very much untried.
 ## HTML & CSS
 ###### <sup>[To Top](#table-of-contents)</sup>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [HTML](https://bangsluke.github.io/#html)
 > Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
@@ -369,7 +369,7 @@ A collection of tools to support web development. Some are very much untried.
 ##### HTML Comments
 > In HTML a comment is within the following characters: <! text >
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [CSS](https://bangsluke.github.io/#css)
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -444,7 +444,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
 - [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### HTML & CSS Code Examples
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -497,7 +497,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="http://pluspng.com/img-png/logo-javascript-png-javascript-tutorials-400.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### JavaScript Best Coding Practice
 
@@ -540,7 +540,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
 - [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### React
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -558,7 +558,7 @@ A collection of tools to support web development. Some are very much untried.
 - [JavaScript React Library](https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/)
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### AngularJS
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -566,7 +566,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Node.js
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -576,7 +576,7 @@ A collection of tools to support web development. Some are very much untried.
 
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### JQuery
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -584,7 +584,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="http://pluspng.com/img-png/jquery-logo-png--512.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Typescript
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -592,7 +592,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Google Apps Script
 ###### <sup>[To Top](#table-of-contents)</sup>
@@ -616,7 +616,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Python Best Coding Practice
 
@@ -637,7 +637,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="https://www.wamatechnology.com/wp-content/uploads/2019/07/1138px-Swift_logo.svg_.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Swift Learning
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
@@ -651,7 +651,7 @@ A collection of tools to support web development. Some are very much untried.
 
 <div style="text-align:center"><img src="http://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png" width="50" height="50"></div>
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Linux Learning
 - [Learn Linux Basics](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
@@ -663,7 +663,7 @@ A collection of tools to support web development. Some are very much untried.
 
 Some glorious examples of when languages come together.
 
-<img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="1">
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### HTML, CSS and JavaScript Combined Examples
 - [Check Password Strength example](https://www.youtube.com/watch?v=O--hg5m2WKU&feature=youtu.be&ab_channel=DeepakKaranjekar)
