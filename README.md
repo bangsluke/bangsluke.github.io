@@ -94,10 +94,12 @@ All useful links for various different coding languages.
 
 #### [freeCodeCamp](https://www.freecodecamp.org/learn)
 > An awesome learning environment for me so far.
+
 <img src="https://avatars3.githubusercontent.com/u/9892522?s=280&v=4" width="50" height="50"> 
 
 #### [The Odin Project](https://theodinproject.com/dashboard)
 > Slightly more difficult but just as rewarding.
+
 <img src="https://amrelshenawy.github.io/google-resultspage/images/odin.jpg" width="50" height="50"> 
 
 ##### Archive
