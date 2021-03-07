@@ -292,6 +292,7 @@ Below are my recommended places to start learning and building.
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
 - [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
+- [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
 - [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
 - [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
