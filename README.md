@@ -8,6 +8,7 @@ My largest collection of work hosted via GitHub.
   * [Projects Contained](#projects-contained) 
 * [Set Up](#set-up)
 * [Coding Next Steps](#coding-next-steps)
+  * [Links To Read](#links-to-read)
 * [Useful Links](#useful-links)
   * [Places To Learn Coding](#places-to-learn-coding)
   * [Getting Set Up](#getting-set-up)
@@ -122,6 +123,30 @@ The other projects do not yet have set up instructions.
 ###### <sup>[To Top](#table-of-contents)</sup>
 
 @bangsluke - for coding next steps, see phone notes
+
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
+
+## [Links To Read](https://bangsluke.github.io/#links-to-read)
+###### <sup>[To Top](#table-of-contents)</sup>
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+### [HTML and CSS Links](https://bangsluke.github.io/#html-and-css-links)
+- [HTML Style Guide and Coding Conventions](https://www.w3schools.com/html/html5_syntax.asp)
+- [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
+- [CSS Viewport](https://www.educba.com/css-viewport/)
+- [Full Page: 20 Advanced CSS & HTML techniques: clip-path, @property, aspect-ratio and blend-mode](https://www.youtube.com/watch?v=PpheLuPbP5Y&ab_channel=Astrit)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+### [JavaScript Links](https://bangsluke.github.io/#javascript-links)
+- [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
+- [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+### [Other Links](https://bangsluke.github.io/#other-links)
 
 <img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
@@ -489,6 +514,7 @@ A collection of tools to support web development. Some are very much untried.
 
 ##### CSS Grid & Flexbox
 - [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
+- [CSS Grid Tutorial - CSS Grid Crash Course](https://www.youtube.com/watch?v=EFafSYg-PkI&ab_channel=DevEd)
 - [Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial](https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd)
 - [Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
 - [Flexbox Tutorial](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
