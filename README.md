@@ -143,10 +143,17 @@ The other projects do not yet have set up instructions.
 - [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
 - [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 
-
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Other Links](https://bangsluke.github.io/#other-links)
+- [Git and GitHub Tutorial](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+- [Git Set Up](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Picking Hex Colours (8 mins)](https://www.freecodecamp.org/news/how-hex-code-colors-work-how-to-choose-colors-without-a-color-picker/ )
+- [18 Tips For Websites](https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Why Learn SQL?](https://www.freecodecamp.org/news/why-learn-sql/)
+- [Model View Architecture](https://www.freecodecamp.org/news/model-view-architecture/)
+- [What is an API](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
+- [Create an effective portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/ )
 
 <img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
@@ -292,8 +299,6 @@ Below are my recommended places to start learning and building.
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
 - [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
-- [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
-- [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
 - [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
 - [Making A Website Accessible To All: How to make your website more accessible for people with disabilities](https://www.freecodecamp.org/news/build-an-accessible-web-app-with-html-sass-and-javascript/). This course will cover some core HTML elements, some useful JavaScript features, and styling with Sass. (2 hour YouTube course).
@@ -303,6 +308,13 @@ Below are my recommended places to start learning and building.
 - [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+#### Setting Up A Database
+- [phpMyAdmin - Bringing MySQL to the web](https://www.phpmyadmin.net/)
+- [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
+- [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -482,6 +494,7 @@ A collection of tools to support web development. Some are very much untried.
 <div style="text-align:center"><img src="https://dotnetnuke.nl/Portals/16/EasyDNNnews/18/bootstrap-social-logo.png" width="50" height="50"></div>
 
 - [Get Bootstrap](https://getbootstrap.com/docs/3.3/javascript/)
+- [Getting Started With Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/)
 - [Bootstrap Cheat Sheet](https://bootstrap-cheatsheet.themeselection.com/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
