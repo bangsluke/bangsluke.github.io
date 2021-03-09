@@ -343,6 +343,17 @@ A collection of tools to support web development. Some are very much untried.
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
+### Google Chrome Extensions
+- [Best Chrome Extensions in 2021](https://www.youtube.com/watch?v=5fFd553FywA&ab_channel=Techthology)
+- [WhatFont](https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm) - A tool to get the font style of any font online.
+- [ColorPick EyeDropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg) - a tool for picking the colour of any pixel on the screen.
+- [WhatRuns](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip) - Returns whatever is used to run the website.
+- [CSS Viewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce) - A tool to view the CSS styling of any element on the screen.
+- [Grepper](https://chrome.google.com/webstore/detail/grepper/amaaokahonnfjjemodnpmeenfpnnbkco) - Adds a small coding result screen on Google Search to show a quick coding solution to any coding questions.
+- [Amino](https://chrome.google.com/webstore/detail/amino-live-css-editor/pbcpfbcibpcbfbmddogfhcijfpboeaaf) - Allows the user to modify the CSS of any site.
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
 ### Fonts
 - [Google Fonts](https://fonts.google.com/)
 - [Font Pairs](https://fontpair.co/)
