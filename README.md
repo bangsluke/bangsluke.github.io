@@ -566,6 +566,9 @@ A collection of tools to support web development. Some are very much untried.
 
 ### JavaScript Best Coding Practice
 
+#### Key Tips
+- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file.
+
 #### JavaScript Functions and Variables
 > Use **camelCase** for defining functions and variables, e.g. “**firstName**”.
 
