@@ -750,6 +750,7 @@ Some glorious examples of when languages come together.
 - [Light/Dark Mode Toggle Button](https://www.reddit.com/r/learnjavascript/comments/k36qcx/dark_light_mode_toggle_button_tutorial_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
 - [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Animation Logo](https://www.reddit.com/r/css/comments/m1seev/local_agency_got_this_animation_how_can_i_do/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 #### Header Set Ups
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
