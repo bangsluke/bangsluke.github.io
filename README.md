@@ -310,6 +310,7 @@ Below are my recommended places to start learning and building.
 - [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
+- [swiperjs.com](https://swiperjs.com/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
