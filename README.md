@@ -153,7 +153,8 @@ The other projects do not yet have set up instructions.
 - [Why Learn SQL?](https://www.freecodecamp.org/news/why-learn-sql/)
 - [Model View Architecture](https://www.freecodecamp.org/news/model-view-architecture/)
 - [What is an API](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
-- [Create an effective portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/ )
+- [Create an effective portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
+- [codewars](https://www.codewars.com/)
 
 <img src="http://media-cache-ak0.pinimg.com/originals/f3/2c/94/f32c94a1a0e01049c1d42c72f8783d1a.jpg" width="1000" height="5">
 
@@ -196,6 +197,7 @@ All useful links for various different coding languages.
 ###### <sup>[To Top](#table-of-contents)</sup>
 - [SoloLearn](https://www.sololearn.com/)
 - [w3schools](https://www.w3schools.com/)
+- [codewars](https://www.codewars.com/)
 - [Bigs On Dev - Front End Development](https://bigsondev.com/)
 - [Upskill Courses](https://upskillcourses.com/courses)
 - [JavaScript Introduction Video from Microsoft](https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo)
@@ -321,6 +323,11 @@ Below are my recommended places to start learning and building.
 ### Understanding the Internet
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 - [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+### Getting Hired
+- [5 Projects You Can Build In A Week That Will Get You Hired](https://www.youtube.com/watch?v=oluY633rkgI&ab_channel=WebDevSimplified)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
@@ -553,6 +560,7 @@ A collection of tools to support web development. Some are very much untried.
 - [CSS tips](https://markodenic.com/css-tips/)
 - [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
+- [How you can simplify your CSS with :is()](https://www.youtube.com/watch?v=McC4QkCvbaY&ab_channel=KevinPowell)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
@@ -751,6 +759,7 @@ Some glorious examples of when languages come together.
 - [Dark/Light mode example](https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9)
 - [Login & Registration Form Using HTML & CSS & JS](https://www.reddit.com/r/css/comments/lxxeks/login_registration_form_using_html_css_js/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Animation Logo](https://www.reddit.com/r/css/comments/m1seev/local_agency_got_this_animation_how_can_i_do/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [8 lines of code to achieve a simple typing effect](https://www.reddit.com/r/Indiewebdev/comments/m1xyj0/8_lines_of_code_to_achieve_a_simple_typing_effect/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 #### Header Set Ups
 - [Resizable Header Code](https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html)
