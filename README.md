@@ -611,6 +611,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Error Handling in JavaScript](https://www.valentinog.com/blog/error/)
 
 #### JavaScript Components
+- [fullPage - Create beautiful fullscreen scrolling websites](alvarotrigo.com/fullPage)
 - [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311)
 - [How to Create Native Drag and Drop Functionality in JavaScript](https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript)
 - [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
