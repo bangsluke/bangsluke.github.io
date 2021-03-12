@@ -319,6 +319,10 @@ Below are my recommended places to start learning and building.
 - [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
 - [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
 
+##### Using Google Sheets As A Database
+- [How to use Google Sheets As Your Website Database](https://medium.com/@jaejohns/how-to-use-google-sheets-as-your-website-database-b0f2f13d0396)
+- [tabletop](https://github.com/jsoma/tabletop)
+
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Understanding the Internet
