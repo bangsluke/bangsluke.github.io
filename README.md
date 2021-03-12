@@ -310,6 +310,7 @@ Below are my recommended places to start learning and building.
 - [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
+- [swiperjs.com](https://swiperjs.com/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -317,6 +318,10 @@ Below are my recommended places to start learning and building.
 - [phpMyAdmin - Bringing MySQL to the web](https://www.phpmyadmin.net/)
 - [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
 - [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
+
+##### Using Google Sheets As A Database
+- [How to use Google Sheets As Your Website Database](https://medium.com/@jaejohns/how-to-use-google-sheets-as-your-website-database-b0f2f13d0396)
+- [tabletop](https://github.com/jsoma/tabletop)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -610,6 +615,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Error Handling in JavaScript](https://www.valentinog.com/blog/error/)
 
 #### JavaScript Components
+- [fullPage - Create beautiful fullscreen scrolling websites](alvarotrigo.com/fullPage)
 - [Console Timer](https://www.reddit.com/r/learnjavascript/comments/jj4opo/best_way_to_measure_execution_time_with_javascript/). [Image](https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-f:1681746344443276695&th=1756c363d6da6d97&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-hL-jt25TTaEX-xNtKNtxYlTtNpr2qJm79daYt06qg-tCIahxC_tbRK0sDncbHmZCTodmG74jARvEbbVguqae3PaCSWUtEF4TNXZultzIQr8-qbnYk4_l19vw&disp=emb&realattid=1756c35ecd6d46a4f311)
 - [How to Create Native Drag and Drop Functionality in JavaScript](https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript)
 - [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
