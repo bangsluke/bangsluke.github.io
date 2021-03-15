@@ -198,6 +198,7 @@ All useful links for various different coding languages.
 - [SoloLearn](https://www.sololearn.com/)
 - [w3schools](https://www.w3schools.com/)
 - [codewars](https://www.codewars.com/)
+- [CSS for JS Developers](https://css-for-js.dev/)
 - [Bigs On Dev - Front End Development](https://bigsondev.com/)
 - [Upskill Courses](https://upskillcourses.com/courses)
 - [JavaScript Introduction Video from Microsoft](https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo)
