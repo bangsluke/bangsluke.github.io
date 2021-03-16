@@ -610,6 +610,7 @@ A collection of tools to support web development. Some are very much untried.
 - [JavaScript Object Cheatsheet](https://i.redd.it/9nxtqtho6q861.jpg)
 - [JavaScript Arrays](https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/)
 - [JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/)
+- [8 Must Know JavaScript Array Methods](https://www.youtube.com/watch?v=R8rmfD9Y5-c)
 
 #### JavaScript Debugging & Errors
 - [JavaScript console](https://markodenic.com/use-console-log-like-a-pro/)
@@ -623,6 +624,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Swipeable cards (Tinder Style)](https://www.reddit.com/r/web_design/comments/luo2uz/this_has_probably_been_done_to_death_but_i_made/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
 - [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [Back To The Basics: How To Generate a Table With JavaScript](https://www.valentinog.com/blog/html-table/)
 
 #### Advanced JavaScript
 - [Dynamic Module Imports](https://blog.webdevsimplified.com/2021-03/dynamic-module-imports/)
