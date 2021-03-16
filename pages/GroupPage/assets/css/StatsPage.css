@@ -25,10 +25,23 @@
     height: max-content;
     width: 95%;
     margin: auto;
-    margin-top: 2em;
+    /* margin-top: 2em; */
     padding: 1em;
     border-radius: 10px;
 }
+
+/* Style the drop down menu. */
+
+.dropdown-div{
+    text-align: center;
+}
+
+.stats-dropdown {
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    width: 80%;
+    margin: auto;
+}
+
 
 /* Table classes */
 

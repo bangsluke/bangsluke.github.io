@@ -104,7 +104,16 @@
 
 			<div class="subpage-content-area fadein stats-table-area">
 				
-				<p>Add drop down.</p>
+				<!-- Add a drop down select box for the user to change stats. -->
+				<div class="dropdown-div">
+					<!-- Provide the select element with an ID for use in JavaScriupt and an onclick event. -->
+					<select name="Stats" class="stats-dropdown" id="stats-option" onchange="getStatSelection()">
+						<option value="tblCOD">COD Stats</option>
+						<option value="tblFantasy">Fantasy Stats</option>
+					</select>
+				</div>
+
+				<br>
 
 				<p>Show charts of stats for lots of different categories. Drop down menu to select what chart to show.</p>
 			
