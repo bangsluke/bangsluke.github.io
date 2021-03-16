@@ -641,6 +641,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Learn React for Free](https://scrimba.com/learn/learnreact)
 - [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
 - [React spring cheatsheet](https://storage.googleapis.com/joshwcomeau/react-spring.pdf)
+- [How to make a TODO App in React + BONUS ANIMATIONS](https://www.youtube.com/watch?v=CXHndAQN-Qs&t=1s)
 - [Build A Todo App With REACT - React Project For Beginners (FULL)](https://www.youtube.com/watch?v=pCA4qpQDZD8&ab_channel=DevEd)
 - [How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/react-and-googlesheets/)
 - [Styled CSS components in React Video](https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
