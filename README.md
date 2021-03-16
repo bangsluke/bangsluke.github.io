@@ -567,6 +567,7 @@ A collection of tools to support web development. Some are very much untried.
 - [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 - [How you can simplify your CSS with :is()](https://www.youtube.com/watch?v=McC4QkCvbaY&ab_channel=KevinPowell)
+- [CSS Auditing](https://cssstats.com/)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
