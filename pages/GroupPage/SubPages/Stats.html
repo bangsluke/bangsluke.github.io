@@ -99,15 +99,14 @@
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
 
-			<div id="test-div">test</div>
-
-			
 			<div id="stats-table-div" class="subpage-content-area fadein">
 				
-				Table Area
+				<p>Add drop down.</p>
+
+				<p>Show charts of stats for lots of different categories. Drop down menu to select what chart to show.</p>
 			
 				<table>
-					<!-- here goes our data! -->
+					<!-- Data loaded into here by jStatsPage.js -->
 				</table>
 
 			</div>
@@ -118,9 +117,6 @@
 
 				<!-- Add Charts using JavaScript. -->
 				<!-- https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle -->
-				<p>Show charts of stats for lots of different categories. Drop down menu to select what chart to show.</p>
-				
-				<br>
 
 				<p>
 					Ideas for stats:
@@ -163,12 +159,8 @@
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script> <!-- Get the first TableTop JS -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script> 
-	<!-- <script src="/pages/GroupPage/assets/js/jTableTop.js"></script> -->
-	<!-- Get the second TableTop JS -->
-	<!-- <script src="/pages/GroupPage/assets/js/build-table.js"></script> -->
-	<script src="/pages/GroupPage/assets/js/jStatsPage.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script> <!-- Get the first TableTop JS -->
+	<script src="/pages/GroupPage/assets/js/jStatsPage.js"></script> <!-- Get Stats page JS -->
 
 </body>
 
