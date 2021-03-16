@@ -143,7 +143,7 @@ table {
 
 .documentationTable {
 	/* background-color: white; */
-	color: var(--accent-color-white);;
+	color: var(--accent-color-white);
 }
 
 th {

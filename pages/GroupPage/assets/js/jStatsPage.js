@@ -26,7 +26,7 @@ function init() {
 function showInfo(results) {
     var data = results.data
     // Data comes through as a simple array since simpleSheet is turned on
-    alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
+    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     console.log(data); // Log the data in the console.
     createFullTable(data); // Call the createFullTable function, passing the data from TableTop.
 }

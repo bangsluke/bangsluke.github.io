@@ -20,13 +20,39 @@
 
 /* Add custom stats page styling. */
 
-.loginContainer {
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 300px;
-    width: 80%;
+.stats-table-area {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: max-content;
+    width: 95%;
     margin: auto;
     margin-top: 2em;
     padding: 1em;
     border-radius: 10px;
 }
 
+/* Table classes */
+
+table {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+    background-color: var(--accent-color-3,blue);
+    color: white;
+}
+
+th {
+	font-style: bold;
+    background-color: var(--accent-color-3,blue);
+    border-bottom: 4px solid var(--accent-color-2,red);
+}
+
+td {
+    font-size: 14px;
+    text-align: center;
+}
+
+tr:hover {
+	background-color: var(--accent-color-1,pink);
+	color: var(--accent-color-white);
+	font: bold;
+}

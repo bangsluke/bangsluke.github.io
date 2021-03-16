@@ -18,6 +18,7 @@
 	<link href="/pages/GroupPage/assets/css/NewGroupPage.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/GroupPage/assets/css/TopMenu.css" rel="stylesheet"> <!-- Top Menu styling -->
 	<link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
+	<link href="/pages/GroupPage/assets/css/StatsPage.css" rel="stylesheet"> <!-- Stats Page styling -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
@@ -99,20 +100,25 @@
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
 
-			<div id="stats-table-div" class="subpage-content-area fadein">
+			<!-- Add a div to house the stats tables. -->
+
+			<div class="subpage-content-area fadein stats-table-area">
 				
 				<p>Add drop down.</p>
 
 				<p>Show charts of stats for lots of different categories. Drop down menu to select what chart to show.</p>
 			
-				<table>
+				<br>
+
+				<table class="statsTable">
 					<!-- Data loaded into here by jStatsPage.js -->
 				</table>
 
 			</div>
 
 
-
+			<!-- Add another container for further ideas for the stats page. -->
+			
 			<div class="subpage-content-area fadein">
 
 				<!-- Add Charts using JavaScript. -->
