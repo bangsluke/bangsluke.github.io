@@ -4,6 +4,9 @@
 // https://medium.com/@jaejohns/how-to-use-google-sheets-as-your-website-database-b0f2f13d0396
 // https://github.com/jsoma/tabletop
 
+// Start the console timer.
+console.time();
+
 // Define the location of the Google Sheet.
 var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?output=csv';
 
@@ -89,3 +92,7 @@ function getStatSelection() {
     alert("Selected Item: '" + selectionText + "', Value: '" + selectionValue + "'");
     showInfo;
 }
+
+
+// End the console timer.
+console.timeEnd();
