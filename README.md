@@ -140,8 +140,7 @@ The other projects do not yet have set up instructions.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [JavaScript Links](https://bangsluke.github.io/#javascript-links)
-- [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
-- [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+- [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -240,6 +239,7 @@ Below are my recommended places to start learning and building.
 
 - [Visual Studio Code site](https://code.visualstudio.com/)
 - [Visual Studio Code Keyboard Shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+- [5 Ways to Customize VS Code](https://www.youtube.com/watch?v=yvXHM2NByh4&t=1s)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -630,6 +630,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Back To The Basics: How To Generate a Table With JavaScript](https://www.valentinog.com/blog/html-table/)
 
 #### JavaScript Tips
+- [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
 - [10 Awesome JavaScript Pro Tips - Know'em all](https://codedamn.com/news/10-awesome-javascript-pro-tips-know-em-all)
 
 #### Advanced JavaScript
