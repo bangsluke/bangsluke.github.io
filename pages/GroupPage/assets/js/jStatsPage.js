@@ -66,7 +66,6 @@ function getPapaData(selectedURL) {
     })
 }
 
-
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo(results) {
     var data = results.data
@@ -75,8 +74,6 @@ function showSelectedInfo(results) {
     clearTable();
     createFullTable(data); // Call the createFullTable function, passing the data from TableTop.
 }
-
-
 
 // Create a table of data from the received data.
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
@@ -119,10 +116,6 @@ function clearTable() {
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
 }
-
-
-
-
 
 // End the console timer.
 console.timeEnd();

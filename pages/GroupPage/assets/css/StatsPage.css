@@ -28,6 +28,7 @@
     /* margin-top: 2em; */
     padding: 1em;
     border-radius: 10px;
+	overflow: auto;
 }
 
 /* Style the drop down menu. */
@@ -42,7 +43,6 @@
     margin: auto;
 }
 
-
 /* Table classes */
 
 table {
@@ -51,6 +51,7 @@ table {
 	font-size: 14px;
     background-color: var(--accent-color-3,blue);
     color: white;
+	
 }
 
 th {
