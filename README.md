@@ -570,6 +570,7 @@ A collection of tools to support web development. Some are very much untried.
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 - [How you can simplify your CSS with :is()](https://www.youtube.com/watch?v=McC4QkCvbaY&ab_channel=KevinPowell)
 - [CSS Auditing](https://cssstats.com/)
+- [CSS Generators](https://www.smashingmagazine.com/2021/03/css-generators/)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
@@ -627,6 +628,9 @@ A collection of tools to support web development. Some are very much untried.
 - [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
 - [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Back To The Basics: How To Generate a Table With JavaScript](https://www.valentinog.com/blog/html-table/)
+
+#### JavaScript Tips
+- [10 Awesome JavaScript Pro Tips - Know'em all](https://codedamn.com/news/10-awesome-javascript-pro-tips-know-em-all)
 
 #### Advanced JavaScript
 - [Dynamic Module Imports](https://blog.webdevsimplified.com/2021-03/dynamic-module-imports/)
