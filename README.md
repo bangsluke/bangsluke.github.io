@@ -370,6 +370,7 @@ A collection of tools to support web development. Some are very much untried.
 ### Fonts
 - [Google Fonts](https://fonts.google.com/)
 - [Font Pairs](https://fontpair.co/)
+- [Brand font styles](https://www.reddit.com/r/coolguides/comments/m56gxf/brand_fonts_guide/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -388,6 +389,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Coolors](https://coolors.co/)
 - [Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [Colour Tool](https://material.io/resources/color/#!/?view.left=0&view.right=0)
+- [Harmonious colour combinations](https://www.reddit.com/r/coolguides/comments/m5ph7s/harmonious_colour_combinations/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
