@@ -326,15 +326,27 @@ Below are my recommended places to start learning and building.
 - [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
 - [SQL Server Tutorial 1 - Setup and Creating Your First Database](https://www.youtube.com/watch?v=TnW3CobKcp0&ab_channel=KindsonTheGenius)
 
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
 ##### Using Google Sheets As A Database
 - [How to use Google Sheets As Your Website Database](https://medium.com/@jaejohns/how-to-use-google-sheets-as-your-website-database-b0f2f13d0396)
 - [tabletop](https://github.com/jsoma/tabletop)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
+#### APIs
+
+- [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
+- [API Tutorial For Beginners With Google Sheets & Apps Script](https://www.benlcollins.com/apps-script/api-tutorial-for-beginners/)
+- [How to connect the Strava API with Google Sheets and Data Studio](https://www.benlcollins.com/spreadsheets/strava-api-with-google-sheets/)
+- [Strava API Application](https://www.strava.com/settings/api)
+- [Strava API Documentation](https://developers.strava.com/docs/reference/)
+- [Call of Duty Activision API](https://lierrmm.github.io/capi-docs/#/)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
 ### Understanding the Internet
 - [Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-- [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
