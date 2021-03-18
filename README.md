@@ -315,6 +315,12 @@ Below are my recommended places to start learning and building.
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
+#### Website Elements
+- [Add a Google calendar to your website](https://support.google.com/calendar/answer/41207?hl=en)
+- [Create & manage a public Google calendar](https://support.google.com/calendar/answer/37083?hl=en)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
 #### Setting Up A Database
 - [phpMyAdmin - Bringing MySQL to the web](https://www.phpmyadmin.net/)
 - [How to Connect MySQL Database with PHP Websites](https://www.cloudways.com/blog/connect-mysql-with-php/)
