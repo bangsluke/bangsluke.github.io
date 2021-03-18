@@ -42,7 +42,7 @@ function showInfo(results) {
 function getStatSelection(data) {
     var dropdownSelector = document.getElementById("stats-option"); // Select the "stats-option" element by id.
     var selectionValue = dropdownSelector.options[dropdownSelector.selectedIndex].value; // Get the option selected.
-    //var selectionText = dropdownSelector.options[dropdownSelector.selectedIndex].text; // Get the corresponding value from the option selected.
+    var selectionText = dropdownSelector.options[dropdownSelector.selectedIndex].text; // Get the corresponding value from the option selected.
     //alert("Selected Item: '" + selectionText + "', Value: '" + selectionValue + "'"); // Display an alert showing what the user has selected.
     //console.log("Selected value: " + selectionValue) // Log what the user has selected.
     //console.log(data.length); // Log the data array length.
@@ -55,8 +55,10 @@ function getStatSelection(data) {
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
+    updateStatsTitle(selectionText); // Update the stats title text.
 }
 
+// Get the data of the selected stats by using the selected URL. 
 function getPapaData(selectedURL) {
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -115,6 +117,12 @@ function clearTable() {
     while (myNode.firstChild) { // Loop through all child elements.
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
+}
+
+// Update the title above the stats table with the selected stats name.
+function updateStatsTitle(selectionText) {
+    var element = document.getElementById("stats-title");
+    element.innerHTML = selectionText;
 }
 
 // End the console timer.
