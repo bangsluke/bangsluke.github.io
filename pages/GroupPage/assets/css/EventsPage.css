@@ -43,3 +43,21 @@ h2 {
 	overflow: none;
 }
 
+/* Add calendar text styling. */
+
+.calendar-text-area {
+	height: max-content;
+    width: 95%;
+    margin: auto;
+	margin-top: 10px;
+	overflow-y: scroll;
+}
+
+p {
+	font-size: 10px;
+}
+
+a {
+	text-decoration: underline;
+}
+
