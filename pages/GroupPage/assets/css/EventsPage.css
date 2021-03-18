@@ -1,0 +1,36 @@
+/* EventsPage styling */
+
+/* The css styling used for the events page. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+}
+
+/* Add custom stats page styling. */
+
+.shared-calendar-area {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: max-content;
+    width: 100%;
+    margin: auto;
+    /* margin-top: 2em; */
+    /* padding: 1em; */
+    /* border-radius: 10px; */
+}
+
+.shared-calendar {
+	width: 100%;
+}
+
