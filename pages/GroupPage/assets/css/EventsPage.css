@@ -26,9 +26,11 @@
     width: 100%;
     margin: auto;
 	margin-top: 5px;
+	overflow: none;
 }
 
 .shared-calendar {
 	width: 100%;
+	overflow: none;
 }
 
