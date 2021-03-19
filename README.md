@@ -255,6 +255,7 @@ Below are my recommended places to start learning and building.
 <div style="text-align:center"><img src="https://logos-download.com/wp-content/uploads/2016/09/GitHub_logo.png" width="50" height="50"></div>
 
 ##### Git and GitHub Learning
+- [What is Git? A Beginner's Guide to Git Version Control](https://www.freecodecamp.org/news/what-is-git-learn-git-version-control/)
 - [Git & GitHub explained](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [GitHub Explained](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Git and GitHub training](https://www.classcentral.com/course/introduction-git-github-18060)
@@ -310,15 +311,24 @@ Below are my recommended places to start learning and building.
 - [How to plan and build a full project](https://www.reddit.com/r/learnprogramming/comments/lfxwa4/how_to_plan_and_build_a_project/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
-- [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
-- [swiperjs.com](https://swiperjs.com/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 #### Website Elements
+
+##### Google Calendar
 - [Add a Google calendar to your website](https://support.google.com/calendar/answer/41207?hl=en)
 - [Create & manage a public Google calendar](https://support.google.com/calendar/answer/37083?hl=en)
+
+##### Image Gallery
 - [Add an image gallery](https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp)
+- [swiperjs.com](https://swiperjs.com/)
+- [PhotoSwipe](https://photoswipe.com/)
+- [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
+
+##### Password Control
+- [JavaScriptKit Password Control](http://www.javascriptkit.com/script/cutindex6.shtml)
+- [User Authentication in Node.js with Passport.js and JWT – Full 6-Hour Course](https://www.freecodecamp.org/news/learn-to-implement-user-authentication-in-node-apps-using-passport-js/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -633,6 +643,7 @@ A collection of tools to support web development. Some are very much untried.
 - [JavaScript Arrays](https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/)
 - [JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/)
 - [8 Must Know JavaScript Array Methods](https://www.youtube.com/watch?v=R8rmfD9Y5-c)
+- [Learn About Algorithms and Data Structures in this Free 6-hour Course](https://www.freecodecamp.org/news/algorithms-and-data-structures-free-treehouse-course/)
 
 #### JavaScript Debugging & Errors
 - [JavaScript console](https://markodenic.com/use-console-log-like-a-pro/)
@@ -707,6 +718,8 @@ A collection of tools to support web development. Some are very much untried.
 > TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for the development of large applications and transcompiles to JavaScript.
 
 <div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" width="50" height="50"></div>
+
+- [Learn TypeScript With This Crash Course](https://www.freecodecamp.org/news/learn-typescript-with-this-crash-course/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
