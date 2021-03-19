@@ -361,7 +361,7 @@ a {
 
 /* Text styling. */
 
-p, h1, h2, ul, legend {
+p, h1, h2, h3, h4, h5, h6, ul, legend {
 	color: var(--accent-color-white);
 }
 

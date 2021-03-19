@@ -1,5 +1,17 @@
 // jGallerySubPage.js JavaScript Functions
 
+// Wait for the window to load and then run the init function below.
+window.addEventListener('DOMContentLoaded', init)
+
+// Initially receive the clicked album name from the Gallery Page.
+function init() {
+    // https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
+    var clickedAlbumName = sessionStorage.getItem("clickedAlbumName"); // Retrieve the variable passed to session storage.
+    console.log(clickedAlbumName); // Log the passed variable.
+    var element = document.getElementById("pageMainHeader"); // Grab the very top title element.
+    element.innerHTML = clickedAlbumName + " Gallery"; // Set the title to be the passed variable.
+}
+
 // Gallery SubPage scripts
 // https://photoswipe.com/
 // https://codepen.io/dimsemenov/pen/ZYbPJM
