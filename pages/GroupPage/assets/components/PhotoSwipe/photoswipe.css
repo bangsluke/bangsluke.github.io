@@ -4,6 +4,14 @@
 	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
 */
 
+
+
+/* Luke's own added CSS. */
+button {
+    color: white;
+}
+
+
 /* pswp = photoswipe */
 
 .pswp {

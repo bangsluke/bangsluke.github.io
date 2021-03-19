@@ -20,6 +20,13 @@
 
 /* Add custom gallery sub page styling. */
 
+.gallery-subpage-image-area {
+    height: max-content;
+    overflow-y: scroll;
+}
+
+
+
 
 /* https://photoswipe.com/ */
 /* https://codepen.io/dimsemenov/pen/ZYbPJM */
@@ -41,3 +48,7 @@
   .my-gallery figcaption {
     display: none;
   }
+
+
+
+  
