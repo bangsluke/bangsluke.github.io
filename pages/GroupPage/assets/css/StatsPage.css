@@ -20,7 +20,7 @@
 
 /* Add custom stats page styling. */
 
-.stats-table-area {
+.stats-selection-area {
     background-color: rgba(255, 255, 255, 0.2);
     height: max-content;
     width: 95%;
@@ -46,6 +46,13 @@
 	text-align: center;
 	color: var(--accent-color-white,white);
 	padding-bottom: 1em;
+}
+
+.stats-table-area {
+    height: max-content;
+    width: 96%;
+	margin: auto;
+    margin-top: 2em;
 }
 
 /* Wrapper div around the table. */
