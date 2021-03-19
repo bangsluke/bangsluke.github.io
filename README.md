@@ -318,6 +318,7 @@ Below are my recommended places to start learning and building.
 #### Website Elements
 - [Add a Google calendar to your website](https://support.google.com/calendar/answer/41207?hl=en)
 - [Create & manage a public Google calendar](https://support.google.com/calendar/answer/37083?hl=en)
+- [Add an image gallery](https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
