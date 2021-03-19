@@ -1,0 +1,42 @@
+/* Gallery Sub Page styling */
+
+/* The css styling used for the Gallery Sub page. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+}
+
+/* Add custom gallery sub page styling. */
+
+/* https://photoswipe.com/ */
+/* https://codepen.io/dimsemenov/pen/ZYbPJM */
+
+.my-gallery {
+    width: 100%;
+    float: left;
+  }
+  .my-gallery img {
+    width: 100%;
+    height: auto;
+  }
+  .my-gallery figure {
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 150px;
+  }
+  .my-gallery figcaption {
+    display: none;
+  }
