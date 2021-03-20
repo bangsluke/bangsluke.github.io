@@ -6,6 +6,8 @@
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
+console.log("Header Component Added")
+
 const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
 
@@ -348,6 +350,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(headerTemplate.content);
+
   }
 }
 
