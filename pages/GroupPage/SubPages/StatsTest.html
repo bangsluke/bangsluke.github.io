@@ -111,18 +111,15 @@
 	<!-- Footer -->
 	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
 
-	<footer class="footer fadein">
+	<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
+	<footer-component></footer-component>
 
-		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-		<a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
-		<a href="#">&nbsp</a>
-		<a href="mailto:bangsluke@gmail.com" class="icon fa fa-envelope">&nbsp</a>
-
-	</footer>
+	
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
+	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
 
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"

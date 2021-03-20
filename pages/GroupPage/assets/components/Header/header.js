@@ -8,12 +8,14 @@
 
 const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
-  
+
+    <!-- Header CSS -->
+
     <style>
         
     
         /* Header styling. */
-        /* From "/pages/GroupPage/assets/components/CSS Files/header.css" */
+        /* From "/pages/GroupPage/assets/components/Header/CSS Files/header.css" */
 
             .subpage-header-area {
                 /* background-color: lightcoral; */
@@ -118,7 +120,7 @@ headerTemplate.innerHTML = `
 
 
         /* Top Menu styling. */
-        /* From "/pages/GroupPage/assets/components/CSS Files/TopMenu.css" */
+        /* From "/pages/GroupPage/assets/components/Header/CSS Files/TopMenu.css" */
 
             .topMenu {
                 background: var(--accent-color-black);
@@ -201,7 +203,7 @@ headerTemplate.innerHTML = `
 
 
         /* Side Menu CSS */
-        /* From "/pages/GroupPage/assets/components/CSS Files/SideMenu.css" */
+        /* From "/pages/GroupPage/assets/components/Header/CSS Files/SideMenu.css" */
 
             .burgericon-container {
                 /* background: blue; */
@@ -292,7 +294,7 @@ headerTemplate.innerHTML = `
 
     </style>
   
-    
+    <!-- Header HTML -->
 
     <header class="subpage-header-area">
         
