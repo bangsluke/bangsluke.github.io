@@ -35,9 +35,9 @@
 	<div class="allContentFrame wrapper">
 
 		<!-- Add the common website header using shadow DOMs. See /pages/GroupPage/assets/components/Header/header.js for the header code. -->
-		<header-component></header-component>
-
-		
+		<header-component>
+			<span slot="pageMainHeader">Ideas</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+		</header-component>
 
 		<!-- Side Menu - not considered part of the "main-content-area" -->
 
@@ -155,6 +155,7 @@
 					- Build SideMenu once and then re-use. https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 					- Use DOM page details to change inline styling to external styling for header and footer to make long term manipulation easier. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
 					- Fix header Shadow DOM to change the header title on all pages.
+					- Fix the header on Gallery Sub Page to show the selected album. 
 					- Delete "StatsTest.html" when done with it.
 					- Clean up all CSS now that most is in JavaScript files for the shadow DOM elements.
 					- Get header to become bigger on larger devices.

@@ -312,7 +312,7 @@ headerTemplate.innerHTML = `
         <!-- Add some heading text. Add it within a container. -->
         <div class="heading-container">
             <!-- Add some heading text. -->
-            <h1 class="center subpage-header-text fadein" id="pageMainHeader">Stats</h1>
+            <h1 class="center subpage-header-text fadein" id="pageMainHeader"><slot name="pageMainHeader">Group Page</slot></h1>
         </div>
 
         <!-- Top Menu - not considered part of the "main-content-area" -->

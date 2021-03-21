@@ -34,9 +34,9 @@
 	<div class="allContentFrame wrapper">
 
 		<!-- Add the common website header using shadow DOMs. See /pages/GroupPage/assets/components/Header/header.js for the header code. -->
-		<header-component></header-component>
-
-		
+		<header-component>
+			<span slot="pageMainHeader">Events</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+		</header-component>
 
 		<!-- Side Menu - not considered part of the "main-content-area" -->
 
@@ -148,8 +148,6 @@
 	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
 	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
 	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
-
-	<script src="/pages/GroupPage/assets/js/jEventsPage.js"></script> <!-- Get EventsPage JS -->
 
 </body>
 
