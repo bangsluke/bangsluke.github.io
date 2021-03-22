@@ -103,7 +103,8 @@ body {
     margin: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15);
+    /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .15); /* Old box shadow */
+    box-shadow: -6px 0 6px -6px rgba(0, 0, 0, .15), 6px 0 6px -6px rgba(0, 0, 0, .15); /* https://www.reddit.com/r/css/comments/magl1z/how_to_apply_boxshadow_just_to_the_left_and_right/?utm_source=share&utm_medium=ios_app&utm_name=iossmf */
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
