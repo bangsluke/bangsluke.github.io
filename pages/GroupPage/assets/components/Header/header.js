@@ -15,7 +15,7 @@ headerTemplate.innerHTML = `
 
     <style>
         
-        /* Header styling moved to Header.css. */
+        /* Header styling moved to HeaderComponent.css. */
 
     </style>
   
@@ -77,13 +77,13 @@ class Header extends HTMLElement {
         // Create a shadow root
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
-        // Apply external styles to the shadow dom
+        // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');
         styleSheet.setAttribute('rel', 'stylesheet');
         styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/Header/HeaderComponent.css');
         shadowRoot.appendChild(styleSheet);
         
-        // Attach the created elements to the shadow dom
+        // Attach the created elements to the shadow DOM
         shadowRoot.appendChild(headerTemplate.content);
 
     }

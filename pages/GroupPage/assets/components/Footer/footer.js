@@ -13,49 +13,7 @@ footerTemplate.innerHTML = `
 
     <style>
     
-        /* Footer styling. */
-        /* From "/pages/GroupPage/assets/components/Footer/CSS Files/footer.css" */
-
-        .footer {
-          /* background-color: green; */
-          /* background: var(--accent-color-black); */
-          background-color: rgba(var(--accent-color-black-rgb), 0.5);
-          grid-area: footer;
-          width: 100%;
-          top: 90%;
-          color: var(--accent-color-white);
-          justify-self: center;
-          align-content: center;
-          text-align: center;
-          padding: auto;
-        }
-        
-        /* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
-        
-        .footer, .push {
-          height: 25px;
-          /* .push must be the same height as .footer */
-        }
-        
-        .footer a {
-          color: var(--accent-color-white);
-          text-decoration: none;
-          font-size: 20px;
-        }
-        
-        .footer a:hover {
-          color: var(--accent-color-1);
-          text-decoration: var(--accent-color-white);
-        }
-        
-        /* Footer media queries. */
-        
-        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-          /* Smartphones - Covers most phones such as iPhone SE (my phone). */
-          .footer a {
-            font-size: 10px;
-          }
-        }
+      /* Footer styling moved to FooterComponent.css. */
 
     </style>
 
@@ -75,14 +33,26 @@ footerTemplate.innerHTML = `
 
 `;
 
+// Create a class for the element
 class Footer extends HTMLElement {
-  constructor() {
-    super();
-  }
 
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
-    shadowRoot.appendChild(footerTemplate.content);
+    // Always call super first in constructor
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        // Create a shadow root
+        const shadowRoot = this.attachShadow({ mode: 'closed' });
+
+        // Apply external styles to the shadow DOM
+        const styleSheet = document.createElement('link');
+        styleSheet.setAttribute('rel', 'stylesheet');
+        styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/Footer/FooterComponent.css');
+        shadowRoot.appendChild(styleSheet);
+
+        // Attach the created elements to the shadow DOM
+        shadowRoot.appendChild(footerTemplate.content);
   }
 }
 
