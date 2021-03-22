@@ -4,10 +4,14 @@
 // This sideMenu.js file creates a Side Menu template which is then used by the majority of pages on the website.
 // All HTML for the side menu is controlled from within this file, whilst the CSS is dealt with in an external stylesheet.
 
+// THe functionality of the side menu is defined further down.
+
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
+//console.log("Side Menu Component Added")
+
 const sideMenuTemplate = document.createElement('template');
-sideMenu.innerHTML = `
+sideMenuTemplate.innerHTML = `
   
     <!-- sideMenu CSS -->
 
@@ -45,24 +49,42 @@ sideMenu.innerHTML = `
 // Create a class for the element
 class sideMenu extends HTMLElement {
 
-    // Always call super first in constructor
-    constructor() {
-        super();
-    }
+  // Always call super first in constructor
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        // Create a shadow root
-        const shadowRoot = this.attachShadow({ mode: 'closed' });
+  connectedCallback() {
+    // Create a shadow root
+    const shadowRoot = this.attachShadow({ mode: 'closed' });
 
-        // Apply external styles to the shadow DOM
-        const styleSheet = document.createElement('link');
-        styleSheet.setAttribute('rel', 'stylesheet');
-        styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/SideMenu/SideMenuComponent.css');
-        shadowRoot.appendChild(styleSheet);
+    // Apply external styles to the shadow DOM
+    const styleSheet = document.createElement('link');
+    styleSheet.setAttribute('rel', 'stylesheet');
+    styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/SideMenu/SideMenuComponent.css');
+    shadowRoot.appendChild(styleSheet);
 
-        // Attach the created elements to the shadow DOM
-        shadowRoot.appendChild(sideMenuTemplate.content);
+    // Attach the created elements to the shadow DOM
+    shadowRoot.appendChild(sideMenuTemplate.content);
   }
 }
 
-customElements.define('sideMenu-component', sideMenu);
+customElements.define('side-menu-component', sideMenu);
+
+// jSideBar.js JavaScript Functions
+
+// Side bar scripts
+// https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+
+function openNav() {
+  document.getElementById("side-menu").style.width = "300px";
+  // document.getElementById("side-menu").style.borderleft = '1px solid #000';
+  // document.getElementById("content-area").style.marginRight = "300px"; // Re-add if you want the content area to shrink on menu expansion.
+  document.getElementById("burgericon").style.display = "none";
+}
+function closeNav() {
+  document.getElementById("side-menu").style.width = "0";
+  // document.getElementById("side-menu").style.borderleft = "0";
+  // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
+  document.getElementById("burgericon").style.display = "inline";
+}

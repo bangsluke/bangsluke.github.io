@@ -6,6 +6,8 @@
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
+//console.log("Footer Component Added")
+
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
   
