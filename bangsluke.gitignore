@@ -19,6 +19,18 @@ images/Archive/
 # ignore all files in any directory named pages/GroupPage/Archive/ as don't need these.
 pages/GroupPage/Archive/
 
+# ignore all files in any directory named pages/GroupPage/assets/components/Header/Archive/ as don't need these.
+pages/GroupPage/assets/components/Header/Archive/
+
+# ignore all files in any directory named pages/GroupPage/assets/components/SideMenu/Archive/ as don't need these.
+pages/GroupPage/assets/components/SideMenu/Archive/
+
+# ignore all files in any directory named pages/GroupPage/assets/components/Footer/Archive/ as don't need these.
+pages/GroupPage/assets/components/Footer/Archive/
+
+
+
+
 
 
 
