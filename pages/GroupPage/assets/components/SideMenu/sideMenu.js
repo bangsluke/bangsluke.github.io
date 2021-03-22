@@ -65,7 +65,7 @@ class sideMenu extends HTMLElement {
 
     // Attach the created elements to the shadow DOM
     shadowRoot.appendChild(sideMenuTemplate.content);
-  
+
   }
 
 }
@@ -80,10 +80,16 @@ customElements.define('side-menu-component', sideMenu);
 function openNav() {
 
   // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "300px"; // Increase the width of the side-menu to make it visible.
-  
-  // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-  document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "none"; // Hide the burger icon.
+  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "250px"; // Increase the width of the side-menu to make it visible.
+
+  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+  var myEle = document.getElementsByTagName('header-component')[0];
+  if (myEle) {
+    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+    document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "none"; // Hide the burger icon.
+  } else {
+    //console.log("not doing anything");
+  }
 
   // document.getElementById("content-area").style.marginRight = "300px"; // Re-add if you want the content area to shrink on menu expansion.
 
@@ -93,9 +99,15 @@ function closeNav() {
 
   // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
   document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
-  
-  // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-  document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "inline"; // Show the burger icon.
+
+  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+  var myEle = document.getElementsByTagName('header-component')[0];
+  if (myEle) {
+    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+    document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "inline"; // Show the burger icon.
+  } else {
+    //console.log("not doing anything");
+  }
 
   // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
 
