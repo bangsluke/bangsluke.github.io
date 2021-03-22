@@ -685,6 +685,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Styled CSS components in React Video](https://www.reddit.com/r/learnjavascript/comments/jb59kp/animated_video_explaining_styled_components_in/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [JavaScript React Library](https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/)
 - [Build from scratch React sidebar navigation with CSS Grid & Flexbox](https://www.youtube.com/watch?v=-UGnfcT5rXk&list=PLjAJM_6LHbL8WQzZq0uMaiJFjebml8dyU&index=13&ab_channel=WebSteps)
+- [I designed and coded this react portfolio template for everyone](https://www.reddit.com/r/webdev/comments/mage6r/coded_this_portfolio_template_for_everyone/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Full guide to deploying a functional React app](https://www.reddit.com/r/reactjs/comments/m9zfzf/i_wrote_a_guide_to_help_you_deploy_a_react_app/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
