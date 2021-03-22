@@ -2,7 +2,7 @@
 
 // Common Footer script
 // This footer.js file creates a footer template which is then used by the majority of pages on the website.
-// All HTML and CSS for the footer is controlled from within this file.
+// All HTML for the footer is controlled from within this file, whilst the CSS is dealt with in an external stylesheet.
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
