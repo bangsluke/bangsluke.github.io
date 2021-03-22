@@ -14,9 +14,7 @@ footerTemplate.innerHTML = `
     <!-- Footer CSS -->
 
     <style>
-    
       /* Footer styling moved to FooterComponent.css. */
-
     </style>
 
     <!-- Footer HTML -->
@@ -45,7 +43,7 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
         // Create a shadow root
-        const shadowRoot = this.attachShadow({ mode: 'closed' });
+        const shadowRoot = this.attachShadow({ mode: 'open' });
 
         // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');

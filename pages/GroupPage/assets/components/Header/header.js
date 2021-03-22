@@ -14,9 +14,7 @@ headerTemplate.innerHTML = `
     <!-- Header CSS -->
 
     <style>
-        
         /* Header styling moved to HeaderComponent.css. */
-
     </style>
   
     <!-- Header HTML -->
@@ -56,7 +54,7 @@ headerTemplate.innerHTML = `
 
             <!-- Add burger icon with JavaScript functionality. -->
             <!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
-            <img class="center burgericon fadein" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
+            <img class="center burgericon fadein" id="burgericon" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
                 alt="Burger Menu Icon" onclick="openNav()">
 
         </div>

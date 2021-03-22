@@ -16,9 +16,7 @@ sideMenuTemplate.innerHTML = `
     <!-- sideMenu CSS -->
 
     <style>
-    
       /* SideMenu styling moved to SideMenuComponent.css. */
-
     </style>
 
     <!-- sideMenu HTML -->
@@ -55,8 +53,9 @@ class sideMenu extends HTMLElement {
   }
 
   connectedCallback() {
+
     // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // Apply external styles to the shadow DOM
     const styleSheet = document.createElement('link');
@@ -66,7 +65,9 @@ class sideMenu extends HTMLElement {
 
     // Attach the created elements to the shadow DOM
     shadowRoot.appendChild(sideMenuTemplate.content);
+  
   }
+
 }
 
 customElements.define('side-menu-component', sideMenu);
@@ -77,14 +78,25 @@ customElements.define('side-menu-component', sideMenu);
 // https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
 
 function openNav() {
-  document.getElementById("side-menu").style.width = "300px";
-  // document.getElementById("side-menu").style.borderleft = '1px solid #000';
+
+  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "300px"; // Increase the width of the side-menu to make it visible.
+  
+  // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+  document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "none"; // Hide the burger icon.
+
   // document.getElementById("content-area").style.marginRight = "300px"; // Re-add if you want the content area to shrink on menu expansion.
-  document.getElementById("burgericon").style.display = "none";
+
 }
+
 function closeNav() {
-  document.getElementById("side-menu").style.width = "0";
-  // document.getElementById("side-menu").style.borderleft = "0";
+
+  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
+  
+  // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+  document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "inline"; // Show the burger icon.
+
   // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
-  document.getElementById("burgericon").style.display = "inline";
+
 }
