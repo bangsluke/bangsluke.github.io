@@ -16,8 +16,6 @@
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/GroupPage/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
-	<link href="/pages/GroupPage/assets/css/TopMenu.css" rel="stylesheet"> <!-- Top Menu styling -->
-	<link href="/pages/GroupPage/assets/css/SideMenu.css" rel="stylesheet"> <!-- Side Menu styling -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
@@ -37,32 +35,11 @@
 			<span slot="pageMainHeader" id="pageMainHeader">Users</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
 		</header-component>
 
-		<!-- Side Menu - not considered part of the "main-content-area" -->
-
-		<div class="sideMenu" id="side-menu">
-
-			<!-- The x close button. -->
-			<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
-
-			<!-- The main side bar menu options. -->
-			<div class="main-menu">
-				<h2>Menu</h2>
-				<a href="/pages/GroupPage/GroupPageHome.html"><i class="fa fa-home"></i>Home</a>
-				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-				<a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
-				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
-				<a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a>
-			</div>
-
-		</div>
+		<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
 
 		<!-- Main Page Content. -->
 		<div class="main-content-area">
-
-
-
 
 			<div class="subpage-content-area fadein">
 
@@ -199,8 +176,8 @@
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
+	<script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script> <!-- Add the common sideMenu JS -->
 	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
-	<script src="/pages/GroupPage/assets/js/jSideBar.js"></script> <!-- Get Sidebar JS -->
 
 </body>
 
