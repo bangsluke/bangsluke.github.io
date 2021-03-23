@@ -37,8 +37,7 @@
 
 <body>
 
-	<!-- All Page Content. -->
-	<div class="allContentFrame wrapper">
+	<header>
 
 		<!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
 		<div class="subpage-header-area homepage">
@@ -60,7 +59,7 @@
 
 			<!-- Top Menu - not considered part of the "main-content-area" -->
 
-			<div class="topMenu" id="top-menu">
+			<nav class="topMenu" id="top-menu">
 				<!-- The main top nav bar options. -->
 				<a href="/pages/GroupPage/GroupPageHome.html"><i class="fa fa-home"></i>Home</a>
 				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
@@ -69,7 +68,7 @@
 				<a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
 				<a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
 				<a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a>
-			</div>
+			</nav>
 
 			<!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
 			<div class="burgericon-container">
@@ -83,6 +82,11 @@
 
 		</div>
 
+	</header>
+
+	<!-- All Page Content. This is all the content between the header and footer. -->
+	<div class="allContentFrame wrapper">
+
 		<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
 		<side-menu-component></side-menu-component>
 
@@ -91,14 +95,14 @@
 
 			<!-- Main content section. -->
 			<div class="content-text fadein">
-				
+
 				<!-- Add pink main header box. -->
 				<a href="/pages/GroupPage/SubPages/LoginPage.html">
 					<div class="headercontainer">
 						<h1>Tits Group Page</h1>
 					</div>
 				</a>
-				
+
 				<!-- Add link below to enter the site. -->
 				<a href="/pages/GroupPage/SubPages/LoginPage.html">
 					<h3>Click to enter</h3>
@@ -114,15 +118,22 @@
 	</div>
 
 	<!-- Footer -->
-	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
 
-	<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
-	<footer-component></footer-component>
+	<footer>
+
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+		<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
+		<footer-component></footer-component>
+
+	</footer>
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	<script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script> <!-- Add the common sideMenu JS -->
-	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
+	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+	<script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+	<!-- Add the common sideMenu JS -->
+	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<!-- Add the common footer JS -->
 
 </body>
 
