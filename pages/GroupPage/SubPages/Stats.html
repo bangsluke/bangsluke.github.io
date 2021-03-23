@@ -28,13 +28,20 @@
 
 <body>
 
-	<!-- All Page Content. This is all the content between the header and footer. -->
-	<div class="allContentFrame wrapper">
+	<!-- Header -->
+
+	<header>
 
 		<!-- Add the common website header using shadow DOMs. See /pages/GroupPage/assets/components/Header/header.js for the header code. -->
 		<header-component>
 			<span slot="pageMainHeader" id="pageMainHeader">Stats</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
 		</header-component>
+
+	</header>
+
+	<!-- All Page Content. This is all the content between the header and footer. -->
+	
+	<div class="allContentFrame wrapper">
 
 		<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
 		<side-menu-component></side-menu-component>
@@ -90,10 +97,15 @@
 	</div>
 
 	<!-- Footer -->
-	<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+	
+	<footer>
 
-	<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
-	<footer-component></footer-component>
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+		<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
+		<footer-component></footer-component>
+
+	</footer>
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
