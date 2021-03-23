@@ -1,4 +1,0 @@
-AuthUserFile /pages/GroupPage/SubPages/Archive/.hthdjsud
-AuthType Basic
-AuthName "My Secret Folder"
-Require valid-user
