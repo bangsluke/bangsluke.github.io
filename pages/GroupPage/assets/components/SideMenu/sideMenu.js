@@ -30,14 +30,13 @@ sideMenuTemplate.innerHTML = `
 
             <!-- The main side bar menu options. -->
             <div class="main-menu">
-                <h2>Menu</h2>
-                <a href="/pages/GroupPage/GroupPageHome.html"><i class="fa fa-home"></i>Home</a>
-                <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-                <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
-                <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-                <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-                <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
-                <!-- <a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a> -->
+              <a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
+              <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
+              <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
+              <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+              <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+              <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+              <!-- <a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a> -->
             </div>
 
         </div>

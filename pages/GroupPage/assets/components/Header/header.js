@@ -25,7 +25,7 @@ headerTemplate.innerHTML = `
         <div class="avatar-container">
 
             <!-- Add group icon image. -->
-            <a href="/pages/GroupPage/GroupPageHome.html"><img class="avatar center fadein"
+            <a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img class="avatar center fadein"
                     src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
         </div>
@@ -38,9 +38,9 @@ headerTemplate.innerHTML = `
 
         <!-- Top Menu - not considered part of the "main-content-area" -->
 
+        <!-- The main top nav bar options. -->
         <nav class="topMenu" id="top-menu">
-            <!-- The main top nav bar options. -->
-            <a href="/pages/GroupPage/GroupPageHome.html"><i class="fa fa-home"></i>Home</a>
+            <a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
             <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
             <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
             <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
