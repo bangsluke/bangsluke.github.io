@@ -21,6 +21,9 @@ sideMenuTemplate.innerHTML = `
 
     <!-- sideMenu HTML -->
 
+    <!-- Link into font-awesome logos and icons. -->
+	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Side Menu - not considered part of the "main-content-area" -->
 
         <div class="sideMenu" id="side-menu">
