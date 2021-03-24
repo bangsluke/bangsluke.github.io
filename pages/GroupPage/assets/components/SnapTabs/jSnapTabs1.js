@@ -3,7 +3,8 @@
 // Web Tabs (snap tabs) scripts
 // https://web.dev/building-a-tabs-component/
 
-import 'https://argyleink.github.io/scroll-timeline/dist/scroll-timeline.js'
+// Import function removed as contents of below link copied into scroll-timeline.js.
+//import 'https://argyleink.github.io/scroll-timeline/dist/scroll-timeline.js'
 
 const { matches: motionOK } = window.matchMedia(
     '(prefers-reduced-motion: no-preference)'
