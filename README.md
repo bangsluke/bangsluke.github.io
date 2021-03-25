@@ -516,9 +516,9 @@ A collection of tools to support web development. Some are very much untried.
 
 > **And selector (.)**: Select elements that match all the selector combinations. If you separate CSS classes with full stops, your rules are applied slightly different. E.g. section.feature-box { would mean you're apply the rules to all section elements that have the class "feature-box".
 
-> **Descendant selector ( )**: Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
+> **Descendant selector ( )**: Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
 
-> **Direct Child (>)**: Select elements that are descendants of the first element. If you separate CSS classes with spaces, your rules are applied differently again. E.g. section div { would mean you're apply the rules to all div elements that are structured under a section.
+> **Direct Child (>)**: Select elements that are direct children of the first element. If you separate CSS classes with ">", your rules are applied differently again. E.g. div > a { would mean you're apply the rules to all anchors that are direct children of a div element.
 
 > **:root** is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.
 
