@@ -406,14 +406,25 @@ A collection of tools to support web development. Some are very much untried.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Images & Shapes
-- [Shapefest (library of free 3D shapes)](https://www.shapefest.com/)
+
+#### Images
+- [photopea free image editor](https://www.photopea.com/)
+- [Remove image background free](https://www.remove.bg/)
 - [Wannathis (3d Illustrations and freebies)](https://wannathis.one/)
-- [CSS Clippy Tool used to create interesting shapes](https://bennettfeely.com/clippy/)
 - [Unsplash free images](https://unsplash.com/)
 - [CSS Background Images](https://www.magicpattern.design/tools/css-backgrounds)
-- [Material Design Icons](https://material.io/resources/icons/?style=baseline)
+
+#### Shapes
+- [Shapefest (library of free 3D shapes)](https://www.shapefest.com/)
+- [CSS Clippy Tool used to create interesting shapes](https://bennettfeely.com/clippy/)
 - [SVG Shapes Generator](https://haikei.app/)
 - [Blobbs.app](https://blobs.app/?e=6&gw=6&se=341&c=d1d8e0&o=0)
+
+#### Icons
+- [thenounproject icons](https://thenounproject.com/)
+- [Material Design Icons](https://material.io/resources/icons/?style=baseline)
+
+#### Other
 - [Glass Card Designer](https://glassmorphism.com/)
 - [Shadow Designer](https://neumorphism.io/#e0e0e0)
 
