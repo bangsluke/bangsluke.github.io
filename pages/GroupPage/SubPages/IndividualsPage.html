@@ -89,22 +89,19 @@
 
                         <article id="profile">
 
-                            <img src="/images/OnlineProfilePicture.png" class="individuals-picture center fadein"
-                                alt="bangsluke Online Profile Photo">
+                            <details>An individual page for each member providing them details pertinent to them (their address, their favourite teams league position and upcoming fixtures).</details>
+
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg" class="individuals-picture center fadein"
+                                alt="bangsluke Online Profile Photo" id="profilePicture">
 
                             <br>
 
-                            <h2>Name: Luke Bangs</h2>
-
-                            <p>An individual page for each member providing them details pertinent to them (their
-                                address, their favourite teams league position and upcoming fixtures).</p>
-
-                            <p>Height: 1.94cm</p>
-                            <p>Weight: 92KG</p> <!-- Add Andy as 3 foot. -->
-                            <p>Chat Level: 7/10</p>
-                            <p>Looks: Solid 6</p>
-                            <p>Ashcombe Year Book Quote: </p>
-                            <p>Need to find quote...</p>
+                            <h2 id="fullName">Luke Bangs</h2>
+                            <h4>Height: <p id="height">--ft</p></h4>
+                            <h4>Weight: <p id="weight">--KG</p></h4>
+                            <h4>Chat Level: 7/10</h4>
+                            <h4>Looks: Solid 6</h4>
+                            <h4>Ashcombe Year Book Quote: </h4><q id="ashcombeYearBookQuote">Wanker</q>
 
                         </article>
 
@@ -205,10 +202,13 @@
 	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
     <script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script> <!-- Add the common sideMenu JS -->
     <script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
-    <script src="/pages/GroupPage/assets/components/SnapTabs/scroll-timeline.js"></script> <!-- Get Scroll-Timeline JS -->
-    <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
-    <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
-    <script src="/pages/GroupPage/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
+    <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/scroll-timeline.js"></script> <!-- Get Scroll-Timeline JS -->
+    <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+    <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
+    <!-- <script src="/pages/GroupPage/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script> <!-- Get the first PapaParse JS -->
+    <script src="/pages/GroupPage/assets/js/jIndividualsPage.js"></script> <!-- Get Individuals Page JS -->
 
 </body>
 
