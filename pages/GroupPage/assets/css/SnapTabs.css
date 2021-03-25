@@ -25,11 +25,11 @@
 
 }
 
-.body {
+/* Added Luke Styling. */
+
+/* .body {
     overflow-y: auto;
-}
-
-
+} */
 
 
 .snap-tabs-container {
@@ -44,8 +44,19 @@
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     /* font-family: var(--main-font-family); */
+    z-index: 1;
+    /* visibility: hidden; */
 }
 
+
+/* a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+} */
+
+/* Original Snap Tabs CSS Styling. */
 
 p {
     max-inline-size: 35ch;
