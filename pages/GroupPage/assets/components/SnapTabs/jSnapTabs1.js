@@ -6,6 +6,8 @@
 // Import function removed as contents of below link copied into scroll-timeline.js.
 //import 'https://argyleink.github.io/scroll-timeline/dist/scroll-timeline.js'
 
+console.log("jSnapTabs1.js loaded");
+
 const { matches: motionOK } = window.matchMedia(
     '(prefers-reduced-motion: no-preference)'
 )
@@ -30,7 +32,7 @@ const sectionScrollTimeline = new ScrollTimeline({
   - Color is active when its the current index
 */
 tabnavitems.forEach(navitem => {
-    console.log(1);
+    console.log("SnapTabs1:1 - tabnavitems.forEach(navitem)");
     navitem.animate({
         color: [...tabnavitems].map(item =>
             item === navitem
@@ -45,7 +47,7 @@ tabnavitems.forEach(navitem => {
 })
 
 if (motionOK) {
-    console.log(2);
+    console.log("SnapTabs1:2 - if (motionOK)");
     tabindicator.animate({
         transform: [...tabnavitems].map(({ offsetLeft }) =>
             `translateX(${offsetLeft}px)`),
@@ -76,25 +78,25 @@ const determineActiveTabSection = () => {
 }
 
 tabnav.addEventListener('click', e => {
-    console.log(3);
+    console.log("SnapTabs1:3 - tabnav.addEventListener('click')");
     if (e.target.nodeName !== "A") return
     setActiveTab(e.target)
 })
 
 tabsection.addEventListener('scroll', () => {
-    console.log(4);
+    console.log("SnapTabs1:4 - tabsection.addEventListener('scroll')");
     clearTimeout(tabsection.scrollEndTimer)
     tabsection.scrollEndTimer = setTimeout(
         determineActiveTabSection
         , 100)
 })
 
-window.onload = () => {
-    console.log(5);
-    if (location.hash)
-        tabsection.scrollLeft = document
-            .querySelector(location.hash)
-            .offsetLeft
+// window.onload = () => {
+//     console.log("SnapTabs1:5 - window.onload");
+//     if (location.hash)
+//         tabsection.scrollLeft = document
+//             .querySelector(location.hash)
+//             .offsetLeft
 
-    determineActiveTabSection()
-}
+//     determineActiveTabSection()
+// }

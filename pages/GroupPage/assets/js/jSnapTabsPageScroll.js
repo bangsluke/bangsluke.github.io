@@ -2,6 +2,8 @@
 
 // https://stackoverflow.com/a/13067009/14290169
 
+console.log("jSnapTabsPageScroll.js loaded");
+
 (function(document, history, location) {
     var HISTORY_SUPPORT = !!(history && history.pushState);
   
