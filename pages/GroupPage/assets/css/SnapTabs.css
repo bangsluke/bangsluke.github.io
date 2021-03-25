@@ -25,6 +25,13 @@
 
 }
 
+.body {
+    overflow-y: auto;
+}
+
+
+
+
 .snap-tabs-container {
     background-color: green;
     width: 100%;

@@ -10,16 +10,14 @@ const { matches: motionOK } = window.matchMedia(
     '(prefers-reduced-motion: no-preference)'
 )
 
-// grab and stash elements
+// Grab and stash elements
 const tabgroup = document.querySelector('snap-tabs')
 const tabsection = tabgroup.querySelector(':scope > section')
 const tabnav = tabgroup.querySelector(':scope nav')
 const tabnavitems = tabnav.querySelectorAll(':scope a')
 const tabindicator = tabgroup.querySelector(':scope .snap-indicator')
 
-/* 
-  shared timeline for .indicator 
-  and nav > a colors */
+// Shared timeline for .indicator and nav > a colors */
 const sectionScrollTimeline = new ScrollTimeline({
     scrollSource: tabsection,
     orientation: 'inline',
@@ -27,10 +25,12 @@ const sectionScrollTimeline = new ScrollTimeline({
 })
 
 /*
-  for each nav link
-  - animate color based on the scroll timeline
-  - color is active when its the current index*/
+  For each nav link:
+  - Animate color based on the scroll timeline
+  - Color is active when its the current index
+*/
 tabnavitems.forEach(navitem => {
+    console.log(1);
     navitem.animate({
         color: [...tabnavitems].map(item =>
             item === navitem
@@ -45,6 +45,7 @@ tabnavitems.forEach(navitem => {
 })
 
 if (motionOK) {
+    console.log(2);
     tabindicator.animate({
         transform: [...tabnavitems].map(({ offsetLeft }) =>
             `translateX(${offsetLeft}px)`),
@@ -75,11 +76,13 @@ const determineActiveTabSection = () => {
 }
 
 tabnav.addEventListener('click', e => {
+    console.log(3);
     if (e.target.nodeName !== "A") return
     setActiveTab(e.target)
 })
 
 tabsection.addEventListener('scroll', () => {
+    console.log(4);
     clearTimeout(tabsection.scrollEndTimer)
     tabsection.scrollEndTimer = setTimeout(
         determineActiveTabSection
@@ -87,6 +90,7 @@ tabsection.addEventListener('scroll', () => {
 })
 
 window.onload = () => {
+    console.log(5);
     if (location.hash)
         tabsection.scrollLeft = document
             .querySelector(location.hash)

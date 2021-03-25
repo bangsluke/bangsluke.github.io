@@ -19,6 +19,9 @@ footerTemplate.innerHTML = `
 
     <!-- Footer HTML -->
 
+    <!-- Link into font-awesome logos and icons. -->
+	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <footer class="footer fadein">
 
       <!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
