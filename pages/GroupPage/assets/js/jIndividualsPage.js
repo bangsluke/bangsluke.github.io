@@ -50,12 +50,23 @@ function getData(data) {
     }
     
     // Modify HTML elements with the found data.
+    
+    // Profile Tab
     document.getElementById("profilePicture").src = data[foundRow].profilePictureURL;
     document.getElementById("fullName").innerHTML = data[foundRow].fullName;
     document.getElementById("height").innerHTML = data[foundRow].height;
     document.getElementById("weight").innerHTML = data[foundRow].weight;
 
+    // Contact Tab
 
+    // History Tab
+    document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote;
+    document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote;
+
+    // Football Tab
+    document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath;
+
+    // Widgets Tab
 
 }
 
