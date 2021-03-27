@@ -16,6 +16,7 @@
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/GroupPage/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
+	<link href="/pages/GroupPage/assets/css/UsersPage.css" rel="stylesheet"> <!-- Users Page CSS styling -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/GroupPage/assets/images/Page Icon Circle.png" />
@@ -30,16 +31,17 @@
 	<!-- Header -->
 
 	<header>
-		
+
 		<!-- Add the common website header using shadow DOMs. See /pages/GroupPage/assets/components/Header/header.js for the header code. -->
 		<header-component>
-			<span slot="pageMainHeader" id="pageMainHeader">Users</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+			<span slot="pageMainHeader" id="pageMainHeader">Users</span>
+			<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
 		</header-component>
 
 	</header>
 
 	<!-- All Page Content. This is all the content between the header and footer. -->
-	
+
 	<div class="allContentFrame wrapper">
 
 		<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
@@ -50,30 +52,29 @@
 
 			<div class="subpage-content-area fadein">
 
-				<p>Add clickable images of each user. Not sure where it goes yet.</p>
-
-				<br>
-				<br>
-
 				<!-- Add a full container to hold all user images. -->
 				<div class="all-users-container">
 
 					<!-- Alex Image -->
-					<a href="#">
-						<div class="user-container">
-							<div class="user-image-container">
-								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Alex.JPG" alt="Alex">
+					<div class="glass-card center">
+						<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Alex"
+							onclick="passUserName(this);">
+							<div class="user-container">
+								<div class="user-image-container">
+									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Alex.JPG"
+										alt="Alex">
+								</div>
+								<div class="user-text-container">
+									<h2 class="user-text">Althom</h2>
+								</div>
 							</div>
-							<div class="user-text-container">
-								<h2 class="user-text">Althom</h2>
-							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 
 					<!-- Ali Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Ali" onclick="passUserName(this);">
 						<div class="user-container reverse">
-
 							<div class="user-image-container">
 								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Ali.JPG" alt="Ali">
 							</div>
@@ -82,11 +83,12 @@
 							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Andy Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Andy" onclick="passUserName(this);">
 						<div class="user-container">
-
 							<div class="user-image-container">
 								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Andy.JPG" alt="Andy">
 							</div>
@@ -95,71 +97,78 @@
 							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Dom Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Dom" onclick="passUserName(this);">
 						<div class="user-container reverse">
-								<div class="user-image-container">
-									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Dom.JPG"
-										alt="Dom">
-								</div>
-								<div class="user-text-container">
-									<h2 class="user-text">DP</h2>
-								</div>
+							<div class="user-image-container">
+								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Dom.JPG" alt="Dom">
+							</div>
+							<div class="user-text-container">
+								<h2 class="user-text">DP</h2>
+							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Jon Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Jonny" onclick="passUserName(this);">
 						<div class="user-container">
-								<div class="user-image-container">
-									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Jon.JPG"
-										alt="Jon">
-								</div>
-								<div class="user-text-container">
-									<h2 class="user-text">Big Nose</h2>
-								</div>
+							<div class="user-image-container">
+								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Jon.JPG" alt="Jon">
+							</div>
+							<div class="user-text-container">
+								<h2 class="user-text">Big Nose</h2>
+							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Kieran Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Kieran" onclick="passUserName(this);">
 						<div class="user-container reverse">
-								<div class="user-image-container">
-									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Kieran.JPG"
-										alt="Kieran">
-								</div>
-								<div class="user-text-container">
-									<h2 class="user-text">Karen</h2>
-								</div>
+							<div class="user-image-container">
+								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Kieran.JPG"
+									alt="Kieran">
+							</div>
+							<div class="user-text-container">
+								<h2 class="user-text">Karen</h2>
+							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Luke Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Luke" onclick="passUserName(this);">
 						<div class="user-container">
-								<div class="user-image-container">
-									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Luke.PNG"
-										alt="Luke">
-								</div>
-								<div class="user-text-container">
-									<h2 class="user-text">Bongo The Thumb</h2>
-								</div>
+							<div class="user-image-container">
+								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Luke.PNG" alt="Luke">
+							</div>
+							<div class="user-text-container">
+								<h2 class="user-text">Bongo The Thumb</h2>
+							</div>
 						</div>
 					</a>
+				</div>
 
 					<!-- Oli Image -->
-					<a href="#">
+					<div class="glass-card center">
+					<a href="/pages/GroupPage/SubPages/IndividualsPage.html" id="Oli" onclick="passUserName(this);">
 						<div class="user-container reverse">
-								<div class="user-image-container">
-									<img class="user-image" src="/pages/GroupPage/assets/images/Users/Oli.JPG"
-										alt="Oli">
-								</div>
-								<div class="user-text-container">
-									<h2 class="user-text">OG</h2>
-								</div>
+							<div class="user-image-container">
+								<img class="user-image" src="/pages/GroupPage/assets/images/Users/Oli.JPG" alt="Oli">
+							</div>
+							<div class="user-text-container">
+								<h2 class="user-text">OG</h2>
+							</div>
 						</div>
 					</a>
+				</div>
 
 
 				</div>
@@ -175,9 +184,9 @@
 	</div>
 
 	<!-- Footer -->
-	
+
 	<footer>
-		
+
 		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
 
 		<!-- Add the common website footer using shadow DOMs. See /pages/GroupPage/assets/components/Footer/footer.js for the header code. -->
@@ -186,10 +195,15 @@
 	</footer>
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
-	<script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script> <!-- Add the common sideMenu JS -->
-	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
+	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script>
+	<!-- Add the common header JS -->
+	<script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+	<!-- Add the common sideMenu JS -->
+	<script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<!-- Add the common footer JS -->
+	<script src="/pages/GroupPage/assets/js/jUser.js" type="text/javascript" defer></script>
+	<!-- Add the User Page JS -->
 
 </body>
 

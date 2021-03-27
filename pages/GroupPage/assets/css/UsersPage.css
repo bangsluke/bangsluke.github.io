@@ -1,6 +1,6 @@
-/* IndividualsPage styling */
+/* UsersPage styling */
 
-/* The css styling used for the individuals page. */
+/* The css styling used for the users page. */
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
@@ -18,27 +18,16 @@
 	/* line-height: 15px; */
 }
 
-/* Add custom individuals page styling. */
+/* Add custom users page styling. */
 
-/* Profile */
-
-#profilePicture {
-	height: 100px;
-	width: auto;
-	border-radius: 5px;
-}
-
-/* Contact */
-
-
-#footballHeader {
-    width: 100%;
-    margin: auto;
-}
-
-
-#ashcombeLogo {
-    width: 100%;
-	height: auto;
-    margin: auto;
+.glass-card {
+	width: 90%;
+	padding: 0.3em;
+	margin-bottom: 0.7em;
+	background: rgba( 255, 255, 255, 0.10 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 12.0px );
+	-webkit-backdrop-filter: blur( 12.0px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

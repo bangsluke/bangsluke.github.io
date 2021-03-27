@@ -33,21 +33,22 @@
 
     <!-- Header -->
 
-	<header>
+    <header>
 
         <!-- Add the common website header using shadow DOMs. See /pages/GroupPage/assets/components/Header/header.js for the header code. -->
-		<header-component>
-            <span slot="pageMainHeader" id="pageMainHeader">Individuals Page</span> <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+        <header-component>
+            <span slot="pageMainHeader" id="pageMainHeader">Individuals Page</span>
+            <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
         </header-component>
 
     </header>
 
     <!-- All Page Content. This is all the content between the header and footer. -->
-    
+
     <div class="allContentFrame wrapper">
 
         <!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
-		<side-menu-component></side-menu-component>
+        <side-menu-component></side-menu-component>
 
         <!-- Main Page Content. -->
         <div class="main-content-area">
@@ -67,8 +68,8 @@
 
                             <a active href="#profile">Profile</a>
                             <a href="#contact">Contact</a>
-                            <a href="#history">History</a>
                             <a href="#football">Football</a>
+                            <a href="#history">History</a>
                             <a href="#widgets">Widgets</a>
                             <a href="#stats">Stats Summary</a>
                             <a href="#titan">Titan Status</a>
@@ -92,24 +93,25 @@
 
                         <article id="profile">
 
-                            <details>An individual page for each member providing them details pertinent to them (their address, their favourite teams league position and upcoming fixtures).</details>
+                            <details>An individual page for each member providing them details pertinent to them (their
+                                address, their favourite teams league position and upcoming fixtures).</details>
 
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg" class="individuals-picture center fadein"
-                                alt="bangsluke Online Profile Photo" id="profilePicture">
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
 
                             <br>
 
-                            <h2 id="fullName">Luke Bangs</h2>
-                            <h4>Height: <p id="height">--ft</p></h4>
-                            <h4>Weight: <p id="weight">--KG</p></h4>
-                            <h4>Chat Level: 7/10</h4>
-                            <h4>Looks: Solid 6</h4>
+                            <h2 id="fullName">Name</h2>
+                            
+                            <h4>Height: <p id="height">--ft</p>
+                            </h4>
+                            <h4>Weight: <p id="weight">--KG</p>
+                            </h4>
+
 
                         </article>
 
                         <article id="contact">
-
-                            <h2>Name: Luke Bangs</h2>
 
                             <p>Add contact details;</p>
                             <p>- Phone Number</p>
@@ -119,39 +121,10 @@
 
                         </article>
 
-                        <article id="history">
-
-                            <h4>Ashcombe Year 11 Yearbook Quote: </h4><q id="ashcombeYear11YearBookQuote">Add quote</q>
-
-                            <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add quote</q>
-
-                        </article>
-
                         <article id="football">
 
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg" class="football-header center fadein"
-                                alt="Football Header" id="footballHeader">
-
-                            <h2>Name: Luke Bangs</h2>
-
-                            <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add quote</q>
-
-                        </article>
-
-                        <article id="widgets">
-
-                            <section class="weather">
-                                <a class="weatherwidget-io"
-                                    SameSite=None href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
-                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
-                                    data-icons="Climacons Animated" data-theme="original"
-                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
-                                    data-cloudfill="#494A66" data-raincolor="#99b998">SOUTH WOODHAM FERRERS Weather</a>
-                                <script>
-                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                </script>
-                            </section>
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="Football Header" id="footballHeader">
 
                             <br>
 
@@ -162,6 +135,43 @@
                             <p>- Add snapshot of where Dorkinians team is</p>
                             <img src="/pages/GroupPage/assets/images/Dorkinians League.png"
                                 class="league-picture center fadein" alt="Dorkinians 3s Position">
+
+                        </article>
+
+                        <article id="history">
+
+                            <img src="/pages/GroupPage/assets/images/IndividualsPage/Ashcombe School Logo.png"
+                                class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
+
+                            <br>
+
+                            <h4>Ashcombe Year 11 Yearbook Quote: </h4><q id="ashcombeYear11YearBookQuote">Add quote</q>
+
+                            <br>
+
+                            <br>
+
+                            <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add
+                                quote</q>
+
+                        </article>
+
+                        <article id="widgets">
+
+                            <section class="weather">
+                                <a class="weatherwidget-io" SameSite=None
+                                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
+                                    data-icons="Climacons Animated" data-theme="original"
+                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
+                                    data-cloudfill="#494A66" data-raincolor="#99b998">SOUTH WOODHAM FERRERS Weather</a>
+                                <script>
+                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                </script>
+                            </section>
+
+
                             <br>
                             <p>- Use GeoLocation to confirm weather where the user is?</p>
                             <p> http://100widgets.com/maps/202-geo-location-map.html </p>
@@ -208,7 +218,7 @@
     </div>
 
     <!-- Footer -->
-    
+
     <footer>
 
         <!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
@@ -220,15 +230,20 @@
 
     <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	<script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script> <!-- Add the common header JS -->
-    <script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script> <!-- Add the common sideMenu JS -->
-    <script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script> <!-- Add the common footer JS -->
+    <script src="/pages/GroupPage/assets/components/Header/header.js" type="text/javascript" defer></script>
+    <!-- Add the common header JS -->
+    <script src="/pages/GroupPage/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+    <!-- Add the common sideMenu JS -->
+    <script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+    <!-- Add the common footer JS -->
     <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/scroll-timeline.js"></script> <!-- Get Scroll-Timeline JS -->
     <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
     <!-- <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
     <!-- <script src="/pages/GroupPage/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script> <!-- Get the first PapaParse JS -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <!-- Get the first PapaParse JS -->
     <script src="/pages/GroupPage/assets/js/jIndividualsPage.js"></script> <!-- Get Individuals Page JS -->
 
 </body>

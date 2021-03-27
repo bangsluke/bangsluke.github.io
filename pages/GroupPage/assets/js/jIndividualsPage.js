@@ -33,21 +33,25 @@ function init() {
 function showSelectedInfo(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    //console.log(data); // Log the data in the console.
-    getData(data); // Pass the data to the getData function to be processed.
+    console.log(data); // Log the data in the console.
+    // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
+    var clickedUserName = sessionStorage.getItem("clickedUserName"); // Retrieve the variable passed to session storage.
+    getData(data, clickedUserName); // Pass the data to the getData function to be processed.
 }
 
 // Get the data out into usable values to be passed to the HTML elements.
-function getData(data) {
+function getData(data, clickedUserName) {
     
     // Loop through data array and match the user to return the row in the array of objects that relates to the user.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].fullName = " + data[x].fullName); // Show the looping process.
-        if (data[x].User == "Luke") {
+        if (data[x].User === clickedUserName) {
             var foundRow = x; // The found row containing the correct user object.
         }
         
     }
+
+    console.log("Found Row = " + foundRow)
     
     // Modify HTML elements with the found data.
     
@@ -69,8 +73,6 @@ function getData(data) {
     // Widgets Tab
 
 }
-
-
 
 // End the console timer.
 console.timeEnd();
