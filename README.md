@@ -680,9 +680,11 @@ A collection of tools to support web development. Some are very much untried.
 #### JavaScript Tips
 - [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
 - [10 Awesome JavaScript Pro Tips - Know'em all](https://codedamn.com/news/10-awesome-javascript-pro-tips-know-em-all)
+- [40 JavaScript projects to build with tips, videos and guides](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
 
 #### Advanced JavaScript
 - [Dynamic Module Imports](https://blog.webdevsimplified.com/2021-03/dynamic-module-imports/)
+- [Use HTML canvas and JavaScript to create pixel effect animations](https://www.freecodecamp.org/news/create-pixel-effects-with-javascript-and-html-canvas/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
