@@ -7,3 +7,57 @@
 .subpage-header-area {
 	border-bottom: none;
 }
+
+
+/* Avatar class for the main image. */
+
+.avatar-container {
+	/* background-color: maroon; */
+	height: 55px;
+	width: 55px;
+}
+
+.avatar {
+	background-color: rgba(255, 255, 255, 0.075);
+	height: 55px;
+	width: auto;
+	border-radius: 100%;
+	border: solid 1px var(--accent-color-1);
+	cursor: pointer;
+}
+
+/* Avatar media queries. */
+
+/* Scale up for screens larger than mobile. */
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	.avatar {
+		height: 70px;
+		margin: 0.3em 0.7em;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	.avatar {
+		height: 70px;
+		margin: 0.3em 0.7em;
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.avatar {
+		height: 70px;
+		margin: 0.3em 0.7em;
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.avatar {
+		height: 70px;
+		margin: 0.3em 0.7em;
+	}
+}

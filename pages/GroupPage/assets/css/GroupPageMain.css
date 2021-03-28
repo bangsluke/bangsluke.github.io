@@ -65,7 +65,9 @@ body {
 	margin: 0;
 	top: 0px;
 	left: 0px;
-	overflow: hidden;
+	/* overflow: hidden; */
+	overflow-y: scroll;
+	height: max-content;
 	font-family: sans-serif;
 	min-block-size: 100%;
 	min-inline-size: 100%;
@@ -96,154 +98,8 @@ html, body {
 	/* min-height: 100%; */
 	top: 0px;
 	left: 0px;
+	overflow-y: auto;
 }
-
-
-/* Avatar class for the main image. */
-
-.avatar-container {
-	/* background-color: maroon; */
-	height: 55px;
-	width: 55px;
-}
-
-.avatar {
-	background-color: rgba(255, 255, 255, 0.075);
-	height: 55px;
-	width: auto;
-	border-radius: 100%;
-	border: solid 1px var(--accent-color-1);
-	cursor: pointer;
-}
-
-/* Avatar media queries. */
-
-/* Scale up for screens larger than mobile. */
-
-@media only screen and (min-width: 480px) and (max-width: 1223px) {
-	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-	.avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	/* Covers iPads and other tablets. */
-	.avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-}
-
-@media only screen and (min-width: 1224px) {
-	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-	.avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-}
-
-@media only screen and (min-width: 1824px) {
-	/* Desktops and Laptops - For larger monitors and displays. */
-	.avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-}
-
-
-
-
-/* All below styling has been moved to "/pages/GroupPage/assets/components/Header/header.js" */
-
-/* Header styling. */
-
-/* .subpage-header-area { */
-	/* background-color: lightcoral; */
-	/* left: 0px;
-	top: 0px;
-	height: 60px;
-	width: 100%;
-	border-bottom: solid 2px var(--accent-color-white);
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 2px;
-} */
-
-/* .subpage-header-area.homepage { */
-	/* background-color: lightcoral; */
-	/* height: 80px;
-	padding: 15px;
-} */
-
-/* Main subpage header text class. */
-
-/* .heading-container { */
-	/* background-color: grey; */
-	/* height: max-content;
-	margin: auto;
-} */
-
-/* .subpage-header-text {
-	color: var(--accent-color-white);
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 20px;
-	height: max-content;
-	margin: auto;
-} */
-
-/* Header area media queries. */
-
-/* Scale up for screens larger than mobile. */
-
-/* @media only screen and (min-width: 480px) and (max-width: 1223px) { */
-	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-	/* .avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-	.subpage-header-text {
-		font-size: 30px;
-	}
-} */
-
-/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { */
-	/* Covers iPads and other tablets. */
-	/* .avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-	.subpage-header-text {
-		font-size: 35px;
-	}
-} */
-
-/* @media only screen and (min-width: 1224px) { */
-	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-	/* .avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-	.subpage-header-text {
-		font-size: 40px;
-	}
-} */
-
-/* @media only screen and (min-width: 1824px) { */
-	/* Desktops and Laptops - For larger monitors and displays. */
-	/* .avatar {
-		height: 70px;
-		margin: 0.3em 0.7em;
-	}
-	.subpage-header-text {
-		font-size: 40px;
-	}
-} */
-
-
 
 /* Main content styling. */
 
@@ -253,7 +109,6 @@ html, body {
 	padding: 5px;
 	min-height: 580px;
 	height: max-content;
-	overflow-y: scroll;
 	/* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	scroll-behavior: smooth;
 }
@@ -312,7 +167,6 @@ a {
 
 }
 
-
 /* Scale up for screens larger than mobile. */
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
@@ -350,59 +204,6 @@ a {
 		letter-spacing: 3px;
 	}
 }
-
-
-
-/* All below styling has been moved to "/pages/GroupPage/assets/components/Footer/footer.js" */
-
-/* Footer styling. */
-
-/* .footer { */
-	/* background-color: green; */
-	/* background: var(--accent-color-black); */
-	/* background-color: rgba(var(--accent-color-black-rgb), 0.5);
-	grid-area: footer;
-	width: 100%;
-	top: 90%;
-	color: var(--accent-color-white);
-	justify-self: center;
-	align-content: center;
-	text-align: center;
-	padding: auto;
-} */
-
-/* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
-
-/* .footer, .push {
-	height: 25px; */
-	/* .push must be the same height as .footer */
-/* } */
-
-/* .footer a {
-	color: var(--accent-color-white);
-	text-decoration: none;
-	font-size: 20px;
-} */
-
-/* .footer a:hover {
-	color: var(--accent-color-1);
-	text-decoration: var(--accent-color-white);
-} */
-
-/* Footer media queries. */
-
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { */
-	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-	/* .footer a {
-		font-size: 10px;
-	}
-} */
-
-
-
-
-
-
 
 /* Text styling. */
 
