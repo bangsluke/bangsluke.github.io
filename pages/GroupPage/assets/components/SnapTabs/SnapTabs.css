@@ -1,28 +1,26 @@
 /* Web tabs styling */
 
 /* The css styling used for SnapTabs. */
+
 /* https://web.dev/building-a-tabs-component/. */
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
 :root {
-	/* CSS variables - Add variables below like the given example. */
-	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-	--main-style-color: #FF3CAC;
-	--main-background-color: #FF3CAC;
-	--accent-color-1: #FF3CAC;
-	--accent-color-2: #784BA0;
-	--accent-color-3: #2B86C5;
-	--accent-color-white: #ffffff;
-	--accent-color-black: #222222;
-	--main-font-family: 'Calibri', sans-serif;
-	/* line-height: 15px; */
-
-
+    /* CSS variables - Add variables below like the given example. */
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #FF3CAC;
+    --main-background-color: #FF3CAC;
+    --accent-color-1: #FF3CAC;
+    --accent-color-2: #784BA0;
+    --accent-color-3: #2B86C5;
+    --accent-color-white: #ffffff;
+    --accent-color-black: #222222;
+    --main-font-family: 'Calibri', sans-serif;
+    /* line-height: 15px; */
     /* Additional snap tabs variables. */
     --snap-tabs-height: 450px;
-    --main-style-color-rgb: 255,60,172;
-
+    --main-style-color-rgb: 255, 60, 172;
 }
 
 /* Added Luke Styling. */
@@ -43,20 +41,19 @@
     /* font-family: var(--main-font-family); */
     z-index: 1;
     /* visibility: hidden; */
-
     /* height: var(--snap-tabs-height); */
     height: calc(100vh - 85px);
     min-height: calc(100vh - 85px);
-	/* https://stackoverflow.com/a/26090114/14290169 */
-	/* 60px header + 25px footer = 85px  */
+    /* https://stackoverflow.com/a/26090114/14290169 */
+    /* 60px header + 25px footer = 85px  */
 }
 
-
 /* Anchor tags. */
+
 /* https://stackoverflow.com/a/13117744/14290169 */
 
 .anchor {
-	padding-top: calc(70px + 45px);
+    padding-top: calc(70px + 45px);
 }
 
 /* Original Snap Tabs CSS Styling. */
@@ -98,7 +95,7 @@ article {
 snap-tabs {
     --hue: 328deg;
     --accent: var(--hue) 100% 54%;
-    --accent-reduced: var(--hue) 90% 90%; 
+    --accent-reduced: var(--hue) 90% 90%;
     --indicator-size: 2px;
     --space-1: .5rem;
     --space-2: 1rem;
