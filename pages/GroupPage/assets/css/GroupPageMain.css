@@ -258,12 +258,6 @@ html, body {
 	scroll-behavior: smooth;
 }
 
-.subpage-content-area {
-	/* background-color: lightgreen; */
-	height: 100px;
-	margin-top: 5px;
-}
-
 .content-text {
 	/* background-color: blue; */
 	height: 350px;

@@ -52,325 +52,329 @@
 		<side-menu-component></side-menu-component>
 
 		<!-- Main Page Content. -->
-		<div class="main-content-area">
+		<div class="main-content-area fadein">
 
-			<div class="subpage-content-area fadein">
-
-				<h2>Dom's Corner</h2>
-				<br>
-				<!-- https://karvitt.com/widgets/html-code/math-game-code -->
-				<div id=outer>
-					<div class='ac b'>4-5 Year Olds Math Game</div>
-					<div id=cover>
-						<form name=Flash>
-							<table class=main>
-								<col class=w25 span=4>
-								<tr>
-									<td colspan=2>Difficulty
-									<td colspan=2><select id=diff>
-											<option value=10 selected>Easy
-											<option value=20>Medium
-											<option value=50>Hard
-											<option value=100>Expert
-										</select>
-								<tr>
-									<td colspan=2>Math Function
-									<td colspan=2><select id=func>
-											<option value=Add selected>Add
-											<option value=Subt>Subtract
-											<option value=Mult>Multiply
-											<option value=Rnd>Add & Subtract
-											<option value=RndAll>All
-										</select>
-								<tr>
-									<td colspan=2><button type=button onclick=StartGame();>Start</button>
-									<td colspan=2><button type=button onclick=ResetGame();>Reset</button>
-								<tr id=qrow>
-									<td class=ac colspan=2>   <span id=Q1 class=Question> </span>    <span id=Sign
-											class=Question> </span>    <span id=Q2 class=Question> </span>
-									<td class=ac><span id=equal class=Question> </span>
-									<td class=ac><span id=quesmark class=Question> </span>
-								<tr>
-									<td id=sans colspan=4> 
-								<tr class=sect2>
-									<td>
-										<div id=Ans1 class=Answer> </div>
-									<td>
-										<div id=Ans2 class=Answer> </div>
-									<td>
-										<div id=Ans3 class=Answer> </div>
-									<td>
-										<div id=Ans4 class=Answer> </div>
-								<tr id=arow>
-									<td><button type=button id=A1 onclick=guessThis(this.guess)>A</button>
-									<td><button type=button id=A2 onclick=guessThis(this.guess)>B</button>
-									<td><button type=button id=A3 onclick=guessThis(this.guess)>C</button>
-									<td><button type=button id=A4 onclick=guessThis(this.guess)>D</button>
-								<tr>
-									<td colspan=4>
-										<div id=Response class=response> </div>
-								<tr>
-									<td colspan=4 id=tx>Score:
-								<tr>
-									<td class=ar colspan=2><b>Correct</b> :
-									<td colspan=2 class=ac>
-										<div id=Correct class=Answer>0</div>
-								<tr>
-									<td class=ar colspan=2><b>Incorrect</b> :
-									<td colspan=2 class=ac>
-										<div id=Missed class=Answer>0</div>
-								<tr>
-									<td class=ar colspan=2><b>Accuracy</b> :
-									<td class=ar colspan=2>
-										<div id=Accuracy class=Answer>0 %</div>
-								<tr>
-									<td class=ar colspan=2><b>Speed</b> :
-									<td colspan=2 class=ac>
-										<div id=Speed class=Answer>0 sec</div>
-							</table>
-						</form>
-					</div>
+			<h2>Dom's Corner</h2>
+			<br>
+			<!-- https://karvitt.com/widgets/html-code/math-game-code -->
+			<div id=outer>
+				<div class='ac b'>4-5 Year Olds Math Game</div>
+				<div id=cover>
+					<form name=Flash>
+						<table class=main>
+							<col class=w25 span=4>
+							<tr>
+								<td colspan=2>Difficulty
+								<td colspan=2><select id=diff>
+										<option value=10 selected>Easy
+										<option value=20>Medium
+										<option value=50>Hard
+										<option value=100>Expert
+									</select>
+							<tr>
+								<td colspan=2>Math Function
+								<td colspan=2><select id=func>
+										<option value=Add selected>Add
+										<option value=Subt>Subtract
+										<option value=Mult>Multiply
+										<option value=Rnd>Add & Subtract
+										<option value=RndAll>All
+									</select>
+							<tr>
+								<td colspan=2><button type=button onclick=StartGame();>Start</button>
+								<td colspan=2><button type=button onclick=ResetGame();>Reset</button>
+							<tr id=qrow>
+								<td class=ac colspan=2>   <span id=Q1 class=Question> </span>    <span id=Sign
+										class=Question> </span>    <span id=Q2 class=Question> </span>
+								<td class=ac><span id=equal class=Question> </span>
+								<td class=ac><span id=quesmark class=Question> </span>
+							<tr>
+								<td id=sans colspan=4> 
+							<tr class=sect2>
+								<td>
+									<div id=Ans1 class=Answer> </div>
+								<td>
+									<div id=Ans2 class=Answer> </div>
+								<td>
+									<div id=Ans3 class=Answer> </div>
+								<td>
+									<div id=Ans4 class=Answer> </div>
+							<tr id=arow>
+								<td><button type=button id=A1 onclick=guessThis(this.guess)>A</button>
+								<td><button type=button id=A2 onclick=guessThis(this.guess)>B</button>
+								<td><button type=button id=A3 onclick=guessThis(this.guess)>C</button>
+								<td><button type=button id=A4 onclick=guessThis(this.guess)>D</button>
+							<tr>
+								<td colspan=4>
+									<div id=Response class=response> </div>
+							<tr>
+								<td colspan=4 id=tx>Score:
+							<tr>
+								<td class=ar colspan=2><b>Correct</b> :
+								<td colspan=2 class=ac>
+									<div id=Correct class=Answer>0</div>
+							<tr>
+								<td class=ar colspan=2><b>Incorrect</b> :
+								<td colspan=2 class=ac>
+									<div id=Missed class=Answer>0</div>
+							<tr>
+								<td class=ar colspan=2><b>Accuracy</b> :
+								<td class=ar colspan=2>
+									<div id=Accuracy class=Answer>0 %</div>
+							<tr>
+								<td class=ar colspan=2><b>Speed</b> :
+								<td colspan=2 class=ac>
+									<div id=Speed class=Answer>0 sec</div>
+						</table>
+					</form>
 				</div>
-				<a href='https://karvitt.com/widgets/'>Code provided by Karvitt.com</a>
+			</div>
+			<a href='https://karvitt.com/widgets/'>Code provided by Karvitt.com</a>
 
-				<br>
-				<br>
+			<br>
+			<br>
 
-				<!-- TODO Ideas -->
+			<!-- TODO Ideas -->
 
-				<h2>Ideas</h2>
+			<h2>Ideas</h2>
 
-				<h3>All Pages</h3>
-				<p>
-					Re-usable code
-					- [DONE]. Build header once and then re-use
-					(https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/).
-					- [DONE]. Build footer once and then re-use.
-					https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
-					- [DONE]. Use DOM page details to change inline styling to external styling for header to make long
-					term manipulation easier.
-					https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
-					- [DONE]. Use DOM page details to change inline styling to external styling for footer to make long
-					term manipulation easier.
-					https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
-					- [DONE]. Build SideMenu once and then re-use.
-					https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
-					- [DONE]. Fix header Shadow DOM to change the header title on all pages.
-					- [DONE]. Fix the header on Gallery Sub Page to show the selected album.
-					- [DONE]. Delete "StatsTest.html" when done with it.
-					- [DONE]. Clean up all CSS now that most is in JavaScript files for the shadow DOM elements. Delete
-					"TopMenu.css" as all styling now in Header. Reduce crossover CSS between the Header component CSS
-					styling and SideMenu component CSS styling (.burgerIcon etc).
-					- [DONE]. Review tidying up home page header section?
-					- [DONE]. Review if JavaScript files at bottom of GroupHomePage are needed?
-					- [DONE]. Sort out how the icons have disappeared for the side bar and footer.
+			<h3>All Pages</h3>
+			<p>
+				Re-usable code
+				- [DONE]. Build header once and then re-use
+				(https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/).
+				- [DONE]. Build footer once and then re-use.
+				https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+				- [DONE]. Use DOM page details to change inline styling to external styling for header to make long
+				term manipulation easier.
+				https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
+				- [DONE]. Use DOM page details to change inline styling to external styling for footer to make long
+				term manipulation easier.
+				https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM
+				- [DONE]. Build SideMenu once and then re-use.
+				https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+				- [DONE]. Fix header Shadow DOM to change the header title on all pages.
+				- [DONE]. Fix the header on Gallery Sub Page to show the selected album.
+				- [DONE]. Delete "StatsTest.html" when done with it.
+				- [DONE]. Clean up all CSS now that most is in JavaScript files for the shadow DOM elements. Delete
+				"TopMenu.css" as all styling now in Header. Reduce crossover CSS between the Header component CSS
+				styling and SideMenu component CSS styling (.burgerIcon etc).
+				- [DONE]. Review tidying up home page header section?
+				- [DONE]. Review if JavaScript files at bottom of GroupHomePage are needed?
+				- [DONE]. Sort out how the icons have disappeared for the side bar and footer.
 
-					All code
-					- [DONE]. Restructure all pages to have a clear "header", "content" and "footer" section. Make sure all
-					content is within Header and Footer elements on all pages.
-					- Add Try Catch to all JavaScript functions to prevent errors. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
-					- Look at CSS post-processors.
+				All code
+				- [DONE]. Restructure all pages to have a clear "header", "content" and "footer" section. Make sure all
+				content is within Header and Footer elements on all pages.
+				- Add Try Catch to all JavaScript functions to prevent errors.
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+				- Look at CSS post-processors.
 
-					Security
-					- Look into better protecting all sub pages. Password per page thats stored locally?
-					- Update the front password page to look nicer.
+				Security
+				- Look into better protecting all sub pages. Password per page thats stored locally?
+				- Update the front password page to look nicer.
 
-					Mobile
-					- Update all base CSS values to be for mobile. Scale up in media queries.
-					- Fix viewport issue on mobile. Should always see footer.
-					- Sort out CSS vh and vw to work better on all devices -
-					https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9
+				Mobile
+				- Update all base CSS values to be for mobile. Scale up in media queries.
+				- Fix viewport issue on mobile. Should always see footer.
+				- Sort out CSS vh and vw to work better on all devices -
+				https://gist.github.com/getify/150ea5a3b30b8822dee7798883d120b9
 
-					Large Screens
-					- Make the maximum width of the main container 80% for large screens.
-					- Get header to become bigger on larger devices.
-					- Get the top horizontal header to work on larger devices.
+				Large Screens
+				- Make the maximum width of the main container 80% for large screens.
+				- Get header to become bigger on larger devices.
+				- Get the top horizontal header to work on larger devices.
 
-					Dark Mode
-					- Add a dark mode toggle option and set to come in for media query.
-					- On front page, make dark mode make text appear with "Tits at Night" or something.
-					- Change all photos of users from normal photo to one of them on a night out
+				Dark Mode
+				- Add a dark mode toggle option and set to come in for media query.
+				- On front page, make dark mode make text appear with "Tits at Night" or something.
+				- Change all photos of users from normal photo to one of them on a night out
 
-					Reporting Buttons
-					- Add a report issue button to the footer with a href of "mailto:tits.group.page@gmail.com" for
-					reporting issues.
-					- Create a support page (option on the main sidebar menu) with a place to look for support. List
-					Gmail account here. Place for people to recommend features. Hava data provacy button like "Report
-					Concerns About My Personal Data" and reply with an alert that says something like "Get fucked you
-					Signal prick".
+				Reporting Buttons
+				- Add a report issue button to the footer with a href of "mailto:tits.group.page@gmail.com" for
+				reporting issues.
+				- Create a support page (option on the main sidebar menu) with a place to look for support. List
+				Gmail account here. Place for people to recommend features. Hava data provacy button like "Report
+				Concerns About My Personal Data" and reply with an alert that says something like "Get fucked you
+				Signal prick".
 
-					Colour Schema
-					- Add a better background gradient (https://learnui.design/tools/gradient-generator.html)
-					- Review changing CSS usng JavaScript
-					(https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript)
-					- Add the ability for users to cycle though possible colour schemes for the site. Add pre-set colour
-					combinations
-					(https://www.reddit.com/r/coolguides/comments/m5ph7s/harmonious_colour_combinations/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link)
-					and then allow them to press a button to change through them before saving their favourite to memory
-					using JavaScript.
-					- Test out options of colour schemes
-					(https://www.reddit.com/r/webdev/comments/m9yhoj/til_you_can_use_colorscheme_to_specify_the_ui/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-					- Pick a single good font to stick with throughout the site
-					(https://www.reddit.com/r/coolguides/comments/m56gxf/brand_fonts_guide/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link).
+				Colour Schema
+				- Add a better background gradient (https://learnui.design/tools/gradient-generator.html)
+				- Review changing CSS usng JavaScript
+				(https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript)
+				- Add the ability for users to cycle though possible colour schemes for the site. Add pre-set colour
+				combinations
+				(https://www.reddit.com/r/coolguides/comments/m5ph7s/harmonious_colour_combinations/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link)
+				and then allow them to press a button to change through them before saving their favourite to memory
+				using JavaScript.
+				- Test out options of colour schemes
+				(https://www.reddit.com/r/webdev/comments/m9yhoj/til_you_can_use_colorscheme_to_specify_the_ui/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+				- Pick a single good font to stick with throughout the site
+				(https://www.reddit.com/r/coolguides/comments/m56gxf/brand_fonts_guide/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link).
 
-					Header/Sidebar
-					- Resizable Header Code - https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html
-					- Make Drop Down Menu -
-					https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html
-					- Responsive Homepage -
-					https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html
-					- Toggable Side Navigation Bar -
-					https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
-					- Nick the sidebar animation from https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+				Header/Sidebar
+				- Resizable Header Code - https://www.codingflicks.com/2021/01/how-to-resize-header-on-scroll.html
+				- Make Drop Down Menu -
+				https://www.codingflicks.com/2020/08/how-to-make-drop-down-menu-using-html-cs.html
+				- Responsive Homepage -
+				https://www.codingflicks.com/2020/08/how-to-create-responsive-homepage-using-html-css.html
+				- Toggable Side Navigation Bar -
+				https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+				- Nick the sidebar animation from https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
 
-					Random
-					- Consider these JavaScript projects and see if anything useful to add (https://www.freecodecamp.org/news/javascript-projects-for-beginners/).
-					- Add Peter Griffin Easter Egg code somewhere
-					(https://www.reddit.com/r/familyguy/comments/m8lvc9/virus_peter/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
-				</p>
+				Random
+				- Consider these JavaScript projects and see if anything useful to add
+				(https://www.freecodecamp.org/news/javascript-projects-for-beginners/).
+				- Add Peter Griffin Easter Egg code somewhere
+				(https://www.reddit.com/r/familyguy/comments/m8lvc9/virus_peter/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+			</p>
 
-				<h3>Group Page Home</h3>
-				<p>
-					- Fix homepage to see no blue and see footer.
-					- On Homepage add counter widget with ridiculous stats (messages sent, shots completed, goals
-					scored)
-					- Add visitor counter somewhere. https://elfsight.com/visitor-counter-widget/html/
-					- Show live user counter. http://100widgets.com/informers/129-flag-counter.html
-				</p>
+			<h3>Group Page Home</h3>
+			<p>
+				- Fix homepage to see no blue and see footer.
+				- On Homepage add counter widget with ridiculous stats (messages sent, shots completed, goals
+				scored)
+				- Add visitor counter somewhere. https://elfsight.com/visitor-counter-widget/html/
+				- Show live user counter. http://100widgets.com/informers/129-flag-counter.html
+			</p>
 
-				<h3>Individuals Page</h3>
-				<p>
-					An individual page for each member providing them details pertinent to them (their address, their favourite teams league position and upcoming fixtures).
-					
-					Debug Snap Tabs Issue
-					- Initial suspicions is that the jSnapTabs1.js function window.onload at the bottom is causing the issue.
-					- Finish adding console.log lines to all Javascript functions across all Javascript files to give an overview of what code runs when.
-					- Add a scroll offset for the anchor links so that the fixed header doesn't disappear?
-					- Delete jSnapTabsPageScroll.js if not used long term and remove from the bottom of NewIndividualsPage.html.
+			<h3>Individuals Page</h3>
+			<p>
+				An individual page for each member providing them details pertinent to them (their address, their
+				favourite teams league position and upcoming fixtures).
 
-					Content
-					- Football
-					--- Create a section called football with Prem team and Dorkinians?
-					--- Add football headers per user - https://www.reddit.com/r/LiverpoolFC/comments/mbwso4/twitter_heads/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-					--- Add football quotes from Martin for Brockham Badgers? Or do this in history?
-					- Weather
-					--- Add Weather widget and code weather forecast at their location using https://weatherwidget.io/.
-                            
+				Debug Snap Tabs Issue
+				- Initial suspicions is that the jSnapTabs1.js function window.onload at the bottom is causing the
+				issue.
+				- Finish adding console.log lines to all Javascript functions across all Javascript files to give an
+				overview of what code runs when.
+				- Add a scroll offset for the anchor links so that the fixed header doesn't disappear?
+				- Delete jSnapTabsPageScroll.js if not used long term and remove from the bottom of
+				NewIndividualsPage.html.
 
-				</p>
+				Content
+				- Football
+				--- Create a section called football with Prem team and Dorkinians?
+				--- Add football headers per user -
+				https://www.reddit.com/r/LiverpoolFC/comments/mbwso4/twitter_heads/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+				--- Add football quotes from Martin for Brockham Badgers? Or do this in history?
+				- Weather
+				--- Add Weather widget and code weather forecast at their location using https://weatherwidget.io/.
 
-				<h3>Users</h3>
-				<p>
-					- Pass the login name of the user and display that at the top of the page.
-					https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
-					- Load in all user information from a stored object controlled on the main Google Sheet. Populate
-					all fields of the HTML with the correct user information.
-					- [DONE]. Put each user onto a glass card to separate them clearly.
-					- Make snap tabs top bar highlight each section that the user is currently on.
-					- Embed a Spotify playlist for each user. Country playlist for Kieran for example. Embed a Spotify
-					playlist. https://www.jimdo.com/blog/embed-spotify-playlist-on-website/
-				</p>
 
-				<h3>Events</h3>
-				<p>
-					- Add group Google Calendar that everyone can sync to.
-					- A single combined list of upcoming events for the group.
-					- Add everyone's birthdays to main calendar as repeating event.
-					- Add all known upcoming events.
-					- Add a summary line above the calendar with the next upcoming event.
-					- Show list or calendar of national holidays. Show upcoming big sporting events etc
-					- Add countdown timer widget to next event. https://elfsight.com/countdown-timer-widget/html/
-					- Add calendar widget. https://elfsight.com/event-calendar-widget/html/
-					- http://100widgets.com/calendars/104-month-calendar.html
-				</p>
+			</p>
 
-				<h3>Titans</h3>
-				<p>
-					- Add list of all held Titan positions.
-					- Create a master summary table of Titan positions held and show this on the Titans page.
-				</p>
+			<h3>Users</h3>
+			<p>
+				- Pass the login name of the user and display that at the top of the page.
+				https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
+				- Load in all user information from a stored object controlled on the main Google Sheet. Populate
+				all fields of the HTML with the correct user information.
+				- [DONE]. Put each user onto a glass card to separate them clearly.
+				- Make snap tabs top bar highlight each section that the user is currently on.
+				- Embed a Spotify playlist for each user. Country playlist for Kieran for example. Embed a Spotify
+				playlist. https://www.jimdo.com/blog/embed-spotify-playlist-on-website/
+			</p>
 
-				<h3>Stats</h3>
-				<p>
-					<!-- * API Information -->
-					<!-- [API Tutorial For Beginners With Google Sheets & Apps Script](https://www.benlcollins.com/apps-script/api-tutorial-for-beginners/)
+			<h3>Events</h3>
+			<p>
+				- Add group Google Calendar that everyone can sync to.
+				- A single combined list of upcoming events for the group.
+				- Add everyone's birthdays to main calendar as repeating event.
+				- Add all known upcoming events.
+				- Add a summary line above the calendar with the next upcoming event.
+				- Show list or calendar of national holidays. Show upcoming big sporting events etc
+				- Add countdown timer widget to next event. https://elfsight.com/countdown-timer-widget/html/
+				- Add calendar widget. https://elfsight.com/event-calendar-widget/html/
+				- http://100widgets.com/calendars/104-month-calendar.html
+			</p>
+
+			<h3>Titans</h3>
+			<p>
+				- Add list of all held Titan positions.
+				- Create a master summary table of Titan positions held and show this on the Titans page.
+			</p>
+
+			<h3>Stats</h3>
+			<p>
+				<!-- * API Information -->
+				<!-- [API Tutorial For Beginners With Google Sheets & Apps Script](https://www.benlcollins.com/apps-script/api-tutorial-for-beginners/)
 					[How to connect the Strava API with Google Sheets and Data Studio](https://www.benlcollins.com/spreadsheets/strava-api-with-google-sheets/)
 					[Strava API Application](https://www.strava.com/settings/api)
 					[Strava API Documentation](https://developers.strava.com/docs/reference/) -->
-					- Unzoom on mobile after picking from stats dropdown menu. https://github.com/jquery/jquery-mobile/issues/2069.
-					- Set up a morning automation script that gets all various API data by calling all other API
-					functions.
-					- Create a Google Doc of all Dorkinians stats and link from Group Page to that document for Tits
-					members.
-					- For each stats table, pass three hex codes for styling table? E.g. yellow, green and white for
-					Dorkinians.
-					- Look at strava API - https://developers.strava.com/docs/reference/
-					- [Call of Duty Activision API](https://lierrmm.github.io/capi-docs/#/)
-					- Look for other APIs I can use to pull data.
-					- Add Charts using JavaScript.
-					https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
-					- Dynamically create the list of drop down options and values? Rather than manual update.
-					- When the data is real live data from a API, add an audio clip to the website that plays "AND IT'S
-					LIVE" when the user picks that stat.
-					- Add terrible shouts (Oli: Adama Traore being the most unstoppable player in the prem, Diego Costa
-					to flop, Werner to be worldie, Kieran: Can't see Gundogan continuing this scoring, Jon: Rolando
-					Aarons fantasy pick, Andy: Emre Can most complete midfielder, Alex: Ozil to Fenerbache, Luke: Peter
-					Crouch bad at headers
-					- Shots owed: Alex & Ali owe a double shot after losing to Dom and Luke in a the final 2 v2 Cod
-					match on the evening of February 25/02/2021.
+				- Unzoom on mobile after picking from stats dropdown menu.
+				https://github.com/jquery/jquery-mobile/issues/2069.
+				- Set up a morning automation script that gets all various API data by calling all other API
+				functions.
+				- Create a Google Doc of all Dorkinians stats and link from Group Page to that document for Tits
+				members.
+				- For each stats table, pass three hex codes for styling table? E.g. yellow, green and white for
+				Dorkinians.
+				- Look at strava API - https://developers.strava.com/docs/reference/
+				- [Call of Duty Activision API](https://lierrmm.github.io/capi-docs/#/)
+				- Look for other APIs I can use to pull data.
+				- Add Charts using JavaScript.
+				https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle
+				- Dynamically create the list of drop down options and values? Rather than manual update.
+				- When the data is real live data from a API, add an audio clip to the website that plays "AND IT'S
+				LIVE" when the user picks that stat.
+				- Add terrible shouts (Oli: Adama Traore being the most unstoppable player in the prem, Diego Costa
+				to flop, Werner to be worldie, Kieran: Can't see Gundogan continuing this scoring, Jon: Rolando
+				Aarons fantasy pick, Andy: Emre Can most complete midfielder, Alex: Ozil to Fenerbache, Luke: Peter
+				Crouch bad at headers
+				- Shots owed: Alex & Ali owe a double shot after losing to Dom and Luke in a the final 2 v2 Cod
+				match on the evening of February 25/02/2021.
 
-					- Ideas for stats:
-				<ul>- COD kills/wins and time spent etc.</ul>
-				<ul>- COD alcoholic shots completed. Dom to count all videos for each user in Whatsapp group.</ul>
-				<ul>- Fantasy score and historical scores</ul>
-				<ul>- All time Fantasy point scorer.</ul>
-				<ul>- Most said phrases in Tits whatsapp group. Most messaged etc.</ul>
-				<ul>- Best 5km and 10km time.</ul>
-				</p>
+				- Ideas for stats:
+			<ul>- COD kills/wins and time spent etc.</ul>
+			<ul>- COD alcoholic shots completed. Dom to count all videos for each user in Whatsapp group.</ul>
+			<ul>- Fantasy score and historical scores</ul>
+			<ul>- All time Fantasy point scorer.</ul>
+			<ul>- Most said phrases in Tits whatsapp group. Most messaged etc.</ul>
+			<ul>- Best 5km and 10km time.</ul>
+			</p>
 
-				<h3>Gallery</h3>
-				<p>
-					- Add a gallery page behind each image. https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp
-					- Add spotify style album covers leading to albums of images.
-					https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-					- Apply filter over cover images to make the text more readable.
-					- Gallery Widget https://elfsight.com/photo-gallery-widget/html/
-					- Add trigger to turn on/off specific Pea cover images? https://www.w3schools.com/howto/howto_css_switch.asp
-				</p>
+			<h3>Gallery</h3>
+			<p>
+				- Add a gallery page behind each image. https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp
+				- Add spotify style album covers leading to albums of images.
+				https://www.reddit.com/r/webdev/comments/lq7k11/how_spotify_makes_text_on_images_readable/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+				- Apply filter over cover images to make the text more readable.
+				- Gallery Widget https://elfsight.com/photo-gallery-widget/html/
+				- Add trigger to turn on/off specific Pea cover images?
+				https://www.w3schools.com/howto/howto_css_switch.asp
+			</p>
 
-				<h3>Gallery Sub Page</h3>
-				<p>
-					- Make the share, fullscreen and close buttons in the top right visible.
-					- Turn off image captions and not going to write captions for every image.
-					- Turn the initial gallery sub page into a dynamic flexbox collection of images.
-					- [DONE]. Dynamically change the main header text to what the Gallery is actually showing (e.g.
-					"Pagham").
-				</p>
+			<h3>Gallery Sub Page</h3>
+			<p>
+				- Make the share, fullscreen and close buttons in the top right visible.
+				- Turn off image captions and not going to write captions for every image.
+				- Turn the initial gallery sub page into a dynamic flexbox collection of images.
+				- [DONE]. Dynamically change the main header text to what the Gallery is actually showing (e.g.
+				"Pagham").
+			</p>
 
-				<h3>Other Ideas</h3>
-				<p>
-					- Add fullPage JavaScript animations - https://alvarotrigo.com/fullPage/
-					(https://www.youtube.com/watch?v=gE-Yuu2eEio&ab_channel=DevEd)
-					- https://elfsight.com/number-counter-widget/html/
-					- Add WhatsApp chat widget
-					https://elfsight.com/html-widgets/
-					- Add search feature somewhere (sidebar and top bar). https://elfsight.com/search-widget/html/
-					- Embed a Spotify playlist. https://www.jimdo.com/blog/embed-spotify-playlist-on-website/
-					- [DONE]. Add Dom’s corner page. https://karvitt.com/widgets/html-code/math-game-code
-					<!-- <p>- Add Bitcoin widget</p>
+			<h3>Other Ideas</h3>
+			<p>
+				- Add fullPage JavaScript animations - https://alvarotrigo.com/fullPage/
+				(https://www.youtube.com/watch?v=gE-Yuu2eEio&ab_channel=DevEd)
+				- https://elfsight.com/number-counter-widget/html/
+				- Add WhatsApp chat widget
+				https://elfsight.com/html-widgets/
+				- Add search feature somewhere (sidebar and top bar). https://elfsight.com/search-widget/html/
+				- Embed a Spotify playlist. https://www.jimdo.com/blog/embed-spotify-playlist-on-website/
+				- [DONE]. Add Dom’s corner page. https://karvitt.com/widgets/html-code/math-game-code
+				<!-- <p>- Add Bitcoin widget</p>
 					<p>http://100widgets.com/informers/286-crypto-widget.html</p>
 					<p>http://100widgets.com/informers/262-bitcoin-widgets.html </p>
 					<p>- Add gold price</p>
 					<p>http://100widgets.com/informers/119-gold-price.html </p> -->
-					- Add Comments section. http://100widgets.com/others/234-comments-widgets-for-page.html
-					- Add a quote of the day area that cycles through funny things said by the group?
-					- Possible widget site: https://www.powr.io/
-					- Look at CSS generators: https://www.reddit.com/r/Frontend/comments/mbfx6p/handy_list_of_css_generators/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
-				</p>
-
-
-			</div>
-
+				- Add Comments section. http://100widgets.com/others/234-comments-widgets-for-page.html
+				- Add a quote of the day area that cycles through funny things said by the group?
+				- Possible widget site: https://www.powr.io/
+				- Look at CSS generators:
+				https://www.reddit.com/r/Frontend/comments/mbfx6p/handy_list_of_css_generators/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+			</p>
 
 		</div>
 
