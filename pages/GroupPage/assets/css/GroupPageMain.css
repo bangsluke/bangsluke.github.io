@@ -41,6 +41,7 @@ html {
 	/* scroll-padding-top: 260px; */
 	block-size: 100%;
 	inline-size: 100%;
+	overflow-x: none;
 }
 
 /* Add code below. */
