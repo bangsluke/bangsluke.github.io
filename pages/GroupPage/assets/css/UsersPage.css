@@ -20,15 +20,6 @@
 
 /* Add custom users page styling. */
 
-.all-users-container {
-	/* background-color: antiquewhite; */
-	height: max-content;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow-y: scroll;
-}
-
 .user-container {
 	/* background-color: aqua; */
 	width: 100%;
