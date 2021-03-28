@@ -10,6 +10,56 @@
 // Start the console timer.
 console.time();
 
+
+// https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp
+
+var statsObject = {
+    "Strava Stats": {
+        "HTML": ["Links", "Images", "Tables", "Lists"],
+        "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+        "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+    },
+    "Back-end": {
+        "PHP": ["Variables", "Strings", "Arrays"],
+        "SQL": ["SELECT", "UPDATE", "DELETE"]
+    }
+}
+
+console.log(statsObject);
+
+window.onload = function () {
+   
+    // Initially define the selection elements.
+    var statsSelection = document.getElementById("stats-option-new");
+    var filterSelection = document.getElementById("stats-filter");
+    
+    // Loop through the statsObject 
+    for (var x in statsObject) {
+        statsSelection.options[statsSelection.options.length] = new Option(x, x);
+    }
+    
+    // React when the user changes the statsSelection.
+    statsSelection.onchange = function () {
+        // Empty the filter selection dropdown.
+        filterSelection.length = 1;
+        // Display correct values in filterSelection.
+        for (var y in statsObject[this.value]) {
+            filterSelection.options[filterSelection.options.length] = new Option(y, y);
+        }
+
+        init();
+    }
+    
+    // React when the user changes the filterSelection.
+    filterSelection.onchange = function () {
+        console.log("Filter changed");
+    }
+}
+
+
+
+
+
 // Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=114011454&single=true&output=csv';
 
@@ -74,6 +124,9 @@ function showSelectedInfo(results) {
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     console.log(data); // Log the data in the console.
     clearTable();
+
+    filterData(data);
+
     createFullTable(data); // Call the createFullTable function, passing the data from TableTop.
 }
 
@@ -124,6 +177,30 @@ function updateStatsTitle(selectionText) {
     var element = document.getElementById("stats-title");
     element.innerHTML = selectionText;
 }
+
+
+function filterData(data) {
+    console.log("Filter the results.")
+    const filteredResults = data.filter(data => data.Season == "2015/16");
+    console.log(filteredResults)
+}
+
+// var ages = [32, 33, 16, 40];
+
+// function checkAdult(age) {
+//   return age >= 18;
+// }
+
+// function myFunction() {
+//   document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+// }
+
+
+
+
+
+
+
 
 // End the console timer.
 console.timeEnd();
