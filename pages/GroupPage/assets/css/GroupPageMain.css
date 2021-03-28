@@ -74,38 +74,18 @@ body {
 	margin: 0;
 }
 
-/* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
-
-html, body {
-	/* height: 100%; */
-}
-
-/* .wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -25px;
-	The bottom margin is the negative value of the footer's height
-} */
-
 /* Add a id for all content div. */
 
 .allContentFrame {
 	/* background: yellow; */
 	width: 100%;
-	
-	/* min-height: 100%; */
 	top: 0px;
 	left: 0px;
 	overflow-y: auto;
-
-
-
-	/* height: 100%; */
 	height: max-content;
 	min-height: calc(100vh - 85px);
-    /* 60px header + 25px footer = 85px  */
-
+	/* https://stackoverflow.com/a/26090114/14290169 */
+	/* 60px header + 25px footer = 85px  */
 }
 
 /* Main content styling. */
@@ -171,19 +151,16 @@ a {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-
 }
 
 /* Scale up for screens larger than mobile. */
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
 	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-	
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* Covers iPads and other tablets. */
-	
 }
 
 @media only screen and (min-width: 1224px) {
@@ -263,7 +240,8 @@ table {
 
 .titanTable {
 	/* background-color: white; */
-	color: var(--accent-color-white);;
+	color: var(--accent-color-white);
+	;
 }
 
 th {
