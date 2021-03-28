@@ -21,38 +21,43 @@
 /* Add custom stats page styling. */
 
 .stats-selection-area {
-    background-color: rgba(255, 255, 255, 0.2);
-    height: max-content;
-    width: 95%;
-    margin: auto;
-    /* margin-top: 2em; */
-    padding: 1em;
-    border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	height: max-content;
+	width: 95%;
+	margin: auto;
+	/* margin-top: 2em; */
+	padding: 1em;
+	border-radius: 10px;
 }
 
 /* Style the drop down menu. */
 
-.dropdown-div{
-    text-align: center;
+.dropdown-div {
+	text-align: center;
+	font-size: 50px;
+}
+
+.dropdown-div select {
+	font-size: 50px;
 }
 
 .stats-dropdown {
-    /* background-color: rgba(255, 255, 255, 0.1); */
-    width: 80%;
-    margin: auto;
+	/* background-color: rgba(255, 255, 255, 0.1); */
+	width: 80%;
+	margin: auto;
 }
 
 #stats-title {
 	text-align: center;
-	color: var(--accent-color-white,white);
+	color: var(--accent-color-white, white);
 	padding-bottom: 1em;
 }
 
 .stats-table-area {
-    height: max-content;
-    width: 96%;
+	height: max-content;
+	width: 96%;
 	margin: auto;
-    margin-top: 2em;
+	margin-top: 2em;
 }
 
 /* Wrapper div around the table. */
@@ -67,24 +72,23 @@ table {
 	width: 100%;
 	text-align: center;
 	font-size: 14px;
-    background-color: var(--accent-color-3,blue);
-    color: white;
-	
+	background-color: var(--accent-color-3, blue);
+	color: white;
 }
 
 th {
 	font-style: bold;
-    background-color: var(--accent-color-3,blue);
-    border-bottom: 4px solid var(--accent-color-2,red);
+	background-color: var(--accent-color-3, blue);
+	border-bottom: 4px solid var(--accent-color-2, red);
 }
 
 td {
-    font-size: 14px;
-    text-align: center;
+	font-size: 14px;
+	text-align: center;
 }
 
 tr:hover {
-	background-color: var(--accent-color-1,pink);
+	background-color: var(--accent-color-1, pink);
 	color: var(--accent-color-white);
 	font: bold;
 }
