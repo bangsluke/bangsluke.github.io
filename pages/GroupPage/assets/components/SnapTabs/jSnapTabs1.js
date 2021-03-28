@@ -91,12 +91,12 @@ tabsection.addEventListener('scroll', () => {
         , 100)
 })
 
-// window.onload = () => {
-//     console.log("SnapTabs1:5 - window.onload");
-//     if (location.hash)
-//         tabsection.scrollLeft = document
-//             .querySelector(location.hash)
-//             .offsetLeft
+window.onload = () => {
+    console.log("SnapTabs1:5 - window.onload");
+    if (location.hash)
+        tabsection.scrollLeft = document
+            .querySelector(location.hash)
+            .offsetLeft
 
-//     determineActiveTabSection()
-// }
+    determineActiveTabSection()
+}
