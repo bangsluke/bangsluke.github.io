@@ -20,6 +20,58 @@
 
 /* Add custom users page styling. */
 
+.all-users-container {
+	/* background-color: antiquewhite; */
+	height: max-content;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.user-container {
+	/* background-color: aqua; */
+	width: 100%;
+	height: var(--user-image-height);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly; /* Centers the content centrally. */
+	margin-bottom: 10px;
+}
+
+.user-container.reverse {
+	flex-direction: row-reverse;
+}
+
+.user-image-container {
+	/* background-color: blueviolet; */
+	height: var(--user-image-height);
+	width: var(--user-image-height);
+	justify-content: center;
+	align-content: center;
+}
+
+.user-text-container {
+	/* background-color: burlywood; */
+	height: var(--user-image-height);
+	width: var(--user-image-height);
+}
+
+.user-image {
+	height: var(--user-image-height);
+	width: var(--user-image-height);
+	object-fit: cover;
+	/* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+}
+
+.user-text {
+	/* background-color: bisque; */
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+
 .glass-card {
 	width: 90%;
 	padding: 0.3em;

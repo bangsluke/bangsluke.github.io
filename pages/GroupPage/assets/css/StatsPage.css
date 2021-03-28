@@ -34,16 +34,11 @@
 
 .dropdown-div {
 	text-align: center;
-	/* font-size: 50px; */
 }
 
-/* .dropdown-div select {
-	font-size: 50px;
-} */
-
-/* .ui-select .ui-btn select{
-	font-size: 50px;
-	} */
+select {
+	font-size: 16px;
+}
 
 .stats-dropdown {
 	/* background-color: rgba(255, 255, 255, 0.1); */
