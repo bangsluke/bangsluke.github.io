@@ -77,28 +77,35 @@ body {
 /* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
 
 html, body {
-	height: 100%;
+	/* height: 100%; */
 }
 
-.wrapper {
+/* .wrapper {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -25px;
-	/* The bottom margin is the negative value of the footer's height */
-}
+	The bottom margin is the negative value of the footer's height
+} */
 
 /* Add a id for all content div. */
 
 .allContentFrame {
 	/* background: yellow; */
 	width: 100%;
-	/* height: 100%; */
-	height: max-content;
+	
 	/* min-height: 100%; */
 	top: 0px;
 	left: 0px;
 	overflow-y: auto;
+
+
+
+	/* height: 100%; */
+	height: max-content;
+	min-height: calc(100vh - 85px);
+    /* 60px header + 25px footer = 85px  */
+
 }
 
 /* Main content styling. */
