@@ -81,6 +81,10 @@ body {
 /* Add a id for all content div. */
 
 .allContentFrame {
+	
+	/* Add an "offset" value for all content so that it sits below the fixed header. */
+	padding-top: 70px;
+	
 	/* background: yellow; */
 	width: 100%;
 	top: 0px;

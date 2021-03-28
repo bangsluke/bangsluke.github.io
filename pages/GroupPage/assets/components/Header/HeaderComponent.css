@@ -23,7 +23,7 @@
 /* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/header.css" */
 
 .subpage-header-area {
-    /* background-color: lightcoral; */
+    background-color: var(--accent-color-black);
     left: 0px;
     top: 0px;
     height: 60px;
@@ -33,7 +33,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2px;
-    z-index: 5;
+    z-index: 2;
+
+    position: fixed;
 }
 
 .subpage-header-area.homepage {

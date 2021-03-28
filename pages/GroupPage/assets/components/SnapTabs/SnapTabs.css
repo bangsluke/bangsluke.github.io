@@ -27,14 +27,12 @@
 
 /* Added Luke Styling. */
 
-/* .body {
-    overflow-y: auto;
-} */
-
-
 .snap-tabs-container {
+    top: 0px;
     /* background-color: green; */
     width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
     /* Below is copied from body above. */
     box-sizing: border-box;
     display: grid;
@@ -54,12 +52,12 @@
 }
 
 
-/* a.anchor {
-    display: block;
-    position: relative;
-    top: -60px;
-    visibility: hidden;
-} */
+/* Anchor tags. */
+/* https://stackoverflow.com/a/13117744/14290169 */
+
+.anchor {
+	padding-top: calc(70px + 45px);
+}
 
 /* Original Snap Tabs CSS Styling. */
 
@@ -109,7 +107,7 @@ snap-tabs {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    height: var(--snap-tabs-height);
+    /* height: var(--snap-tabs-height); */
 }
 
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {

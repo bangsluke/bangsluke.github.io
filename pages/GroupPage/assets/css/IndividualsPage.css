@@ -20,17 +20,6 @@
 
 /* Add custom individuals page styling. */
 
-/* Anchor tags. */
-/* https://stackoverflow.com/a/13117744/14290169 */
-
-/* .anchor {
-	padding-top: 90px;
-} */
-
-html {
-	scroll-padding-top: 60px; /* height of sticky header */
-  }
-
 /* Profile */
 
 #profilePicture {
