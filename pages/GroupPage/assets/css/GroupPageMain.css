@@ -67,7 +67,10 @@ body {
 	top: 0px;
 	left: 0px;
 	/* overflow: hidden; */
-	overflow-y: scroll;
+	overflow-y: none;
+	overflow-x: none;
+
+
 	height: max-content;
 	font-family: sans-serif;
 	min-block-size: 100%;
@@ -82,7 +85,8 @@ body {
 	width: 100%;
 	top: 0px;
 	left: 0px;
-	overflow-y: auto;
+	/* overflow-y: auto; */
+	overflow-y: scroll;
 	height: max-content;
 	min-height: calc(100vh - 85px);
 	/* https://stackoverflow.com/a/26090114/14290169 */
