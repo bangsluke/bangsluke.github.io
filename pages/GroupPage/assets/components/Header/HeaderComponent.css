@@ -3,30 +3,30 @@
 /* The css styling used for the header component. */
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
-
 :root {
-	/* CSS variables - Add variables below like the given example. */
-	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-	--main-style-color: #FF3CAC;
-	--main-background-color: #FF3CAC;
-	--accent-color-1: #FF3CAC;
-	--accent-color-2: #784BA0;
-	--accent-color-3: #2B86C5;
-	--accent-color-white: #ffffff;
-	--accent-color-black: #222222;
-	--main-font-family: 'Calibri', sans-serif;
-	/* line-height: 15px; */
+    /* CSS variables - Add variables below like the given example. */
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #FF3CAC;
+    --main-background-color: #FF3CAC;
+    --accent-color-1: #FF3CAC;
+    --accent-color-2: #784BA0;
+    --accent-color-3: #2B86C5;
+    --accent-color-white: #ffffff;
+    --accent-color-black: #222222;
+    --main-font-family: 'Calibri', sans-serif;
 }
+
 
 /* Header styling. */
 
 /* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/header.css" */
-
 .subpage-header-area {
-    background-color: green;
+    background-color: var(--accent-color-2);
     left: 0px;
     top: 0px;
-    height: 45px;
+    --headerHeight: 45px; /* Define the header variable. */
+    height: 45px; /* Fallback if needed. */
+    height: var(--headerHeight); /* Define the header height using the variable. */
     width: 100%;
     border-bottom: solid 2px var(--accent-color-white);
     display: flex;
@@ -37,22 +37,26 @@
     position: fixed;
 }
 
-/* Avatar class for the main image. */
 
+/* Avatar class for the main image. */
 .avatar-container {
     /* background-color: maroon; */
-    height: 55px;
-    width: 55px;
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    width: 43px; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
 }
 
 .avatar {
     background-color: rgba(255, 255, 255, 0.075);
-    height: 55px;
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
     width: auto;
     border-radius: 100%;
-    border: solid 1px var(--accent-color-1);
+    border: solid 1px var(--accent-color-white);
     cursor: pointer;
 }
+
 
 /* Main subpage header text class. */
 
@@ -73,13 +77,17 @@
 
 
 /* For homepage only. */
+
 .subpage-header-area.homepage {
     background-color: lightcoral;
-    height: 60px;
+    height: 45px; /* Fallback if needed. */
+    height: var(--headerHeight); /* Define the header height using the variable. */
     padding: 15px;
 }
 
+
 /* Header area media queries. */
+
 
 /* Scale up for screens larger than mobile. */
 
@@ -127,7 +135,9 @@
     }
 }
 
+
 /* Top Menu styling. */
+
 
 /* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/TopMenu.css" */
 
@@ -169,6 +179,7 @@
     color: var(--accent-color-2);
     background: var(--accent-color-white);
 }
+
 
 /* Top menu media queries. */
 
@@ -212,7 +223,9 @@
     }
 }
 
+
 /* Side Menu CSS */
+
 
 /* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/SideMenu.css" */
 
@@ -228,12 +241,13 @@
     color: var(--accent-color-white);
     top: 0px;
     left: 0px;
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    width: auto;
     display: block;
     font-size: 40px;
     cursor: pointer;
     padding: 0.5em;
-    height: 55px;
-    width: auto;
     margin: 0;
     padding: 0;
     /* width: 80px; */
@@ -245,13 +259,16 @@
     color: var(--accent-color-2);
 }
 
+
 /* Side menu media queries. */
+
 
 /* Mobile size. */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Smartphones - Covers most phones such as iPhone SE (my phone). */
 }
+
 
 /* Scale up for screens larger than mobile. */
 

@@ -60,7 +60,7 @@
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
-	border-left: solid 1px var(--accent-color-1);
+	/* border-left: solid 1px var(--accent-color-1); */
 	display: inline;
 }
 
