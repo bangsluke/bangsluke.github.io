@@ -41,39 +41,39 @@
 
     </header>
 
-    <!-- All Page Content. This is all the content between the header and footer. -->
+    <!-- Side Menu -->
 
-    <div class="allContentFrame">
+    <!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
+    <side-menu-component></side-menu-component>
 
-        <!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
-        <side-menu-component></side-menu-component>
+    <!-- Main Page Content -->
+	
+	<!-- This is all the content between the header and footer. -->
+    <div class="main-content-area fadein">
 
-        <!-- Main Page Content. -->
-        <div class="main-content-area fadein">
+        <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
-            <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
+        <!-- Add an initial div to hold the snap tabs. -->
 
-            <!-- Add an initial div to hold the snap tabs. -->
+        <div class="snap-tabs-container">
 
-            <div class="snap-tabs-container">
+            <snap-tabs>
 
-                <snap-tabs>
+                <!-- The horizontal scrollable section. -->
+                <snap-tabs-header class="scroll-snap-x">
 
-                    <!-- The horizontal scrollable section. -->
-                    <snap-tabs-header class="scroll-snap-x">
+                    <nav>
 
-                        <nav>
+                        <a active href="#profile" class="anchor">Profile</a>
+                        <a href="#contact" class="anchor">Contact</a>
+                        <a href="#football" class="anchor">Football</a>
+                        <a href="#history" class="anchor">History</a>
+                        <a href="#widgets" class="anchor">Widgets</a>
+                        <a href="#stats" class="anchor">Stats Summary</a>
+                        <a href="#titan" class="anchor">Titan Status</a>
 
-                            <a active href="#profile" class="anchor">Profile</a>
-                            <a href="#contact" class="anchor">Contact</a>
-                            <a href="#football" class="anchor">Football</a>
-                            <a href="#history" class="anchor">History</a>
-                            <a href="#widgets" class="anchor">Widgets</a>
-                            <a href="#stats" class="anchor">Stats Summary</a>
-                            <a href="#titan" class="anchor">Titan Status</a>
-
-                            <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
-                            <!-- <a href="#more">
+                        <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
+                        <!-- <a href="#more">
                                 <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
                                     <path
                                         d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
@@ -81,115 +81,115 @@
                                 </svg>
                             </a> -->
 
-                        </nav>
+                    </nav>
 
-                        <span class="snap-indicator"></span>
+                    <span class="snap-indicator"></span>
 
-                    </snap-tabs-header>
+                </snap-tabs-header>
 
-                    <section class="scroll-snap-x">
+                <section class="scroll-snap-x">
 
-                        <article id="profile">
+                    <article id="profile">
 
-                            <details>An individual page for each member providing them details pertinent to them (their
-                                address, their favourite teams league position and upcoming fixtures).</details>
+                        <details>An individual page for each member providing them details pertinent to them (their
+                            address, their favourite teams league position and upcoming fixtures).</details>
 
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
-                                class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
+                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                            class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
 
-                            <br>
+                        <br>
 
-                            <h2 id="fullName">Name</h2>
-                            
-                            <h4>Height: <p id="height">--ft</p>
-                            </h4>
-                            <h4>Weight: <p id="weight">--KG</p>
-                            </h4>
+                        <h2 id="fullName">Name</h2>
 
-
-                        </article>
-
-                        <article id="contact">
-
-                            <p>Add contact details;</p>
-                            <p>- Phone Number</p>
-                            <p>- Twitter handle</p>
-                            <p>- Instagram handle</p>
-                            <p> https://elfsight.com/click-to-call-widget/html/ </p>
-
-                        </article>
-
-                        <article id="football">
-
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
-                                class="center fadein" alt="Football Header" id="footballHeader">
-
-                            <br>
-
-                            <p>- Add snapshot of where football team is in Prem.</p>
-                            <img src="/pages/GroupPage/assets/images/Premier League.png"
-                                class="league-picture center fadein" alt="Liverpool Prem Position">
-                            <br>
-                            <p>- Add snapshot of where Dorkinians team is</p>
-                            <img src="/pages/GroupPage/assets/images/Dorkinians League.png"
-                                class="league-picture center fadein" alt="Dorkinians 3s Position">
-
-                        </article>
-
-                        <article id="history">
-
-                            <img src="/pages/GroupPage/assets/images/IndividualsPage/Ashcombe School Logo.png"
-                                class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
-
-                            <br>
-
-                            <h4>Ashcombe Year 11 Yearbook Quote: </h4><q id="ashcombeYear11YearBookQuote">Add quote</q>
-
-                            <br>
-
-                            <br>
-
-                            <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add
-                                quote</q>
-
-                        </article>
-
-                        <article id="widgets">
-
-                            <section class="weather">
-                                <a class="weatherwidget-io" SameSite=None
-                                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
-                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
-                                    data-icons="Climacons Animated" data-theme="original"
-                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
-                                    data-cloudfill="#494A66" data-raincolor="#99b998">SOUTH WOODHAM FERRERS Weather</a>
-                                <script>
-                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                </script>
-                            </section>
+                        <h4>Height: <p id="height">--ft</p>
+                        </h4>
+                        <h4>Weight: <p id="weight">--KG</p>
+                        </h4>
 
 
-                            <br>
-                            <p>- Use GeoLocation to confirm weather where the user is?</p>
-                            <p> http://100widgets.com/maps/202-geo-location-map.html </p>
+                    </article>
+
+                    <article id="contact">
+
+                        <p>Add contact details;</p>
+                        <p>- Phone Number</p>
+                        <p>- Twitter handle</p>
+                        <p>- Instagram handle</p>
+                        <p> https://elfsight.com/click-to-call-widget/html/ </p>
+
+                    </article>
+
+                    <article id="football">
+
+                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                            class="center fadein" alt="Football Header" id="footballHeader">
+
+                        <br>
+
+                        <p>- Add snapshot of where football team is in Prem.</p>
+                        <img src="/pages/GroupPage/assets/images/Premier League.png"
+                            class="league-picture center fadein" alt="Liverpool Prem Position">
+                        <br>
+                        <p>- Add snapshot of where Dorkinians team is</p>
+                        <img src="/pages/GroupPage/assets/images/Dorkinians League.png"
+                            class="league-picture center fadein" alt="Dorkinians 3s Position">
+
+                    </article>
+
+                    <article id="history">
+
+                        <img src="/pages/GroupPage/assets/images/IndividualsPage/Ashcombe School Logo.png"
+                            class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
+
+                        <br>
+
+                        <h4>Ashcombe Year 11 Yearbook Quote: </h4><q id="ashcombeYear11YearBookQuote">Add quote</q>
+
+                        <br>
+
+                        <br>
+
+                        <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add
+                            quote</q>
+
+                    </article>
+
+                    <article id="widgets">
+
+                        <section class="weather">
+                            <a class="weatherwidget-io" SameSite=None
+                                href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+                                data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
+                                data-icons="Climacons Animated" data-theme="original"
+                                data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
+                                data-cloudfill="#494A66" data-raincolor="#99b998">SOUTH WOODHAM FERRERS Weather</a>
+                            <script>
+                                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                            </script>
+                        </section>
 
 
-                        </article>
+                        <br>
+                        <p>- Use GeoLocation to confirm weather where the user is?</p>
+                        <p> http://100widgets.com/maps/202-geo-location-map.html </p>
 
-                        <article id="stats">
-                            <h2>Stats</h2>
-                            <p>Add high level summary of key stats of user.</p>
-                        </article>
 
-                        <article id="titan">
-                            <h2>Titan Status</h2>
-                            <p>- Have a summary of number of Titan spots owned.</p>
-                            <p>- Add biggest Titan lead?</p>
-                        </article>
+                    </article>
 
-                        <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
-                        <!-- <article id="more">
+                    <article id="stats">
+                        <h2>Stats</h2>
+                        <p>Add high level summary of key stats of user.</p>
+                    </article>
+
+                    <article id="titan">
+                        <h2>Titan Status</h2>
+                        <p>- Have a summary of number of Titan spots owned.</p>
+                        <p>- Add biggest Titan lead?</p>
+                    </article>
+
+                    <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
+                    <!-- <article id="more">
                             <h2>Lore s sdf</h2>
                             <ul>
                                 <li>Lorem</li>
@@ -202,11 +202,9 @@
                             <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
                         </article> -->
 
-                    </section>
+                </section>
 
-                </snap-tabs>
-
-            </div>
+            </snap-tabs>
 
         </div>
 
@@ -229,7 +227,8 @@
     <!-- Add the common sideMenu JS -->
     <script src="/pages/GroupPage/assets/components/Footer/footer.js" type="text/javascript" defer></script>
     <!-- Add the common footer JS -->
-    <script src="/pages/GroupPage/assets/components/SnapTabs/scroll-timeline.js"></script> <!-- Get Scroll-Timeline JS -->
+    <script src="/pages/GroupPage/assets/components/SnapTabs/scroll-timeline.js"></script>
+    <!-- Get Scroll-Timeline JS -->
     <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
     <script src="/pages/GroupPage/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
     <script src="/pages/GroupPage/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->

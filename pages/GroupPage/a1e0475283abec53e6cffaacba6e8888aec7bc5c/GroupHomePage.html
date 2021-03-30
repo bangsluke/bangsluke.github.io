@@ -62,7 +62,8 @@
 
 			<!-- The main top nav bar options. -->
 			<nav class="topMenu" id="top-menu">
-				<a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
+				<a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i
+						class="fa fa-home"></i>Home</a>
 				<a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
 				<a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
 				<a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
@@ -85,32 +86,30 @@
 
 	</header>
 
-	<!-- All Page Content. This is all the content between the header and footer. -->
+	<!-- Side Menu -->
+
+	<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
+	<side-menu-component></side-menu-component>
+
+	<!-- Main Page Content -->
 	
-	<div class="allContentFrame">
+	<!-- This is all the content between the header and footer. -->
+	<div class="main-content-area fadein">
 
-		<!-- Add the common website side menu using shadow DOMs. See /pages/GroupPage/assets/components/SideMenu/sideMenu.js for the side menu code. -->
-		<side-menu-component></side-menu-component>
+		<!-- Main content section. -->
+		<div class="content-text">
 
-		<!-- Main Page Content. -->
-		<div class="main-content-area fadein">
+			<!-- Add pink main header box. -->
+			<a href="/pages/GroupPage/SubPages/LoginPage.html">
+				<div class="headercontainer">
+					<h1>Tits Group Page</h1>
+				</div>
+			</a>
 
-			<!-- Main content section. -->
-			<div class="content-text">
-
-				<!-- Add pink main header box. -->
-				<a href="/pages/GroupPage/SubPages/LoginPage.html">
-					<div class="headercontainer">
-						<h1>Tits Group Page</h1>
-					</div>
-				</a>
-
-				<!-- Add link below to enter the site. -->
-				<a href="/pages/GroupPage/SubPages/IndividualsPage.html">
-					<h3>Click to enter</h3>
-				</a>
-
-			</div>
+			<!-- Add link below to enter the site. -->
+			<a href="/pages/GroupPage/SubPages/IndividualsPage.html">
+				<h3>Click to enter</h3>
+			</a>
 
 		</div>
 
