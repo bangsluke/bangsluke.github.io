@@ -32,7 +32,7 @@ const sectionScrollTimeline = new ScrollTimeline({
   - Color is active when its the current index
 */
 tabnavitems.forEach(navitem => {
-    console.log("SnapTabs1:1 - tabnavitems.forEach(navitem)");
+    console.log("SnapTabs1:1 - tabnavitems.forEach(navitem)"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
     navitem.animate({
         color: [...tabnavitems].map(item =>
             item === navitem
@@ -47,7 +47,7 @@ tabnavitems.forEach(navitem => {
 })
 
 if (motionOK) {
-    console.log("SnapTabs1:2 - if (motionOK)");
+    console.log("SnapTabs1:2 - if (motionOK)"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
     tabindicator.animate({
         transform: [...tabnavitems].map(({ offsetLeft }) =>
             `translateX(${offsetLeft}px)`),
@@ -62,15 +62,17 @@ if (motionOK) {
 }
 
 const setActiveTab = tabbtn => {
+    console.log("setActiveTab"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
+    // console.log(tabbtn);
     tabnav
-        .querySelector(':scope a[active]')
-        .removeAttribute('active')
-
-    tabbtn.setAttribute('active', '')
-    tabbtn.scrollIntoView()
+        .querySelector(':scope a[active]') // Select the <a> tag that previously had the active attribute.
+        .removeAttribute('active') // Remove the active attribute.
+    tabbtn.setAttribute('active', '') // Add the active attribute to the clicked anchor.
+    tabbtn.scrollIntoView(false) // Scrolls along the nav bar to the new active anchor. https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView.
 }
 
 const determineActiveTabSection = () => {
+    console.log("determineActiveTabSection"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
     const i = tabsection.scrollLeft / tabsection.clientWidth
     const matchingNavItem = tabnavitems[i]
 
@@ -78,13 +80,14 @@ const determineActiveTabSection = () => {
 }
 
 tabnav.addEventListener('click', e => {
-    console.log("SnapTabs1:3 - tabnav.addEventListener('click')");
-    if (e.target.nodeName !== "A") return
-    setActiveTab(e.target)
+    console.log("SnapTabs1:3 - tabnav.addEventListener('click')"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
+    if (e.target.nodeName !== "A") return // If nodeName is not A (i.e. it's not an anchor that has been clicked on), cancel the function.
+    console.log(e.target); // e.target returns the clicked anchor HTML (e.g. "<a href="#contact" class="anchor">Contact</a>"")
+    setActiveTab(e.target) // Call the setActiveTab function, passing it the clicked anchor HTML.
 })
 
 tabsection.addEventListener('scroll', () => {
-    console.log("SnapTabs1:4 - tabsection.addEventListener('scroll')");
+    console.log("SnapTabs1:4 - tabsection.addEventListener('scroll')"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
     clearTimeout(tabsection.scrollEndTimer)
     tabsection.scrollEndTimer = setTimeout(
         determineActiveTabSection
@@ -92,7 +95,7 @@ tabsection.addEventListener('scroll', () => {
 })
 
 window.onload = () => {
-    console.log("SnapTabs1:5 - window.onload");
+    console.log("SnapTabs1:5 - window.onload"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
     if (location.hash)
         tabsection.scrollLeft = document
             .querySelector(location.hash)

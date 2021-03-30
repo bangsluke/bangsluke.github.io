@@ -24,13 +24,14 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: green;
+    /* background-color: green; */
     top: 0px;
+    left: 0px;
     padding-top: 0px;
     margin-top: 0px;
     width: 100%;
-    height: calc(100vh - 85px);
-    min-height: calc(100vh - 65px); /* 45px header + 25px footer = 65px (https://stackoverflow.com/a/26090114/14290169) */
+    height: calc(100vh - 51px - 8px - 25px); /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
+    min-height: calc(100vh - 51px - 8px - 25px); /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
     /* Below is copied from body above. */
     box-sizing: border-box;
     display: grid;
@@ -41,15 +42,6 @@
     /* font-family: var(--main-font-family); */
     z-index: 1;
     /* visibility: hidden; */
-}
-
-/* Anchor tags. */
-
-/* https://stackoverflow.com/a/13117744/14290169 */
-
-.anchor {
-    padding-top: calc(70px + 45px);
-    padding-top: 45px;
 }
 
 /* Original Snap Tabs CSS Styling. */
@@ -93,9 +85,8 @@ snap-tabs {
     --accent: var(--hue) 100% 54%;
     --accent-reduced: var(--hue) 90% 90%;
     --indicator-size: 2px;
-    --space-1: .5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
+    --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -133,8 +124,6 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
 }
 
 snap-tabs>snap-tabs-header {
-    /* --text-color: hsl(var(--hue) 5% 40%); */
-    /* --text-active-color: hsl(var(--hue) 20% 10%); */
     --text-color: var(--accent-color-black);
     --text-active-color: var(--accent-color-white);
     flex-shrink: 0;
@@ -158,12 +147,7 @@ snap-tabs>snap-tabs-header a {
     color: var(--text-color);
     font-weight: 700;
     text-decoration: none;
-    padding: var(--space-2) var(--space-3);
-}
-
-snap-tabs>snap-tabs-header a>svg {
-    inline-size: 1.5em;
-    pointer-events: none;
+    padding: var(--vertical-space) var(--horizontal-space);
 }
 
 snap-tabs>snap-tabs-header a:hover {
@@ -192,7 +176,7 @@ snap-tabs>section>article {
     scroll-snap-align: start;
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--vertical-space) var(--horizontal-space);
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -213,4 +197,18 @@ snap-tabs>section>article {
     snap-tabs .snap-indicator {
         visibility: hidden;
     }
+}
+
+/* Method C from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
+.nav-targets {
+    border-top: 50px solid transparent;
+    margin-top: -50px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+/* Remove some minor padding from the .main-content-area class used on all other pages. */
+.main-content-area {
+    padding-top: 0px;
 }

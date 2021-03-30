@@ -28,19 +28,13 @@
     background-color: rgba(var(--accent-color-black-rgb), 0.5);
     grid-area: footer;
     width: 100%;
+    height: 25px;
     top: 90%;
     color: var(--accent-color-white);
     justify-self: center;
     align-content: center;
     text-align: center;
     padding: auto;
-}
-
-/* Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page */
-
-.footer, .push {
-    height: 25px;
-    /* .push must be the same height as .footer */
 }
 
 .footer a {

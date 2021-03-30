@@ -62,24 +62,15 @@
                 <!-- The horizontal scrollable section. -->
                 <snap-tabs-header class="scroll-snap-x">
 
-                    <nav>
+                    <nav id="nav-bar">
 
-                        <a active href="#profile" class="anchor">Profile</a>
-                        <a href="#contact" class="anchor">Contact</a>
-                        <a href="#football" class="anchor">Football</a>
-                        <a href="#history" class="anchor">History</a>
-                        <a href="#widgets" class="anchor">Widgets</a>
-                        <a href="#stats" class="anchor">Stats Summary</a>
-                        <a href="#titan" class="anchor">Titan Status</a>
-
-                        <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
-                        <!-- <a href="#more">
-                                <svg fill="currentColor" viewBox="0 0 20 20" role="presentation" focusable="false">
-                                    <path
-                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                    </path>
-                                </svg>
-                            </a> -->
+                        <a href="#profile" active>Profile</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#football">Football</a>
+                        <a href="#history">History</a>
+                        <a href="#widgets">Widgets</a>
+                        <a href="#stats">Stats Summary</a>
+                        <a href="#titan">Titan Status</a>
 
                     </nav>
 
@@ -89,7 +80,7 @@
 
                 <section class="scroll-snap-x">
 
-                    <article id="profile">
+                    <article class="nav-targets" id="profile">
 
                         <details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details>
@@ -109,7 +100,7 @@
 
                     </article>
 
-                    <article id="contact">
+                    <article class="nav-targets" id="contact">
 
                         <p>Add contact details;</p>
                         <p>- Phone Number</p>
@@ -119,7 +110,7 @@
 
                     </article>
 
-                    <article id="football">
+                    <article class="nav-targets" id="football">
 
                         <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
                             class="center fadein" alt="Football Header" id="footballHeader">
@@ -136,7 +127,7 @@
 
                     </article>
 
-                    <article id="history">
+                    <article class="nav-targets" id="history">
 
                         <img src="/pages/GroupPage/assets/images/IndividualsPage/Ashcombe School Logo.png"
                             class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
@@ -154,7 +145,7 @@
 
                     </article>
 
-                    <article id="widgets">
+                    <article class="nav-targets" id="widgets">
 
                         <section class="weather">
                             <a class="weatherwidget-io" SameSite=None
@@ -177,30 +168,16 @@
 
                     </article>
 
-                    <article id="stats">
+                    <article class="nav-targets" id="stats">
                         <h2>Stats</h2>
                         <p>Add high level summary of key stats of user.</p>
                     </article>
 
-                    <article id="titan">
+                    <article class="nav-targets" id="titan">
                         <h2>Titan Status</h2>
                         <p>- Have a summary of number of Titan spots owned.</p>
                         <p>- Add biggest Titan lead?</p>
                     </article>
-
-                    <!-- Turn off the "more" final three dots section at the end of the horizontal scroll bar. -->
-                    <!-- <article id="more">
-                            <h2>Lore s sdf</h2>
-                            <ul>
-                                <li>Lorem</li>
-                                <li>ipsum</li>
-                                <li>dolor</li>
-                                <li>Lorem</li>
-                                <li>ipsum</li>
-                                <li>dolor</li>
-                            </ul>
-                            <p>Sit molestiae itaque rem optio molestias voluptati obcaecati!</p>
-                        </article> -->
 
                 </section>
 

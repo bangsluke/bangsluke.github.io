@@ -39,9 +39,6 @@ html {
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
-
-	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
-	/* scroll-padding-top: 260px; */
 }
 
 /* Add code below. */
@@ -62,26 +59,19 @@ body {
 	background-color: var(--accent-color-2); /* Fallback if needed. */
 	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
 	/* background: orange; */
-	
+
 	top: 0px;
 	left: 0px;
 	height: max-content;
+	height: 100vh;
 	/* overflow: hidden; */
-	overflow-y: none;
-	overflow-x: none;
+	/* overflow-y: none; */
+	/* overflow-x: none; */
 	font-family: sans-serif;
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0;
 }
-
-/* Add a id for all content div. */
-
-/* .allContentFrame {
-	background: yellow;
-	height: max-content;
-	overflow-y: scroll;
-} */
 
 /* Main content styling. */
 
@@ -94,12 +84,11 @@ body {
 	width: 100%;
 
 	min-height: 580px; /* Fallback if needed. */
-	min-height: calc(100vh - 85px); /* 60px header + 25px footer = 85px (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: calc(100vh - 50px - 8px - 25px);  /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
 	height: max-content;
 
 	transition: margin-left .5s;
 	padding: 5px; /* Add all round padding to content to slightly center it. */
-	padding-top: 10px; /* Add additional padding at the top to space content away from the header. */
 
 	overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	scroll-behavior: smooth;
