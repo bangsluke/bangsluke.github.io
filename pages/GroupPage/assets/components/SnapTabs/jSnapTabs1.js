@@ -12,7 +12,7 @@ const { matches: motionOK } = window.matchMedia(
     '(prefers-reduced-motion: no-preference)'
 )
 
-// Grab and stash elements
+// Grab and stash elements.
 const tabgroup = document.querySelector('snap-tabs')
 const tabsection = tabgroup.querySelector(':scope > section')
 const tabnav = tabgroup.querySelector(':scope nav')
@@ -68,7 +68,7 @@ const setActiveTab = tabbtn => {
         .querySelector(':scope a[active]') // Select the <a> tag that previously had the active attribute.
         .removeAttribute('active') // Remove the active attribute.
     tabbtn.setAttribute('active', '') // Add the active attribute to the clicked anchor.
-    tabbtn.scrollIntoView() // Scrolls along the nav bar to the new active anchor. https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView.
+    tabbtn.scrollIntoView(false) // NEEDS TO BE FALSE. Scrolls along the nav bar to the new active anchor. https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView.
 }
 
 const determineActiveTabSection = () => {
@@ -103,4 +103,9 @@ window.onload = () => {
             .offsetLeft
 
     determineActiveTabSection()
+}
+
+function navClick() {
+    console.log("SnapTabs1:6 - navClick()"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
+    setActiveTab(e.target)
 }
