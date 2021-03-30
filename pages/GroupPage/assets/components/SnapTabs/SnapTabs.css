@@ -8,7 +8,6 @@
 
 :root {
     /* CSS variables - Add variables below like the given example. */
-    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
     --main-style-color: #FF3CAC;
     --main-background-color: #FF3CAC;
     --accent-color-1: #FF3CAC;
@@ -17,20 +16,21 @@
     --accent-color-white: #ffffff;
     --accent-color-black: #222222;
     --main-font-family: 'Calibri', sans-serif;
-    /* line-height: 15px; */
+    
     /* Additional snap tabs variables. */
-    --snap-tabs-height: 450px;
     --main-style-color-rgb: 255, 60, 172;
 }
 
 /* Added Luke Styling. */
 
 .snap-tabs-container {
+    background-color: green;
     top: 0px;
-    /* background-color: green; */
-    width: 100%;
     padding-top: 0px;
     margin-top: 0px;
+    width: 100%;
+    height: calc(100vh - 85px);
+    min-height: calc(100vh - 65px); /* 45px header + 25px footer = 65px (https://stackoverflow.com/a/26090114/14290169) */
     /* Below is copied from body above. */
     box-sizing: border-box;
     display: grid;
@@ -41,11 +41,6 @@
     /* font-family: var(--main-font-family); */
     z-index: 1;
     /* visibility: hidden; */
-    /* height: var(--snap-tabs-height); */
-    height: calc(100vh - 85px);
-    min-height: calc(100vh - 85px);
-    /* https://stackoverflow.com/a/26090114/14290169 */
-    /* 60px header + 25px footer = 85px  */
 }
 
 /* Anchor tags. */
@@ -54,6 +49,7 @@
 
 .anchor {
     padding-top: calc(70px + 45px);
+    padding-top: 45px;
 }
 
 /* Original Snap Tabs CSS Styling. */
@@ -104,7 +100,6 @@ snap-tabs {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    /* height: var(--snap-tabs-height); */
 }
 
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
