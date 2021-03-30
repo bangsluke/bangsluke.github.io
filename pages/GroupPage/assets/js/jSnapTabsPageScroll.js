@@ -2,11 +2,11 @@
 
 // https://stackoverflow.com/a/13067009/14290169
 
-console.log("jSnapTabsPageScroll.js loaded");
+//console.log("jSnapTabsPageScroll.js loaded");
 
 (function (document, history, location) {
 
-  console.log("jSnapTabsPageScroll: main function"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
+  //console.log("jSnapTabsPageScroll: main function"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
 
   var HISTORY_SUPPORT = !!(history && history.pushState);
 
