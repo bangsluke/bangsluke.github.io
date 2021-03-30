@@ -34,20 +34,14 @@
 /* HTML updates to cover the full webpage. */
 
 html {
-	/* background: var(--main-background-color, var(--accent-color-1)); */
-	
-	background-color: var(--accent-color-2);
-	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	
-	
+	background: var(--main-background-color, var(--accent-color-1));
 	/* background: orange; */
-	/* Smooth the scrolling function of any internal hyperlinks. */
-	scroll-behavior: smooth;
-	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
-	/* scroll-padding-top: 260px; */
+	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
-	overflow-x: none;
+
+	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+	/* scroll-padding-top: 260px; */
 }
 
 /* Add code below. */
@@ -65,13 +59,10 @@ html {
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
-	/* https://www.grabient.com/ */
-	
-	/* background-color: var(--accent-color-2);
-	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); */
-	
-	
+	background-color: var(--accent-color-2); /* Fallback if needed. */
+	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
 	/* background: orange; */
+	
 	top: 0px;
 	left: 0px;
 	height: max-content;
@@ -95,7 +86,7 @@ body {
 /* Main content styling. */
 
 .main-content-area {
-	background: lightblue;
+	/* background: lightblue; */
 	
 	margin-top: 50px; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 45px header. */
 	top: 0px;
