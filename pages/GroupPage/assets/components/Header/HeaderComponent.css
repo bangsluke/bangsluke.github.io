@@ -23,10 +23,10 @@
 /* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/header.css" */
 
 .subpage-header-area {
-    background-color: var(--main-style-color);
+    background-color: green;
     left: 0px;
     top: 0px;
-    height: 60px;
+    height: 45px;
     width: 100%;
     border-bottom: solid 2px var(--accent-color-white);
     display: flex;
@@ -34,14 +34,7 @@
     justify-content: space-between;
     padding: 2px;
     z-index: 2;
-
     position: fixed;
-}
-
-.subpage-header-area.homepage {
-    /* background-color: lightcoral; */
-    height: 80px;
-    padding: 15px;
 }
 
 /* Avatar class for the main image. */
@@ -76,6 +69,14 @@
     font-size: 20px;
     height: max-content;
     margin: auto;
+}
+
+
+/* For homepage only. */
+.subpage-header-area.homepage {
+    background-color: lightcoral;
+    height: 60px;
+    padding: 15px;
 }
 
 /* Header area media queries. */

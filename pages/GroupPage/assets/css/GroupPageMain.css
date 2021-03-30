@@ -70,7 +70,6 @@ body {
 	overflow-y: none;
 	overflow-x: none;
 
-
 	height: max-content;
 	font-family: sans-serif;
 	min-block-size: 100%;
@@ -95,6 +94,7 @@ body {
 	min-height: calc(100vh - 85px);
 	/* https://stackoverflow.com/a/26090114/14290169 */
 	/* 60px header + 25px footer = 85px  */
+
 }
 
 /* Main content styling. */
@@ -107,6 +107,8 @@ body {
 	height: max-content;
 	/* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	scroll-behavior: smooth;
+
+	overflow-y: scroll;
 }
 
 .content-text {
