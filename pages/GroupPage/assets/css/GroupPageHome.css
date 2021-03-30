@@ -9,6 +9,94 @@
 }
 
 
+
+
+.content-text {
+	/* background-color: blue; */
+	height: 350px;
+	width: 100%;
+	/* Note padding in all-content-area limiting width */
+	text-align: center;
+	padding: 10px 10px;
+}
+
+.headercontainer {
+	background: var(--accent-color-1);
+	/* background-color: red; */
+	width: max-content;
+	padding: 5px;
+	margin: 20% auto 0.2em auto;
+}
+
+.content-text h1 {
+	display: inline-block;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: var(--accent-color-white);
+	transition: transform 250ms;
+}
+
+.content-text h1:hover {
+	transform: translateY(-5px);
+}
+
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 25px;
+	margin: 10px;
+	letter-spacing: 1px;
+	color: white;
+}
+
+#content-area {
+	padding: 10px;
+}
+
+/* Content media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+}
+
+/* Scale up for screens larger than mobile. */
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.content-text h1 {
+		padding: 15px 35px;
+		font-size: 50px;
+	}
+	.content-text h3 {
+		font-size: 45px;
+		margin: 10px;
+		letter-spacing: 3px;
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.content-text h1 {
+		padding: 15px 35px;
+		font-size: 50px;
+	}
+	.content-text h3 {
+		font-size: 45px;
+		margin: 10px;
+		letter-spacing: 3px;
+	}
+}
+
+
+
 /* Avatar class for the main image. */
 
 .avatar-container {
