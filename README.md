@@ -676,6 +676,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Create a chart of data in JavaScript (Chart JS For Beginners)](https://www.youtube.com/watch?v=FtZwJZB0xb8&t=1038s&ab_channel=TheCodeAngle)
 - [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Back To The Basics: How To Generate a Table With JavaScript](https://www.valentinog.com/blog/html-table/)
+- [Using media queries with JavaScript](https://dev.to/maroun_baydoun/using-media-queries-with-javascript-4aeo)
 
 #### JavaScript Tips
 - [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
