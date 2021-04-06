@@ -33,6 +33,62 @@
 	border-radius: 5px;
 }
 
+/* Add table styling. */
+
+.individualsTable {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	/* background-color: var(--accent-color-3, blue); */
+	color: white;
+}
+
+/* th not required as table has no headers. */
+
+/* th {
+	font-style: bold;
+	background-color: var(--accent-color-3, blue);
+	border-bottom: 4px solid var(--accent-color-2, red);
+} */
+
+td {
+	font-size: 14px;
+	text-align: left;
+	line-height: 20px;
+}
+
+tr:hover {
+	background-color: var(--accent-color-1, pink);
+	color: var(--accent-color-white);
+	font: bold;
+}
+
+/* Icon Styling. */
+
+.individualsPageIcon {
+	width: 20px;
+	height: auto;
+	filter: brightness(0) invert(1);
+}
+
+/* Add specific styling to the item (first) column. */
+
+.iconColumn {
+	width: 15%;
+	text-align: center;
+	/* background-color: var(--accent-color-3, blue); */
+}
+
+.itemColumn {
+	width: 30%;
+	font: bold;
+	/* background-color: var(--accent-color-3, blue); */
+}
+
+.infoColumn {
+	width: 35%;
+}
+
 /* Contact */
 
 #footballHeader {
@@ -44,4 +100,11 @@
 	width: 100%;
 	height: auto;
 	margin: auto;
+}
+
+/* Text formatting. */
+
+a {
+	color: inherit;
+	text-decoration: underline;
 }

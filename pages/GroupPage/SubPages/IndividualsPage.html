@@ -47,8 +47,8 @@
     <side-menu-component></side-menu-component>
 
     <!-- Main Page Content -->
-	
-	<!-- This is all the content between the header and footer. -->
+
+    <!-- This is all the content between the header and footer. -->
     <div class="main-content-area fadein">
 
         <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
@@ -91,19 +91,86 @@
 
                         <h2 id="fullName">Name</h2>
 
-                        <h4>Height: <p id="height">--ft</p>
+                        <!-- Add a table that stores all of the pieces of individuals information. -->
+                        <table class="individualsTable">
+                            <!-- Column Groups -->
+                            <colgroup>
+                                <!-- Repeat as many cols as the number of headers - https://stackoverflow.com/a/43892470/14290169 -->
+                                <col class="iconColumn">
+                                <col class="itemColumn">
+                                <col class="infoColumn">
+                            </colgroup>
+                            <!-- Header Row -->
+                            <!-- <tr>
+                                <th class="thIndividualsHeader itemColumn">Item</th>
+                                <th class="thIndividualsHeader infoColumn">Info</th>
+                            </tr> -->
+                            <!-- All other rows -->
+                            <tr>
+                                <td><img alt="Height Icon" class="individualsPageIcon"
+                                        src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"></td>
+                                <td>Height:</td>
+                                <td id="height">--</td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Weight Icon" class="individualsPageIcon"
+                                        src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"></td>
+                                <td>Weight:</td>
+                                <td id="weight">--</td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Phone Icon" class="individualsPageIcon"
+                                        src="http://cdn.onlinewebfonts.com/svg/img_198352.png"></td>
+                                <td>Phone:</td>
+                                <td id="phone">--</td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Email Icon" class="individualsPageIcon"
+                                        src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png">
+                                </td>
+                                <td>Email:</td>
+                                <td><a id="email" href="_blank" alt>--</a></td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Facebook Logo" class="individualsPageIcon"
+                                        src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png">
+                                </td>
+                                <td>Facebook:</td>
+                                <td><a id="facebook" href="_blank" alt>--</a></td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Twitter Logo" class="individualsPageIcon"
+                                        src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png">
+                                </td>
+                                <td>Twitter:</td>
+                                <td><a id="twitter" href="_blank" alt>--</a></td>
+                            </tr>
+                            <tr>
+                                <td><img alt="Instagram Logo" class="individualsPageIcon"
+                                        src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png">
+                                </td>
+                                <td>Instagram:</td>
+                                <td><a id="instagram" href="_blank" alt>--</a></td>
+                            </tr>
+
+                        </table>
+
+                        <!-- <h4>Height: <h4 id="height">--ft</h4>
                         </h4>
+
+                        <h4 id="heightNew">Height: --</h4>
+
                         <h4>Weight: <p id="weight">--KG</p>
                         </h4>
 
                         <p>Add contact details;</p>
                         <p>- Phone Number</p>
-                        
+
                         <h4>Twitter: <p id="twitter">@</p>
                         </h4>
 
                         <p>- Instagram handle</p>
-                        <p> https://elfsight.com/click-to-call-widget/html/ </p>
+                        <p> https://elfsight.com/click-to-call-widget/html/ </p> -->
 
                     </article>
 
@@ -131,14 +198,25 @@
 
                         <br>
 
-                        <h4>Ashcombe Year 11 Yearbook Quote: </h4><q id="ashcombeYear11YearBookQuote">Add quote</q>
+                        <h4>Ashcombe Year 11 Yearbook Quote: </h4>
+
+                        <br>
+
+                        <q id="ashcombeYear11YearBookQuote">Add quote</q>
 
                         <br>
 
                         <br>
 
-                        <h4>Ashcombe Sixth Form Yearbook Quote: </h4><q id="ashcombeSixthFormYearBookQuote">Add
-                            quote</q>
+                        <br>
+
+                        <br>
+
+                        <h4>Ashcombe Sixth Form Yearbook Quote: </h4>
+
+                        <br>
+
+                        <q id="ashcombeSixthFormYearBookQuote">Add quote</q>
 
                     </article>
 

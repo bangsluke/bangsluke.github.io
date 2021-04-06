@@ -36,6 +36,7 @@ function showSelectedInfo(results) {
     console.log(data); // Log the data in the console.
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
     var clickedUserName = sessionStorage.getItem("clickedUserName"); // Retrieve the variable passed to session storage.
+    if (clickedUserName == null) {clickedUserName = "Alex";} // Deal with initial load of the page where no user has been selected.
     getData(data, clickedUserName); // Pass the data to the getData function to be processed.
 }
 
@@ -55,11 +56,23 @@ function getData(data, clickedUserName) {
     
     // Modify HTML elements with the found data.
     
+   // document.getElementById("height").innerHTML = document.getElementById("height").innerHTML.replace("--",data[foundRow].height); // This is an alternative way of replacing the data using the replace function.
+
     // Profile Tab
-    document.getElementById("profilePicture").src = data[foundRow].profilePictureURL;
-    document.getElementById("fullName").innerHTML = data[foundRow].fullName;
-    document.getElementById("height").innerHTML = data[foundRow].height;
-    document.getElementById("weight").innerHTML = data[foundRow].weight;
+    document.getElementById("profilePicture").src = data[foundRow].profilePictureURL; // Modify the source of the image.
+    document.getElementById("fullName").innerHTML = data[foundRow].fullName; // Modify the text inside the element.
+    document.getElementById("height").innerHTML = data[foundRow].height; // Modify the text inside the element.
+    document.getElementById("weight").innerHTML = data[foundRow].weight; // Modify the text inside the element.
+    document.getElementById("phone").innerHTML = data[foundRow].phone; // Modify the text inside the element.
+    document.getElementById("email").innerHTML = data[foundRow].email; // Modify the text inside the element.
+    console.log('mailto:' + data[foundRow].email);
+    document.getElementById("email").setAttribute('href', 'mailto:' + data[foundRow].email); // Update the href of the link dynamically.
+    document.getElementById("facebook").innerHTML = data[foundRow].facebookHandle; // Modify the text inside the element.
+    document.getElementById("facebook").setAttribute('href', data[foundRow].facebookURL); // Update the href of the link dynamically.
+    document.getElementById("twitter").innerHTML = data[foundRow].twitterHandle; // Modify the text inside the element.
+    document.getElementById("twitter").setAttribute('href', data[foundRow].twitterURL); // Update the href of the link dynamically.
+    document.getElementById("instagram").innerHTML = data[foundRow].instagramHandle; // Modify the text inside the element.
+    document.getElementById("instagram").setAttribute('href', data[foundRow].instagramURL); // Update the href of the link dynamically.
 
     // Contact Tab
 
@@ -71,7 +84,8 @@ function getData(data, clickedUserName) {
     document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath;
 
     // Widgets Tab
-
+    //document.querySelector(".weatherwidget-io").innerHTML = data[foundRow].weatherWidgetHomeTown; // Modify the text inside the element.
+    //document.querySelector(".weatherwidget-io").setAttribute('href', data[foundRow].weatherWidgetURL); // Update the href of the link dynamically.
 }
 
 // End the console timer.
