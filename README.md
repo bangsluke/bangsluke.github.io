@@ -140,6 +140,7 @@ The other projects do not yet have set up instructions.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [JavaScript Links](https://bangsluke.github.io/#javascript-links)
+- [What is the best way to learn JavaScript in 2021?](https://codedamn.com/news/best-way-to-learn-javascript)
 - [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
@@ -199,6 +200,7 @@ All useful links for various different coding languages.
 - [codewars](https://www.codewars.com/)
 - [CSS for JS Developers](https://css-for-js.dev/)
 - [Bigs On Dev - Front End Development](https://bigsondev.com/)
+- [Advanced Practical JavaScript](https://codedamn.com/learn/advanced-practical-javascript?utm_source=email&utm_medium=launch-email&utm_campaign=social-media-launch)
 - [Upskill Courses](https://upskillcourses.com/courses)
 - [JavaScript Introduction Video from Microsoft](https://cloudblogs.microsoft.com/opensource/2020/10/05/new-javascript-training-video-series-beginners/?WT.mc_id=modinfra-0000-abartolo)
 - [CS50's Introduction to Computer Science](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/)
@@ -618,6 +620,8 @@ A collection of tools to support web development. Some are very much untried.
 - [How you can simplify your CSS with :is()](https://www.youtube.com/watch?v=McC4QkCvbaY&ab_channel=KevinPowell)
 - [CSS Auditing](https://cssstats.com/)
 - [CSS Generators](https://www.smashingmagazine.com/2021/03/css-generators/)
+- [Animation can make wave 👋 much more than emoji!](https://blog.shhdharmen.me/animation-can-make-wave-much-more-than-emoji?guid=none&deviceId=55961ac5-3579-4764-bffc-111edc0ffb5f)
+- [What is Glassmorphism? Create This New Design Effect Using Only HTML and CSS](https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
@@ -677,6 +681,7 @@ A collection of tools to support web development. Some are very much untried.
 - [Greate JavaScript example repository](https://www.reddit.com/r/learnjavascript/comments/ky8kba/amazing_github_repository_contains_modern/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [Back To The Basics: How To Generate a Table With JavaScript](https://www.valentinog.com/blog/html-table/)
 - [Using media queries with JavaScript](https://dev.to/maroun_baydoun/using-media-queries-with-javascript-4aeo)
+- [Social media floating action button (animated)](https://www.reddit.com/r/css/comments/mk37kb/social_media_floating_action_button_animated_html/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 #### JavaScript Tips
 - [5 JavaScript Concepts You HAVE TO KNOW](https://www.youtube.com/watch?v=a00NRSFgHsY&ab_channel=JamesQQuick)
@@ -725,6 +730,7 @@ A collection of tools to support web development. Some are very much untried.
 <div style="text-align:center"><img src="http://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png" width="50" height="50"></div>
 
 - [Reading an Excel sheet using JavaScript (How To Read An Excel File In Node.js)](https://javascript.plainenglish.io/how-to-read-an-excel-file-in-node-js-6e669e9a3ce1)
+- [Learn Node.js and Express with This Free 8-hour Back End Development Course](https://www.freecodecamp.org/news/free-8-hour-node-express-course/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
