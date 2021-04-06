@@ -226,6 +226,7 @@ Below are my recommended places to start learning and building.
 > These are site where you can learn to develop HTML, CSS and Javascript all on one screen in one place.
 - [SoloLearn](https://code.sololearn.com/web)
 - [repl.it](https://repl.it/~)
+- [Glitch](https://glitch.com/)
 - [codepen.io](https://codepen.io/pen/)
 - [Codedamn](https://codedamn.com/playgrounds)
 
@@ -352,6 +353,7 @@ Below are my recommended places to start learning and building.
 
 - [What is an API and cheatsheet](https://www.freecodecamp.org/news/what-is-an-api-and-how-to-test-it/)
 - [API Tutorial For Beginners With Google Sheets & Apps Script](https://www.benlcollins.com/apps-script/api-tutorial-for-beginners/)
+- [Postman - The Collaboration Platform for API Development](https://www.postman.com/)
 - [How to connect the Strava API with Google Sheets and Data Studio](https://www.benlcollins.com/spreadsheets/strava-api-with-google-sheets/)
 - [Strava API Application](https://www.strava.com/settings/api)
 - [Strava API Documentation](https://developers.strava.com/docs/reference/)
