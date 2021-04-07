@@ -36,27 +36,27 @@ function showSelectedInfo(results) {
     console.log(data); // Log the data in the console.
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
     var clickedUserName = sessionStorage.getItem("clickedUserName"); // Retrieve the variable passed to session storage.
-    if (clickedUserName == null) {clickedUserName = "Alex";} // Deal with initial load of the page where no user has been selected.
+    if (clickedUserName == null) { clickedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
     getData(data, clickedUserName); // Pass the data to the getData function to be processed.
 }
 
 // Get the data out into usable values to be passed to the HTML elements.
 function getData(data, clickedUserName) {
-    
+
     // Loop through data array and match the user to return the row in the array of objects that relates to the user.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].fullName = " + data[x].fullName); // Show the looping process.
         if (data[x].User === clickedUserName) {
             var foundRow = x; // The found row containing the correct user object.
         }
-        
+
     }
 
     console.log("Found Row = " + foundRow)
-    
+
     // Modify HTML elements with the found data.
-    
-   // document.getElementById("height").innerHTML = document.getElementById("height").innerHTML.replace("--",data[foundRow].height); // This is an alternative way of replacing the data using the replace function.
+
+    // document.getElementById("height").innerHTML = document.getElementById("height").innerHTML.replace("--",data[foundRow].height); // This is an alternative way of replacing the data using the replace function.
 
     // Profile Tab
     document.getElementById("profilePicture").src = data[foundRow].profilePictureURL; // Modify the source of the image.
@@ -77,15 +77,22 @@ function getData(data, clickedUserName) {
     // Contact Tab
 
     // History Tab
-    document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote;
-    document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote;
+    document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote; // Modify the text inside the element.
+    document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote; // Modify the text inside the element.
 
     // Football Tab
-    document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath;
+    document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
+    var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
+    sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
+    getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
 
     // Widgets Tab
     //document.querySelector(".weatherwidget-io").innerHTML = data[foundRow].weatherWidgetHomeTown; // Modify the text inside the element.
-    //document.querySelector(".weatherwidget-io").setAttribute('href', data[foundRow].weatherWidgetURL); // Update the href of the link dynamically.
+    document.querySelector(".weatherwidget-io").setAttribute('href', data[foundRow].weatherWidgetURL); // Update the href of the link dynamically to the correct URL.
+    document.querySelector(".weatherwidget-io").setAttribute('data-label_1', data[foundRow].weatherWidgetHomeTown); // Update the data label 1 dynamically to read the town name. 
+
+    // Once the widget has been updated with the new attributes, re-run the JavaScript for the widget (copied directly from 'https://weatherwidget.io/js/widget.min.js').
+    "use strict"; function __weatherwidget_init() { var a = document.getElementsByClassName("weatherwidget-io"), i = []; if (0 !== a.length) { for (var t = function (t) { var e = a[t], o = {}; o.id = "weatherwidget-io-" + t, o.href = e.href, o.label_1 = e.getAttribute("data-label_1"), o.label_2 = e.getAttribute("data-label_2"), o.font = e.getAttribute("data-font"), o.icons = e.getAttribute("data-icons"), o.mode = e.getAttribute("data-mode"), o.days = e.getAttribute("data-days"), o.theme = e.getAttribute("data-theme"), o.basecolor = e.getAttribute("data-basecolor"), o.accent = e.getAttribute("data-accent"), o.textcolor = e.getAttribute("data-textcolor"), o.textAccent = e.getAttribute("data-textAccent"), o.highcolor = e.getAttribute("data-highcolor"), o.lowcolor = e.getAttribute("data-lowcolor"), o.suncolor = e.getAttribute("data-suncolor"), o.mooncolor = e.getAttribute("data-mooncolor"), o.cloudcolor = e.getAttribute("data-cloudcolor"), o.cloudfill = e.getAttribute("data-cloudfill"), o.raincolor = e.getAttribute("data-raincolor"), o.snowcolor = e.getAttribute("data-snowcolor"), o.windcolor = e.getAttribute("data-windcolor"), o.fogcolor = e.getAttribute("data-fogcolor"), o.thundercolor = e.getAttribute("data-thundercolor"), o.hailcolor = e.getAttribute("data-hailcolor"), o.dayscolor = e.getAttribute("data-dayscolor"), o.tempcolor = e.getAttribute("data-tempcolor"), o.desccolor = e.getAttribute("data-desccolor"), o.label1color = e.getAttribute("data-label1color"), o.label2color = e.getAttribute("data-label2color"), o.shadow = e.getAttribute("data-shadow"), o.scale = e.getAttribute("data-scale"), (r = document.getElementById(o.id)) && e.removeChild(r), i[o.id] = document.createElement("iframe"), i[o.id].setAttribute("id", o.id), i[o.id].setAttribute("class", "weatherwidget-io-frame"), i[o.id].setAttribute("title", "Weather Widget"), i[o.id].setAttribute("scrolling", "no"), i[o.id].setAttribute("frameBorder", "0"), i[o.id].setAttribute("width", "100%"), i[o.id].setAttribute("src", "https://weatherwidget.io/w/"), i[o.id].style.display = "block", i[o.id].style.position = "absolute", i[o.id].style.top = "0", i[o.id].onload = function () { i[o.id].contentWindow.postMessage(o, "https://weatherwidget.io") }, e.style.display = "block", e.style.position = "relative", e.style.height = "150px", e.style.padding = "0", e.style.overflow = "hidden", e.style.textAlign = "left", e.style.textIndent = "-299rem", e.appendChild(i[o.id]) }, e = 0, o = Math.min(a.length, 10); e < o; e++) { var r; t(e) } window.addEventListener("message", function (t) { "https://weatherwidget.io" === t.origin && i[t.data.wwId] && i[t.data.wwId].parentNode && (i[t.data.wwId].style.height = t.data.wwHeight + "px", i[t.data.wwId].parentNode.style.height = t.data.wwHeight + "px") }) } else setTimeout(__weatherwidget_init, 1500) } setTimeout(__weatherwidget_init, 100);
 }
 
 // End the console timer.
