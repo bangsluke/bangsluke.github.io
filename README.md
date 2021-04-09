@@ -399,6 +399,7 @@ A collection of tools to support web development. Some are very much untried.
 - [CSS Viewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce) - A tool to view the CSS styling of any element on the screen.
 - [Grepper](https://chrome.google.com/webstore/detail/grepper/amaaokahonnfjjemodnpmeenfpnnbkco) - Adds a small coding result screen on Google Search to show a quick coding solution to any coding questions.
 - [Amino](https://chrome.google.com/webstore/detail/amino-live-css-editor/pbcpfbcibpcbfbmddogfhcijfpboeaaf) - Allows the user to modify the CSS of any site.
+- [How to Find Unused Javascript and CSS code?](https://www.youtube.com/watch?v=MTZC-OSrPmE&ab_channel=RethinkingUI)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
