@@ -47,6 +47,11 @@
 	color: white;
 }
 
+.testTable>table {
+	width: 100px;
+	color: red;
+}
+
 /* th not required as table has no headers. */
 
 /* th {
