@@ -60,7 +60,7 @@ function getData(data, clickedUserName) {
 
     // Profile Tab
     document.getElementById("profilePicture").src = data[foundRow].profilePictureURL; // Modify the source of the image.
-    document.getElementById("fullName").innerHTML = data[foundRow].fullName; // Modify the text inside the element.
+    document.getElementById("fullName").innerHTML = data[foundRow].funName; // Modify the text inside the element.
     document.getElementById("height").innerHTML = data[foundRow].height; // Modify the text inside the element.
     document.getElementById("weight").innerHTML = data[foundRow].weight; // Modify the text inside the element.
     document.getElementById("phone").innerHTML = data[foundRow].phone; // Modify the text inside the element.
