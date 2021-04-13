@@ -124,6 +124,14 @@ tr:hover {
 
 #footballHeader {
 	width: 100%;
+	height: auto;
+	margin: auto;
+	border-radius: 5px;
+}
+
+#proTeamLeagueLogo {
+	width: 80%;
+	height: auto;
 	margin: auto;
 }
 

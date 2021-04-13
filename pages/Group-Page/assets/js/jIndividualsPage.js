@@ -94,6 +94,7 @@ function getData(data, clickedUserName) {
 
     // Football Tab
     document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
+    document.getElementById("proTeamLeagueLogo").src = data[foundRow].proTeamLeagueLogoImagePath; // Modify the source of the image.
     var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
     sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
     getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
