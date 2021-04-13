@@ -116,6 +116,10 @@ tr:hover {
 	width: 35%;
 }
 
+.quote {
+	font-style:italic;
+}
+
 /* Contact */
 
 #footballHeader {
@@ -128,6 +132,20 @@ tr:hover {
 	height: auto;
 	margin: auto;
 }
+
+#brockhamBadgersLogo {
+	height: 100px;
+	width: auto;
+	margin: 0 auto;
+	filter: brightness(0) invert(1);
+}
+
+#brockhamBadgersPicture {
+	height: 100px;
+	width: auto;
+	margin: auto;
+}
+
 
 /* Text formatting. */
 

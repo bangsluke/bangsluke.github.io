@@ -77,8 +77,20 @@ function getData(data, clickedUserName) {
     // Contact Tab
 
     // History Tab
+    
+    /// Ashcombe
     document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote; // Modify the text inside the element.
     document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote; // Modify the text inside the element.
+
+    /// Brockham Badgers    
+    document.getElementById("brockhamBadgersPicture").src = data[foundRow].brockhamBadgersImagePath; // Modify the source of the image.
+    document.getElementById("BBsU11sQuote").innerHTML = data[foundRow].BBsU11sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU12sQuote").innerHTML = data[foundRow].BBsU12sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU13sQuote").innerHTML = data[foundRow].BBsU13sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU14sQuote").innerHTML = data[foundRow].BBsU14sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU15sQuote").innerHTML = data[foundRow].BBsU15sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU16sQuote").innerHTML = data[foundRow].BBsU16sQuote; // Modify the text inside the element.
+    document.getElementById("BBsAwards").innerHTML = data[foundRow].BBsAwards; // Modify the text inside the element.
 
     // Football Tab
     document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
