@@ -315,6 +315,7 @@ Below are my recommended places to start learning and building.
 - [Creating an Effective Portfolio](https://www.joshwcomeau.com/effective-portfolio/download-book/)
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Using Colour Schemes](https://www.reddit.com/r/webdev/comments/m9yhoj/til_you_can_use_colorscheme_to_specify_the_ui/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+- [5 Mistakes Beginner Web Developers Make – And How to Fix Them](https://www.freecodecamp.org/news/common-mistakes-beginning-web-development-students-make/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -384,10 +385,17 @@ A collection of tools to support web development. Some are very much untried.
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
+### Website Hosting
+- [How to Host Your Website On GitHub Pages For Free](https://medium.com/swlh/how-to-host-your-website-on-github-pages-for-free-3302b0fe8956)
+- [How To Host A Website For Free | With Free Domain And HTTPS SSL Certificate In Seconds | Netlify](https://www.youtube.com/watch?v=MXJl4svLTUY&ab_channel=MichaelKitas)
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
 ### Starter Templates
 - [w3schools Responsive Web Design Templates](https://www.w3schools.com/csS/css_rwd_templates.asp)
 - [Website starter templates](https://templated.co/)
 - [HTML Boilerplates](https://htmlboilerplates.com/)
+- [HTML Boilerplate examples to use](https://www.matuzo.at/blog/html-boilerplate/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -462,6 +470,7 @@ A collection of tools to support web development. Some are very much untried.
 
 ### Widgets & Components
 - [Weather Widget](https://weatherwidget.io/)
+- [Tab Bar Navigation JavaScript](https://www.youtube.com/watch?v=5xoeqXxH4-s&ab_channel=WebDev)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -776,6 +785,11 @@ A collection of tools to support web development. Some are very much untried.
 > Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
 
 <div style="text-align:center"><img src="https://code.fb.com/wp-content/uploads/2016/05/2000px-Python-logo-notext.svg_.png" width="50" height="50"></div>
+
+<img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
+
+### Python Learning
+- [Django + Vue Course – Build an e-Commerce Website](https://www.freecodecamp.org/news/create-an-e-commerce-site-with-django-and-vue/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
