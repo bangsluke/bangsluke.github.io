@@ -28,8 +28,8 @@ headerTemplate.innerHTML = `
         <div class="avatar-container">
 
             <!-- Add group icon image. -->
-            <a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img class="avatar center fadein"
-                    src="/pages/GroupPage/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+            <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img class="avatar center fadein"
+                    src="/pages/Group-Page/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
 
         </div>
 
@@ -43,13 +43,13 @@ headerTemplate.innerHTML = `
 
         <!-- The main top nav bar options. -->
         <nav class="topMenu" id="top-menu">
-            <a href="/pages/GroupPage/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
-            <a href="/pages/GroupPage/SubPages/Users.html"><i class="fa fa-users"></i>Users</a>
-            <a href="/pages/GroupPage/SubPages/Events.html"><i class="fa fa-calendar"></i>Events</a>
-            <a href="/pages/GroupPage/SubPages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-            <a href="/pages/GroupPage/SubPages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-            <a href="/pages/GroupPage/SubPages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
-            <!-- <a href="/pages/GroupPage/SubPages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a> -->
+            <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
+            <a href="/pages/Group-Page/Sub-Pages/Users.html"><i class="fa fa-users"></i>Users</a>
+            <a href="/pages/Group-Page/Sub-Pages/Events.html"><i class="fa fa-calendar"></i>Events</a>
+            <a href="/pages/Group-Page/Sub-Pages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+            <a href="/pages/Group-Page/Sub-Pages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+            <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+            <!-- <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a> -->
         </nav>
 
         <!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
@@ -57,7 +57,7 @@ headerTemplate.innerHTML = `
 
             <!-- Add burger icon with JavaScript functionality. -->
             <!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
-            <img class="center burgericon fadein" id="burgericon" src="/pages/GroupPage/assets/images/Burger Menu Icon.png"
+            <img class="center burgericon fadein" id="burgericon" src="/pages/Group-Page/assets/images/Burger Menu Icon.png"
                 alt="Burger Menu Icon" onclick="openNav()">
 
         </div>
@@ -81,7 +81,7 @@ class Header extends HTMLElement {
         // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');
         styleSheet.setAttribute('rel', 'stylesheet');
-        styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/Header/HeaderComponent.css');
+        styleSheet.setAttribute('href', '/pages/Group-Page/assets/components/Header/HeaderComponent.css');
         shadowRoot.appendChild(styleSheet);
         
         // Attach the created elements to the shadow DOM

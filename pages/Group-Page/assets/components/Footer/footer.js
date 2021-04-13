@@ -51,7 +51,7 @@ class Footer extends HTMLElement {
         // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');
         styleSheet.setAttribute('rel', 'stylesheet');
-        styleSheet.setAttribute('href', '/pages/GroupPage/assets/components/Footer/FooterComponent.css');
+        styleSheet.setAttribute('href', '/pages/Group-Page/assets/components/Footer/FooterComponent.css');
         shadowRoot.appendChild(styleSheet);
 
         // Attach the created elements to the shadow DOM
