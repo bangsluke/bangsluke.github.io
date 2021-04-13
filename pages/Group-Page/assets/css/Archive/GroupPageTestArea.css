@@ -83,7 +83,7 @@ Key CSS Notes:
 /*Main page background colour*/
 
 body {
-    background-image: url("/images/GroupPage/Background.JPG");
+    background-image: url("/images/Group-Page/Background.JPG");
     /* background-color: var(--main-style-color, black); */
     background-blend-mode: screen;
 }

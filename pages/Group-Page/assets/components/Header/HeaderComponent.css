@@ -19,7 +19,7 @@
 
 /* Header styling. */
 
-/* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/header.css" */
+/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
 .subpage-header-area {
     background-color: var(--accent-color-2);
     left: 0px;
@@ -139,7 +139,7 @@
 /* Top Menu styling. */
 
 
-/* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/TopMenu.css" */
+/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/TopMenu.css" */
 
 .topMenu {
     background: var(--accent-color-black);
@@ -227,7 +227,7 @@
 /* Side Menu CSS */
 
 
-/* Originally from "/pages/GroupPage/assets/components/Header/CSS Files/SideMenu.css" */
+/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/SideMenu.css" */
 
 .burgericon-container {
     /* background: blue; */
