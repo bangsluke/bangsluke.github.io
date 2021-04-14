@@ -1,6 +1,5 @@
 // jindex.js JavaScript Functions
 
-
 // Code
 
 // Start the console timer.
@@ -14,14 +13,13 @@ window.onload = function () {
     // React when the user changes the userSelection.
     userSelection.onchange = function () {
         // Get the picked user from the userSelection.
-        var user = userSelection.value;
+        var userSelection = document.getElementById("userdropdown");
+        var selectedUserName = userSelection.options[userSelection.selectedIndex].value; // Get the option selected.
+        var selectedUserNameText = userSelection.options[userSelection.selectedIndex].text; // Get the corresponding value from the option selected.
         sessionStorage.setItem("selectedUserName", selectedUserName); // Save the variable to session storage.
-        console.log(selectedUserName);
+        console.log("Selected Name: " + selectedUserNameText + ", Passed Variable: " + selectedUserName);
     }
 }
-
-
-
 
 // End the console timer.
 console.timeEnd();
