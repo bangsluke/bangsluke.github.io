@@ -382,6 +382,7 @@ A collection of tools to support web development. Some are very much untried.
 ### Everything
 - [Multiple Developer Resources](https://devresourc.es/)
 - [Keyframes - Animations, Shadows and Colours](https://keyframes.app/)
+- [Clone Wars - A List of Open Source Clones](https://www.reddit.com/r/webdev/comments/mqa14k/my_simple_github_project_went_viral_thank_you/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
