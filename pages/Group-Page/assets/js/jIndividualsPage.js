@@ -35,18 +35,18 @@ function showSelectedInfo(results) {
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     console.log(data); // Log the data in the console.
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
-    var clickedUserName = sessionStorage.getItem("clickedUserName"); // Retrieve the variable passed to session storage.
-    if (clickedUserName == null) { clickedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
-    getData(data, clickedUserName); // Pass the data to the getData function to be processed.
+    var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
+    if (selectedUserName == null) { selectedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
+    getData(data, selectedUserName); // Pass the data to the getData function to be processed.
 }
 
 // Get the data out into usable values to be passed to the HTML elements.
-function getData(data, clickedUserName) {
+function getData(data, selectedUserName) {
 
     // Loop through data array and match the user to return the row in the array of objects that relates to the user.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].fullName = " + data[x].fullName); // Show the looping process.
-        if (data[x].User === clickedUserName) {
+        if (data[x].User === selectedUserName) {
             var foundRow = x; // The found row containing the correct user object.
         }
 
@@ -86,6 +86,8 @@ function getData(data, clickedUserName) {
     getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
     var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
     document.getElementById("pro-team-table").classList.add(proTeamLeague); // Add the correct CSS class to the ProTeamTable to style it correctly.
+    document.getElementById("proTeamLeagueURL").setAttribute('href', data[foundRow].proTeamLeagueURL); // Update the href of the link dynamically.
+    
 
     /// Dorkinians
     //document.getElementById("dorkiniansTable").innerHTML = data[foundRow].dorkiniansLeagueCode; // Modify the text inside the element.
