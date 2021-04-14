@@ -29,7 +29,7 @@
 	padding-top: 0px;
 }
 
-/* Profile */
+/* Profile Tab */
 
 #profilePicture {
 	height: 100px;
@@ -72,24 +72,6 @@ tr:hover {
 	font: bold;
 }
 
-/* Wrapper div around the pro team table. */
-
-.pro-team-table-div {
-	overflow: auto;
-	background-color: var(--accent-color-white, white);
-}
-
-/* Add pro team table styling. */
-
-.pro-team-table {
-	width: 100%;
-	text-align: center;
-	font-size: 12px;
-	color: var(--proTeam-text-color,black);
-}
-
-
-
 /* Icon Styling. */
 
 .individualsPageIcon {
@@ -116,11 +98,7 @@ tr:hover {
 	width: 35%;
 }
 
-.quote {
-	font-style:italic;
-}
-
-/* Contact */
+/* Football Tab */
 
 #footballHeader {
 	width: 100%;
@@ -133,6 +111,72 @@ tr:hover {
 	width: 80%;
 	height: auto;
 	margin: auto;
+}
+
+/* Wrapper div around the pro team table. */
+
+.pro-team-table-div {
+	width: 100%;
+	overflow: auto;
+	background-color: var(--accent-color-white, white);
+}
+
+/* Add pro team table styling. */
+
+#pro-team-table {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	color: var(--proTeam-text-color,black);
+	border: none;
+	border-collapse: collapse;
+}
+
+/* premierLeague Styling. */
+
+/* Add the border below the header rows. */
+.premierLeague>thead>:nth-child(1) {
+	border-bottom: 4px solid #02F785;
+}
+
+/* Select the 4th row to highlight the selected team. */
+.premierLeague>thead>:nth-child(4){ 
+	/* your css here */
+	background-color: #37003d;
+	color: white;
+}
+
+/* Add a highlighting row effect on hover. */
+.premierLeague tr:hover {
+	background-color: #02F785;
+	color: #37003d;
+}
+
+/* championship Styling. */
+
+/* Add the border below the header rows. */
+.championship>thead>:nth-child(1) {
+	border-bottom: 4px solid #FA0F10;
+}
+
+/* Select the 4th row to highlight the selected team. */
+.championship>thead>:nth-child(4){ 
+	/* your css here */
+	background-color: #2346A0;
+	color: white;
+}
+
+/* Add a highlighting row effect on hover. */
+.championship tr:hover {
+	background-color: #FA0F10;
+	color: white;
+}
+
+
+/* History Tab */
+
+.quote {
+	font-style:italic;
 }
 
 #ashcombeLogo {
@@ -153,6 +197,14 @@ tr:hover {
 	width: auto;
 	margin: auto;
 }
+
+
+/* Stats and Titan Tab */
+
+
+
+/* Widgets Tab */
+
 
 
 /* Text formatting. */

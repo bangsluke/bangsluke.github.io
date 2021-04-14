@@ -93,7 +93,7 @@ function generateTable(table, data) {
 // Create the table by passing the data to the function.
 function createFullTable(array) {
     console.log("createFullTable called.") // Log an initial message to show the function has been called.
-    let table = document.querySelector(".pro-team-table"); // Select the parent element from which to build the table. Use the class ".pro-team-table".
+    let table = document.querySelector("#pro-team-table"); // Select the parent element from which to build the table. Use the id "#pro-team-table".
     let data = Object.keys(array[0]); // Create a data variable from the array data received.
     generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
     generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
@@ -104,7 +104,7 @@ function createFullTable(array) {
 function clearTable() {
     console.log("Clear Table called.") // Log an initial message to show the function has been called.
     // https://stackoverflow.com/a/3955238/14290169
-    const myNode = document.querySelector(".pro-team-table"); // Select the parent from which to delete all child elements from. Use the class ".pro-team-table".
+    const myNode = document.querySelector("#pro-team-table"); // Select the parent from which to delete all child elements from. Use the id "#pro-team-table".
     while (myNode.firstChild) { // Loop through all child elements.
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }

@@ -74,7 +74,23 @@ function getData(data, clickedUserName) {
     document.getElementById("instagram").innerHTML = data[foundRow].instagramHandle; // Modify the text inside the element.
     document.getElementById("instagram").setAttribute('href', data[foundRow].instagramURL); // Update the href of the link dynamically.
 
-    // Contact Tab
+    // Football Tab
+    
+    /// Football Header
+    document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
+    
+    /// Pro Team
+    document.getElementById("proTeamLeagueLogo").src = data[foundRow].proTeamLeagueLogoImagePath; // Modify the source of the image.
+    var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
+    sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
+    getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
+    var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
+    document.getElementById("pro-team-table").classList.add(proTeamLeague); // Add the correct CSS class to the ProTeamTable to style it correctly.
+
+    /// Dorkinians
+    //document.getElementById("dorkiniansTable").innerHTML = data[foundRow].dorkiniansLeagueCode; // Modify the text inside the element.
+    var lrcode = data[foundRow].dorkiniansLeagueCode;
+    getDorkiniansTable(lrcode);
 
     // History Tab
     
@@ -92,15 +108,7 @@ function getData(data, clickedUserName) {
     document.getElementById("BBsU16sQuote").innerHTML = data[foundRow].BBsU16sQuote; // Modify the text inside the element.
     document.getElementById("BBsAwards").innerHTML = data[foundRow].BBsAwards; // Modify the text inside the element.
 
-    // Football Tab
-    document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
-    document.getElementById("proTeamLeagueLogo").src = data[foundRow].proTeamLeagueLogoImagePath; // Modify the source of the image.
-    var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
-    sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
-    getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
-    //document.getElementById("dorkiniansTable").innerHTML = data[foundRow].dorkiniansLeagueCode; // Modify the text inside the element.
-    var lrcode = data[foundRow].dorkiniansLeagueCode;
-    getDorkiniansTable(lrcode);
+    
 
     // Widgets Tab
     //document.querySelector(".weatherwidget-io").innerHTML = data[foundRow].weatherWidgetHomeTown; // Modify the text inside the element.
