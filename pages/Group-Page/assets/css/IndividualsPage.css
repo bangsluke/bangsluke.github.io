@@ -185,11 +185,38 @@ tr:hover {
 	margin: auto;
 }
 
+
+.brockhamBadgersHeaderContainer {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 60px 70%;
+  	grid-template-rows: 60px;
+  	grid-template-areas: "logo-section text-section";
+}
+
+.brockhamBadgersLogoContainer {
+	/* background: red; */
+	grid-area: logo-section;	
+}
+
 #brockhamBadgersLogo {
-	height: 100px;
+	height: 60px;
 	width: auto;
 	margin: 0 auto;
 	filter: brightness(0) invert(1);
+}
+
+.brockhamBadgersTextContainer {
+	/* background: green; */
+	grid-area: text-section;
+	/* padding: auto; */
+	display: flex;
+	align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.brockhamBadgersHeaderText {
+	margin: auto;
 }
 
 #brockhamBadgersPicture {
