@@ -61,8 +61,8 @@
 
 					<input style="margin: 16px; text-align: center;" id="password" type="password"
 						placeholder="password" /> <br />
-					
-						<button id="loginbutton" type="button">Enter</button>
+
+					<button id="loginbutton" type="button">Enter</button>
 					<p id="wrongPassword" style="display: none">wrong password</p>
 				</div>
 
@@ -72,50 +72,41 @@
 	</div>
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> <!-- Get jQuery JS -->
-	<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
+	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 	<script type="text/javascript" src="/pages/Group-Page/assets/js/jindex.js"></script> <!-- Get index JS -->
-	<!--<script type="text/javascript" src="/pages/Group-Page/assets/js/jindexLogin.js"></script> <!-- Get indexLogin JS -->
-
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> <!-- Get jQuery JS -->
+	<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script> <!-- Get sha1 JS -->
 	<script type="text/javascript">
 		"use strict";
-	
 		function loadPage(pwd) {
-	
-			var hash= pwd;
-			hash= Sha1.hash(pwd);
-			var url= hash + "/index.html";
-	
+			var hash = pwd;
+			hash = Sha1.hash(pwd);
+			var url = hash + "/GroupHomePage.html";
 			$.ajax({
-				url : url,
-				dataType : "html",
-				success : function(data) {
-					window.location= url;
+				url: url,
+				dataType: "html",
+				success: function (data) {
+					window.location = url;
 				},
-				error : function(xhr, ajaxOptions, thrownError) {
-	
-					parent.location.hash= hash;
+				error: function (xhr, ajaxOptions, thrownError) {
+
+					parent.location.hash = hash;
 					//$("#wrongPassword").show();
-					$("#password").attr("placeholder","wrong password");
+					$("#password").attr("placeholder", "wrong password");
 					$("#password").val("");
 				}
 			});
 		}
-	
-	
-		$("#loginbutton").on("click", function() {
+		$("#loginbutton").on("click", function () {
 			loadPage($("#password").val());
 		});
-		$("#password").keypress(function(e) {
+		$("#password").keypress(function (e) {
 			if (e.which == 13) {
 				loadPage($("#password").val());
 			}
 		});
 		$("#password").focus();
-	
-		</script>
+	</script>
 
 </body>
 
