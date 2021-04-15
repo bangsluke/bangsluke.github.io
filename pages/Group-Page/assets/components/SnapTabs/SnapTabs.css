@@ -173,10 +173,12 @@ snap-tabs>section {
 }
 
 snap-tabs>section>article {
+    /* background-color: blue; */
     scroll-snap-align: start;
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    padding: var(--vertical-space) var(--horizontal-space);
+    /* padding: var(--vertical-space) var(--horizontal-space); */
+    padding: 0 0;
 }
 
 @media (prefers-reduced-motion:reduce) {

@@ -83,127 +83,141 @@
                         <details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details>
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
-                            class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
+                        <!-- Profile Image Section -->
+                        <section class="page-section">
 
-                        <br>
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
 
-                        <h2 id="fullName">Name</h2>
+                        </section>
 
-                        <!-- Add a table that stores all of the pieces of individuals information. -->
-                        <table class="individualsTable">
-                            <!-- Column Groups -->
-                            <colgroup>
-                                <!-- Repeat as many cols as the number of headers - https://stackoverflow.com/a/43892470/14290169 -->
-                                <col class="iconColumn">
-                                <col class="itemColumn">
-                                <col class="infoColumn">
-                            </colgroup>
-                            <!-- Header Row -->
-                            <!-- <tr>
+                        <!-- Profile Detail Section -->
+                        <section class="page-section">
+
+                            <h2 id="fullName">Name</h2>
+
+                            <!-- Add a table that stores all of the pieces of individuals information. -->
+                            <table class="individualsTable">
+                                <!-- Column Groups -->
+                                <colgroup>
+                                    <!-- Repeat as many cols as the number of headers - https://stackoverflow.com/a/43892470/14290169 -->
+                                    <col class="iconColumn">
+                                    <col class="itemColumn">
+                                    <col class="infoColumn">
+                                </colgroup>
+                                <!-- Header Row -->
+                                <!-- <tr>
                                 <th class="thIndividualsHeader itemColumn">Item</th>
                                 <th class="thIndividualsHeader infoColumn">Info</th>
                             </tr> -->
-                            <!-- All other rows -->
-                            <tr>
-                                <td><img alt="Height Icon" class="individualsPageIcon"
-                                        src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"></td>
-                                <td>Height:</td>
-                                <td id="height">--</td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Weight Icon" class="individualsPageIcon"
-                                        src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"></td>
-                                <td>Weight:</td>
-                                <td id="weight">--</td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Phone Icon" class="individualsPageIcon"
-                                        src="http://cdn.onlinewebfonts.com/svg/img_198352.png"></td>
-                                <td>Phone:</td>
-                                <td id="phone">--</td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Email Icon" class="individualsPageIcon"
-                                        src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png">
-                                </td>
-                                <td>Email:</td>
-                                <td><a id="email" href="_blank" alt>--</a></td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Facebook Logo" class="individualsPageIcon"
-                                        src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png">
-                                </td>
-                                <td>Facebook:</td>
-                                <td><a id="facebook" href="_blank" alt>--</a></td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Twitter Logo" class="individualsPageIcon"
-                                        src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png">
-                                </td>
-                                <td>Twitter:</td>
-                                <td><a id="twitter" href="_blank" alt>--</a></td>
-                            </tr>
-                            <tr>
-                                <td><img alt="Instagram Logo" class="individualsPageIcon"
-                                        src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png">
-                                </td>
-                                <td>Instagram:</td>
-                                <td><a id="instagram" href="_blank" alt>--</a></td>
-                            </tr>
+                                <!-- All other rows -->
+                                <tr>
+                                    <td><img alt="Height Icon" class="individualsPageIcon"
+                                            src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"></td>
+                                    <td>Height:</td>
+                                    <td id="height">--</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Weight Icon" class="individualsPageIcon"
+                                            src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"></td>
+                                    <td>Weight:</td>
+                                    <td id="weight">--</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Phone Icon" class="individualsPageIcon"
+                                            src="http://cdn.onlinewebfonts.com/svg/img_198352.png"></td>
+                                    <td>Phone:</td>
+                                    <td id="phone">--</td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Email Icon" class="individualsPageIcon"
+                                            src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png">
+                                    </td>
+                                    <td>Email:</td>
+                                    <td><a id="email" href="_blank" alt>--</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Facebook Logo" class="individualsPageIcon"
+                                            src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png">
+                                    </td>
+                                    <td>Facebook:</td>
+                                    <td><a id="facebook" href="_blank" alt>--</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Twitter Logo" class="individualsPageIcon"
+                                            src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png">
+                                    </td>
+                                    <td>Twitter:</td>
+                                    <td><a id="twitter" href="_blank" alt>--</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img alt="Instagram Logo" class="individualsPageIcon"
+                                            src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png">
+                                    </td>
+                                    <td>Instagram:</td>
+                                    <td><a id="instagram" href="_blank" alt>--</a></td>
+                                </tr>
 
-                        </table>
+                            </table>
+
+                        </section>
 
                     </article>
 
                     <article class="nav-targets" id="football">
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
-                            class="center fadein" alt="Football Header" id="footballHeader">
+                        <!-- Football Header Image Section -->
+                        <section class="page-section">
 
-                        <br>
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="Football Header" id="footballHeader">
 
-                        <br>
+                        </section>
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg" class="center fadein" alt="League Logo" id="proTeamLeagueLogo">
+                        <!-- Pro Team Table Section -->
+                        <section class="page-section">
 
-                        <br>
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="League Logo" id="proTeamLeagueLogo">
 
-                        <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                        <div class="pro-team-table-div">
-                            <table id="pro-team-table">
-                                <!-- Data loaded into here by jIndividualsPageProTeam.js -->
-                            </table>
-                        </div>
+                            <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                            <div class="pro-team-table-div">
+                                <table id="pro-team-table">
+                                    <!-- Data loaded into here by jIndividualsPageProTeam.js -->
+                                </table>
+                            </div>
 
-                        <a href="#_" id="proTeamLeagueURL" class="center">Click here for full table</a>
+                            <a href="#_" id="proTeamLeagueURL" class="center">Click here for full table</a>
 
-                        <br>
-
+                        </section>
 
                         <!-- <p>- Add snapshot of where football team is in Prem.</p>
                         <img src="/pages/Group-Page/assets/images/Premier League.png"
                             class="league-picture center fadein" alt="Liverpool Prem Position">
                         <br> -->
 
+                        <!-- Dorkinians Table Section -->
+                        <section class="page-section">
 
-                        <!-- Add a div to hold the Dorkinians code within. -->
-                        <div class="dorkinians-holder-div" id="dorkiniansTable">
+                            <!-- Add a div to hold the Dorkinians code within. -->
+                            <div class="dorkinians-holder-div" id="dorkiniansTable">
 
-                            <!-- Add inner HTML into here. -->
+                                <!-- Add inner HTML into here. -->
 
-                            <div id="lrep584313359" style="width: 100%;">Data loading....<a
-                                    href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
-                                    here for Premier</a><br /><br /><a href="http://www.thefa.com/FULL-TIME">FULL-TIME
-                                    Home</a></div>
-                            <script language="javascript" type="text/javascript">
-                                var lrcode = 'n/a'
-                            </script>
-                            <script language="Javascript" type="text/javascript"
-                                src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                <div id="lrep584313359" style="width: 100%;">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
+                                        here for Premier</a><br /><br /><a
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
+                                <script language="javascript" type="text/javascript">
+                                    var lrcode = 'n/a'
+                                </script>
+                                <script language="Javascript" type="text/javascript"
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                        </div>
+                            </div>
 
+                        </section>
 
                         <!-- <p>- Add snapshot of where Dorkinians team is</p>
                         <img src="/pages/Group-Page/assets/images/Dorkinians League.png"
@@ -213,158 +227,174 @@
 
                     <article class="nav-targets" id="history">
 
-                        <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo.png"
-                            class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
+                        <!-- Ashcombe Quote Section -->
+                        <section class="page-section">
 
-                        <br>
+                            <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo.png"
+                                class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
 
-                        <h4>Ashcombe Year 11 Yearbook Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Ashcombe Year 11 Yearbook Quote: </h4>
 
-                        <q class="quote" id="ashcombeYear11YearBookQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="ashcombeYear11YearBookQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <br>
+                            <br>
 
-                        <br>
+                            <h4>Ashcombe Sixth Form Yearbook Quote: </h4>
 
-                        <h4>Ashcombe Sixth Form Yearbook Quote: </h4>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="ashcombeSixthFormYearBookQuote">Add quote</q>
 
-                        <q class="quote" id="ashcombeSixthFormYearBookQuote">Add quote</q>
+                        </section>
 
-                        <br>
+                        <!-- Brockham Badgers Quote Section -->
+                        <section class="page-section">
 
-                        <br>
+                            <!-- House the Brockham Badgers logo and header text in a grid container. -->
 
-                        <!-- House the Brockham Badgers logo and header text in a grid container. -->
+                            <div class="brockhamBadgersHeaderContainer">
 
-                        <div class="brockhamBadgersHeaderContainer">
+                                <div class="brockhamBadgersLogoContainer">
 
-                            <div class="brockhamBadgersLogoContainer">
+                                    <img src="/pages/Group-Page/assets/images/IndividualsPage/Brockham Badgers.png"
+                                        class="center fadein" alt="Brockham Badgers Logo" id="brockhamBadgersLogo">
 
-                                <img src="/pages/Group-Page/assets/images/IndividualsPage/Brockham Badgers.png" class="center fadein" alt="Brockham Badgers Logo" id="brockhamBadgersLogo">
+                                </div>
+
+                                <div class="brockhamBadgersTextContainer">
+
+                                    <h3 class="brockhamBadgersHeaderText">Brockham Badgers</h3>
+
+                                </div>
 
                             </div>
 
-                            <div class="brockhamBadgersTextContainer">
+                            <br>
 
-                                <h3 class="brockhamBadgersHeaderText">Brockham Badgers</h3>
+                            <br>
 
-                            </div>
+                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                                class="center fadein" alt="Brockham Badgers Photo" id="brockhamBadgersPicture">
 
-                        </div>
+                            <br>
 
-                        <br>
+                            <h4>Under 11s End Of Year Quote: </h4>
 
-                        <br>
+                            <br>
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
-                            class="center fadein" alt="Brockham Badgers Photo" id="brockhamBadgersPicture">
+                            <q class="quote" id="BBsU11sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 11s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Under 12s End Of Year Quote: </h4>
 
-                        <q class="quote" id="BBsU11sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="BBsU12sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 12s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Under 13s End Of Year Quote: </h4>
 
-                        <q class="quote" id="BBsU12sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="BBsU13sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 13s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Under 14s End Of Year Quote: </h4>
 
-                        <q class="quote" id="BBsU13sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="BBsU14sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 14s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Under 15s End Of Year Quote: </h4>
 
-                        <q class="quote" id="BBsU14sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="BBsU15sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 15s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Under 16s End Of Year Quote: </h4>
 
-                        <q class="quote" id="BBsU15sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <q class="quote" id="BBsU16sQuote">Add quote</q>
 
-                        <br>
+                            <br>
 
-                        <h4>Under 16s End Of Year Quote: </h4>
+                            <br>
 
-                        <br>
+                            <h4>Brockham Badgers Awards: </h4>
 
-                        <q class="quote" id="BBsU16sQuote">Add quote</q>
+                            <br>
 
-                        <br>
+                            <p id="BBsAwards">Add awards</p>
 
-                        <br>
+                            <br>
 
-                        <h4>Brockham Badgers Awards: </h4>
-
-                        <br>
-
-                        <p id="BBsAwards">Add awards</p>
-
-                        <br>
-
-                        
+                        </section>
 
                     </article>
 
                     <article class="nav-targets" id="statsAndTitan">
-                        <h2>Stats</h2>
-                        <p>Add high level summary of key stats of user.</p>
 
-                        <br>
+                        <!-- Stats Section -->
+                        <section class="page-section">
 
-                        <h2>Titan Status</h2>
-                        <p>- Have a summary of number of Titan spots owned.</p>
-                        <p>- Add biggest Titan lead?</p>
+                            <h2>Stats</h2>
+                            <p>Add high level summary of key stats of user.</p>
+
+                        </section>
+
+                        <!-- Titan Section -->
+                        <section class="page-section">
+
+                            <h2>Titan Status</h2>
+                            <p>- Have a summary of number of Titan spots owned.</p>
+                            <p>- Add biggest Titan lead?</p>
+
+                        </section>
+
                     </article>
 
                     <article class="nav-targets" id="widgets">
 
-                        <section class="weather">
-                            <a class="weatherwidget-io" SameSite=None
-                                href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
-                                data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
-                                data-icons="Climacons Animated" data-theme="original"
-                                data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
-                                data-cloudfill="#494A66" data-raincolor="#99b998">WOODHAM FERRERS Weather</a>
-                            <script>
-                                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                            </script>
+                        <!-- Weather Widget Section -->
+                        <section class="page-section">
+
+                            <section class="weather">
+                                <a class="weatherwidget-io" SameSite=None
+                                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
+                                    data-icons="Climacons Animated" data-theme="original"
+                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
+                                    data-cloudfill="#494A66" data-raincolor="#99b998">WOODHAM FERRERS Weather</a>
+                                <script>
+                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                </script>
+                            </section>
+
                         </section>
 
                     </article>

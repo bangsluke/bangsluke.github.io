@@ -17,7 +17,7 @@
 	--main-font-family: 'Calibri', sans-serif;
 	/* line-height: 15px; */
     
-    --gallery-image-height: 160px;
+    --gallery-image-height: 130px;
 }
 
 /* Add custom gallery page styling. */
@@ -117,10 +117,10 @@
 
 .gallery-cover-text {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     text-align: right;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 0.5em;
     position: relative;
 }

@@ -94,6 +94,20 @@ body {
 	scroll-behavior: smooth;
 }
 
+.page-section {
+	background-color: aqua;
+	background: rgba( 255, 255, 255, 0.10 );
+	backdrop-filter: blur( 12.0px );
+	-webkit-backdrop-filter: blur( 12.0px );
+	height: max-content;
+	width: 98%;
+	margin: 0.5em auto;
+	padding: 0.3em;
+	border-radius: 5px;
+	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+
 /* Text styling. */
 
 a {
