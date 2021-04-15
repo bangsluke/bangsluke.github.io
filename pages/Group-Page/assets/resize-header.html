@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Create Resizeable Header on Scroll using HTML, CSS and JavaScript</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+        * { 
+            box-sizing: border-box; 
+        } 
+      
+        body {  
+            margin: 0; 
+            font-family: 'Poppins', sans-serif;
+        } 
+      
+        
+        #header-area { 
+            overflow: hidden; 
+            background-color: black; 
+            padding: 90px 10px; 
+            transition: 0.5s; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1; 
+        } 
+      
+        #header-area a { 
+            float: left; 
+            color: white; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 18px;  
+            line-height: 25px; 
+            border-radius: 4px; 
+        } 
+      
+        #header-area #logo { 
+            font-size: 35px; 
+            font-weight: bold; 
+            transition: 0.4s; 
+        } 
+      
+        #header-area a:hover { 
+            color: deepskyblue; 
+        } 
+      
+        #menu { 
+            float: right; 
+        } 
+          
+        
+        .content { 
+            margin-top:220px; 
+            padding:15px 15px 1800px; 
+            font-size:22px; 
+        } 
+    </style>
+</head>
+<body>
+    
+    <header id="header-area"> 
+        <a href="#default" id="logo"> 
+            Your Logo 
+        </a> 
+      
+        <div id="menu"> 
+            <a href="#home">Home</a> 
+            <a href="#about">Our Products</a> 
+            <a href="#about">Careers</a> 
+            <a href="#contact">Contact US</a> 
+            <a href="#about">About US</a> 
+        </div> 
+    </header> 
+  
+    <!-- Page Content -->
+    <div class="content"> 
+        <h1>  
+            Your Website Content Heading 
+        </h1> 
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum odit, in ullam saepe deserunt quia, ratione neque nostrum soluta, dolore quo expedita. Sint eligendi voluptatem blanditiis distinctio eius voluptatibus quidem hic quo laudantium dolorem. Libero deserunt, repellat eum, fugiat animi dolorum fugit nesciunt ducimus id officia a doloremque expedita ex cumque omnis cupiditate explicabo, saepe temporibus laudantium hic. Impedit perferendis temporibus sint, reprehenderit beatae adipisci quia nulla molestias dolorem repudiandae consequatur voluptatem, dolorum reiciendis nobis doloribus. Incidunt earum cum consequatur repudiandae beatae, placeat possimus nihil pariatur eum ex corporis ea voluptatem quibusdam fugit facilis ut. Eius quam, repellat ea dolores doloribus nihil totam alias aliquam quod asperiores dignissimos quis nisi magnam. Dolorum non adipisci quibusdam quaerat aliquid obcaecati iure aperiam blanditiis? Labore sed, animi culpa optio veniam, obcaecati quas repudiandae quos perferendis ducimus illum! Praesentium unde, expedita soluta a illum ducimus, quo accusamus, dolore harum fugiat facere. Sapiente mollitia debitis nihil vitae odio sequi consequuntur eveniet quae illum, suscipit et iste aspernatur quis fugit dolore reiciendis atque voluptas minus voluptate maiores voluptates. Blanditiis quisquam repellat perspiciatis, ab tenetur obcaecati iste similique eum maxime quis pariatur delectus nisi itaque sed suscipit ipsum harum, qui corporis voluptates deleniti dolores. Modi, autem debitis.
+        </p> 
+    </div>
+    
+     <script> 
+        window.onscroll = function() { 
+            scrollFunction() 
+        }; 
+          
+        function scrollFunction() { 
+            if (document.body.scrollTop > 90 || 
+                document.documentElement.scrollTop > 90) 
+            { 
+                document.getElementById("header-area") 
+                            .style.padding = "25px 10px"; 
+                  
+                document.getElementById("logo") 
+                            .style.fontSize = "24px"; 
+            }  
+            else { 
+                document.getElementById("header-area") 
+                            .style.padding = "90px 10px"; 
+                              
+                document.getElementById("logo") 
+                            .style.fontSize = "35px"; 
+            } 
+        } 
+    </script>  
+</body>
+</html>
