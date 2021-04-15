@@ -20,17 +20,19 @@ footerTemplate.innerHTML = `
     <!-- Footer HTML -->
 
     <!-- Link into font-awesome logos and icons. -->
-	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e0e1bfc304.js" crossorigin="anonymous"></script>
 
-    <footer class="footer fadein">
+    <footer class="fadein">
 
-      <!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-      <a href="https://github.com/bangsluke/bangsluke">&copy; 2021 bangsluke designs.</a>
-      <a href="#">&nbsp</a>
-      <a href="mailto:bangsluke@gmail.com" class="icon fa fa-envelope">&nbsp</a>
-      <a href="https://github.com/my-github-profile"><i class="fab fa-github"></i></a>
-      <a href="https://twitter.com/my-twitter-profile"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/my-linkedin-profile"><i class="fab fa-linkedin"></i></a>
+      <ul>
+
+        <li><p>&copy; 2021 bangsluke designs.</p></li>
+        <li><a href="mailto:bangsluke@gmail.com"><i class="icon fas fa-envelope"></i></a></li>
+        <li><a href="https://github.com/bangsluke/bangsluke"><i class="icon fab fa-github"></i></a></li>
+        <li><a href="https://twitter.com/bangsluke"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/bangsluke/"><i class="fab fa-linkedin"></i></a></li>
+
+      </ul>
 
 	  </footer>
 
