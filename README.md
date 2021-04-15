@@ -435,8 +435,8 @@ A collection of tools to support web development. Some are very much untried.
 - [Blobbs.app](https://blobs.app/?e=6&gw=6&se=341&c=d1d8e0&o=0)
 
 #### Icons
+- [Material Design Icons (10/10)](https://material.io/resources/icons/?style=baseline)
 - [thenounproject icons](https://thenounproject.com/)
-- [Material Design Icons](https://material.io/resources/icons/?style=baseline)
 
 #### Other
 - [Glass Card Designer](https://glassmorphism.com/)
