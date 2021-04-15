@@ -261,6 +261,12 @@
     color: var(--accent-color-2);
 }
 
+.topMenu-icon {
+	height: 30px;
+	filter: brightness(0) invert(1);
+	margin-top: 4px;
+}
+
 
 /* Side menu media queries. */
 
