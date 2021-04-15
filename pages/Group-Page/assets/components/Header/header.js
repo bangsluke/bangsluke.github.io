@@ -19,9 +19,6 @@ headerTemplate.innerHTML = `
   
     <!-- Header HTML -->
 
-    <!-- Link into font-awesome logos and icons. -->
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     <header class="subpage-header-area">
         
         <!-- Add a homepage link by adding a group icon image. Add it within a container. -->

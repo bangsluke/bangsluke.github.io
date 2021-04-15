@@ -64,6 +64,12 @@
 	display: inline;
 }
 
+.sideMenu-icon {
+	height: 30px;
+	filter: brightness(0) invert(1);
+	margin-top: 4px;
+}
+
 .main-menu h2 {
 	text-align: center;
 	letter-spacing: 7px;

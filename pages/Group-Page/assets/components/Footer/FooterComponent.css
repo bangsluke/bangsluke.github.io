@@ -62,3 +62,14 @@ footer li a:hover {
     color: var(--accent-color-1);
     text-decoration: var(--accent-color-white);
 }
+
+footer p {
+    font-size: 12px;
+    margin: auto;
+}
+
+.footer-logo {
+    height: 15px;
+    filter: brightness(0) invert(1);
+    margin-top: 4px;
+}

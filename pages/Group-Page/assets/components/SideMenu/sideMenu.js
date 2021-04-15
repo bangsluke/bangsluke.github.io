@@ -21,9 +21,6 @@ sideMenuTemplate.innerHTML = `
 
     <!-- sideMenu HTML -->
 
-    <!-- Link into font-awesome logos and icons. -->
-	  <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-
     <!-- Side Menu - not considered part of the "main-content-area" -->
 
         <div class="sideMenu" id="side-menu">
@@ -33,13 +30,14 @@ sideMenuTemplate.innerHTML = `
 
             <!-- The main side bar menu options. -->
             <div class="main-menu">
-              <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><i class="fa fa-home"></i>Home</a>
-              <a href="/pages/Group-Page/Sub-Pages/Users.html"><i class="fa fa-users"></i>Users</a>
-              <a href="/pages/Group-Page/Sub-Pages/Events.html"><i class="fa fa-calendar"></i>Events</a>
-              <a href="/pages/Group-Page/Sub-Pages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
-              <a href="/pages/Group-Page/Sub-Pages/Stats.html"><i class="fa fa-database"></i>Stats</a>
-              <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
-              <!-- <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a> -->
+            
+              <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-icon" alt="Email Logo">Home</a>
+              <a href="/pages/Group-Page/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="sideMenu-icon" alt="Users Icon">Users</a>
+              <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="sideMenu-icon" alt="Events Icon">Events</a>
+              <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-icon" alt="Titans Icon">Titans</a>
+              <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-icon" alt="Stats Icon">Stats</a>
+              <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="sideMenu-icon" alt="Gallery Icon">Gallery</a>
+              <!-- <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-icon" alt="Email Logo">Ideas</a> -->
             </div>
 
         </div>
