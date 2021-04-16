@@ -57,6 +57,9 @@ html {
 	padding: 0;
 }
 
+
+
+
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
@@ -67,6 +70,7 @@ body {
 	top: 0px;
 	left: 0px;
 	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
+	height: 100vh;
 	/* overflow: hidden; */
 	/* overflow-y: none; */
 	/* overflow-x: none; */
@@ -76,10 +80,17 @@ body {
 	margin: 0;
 }
 
+/* Completely disable all vertical scrolling. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
+html, body {
+	margin: 0; 
+	height: 100%;
+	overflow: hidden;
+}
+
 /* Main content styling. */
 
 .main-content-area {
-	background: lightblue;
+	/* background: lightblue; */
 	margin-top: 50px; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 45px header. */
 	top: 0px;
 	left: 0px;
@@ -97,7 +108,7 @@ body {
 }
 
 .page-section {
-	background-color: aqua;
+	/* background-color: aqua; */
 	background: rgba( 255, 255, 255, 0.10 );
 	backdrop-filter: blur( 12.0px );
 	-webkit-backdrop-filter: blur( 12.0px );
@@ -182,28 +193,28 @@ th {
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
 	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 	html {
-		background: green;
+		/* background: green; */
 	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* Covers iPads and other tablets. */
 	html {
-		background: orange;
+		/* background: orange; */
 	}
 }
 
 @media only screen and (min-width: 1224px) {
 	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	html {
-		background: red;
+		/* background: red; */
 	}
 }
 
 @media only screen and (min-width: 1824px) {
 	/* Desktops and Laptops - For larger monitors and displays. */
 	html {
-		background: yellow;
+		/* background: yellow; */
 	}
 }
 

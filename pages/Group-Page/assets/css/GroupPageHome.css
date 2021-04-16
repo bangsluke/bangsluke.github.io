@@ -15,6 +15,7 @@
 	padding: 10px 10px;
 }
 
+/* The header container around "TITS GROUP PAGE". */
 .headercontainer {
 	background: var(--accent-color-1);
 	/* background-color: red; */
@@ -23,6 +24,7 @@
 	margin: 20% auto 0.2em auto;
 }
 
+/* The main header text. */
 .content-text h1 {
 	display: inline-block;
 	padding: 5px 10px;
