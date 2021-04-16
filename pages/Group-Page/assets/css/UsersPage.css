@@ -49,6 +49,8 @@
 	flex-direction: row-reverse;
 }
 
+/* User Images Styling */
+
 .user-image-container {
 	/* background-color: blueviolet; */
 	height: var(--user-image-height);
@@ -57,22 +59,37 @@
 	align-content: center;
 }
 
-.user-text-container {
-	/* background-color: burlywood; */
-	height: var(--user-image-height);
-	width: var(--user-image-height);
-}
-
 .user-image {
 	height: var(--user-image-height);
 	width: var(--user-image-height);
 	object-fit: cover;
+	border-radius: 5px;
 	/* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+}
+
+/* User Texts Styling */
+
+.user-text-container {
+	/* background-color: burlywood; */
+	height: var(--user-image-height);
+	width: 100px;
 }
 
 .user-text {
 	/* background-color: bisque; */
-	text-align: center;
 	margin: auto;
 	display: block;
+}
+
+.alias-container {
+	width: inherit;
+	overflow-y: scroll;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
 }
