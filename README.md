@@ -132,7 +132,6 @@ The other projects do not yet have set up instructions.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [HTML and CSS Links](https://bangsluke.github.io/#html-and-css-links)
-- [HTML Style Guide and Coding Conventions](https://www.w3schools.com/html/html5_syntax.asp)
 - [10 modern layouts in 1 line of CSS](https://www.youtube.com/watch?v=qm0IfG1GyZU&ab_channel=GoogleChromeDevelopers)
 - [CSS Viewport](https://www.educba.com/css-viewport/)
 - [Full Page: 20 Advanced CSS & HTML techniques: clip-path, @property, aspect-ratio and blend-mode](https://www.youtube.com/watch?v=PpheLuPbP5Y&ab_channel=Astrit)
@@ -593,6 +592,7 @@ A collection of tools to support web development. Some are very much untried.
 #### HTML Examples
 - [Code Learning Page](https://bangsluke.github.io/pages/CodeLearningPage.html#HTML)
 - [5 Must Know HTML Tags That Almost Nobody Knows](https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified)
+- [HTML Style Guide and Coding Conventions](https://www.w3schools.com/html/html5_syntax.asp)
 
 #### CSS Examples
 
