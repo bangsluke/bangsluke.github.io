@@ -82,18 +82,15 @@ body {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-
 	min-height: 580px; /* Fallback if needed. */
 	min-height: calc(100vh - 50px - 8px - 25px);  /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
 	height: max-content;
-
 	transition: margin-left .5s;
 	padding: 5px; /* Add all round padding to content to slightly center it. */
-
-	overflow: scroll;
-	overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
-	scroll-behavior: smooth;
-	overflow: auto;
+	/* overflow: scroll; */
+	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
+	/* scroll-behavior: smooth;
+	overflow: auto; */
 }
 
 .page-section {
@@ -107,9 +104,9 @@ body {
 	padding: 0.3em;
 	border-radius: 5px;
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-	overflow: auto;
-	overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
-	scroll-behavior: smooth;
+	/* overflow: auto; */
+	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
+	/* scroll-behavior: smooth; */
 }
 
 /* Text styling. */
@@ -179,6 +176,7 @@ th {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 	html {
 		/* background: blue; */
+		background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 	}
 }
 
@@ -186,6 +184,7 @@ th {
 	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 	html {
 		/* background: green; */
+		background-image: linear-gradient(225deg, green 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 	}
 }
 
@@ -193,6 +192,7 @@ th {
 	/* Covers iPads and other tablets. */
 	html {
 		/* background: orange; */
+		background-image: linear-gradient(225deg, orange 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 	}
 }
 
@@ -200,6 +200,7 @@ th {
 	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	html {
 		/* background: red; */
+		background-image: linear-gradient(225deg, red 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 	}
 }
 
@@ -207,6 +208,7 @@ th {
 	/* Desktops and Laptops - For larger monitors and displays. */
 	html {
 		/* background: yellow; */
+		background-image: linear-gradient(225deg, yellow 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 	}
 }
 
