@@ -387,7 +387,7 @@ A collection of tools to support web development. Some are very much untried.
 
 ### Website Hosting
 - [How to Host Your Website On GitHub Pages For Free](https://medium.com/swlh/how-to-host-your-website-on-github-pages-for-free-3302b0fe8956)
-- [How To Host A Website For Free | With Free Domain And HTTPS SSL Certificate In Seconds | Netlify](https://www.youtube.com/watch?v=MXJl4svLTUY&ab_channel=MichaelKitas)
+- [How To Host A Website For Free - With Free Domain And HTTPS SSL Certificate In Seconds - Netlify](https://www.youtube.com/watch?v=MXJl4svLTUY&ab_channel=MichaelKitas)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
