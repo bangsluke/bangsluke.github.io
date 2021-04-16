@@ -34,15 +34,13 @@
 html {
 	/* background: var(--main-background-color, var(--accent-color-1)); */
 	/* background: orange; */
-	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
+	background-size: cover;
+    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
 	height: max-content;
-	/* position: fixed; */
-
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
-
-	/* overflow-y: none; */
 }
 
 /* Add code below. */
@@ -57,35 +55,24 @@ html {
 	padding: 0;
 }
 
-
-
-
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
-	/* background-color: var(--accent-color-2); /* Fallback if needed. */
-	/* background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);  */
-	/* https://www.grabient.com/ */
-	/* background: orange; */
 	top: 0px;
 	left: 0px;
 	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
-	height: 100vh;
-	/* overflow: hidden; */
-	/* overflow-y: none; */
-	/* overflow-x: none; */
 	font-family: sans-serif;
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0;
 }
 
-/* Completely disable all vertical scrolling. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
-html, body {
+/* Completely disable all vertical scrolling across all pages. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
+/* html, body {
 	margin: 0; 
 	height: 100%;
 	overflow: hidden;
-}
+} */
 
 /* Main content styling. */
 
@@ -103,8 +90,10 @@ html, body {
 	transition: margin-left .5s;
 	padding: 5px; /* Add all round padding to content to slightly center it. */
 
+	overflow: scroll;
 	overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	scroll-behavior: smooth;
+	overflow: auto;
 }
 
 .page-section {
@@ -118,6 +107,9 @@ html, body {
 	padding: 0.3em;
 	border-radius: 5px;
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+	overflow: auto;
+	overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
+	scroll-behavior: smooth;
 }
 
 /* Text styling. */
