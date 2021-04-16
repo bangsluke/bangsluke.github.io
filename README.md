@@ -632,7 +632,8 @@ A collection of tools to support web development. Some are very much untried.
 - [5 CSS tricks every Web Developer should know in 2021](https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit)
 - [How you can simplify your CSS with :is()](https://www.youtube.com/watch?v=McC4QkCvbaY&ab_channel=KevinPowell)
 - [CSS Auditing](https://cssstats.com/)
-- [CSS Generators](https://www.smashingmagazine.com/2021/03/css-generators/)
+- [CSS Generators - Marko Denic](https://markodenic.com/css-generators/)
+- [CSS Generators - Smashing Magazine](https://www.smashingmagazine.com/2021/03/css-generators/)
 - [Animation can make wave 👋 much more than emoji!](https://blog.shhdharmen.me/animation-can-make-wave-much-more-than-emoji?guid=none&deviceId=55961ac5-3579-4764-bffc-111edc0ffb5f)
 - [What is Glassmorphism? Create This New Design Effect Using Only HTML and CSS](https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/)
 
