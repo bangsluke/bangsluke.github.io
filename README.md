@@ -89,7 +89,7 @@ All projects are very much WIP so feel free to ignore how terrible they may look
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [Group Page](https://bangsluke.github.io/pages/Group-Page/GroupPageHome.html)
-> The best friends website ever created. Shhh. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
+> The single most awesome and offensive friends group website ever created. Shhh. <sub>Page stored within [bangsluke.github.io](https://github.com/bangsluke/bangsluke.github.io).</sub>
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
