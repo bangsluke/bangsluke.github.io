@@ -16,7 +16,6 @@
     --main-font-family: 'Calibri', sans-serif;
 }
 
-
 /* Header styling. */
 
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
@@ -37,7 +36,6 @@
     position: fixed;
 }
 
-
 /* Avatar class for the main image. */
 .avatar-container {
     /* background-color: maroon; */
@@ -57,7 +55,6 @@
     cursor: pointer;
 }
 
-
 /* Main subpage header text class. */
 
 .heading-container {
@@ -75,7 +72,6 @@
     margin: auto;
 }
 
-
 /* For homepage only. */
 
 .subpage-header-area.homepage {
@@ -85,9 +81,7 @@
     padding: 15px;
 }
 
-
 /* Header area media queries. */
-
 
 /* Scale up for screens larger than mobile. */
 
@@ -138,10 +132,9 @@
 
 /* Top Menu styling. */
 
-
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/TopMenu.css" */
 
-.topMenu {
+.topMenu { /* The top menu bar which conatins all further containers. */
     background: var(--accent-color-black);
     position: fixed;
     height: 80px;
@@ -152,32 +145,52 @@
     transition: 0.5s;
     padding-top: 20px;
     border-left: solid 1px var(--accent-color-1);
-    display: flex;
+}
+
+.topMenu-Container {
+    /* background: green; */
+    width: 600px;
+    height: inherit;
+    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
     flex-direction: row;
-    /* align-items: flex-end;
-            align-content: flex-end;
-            justify-items: flex-end;
-            justify-content: flex-end; */
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+.topMenu-Icon-Container {
+    /* background: red; */
+    width: max-content;
+    height: max-content;
+}
+
+.topMenu-Icon {
+	height: 40px;
+	filter: brightness(0) invert(1);
+	margin-top: 4px;
+}
+
+.topMenu-Text-Container {
+    /* background: blue; */
+    width: max-content;
+    height: max-content; /* Set the div th be the height of the text. */
+    text-align: center; /* Center the text in the div. */
+    margin-left: 10px; /* Add spacing between the icon and text. */
+    margin-right: 40px; /* Add spacing between each link. */
 }
 
 .topMenu a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
     color: var(--accent-color-white);
     transition: 0.3s;
     font-size: 18px;
-    margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 900;
 }
 
-.topMenu a i {
-    padding-right: 15px;
-}
-
 .topMenu a:hover {
     color: var(--accent-color-2);
-    background: var(--accent-color-white);
+    /* background: var(--accent-color-white); */
 }
 
 
@@ -230,21 +243,19 @@
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/SideMenu.css" */
 
 .burgericon-container {
-    /* background: blue; */
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
-    width: 43px; /* Fallback if needed. */
-    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    height: 43px;
+    height: calc(var(--headerHeight) - 2px);
+    width: 43px;
+    width: calc(var(--headerHeight) - 2px);
     padding-right: 5px;
-    /* margin-right: 0px; */
 }
 
 .burgericon {
     color: var(--accent-color-white);
     top: 0px;
     left: 0px;
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    height: 43px;
+    height: calc(var(--headerHeight) - 2px);
     width: auto;
     display: block;
     font-size: 40px;
@@ -252,19 +263,11 @@
     padding: 0.5em;
     margin: 0;
     padding: 0;
-    /* width: 80px; */
-    /* border-style: solid; */
     filter: invert(1) hue-rotate(180deg);
 }
 
 .burgericon:hover {
     color: var(--accent-color-2);
-}
-
-.topMenu-icon {
-	height: 30px;
-	filter: brightness(0) invert(1);
-	margin-top: 4px;
 }
 
 

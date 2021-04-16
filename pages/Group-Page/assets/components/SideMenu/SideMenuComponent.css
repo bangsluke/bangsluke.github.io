@@ -21,37 +21,40 @@
 /* Side Menu CSS */
 
 .burgericon-container {
-	/* background: blue; */
-	height: 55px;
-	width: 55px;
-	/* padding-right: 40px; */
-	/* margin-right: 0px; */
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    width: 43px; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    padding-right: 5px;
 }
 
 .burgericon {
-	color: var(--accent-color-white);
-	top: 0px;
-	left: 0px;
-	display: block;
-	font-size: 40px;
-	cursor: pointer;
-	padding: 0.5em;
-	height: 55px;
-	width: auto;
-	margin: 0;
-	padding: 0;
-	/* width: 80px; */
-	/* border-style: solid; */
-	filter: invert(1) hue-rotate(180deg);
+    color: var(--accent-color-white);
+    top: 0px;
+    left: 0px;
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    width: auto;
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 0;
+    padding: 0;
+    /* width: 80px; */
+    /* border-style: solid; */
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .burgericon:hover {
-	color: var(--accent-color-2);
+    color: var(--accent-color-2);
 }
+
+/* SideMenu is the full dark grey side menu that appears. */
 
 .sideMenu {
 	height: 100%;
-	width: 0;
+	width: 0; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
 	z-index: 3;
 	top: 0;
@@ -64,18 +67,46 @@
 	display: inline;
 }
 
-.sideMenu-icon {
-	height: 30px;
+/* sideMenu-Main-Container holds all of the smaller icon and text containers. */
+.sideMenu-Main-Container {
+    /* background: orange; */
+    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+
+/* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
+.sideMenu-Container {
+    /* background: green; */
+    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: row;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+/* sideMenu-Icon-Container holds just the sideMenu-Icon. */
+.sideMenu-Icon-Container {
+    /* background: red; */
+    width: 60px;
+    height: max-content;
+}
+
+.sideMenu-Icon {
+	height: 40px;
 	filter: brightness(0) invert(1);
 	margin-top: 4px;
 }
 
-.main-menu h2 {
-	text-align: center;
-	letter-spacing: 7px;
-	color: var(--accent-color-white);
-	background: var(--accent-color-1);
-	padding: 20px 0;
+.sideMenu-Text-Container {
+    /* background: blue; */
+    width: 150px;
+    height: max-content; /* Set the div th be the height of the text. */
+    text-align: left; /* Left align the text in the div. */
+    margin-left: 0px; /* Add spacing between the icon and text. */
 }
 
 .sideMenu a {

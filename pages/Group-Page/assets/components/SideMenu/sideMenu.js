@@ -29,15 +29,74 @@ sideMenuTemplate.innerHTML = `
             <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
 
             <!-- The main side bar menu options. -->
-            <div class="main-menu">
-            
-              <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-icon" alt="Email Logo">Home</a>
-              <a href="/pages/Group-Page/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="sideMenu-icon" alt="Users Icon">Users</a>
-              <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="sideMenu-icon" alt="Events Icon">Events</a>
-              <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-icon" alt="Titans Icon">Titans</a>
-              <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-icon" alt="Stats Icon">Stats</a>
-              <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="sideMenu-icon" alt="Gallery Icon">Gallery</a>
-              <!-- <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-icon" alt="Email Logo">Ideas</a> -->
+            <div class="sideMenu-Main-Container">
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Users.html">Users</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Events.html">Events</a>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Stats.html">Stats</a>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Gallery.html">Gallery</a>
+                    </div>
+                </div>
+
+                <!-- <div class="sideMenu-Container">
+                    <div class="sideMenu-Icon-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
+                    </div>
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/Sub-Pages/Ideas.html">Ideas</a>
+                    </div>
+                </div> -->
+            </div>
+
             </div>
 
         </div>
