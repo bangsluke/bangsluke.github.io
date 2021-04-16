@@ -19,8 +19,8 @@
 /* Header styling. */
 
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
-.subpage-header-area {
-    background-color: var(--accent-color-2);
+.header-area {
+    /* background-color: var(--accent-color-2); */
     left: 0px;
     top: 0px;
     --headerHeight: 45px; /* Define the header variable. */
@@ -34,6 +34,23 @@
     padding: 2px;
     z-index: 2;
     position: fixed;
+}
+
+/* For homepage only. */
+
+.header-area.homepage {
+    /* background-color: lightcoral; */
+    height: 45px; /* Fallback if needed. */
+    height: var(--headerHeight); /* Define the header height using the variable. */
+    /* height: 0px; */
+    padding: 15px;
+    border-bottom: none;
+}
+
+/* For subpages. */
+
+.header-area.subpage {
+    background-color: var(--accent-color-2);
 }
 
 /* Avatar class for the main image. */
@@ -70,15 +87,6 @@
     font-size: 20px;
     height: max-content;
     margin: auto;
-}
-
-/* For homepage only. */
-
-.subpage-header-area.homepage {
-    background-color: lightcoral;
-    height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight); /* Define the header height using the variable. */
-    padding: 15px;
 }
 
 /* Header area media queries. */

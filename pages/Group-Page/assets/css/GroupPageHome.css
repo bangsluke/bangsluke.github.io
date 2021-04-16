@@ -2,14 +2,9 @@
 
 /* The css style file used to update the Group Page Home styling. */
 
+/* Specific Homepage Header styling is in HeaderComponent.css. */
+
 /* Header styling. */
-
-.subpage-header-area {
-	border-bottom: none;
-}
-
-
-
 
 .content-text {
 	/* background-color: blue; */

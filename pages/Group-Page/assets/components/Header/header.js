@@ -19,7 +19,7 @@ headerTemplate.innerHTML = `
   
     <!-- Header HTML -->
 
-    <header class="subpage-header-area">
+    <header class="header-area subpage">
         
         <!-- Add a homepage link by adding a group icon image. Add it within a container. -->
         <div class="avatar-container">
