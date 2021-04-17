@@ -471,6 +471,7 @@ A collection of tools to support web development. Some are very much untried.
 ### Widgets & Components
 - [Weather Widget](https://weatherwidget.io/)
 - [Tab Bar Navigation JavaScript](https://www.youtube.com/watch?v=5xoeqXxH4-s&ab_channel=WebDev)
+- [Get User location](https://www.reddit.com/r/learnjavascript/comments/ms3m2n/show_user_location_on_google_maps_using_javascript/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
