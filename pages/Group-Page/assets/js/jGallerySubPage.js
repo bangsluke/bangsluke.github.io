@@ -12,15 +12,22 @@ function init() {
     element.innerHTML = clickedAlbumName + " Gallery"; // Set the title to be the passed variable.
 }
 
+// Create a function that counts the number of image files in a certain folder, and then updates the DOM to create the correct number of image elements.
+
+
+
+
+
 // Gallery SubPage scripts
 // https://photoswipe.com/
 // https://codepen.io/dimsemenov/pen/ZYbPJM
 
-var initPhotoSwipeFromDOM = function(gallerySelector) {
+var initPhotoSwipeFromDOM = function (gallerySelector) {
 
-    // parse slide data (url, title, size ...) from DOM elements 
-    // (children of gallerySelector)
-    var parseThumbnailElements = function(el) {
+    console.log("function (gallerySelector) initiated");
+
+    // Parse slide data (url, title, size ...) from DOM elements (children of gallerySelector).
+    var parseThumbnailElements = function (el) {
         var thumbElements = el.childNodes,
             numNodes = thumbElements.length,
             items = [],
@@ -29,12 +36,15 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             size,
             item;
 
-        for(var i = 0; i < numNodes; i++) {
+        console.log(thumbElements);
+
+        for (var i = 0; i < numNodes; i++) {
 
             figureEl = thumbElements[i]; // <figure> element
+            console.log(figureEl);
 
             // include only element nodes 
-            if(figureEl.nodeType !== 1) {
+            if (figureEl.nodeType !== 1) {
                 continue;
             }
 
@@ -49,17 +59,15 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 h: parseInt(size[1], 10)
             };
 
-
-
-            if(figureEl.children.length > 1) {
+            if (figureEl.children.length > 1) {
                 // <figcaption> content
-                item.title = figureEl.children[1].innerHTML; 
+                item.title = figureEl.children[1].innerHTML;
             }
 
-            if(linkEl.children.length > 0) {
+            if (linkEl.children.length > 0) {
                 // <img> thumbnail element, retrieving thumbnail url
                 item.msrc = linkEl.children[0].getAttribute('src');
-            } 
+            }
 
             item.el = figureEl; // save link to element for getThumbBoundsFn
             items.push(item);
@@ -68,29 +76,28 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         return items;
     };
 
-    // find nearest parent element
+    // Find nearest parent element
     var closest = function closest(el, fn) {
-        return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+        return el && (fn(el) ? el : closest(el.parentNode, fn));
     };
 
-    // triggers when user clicks on thumbnail
-    var onThumbnailsClick = function(e) {
+    // Triggers when user clicks on thumbnail
+    var onThumbnailsClick = function (e) {
         e = e || window.event;
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
         var eTarget = e.target || e.srcElement;
 
-        // find root element of slide
-        var clickedListItem = closest(eTarget, function(el) {
+        // Find root element of slide
+        var clickedListItem = closest(eTarget, function (el) {
             return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
         });
 
-        if(!clickedListItem) {
+        if (!clickedListItem) {
             return;
         }
 
-        // find index of clicked item by looping through all child nodes
-        // alternatively, you may define index via data- attribute
+        // Find index of clicked item by looping through all child nodes, alternatively, you may define index via data- attribute.
         var clickedGallery = clickedListItem.parentNode,
             childNodes = clickedListItem.parentNode.childNodes,
             numChildNodes = childNodes.length,
@@ -98,55 +105,53 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             index;
 
         for (var i = 0; i < numChildNodes; i++) {
-            if(childNodes[i].nodeType !== 1) { 
-                continue; 
+            if (childNodes[i].nodeType !== 1) {
+                continue;
             }
 
-            if(childNodes[i] === clickedListItem) {
+            if (childNodes[i] === clickedListItem) {
                 index = nodeIndex;
                 break;
             }
             nodeIndex++;
         }
 
-
-
-        if(index >= 0) {
+        if (index >= 0) {
             // open PhotoSwipe if valid index found
-            openPhotoSwipe( index, clickedGallery );
+            openPhotoSwipe(index, clickedGallery);
         }
         return false;
     };
 
-    // parse picture index and gallery index from URL (#&pid=1&gid=2)
-    var photoswipeParseHash = function() {
+    // Parse picture index and gallery index from URL (#&pid=1&gid=2).
+    var photoswipeParseHash = function () {
         var hash = window.location.hash.substring(1),
-        params = {};
+            params = {};
 
-        if(hash.length < 5) {
+        if (hash.length < 5) {
             return params;
         }
 
         var vars = hash.split('&');
         for (var i = 0; i < vars.length; i++) {
-            if(!vars[i]) {
+            if (!vars[i]) {
                 continue;
             }
-            var pair = vars[i].split('=');  
-            if(pair.length < 2) {
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
                 continue;
-            }           
+            }
             params[pair[0]] = pair[1];
         }
 
-        if(params.gid) {
+        if (params.gid) {
             params.gid = parseInt(params.gid, 10);
         }
 
         return params;
     };
 
-    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+    var openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
         var pswpElement = document.querySelectorAll('.pswp')[0],
             gallery,
             options,
@@ -154,30 +159,30 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         items = parseThumbnailElements(galleryElement);
 
-        // define options (if needed)
+        // Define options (if needed).
         options = {
 
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
-            getThumbBoundsFn: function(index) {
+            getThumbBoundsFn: function (index) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
                 var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
                     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect(); 
+                    rect = thumbnail.getBoundingClientRect();
 
-                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
             }
 
         };
 
-        // PhotoSwipe opened from URL
-        if(fromURL) {
-            if(options.galleryPIDs) {
+        // PhotoSwipe opened from URL.
+        if (fromURL) {
+            if (options.galleryPIDs) {
                 // parse real index when custom PIDs are used 
                 // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-                for(var j = 0; j < items.length; j++) {
-                    if(items[j].pid == index) {
+                for (var j = 0; j < items.length; j++) {
+                    if (items[j].pid == index) {
                         options.index = j;
                         break;
                     }
@@ -191,33 +196,33 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         }
 
         // exit if index not found
-        if( isNaN(options.index) ) {
+        if (isNaN(options.index)) {
             return;
         }
 
-        if(disableAnimation) {
+        if (disableAnimation) {
             options.showAnimationDuration = 0;
         }
 
         // Pass data to PhotoSwipe and initialize it
-        gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
     };
 
     // loop through all gallery elements and bind events
-    var galleryElements = document.querySelectorAll( gallerySelector );
+    var galleryElements = document.querySelectorAll(gallerySelector);
 
-    for(var i = 0, l = galleryElements.length; i < l; i++) {
-        galleryElements[i].setAttribute('data-pswp-uid', i+1);
+    for (var i = 0, l = galleryElements.length; i < l; i++) {
+        galleryElements[i].setAttribute('data-pswp-uid', i + 1);
         galleryElements[i].onclick = onThumbnailsClick;
     }
 
     // Parse URL and open gallery if it contains #&pid=3&gid=1
     var hashData = photoswipeParseHash();
-    if(hashData.pid && hashData.gid) {
-        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+    if (hashData.pid && hashData.gid) {
+        openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
     }
 };
 
-// execute above function
+// Execute above function.
 initPhotoSwipeFromDOM('.my-gallery');

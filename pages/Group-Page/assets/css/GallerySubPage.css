@@ -26,28 +26,30 @@
 }
 
 
-
-
 /* https://photoswipe.com/ */
 /* https://codepen.io/dimsemenov/pen/ZYbPJM */
 
 .my-gallery {
     width: 100%;
+    /* height: max-content; */
     float: left;
-  }
-  .my-gallery img {
+}
+
+.my-gallery img {
     width: 100%;
     height: auto;
-  }
-  .my-gallery figure {
+}
+
+.my-gallery figure {
     display: block;
     float: left;
     margin: 0 5px 5px 0;
     width: 150px;
-  }
-  .my-gallery figcaption {
+}
+
+.my-gallery figcaption {
     display: none;
-  }
+}
 
 
 
