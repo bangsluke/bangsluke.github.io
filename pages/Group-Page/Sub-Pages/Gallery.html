@@ -60,9 +60,8 @@
 
 				<!-- Rounded switch - https://www.w3schools.com/howto/howto_css_switch.asp -->
 				<label class="switch">
-					<input type="checkbox">
+					<input type="checkbox" id="peaModeToggle" onclick="togglePeaMode();">
 					<span class="slider round"></span>
-
 				</label>
 
 				<h3>Pea Mode</h3>
@@ -82,8 +81,8 @@
 						<!-- <img class="gallery-cover-image"
 								src="/pages/Group-Page/assets/images/Gallery/Croatia Cover.JPG"
 								alt="Croatia Album Cover"> -->
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/Croatia Pea Cover.JPG"
+						<img class="gallery-cover-image" id="croatiaCover"
+							src="/pages/Group-Page/assets/images/Gallery/Croatia Cover.JPG"
 							alt="Croatia Pea Album Cover">
 					</a>
 
@@ -97,8 +96,8 @@
 						<h2 class="gallery-cover-text">Glastonbury</h2>
 						<!-- <img class="gallery-cover-image" src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg"
 								alt="Glastonbury Album Cover"> -->
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/Glastonbury Pea Cover.JPG"
+						<img class="gallery-cover-image" id="glastonburyCover"
+							src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.JPG"
 							alt="Glastonbury Pea Album Cover">
 					</a>
 
@@ -110,8 +109,8 @@
 					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Big Nights Out"
 						onclick="passClickedAlbumName(this);">
 						<h2 class="gallery-cover-text">Big Nights Out</h2>
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/Big Nights Out Pea Cover.JPG"
+						<img class="gallery-cover-image" id="bigNightsOutCover"
+							src="/pages/Group-Page/assets/images/Gallery/Big Nights Out Cover.JPG"
 							alt="Big Nights Out Pea Album Cover">
 					</a>
 
@@ -123,8 +122,8 @@
 					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Lockdown"
 						onclick="passClickedAlbumName(this);">
 						<h2 class="gallery-cover-text">Lockdown</h2>
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/Lockdown Pea Cover.jpg"
+						<img class="gallery-cover-image" id="lockdownCover"
+							src="/pages/Group-Page/assets/images/Gallery/Lockdown Cover.jpg"
 							alt="Lockdown Pea Album Cover">
 					</a>
 
@@ -136,8 +135,8 @@
 					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Pagham"
 						onclick="passClickedAlbumName(this);">
 						<h2 class="gallery-cover-text">Pagham</h2>
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/Pagham Pea Cover.JPG"
+						<img class="gallery-cover-image" id="paghamCover"
+							src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.JPG"
 							alt="Pagham Pea Album Cover">
 					</a>
 
@@ -149,9 +148,35 @@
 					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="General"
 						onclick="passClickedAlbumName(this);">
 						<h2 class="gallery-cover-text">General</h2>
-						<img class="gallery-cover-image"
-							src="/pages/Group-Page/assets/images/Gallery/General Pea Cover.JPG"
+						<img class="gallery-cover-image" id="generalCover"
+							src="/pages/Group-Page/assets/images/Gallery/General Cover.JPG"
 							alt="General Pea Album Cover">
+					</a>
+
+				</div>
+
+				<!-- Skiing Album Cover -->
+				<div class="gallery-cover-container fadein">
+
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Skiing"
+						onclick="passClickedAlbumName(this);">
+						<h2 class="gallery-cover-text">Skiing</h2>
+						<img class="gallery-cover-image" id="skiingCover"
+							src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG"
+							alt="Skiing Pea Album Cover">
+					</a>
+
+				</div>
+
+				<!-- Football Album Cover -->
+				<div class="gallery-cover-container fadein">
+
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Football"
+						onclick="passClickedAlbumName(this);">
+						<h2 class="gallery-cover-text">Football</h2>
+						<img class="gallery-cover-image" id="footballCover"
+							src="/pages/Group-Page/assets/images/Gallery/Football Cover.JPG"
+							alt="Football Pea Album Cover">
 					</a>
 
 				</div>
