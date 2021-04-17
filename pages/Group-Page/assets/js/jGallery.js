@@ -4,11 +4,16 @@
 
 // Create a function to run when page is loaded.
 window.onload = function () {
-    console.log("Gallery page loaded.");
-    //var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
-    var peaMode = document.getElementById("peaModeToggle").checked; // Get the value of the input from the toggle switch. Either true or false.
-    sessionStorage.setItem("peaMode", peaMode); // Save the variable to session storage.
-    console.log("On initial load, peaMode is = " + peaMode);
+    console.log("Gallery page loaded."); // Provide an initial load message.
+    var peaMode = sessionStorage.getItem("peaMode"); // Retrieve the variable passed to session storage.
+    console.log("On initial load, peaMode is = " + peaMode); // Check what the initial loaded state is.
+    if (peaMode == "true") { // If Pea mode was true, turn the check box on and modify the images.
+        // console.log("Triggered");
+        document.getElementById("peaModeToggle").checked = true;
+        togglePeaMode();
+    } else { // If Pea mode was false, do nothing.
+        // console.log("Not triggered");
+    }
 }
 
 // Change the pea mode when the user has clicked on the toggle.
@@ -25,7 +30,7 @@ function togglePeaMode() {
         document.getElementById("lockdownCover").src = "/pages/Group-Page/assets/images/Gallery/Lockdown Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("paghamCover").src = "/pages/Group-Page/assets/images/Gallery/Pagham Pea Cover.JPG"; // Modify the source of the image.     
         document.getElementById("generalCover").src = "/pages/Group-Page/assets/images/Gallery/General Pea Cover.JPG"; // Modify the source of the image.
-
+        document.getElementById("skiingCover").src = "/pages/Group-Page/assets/images/Gallery/Skiing Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("footballCover").src = "/pages/Group-Page/assets/images/Gallery/Football Pea Cover.JPG"; // Modify the source of the image.
     } else {
         console.log("Pea mode toggle has just been turned off.");
@@ -36,7 +41,7 @@ function togglePeaMode() {
         document.getElementById("lockdownCover").src = "/pages/Group-Page/assets/images/Gallery/Lockdown Cover.JPG"; // Modify the source of the image.
         document.getElementById("paghamCover").src = "/pages/Group-Page/assets/images/Gallery/Pagham Cover.JPG"; // Modify the source of the image.     
         document.getElementById("generalCover").src = "/pages/Group-Page/assets/images/Gallery/General Cover.JPG"; // Modify the source of the image.
-
+        document.getElementById("skiingCover").src = "/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG"; // Modify the source of the image.
         document.getElementById("footballCover").src = "/pages/Group-Page/assets/images/Gallery/Football Cover.JPG"; // Modify the source of the image.
     }
     sessionStorage.setItem("peaMode", peaMode); // Save the variable to session storage.
