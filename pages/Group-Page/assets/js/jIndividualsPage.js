@@ -103,11 +103,17 @@ function getData(data, selectedUserName) {
     /// Brockham Badgers    
     document.getElementById("brockhamBadgersPicture").src = data[foundRow].brockhamBadgersImagePath; // Modify the source of the image.
     document.getElementById("BBsU11sQuote").innerHTML = data[foundRow].BBsU11sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU11sCite").innerHTML = data[foundRow].BBsU11sCite; // Modify the text inside the element.
     document.getElementById("BBsU12sQuote").innerHTML = data[foundRow].BBsU12sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU12sCite").innerHTML = data[foundRow].BBsU12sCite; // Modify the text inside the element.
     document.getElementById("BBsU13sQuote").innerHTML = data[foundRow].BBsU13sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU13sCite").innerHTML = data[foundRow].BBsU13sCite; // Modify the text inside the element.
     document.getElementById("BBsU14sQuote").innerHTML = data[foundRow].BBsU14sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU14sCite").innerHTML = data[foundRow].BBsU14sCite; // Modify the text inside the element.
     document.getElementById("BBsU15sQuote").innerHTML = data[foundRow].BBsU15sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU15sCite").innerHTML = data[foundRow].BBsU15sCite; // Modify the text inside the element.
     document.getElementById("BBsU16sQuote").innerHTML = data[foundRow].BBsU16sQuote; // Modify the text inside the element.
+    document.getElementById("BBsU16sCite").innerHTML = data[foundRow].BBsU16sCite; // Modify the text inside the element.
     document.getElementById("BBsAwards").innerHTML = data[foundRow].BBsAwards; // Modify the text inside the element.
 
     

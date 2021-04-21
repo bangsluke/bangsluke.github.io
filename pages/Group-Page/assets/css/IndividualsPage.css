@@ -225,6 +225,13 @@ tr:hover {
 	margin: auto;
 }
 
+cite {
+	/* background-color: red; */
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 60%;
+	text-align: right;
+}
 
 /* Stats and Titan Tab */
 
