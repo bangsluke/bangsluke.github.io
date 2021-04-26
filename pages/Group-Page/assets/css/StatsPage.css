@@ -91,3 +91,15 @@ tr:hover {
 	color: var(--accent-color-white);
 	font: bold;
 }
+
+/* Sources and Reporting Links formatting */
+
+.sources-and-reporting-links-container {
+	color: white;
+	text-align: center;
+	font-size: 10px;
+}
+
+.sources-and-reporting-links:hover {
+	text-decoration: underline;
+}
