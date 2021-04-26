@@ -412,6 +412,7 @@ A collection of tools to support web development. Some are very much untried.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Fonts
+- [Typographic hierarchy](https://www.toptal.com/designers/typography/typographic-hierarchy)
 - [Google Fonts](https://fonts.google.com/)
 - [Font Pairs](https://fontpair.co/)
 - [Brand font styles](https://www.reddit.com/r/coolguides/comments/m56gxf/brand_fonts_guide/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link)
