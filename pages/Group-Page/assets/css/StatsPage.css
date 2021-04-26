@@ -37,7 +37,7 @@
 }
 
 select {
-	font-size: 16px;
+	font-size: 0.9rem;
 }
 
 .stats-dropdown {
@@ -70,7 +70,7 @@ select {
 table {
 	width: 100%;
 	text-align: center;
-	font-size: 14px;
+	font-size: 0.7rem;
 	background-color: var(--accent-color-3, blue);
 	color: white;
 }
@@ -82,7 +82,7 @@ th {
 }
 
 td {
-	font-size: 14px;
+	font-size: 0.7rem;
 	text-align: center;
 }
 

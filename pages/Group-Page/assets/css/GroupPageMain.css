@@ -41,6 +41,9 @@ html {
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
+
+	font-family: var(--main-font-family, 'Calibri');
+	font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 }
 
 /* Add code below. */
@@ -61,7 +64,7 @@ body {
 	top: 0px;
 	left: 0px;
 	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
-	font-family: sans-serif;
+	font-family: inherit;
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0;
@@ -116,8 +119,36 @@ a {
 	text-decoration: none;
 }
 
-p, h1, h2, h3, h4, h5, h6, ul, legend {
+h1, h2, h3, h4, h5, h6, p, ul, legend {
 	color: var(--accent-color-white);
+}
+
+h1 {
+	font-size: 1rem;
+}
+
+h2 {
+	font-size: 0.9rem;
+}
+
+h3 {
+	font-size: 0.8rem;
+}
+
+h4 {
+	font-size: 0.7rem;
+}
+
+h5 {
+	font-size: 0.6rem;
+}
+
+h6 {
+	font-size: 0.5rem;
+}
+
+h6 {
+	font-size: 0.5rem;
 }
 
 /* Other classes and styles. */
@@ -148,7 +179,7 @@ fieldset {
 table {
 	width: 98%;
 	text-align: center;
-	font-size: 14px;
+	font-size: 0.8rem;
 }
 
 th {

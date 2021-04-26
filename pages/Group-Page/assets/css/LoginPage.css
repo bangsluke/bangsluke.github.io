@@ -31,7 +31,6 @@
 }
 
 h1 {
-    font-size: 20px;
     color: var(--accent-color-white);
     padding: 20px;
 }
@@ -101,7 +100,7 @@ h1 {
 
 .loginbutton {
     background-color: var(--accent-color-1);
-    font-size: 18px;
+    font-size: 0.9rem;
     color: var(--accent-color-white);
     height: 40px;
     width: 60px;

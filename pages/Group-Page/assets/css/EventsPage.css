@@ -28,7 +28,6 @@
 
 h2 {
 	text-transform: uppercase;
-	font-size: 14px;
 }
 
 /* Add calendar styling. */
@@ -56,10 +55,6 @@ h2 {
     margin: auto;
 	margin-top: 10px;
 	/* overflow-y: scroll; */
-}
-
-p {
-	font-size: 10px;
 }
 
 a {

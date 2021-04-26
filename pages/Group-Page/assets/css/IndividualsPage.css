@@ -61,7 +61,7 @@
 } */
 
 td {
-	font-size: 14px;
+	font-size: 0.7rem;
 	text-align: left;
 	line-height: 20px;
 }
@@ -126,7 +126,7 @@ tr:hover {
 #pro-team-table {
 	width: 100%;
 	text-align: center;
-	font-size: 12px;
+	font-size: 0.5rem;
 	color: var(--proTeam-text-color,black);
 	border: none;
 	border-collapse: collapse;

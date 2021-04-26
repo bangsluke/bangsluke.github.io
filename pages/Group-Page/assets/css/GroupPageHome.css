@@ -29,7 +29,7 @@
 	display: inline-block;
 	padding: 5px 10px;
 	text-transform: uppercase;
-	font-size: 30px;
+	font-size: 2rem;
 	color: var(--accent-color-white);
 	transition: transform 250ms;
 }
@@ -40,7 +40,7 @@
 
 .content-text h3 {
 	text-transform: uppercase;
-	font-size: 25px;
+	font-size: 1.5rem;
 	margin: 10px;
 	letter-spacing: 1px;
 	color: white;
@@ -70,10 +70,8 @@
 	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	.content-text h1 {
 		padding: 15px 35px;
-		font-size: 50px;
 	}
 	.content-text h3 {
-		font-size: 45px;
 		margin: 10px;
 		letter-spacing: 3px;
 	}
@@ -83,10 +81,8 @@
 	/* Desktops and Laptops - For larger monitors and displays. */
 	.content-text h1 {
 		padding: 15px 35px;
-		font-size: 50px;
 	}
 	.content-text h3 {
-		font-size: 45px;
 		margin: 10px;
 		letter-spacing: 3px;
 	}
