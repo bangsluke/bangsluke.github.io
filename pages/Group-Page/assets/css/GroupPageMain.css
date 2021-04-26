@@ -86,8 +86,8 @@ body {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	min-height: 580px; /* Fallback if needed. */
-	min-height: calc(100vh - 50px - 8px - 25px);  /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
+	/*min-height: 580px; /* Fallback if needed. */
+	/*min-height: calc(100vh - 50px - 8px - 25px);  /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
 	height: max-content;
 	transition: margin-left .5s;
 	padding: 5px; /* Add all round padding to content to slightly center it. */
@@ -95,6 +95,14 @@ body {
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	/* scroll-behavior: smooth;
 	overflow: auto; */
+
+	/* https://stackoverflow.com/questions/4587582/css-height-of-100-minus-px-header-and-footer */
+	/*height: calc(100% - 60px);
+	/*height: -o-calc(100% - 65px); /* opera */
+	/*height: -webkit-calc(100% - 65px); /* google, safari */
+	/*height: -moz-calc(100% - 65px); /* firefox */
+
+
 }
 
 .page-section {
@@ -186,6 +194,12 @@ table {
 
 th {
 	font-style: bold;
+}
+
+/* Footer Styling */
+
+footer {
+	bottom: 0px;
 }
 
 /* Resizing the webpage for all devices. */

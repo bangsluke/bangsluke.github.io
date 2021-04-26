@@ -30,13 +30,19 @@ footer {
     background-color: rgba(var(--accent-color-black-rgb), 0.5);
     /* grid-area: footer; */
     width: 100%;
-    height: 25px;
+    height: 60px;
+    /* https://stackoverflow.com/a/17437794/14290169 */
     top: 90%;
+    top: calc(100% - 60px); /* Try to calculate the top position of the footer by the height of 100% minus the footer height. */
+    top: -o-calc(100% - 60px); /* Opera */
+	top: -webkit-calc(100% - 60px); /* Google, Safari */
+	top: -moz-calc(100% - 60px); /* Firefox */
+    bottom: 0px;
     color: var(--accent-color-white);
     justify-self: center;
     align-content: center;
     text-align: center;
-    /* padding: auto; */
+    padding: 5px;
 }
 
 footer ul {
@@ -48,7 +54,7 @@ footer ul {
 footer li {
     display: inline-block;
     padding: none;
-    font-size: 10px;
+    font-size: 0.5rem;
     text-decoration: none;
     color: var(--accent-color-white);
 }
@@ -64,12 +70,13 @@ footer li a:hover {
 }
 
 footer p {
-    font-size: 12px;
+    font-size: 0.6rem;
     margin: auto;
 }
 
 .footer-logo {
-    height: 15px;
+    height: 20px;
     filter: brightness(0) invert(1);
-    margin-top: 4px;
+    margin-top: 5px;
+    padding: 0px 5px;
 }
