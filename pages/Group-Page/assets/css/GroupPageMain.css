@@ -86,23 +86,21 @@ body {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	/*min-height: 580px; /* Fallback if needed. */
-	/*min-height: calc(100vh - 50px - 8px - 25px);  /* 51px header + 8px padding + 25px footer (https://stackoverflow.com/a/26090114/14290169) */
+	
+	min-height: 568px; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
+	min-height: calc(100vh - 45px - 5px - 50px - 60px); /* 45px header + 5px padding + 60px footer (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: -o-calc(100vh - 45px - 5px - 60px); /* Opera */
+	min-height: -webkit-calc(100vh - 45px - 5px - 60px); /* Google, Safari */
+	min-height: -moz-calc(100vh - 45px - 5px - 60px); /* Firefox */
+	
 	height: max-content;
 	transition: margin-left .5s;
 	padding: 5px; /* Add all round padding to content to slightly center it. */
+	
 	/* overflow: scroll; */
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	/* scroll-behavior: smooth;
 	overflow: auto; */
-
-	/* https://stackoverflow.com/questions/4587582/css-height-of-100-minus-px-header-and-footer */
-	/*height: calc(100% - 60px);
-	/*height: -o-calc(100% - 65px); /* opera */
-	/*height: -webkit-calc(100% - 65px); /* google, safari */
-	/*height: -moz-calc(100% - 65px); /* firefox */
-
-
 }
 
 .page-section {
@@ -198,9 +196,9 @@ th {
 
 /* Footer Styling */
 
-footer {
+/* footer {
 	bottom: 0px;
-}
+} */
 
 /* Resizing the webpage for all devices. */
 

@@ -9,6 +9,7 @@
 .content-text {
 	/* background-color: blue; */
 	height: 350px;
+	height: calc(100vh - 20px - 60px);
 	width: 100%;
 	/* Note padding in all-content-area limiting width */
 	text-align: center;
