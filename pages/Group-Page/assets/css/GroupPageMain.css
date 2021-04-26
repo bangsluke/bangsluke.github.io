@@ -42,8 +42,9 @@ html {
 	block-size: 100%;
 	inline-size: 100%;
 
-	font-family: var(--main-font-family, 'Calibri');
+	font-family: var(--main-font-family, 'Calibri'); /* Specify the main font family to be used across the site. */
 	font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 }
 
 /* Add code below. */
@@ -121,6 +122,7 @@ a {
 
 h1, h2, h3, h4, h5, h6, p, ul, legend {
 	color: var(--accent-color-white);
+	font-family: inherit;
 }
 
 h1 {
