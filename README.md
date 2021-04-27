@@ -358,6 +358,7 @@ Below are my recommended places to start learning and building.
 - [Strava API Application](https://www.strava.com/settings/api)
 - [Strava API Documentation](https://developers.strava.com/docs/reference/)
 - [Call of Duty Activision API](https://lierrmm.github.io/capi-docs/#/)
+- [Get User Current Location On Google Maps JavaScript](https://softauthor.com/show-user-location-on-google-maps-using-javascript/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
@@ -620,6 +621,7 @@ A collection of tools to support web development. Some are very much untried.
 ##### CSS Grid & Flexbox
 - [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
 - [CSS Grid Tutorial - CSS Grid Crash Course](https://www.youtube.com/watch?v=EFafSYg-PkI&ab_channel=DevEd)
+- [Anyone Can Learn CSS Grid](https://www.euismod.dev/#/)
 - [Learn Flexbox In 20 Minutes - Learn HTML & CSS - Flexbox Tutorial](https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd)
 - [Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ - CSS 2021](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
 - [Flexbox Tutorial](https://www.youtube.com/watch?v=m8BSEUUB5so&feature=youtu.be&ab_channel=JoyShaheb)
