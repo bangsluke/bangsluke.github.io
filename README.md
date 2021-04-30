@@ -798,6 +798,8 @@ A collection of tools to support web development. Some are very much untried.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### Python Learning
+- [Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/)
+- [Learn Django 3 and Start Creating Websites With Python](https://www.freecodecamp.org/news/learn-django-3-and-start-creating-websites-with-python/)
 - [Django + Vue Course – Build an e-Commerce Website](https://www.freecodecamp.org/news/create-an-e-commerce-site-with-django-and-vue/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
@@ -826,6 +828,15 @@ A collection of tools to support web development. Some are very much untried.
 ### Swift Learning
 - [iOS & Swift - The Complete iOS App Development Bootcamp](https://www.udemy.com/course/ios-13-app-development-bootcamp/)
 - [Hacking With Swift](https://www.hackingwithswift.com/)
+
+<img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
+
+## [MERN](https://bangsluke.github.io/#mern)
+###### <sup>[To Top](#table-of-contents)</sup>
+> MERN stands for MongoDB, Express, React, and Node.js. The MERN stack is a popular way to make a full stack web app.
+
+### MERN Learning
+- [Create a MERN Stack App with a Serverless Backend](https://www.freecodecamp.org/news/create-a-mern-stack-app-with-a-serverless-backend/)
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.YYSYW_-wx2FcjSFva-kq7gHaCm&pid=Api" width="1000" height="2">
 
