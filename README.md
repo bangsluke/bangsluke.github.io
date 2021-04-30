@@ -315,6 +315,7 @@ Below are my recommended places to start learning and building.
 - [10 Design Tips for Projects](https://www.parthean.com/blog/10-design-tips-to-level-up-your-next-project)
 - [Using Colour Schemes](https://www.reddit.com/r/webdev/comments/m9yhoj/til_you_can_use_colorscheme_to_specify_the_ui/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 - [5 Mistakes Beginner Web Developers Make – And How to Fix Them](https://www.freecodecamp.org/news/common-mistakes-beginning-web-development-students-make/)
+- [Web page design: 3 steps every designer should follow](https://webflow.com/blog/web-page-design?utm_source=iterable&utm_medium=email)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
