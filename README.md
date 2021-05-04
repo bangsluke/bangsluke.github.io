@@ -328,6 +328,7 @@ Below are my recommended places to start learning and building.
 
 ##### Image Gallery
 - [Add an image gallery](https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp)
+- [React Gallery Component](https://yifaneye.github.io/react-gallery-carousel/#Introduction)
 - [swiperjs.com](https://swiperjs.com/)
 - [PhotoSwipe](https://photoswipe.com/)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
