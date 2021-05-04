@@ -59,29 +59,50 @@
 
 			<div class="stats-selection-area">
 
-				<h3>Pick a stat to display:</h3>
+				<!-- Add a drop down select box for the user to change the statistic category. -->
+				<div class="dropdown-div">
+					<h3>Select a statistic category:</h3>
+					<!-- Provide the select element with an ID for use in JavaScript and an onclick event. -->
+					<select name="StatCategory" class="stats-dropdown" id="stats-category-option" onchange="init()">
+						<option value="" selected="selected">Select category</option>
+					</select>
+				</div>
 
 				<br>
 
-				<!-- Add a drop down select box for the user to change stats. -->
+
+				<!-- Add a second drop down select box for the user to select which stat they wish to display. -->
 				<div class="dropdown-div">
+					<h3>Select a statistic:</h3>
 					<!-- Provide the select element with an ID for use in JavaScript and an onclick event. -->
-					<select name="Stats" class="stats-dropdown" id="stats-option-new" onchange="init()">
+					<select name="StatSelected" class="stats-dropdown" id="stat-selection-option" onchange="init()">
 						<option value="" selected="selected">Select stat</option>
 					</select>
 				</div>
 
 				<br>
 
-				<h3>Filter the results:</h3>
+
+
+				<!-- Add a third drop down select box for the user to further filter down the selected stats. -->
+				<div class="dropdown-div">
+					<h3>Filter the results by header:</h3>
+					<!-- Provide the select element with an ID for use in JavaScript and an onclick event. -->
+					<select name="StatsFilter" class="stats-dropdown" id="stats-filter" onchange="init()">
+						<option value="" selected="selected">Select header</option>
+					</select>
+				</div>
 
 				<br>
 
-				<!-- Add a second drop down select box for the user to further filter down the selected stats. -->
+
+
+				<!-- Add a fourth drop down select box for the user to add a value by which to filter by. -->
 				<div class="dropdown-div">
+					<h3>Filter the results value:</h3>
 					<!-- Provide the select element with an ID for use in JavaScript and an onclick event. -->
-					<select name="StatsFilter" class="stats-dropdown" id="stats-filter" onchange="init()">
-						<option value="" selected="selected">Select stat</option>
+					<select name="StatsFilter" class="stats-dropdown" id="stats-filter-value" onchange="init()">
+						<option value="" selected="selected">Select value</option>
 					</select>
 				</div>
 
@@ -89,12 +110,42 @@
 
 		</section>
 
+		<!-- New Stats Display Section -->
+		<section class="page-section">
+
+			<!-- Add a div to house the stats tables. -->
+
+			<div class="subpage-content-area fadein newstats-table-area">
+
+				<h4 id="stats-title">New Stats Selected</h4>
+
+				<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+				<div class="newstats-table">
+					<table>
+						<!-- Data loaded into here by jStatsPage.js -->
+					</table>
+				</div>
+
+			</div>
+
+		</section>
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+
+
+
+
 		<!-- Old Stats Selection Section -->
 		<section class="page-section">
 
 			<!-- Add a div to house the stats selection. -->
 
-			<div class="stats-selection-area">
+			<div class="stats-selection-area-old">
 
 				<h2>Old Code</h2>
 
@@ -103,9 +154,9 @@
 				<br>
 
 				<!-- Add a drop down select box for the user to change stats. -->
-				<div class="dropdown-div">
+				<div class="dropdown-div-old">
 					<!-- Provide the select element with an ID for use in JavaScript and an onclick event. -->
-					<select name="Stats" class="stats-dropdown" id="stats-option" onchange="init()">
+					<select name="Stats" class="stats-dropdown-old" id="stats-option" onchange="oldinit()">
 						<option value="tblStrava">Strava Stats</option>
 						<option value="tblCOD">COD Stats</option>
 						<option value="tblFantasy">Fantasy Wins</option>

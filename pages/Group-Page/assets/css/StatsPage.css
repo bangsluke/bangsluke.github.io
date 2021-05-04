@@ -20,7 +20,56 @@
 
 /* Add custom stats page styling. */
 
+/* Create a drop down selection container. */
 .stats-selection-area {
+	background-color: rgba(255, 255, 255, 0.2);
+	height: max-content;
+	width: 95%;
+	margin: auto;
+	/* margin-top: 2em; */
+	padding: 1em;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* Add horizontal space between each element. */
+	align-items: flex-start; /* Vertically start the flex box at the top of the container. */
+	align-content: flex-start; /* Vertically start the flex box at the top of the container. */
+}
+
+/* Style the drop down menus. */
+.dropdown-div {
+	/* background-color: red; */
+	text-align: center;
+	min-width: 40%;
+	width: 50%;
+	/* width: 100px; */
+	flex: 0 1 auto;
+	align-self: flex-start; /* Vertically align the element within the container. */
+}
+
+
+
+.dropdown-div h3 {
+	font-size: 0.5rem;
+}
+
+select {
+	font-size: 0.6rem;
+}
+
+.stats-dropdown {
+	/* background-color: rgba(255, 255, 255, 0.1); */
+	width: 80%;
+	margin: auto;
+}
+
+
+
+
+
+/* Old Styling */
+
+.stats-selection-area-old {
 	background-color: rgba(255, 255, 255, 0.2);
 	height: max-content;
 	width: 95%;
@@ -30,21 +79,19 @@
 	border-radius: 10px;
 }
 
-/* Style the drop down menu. */
-
-.dropdown-div {
+.dropdown-div-old {
 	text-align: center;
 }
 
-select {
-	font-size: 0.9rem;
-}
-
-.stats-dropdown {
+.stats-dropdown-old {
 	/* background-color: rgba(255, 255, 255, 0.1); */
 	width: 80%;
 	margin: auto;
 }
+
+
+
+
 
 #stats-title {
 	text-align: center;
