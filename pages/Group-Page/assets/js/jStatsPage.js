@@ -295,17 +295,6 @@ function updateStatsTitle(selectionText) {
 
 
 
-
-// Filter the data if the user has selected a filter.
-function filterData(data, filterHeader, filterValue) {
-    //console.log("Filter the results - doing nothing yet.")
-    console.log("Function: filterData(data, filterHeader, filterValue) called.")
-    console.log("filterHeader = " + filterHeader + ", filterValue = " + filterValue);
-    const filteredResults = data.filter(data => data.filterHeader == filterValue);
-    console.log(filteredResults);
-    showSelectedInfo(filteredResults);
-}
-
 // Populate the filter header drop down list with the headers of the selected table data.
 function populateFilterHeaderDropDown(array) { // NOTE: data comes in as an array of objects. Remember this!
     console.log("Function: populateFilterHeaderDropDown() called.")
@@ -319,6 +308,24 @@ function populateFilterHeaderDropDown(array) { // NOTE: data comes in as an arra
     }
     console.log("Function: populateFilterHeaderDropDown() completed.")
 }
+
+
+
+
+// Filter the data if the user has selected a filter.
+function filterData(data, filterHeader, filterValue) {
+    //console.log("Filter the results - doing nothing yet.")
+    console.log("Function: filterData(data, filterHeader, filterValue) called.")
+    console.log("filterHeader = " + filterHeader + ", filterValue = " + filterValue);
+    const filteredResults = data.filter(data => data.filterHeader == filterValue);
+    console.log(filteredResults);
+    showSelectedInfo(filteredResults);
+}
+
+
+
+
+
 
 
 
