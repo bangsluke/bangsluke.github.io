@@ -45,6 +45,15 @@ var statsObject = {
         "Overall Footgolf": ["Variables", "Strings", "Arrays"],
         "Individual Footgolf Results": ["Aug 2018", "UPDATE", "DELETE"]
     },
+    "COD": {
+        "Total": ["Variables", "Strings", "Arrays"],
+        "Multiplayer Kills": ["Aug 2018", "UPDATE", "DELETE"],
+        "Multiplayer Score": ["Aug 2018", "UPDATE", "DELETE"],
+        "Multiplayer Wins": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Kills": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Score": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Wins": ["Aug 2018", "UPDATE", "DELETE"]
+    },
     "Back-end": {
         "PHP": ["Variables", "Strings", "Arrays"],
         "SQL": ["SELECT", "UPDATE", "DELETE"]
