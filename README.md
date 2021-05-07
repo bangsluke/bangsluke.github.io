@@ -140,6 +140,7 @@ The other projects do not yet have set up instructions.
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [JavaScript Links](https://bangsluke.github.io/#javascript-links)
+- [Learn How to Use the Chrome DevTools to Troubleshoot Websites](https://www.freecodecamp.org/news/learn-how-to-use-the-chrome-devtools-to-troubleshoot-websites/)
 - [What is the best way to learn JavaScript in 2021?](https://codedamn.com/news/best-way-to-learn-javascript)
 - [JavaScript Tree Data Structure](https://www.reddit.com/r/learnjavascript/comments/lzith5/tree_data_structure/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
