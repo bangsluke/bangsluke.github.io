@@ -137,7 +137,7 @@ function init() {
         console.log("   Full selection name (" + fullSelectionName + ") saved to local session storage.")
 
         console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
-        
+
         // Call the statSelected function to display the data on the site.
         statSelected();
     }
@@ -200,11 +200,14 @@ function getInitiallyLoadedStatSelection(data) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].FullSelectionName == fullSelectionName) {
             var selectedURL = data[x].URL;
+            var lastUpdatedDate = data[x].LastUpdated;
+            var sourceText = data[x].Source;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
+    updateSourceAndUpdatedDate(lastUpdatedDate, sourceText); // Updates the stats source and last updated text.
 }
 
 
@@ -248,11 +251,14 @@ function getStatSelection(data) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].FullSelectionName == fullSelectionName) {
             var selectedURL = data[x].URL;
+            var lastUpdatedDate = data[x].LastUpdated;
+            var sourceText = data[x].Source;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
+    updateSourceAndUpdatedDate(lastUpdatedDate, sourceText); // Updates the stats source and last updated text.
 
 
     // TODO: BELOW TO BE CODED PROPERLY
@@ -372,6 +378,16 @@ function updateStatsTitle(selectionText) {
     var element = document.getElementById("stats-title"); // Get the stats-title element by id.
     element.innerHTML = selectionText; // Update the text inside the element with the new stats name.
 }
+
+// Updates the stats source and last updated text.
+function updateSourceAndUpdatedDate(lastUpdatedDate, sourceText) {
+    console.log("Function: updateSourceAndUpdatedDate(lastUpdatedDate, sourceText) called.")
+    var element = document.getElementById("stats-last-updated"); // Get the stats-last-updated element by id.
+    element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
+    element = document.getElementById("stats-source"); // Get the stats-source element by id.
+    element.innerHTML = "Source: " + sourceText; // Update the text inside the element with the stats source.
+}
+
 
 
 

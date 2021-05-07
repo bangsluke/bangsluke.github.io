@@ -47,8 +47,6 @@
 	align-self: flex-start; /* Vertically align the element within the container. */
 }
 
-
-
 .dropdown-div h3 {
 	font-size: 0.5rem;
 }
@@ -64,34 +62,7 @@ select {
 }
 
 
-
-
-
-/* Old Styling */
-
-.stats-selection-area-old {
-	background-color: rgba(255, 255, 255, 0.2);
-	height: max-content;
-	width: 95%;
-	margin: auto;
-	/* margin-top: 2em; */
-	padding: 1em;
-	border-radius: 10px;
-}
-
-.dropdown-div-old {
-	text-align: center;
-}
-
-.stats-dropdown-old {
-	/* background-color: rgba(255, 255, 255, 0.1); */
-	width: 80%;
-	margin: auto;
-}
-
-
-
-
+/* Syle the displayed stats information. */
 
 #stats-title {
 	text-align: center;
@@ -139,14 +110,50 @@ tr:hover {
 	font: bold;
 }
 
-/* Sources and Reporting Links formatting */
+/* Last updated and Source formatting. */
 
-.sources-and-reporting-links-container {
+#stats-last-updated {
+	text-align: right;
+}
+
+/* Reporting Link formatting */
+
+.reporting-link-container {
 	color: white;
 	text-align: center;
 	font-size: 10px;
 }
 
-.sources-and-reporting-links:hover {
+.reporting-link:hover {
 	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* Old Styling */
+
+.stats-selection-area-old {
+	background-color: rgba(255, 255, 255, 0.2);
+	height: max-content;
+	width: 95%;
+	margin: auto;
+	/* margin-top: 2em; */
+	padding: 1em;
+	border-radius: 10px;
+}
+
+.dropdown-div-old {
+	text-align: center;
+}
+
+.stats-dropdown-old {
+	/* background-color: rgba(255, 255, 255, 0.1); */
+	width: 80%;
+	margin: auto;
 }
