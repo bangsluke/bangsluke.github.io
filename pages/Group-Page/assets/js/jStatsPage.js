@@ -10,19 +10,22 @@
 // Start the console timer.
 console.time();
 
-// Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
+// Publically define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=114011454&single=true&output=csv';
 
 // Log the file location.
-console.log("The published spreadsheet is located at " + publicSpreadsheetUrlCSV); // Log the file location.
+console.log("   The published spreadsheet is located at " + publicSpreadsheetUrlCSV); // Log the file location.
 
+// Define an initial stats table to be loaded in as default.
+var InitialStatsTableName = "COD - Multiplayer Kills";
 
 // New Stats
 
-// https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp
-
-// Define a statsObjects that defines the drop down values within the first drop down options on the page.
+// Define a statsObjects that defines the drop down values within the first drop down options on the page. https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp.
 var statsObject = {
+    "Skills": {
+        "Driving": ["Links", "Images", "Tables", "Lists"]
+    },
     "Strava Stats": {
         "HTML": ["Links", "Images", "Tables", "Lists"],
         "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
@@ -61,15 +64,163 @@ var statsObject = {
 }
 console.log(statsObject);
 
-
-
-
-// Wait for the window to load and then run the init function below.
+// Wait for the window to load and then run the init function below. DOMContentLoaded details - (https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 window.addEventListener('DOMContentLoaded', init)
 
-// Initially call the data in from Google Sheets using Papa Parse.
+// Initially add a default table and then populate the statistic category dropdown and create the onchange functions for each dropdown.
 function init() {
-    console.log("NEW 0. init() called.")
+
+    // Log the function call to the console.
+    console.log("NEW 0. init() called. Initial stats loaded and statsCategoryDropdown populated with values.")
+
+    Papa.parse(publicSpreadsheetUrlCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showInitiallyLoadedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    })
+
+    // Initially define the selection dropdown elements.
+    var statsCategoryDropdown = document.getElementById("stats-category-option"); // Get the stat category.
+    var statsSelectionDropdown = document.getElementById("stat-selection-option"); // Get the selected stat.
+    var filterHeaderSelectionDropdown = document.getElementById("stats-filter"); // Get the filter header detail.
+    var filterValueSelectionDropdown = document.getElementById("stats-filter-value"); // Get the value to be used in the filter.
+
+    // Loop through the statsObject and populate the top level categories into the statsCategoryDropdown.
+    for (var x in statsObject) {
+        statsCategoryDropdown.options[statsCategoryDropdown.options.length] = new Option(x, x);
+    }
+
+    // 1st Dropdown - React when the user changes the statsCategoryDropdown.
+    statsCategoryDropdown.onchange = function () {
+        // Log the function call to the console.
+        console.log("NEW 1. statsCategoryDropdown.onchange called. statsSelectionDropdown populated with values.")
+        // Empty the stat selection dropdown.
+        statsSelectionDropdown.length = 1;
+        // Display correct values in statsSelectionDropdown.
+        for (var y in statsObject[this.value]) {
+            statsSelectionDropdown.options[statsSelectionDropdown.options.length] = new Option(y, y);
+        }
+    }
+
+    // 2nd Dropdown - React when the user changes the statsSelectionDropdown.
+    statsSelectionDropdown.onchange = function (data) {
+        // Log the function call to the console.
+        console.log("NEW 2. statsSelectionDropdown.onchange called. Selected stats loaded in.")
+
+        // Empty the filter header dropdown.
+        filterHeaderSelectionDropdown.length = 1;
+        // Display correct values in filterHeaderSelectionDropdown.
+        for (var y in statsObject[this.value]) {
+            filterHeaderSelectionDropdown.options[filterHeaderSelectionDropdown.options.length] = new Option(y, y);
+        }
+
+        // Get the selected stat catgeory and statistic and concatenate the names.
+        // Category Selection.
+        var categoryText = statsCategoryDropdown.options[statsCategoryDropdown.selectedIndex].text; // Get the corresponding value from the category selected.
+        //console.log("Category Selection: Value = " + categoryValue + ", Text = " + categoryText); // Display what the category selection box is showing.
+        console.log("   Category Selection = " + categoryText); // Display what the category selection box is showing.
+        if (categoryText == "Select category") { // Check if the category selection box is empty or not (considered empty if the text is still "Select category").
+            return; // Early return from function.
+        }
+        // Stat Selection.
+        var selectionText = statsSelectionDropdown.options[statsSelectionDropdown.selectedIndex].text; // Get the corresponding value from the option selected.
+        //console.log("Stat Selection: Value = " + selectionValue + ", Text = " + selectionText); // Display what the stat selection box is showing.
+        console.log("   Stat Selection = " + selectionText); // Display what the stat selection box is showing.
+        if (selectionText == "Select stat") { // Check if the stat selection box is empty or not (considered empty if the text is still "Select stat").
+            return; // Early return from function.
+        }
+        // Concat the category text and selection text to produce a fullSelectionName, used to look up the correct data set from the Group Data Page.
+        var fullSelectionName = categoryText + " - " + selectionText;
+        console.log("   Full selection name = " + fullSelectionName); // Display what the full selection name is from the combined drop downs.
+        sessionStorage.setItem("fullSelectionName", fullSelectionName); // Save the variable fullSelectionName to session storage.
+        console.log("   Full selection name (" + fullSelectionName + ") saved to local session storage.")
+
+        console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
+        
+        // Call the statSelected function to display the data on the site.
+        statSelected();
+    }
+
+    // 3rd Dropdown - React when the user changes the filterHeaderSelectionDropdown.
+    filterHeaderSelectionDropdown.onchange = function () {
+        // Log the function call to the console.
+        console.log("NEW 3. filterHeaderSelectionDropdown.onchange called. Filter header selected.")
+
+        // Create code to highlight the relevant selected header?
+
+        // Empty the filter header dropdown.
+        filterValueSelectionDropdown.length = 1;
+        // Display correct values in filterValueSelectionDropdown.
+        for (var y in statsObject[this.value]) {
+            filterValueSelectionDropdown.options[filterValueSelectionDropdown.options.length] = new Option(y, y);
+        }
+    }
+
+
+    // 4th Dropdown - React when the user changes the filterValueSelectionDropdown.
+    filterValueSelectionDropdown.onchange = function () {
+        // Log the function call to the console.
+        console.log("NEW 4. filterValueSelectionDropdown.onchange called. Data filtered and displayed.")
+
+        // Create code to filter and display the data?
+    }
+
+}
+
+
+
+
+
+
+// Populate the drop down options with values ready for the user to pick from. 
+// window.onload details - (https://www.javatpoint.com/javascript-onload)
+//window.onload = function () {
+
+// INITIAL LOAD FUNCTIONS
+
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+function showInitiallyLoadedInfo(results) {
+    console.log("Function: showInitiallyLoadedInfo(results) called.")
+    var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
+    getInitiallyLoadedStatSelection(data); // Pass the data as an array of objects (as header is true).
+}
+
+// Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
+function getInitiallyLoadedStatSelection(data) {
+
+    console.log("Function: getInitiallyLoadedStatSelection(data) called.")
+
+    // Define an initial fullSelectionName, used to look up the correct data set from the Group Data Page.
+    var fullSelectionName = InitialStatsTableName;
+    console.log("   Full selection name = " + fullSelectionName); // Display what the full selection name is from the combined drop downs.
+
+    // Loop through the data array from the tblStatsConfig tab and match the selected stat value to find the relevant URL to get data from.
+    for (let x = 0; x < data.length; x++) {
+        //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
+        if (data[x].FullSelectionName == fullSelectionName) {
+            var selectedURL = data[x].URL;
+            console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
+        }
+    }
+    getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
+    updateStatsTitle(fullSelectionName); // Update the stats title text.
+}
+
+
+
+
+
+
+
+
+
+// NORMAL LOAD FUNCTIONS
+
+// Call the data in from Google Sheets using Papa Parse once a user has selected a ctageory and statistic to show.
+function statSelected() {
+    // Log the function call to the console.
+    console.log("Function: statSelected() called.")
     Papa.parse(publicSpreadsheetUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -78,112 +229,35 @@ function init() {
     })
 }
 
-// Populate the drop down options with values ready for the user to pick from.
-window.onload = function () {
-    console.log("NEW 1. function() called.")
-
-    // Initially define the selection elements.
-    var statsCategory = document.getElementById("stats-category-option"); // Get the stat category.
-    var statsSelection = document.getElementById("stat-selection-option"); // Get the selected stat.
-    var filterSelection = document.getElementById("stats-filter"); // Get the filter detail.
-
-    // Loop through the statsObject .
-    for (var x in statsObject) {
-        statsCategory.options[statsCategory.options.length] = new Option(x, x);
-    }
-
-    // React when the user changes the statsCategory.
-    statsCategory.onchange = function () {
-        // Empty the stat selection dropdown.
-        statsSelection.length = 1;
-        // Display correct values in statsSelection.
-        for (var y in statsObject[this.value]) {
-            statsSelection.options[statsSelection.options.length] = new Option(y, y);
-        }
-
-        init();
-    }
-
-    // React when the user changes the statsSelection.
-    statsSelection.onchange = function () {
-        console.log("Stats Selection changed");
-    }
-
-    // React when the user changes the statsSelection.
-    statsSelection.onchange = function () {
-        //// Empty the filter selection dropdown.
-        //filterSelection.length = 1;
-        //// Display correct values in filterSelection.
-        //for (var y in statsObject[this.value]) {
-            //filterSelection.options[filterSelection.options.length] = new Option(y, y);
-        //}
-
-        init();
-    }
-
-    // React when the user changes the filterSelection.
-    filterSelection.onchange = function () {
-        console.log("Filter Selection changed");
-
-        init();
-    }
-}
-
-
-
-
-
-// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showInfo(results) {
-    console.log("NEW 2. showInfo(results) called.")
-    // Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log("Function: showInfo(results) called.")
     var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
-    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    //console.log(data); // Log the data in the console.
     getStatSelection(data); // Pass the data as an array of objects (as header is true).
 }
 
 // Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
 function getStatSelection(data) {
-    console.log("NEW 3. getStatSelection(data) called.")
-    
-    // Category Selection.
-    var dropdownCategorySelector = document.getElementById("stats-category-option"); // Select the "stats-category-option" element by id.
-    //var categoryValue = dropdownCategorySelector.options[dropdownCategorySelector.selectedIndex].value; // Get the category selected.
-    var categoryText = dropdownCategorySelector.options[dropdownCategorySelector.selectedIndex].text; // Get the corresponding value from the category selected.
-    //console.log("Category Selection: Value = " + categoryValue + ", Text = " + categoryText); // Display what the category selection box is showing.
-    console.log("Category Selection = " + categoryText); // Display what the category selection box is showing.
-    // Check if the category selection box is empty or not (considered empty if the text is still "Select category").
-    if (categoryText == "Select category"){
-        return; // Early return from function.
-    }
-    
-    // Stat Selection.
-    var dropdownStatSelector = document.getElementById("stat-selection-option"); // Select the "stat-selection-option" element by id.
-    //var selectionValue = dropdownStatSelector.options[dropdownStatSelector.selectedIndex].value; // Get the option selected.
-    var selectionText = dropdownStatSelector.options[dropdownStatSelector.selectedIndex].text; // Get the corresponding value from the option selected.
-    //console.log("Stat Selection: Value = " + selectionValue + ", Text = " + selectionText); // Display what the stat selection box is showing.
-    console.log("Stat Selection = " + selectionText); // Display what the stat selection box is showing.
-    // Check if the stat selection box is empty or not (considered empty if the text is still "Select stat").
-    if (selectionText == "Select stat"){
-        return; // Early return from function.
-    }
 
+    console.log("Function: getStatSelection(data) called.")
 
-    // Concat the category text and selection text to produce a fullSelectionName, used to look up the correct data set from the Group Data Page.
-    var fullSelectionName = categoryText + " - " + selectionText;
-    console.log("Full selection name = " + fullSelectionName); // Display what the full selection name is from the combined drop downs.
+    var fullSelectionName = sessionStorage.getItem("fullSelectionName"); // Retrieve the variable fullSelectionName passed earlier to session storage.
 
     // Loop through the data array from the tblStatsConfig tab and match the selected stat value to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].FullSelectionName == fullSelectionName) {
             var selectedURL = data[x].URL;
-            console.log("Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
+            console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
+
+
+    // TODO: BELOW TO BE CODED PROPERLY
+
+
 
 
     // Populate the Filter Header dropdown from the received data.
@@ -193,23 +267,20 @@ function getStatSelection(data) {
     var filterHeaderText = dropdownFilterHeaderSelector.options[dropdownFilterHeaderSelector.selectedIndex].text; // Get the corresponding value from the filter header selected.
     console.log("Filter Header Selection = " + filterHeaderText); // Display what the filter header selection box is showing.
     // Check if the filter header selection box is empty or not (considered empty if the text is still "Select header").
-    if (filterHeaderText == "Select header"){
+    if (filterHeaderText == "Select header") {
         return; // Early return from function.
     }
 
 
 
 
-
-
-
-
-    
 }
+
+// REGULAR LOAD FUNCTIONS
 
 // Get the data of the selected stats by using the selected URL. 
 function getPapaData(selectedURL) {
-    console.log("NEW 4. getPapaData(selectedURL) called.")
+    console.log("Function: getPapaData(selectedURL) called.")
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -220,11 +291,11 @@ function getPapaData(selectedURL) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo(results) {
-    console.log("NEW 5. showSelectedInfo(results) called.")
+    console.log("Function: showSelectedInfo(results) called.")
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     console.log(data); // Log the data in the console.
-    
+
     clearTable(); // Call the clearTable function to empty the table.
 
     var filterHeader = "Name";
@@ -348,93 +419,6 @@ function filterData(data, filterHeader, filterValue) {
 // function myFunction() {
 //   document.getElementById("demo").innerHTML = ages.filter(checkAdult);
 // }
-
-
-
-
-
-
-
-
-// Old Stats
-
-// Wait for the window to load and then run the init function below.
-//window.addEventListener('DOMContentLoaded', oldinit)
-
-// Initially call the data in from Google Sheets using Papa Parse.
-function oldinit() {
-    console.log("OLD 1. oldinit() called.")
-    Papa.parse(publicSpreadsheetUrlCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
-}
-
-// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
-function oldshowInfo(results) {
-    console.log("OLD 2. oldshowInfo(results) called.")
-    // Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
-    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    //console.log(data); // Log the data in the console.
-    oldgetStatSelection(data); // Pass the data as an array of objects (as header is true).
-}
-
-// Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
-function oldgetStatSelection(data) {
-    console.log("OLD 3. oldgetStatSelection(data) called.")
-    var dropdownSelector = document.getElementById("stats-option"); // Select the "stats-option" element by id.
-    var selectionValue = dropdownSelector.options[dropdownSelector.selectedIndex].value; // Get the option selected.
-    var selectionText = dropdownSelector.options[dropdownSelector.selectedIndex].text; // Get the corresponding value from the option selected.
-    //alert("Selected Item: '" + selectionText + "', Value: '" + selectionValue + "'"); // Display an alert showing what the user has selected.
-    //console.log("Selected value: " + selectionValue) // Log what the user has selected.
-    //console.log(data.length); // Log the data array length.
-    // Loop through data array and match the selected stat value to find the relevant URL to get data from.
-    for (let x = 0; x < data.length; x++) {
-        //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
-        if (data[x].TableName == selectionValue) {
-            var selectedURL = data[x].URL;
-            //console.log(selectedURL);
-        }
-    }
-    oldgetPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
-    updateStatsTitle(selectionText); // Update the stats title text.
-}
-
-// Get the data of the selected stats by using the selected URL. 
-function oldgetPapaData(selectedURL) {
-    console.log("OLD 4. oldgetPapaData(selectedURL) called.")
-    Papa.parse(selectedURL, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: oldshowSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
-}
-
-// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
-function oldshowSelectedInfo(results) {
-    console.log("OLD 5. oldshowSelectedInfo(results) called.")
-    var data = results.data
-    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    console.log(data); // Log the data in the console.
-    clearTable(); // Call the clearTable function to empty the table.
-
-    filterData(data);
-
-    createFullTable(data); // Call the createFullTable function, passing the data from PapaParse.
-}
-
-
-
-
-
-
-
-
-
 
 
 // End the console timer.
