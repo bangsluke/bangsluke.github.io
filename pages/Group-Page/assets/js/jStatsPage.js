@@ -23,18 +23,32 @@ var InitialStatsTableName = "COD - Multiplayer Kills";
 
 // Define a statsObjects that defines the drop down values within the first drop down options on the page. https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp.
 var statsObject = {
-    "Skills": {
-        "Driving": ["Links", "Images", "Tables", "Lists"]
+    "Brockham Badgers B's": {
+        "Total Stats": ["n/a"],
+        "U11 Table": ["n/a"],
+        "Stats": ["SELECT", "UPDATE", "DELETE"]
     },
+    "COD": {
+        "Total": ["Variables", "Strings", "Arrays"],
+        "Multiplayer Kills": ["Aug 2018", "UPDATE", "DELETE"],
+        "Multiplayer Score": ["Aug 2018", "UPDATE", "DELETE"],
+        "Multiplayer Wins": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Kills": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Score": ["Aug 2018", "UPDATE", "DELETE"],
+        "Warzone Wins": ["Aug 2018", "UPDATE", "DELETE"]
+    },
+    "Cricket": {
+        "Overall Stats": ["n/a"]
+    },
+    
+    "Skills": {
+        "Driving": ["n/a"]
+    },
+
     "Strava Stats": {
         "HTML": ["Links", "Images", "Tables", "Lists"],
         "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
         "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
-    },
-    "Brockham Badgers": {
-        "Tables": ["Variables", "Strings", "Arrays"],
-        "Stats": ["SELECT", "UPDATE", "DELETE"],
-        "Total Stats": ["SELECT", "UPDATE", "DELETE"]
     },
     "Dorkinians": {
         "Overall Stats": ["SELECT", "UPDATE", "DELETE"],
@@ -47,15 +61,6 @@ var statsObject = {
     "Footgolf": {
         "Overall Footgolf": ["Variables", "Strings", "Arrays"],
         "Individual Footgolf Results": ["Aug 2018", "UPDATE", "DELETE"]
-    },
-    "COD": {
-        "Total": ["Variables", "Strings", "Arrays"],
-        "Multiplayer Kills": ["Aug 2018", "UPDATE", "DELETE"],
-        "Multiplayer Score": ["Aug 2018", "UPDATE", "DELETE"],
-        "Multiplayer Wins": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Kills": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Score": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Wins": ["Aug 2018", "UPDATE", "DELETE"]
     },
     "Back-end": {
         "PHP": ["Variables", "Strings", "Arrays"],
