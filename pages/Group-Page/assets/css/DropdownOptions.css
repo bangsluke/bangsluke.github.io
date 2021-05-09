@@ -1,0 +1,118 @@
+/* StatsPage styling */
+
+/* The css styling used for the stats page. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--main-font-family: 'Calibri', sans-serif;
+	/* line-height: 15px; */
+}
+
+/* New dropdown styling. */
+
+form {
+	/* background-color: aqua; */
+	/* position: relative; */
+	width: 80%;
+	height: 1rem;
+	/* margin-top: 8vh; */
+}
+
+.chosen-value, .value-list {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 80%;
+  height: 2rem;
+  margin: auto;
+}
+
+.chosen-value {
+	/* font-family: 'Ek Mukta'; */
+	text-transform: uppercase;
+	font-weight: 200;
+	/* letter-spacing: 4px; */
+	/* height: 4rem; */
+	/* font-size: 1.1rem; */
+	padding: 0.4rem;
+	background-color: #FAFCFD;
+	background-color: #ffffff;
+	border: 3px solid transparent;
+	transition: .3s ease-in-out;
+}
+
+.chosen-value::-webkit-input-placeholder {
+	color: #333;
+}
+	
+.chosen-value:hover {
+	/* background-color: #FF908B; */
+	/* background-color: blue; */
+	background-color: #ffffff;
+	cursor: pointer;
+}
+	
+.chosen-value::-webkit-input-placeholder {
+	color: #333;
+}
+	
+.chosen-value:focus, .open {
+	box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
+	outline: 0;
+	/* background-color: #FF908B; */
+	background-color: #ffffff;
+	color: #000;
+}
+	
+.chosen-value::-webkit-input-placeholder {
+	color: #000;
+}
+  
+.value-list {
+	list-style: none;
+	/* margin-top: 4rem; */
+	margin-top: 2rem;
+	box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);
+	overflow: hidden;
+	max-height: 0;
+	transition: .3s ease-in-out;
+}
+  
+.value-list.open {
+	max-height: 320px;
+	overflow: auto;
+}
+	
+li {
+	position: relative;
+	height: 2rem;
+	background-color: #FAFCFD;
+	padding: 1rem;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color .3s;
+	opacity: 1;
+}
+	
+li:hover {
+	background-color: #FF908B;
+}
+	
+li.closed {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+	opacity: 0;
+}
