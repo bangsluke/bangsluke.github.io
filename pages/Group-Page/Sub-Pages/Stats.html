@@ -68,8 +68,6 @@
 					</select>
 				</div>
 
-				<br>
-
 				<!-- <form>
 					<input class="chosen-value" type="text" value="" placeholder="Type to filter">
 					<ul class="value-list">
@@ -95,8 +93,6 @@
 					</ul>
 				  </form> -->
 
-				<br>
-
 				<!-- Add a second drop down select box for the user to select which stat they wish to display. -->
 				<div class="dropdown-div">
 					<h3>Select a statistic:</h3>
@@ -105,20 +101,16 @@
 					</select>
 				</div>
 
-				<br>
-
 				<!-- Add a third drop down select box for the user to further filter down the selected stats. -->
-				<div class="dropdown-div">
+				<div class="dropdown-div hidden"> <!-- Hidden whilst in development. -->
 					<h3>Filter the results by header:</h3>
 					<select name="StatsFilter" class="stats-dropdown" id="stats-filter">
 						<option value="" selected="selected">Select header</option>
 					</select>
 				</div>
 
-				<br>
-
 				<!-- Add a fourth drop down select box for the user to add a value by which to filter by. -->
-				<div class="dropdown-div">
+				<div class="dropdown-div hidden"> <!-- Hidden whilst in development. -->
 					<h3>Filter the results value:</h3>
 					<select name="StatsFilter" class="stats-dropdown" id="stats-filter-value">
 						<option value="" selected="selected">Select value</option>
@@ -281,7 +273,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 	<!-- Get the first PapaParse JS -->
 	<script src="/pages/Group-Page/assets/js/jStatsPage.js"></script> <!-- Get Stats page JS -->
-	<script src="/pages/Group-Page/assets/js/jDropdownOptions.js"></script> <!-- Get Dropdown Menu JS -->
+	<!-- <script src="/pages/Group-Page/assets/js/jDropdownOptions.js"></script> <!-- Get Dropdown Menu JS -->
 
 </body>
 

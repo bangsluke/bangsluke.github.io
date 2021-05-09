@@ -24,48 +24,70 @@ var InitialStatsTableName = "COD - Multiplayer Kills";
 // Define a statsObjects that defines the drop down values within the first drop down options on the page. https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp.
 var statsObject = {
     "Brockham Badgers B's": {
-        "Total Stats": ["n/a"],
+        "Overall Stats": ["n/a"],
         "U11 Table": ["n/a"],
-        "Stats": ["SELECT", "UPDATE", "DELETE"]
+        "U11 Stats": ["n/a"],
+        "U12 Table": ["n/a"],
+        "U12 Stats": ["n/a"],
+        "U13 Table": ["n/a"],
+        "U13 Stats": ["n/a"],
+        "U14 Table": ["n/a"],
+        "U14 Stats": ["n/a"],
+        "U15 Table": ["n/a"],
+        "U15 Stats": ["n/a"],
+        "U16 Table": ["n/a"],
+        "U16 Stats": ["n/a"]
     },
     "COD": {
-        "Total": ["Variables", "Strings", "Arrays"],
-        "Multiplayer Kills": ["Aug 2018", "UPDATE", "DELETE"],
-        "Multiplayer Score": ["Aug 2018", "UPDATE", "DELETE"],
-        "Multiplayer Wins": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Kills": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Score": ["Aug 2018", "UPDATE", "DELETE"],
-        "Warzone Wins": ["Aug 2018", "UPDATE", "DELETE"]
+        "Overall Stats": ["n/a"],
+        "Multiplayer Kills": ["n/a"],
+        "Multiplayer Score": ["n/a"],
+        "Multiplayer Wins": ["n/a"],
+        "Warzone Kills": ["n/a"],
+        "Warzone Score": ["n/a"],
+        "Warzone Wins": ["n/a"]
     },
     "Cricket": {
         "Overall Stats": ["n/a"]
     },
-    
+    "Dorkinians": {
+        "Overall Stats": ["n/a"],
+        "2020/21": ["n/a"],
+        "2019/20": ["n/a"],
+        "2018/19": ["n/a"],
+        "2017/18": ["n/a"],
+        "2016/17": ["n/a"]
+    },
+    "Football": {
+        "Jelly Legs": ["n/a"],
+        "Premier League Table": ["n/a"],
+        "Championship Table": ["n/a"]
+    },
+    "Footgolf": {
+        "Overall Stats": ["n/a"],
+        "Initial Game": ["n/a"],
+        "August 2018": ["n/a"],
+        "August 2019": ["n/a"],
+        "April 2021": ["n/a"]
+    },
     "Skills": {
         "Driving": ["n/a"]
     },
+
+
 
     "Strava Stats": {
         "HTML": ["Links", "Images", "Tables", "Lists"],
         "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
         "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
-    },
-    "Dorkinians": {
-        "Overall Stats": ["SELECT", "UPDATE", "DELETE"],
-        "2020/21": ["SELECT", "UPDATE", "DELETE"],
-        "2019/20": ["SELECT", "UPDATE", "DELETE"],
-        "2018/19": ["SELECT", "UPDATE", "DELETE"],
-        "2017/18": ["SELECT", "UPDATE", "DELETE"],
-        "2016/17": ["SELECT", "UPDATE", "DELETE"]
-    },
-    "Footgolf": {
-        "Overall Footgolf": ["Variables", "Strings", "Arrays"],
-        "Individual Footgolf Results": ["Aug 2018", "UPDATE", "DELETE"]
-    },
-    "Back-end": {
-        "PHP": ["Variables", "Strings", "Arrays"],
-        "SQL": ["SELECT", "UPDATE", "DELETE"]
     }
+
+    // Keep as example.
+    //"Backend": {
+        //"HTML": ["Links", "Images", "Tables", "Lists"],
+        //"CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+        //"JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+    //}
 }
 console.log(statsObject);
 
@@ -91,6 +113,9 @@ function init() {
     var filterHeaderSelectionDropdown = document.getElementById("stats-filter"); // Get the filter header detail.
     var filterValueSelectionDropdown = document.getElementById("stats-filter-value"); // Get the value to be used in the filter.
 
+    // Initially set the focus onto the first dropdown box.
+    document.getElementById("stats-category-option").focus();
+
     // Loop through the statsObject and populate the top level categories into the statsCategoryDropdown.
     for (var x in statsObject) {
         statsCategoryDropdown.options[statsCategoryDropdown.options.length] = new Option(x, x);
@@ -106,6 +131,8 @@ function init() {
         for (var y in statsObject[this.value]) {
             statsSelectionDropdown.options[statsSelectionDropdown.options.length] = new Option(y, y);
         }
+        // Set the focus onto the next dropdown box.
+        document.getElementById("stat-selection-option").focus();
     }
 
     // 2nd Dropdown - React when the user changes the statsSelectionDropdown.
@@ -119,6 +146,9 @@ function init() {
         for (var y in statsObject[this.value]) {
             filterHeaderSelectionDropdown.options[filterHeaderSelectionDropdown.options.length] = new Option(y, y);
         }
+
+        // Set the focus onto the next dropdown box.
+        document.getElementById("stats-filter").focus();
 
         // Get the selected stat catgeory and statistic and concatenate the names.
         // Category Selection.
@@ -160,6 +190,9 @@ function init() {
         for (var y in statsObject[this.value]) {
             filterValueSelectionDropdown.options[filterValueSelectionDropdown.options.length] = new Option(y, y);
         }
+
+        // Set the focus onto the next dropdown box.
+        document.getElementById("stats-filter-value").focus();
     }
 
 
@@ -172,10 +205,6 @@ function init() {
     }
 
 }
-
-
-
-
 
 
 // Populate the drop down options with values ready for the user to pick from. 
@@ -212,15 +241,8 @@ function getInitiallyLoadedStatSelection(data) {
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
-    updateSourceAndUpdatedDate(lastUpdatedDate, sourceText); // Updates the stats source and last updated text.
+    updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
 }
-
-
-
-
-
-
-
 
 
 // NORMAL LOAD FUNCTIONS
@@ -263,28 +285,22 @@ function getStatSelection(data) {
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
-    updateSourceAndUpdatedDate(lastUpdatedDate, sourceText); // Updates the stats source and last updated text.
+    updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
 
 
     // TODO: BELOW TO BE CODED PROPERLY
 
 
-
-
     // Populate the Filter Header dropdown from the received data.
 
-    // Filter Header Selection.
-    var dropdownFilterHeaderSelector = document.getElementById("stats-filter"); // Select the "stats-filter" element by id.
-    var filterHeaderText = dropdownFilterHeaderSelector.options[dropdownFilterHeaderSelector.selectedIndex].text; // Get the corresponding value from the filter header selected.
-    console.log("Filter Header Selection = " + filterHeaderText); // Display what the filter header selection box is showing.
-    // Check if the filter header selection box is empty or not (considered empty if the text is still "Select header").
-    if (filterHeaderText == "Select header") {
-        return; // Early return from function.
-    }
-
-
-
-
+    //// Filter Header Selection.
+    //var dropdownFilterHeaderSelector = document.getElementById("stats-filter"); // Select the "stats-filter" element by id.
+    //var filterHeaderText = dropdownFilterHeaderSelector.options[dropdownFilterHeaderSelector.selectedIndex].text; // Get the corresponding value from the filter header selected.
+    //console.log("Filter Header Selection = " + filterHeaderText); // Display what the filter header selection box is showing.
+    //// Check if the filter header selection box is empty or not (considered empty if the text is still "Select header").
+    //if (filterHeaderText == "Select header") {
+        //return; // Early return from function.
+    //}
 }
 
 // REGULAR LOAD FUNCTIONS
@@ -384,17 +400,21 @@ function updateStatsTitle(selectionText) {
     element.innerHTML = selectionText; // Update the text inside the element with the new stats name.
 }
 
-// Updates the stats source and last updated text.
-function updateSourceAndUpdatedDate(lastUpdatedDate, sourceText) {
-    console.log("Function: updateSourceAndUpdatedDate(lastUpdatedDate, sourceText) called.")
+// Updates the stats source, last updated text and additional link.
+function updateAdditionalStatsInformation(lastUpdatedDate, sourceText) {
+    console.log("Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called.")
     var element = document.getElementById("stats-last-updated"); // Get the stats-last-updated element by id.
     element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
     element = document.getElementById("stats-source"); // Get the stats-source element by id.
     element.innerHTML = "Source: " + sourceText; // Update the text inside the element with the stats source.
 }
 
+// End the console timer.
+console.timeEnd();
 
 
+
+// TODO - Code to be written at a later stage.
 
 // Populate the filter header drop down list with the headers of the selected table data.
 function populateFilterHeaderDropDown(array) { // NOTE: data comes in as an array of objects. Remember this!
@@ -410,9 +430,6 @@ function populateFilterHeaderDropDown(array) { // NOTE: data comes in as an arra
     console.log("Function: populateFilterHeaderDropDown() completed.")
 }
 
-
-
-
 // Filter the data if the user has selected a filter.
 function filterData(data, filterHeader, filterValue) {
     //console.log("Filter the results - doing nothing yet.")
@@ -422,25 +439,3 @@ function filterData(data, filterHeader, filterValue) {
     console.log(filteredResults);
     showSelectedInfo(filteredResults);
 }
-
-
-
-
-
-
-
-
-
-// var ages = [32, 33, 16, 40];
-
-// function checkAdult(age) {
-//   return age >= 18;
-// }
-
-// function myFunction() {
-//   document.getElementById("demo").innerHTML = ages.filter(checkAdult);
-// }
-
-
-// End the console timer.
-console.timeEnd();

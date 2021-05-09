@@ -1,5 +1,7 @@
 // jDropdownOptions.js JavaScript Functions
 
+// https://codepen.io/marijoha/pen/zKjvEw
+
 const inputField = document.querySelector('.chosen-value');
 const dropdown = document.querySelector('.value-list');
 const dropdownArray = [... document.querySelectorAll('li')];

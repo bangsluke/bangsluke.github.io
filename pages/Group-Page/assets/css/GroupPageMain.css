@@ -126,6 +126,10 @@ a {
 	text-decoration: none;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, legend {
 	color: var(--accent-color-white);
 	font-family: inherit;
@@ -193,6 +197,12 @@ table {
 th {
 	font-style: bold;
 }
+
+/* Add a hidden class for hiding components that are not yet ready. */
+.hidden {
+	display: none;
+}
+
 
 /* Footer Styling */
 
