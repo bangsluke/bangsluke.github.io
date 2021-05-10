@@ -122,7 +122,7 @@ function init() {
     var filterValueSelectionDropdown = document.getElementById("stats-filter-value"); // Get the value to be used in the filter.
 
     // Initially set the focus onto the first dropdown box.
-    document.getElementById("stats-category-option").focus();
+    // document.getElementById("stats-category-option").focus();
 
     // Loop through the statsObject and populate the top level categories into the statsCategoryDropdown.
     for (var x in statsObject) {
