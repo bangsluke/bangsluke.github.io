@@ -36,3 +36,16 @@
 	color: var(--accent-color-white);
 	font: bold;
 }
+
+/* Add an area for the titan summary text. */
+
+.titan-summary-statement-area {
+	margin-top: 0.5rem;
+}
+
+/* Add a class for the Titan Buttons. */
+
+.titanButtons {
+	width: 48%;
+	height: 2rem;
+}

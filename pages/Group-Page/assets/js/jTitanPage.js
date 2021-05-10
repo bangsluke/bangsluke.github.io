@@ -312,5 +312,42 @@ function generateTable(table, data) {
     console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
 }
 
+
+
+
+
+// Write functions for the two buttons on the Titans page.
+
+function toggleDataExplanationSection() {
+    // Toggle between showing and hiding the data explanation section.
+    var toggleButton = document.getElementById("toggleDataExplanationButton") // Get the toggle button by its ID.
+    var element = document.getElementById("data-explanation-section") // Get the id of the section to be shown/hidden.
+    if (toggleButton.innerText == "Show data details") {
+        element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Hide data details"; // Set the button text to change.
+    } else {
+        element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Show data details"; // Set the button text to change.
+    }
+}
+
+function toggleTitanFactorsExplainedSection() {
+    // Toggle between showing and hiding the Titan factors explanation section.
+    var toggleButton = document.getElementById("toggleTitanFactorsExplainedButton") // Get the toggle button by its ID.
+    var element = document.getElementById("titan-factors-explained-section") // Get the id of the section to be shown/hidden.
+    if (toggleButton.innerText == "Show Titan Factors explanation") {
+        element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Hide Titan Factors explanation"; // Set the button text to change.
+    } else {
+        element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Show Titan Factors explanation"; // Set the button text to change.
+    }
+}
+
+
+
+
+
+
 // End the console timer.
 console.timeEnd();
