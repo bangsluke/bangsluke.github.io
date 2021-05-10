@@ -70,8 +70,16 @@ var statsObject = {
         "August 2019": ["n/a"],
         "April 2021": ["n/a"]
     },
-    "Skills": {
-        "Driving": ["n/a"]
+    "Golf": {
+        "Overall": ["n/a"]
+    },
+    "Tennis": {
+        "Overall": ["n/a"]
+    },
+    "Skills and Games": {
+        "Driving": ["n/a"],
+        "Molkky": ["n/a"],
+        "Perudo": ["n/a"]
     },
 
 
