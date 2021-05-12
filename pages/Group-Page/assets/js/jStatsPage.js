@@ -79,7 +79,9 @@ var statsObject = {
     "Skills and Games": {
         "Driving": ["n/a"],
         "Molkky": ["n/a"],
-        "Perudo": ["n/a"]
+        "Perudo": ["n/a"],
+        "Punctuality": ["n/a"],
+        "Spike Ball": ["n/a"]
     },
 
 
