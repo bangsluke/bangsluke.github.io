@@ -87,6 +87,12 @@ sideMenuTemplate.innerHTML = `
                     </div>
                 </div>
 
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Text-Container">
+                        <a href="/pages/Group-Page/index.html">Log Out</a>
+                    </div>
+                </div>
+
                 <!-- <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
                         <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
