@@ -82,7 +82,8 @@ var statsObject = {
         "Perudo": ["n/a"],
         "Punctuality": ["n/a"],
         "Spike Ball": ["n/a"],
-        "Thumb Rating": ["n/a"]
+        "Thumb Rating": ["n/a"],
+        "Two Touch": ["n/a"]
     },
 
 
