@@ -76,12 +76,13 @@ var statsObject = {
     "Tennis": {
         "Overall": ["n/a"]
     },
-    "Skills and Games": {
+    "Skills, Games and Misc": {
         "Driving": ["n/a"],
         "Molkky": ["n/a"],
         "Perudo": ["n/a"],
         "Punctuality": ["n/a"],
-        "Spike Ball": ["n/a"]
+        "Spike Ball": ["n/a"],
+        "Thumb Rating": ["n/a"]
     },
 
 
