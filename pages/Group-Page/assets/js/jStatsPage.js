@@ -47,8 +47,13 @@ var statsObject = {
         "Warzone Score": ["n/a"],
         "Warzone Wins": ["n/a"]
     },
-    "Cricket": {
-        "Overall Stats": ["n/a"]
+    "Sport": {
+        "Cricket": ["n/a"],
+        "Darts": ["n/a"],
+        "Golf": ["n/a"],
+        "Skiing": ["n/a"],
+        "Table Tennis": ["n/a"],
+        "Tennis": ["n/a"]
     },
     "Dorkinians": {
         "Overall Stats": ["n/a"],
@@ -60,6 +65,7 @@ var statsObject = {
     },
     "Football": {
         "Jelly Legs": ["n/a"],
+        "Two Touch": ["n/a"],
         "Premier League Table": ["n/a"],
         "Championship Table": ["n/a"]
     },
@@ -70,20 +76,17 @@ var statsObject = {
         "August 2019": ["n/a"],
         "April 2021": ["n/a"]
     },
-    "Golf": {
-        "Overall": ["n/a"]
-    },
-    "Tennis": {
-        "Overall": ["n/a"]
-    },
     "Skills, Games and Misc": {
         "Driving": ["n/a"],
+        "Fifa": ["n/a"],
+        "Mario Kart": ["n/a"],
+        "Mashed": ["n/a"],
         "Molkky": ["n/a"],
         "Perudo": ["n/a"],
+        "Poker": ["n/a"],
         "Punctuality": ["n/a"],
         "Spike Ball": ["n/a"],
-        "Thumb Rating": ["n/a"],
-        "Two Touch": ["n/a"]
+        "Thumb Rating": ["n/a"]
     },
 
 
