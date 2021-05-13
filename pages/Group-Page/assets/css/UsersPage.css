@@ -2,23 +2,6 @@
 
 /* The css styling used for the users page. */
 
-/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
-
-:root {
-	/* CSS variables - Add variables below like the given example. */
-	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-	--main-style-color: #FF3CAC;
-	--main-background-color: #FF3CAC;
-	--accent-color-1: #FF3CAC;
-	--accent-color-2: #784BA0;
-	--accent-color-3: #2B86C5;
-	--accent-color-white: #ffffff;
-	--accent-color-black: #222222;
-	--main-font-family: 'Calibri', sans-serif;
-	/* line-height: 15px; */
-	--user-image-height: 100px;
-}
-
 /* Add custom users page styling. */
 
 .glass-card {

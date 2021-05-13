@@ -25,7 +25,10 @@
 	--accent-color-black: #222222;
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
-	
+	--gallery-image-height: 130px; /* For the Gallery page */
+	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
+	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
+	--user-image-height: 100px; /* For the Users page */
 	/* line-height: 15px; */
 }
 
