@@ -84,33 +84,6 @@ select {
 	overflow: auto;
 }
 
-/* Table classes */
-
-table {
-	width: 100%;
-	text-align: center;
-	font-size: 0.7rem;
-	background-color: var(--accent-color-3, blue);
-	color: white;
-}
-
-th {
-	font-style: bold;
-	background-color: var(--accent-color-3, blue);
-	border-bottom: 4px solid var(--accent-color-2, red);
-}
-
-td {
-	font-size: 0.7rem;
-	text-align: center;
-}
-
-tr:hover {
-	background-color: var(--accent-color-1, pink);
-	color: var(--accent-color-white);
-	font: bold;
-}
-
 /* Last updated and Source formatting. */
 
 #stats-last-updated {
@@ -127,34 +100,4 @@ tr:hover {
 
 .reporting-link:hover {
 	text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-/* Old Styling */
-
-.stats-selection-area-old {
-	background-color: rgba(255, 255, 255, 0.2);
-	height: max-content;
-	width: 95%;
-	margin: auto;
-	/* margin-top: 2em; */
-	padding: 1em;
-	border-radius: 10px;
-}
-
-.dropdown-div-old {
-	text-align: center;
-}
-
-.stats-dropdown-old {
-	/* background-color: rgba(255, 255, 255, 0.1); */
-	width: 80%;
-	margin: auto;
 }

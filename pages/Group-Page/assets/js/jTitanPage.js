@@ -191,9 +191,9 @@ function showSelectedInfo2(results) {
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
     
-    // Call the clearTable and createFullTable functions, passing the class "titanFactorCalculatedTable" selector on which element to act on.
-    clearTable(".titanFactorCalculatedTable"); // Call the clearTable function to empty the table.
-    createFullTable(data, ".titanFactorCalculatedTable"); // Call the createFullTable function, passing the data from PapaParse.
+    // Call the clearTable and createFullTable functions, passing the id "titanFactorCalculatedTable" selector on which element to act on.
+    clearTable("#titanFactorCalculatedTable"); // Call the clearTable function to empty the table.
+    createFullTable(data, "#titanFactorCalculatedTable"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
 
@@ -245,9 +245,9 @@ function showSelectedInfo3(results) {
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
     
-    // Call the clearTable and createFullTable functions, passing the class "titanFactorExplainedTable" selector on which element to act on.
-    clearTable(".titanFactorExplainedTable"); // Call the clearTable function to empty the table.
-    createFullTable(data, ".titanFactorExplainedTable"); // Call the createFullTable function, passing the data from PapaParse.
+    // Call the clearTable and createFullTable functions, passing the id "titanFactorExplainedTable" selector on which element to act on.
+    clearTable("#titanFactorExplainedTable"); // Call the clearTable function to empty the table.
+    createFullTable(data, "#titanFactorExplainedTable"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
 

@@ -189,16 +189,42 @@ fieldset {
 /* Table classes */
 
 table {
-	width: 98%;
+	width: 100%;
 	text-align: center;
 	font-size: 0.8rem;
+	color: var(--accent-color-white);
+	border: none;
+	border-collapse: collapse;
 }
 
 th {
 	font-style: bold;
+	border-bottom: 4px solid var(--accent-color-1, red);
 }
 
+td {
+	font-size: 0.7rem;
+	text-align: center;
+}
+
+tr:hover {
+	background-color: var(--accent-color-1, pink);
+	color: var(--accent-color-white);
+	font: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Add a hidden class for hiding components that are not yet ready. */
+
 .hidden {
 	display: none;
 }

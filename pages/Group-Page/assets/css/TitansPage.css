@@ -20,23 +20,6 @@
 
 /* Add custom titans page styling. */
 
-.titanTable {
-	/* background-color: white; */
-	color: var(--accent-color-white);
-	border: none;
-	border-collapse: collapse;
-}
-
-.thTitanHeader {
-	border-bottom: 4px solid var(--accent-color-1);
-}
-
-.titanTable tr:hover {
-	background-color: var(--accent-color-1);
-	color: var(--accent-color-white);
-	font: bold;
-}
-
 /* Add an area for the titan summary text. */
 
 .titan-summary-statement-area {
