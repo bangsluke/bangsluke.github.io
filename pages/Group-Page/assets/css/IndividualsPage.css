@@ -12,9 +12,11 @@
 /* Profile Tab */
 
 #profilePicture {
-	height: 100px;
-	width: auto;
-	border-radius: 5px;
+	height: 5rem;
+	width: 5rem;
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 1rem auto; /* Add a margin above and below the image and align it centrally. */
 }
 
 /* Add table styling. */
@@ -81,7 +83,7 @@ tr:hover {
 /* Football Tab */
 
 #footballHeader {
-	width: 100%;
+	width: var(--pagewidth, 98%);
 	height: auto;
 	margin: auto;
 	border-radius: 5px;

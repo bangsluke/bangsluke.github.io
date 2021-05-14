@@ -29,6 +29,7 @@
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
 	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
 	--user-image-height: 100px; /* For the Users page */
+	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	/* line-height: 15px; */
 }
 
@@ -112,9 +113,9 @@ body {
 	backdrop-filter: blur( 12.0px );
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
-	width: 98%;
+	width: var(--pagewidth, 98%);
 	margin: 0.5em auto;
-	padding: 0.3em;
+	padding: 0.5em;
 	border-radius: 5px;
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 	/* overflow: auto; */
