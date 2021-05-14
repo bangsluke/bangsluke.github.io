@@ -67,8 +67,11 @@
 
 .alias-container {
 	/* background-color: red; */
+	background-color: rgba( 255, 255, 255, 0.18 );
+	border-radius: 10px;
 	height: calc(var(--user-image-height) - var(--user-name-height));
 	overflow-y: scroll; /* Alows vertical scroll */
+	overflow-x: none;
 	text-overflow: clip; /* Stops the text overrunning the size of the box */
 	padding: 0 0.5rem;
 }
@@ -76,5 +79,14 @@
 ul {
 	list-style-type: circle;
 	list-style: circle;
+	list-style-position: inside;
 	color: var(--accent-color-white, white);
+}
+
+ul > li {
+	font-size: 0.6rem;
+}
+
+li:hover {
+	background-color: var(--accent-color-1, pink);
 }
