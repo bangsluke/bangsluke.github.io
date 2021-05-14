@@ -106,6 +106,8 @@ body {
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	/* scroll-behavior: smooth;
 	overflow: auto; */
+	overflow-x: hidden;
+	/* overflow-y: hidden; */
 }
 
 .page-section {
@@ -224,7 +226,7 @@ th {
 }
 
 td {
-	font-size: 0.7rem;
+	font-size: 0.6rem;
 	text-align: center;
 }
 
@@ -234,7 +236,48 @@ tr:hover {
 	font: bold;
 }
 
+/* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
 
+.table-wrapper {
+	position: relative;
+	overflow: auto;
+	/* overflow-x: scroll; */
+	border: 1px solid white;
+	white-space: nowrap;
+}
+
+.sticky-col {
+	position: -webkit-sticky;
+	position: sticky;
+	background-color: red;
+	background-color: rgba( 255, 255, 255, 0.10);
+}
+
+.first-col {
+	width: 100px;
+	min-width: 100px;
+	max-width: 100px;
+	left: 0px;
+}
+
+/* .sticky-row {
+	position: -webkit-sticky;
+	position: sticky;
+	background-color: red; */
+	/* background-color: rgba( 255, 255, 255, 0.10); */
+/* } */
+
+/* .first-row {
+	height: 20px;
+	min-height: 20px;
+	max-height: 20px;
+	top: 0px;
+} */
+
+thead th {
+	position: sticky;
+	top: 0px;
+}
 
 
 
