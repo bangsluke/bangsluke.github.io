@@ -25,6 +25,7 @@
 	--accent-color-black: #222222;
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
+	--table-padding: 0.2rem;
 	--gallery-image-height: 130px; /* For the Gallery page */
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
 	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
@@ -214,20 +215,29 @@ fieldset {
 table {
 	width: 100%;
 	text-align: center;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	color: var(--accent-color-white);
 	border: none;
 	border-collapse: collapse;
+	/* border-collapse: separate; */
 }
 
 th {
-	font-style: bold;
-	border-bottom: 4px solid var(--accent-color-1, red);
+	font-style: bold; /* Make the header text bold */
+	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
+	position: sticky; /* Make the header row sticky position to lock it out. */
+	top: 0px; /* Make the header row sticky position to lock it out. */
+	background-color: rgba( 255, 255, 255, 0.10);
+	background-color: var(--accent-color-3,red);
+	/*border-bottom: 4px solid var(--accent-color-1, red); /* Add a nice border below the header row */
+	box-shadow: inset 0 0px 0 red, inset 0 -4px 0 var(--accent-color-1, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 }
 
 td {
 	font-size: 0.6rem;
 	text-align: center;
+	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 }
 
 tr:hover {
@@ -242,8 +252,9 @@ tr:hover {
 	position: relative;
 	overflow: auto;
 	/* overflow-x: scroll; */
-	border: 1px solid white;
+	/* border: 1px solid white; */
 	white-space: nowrap;
+	max-height: 20rem; /* Limit the height of table to allow the header row to be locked. */
 }
 
 .sticky-col {
@@ -251,39 +262,21 @@ tr:hover {
 	position: sticky;
 	background-color: red;
 	background-color: rgba( 255, 255, 255, 0.10);
+	background-color: var(--accent-color-3,red);
+	z-index: 1;
 }
 
-.first-col {
-	width: 100px;
+.first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
+	/* width: 100px;
 	min-width: 100px;
-	max-width: 100px;
+	max-width: 100px; */
+	width: max-content;
 	left: 0px;
 }
 
-/* .sticky-row {
-	position: -webkit-sticky;
-	position: sticky;
-	background-color: red; */
-	/* background-color: rgba( 255, 255, 255, 0.10); */
-/* } */
-
-/* .first-row {
-	height: 20px;
-	min-height: 20px;
-	max-height: 20px;
-	top: 0px;
-} */
-
-thead th {
-	position: sticky;
-	top: 0px;
+.first-cell { /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
+	z-index: 2;
 }
-
-
-
-
-
-
 
 
 

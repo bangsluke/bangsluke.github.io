@@ -18,7 +18,7 @@ console.log("   The published spreadsheet is located at " + publicSpreadsheetUrl
 
 // Define an initial stats table to be loaded in as default.
 var InitialStatsTableName = "COD - Multiplayer Kills";
-var InitialStatsTableName = "Brockham Badgers B's - Overall Stats";
+// var InitialStatsTableName = "Brockham Badgers B's - Overall Stats";
 
 // New Stats
 
@@ -391,11 +391,10 @@ function generateTableHead(table, data) {
         if (counter == 0){ // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
+            th.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
         } else {
             // Do nothing as not first column.
         }
-        th.classList.add("sticky-row"); // Add the sticky-row class to the first row (the header row).
-        th.classList.add("first-row"); // Add the sticky-row class to the first row (the header row).
         row.appendChild(th); // Append the new table header to the table.
         counter = counter + 1; // Increment the counter.
     }
