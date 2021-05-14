@@ -289,24 +289,41 @@ function generateTableHead(table, data) {
     console.log("Re-usable Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
+    var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
     for (let key of data) { // Loop through each column header of the data.
         let th = document.createElement("th"); // Create the th element.
         let text = document.createTextNode(key); // Add the column header text.
-        th.appendChild(text); // Append the new data to the table.
-        th.classList.add("thTitanHeader"); // Add the header class to the newly created header element. https://www.javatpoint.com/how-to-add-a-class-to-an-element-using-javascript.
-        row.appendChild(th); // Append the new data to the table.
+        th.appendChild(text); // Append the text to the table header.
+        if (counter == 0){ // If the counter = 0, it's the first column.
+            th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
+            th.classList.add("first-col"); // Add the first-col class to the first column.
+            th.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
+        } else {
+            // Do nothing as not first column.
+        }
+        row.appendChild(th); // Append the new table header to the table.
+        counter = counter + 1; // Increment the counter.
     }
     console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
 function generateTable(table, data) {
     console.log("Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
+    let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
     for (let element of data) { // Loop through each row of the data.
-        let row = table.insertRow(); // Insert a row for each bit of table data.
+        let row = tbody.insertRow(); // Insert a row for each bit of table data.
+        var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
         for (key in element) { // Loop through each cell in each row.
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
+            if (counter == 0){ // If the counter = 0, it's the first column.
+                cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
+                cell.classList.add("first-col"); // Add the first-col class to the first column.
+            } else {
+                // Do nothing as not first column.
+            }
+            counter = counter + 1; // Increment the counter.
         }
     }
     console.log("Function: generateTable finished.") // Log a final message to show the function is complete.

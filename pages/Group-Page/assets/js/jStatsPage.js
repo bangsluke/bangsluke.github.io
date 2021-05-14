@@ -384,7 +384,6 @@ function generateTableHead(table, data) {
     let row = thead.insertRow(); // Insert a row for the table headers.
     var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
     for (let key of data) { // Loop through each column header of the data.
-        console.log("       Debug: key = " + key)
         let th = document.createElement("th"); // Create the th element.
         let text = document.createTextNode(key); // Add the column header text.
         th.appendChild(text); // Append the text to the table header.
