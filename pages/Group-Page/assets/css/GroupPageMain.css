@@ -28,7 +28,8 @@
 	--gallery-image-height: 130px; /* For the Gallery page */
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
 	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
-	--user-image-height: 100px; /* For the Users page */
+	--user-image-height: 5rem; /* For the Users page */
+	--user-name-height: 1.2rem; /* For the Users page */
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	/* line-height: 15px; */
 }
@@ -167,6 +168,22 @@ h6 {
 	font-size: 0.5rem;
 }
 
+.textcenter {
+	text-align: center;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: oblique;
+}
+
 /* Other classes and styles. */
 
 .center {
@@ -213,7 +230,7 @@ td {
 
 tr:hover {
 	background-color: var(--accent-color-1, pink);
-	color: var(--accent-color-white);
+	color: var(--accent-color-white, white);
 	font: bold;
 }
 

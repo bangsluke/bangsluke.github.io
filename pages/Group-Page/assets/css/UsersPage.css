@@ -5,10 +5,11 @@
 /* Add custom users page styling. */
 
 .glass-card {
-	width: 90%;
+	/* width: 90%; */
+	width: var(--pagewidth, 90%);
 	height: max-content;
-	padding: 0.3em;
-	margin-bottom: 0.7em;
+	padding: 0.7em 0 0.2em 0; /* Space the content inside the glass card. */
+	margin: 0.7em 0 0.7em 0; /* Add vertical spacing between the glass cards */
 	background: rgba( 255, 255, 255, 0.20 );
 	/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
 	backdrop-filter: blur( 12.0px );
@@ -21,6 +22,7 @@
 	/* background-color: aqua; */
 	width: 100%;
 	height: var(--user-image-height);
+	/* height: 7rem; */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -55,24 +57,24 @@
 .user-text-container {
 	/* background-color: burlywood; */
 	height: var(--user-image-height);
-	width: 100px;
+	width: 60%;
 }
 
-.user-text {
-	/* background-color: bisque; */
-	margin: auto;
-	display: block;
+.user-name {
+	/* background-color: green; */
+	height: var(--user-name-height);
 }
 
 .alias-container {
-	width: inherit;
-	overflow-y: scroll;
+	/* background-color: red; */
+	height: calc(var(--user-image-height) - var(--user-name-height));
+	overflow-y: scroll; /* Alows vertical scroll */
+	text-overflow: clip; /* Stops the text overrunning the size of the box */
+	padding: 0 0.5rem;
 }
 
-.center {
-	text-align: center;
-}
-
-.left {
-	text-align: left;
+ul {
+	list-style-type: circle;
+	list-style: circle;
+	color: var(--accent-color-white, white);
 }
