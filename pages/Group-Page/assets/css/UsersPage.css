@@ -8,7 +8,7 @@
 	/* width: 90%; */
 	width: var(--pagewidth, 90%);
 	height: max-content;
-	padding: 0.7em 0 0.2em 0; /* Space the content inside the glass card. */
+	padding: 0.5em 0 0.1em 0; /* Space the content inside the glass card. */
 	margin: 0.7em 0 0.7em 0; /* Add vertical spacing between the glass cards */
 	background: rgba( 255, 255, 255, 0.20 );
 	/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
@@ -63,13 +63,14 @@
 .user-name {
 	/* background-color: green; */
 	height: var(--user-name-height);
+	margin-bottom: 0.3rem;
 }
 
 .alias-container {
 	/* background-color: red; */
 	background-color: rgba( 255, 255, 255, 0.18 );
 	border-radius: 10px;
-	height: calc(var(--user-image-height) - var(--user-name-height));
+	height: calc(var(--user-image-height) - var(--user-name-height) - 0.3rem);
 	overflow-y: scroll; /* Alows vertical scroll */
 	overflow-x: none;
 	text-overflow: clip; /* Stops the text overrunning the size of the box */
@@ -85,6 +86,7 @@ ul {
 
 ul > li {
 	font-size: 0.6rem;
+	line-height: 0.9rem;
 }
 
 li:hover {
