@@ -191,6 +191,8 @@ function init() {
 
         // Call the statSelected function to display the data on the site.
         statSelected();
+
+        zoomOutMobile();
     }
 
     // 3rd Dropdown - React when the user changes the filterHeaderSelectionDropdown.
