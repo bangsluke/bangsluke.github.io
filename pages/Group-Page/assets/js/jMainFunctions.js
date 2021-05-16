@@ -53,4 +53,6 @@ function zoomOutMobile() {
         viewport.content = 'initial-scale=1';
         viewport.content = 'width=device-width';
     }
+
+    alert("Zoomed back out");
 }
