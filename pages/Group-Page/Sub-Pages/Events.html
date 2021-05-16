@@ -53,7 +53,7 @@
 	<div class="main-content-area fadein">
 
 		<!-- Calendar Section -->
-		<section class="page-section">
+		<section class="page-section" id="main-events-section">
 
 			<h2 class="center">Calendar</h2>
 
@@ -121,6 +121,17 @@
 
 		</section>
 
+		<!-- Add a div to house the Peter Griffin Easter Egg. -->
+
+		<div class="subpage-content-area fadein">
+
+			<button class="reporting-link center" onclick="peterButtonClick()" id="peterAlertButton">Click me</button>
+
+			<img src="/pages/Group-Page/assets/images/PeterAlert.jpg" class="center fadein hidden" alt="Peter Alert" id="peterAlertImage">
+
+		</div>
+
+
 	</div>
 
 	<!-- Footer -->
@@ -140,6 +151,7 @@
 	<!-- Add the common sideMenu JS -->
 	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
 	<!-- Add the common footer JS -->
+	<script src="/pages/Group-Page/assets/js/jEvents.js"></script> <!-- Get Events Page JS -->
 
 </body>
 
