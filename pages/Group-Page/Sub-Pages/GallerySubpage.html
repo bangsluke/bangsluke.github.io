@@ -63,6 +63,84 @@
 
 		<br>
 
+
+		<!-- Container for the image gallery - https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+		<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="column">
+				<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+				<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</div>
+		</div>
+
+		<!-- The Modal/Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 4</div>
+					<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG" style="width:100%">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg" onclick="currentSlide(1)" alt="Pagham">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg" onclick="currentSlide(2)" alt="Glasto">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg" onclick="currentSlide(3)" alt="Portugal">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG" onclick="currentSlide(4)" alt="Skiing">
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<br>
+		<br>
+		<br>
+
 		<!-- Add div that holds all sub page images which allows the user to scroll down it. -->
 		<div class="gallery-subpage-image-area">
 
@@ -197,6 +275,8 @@
 
 	<!-- UI JS file -->
 	<script src="/pages/Group-Page/assets/components/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+
+	<script src="/pages/Group-Page/assets/js/jGalleryComponent.js"></script> <!-- Get Gallery Component JS -->
 
 </body>
 
