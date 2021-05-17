@@ -49,6 +49,7 @@ var statsObject = {
         "Warzone Wins": ["n/a"]
     },
     "Sport": {
+        "Boxing": ["n/a"],
         "Cricket": ["n/a"],
         "Darts": ["n/a"],
         "Golf": ["n/a"],
