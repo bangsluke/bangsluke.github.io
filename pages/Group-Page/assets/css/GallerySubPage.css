@@ -4,6 +4,14 @@
 
 /* Add custom gallery sub page styling. */
 
+.gallery-subpage-image-area {
+    height: max-content;
+    overflow-y: scroll;
+}
+
+
+
+
 
 
 /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
@@ -139,59 +147,3 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.gallery-subpage-image-area {
-    height: max-content;
-    overflow-y: scroll;
-}
-
-
-/* https://photoswipe.com/ */
-/* https://codepen.io/dimsemenov/pen/ZYbPJM */
-
-.my-gallery {
-    width: 100%;
-    /* height: max-content; */
-    float: left;
-}
-
-.my-gallery img {
-    width: 100%;
-    height: auto;
-}
-
-.my-gallery figure {
-    display: block;
-    float: left;
-    margin: 0 5px 5px 0;
-    width: 150px;
-}
-
-.my-gallery figcaption {
-    display: none;
-}
-
-
-
-  
