@@ -51,9 +51,11 @@ img {
 /* The Modal (background) */
 .modal {
     display: none;
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     z-index: 1;
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    padding-top: 3rem;
     left: 0;
     top: 0;
     width: 100%;
