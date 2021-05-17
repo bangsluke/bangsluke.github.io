@@ -9,9 +9,9 @@
     /* background-color: var(--accent-color-2); */
     left: 0px;
     top: 0px;
-    --headerHeight: 45px; /* Define the header variable. */
+    /*--headerHeight: 45px; /* Define the header variable. */
     height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight); /* Define the header height using the variable. */
+    height: var(--headerHeight, 45px); /* Define the header height using the variable. */
     width: 100%;
     border-bottom: solid 2px var(--accent-color-white);
     display: flex;
@@ -27,7 +27,7 @@
 .header-area.homepage {
     /* background-color: lightcoral; */
     height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight); /* Define the header height using the variable. */
+    height: var(--headerHeight, 45px); /* Define the header height using the variable. */
     /* height: 0px; */
     padding: 15px;
     border-bottom: none;

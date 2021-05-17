@@ -25,6 +25,7 @@
 	--accent-color-black: #222222;
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
+	--headerHeight: 45px; /* Define the header variable. */
 	--table-padding: 0.2rem;
 	--gallery-image-height: 130px; /* For the Gallery page */
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
