@@ -61,78 +61,70 @@
 
 		</div>
 
-		<br>
+		<!-- Gallery Subpage Section -->
+		<section class="page-section">
 
-		<!-- Add div that holds all sub page images which allows the user to scroll down it. -->
-		<div class="gallery-subpage-image-area">
+			<!-- Archive: Add PhotoSwipe gallery component. https://photoswipe.com/. https://codepen.io/dimsemenov/pen/ZYbPJM. -->
 
-			<!-- Gallery Subpage Section -->
-			<section class="page-section">
+			<h2>Gallery:</h2>
 
-				<!-- Add PhotoSwipe gallery component. -->
-				<!-- https://photoswipe.com/ -->
-				<!-- https://codepen.io/dimsemenov/pen/ZYbPJM -->
+			<!-- Add a lightbox component - https://www.w3schools.com/howto/howto_js_lightbox.asp -->
 
-				<h2>Gallery:</h2>
+			<div class="images-container">
 
-
-
-				<!-- Container for the image gallery - https://www.w3schools.com/howto/howto_js_lightbox.asp -->
 				<!-- Images used to open the lightbox -->
-				<div class="row">
-					<div class="column">
-						<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg"
-							onclick="openModal();currentSlide(1)" class="hover-shadow">
+				<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg"
+					onclick="openModal();currentSlide(1)" class="hover-shadow">
+				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg"
+					onclick="openModal();currentSlide(2)" class="hover-shadow">
+				<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg"
+					onclick="openModal();currentSlide(3)" class="hover-shadow">
+				<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG"
+					onclick="openModal();currentSlide(4)" class="hover-shadow">
+
+			</div>
+
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+
+				<!-- Add the close X button. -->
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+
+				<!-- Add the content of the modal. -->
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg" class="modal-image">
 					</div>
-					<div class="column">
-						<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg"
-							onclick="openModal();currentSlide(2)" class="hover-shadow">
+
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg" class="modal-image">
 					</div>
-					<div class="column">
-						<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg"
-							onclick="openModal();currentSlide(3)" class="hover-shadow">
+
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg" class="modal-image">
 					</div>
-					<div class="column">
-						<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG"
-							onclick="openModal();currentSlide(4)" class="hover-shadow">
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG" class="modal-image">
 					</div>
-				</div>
 
-				<!-- The Modal/Lightbox -->
-				<div id="myModal" class="modal">
-					<span class="close cursor" onclick="closeModal()">&times;</span>
-					<div class="modal-content">
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-						<div class="mySlides">
-							<div class="numbertext">1 / 4</div>
-							<img src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg" style="width:100%">
-						</div>
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
 
-						<div class="mySlides">
-							<div class="numbertext">2 / 4</div>
-							<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury Cover.jpg" style="width:100%">
-						</div>
-
-						<div class="mySlides">
-							<div class="numbertext">3 / 4</div>
-							<img src="/pages/Group-Page/assets/images/Gallery/Portugal Cover.jpg" style="width:100%">
-						</div>
-
-						<div class="mySlides">
-							<div class="numbertext">4 / 4</div>
-							<img src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG" style="width:100%">
-						</div>
-
-						<!-- Next/previous controls -->
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-						<!-- Caption text -->
-						<div class="caption-container">
-							<p id="caption"></p>
-						</div>
-
-						<!-- Thumbnail image controls -->
+					<!-- Thumbnail image controls -->
+					<div class="thumbnail-container">
+						
 						<div class="column">
 							<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Pagham Cover.jpg"
 								onclick="currentSlide(1)" alt="Pagham">
@@ -152,13 +144,14 @@
 							<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Skiing Cover.JPG"
 								onclick="currentSlide(4)" alt="Skiing">
 						</div>
+
 					</div>
+
 				</div>
 
+			</div>
 
-			</section>
-
-		</div>
+		</section>
 
 	</div>
 
