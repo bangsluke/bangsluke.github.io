@@ -8,7 +8,7 @@
 
 .content-text {
 	/* background-color: green; */
-	min-height: 488px;
+	min-height: 450px;
 	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
 	width: 100%; /* Note padding in all-content-area limiting width */
 	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
@@ -23,7 +23,7 @@
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
 	top: 35%; /* Set the top position of the box from the top of the screen. */
-	width: 15rem; /* Set the width of the header box. */
+	width: 16rem; /* Set the width of the header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 	padding: 0.6rem 0.2rem; /* Add padding between the text and the surrounding box. */
