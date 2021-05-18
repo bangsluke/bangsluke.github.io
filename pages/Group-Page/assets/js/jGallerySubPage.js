@@ -1,5 +1,24 @@
 // jGallerySubPage.js JavaScript Functions
 
+// Gallery SubPage scripts
+
+// Wait for the window to load and then run the init function below.
+window.addEventListener('DOMContentLoaded', init)
+
+// Create an init function that calls the other key functions on page load.
+function init() {
+    setGalleryHeaderName();
+}
+
+// Change the header name to reflect which Gallery is being shown.
+function setGalleryHeaderName() {
+    var clickedAlbumName = sessionStorage.getItem("clickedAlbumName", clickedAlbumName); // Get the saved variable from session storage.
+    console.log(clickedAlbumName);
+    document.getElementById("pageMainHeader").innerHTML = clickedAlbumName + " Gallery"; // Modify the text inside the element.
+}
+
+
+
 // https://www.w3schools.com/howto/howto_js_lightbox.asp
 
 // Open the Modal
