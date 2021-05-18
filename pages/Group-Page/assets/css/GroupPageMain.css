@@ -25,7 +25,8 @@
 	--accent-color-black: #222222;
 	--accent-color-black-rgb: 34, 34, 34;
 	--main-font-family: 'Calibri', sans-serif;
-	--headerHeight: 45px; /* Define the header variable. */
+	--headerHeight: 45px; /* Define the header height variable. */
+	--footerHeight: 60px; /* Define the footer height variable. */
 	--table-padding: 0.2rem;
 	--gallery-image-height: 130px; /* For the Gallery page */
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
@@ -95,10 +96,10 @@ body {
 	width: 100%;
 	
 	min-height: 568px; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
-	min-height: calc(100vh - 45px - 5px - 50px - 60px); /* 45px header + 5px padding + 60px footer (https://stackoverflow.com/a/26090114/14290169) */
-	min-height: -o-calc(100vh - 45px - 5px - 60px); /* Opera */
-	min-height: -webkit-calc(100vh - 45px - 5px - 60px); /* Google, Safari */
-	min-height: -moz-calc(100vh - 45px - 5px - 60px); /* Firefox */
+	min-height: calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* 45px header + 5px padding + 60px footer (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: -o-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Opera */
+	min-height: -webkit-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Google, Safari */
+	min-height: -moz-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Firefox */
 	
 	height: max-content;
 	transition: margin-left .5s;

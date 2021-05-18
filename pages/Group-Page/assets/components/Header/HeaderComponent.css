@@ -11,7 +11,7 @@
     top: 0px;
     /*--headerHeight: 45px; /* Define the header variable. */
     height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight, 45px); /* Define the header height using the variable. */
+    height: var(--headerHeight, 45px); /* Get the header height variable from GroupPageMain.css. */
     width: 100%;
     border-bottom: solid 2px var(--accent-color-white);
     display: flex;

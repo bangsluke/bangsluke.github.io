@@ -7,48 +7,53 @@
 /* Header styling. */
 
 .content-text {
-	/* background-color: blue; */
-	height: 350px;
-	height: calc(100vh - 20px - 60px);
-	width: 100%;
-	/* Note padding in all-content-area limiting width */
-	text-align: center;
-	padding: 10px 10px;
+	/* background-color: green; */
+	min-height: 488px;
+	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
+	width: 100%; /* Note padding in all-content-area limiting width */
+	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
+	text-align: center; /* Center align both heading texts below. */
+	color: var(--accent-color-white, white); /* Make both heading texts below white font. */
+	transition: transform 250ms; /* Add a transform transition to both sets of text. */
 }
 
 /* The header container around "TITS GROUP PAGE". */
 .headercontainer {
-	background: var(--accent-color-1);
+	background: var(--accent-color-1, pink);
 	/* background-color: red; */
-	width: max-content;
-	padding: 5px;
-	margin: 20% auto 0.2em auto;
+	position: fixed; /* Lock the position of the box. */
+	top: 35%; /* Set the top position of the box from the top of the screen. */
+	width: 15rem; /* Set the width of the header box. */
+	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
+	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
+	padding: 0.6rem 0.2rem; /* Add padding between the text and the surrounding box. */
 }
 
 /* The main header text. */
 .content-text h1 {
 	display: inline-block;
-	padding: 5px 10px;
-	text-transform: uppercase;
-	font-size: 2rem;
-	color: var(--accent-color-white);
-	transition: transform 250ms;
+	font-size: 1.8rem;
 }
 
-.content-text h1:hover {
-	transform: translateY(-5px);
+/* The sub header container around "CLICK TO ENTER". */
+.subheadercontainer {
+	/* background-color: red; */
+	position: fixed; /* Lock the position of the box. */
+	top: 45%; /* Set the top position of the box from the top of the screen. */
+	width: 12rem; /* Set the width of the sub header box. */
+	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
+	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 }
 
+/* The sub header text. */
 .content-text h3 {
-	text-transform: uppercase;
 	font-size: 1.5rem;
-	margin: 10px;
 	letter-spacing: 1px;
-	color: white;
 }
 
-#content-area {
-	padding: 10px;
+/* Add a hover animation to both clickable links. */
+.content-text h1:hover, .content-text h3:hover {
+	transform: translateY(-5px); /* Make the text move slightly up on hover. */
 }
 
 /* Content media queries. */
