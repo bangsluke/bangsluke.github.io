@@ -39,7 +39,7 @@
 .subheadercontainer {
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
-	top: 45%; /* Set the top position of the box from the top of the screen. */
+	top: 50%; /* Set the top position of the box from the top of the screen. */
 	width: 12rem; /* Set the width of the sub header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */

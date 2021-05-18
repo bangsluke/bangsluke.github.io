@@ -71,25 +71,25 @@
 			<div class="images-container">
 
 				<!-- Images used to open the lightbox -->
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 1.jpg"
+				<img id="image1" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(1)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 2.jpg"
+				<img id="image2" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(2)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 3.jpg"
+				<img id="image3" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(3)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 4.jpg"
+				<img id="image4" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(4)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 5.jpg"
+				<img id="image5" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(5)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 6.jpg"
+				<img id="image6" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(6)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 7.jpg"
+				<img id="image7" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(7)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 8.jpg"
+				<img id="image8" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(8)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 9.jpg"
+				<img id="image9" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(9)" class="hover-shadow">
-				<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 10.jpg"
+				<img id="image10" src="/pages/Group-Page/assets/images/Placeholder.png"
 					onclick="openModal();currentSlide(10)" class="hover-shadow">
 
 			</div>
@@ -102,49 +102,40 @@
 			<!-- Add the close X button. -->
 			<span class="close cursor" onclick="closeModal()">&times;</span>
 
-			<div class="numbertext">1 / 10</div>
+			<div id="numbertext">1 / 10</div>
 
 			<!-- Add the content of the modal. -->
 			<div class="modal-content">
 
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 1.jpg" class="modal-image">
+					<img id="modalimage1" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 2.jpg" class="modal-image">
+					<img id="modalimage2" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 3.jpg" class="modal-image">
+					<img id="modalimage3" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 4.jpg" class="modal-image">
+					<img id="modalimage4" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 5.jpg" class="modal-image">
+					<img id="modalimage5" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 6.jpg" class="modal-image">
+					<img id="modalimage6" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 7.jpg" class="modal-image">
+					<img id="modalimage7" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 8.jpg" class="modal-image">
+					<img id="modalimage8" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 9.jpg" class="modal-image">
+					<img id="modalimage9" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
-
 				<div class="mySlides">
-					<img src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 10.jpg" class="modal-image">
+					<img id="modalimage10" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
 
 				<!-- Next/previous controls -->
@@ -152,11 +143,13 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 				<!-- Caption text -->
-				<div class="caption-container">
+				<!-- Turned off for now. -->
+				<!-- <div class="caption-container">
 					<p id="caption"></p>
-				</div>
+				</div> -->
 
-				<!-- Thumbnail image controls --> <!-- Turned off for now. -->
+				<!-- Thumbnail image controls -->
+				<!-- Turned off for now. -->
 				<!-- <div class="thumbnail-container">
 
 					<div class="column">

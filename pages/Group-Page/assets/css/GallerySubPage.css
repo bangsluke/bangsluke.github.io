@@ -85,7 +85,7 @@ img {
 }
 
 /* Number text (1/3 etc) */
-.numbertext {
+#numbertext {
     color: var(--accent-color-white, white);
     position: absolute;
     z-index: 2;
