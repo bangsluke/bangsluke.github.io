@@ -23,16 +23,16 @@
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
 	top: 35%; /* Set the top position of the box from the top of the screen. */
-	width: 14rem; /* Set the width of the header box. */
+	width: 15rem; /* Set the width of the header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
-	margin-left: -7rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
+	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 	padding: 0.6rem 0.2rem; /* Add padding between the text and the surrounding box. */
 }
 
 /* The main header text. */
 .content-text h1 {
 	display: inline-block;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 }
 
 /* The sub header container around "CLICK TO ENTER". */
