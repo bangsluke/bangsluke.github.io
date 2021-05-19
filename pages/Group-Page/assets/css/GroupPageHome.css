@@ -4,7 +4,15 @@
 
 /* Specific Homepage Header styling is in HeaderComponent.css. */
 
-/* Header styling. */
+
+/* Lock all scrolling just on the homepgae. */
+body {
+	overflow: hidden;
+}
+
+
+
+/* Style the visible text on the homepage. */
 
 .content-text {
 	/* background-color: green; */
@@ -22,7 +30,7 @@
 	background: var(--accent-color-1, pink);
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
-	top: 35%; /* Set the top position of the box from the top of the screen. */
+	top: 38%; /* Set the top position of the box from the top of the screen. */
 	width: 15rem; /* Set the width of the header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
@@ -39,7 +47,7 @@
 .subheadercontainer {
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
-	top: 50%; /* Set the top position of the box from the top of the screen. */
+	top: 52%; /* Set the top position of the box from the top of the screen. */
 	width: 12rem; /* Set the width of the sub header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
@@ -55,6 +63,13 @@
 .content-text h1:hover, .content-text h3:hover {
 	transform: translateY(-5px); /* Make the text move slightly up on hover. */
 }
+
+/* lock the position of the footer, just on the homepage. */
+footer {
+	position: fixed;
+	width: 100%;
+}
+
 
 /* Content media queries. */
 
