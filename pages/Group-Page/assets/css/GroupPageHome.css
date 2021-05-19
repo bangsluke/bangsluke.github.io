@@ -34,7 +34,7 @@ body {
 	width: 15rem; /* Set the width of the header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
-	padding: 0.6rem 0.2rem; /* Add padding between the text and the surrounding box. */
+	padding: 0.5rem 0.2rem; /* Add padding between the text and the surrounding box. */
 }
 
 /* The main header text. */
@@ -47,7 +47,7 @@ body {
 .subheadercontainer {
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
-	top: 52%; /* Set the top position of the box from the top of the screen. */
+	top: 48%; /* Set the top position of the box from the top of the screen. */
 	width: 12rem; /* Set the width of the sub header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
