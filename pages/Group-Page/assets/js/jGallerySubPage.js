@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', init)
 // Create an init function that calls the other key functions on page load.
 function init() {
     setGalleryHeaderName();
-    populateImageSources();
+    //populateImageSources();
 }
 
 // Change the header name to reflect which Gallery is being shown.
