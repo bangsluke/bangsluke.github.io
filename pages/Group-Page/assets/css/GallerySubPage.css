@@ -4,7 +4,6 @@
 
 /* Add custom gallery sub page styling. */
 
-
 .main-content-area {
     overflow-x: hidden; 
 }
@@ -70,6 +69,7 @@ img {
     /* background-color: #fefefe; */
     position: relative;
     margin: auto; /* Align the modal content box correctly in the window. */
+    margin-top: 20%;
     padding: 0 auto;
     width: 90%;
     max-width: 1200px;
@@ -78,11 +78,24 @@ img {
 /* Define a class for the image when its the main image in the modal. */
 .modal-image {
     display: block;
-    height: 10rem;
-    width: auto;
+    /* height: 10rem;
+    width: auto; */
     margin: auto;
     opacity: 1;
 }
+
+/* Define a portrait class to be dynamically added for when the image is taller than it is wide. */
+.portrait-image {
+    height: 100vw;
+    width: auto;
+}
+
+/* Define a landscape class to be dynamically added for when the image is wider than it is tall. */
+.landscape-image {
+    width: 100%;
+    height: auto;
+}
+
 
 /* Number text (1/3 etc) */
 #numbertext {
