@@ -1,0 +1,196 @@
+/* SDP Encyclopedia Styling Guide. */
+
+/* An encyclopedia css style file used for the SDP Encyclopedia Page. */
+
+/* CSS Best Coding Practice
+	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
+*/
+
+/* Import the Open Sans font. */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /* Note that CSS variables flow through CSS style sheets, so the variables defined in earlier CSS style sheets are applied in this CSS file. */
+    /* Redefine the width variable used for reducedwidth to be used for Encyclopedia purposes. */
+    --width: 85%;
+}
+
+/* Page Width */
+
+/* Overwrite some width properties to set Encyclopedia page up correctly. */
+
+/* Add two classes for managing the width of elements. */
+
+.fullwidth {
+    width: 100%;
+}
+
+.contentwidth {
+    width: max-content;
+}
+
+/* The container holds all content below the header section and above the footer. Overwrite some container properties to align it properly. */
+
+.container {
+    /* background: green; */
+    /* background: var(--background-color-light-theme, white); */
+    /* background: inherit; */
+    height: max-content;
+    width: var(--width, 90%);
+    /* width: 100vw; */
+    /* Margin top control offset from header. Auto side margins center the div. Margin bottom controls the distance down to the footer. */
+    margin: 80px auto 50px auto;
+    padding: 10px 20px 10px 20px;
+}
+
+/* Page Width & Container Media Queries */
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    :root {
+        --width: 90%;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Covers iPads and other tablets. */
+    :root {
+        --width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+    :root {
+        --width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    /* Desktops and Laptops - For larger monitors and displays. */
+    :root {
+        --width: 80%;
+    }
+}
+
+/* Font classes */
+
+h1, h2, h3, h4, h5, h6, p, a, td {
+    color: black;
+    text-align: left;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+} 
+
+h3, h4, h5, h6 {
+    font-style: oblique;
+} 
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+}
+
+strong.desc {
+    padding-right: 3rem;
+}
+
+strong.risk {
+    padding-right: 6rem;
+}
+
+/* Section classes */
+
+.main-section {
+    /* background-color: royalblue; */
+}
+
+.secondary-section {
+    /* background-color: red; */
+    padding-left: 10px;
+}
+
+
+#Program > h3 {
+    color: #F4B084;
+}
+
+#Styling > h3 {
+    color: #FFFF00;
+}
+
+#MechanicalDesign > h3 {
+    color: #92D050;
+}
+
+#PhysicalValidation > h3 {
+    color: #9BC2E6;
+}
+
+
+/* Table classes */
+
+table {
+	width: 90%;
+	text-align: center;
+	font-size: 14px;
+}
+
+.documentationTable {
+	/* background-color: white; */
+	color: var(--accent-color-white);
+}
+
+th {
+	font-style: bold;
+}
+
+td {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* Footer Styling */
+
+/* h3 is no longer only used in the footer so update it to reduce the footer text size back down. */
+
+.footer-left-text h3 {
+    font-size: 8pt;
+    font-weight: 400;
+    font-family: var(--main-font-family, sans-serif);
+}
+
+.footer-RLE-text h3 {
+    font-size: 8pt;
+    font-weight: 400;
+    font-family: var(--main-font-family, sans-serif);
+}
