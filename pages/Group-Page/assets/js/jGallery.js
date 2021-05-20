@@ -33,7 +33,7 @@ function togglePeaMode() {
         document.getElementById("skiingCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Skiing Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("footballCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Football Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("edinburghCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Edinburgh Pea Cover.jpg"; // Modify the source of the image.
-        document.getElementById("portugalCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Portugal Pea Cover.png"; // Modify the source of the image.
+        document.getElementById("portugalCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Portugal Pea Cover.JPG"; // Modify the source of the image.
     } else {
         console.log("Pea mode toggle has just been turned off.");
         // Change the sources of the images to show non-Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
