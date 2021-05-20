@@ -23,7 +23,7 @@ function togglePeaMode() {
     // console.log(peaMode);
     if (peaMode == true) {
         console.log("Pea mode toggle has just been turned on.");
-        // Change the sources of the images to show Pea specific covers.
+        // Change the sources of the images to show Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
         document.getElementById("croatiaCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Croatia Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("glastonburyCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Glastonbury Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("bigNightsOutCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Big Nights Out Pea Cover.JPG"; // Modify the source of the image.
@@ -36,7 +36,7 @@ function togglePeaMode() {
         document.getElementById("portugalCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Portugal Pea Cover.JPG"; // Modify the source of the image.
     } else {
         console.log("Pea mode toggle has just been turned off.");
-        // Change the sources of the images to show non-Pea specific covers.
+        // Change the sources of the images to show non-Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
         document.getElementById("croatiaCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Croatia Cover.jpg"; // Modify the source of the image.
         document.getElementById("glastonburyCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Glastonbury Cover.jpg"; // Modify the source of the image.
         document.getElementById("bigNightsOutCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Big Nights Out Cover.jpg"; // Modify the source of the image.
