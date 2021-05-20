@@ -86,12 +86,10 @@ input:checked + .slider:before {
 }
 
 .gallery-cover-container {
-    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
-    /* background-color: purple; */
+    /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
+    background-color: purple;
     height: var(--gallery-image-height);
-    /* height: 200px; */
     width: var(--gallery-image-height);
-    /* width: 200px; */
     margin: 5px;
     cursor: pointer;
     position: relative; /* This parent needs to be relative to give it a position in the document flow, so that it's children items can be set as position: absolute. */
@@ -108,7 +106,7 @@ input:checked + .slider:before {
 }
 
 .gallery-cover-image {
-    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
     object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
