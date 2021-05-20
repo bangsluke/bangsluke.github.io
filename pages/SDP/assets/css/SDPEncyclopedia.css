@@ -103,12 +103,32 @@ input[type=text] {
     :root {
         --width: 90%;
     }
+    #SDPLogo {
+        margin-left: 5%;
+    }
+    input[type=text] {
+        right: 7rem;
+        width: 12rem;
+    }
+    #acronymnsLink {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /* Covers iPads and other tablets. */
     :root {
         --width: 90%;
+    }
+    #SDPLogo {
+        margin-left: 5%;
+    }
+    input[type=text] {
+        right: 7rem;
+        width: 12rem;
+    }
+    #acronymnsLink {
+        display: none;
     }
 }
 
@@ -147,10 +167,12 @@ h1 {
 
 h2 {
     font-size: 22px;
+    margin: 3rem 0 2rem 0;
 }
 
 h3 {
     font-size: 20px;
+    margin: 0px;
 }
 
 h4 {
@@ -169,14 +191,6 @@ p {
     font-size: 12px;
 }
 
-strong.desc {
-    padding-right: 3rem;
-}
-
-strong.risk {
-    padding-right: 6rem;
-}
-
 /* Section classes */
 
 .main-section {
@@ -189,7 +203,7 @@ strong.risk {
 }
 
 
-#Program > h3 {
+#Program > h3  {
     color: #F4B084;
 }
 
@@ -209,26 +223,25 @@ strong.risk {
 /* Table classes */
 
 table {
-	width: 90%;
+	/* background-color: aqua; */
+    width: 100%;
 	text-align: center;
 	font-size: 14px;
 }
 
-.documentationTable {
-	/* background-color: white; */
-	color: var(--accent-color-white);
-}
-
-th {
-	font-style: bold;
-}
-
 td {
     font-size: 14px;
-    text-align: center;
+    text-align: left;
 }
 
 
+.tableHeaderText {
+    font-style: oblique;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+    font-size: 1rem;
+}
 
 /* Footer Styling */
 

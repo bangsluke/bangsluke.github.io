@@ -16,9 +16,24 @@
 	background-color: #eee;
 	color: #444;
 	cursor: pointer;
-	padding: 18px;
+	padding: 1rem;
 	width: 100%;
 	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.taskcollapsible {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 1rem;
+	width: 100%;
+	border: none;
+	border: 2px solid rgba(0, 0, 0, .1);
 	text-align: left;
 	outline: none;
 	font-size: 15px;
@@ -32,6 +47,49 @@
 	background-color: #ccc;
 }
 
+.active, .taskcollapsible:hover {
+	background-color: #ccc;
+}
+
+/* Add swimlane styling. */
+
+.Program {
+	background-color: #F4B084;
+	border-color: #EE8544;
+}
+
+.Program:hover  {
+    background-color: #EE8544;
+}
+
+.Styling {
+	background-color: #FFFF00;
+	border-color: #D7D200;
+}
+
+.Styling:hover  {
+    background-color: #D7D200;
+}
+
+.MechanicalDesign {
+	background-color: #92D050;
+	border-color: #5F9D1D;
+}
+
+.MechanicalDesign:hover  {
+    background-color: #5F9D1D;
+}
+
+.PhysicalValidation {
+	background-color: #9BC2E6;
+	border-color: #62A0D8;
+}
+
+.PhysicalValidation:hover  {
+    background-color: #62A0D8;
+}
+
+
 /* Style the collapsible content. Note: hidden by default */
 
 .content {
@@ -41,7 +99,16 @@
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	margin-bottom: 1rem;
-  }
+}
+
+.task-content {
+	padding: 0 18px;
+	/* background-color: white; */
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin-bottom: 1rem;
+}
 
 .collapsible:after {
 	content: '\02795'; /* Unicode character for "plus" sign (+) */
@@ -49,8 +116,16 @@
 	color: white;
 	float: right;
 	margin-left: 5px;
-  }
+}
+
+.taskcollapsible:after {
+	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	font-size: 20px;
+	color: white;
+	float: right;
+	margin-left: 5px;
+}
   
-  .active:after {
+.active:after {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+}
