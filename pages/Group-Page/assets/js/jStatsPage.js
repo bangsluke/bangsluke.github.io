@@ -101,9 +101,9 @@ var statsObject = {
 
     // Keep as example.
     //"Backend": {
-        //"HTML": ["Links", "Images", "Tables", "Lists"],
-        //"CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-        //"JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+    //"HTML": ["Links", "Images", "Tables", "Lists"],
+    //"CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+    //"JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
     //}
 }
 console.log(statsObject);
@@ -317,7 +317,7 @@ function getStatSelection(data) {
     //console.log("Filter Header Selection = " + filterHeaderText); // Display what the filter header selection box is showing.
     //// Check if the filter header selection box is empty or not (considered empty if the text is still "Select header").
     //if (filterHeaderText == "Select header") {
-        //return; // Early return from function.
+    //return; // Early return from function.
     //}
 }
 
@@ -390,7 +390,7 @@ function generateTableHead(table, data) {
         let th = document.createElement("th"); // Create the th element.
         let text = document.createTextNode(key); // Add the column header text.
         th.appendChild(text); // Append the text to the table header.
-        if (counter == 0){ // If the counter = 0, it's the first column.
+        if (counter == 0) { // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
             th.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
@@ -405,26 +405,62 @@ function generateTableHead(table, data) {
 
 function generateTable(table, data) {
     console.log("Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
+    var counter;
+    var testedVlue;
+    var dataType;
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
     for (let element of data) { // Loop through each row of the data.
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
-        var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
+        counter = 0; // Define a counter for checking which column to apply stick-col rule to.
         for (key in element) { // Loop through each cell in each row.
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
-            if (counter == 0){ // If the counter = 0, it's the first column.
+            if (counter == 0) { // If the counter = 0, it's the first column.
                 cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
                 cell.classList.add("first-col"); // Add the first-col class to the first column.
             } else {
                 // Do nothing as not first column.
             }
+
+            // Get the data type of the value being added to the cell.
+            // First, parseInt the value, if it returns "NaN", it's a string.
+            console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'")
+            testedValue = parseInt(element[key]);
+            console.log("parseInt = " + testedValue);
+            if (isNaN(testedValue) == true) {
+                dataType = "string";
+            } else {
+                dataType = typeof testedValue;
+            }
+            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'")
+            
+            // dataType = typeof element[key];
+            // console.log("Data type of " + element[key] + " is " + dataType)
+            // console.log("parseInt = " + parseInt(element[key]));
+            // console.log("isInt = " + isInt(element[key]));
+            console.log("-");
+            switch (dataType) {
+                case "number":
+                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+                    break;
+                case "string":
+                    cell.classList.add("textleft"); // Add the textleft class to the cell.
+                    break;
+                default:
+                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+            }
+
+
             counter = counter + 1; // Increment the counter.
         }
     }
     console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
 }
 
+function isInt(str) {
+    return !isNaN(str) && Number.isInteger(parseFloat(str));
+  }
 
 
 
