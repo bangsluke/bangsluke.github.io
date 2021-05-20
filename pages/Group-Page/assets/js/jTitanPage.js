@@ -100,11 +100,13 @@ function getInitialTitanData(data) {
             var selectedURL = data[x].URL;
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
+            var titanBoolean = data[x].TitanBoolean;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData1(selectedURL); // Call the function getPapaData to return the data from that table.
     updateAdditionalTableInformation(lastUpdatedDate, sourceText); // Updates the Titan table source, last updated text and additional link.
+    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 }
 
 // Get the data of the selected stats by using the selected URL. 
@@ -330,7 +332,7 @@ function generateTable(table, data) {
             }
 
             // Get the data type of the value being added to the cell.
-            console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+            //console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
             testedValue = parseInt(element[key]); // First, parseInt the value.
             if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
                 dataType = "string";
@@ -339,8 +341,8 @@ function generateTable(table, data) {
                 dataType = typeof testedValue;
                 cell.classList.add("textcenter"); // Add the textcenter class to the cell.
             }
-            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
-            console.log("-");
+            //console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
+            //console.log("-");
 
             counter = counter + 1; // Increment the counter.
         }
@@ -350,7 +352,13 @@ function generateTable(table, data) {
 
 
 
-
+// Add a border below the 4th person if the table is flagged as a Titan table.
+function applyTitanTableFormatting(titanBoolean) {
+    if (titanBoolean == "TRUE") {
+        console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
+        document.getElementById("titans-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
+    }
+}
 
 // Write functions for the two buttons on the Titans page.
 
