@@ -65,12 +65,10 @@ select {
 	margin: auto;
 	margin-top: 2em;
 }
-
-/* Wrapper div around the table. */
-
-.stats-table {
+ 
+/* .stats-table {
 	overflow: auto;
-}
+} */
 
 /* Last updated and Source formatting. */
 

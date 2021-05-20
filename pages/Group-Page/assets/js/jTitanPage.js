@@ -309,20 +309,39 @@ function generateTableHead(table, data) {
 
 function generateTable(table, data) {
     console.log("Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
+    var counter;
+    var testedValue;
+    var dataType;
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
     for (let element of data) { // Loop through each row of the data.
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
-        var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
+        counter = 0; // Define a counter for checking which column to apply stick-col rule to.
         for (key in element) { // Loop through each cell in each row.
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
+            
+            // Loop through the columns to apply styling.
             if (counter == 0){ // If the counter = 0, it's the first column.
                 cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
                 cell.classList.add("first-col"); // Add the first-col class to the first column.
             } else {
                 // Do nothing as not first column.
             }
+
+            // Get the data type of the value being added to the cell.
+            console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+            testedValue = parseInt(element[key]); // First, parseInt the value.
+            if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
+                dataType = "string";
+                cell.classList.add("textleft"); // Add the textleft class to the cell.
+            } else { // If not NaN, get the typeof of the value.
+                dataType = typeof testedValue;
+                cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+            }
+            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
+            console.log("-");
+
             counter = counter + 1; // Increment the counter.
         }
     }

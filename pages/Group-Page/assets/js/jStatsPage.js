@@ -255,12 +255,14 @@ function getInitiallyLoadedStatSelection(data) {
             var selectedURL = data[x].URL;
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
+            var titanBoolean = data[x].TitanBoolean;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
     updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
+    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 }
 
 
@@ -299,13 +301,14 @@ function getStatSelection(data) {
             var selectedURL = data[x].URL;
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
+            var titanBoolean = data[x].TitanBoolean;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
     updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
-
+    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 
     // TODO: BELOW TO BE CODED PROPERLY
 
@@ -390,6 +393,7 @@ function generateTableHead(table, data) {
         let th = document.createElement("th"); // Create the th element.
         let text = document.createTextNode(key); // Add the column header text.
         th.appendChild(text); // Append the text to the table header.
+        th.classList.add("textleft"); // Add the textleft class to the tableheader.
         if (counter == 0) { // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
@@ -406,7 +410,7 @@ function generateTableHead(table, data) {
 function generateTable(table, data) {
     console.log("Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
     var counter;
-    var testedVlue;
+    var testedValue;
     var dataType;
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
     for (let element of data) { // Loop through each row of the data.
@@ -416,6 +420,8 @@ function generateTable(table, data) {
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
+            
+            // Loop through the columns to apply styling.
             if (counter == 0) { // If the counter = 0, it's the first column.
                 cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
                 cell.classList.add("first-col"); // Add the first-col class to the first column.
@@ -424,46 +430,23 @@ function generateTable(table, data) {
             }
 
             // Get the data type of the value being added to the cell.
-            // First, parseInt the value, if it returns "NaN", it's a string.
-            console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'")
-            testedValue = parseInt(element[key]);
-            console.log("parseInt = " + testedValue);
-            if (isNaN(testedValue) == true) {
+            console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+            testedValue = parseInt(element[key]); // First, parseInt the value.
+            if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
                 dataType = "string";
-            } else {
+                cell.classList.add("textleft"); // Add the textleft class to the cell.
+            } else { // If not NaN, get the typeof of the value.
                 dataType = typeof testedValue;
+                cell.classList.add("textcenter"); // Add the textcenter class to the cell.
             }
-            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'")
-            
-            // dataType = typeof element[key];
-            // console.log("Data type of " + element[key] + " is " + dataType)
-            // console.log("parseInt = " + parseInt(element[key]));
-            // console.log("isInt = " + isInt(element[key]));
+            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
             console.log("-");
-            switch (dataType) {
-                case "number":
-                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
-                    break;
-                case "string":
-                    cell.classList.add("textleft"); // Add the textleft class to the cell.
-                    break;
-                default:
-                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
-            }
-
-
+            
             counter = counter + 1; // Increment the counter.
         }
     }
     console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
 }
-
-function isInt(str) {
-    return !isNaN(str) && Number.isInteger(parseFloat(str));
-  }
-
-
-
 
 // Update the title above the stats table with the selected stats name.
 function updateStatsTitle(selectionText) {
@@ -479,6 +462,14 @@ function updateAdditionalStatsInformation(lastUpdatedDate, sourceText) {
     element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
     element = document.getElementById("stats-source"); // Get the stats-source element by id.
     element.innerHTML = "Source: " + sourceText; // Update the text inside the element with the stats source.
+}
+
+// Add a border below the 4th person if the table is flagged as a Titan table.
+function applyTitanTableFormatting(titanBoolean) {
+    if (titanBoolean == "TRUE") {
+        console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
+        document.getElementById("stats-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
+    }
 }
 
 // End the console timer.

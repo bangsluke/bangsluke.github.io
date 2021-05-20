@@ -280,6 +280,10 @@ tr:hover {
 	z-index: 2;
 }
 
+/* Add 4th row underline for Titan status. */
+.titan4thRow tr:nth-child(4){
+	border-bottom: 4px double var(--accent-color-1, red);
+}
 
 
 /* Add a hidden class for hiding components that are not yet ready. */
