@@ -4,12 +4,12 @@
 
 /* Add custom gallery sub page styling. */
 
+/* Remove horizontal scrolling.  */
 .main-content-area {
     overflow-x: hidden; 
 }
 
 /* Add a container to hold all images. */
-
 .images-container {
     /* background-color: burlywood; */
     height: max-content;
@@ -24,12 +24,12 @@
     /* overflow: auto; */
 }
 
-
+/* Format the images. */
 img {
-    height: 5rem;
-    width: auto;
-    opacity: 0.9;
-    margin: 0.2rem;
+    height: 5rem; /* Define the heights of the images. */
+    width: auto; /* Auto size the width of the images. */
+    opacity: 0.9; /* Add some minor transparency to the images so they look clearer when clicked on. */
+    margin: 0.2rem; /* Add spacing between images. */
 }
 
 /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
@@ -97,7 +97,6 @@ img {
     height: auto;
 }
 
-
 /* Number text (1/3 etc) */
 #numbertext {
     color: var(--accent-color-white, white);
@@ -119,7 +118,6 @@ img {
     font-size: 35px;
     font-weight: bold;
 }
-  
 .close:hover,.close:focus {
     color: #999;
     text-decoration: none;
@@ -159,7 +157,6 @@ img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-  
 /* Caption text */
 .caption-container {
     text-align: center;
@@ -171,7 +168,6 @@ img {
 .thumbnail-container {
     width: 100%;
 }
-
 
 img.demo {
     opacity: 0.6;
@@ -188,4 +184,3 @@ img.hover-shadow {
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-

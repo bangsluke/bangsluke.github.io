@@ -17,6 +17,39 @@
     --width: 85%;
 }
 
+/* Header formatting. */
+
+#SDPLogo {
+    margin-left: 70%;
+    height: 40px;
+    width: auto;
+}
+
+#acronymnsLink {
+    position: absolute;
+    right: 35rem;
+    height: 2rem;
+    top: 1.5rem;
+    font-weight: bolder;
+    color: var(--accent-color-purple, black);
+    text-align: left;
+    text-decoration: underline;
+}
+
+/* Style the search box. */
+input[type=text] {
+    position: absolute;
+    right: 1rem;
+    height: 2rem;
+    width: 30rem;
+    padding: 0.6rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+
 /* Page Width */
 
 /* Overwrite some width properties to set Encyclopedia page up correctly. */
@@ -31,8 +64,20 @@
     width: max-content;
 }
 
-/* The container holds all content below the header section and above the footer. Overwrite some container properties to align it properly. */
+/* SDP Encyclopedia Top Section. */
+.top-grey-section {
+    /* background: LightSkyBlue; */
+    background: var(--background-color-lightgrey, grey);
+    min-height: 30px;
+    height: max-content;
+    width: calc(100% - 30px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 0px 10px 30px;
+    margin: 0 0 0 0;
+}
 
+/* The container holds all content below the header section and above the footer. Overwrite some container properties to align it properly. */
 .container {
     /* background: green; */
     /* background: var(--background-color-light-theme, white); */
@@ -42,6 +87,12 @@
     /* width: 100vw; */
     /* Margin top control offset from header. Auto side margins center the div. Margin bottom controls the distance down to the footer. */
     margin: 80px auto 50px auto;
+    padding: 0;
+}
+
+.content-container {
+    /* background: blue; */
+    height: max-content;
     padding: 10px 20px 10px 20px;
 }
 
