@@ -87,7 +87,7 @@ input:checked + .slider:before {
 
 .gallery-cover-container {
     /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-    background-color: purple;
+    /* background-color: purple; */
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
     margin: 5px;
@@ -107,7 +107,7 @@ input:checked + .slider:before {
 
 .gallery-cover-image {
     /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-    background-color: red;
+    /* background-color: red; */
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
     object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
