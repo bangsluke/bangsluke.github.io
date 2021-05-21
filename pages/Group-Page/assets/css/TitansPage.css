@@ -10,6 +10,11 @@
 	margin-top: 0.5rem;
 }
 
+/* Make all p text within the .titan-summary-statement-area inline to keep the flow natural. */
+.titan-summary-statement-area p {
+	display: inline;
+}
+
 /* Add a class for the Titan Buttons. */
 
 .titanButtons {

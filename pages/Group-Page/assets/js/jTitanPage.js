@@ -93,6 +93,10 @@ function getInitialTitanData(data) {
 
     console.log("Function: getInitialTitanData(data) called.")
 
+    // Define the count variables used within the loop.
+    let dataSourceCount = 0;
+    let uniqueSkillCount = 0;
+
     // Loop through the data array from the tblStatsConfig tab and match the table name var TitanTableName to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
@@ -103,10 +107,31 @@ function getInitialTitanData(data) {
             var titanBoolean = data[x].TitanBoolean;
             console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
+
+        // Within the loop, count up the number of data sources.
+        console.log("Row: " + x + " dataSourceCount = " + dataSourceCount + " and the data[x].DataSource is = " + data[x].DataSource);
+        if (data[x].DataSource == "") { // Deal with if there is a blank field in the DataSource column.
+            // Do nothing.
+        } else if (data[x].DataSource == 0) { // Deal with if the DataSource column has a 0.
+            // Do nothing.
+        } else { // Deal with if the DataSource column has a 1.
+            dataSourceCount = dataSourceCount + parseInt(data[x].DataSource); // Increment the dataSourceCount.
+        }
+
+        // Do the same for uniqueSkillCount.
+        console.log("Row: " + x + " uniqueSkillCount = " + uniqueSkillCount + " and the data[x].UniqueSkill is = " + data[x].UniqueSkill);
+        if (data[x].UniqueSkill == "") { // Deal with if there is a blank field in the UniqueSkill column.
+            // Do nothing.
+        } else if (data[x].UniqueSkill == 0) { // Deal with if the UniqueSkill column has a 0.
+            // Do nothing.
+        } else { // Deal with if the UniqueSkill column has a 1.
+            uniqueSkillCount = uniqueSkillCount + parseInt(data[x].UniqueSkill); // Increment the uniqueSkillCount.
+        }
     }
     getPapaData1(selectedURL); // Call the function getPapaData to return the data from that table.
     updateAdditionalTableInformation(lastUpdatedDate, sourceText); // Updates the Titan table source, last updated text and additional link.
     applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
+    updateStatSourcesCount(dataSourceCount, uniqueSkillCount); // Update the stat count in the summary text below the Titan table.
 }
 
 // Get the data of the selected stats by using the selected URL. 
@@ -126,7 +151,7 @@ function showSelectedInfo1(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
-    
+
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("table"); // Call the clearTable function to empty the table.
     createFullTable(data, "table"); // Call the createFullTable function, passing the data from PapaParse.
@@ -192,7 +217,7 @@ function showSelectedInfo2(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
-    
+
     // Call the clearTable and createFullTable functions, passing the id "titanFactorCalculatedTable" selector on which element to act on.
     clearTable("#titanFactorCalculatedTable"); // Call the clearTable function to empty the table.
     createFullTable(data, "#titanFactorCalculatedTable"); // Call the createFullTable function, passing the data from PapaParse.
@@ -246,7 +271,7 @@ function showSelectedInfo3(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
-    
+
     // Call the clearTable and createFullTable functions, passing the id "titanFactorExplainedTable" selector on which element to act on.
     clearTable("#titanFactorExplainedTable"); // Call the clearTable function to empty the table.
     createFullTable(data, "#titanFactorExplainedTable"); // Call the createFullTable function, passing the data from PapaParse.
@@ -296,7 +321,7 @@ function generateTableHead(table, data) {
         let th = document.createElement("th"); // Create the th element.
         let text = document.createTextNode(key); // Add the column header text.
         th.appendChild(text); // Append the text to the table header.
-        if (counter == 0){ // If the counter = 0, it's the first column.
+        if (counter == 0) { // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
             th.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
@@ -322,9 +347,9 @@ function generateTable(table, data) {
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
-            
+
             // Loop through the columns to apply styling.
-            if (counter == 0){ // If the counter = 0, it's the first column.
+            if (counter == 0) { // If the counter = 0, it's the first column.
                 cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
                 cell.classList.add("first-col"); // Add the first-col class to the first column.
             } else {
@@ -359,6 +384,15 @@ function applyTitanTableFormatting(titanBoolean) {
         document.getElementById("titans-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
     }
 }
+
+// Update the data source and unique skill count in the summary text below the Titan table.
+function updateStatSourcesCount(dataSourceCount, uniqueSkillCount) {
+    console.log("dataSourceCount passed is " + dataSourceCount);
+    dataSourceCount = parseInt(dataSourceCount);
+    document.getElementById("data-source-count").innerHTML = dataSourceCount; // Get the id of the text to be updated and update the text inside the element with the data source count.
+    document.getElementById("unique-skill-count").innerHTML = uniqueSkillCount; // Get the id of the text to be updated and update the text inside the element with the unique skill count.
+}
+
 
 // Write functions for the two buttons on the Titans page.
 
