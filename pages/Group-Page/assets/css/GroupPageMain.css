@@ -13,7 +13,6 @@
  */
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
-
 :root {
 	/* CSS variables - Add variables below like the given example. */
 	--main-style-color: #FF3CAC;
@@ -38,7 +37,6 @@
 }
 
 /* HTML updates to cover the full webpage. */
-
 html {
 	/* background: var(--main-background-color, var(--accent-color-1)); */
 	/* background: orange; */
@@ -60,7 +58,6 @@ html {
 /* Everything below initially designed for mobile. */
 
 /* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -68,7 +65,6 @@ html {
 }
 
 /* Generic body class for all HTML pages using this CSS format. */
-
 body {
 	top: 0px;
 	left: 0px;
@@ -87,7 +83,6 @@ body {
 } */
 
 /* Main content styling. */
-
 .main-content-area {
 	/* background: lightblue; */
 	margin-top: 50px; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 45px header. */
@@ -113,6 +108,7 @@ body {
 	/* overflow-y: hidden; */
 }
 
+/* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
 	/* background-color: aqua; */
 	background: rgba( 255, 255, 255, 0.10 );
@@ -127,6 +123,11 @@ body {
 	/* overflow: auto; */
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	/* scroll-behavior: smooth; */
+}
+
+/* Added bottom margin for some page sections on individuals page. */
+.page-section-added-bottom-margin {
+	margin-bottom: 1rem;
 }
 
 /* Text styling. */
