@@ -90,14 +90,21 @@ function getData(data, selectedUserName) {
     
 
     /// Dorkinians
-    var lrcode = data[foundRow].dorkiniansLeagueCode;
-    getDorkiniansTable(lrcode);
-
+    
+    // Old code solution.
+    //var lrcode = data[foundRow].dorkiniansLeagueCode;
+    //getDorkiniansTable(lrcode);
 
     // Add code here to show hide tables.
-    for (let x = 1; x <= 8; x++) {
-        
-
+    var DorkiniansTeam = parseInt(data[foundRow].dorkiniansTeam);
+    console.log("DorkiniansTeam = " + DorkiniansTeam);
+    for (let x = 1; x <= 8; x++) { // Loop through the 8 teams.
+        if (x == DorkiniansTeam) {
+            // Do nothing as want to leave this table visible.
+        } else {
+            // Hide this teams table.
+            document.getElementById("dorkinians" + x + "sTable").classList.add("hidden"); // Add the hidden CSS class to hide the table.
+        }
     }
 
 

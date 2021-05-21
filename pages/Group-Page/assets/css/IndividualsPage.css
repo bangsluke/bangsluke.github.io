@@ -155,11 +155,59 @@ tr:hover {
 }
 
 
+/* Dorkinians */
+
+.dorkiniansHeaderContainer {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 60px 70%;
+  	grid-template-rows: 60px;
+  	grid-template-areas: "logo-section text-section";
+	margin-bottom: 1rem;
+}
+
+.dorkiniansLogoContainer {
+	/* background: red; */
+	grid-area: logo-section;	
+}
+
+#dorkiniansLogo {
+	height: 60px;
+	width: auto;
+	margin: 0 auto;
+	/* filter: brightness(0) invert(1); */
+}
+
+.dorkiniansTextContainer {
+	/* background: green; */
+	grid-area: text-section;
+	/* padding: auto; */
+	display: flex;
+	align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.dorkiniansHeaderText {
+	margin: auto;
+}
+
+.dorkiniansTableHeaderText {
+	margin-bottom: 1rem;
+}
+
+.AFCTable {
+	width: 200px;
+}
+
+
+
 /* History Tab */
 
 .quote {
 	font-style:italic;
 }
+
+/* Ashcombe School */
 
 #ashcombeLogo {
 	width: 100%;
@@ -167,6 +215,7 @@ tr:hover {
 	margin: auto;
 }
 
+/* Brockham Badgers */
 
 .brockhamBadgersHeaderContainer {
 	display: grid;
