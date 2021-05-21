@@ -135,9 +135,9 @@ function showSelectedInfo1(results) {
 // Updates the Titan Table source, last updated text and additional link.
 function updateAdditionalTableInformation(lastUpdatedDate, sourceText) {
     console.log("Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called.")
-    var element = document.getElementById("stats-last-updated"); // Get the stats-last-updated element by id.
+    var element = document.getElementById("data-last-updated"); // Get the data-last-updated element by id.
     element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
-    element = document.getElementById("stats-source"); // Get the stats-source element by id.
+    element = document.getElementById("data-source"); // Get the data-source element by id.
     element.innerHTML = "Source: " + sourceText; // Update the text inside the element with the stats source.
 }
 

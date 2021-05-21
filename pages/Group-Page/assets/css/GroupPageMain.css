@@ -181,6 +181,10 @@ h6 {
 	text-align: left;
 }
 
+.textright {
+	text-align: right;
+}
+
 .bold {
 	font-weight: bold;
 }

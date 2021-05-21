@@ -65,16 +65,6 @@ select {
 	margin: auto;
 	margin-top: 2em;
 }
- 
-/* .stats-table {
-	overflow: auto;
-} */
-
-/* Last updated and Source formatting. */
-
-#stats-last-updated {
-	text-align: right;
-}
 
 /* Reporting Link formatting */
 
