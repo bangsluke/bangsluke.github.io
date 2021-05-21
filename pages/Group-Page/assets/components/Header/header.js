@@ -63,17 +63,17 @@ headerTemplate.innerHTML = `
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon"></a>
-                </div>
-                <div class="topMenu-Text-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
-                </div>
-
-                <div class="topMenu-Icon-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Stats Icon"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Stats.html">Stats</a>
+                </div>
+
+                <div class="topMenu-Icon-Container">
+                    <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon"></a>
+                </div>
+                <div class="topMenu-Text-Container">
+                    <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">

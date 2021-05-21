@@ -59,19 +59,19 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                        <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
+                        <a href="/pages/Group-Page/Sub-Pages/Stats.html">Stats</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                        <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/pages/Group-Page/Sub-Pages/Stats.html">Stats</a>
+                        <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
                     </div>
                 </div>
 
@@ -100,6 +100,7 @@ sideMenuTemplate.innerHTML = `
                         <a href="/pages/Group-Page/Sub-Pages/Ideas.html">Ideas</a>
                     </div>
                 </div> -->
+
             </div>
 
             </div>

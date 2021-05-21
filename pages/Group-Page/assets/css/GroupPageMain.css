@@ -51,6 +51,8 @@ html {
 	font-family: var(--main-font-family, 'Calibri'); /* Specify the main font family to be used across the site. */
 	font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
+
+	overflow-y: scroll;
 }
 
 /* Add code below. */
@@ -178,6 +180,7 @@ h1 {
 
 h2 {
 	font-size: 0.9rem;
+	text-transform: uppercase;
 }
 
 h3 {
