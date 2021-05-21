@@ -90,9 +90,18 @@ function getData(data, selectedUserName) {
     
 
     /// Dorkinians
-    //document.getElementById("dorkiniansTable").innerHTML = data[foundRow].dorkiniansLeagueCode; // Modify the text inside the element.
     var lrcode = data[foundRow].dorkiniansLeagueCode;
     getDorkiniansTable(lrcode);
+
+
+    // Add code here to show hide tables.
+    for (let x = 1; x <= 8; x++) {
+        
+
+    }
+
+
+
 
     // History Tab
     

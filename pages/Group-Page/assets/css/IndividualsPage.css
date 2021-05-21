@@ -85,8 +85,8 @@ tr:hover {
 #footballHeader {
 	width: var(--pagewidth, 98%);
 	height: auto;
-	margin: auto;
 	border-radius: 5px;
+	margin: 0.5em auto; /* Add a margin above the football header that offsets it down the same as page-section. */
 }
 
 #proTeamLeagueLogo {
