@@ -155,8 +155,9 @@ tr:hover {
 }
 
 
-/* Dorkinians */
+/* Dorkinians Information */
 
+/* Add a header container section to hold the logo and title. */
 .dorkiniansHeaderContainer {
 	display: grid;
 	grid-column-gap: 10px;
@@ -195,8 +196,42 @@ tr:hover {
 	margin-bottom: 1rem;
 }
 
-.AFCTable {
-	width: 200px;
+/* AFC Table Formatting */
+
+/* Offset the table left to fit it on screen. */
+.AFCTable table {
+	/* background-color: blue; */
+	margin-left: -0.4rem;
+}
+
+/* Offset the England Logo back into place. */
+.AFCTable table tbody tr td table tbody tr td a img {
+	/* background-color: blue; */
+	margin-left: 1.5rem;
+}
+
+/* Make the font size in the table smaller to fit the table in. */
+.AFCTable table td {
+	font-size: 0.4rem;
+}
+
+/* AFC Results and Fixtures Formatting */
+
+/* Offset the table left to fit it on screen. */
+.AFCResultsAndFixtures table {
+	/* background-color: blue; */
+	margin-left: -0.4rem;
+}
+
+/* Offset the England Logo back into place. */
+.AFCResultsAndFixtures table tbody tr td table tbody tr td a img {
+	/* background-color: blue; */
+	margin-left: 1.5rem;
+}
+
+/* Make the font size in the table smaller to fit the table in. */
+.AFCResultsAndFixtures table td {
+	font-size: 0.4rem;
 }
 
 
@@ -217,6 +252,7 @@ tr:hover {
 
 /* Brockham Badgers */
 
+/* Add a header container section to hold the logo and title. */
 .brockhamBadgersHeaderContainer {
 	display: grid;
 	grid-column-gap: 10px;

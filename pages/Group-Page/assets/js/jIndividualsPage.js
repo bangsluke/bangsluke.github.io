@@ -104,6 +104,7 @@ function getData(data, selectedUserName) {
         } else {
             // Hide this teams table.
             document.getElementById("dorkinians" + x + "sTable").classList.add("hidden"); // Add the hidden CSS class to hide the table.
+            document.getElementById("dorkinians" + x + "sResultsAndFixtures").classList.add("hidden"); // Add the hidden CSS class to hide the table.
         }
     }
 
@@ -148,6 +149,22 @@ function getData(data, selectedUserName) {
 function dataMessage() {
     alert("Get fucked you Signal prick");
 }
+
+
+function toggleResultsAndFixturesSection() {
+    // Toggle between showing and hiding the results and fixtures section.
+    var toggleButton = document.getElementById("toggleResultsAndFixtures") // Get the toggle button by its ID.
+    var element = document.getElementById("results-and-fixtures-section") // Get the id of the section to be shown/hidden.
+    if (toggleButton.innerText == "Show results and fixtures details") {
+        element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Hide results and fixtures details"; // Set the button text to change.
+    } else {
+        element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
+        toggleButton.innerText = "Show results and fixtures details"; // Set the button text to change.
+    }
+}
+
+
 
 // End the console timer.
 console.timeEnd();
