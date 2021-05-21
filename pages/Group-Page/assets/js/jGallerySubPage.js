@@ -10,8 +10,9 @@ var maxImageCount = 20;
 
 // Create an init function that calls the other key functions on page load.
 function init() {
-    setGalleryHeaderName();
-    populateImageSources();
+    setGalleryHeaderName(); // Change the header name to reflect which Gallery is being shown.
+    populateImageSources(); // Loop through the images populating their sources correctly.
+    showVideoSection() // Show the Video Section at the bottom of the Gallery Subpage if the gallery is Football.
 }
 
 // Change the header name to reflect which Gallery is being shown.
@@ -79,6 +80,16 @@ function populateImageSources() {
             document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
         }
     }
+}
+
+// Show the Video Section at the bottom of the Gallery Subpage if the gallery is Football.
+function showVideoSection() {
+    
+    var clickedAlbumName = sessionStorage.getItem("clickedAlbumName", clickedAlbumName); // Get the saved variable from session storage.
+    if (clickedAlbumName == "Football") { // React if the gallery selected is Football.
+        document.getElementById("gallery-subpage-video-section").classList.remove("hidden"); // Remove the hidden class for the video section.
+    }
+
 }
 
 // https://www.w3schools.com/howto/howto_js_lightbox.asp
