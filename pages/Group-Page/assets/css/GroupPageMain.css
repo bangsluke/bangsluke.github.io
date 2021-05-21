@@ -240,6 +240,8 @@ th {
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 }
 
+.stats
+
 td {
 	font-size: 0.6rem;
 	text-align: center;

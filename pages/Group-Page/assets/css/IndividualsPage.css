@@ -9,6 +9,15 @@
 	padding-top: 0px;
 }
 
+/* Text formatting. */
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Profile Tab */
 
 #profilePicture {
@@ -19,7 +28,7 @@
 	margin: 1rem auto; /* Add a margin above and below the image and align it centrally. */
 }
 
-/* Add table styling. */
+/* Add individuals table styling. */
 
 .individualsTable {
 	width: 100%;
@@ -29,32 +38,19 @@
 	color: white;
 }
 
-.testTable>table {
-	width: 100px;
-	color: red;
-}
-
-/* th not required as table has no headers. */
-
-/* th {
-	font-style: bold;
-	background-color: var(--accent-color-3, blue);
-	border-bottom: 4px solid var(--accent-color-2, red);
-} */
-
-td {
+.individualsTable td {
 	font-size: 0.7rem;
 	text-align: left;
 	line-height: 20px;
 }
 
-tr:hover {
+.individualsTable tr:hover {
 	background-color: var(--accent-color-1, pink);
 	color: var(--accent-color-white);
 	font: bold;
 }
 
-/* Icon Styling. */
+/* individuals table icon styling. */
 
 .individualsPageIcon {
 	width: 20px;
@@ -80,6 +76,8 @@ tr:hover {
 	width: 35%;
 }
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Football Tab */
 
 #footballHeader {
@@ -92,7 +90,7 @@ tr:hover {
 #proTeamLeagueLogo {
 	width: 80%;
 	height: auto;
-	margin: auto;
+	margin: auto auto 1rem auto;
 }
 
 /* Wrapper div around the pro team table. */
@@ -101,6 +99,7 @@ tr:hover {
 	width: 100%;
 	overflow: auto;
 	background-color: var(--accent-color-white, white);
+	margin: auto auto 1rem auto; /* Add space to the text below. */
 }
 
 /* Add pro team table styling. */
@@ -108,10 +107,12 @@ tr:hover {
 #pro-team-table {
 	width: 100%;
 	text-align: center;
-	font-size: 0.5rem;
+	font-size: 0.7rem;
+	line-height: 20px;
 	color: var(--proTeam-text-color,black);
 	border: none;
 	border-collapse: collapse;
+	background-color: var(--accent-color-white,white);
 }
 
 /* premierLeague Styling. */
@@ -126,6 +127,12 @@ tr:hover {
 	/* your css here */
 	background-color: #37003d;
 	color: white;
+}
+
+/* Ensure the header row is white and clear the normal header box-shadow. */
+.premierLeague th {
+	background-color: var(--accent-color-white,white);
+	box-shadow: none;
 }
 
 /* Add a highlighting row effect on hover. */
@@ -146,6 +153,12 @@ tr:hover {
 	/* your css here */
 	background-color: #2346A0;
 	color: white;
+}
+
+/* Ensure the header row is white and clear the normal header box-shadow. */
+.championship th {
+	background-color: var(--accent-color-white,white);
+	box-shadow: none;
 }
 
 /* Add a highlighting row effect on hover. */
@@ -234,7 +247,7 @@ tr:hover {
 	font-size: 0.4rem;
 }
 
-
+/* ------------------------------------------------------------------------------------------------------- */
 
 /* History Tab */
 
@@ -300,17 +313,11 @@ cite {
 	text-align: right;
 }
 
+/* ------------------------------------------------------------------------------------------------------- */
+
 /* Stats and Titan Tab */
 
 
 
-/* Widgets Tab */
 
 
-
-/* Text formatting. */
-
-a {
-	color: inherit;
-	text-decoration: underline;
-}
