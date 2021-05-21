@@ -65,9 +65,9 @@ html {
 
 	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
 	max-width: 100%;
-	overflow-x: hidden;
+	/* overflow-x: hidden;
 	overflow-y: hidden;
-	position: relative;
+	position: relative; */
 	/* display: block; */
 }
 
@@ -80,6 +80,13 @@ body {
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0;
+
+	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
+	max-width: 100%;
+	overflow-x: hidden;
+	/* overflow-y: hidden; */
+	position: relative;
+	/* display: block; */
 }
 
 /* Completely disable all vertical scrolling across all pages. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
