@@ -61,7 +61,6 @@
     justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
 }
 
-
 /* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
 .sideMenu-Container {
     /* background: green; */
@@ -77,6 +76,7 @@
     /* background: red; */
     width: 60px;
     height: max-content;
+	height: 3rem; /* Controls the vertical height between each set of icons and links. */
 }
 
 .sideMenu-Icon {
@@ -88,7 +88,8 @@
 .sideMenu-Text-Container {
     /* background: blue; */
     width: 150px;
-    height: max-content; /* Set the div th be the height of the text. */
+    /*height: max-content; /* Set the div to be the height of the text. */
+	height: 2rem;
     text-align: left; /* Left align the text in the div. */
     margin-left: 0px; /* Add spacing between the icon and text. */
 }

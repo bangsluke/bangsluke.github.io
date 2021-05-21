@@ -48,9 +48,6 @@ sideMenuTemplate.innerHTML = `
                     </div>
                 </div>
                 
-                
-                
-                
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
                         <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
@@ -86,6 +83,8 @@ sideMenuTemplate.innerHTML = `
                         <a href="/pages/Group-Page/Sub-Pages/Gallery.html">Gallery</a>
                     </div>
                 </div>
+
+                <br>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Text-Container">

@@ -120,6 +120,7 @@ body {
 	overflow: auto; */
 	overflow-x: hidden;
 	/* overflow-y: hidden; */
+	max-width: 100%;
 }
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
