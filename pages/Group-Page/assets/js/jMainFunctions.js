@@ -20,6 +20,7 @@ function changeSiteTheme(siteThemeName) {
     console.log("siteThemeName = " + siteThemeName + ". siteThemeHref = " + siteThemeHref); // Log the selected site name and href.
     sessionStorage.setItem("siteThemeHref", siteThemeHref); // Save the variable to session storage.
     document.getElementById('css-theme').href = siteThemeHref; // Change the CSS stylesheet used on the page.
+    closeNav(); // Close the side navigation that the function was called from.
     console.log("Site theme changed."); // Log a final success message.
 }
 
