@@ -8,8 +8,9 @@ window.addEventListener('DOMContentLoaded', init)
 // Define a maximum number of possible photos in any one gallery folder.
 var maxImageCount = 20;
 
-// Create an init function that calls the other key functions on page load.
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    getSiteTheme(); // Update the site theme to what the user has selected.
     setGalleryHeaderName(); // Change the header name to reflect which Gallery is being shown.
     populateImageSources(); // Loop through the images populating their sources correctly.
     showVideoSection() // Show the Video Section at the bottom of the Gallery Subpage if the gallery is Football.

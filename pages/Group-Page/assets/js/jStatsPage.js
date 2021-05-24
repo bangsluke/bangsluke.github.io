@@ -111,8 +111,12 @@ console.log(statsObject);
 // Wait for the window to load and then run the init function below. DOMContentLoaded details - (https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 window.addEventListener('DOMContentLoaded', init)
 
-// Initially add a default table and then populate the statistic category dropdown and create the onchange functions for each dropdown.
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+
+    getSiteTheme(); // Update the site theme to what the user has selected.
+
+    // Initially add a default table and then populate the statistic category dropdown and create the onchange functions for each dropdown.
 
     // Log the function call to the console.
     console.log("NEW 0. init() called. Initial stats loaded and statsCategoryDropdown populated with values.")

@@ -2,14 +2,11 @@
 
 // Main Function scripts used across many pages
 
-console.log("Main functions running.");
-
+// Change the site theme style based on user selection.
 function changeSiteTheme(siteThemeName) {
-    
-    console.log("changeSiteTheme clicked.")
-
+    console.log("changeSiteTheme clicked."); // Log that the function has been called.
     sessionStorage.setItem("siteThemeName", siteThemeName); // Save the variable to session storage.
-
+    // Check which site theme has been selected and provide the href link to the CSS sheet.
     if (siteThemeName == "1") {
         siteThemeHref = "OriginalTheme.css";
     } else if (siteThemeName == "2") {
@@ -19,27 +16,20 @@ function changeSiteTheme(siteThemeName) {
     } else {
         siteThemeHref = "OriginalTheme.css"; // Default back to the original if any issues.
     }
-    
-    console.log("siteThemeName = " + siteThemeName);
-
-    siteThemeHref = "/pages/Group-Page/assets/css/Themes/" + siteThemeHref;
-
-    console.log("siteThemeHref = " + siteThemeHref);
-
+    siteThemeHref = "/pages/Group-Page/assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
+    console.log("siteThemeName = " + siteThemeName + ". siteThemeHref = " + siteThemeHref); // Log the selected site name and href.
     sessionStorage.setItem("siteThemeHref", siteThemeHref); // Save the variable to session storage.
-
-    document.getElementById('css-theme').href = siteThemeHref;
-    console.log("Site theme changed.");
+    document.getElementById('css-theme').href = siteThemeHref; // Change the CSS stylesheet used on the page.
+    console.log("Site theme changed."); // Log a final success message.
 }
 
+// For each page, start by getting the site theme.
 function getSiteTheme() {
     var siteThemeName = sessionStorage.getItem("siteThemeName"); // Retrieve the variable passed to session storage.
     var siteThemeHref = sessionStorage.getItem("siteThemeHref"); // Retrieve the variable passed to session storage.
     document.getElementById('css-theme').href = siteThemeHref; // Update the site theme to the defined theme.
-    console.log("siteThemeName = " + siteThemeName);
+    console.log("siteThemeName = " + siteThemeName); // Log a final success message.
 }
-
-
 
 // Full Screen functions (https://stackoverflow.com/a/23971798/14290169).
 

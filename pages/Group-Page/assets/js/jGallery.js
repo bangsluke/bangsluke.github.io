@@ -2,8 +2,14 @@
 
 // Gallery scripts
 
-// Create a function to run when page is loaded.
-window.onload = function () {
+
+// Wait for the window to load and then run the init function below.
+window.addEventListener('DOMContentLoaded', init)
+
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
+function init() {
+    getSiteTheme(); // Update the site theme to what the user has selected.
+
     console.log("Gallery page loaded."); // Provide an initial load message.
     var peaMode = sessionStorage.getItem("peaMode"); // Retrieve the variable passed to session storage.
     console.log("On initial load, peaMode is = " + peaMode); // Check what the initial loaded state is.
@@ -14,6 +20,7 @@ window.onload = function () {
     } else { // If Pea mode was false, do nothing.
         // console.log("Not triggered");
     }
+
 }
 
 // Change the pea mode when the user has clicked on the toggle.

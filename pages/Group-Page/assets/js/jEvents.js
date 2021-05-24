@@ -2,6 +2,14 @@
 
 // Events Page scripts
 
+// Wait for the window to load and then run the init function below.
+window.addEventListener('DOMContentLoaded', init)
+
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
+function init() {
+    getSiteTheme(); // Update the site theme to what the user has selected.
+}
+
 // When the Peter Griffin button is clicked, hide the main Events page content, and flash up the Peter Griffin image for a second.
 function peterButtonClick() {
     console.log("Peter button clicked.")  // Log the function in the console.

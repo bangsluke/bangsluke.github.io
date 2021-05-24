@@ -88,19 +88,19 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Text-Container">
-                    <button onclick="changeSiteTheme(1)">Original Site Theme</button>
+                    <button onclick="changeSiteTheme(1)">Theme 1</button>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Text-Container">
-                        <button onclick="changeSiteTheme(2)">Dark Grey Orange Site Theme</button>
+                        <button onclick="changeSiteTheme(2)">Theme 2</button>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Text-Container">
-                        <button onclick="changeSiteTheme(3)">Blue Green Site Theme</button>
+                        <button onclick="changeSiteTheme(3)">Theme 3</button>
                     </div>
                 </div>
 

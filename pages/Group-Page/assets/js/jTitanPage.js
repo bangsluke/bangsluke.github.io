@@ -33,8 +33,12 @@ var TitanFactorExplainedTableName = "Titan - Explained"
 // Wait for the window to load and then run the init function below. DOMContentLoaded details - (https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
 window.addEventListener('DOMContentLoaded', init)
 
-// Initially add the Titan table.
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+
+    getSiteTheme(); // Update the site theme to what the user has selected.
+
+    // Initially add the Titan table.
 
     // Log the function call to the console.
     console.log("0. init() called. Code started for each of the three sub processes.")

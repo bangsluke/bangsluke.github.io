@@ -19,8 +19,12 @@ console.log("The published spreadsheet is located at " + publicSpreadsheetUrlCSV
 // Wait for the window to load and then run the init function below.
 window.addEventListener('DOMContentLoaded', init)
 
-// Initially call the data in from Google Sheets tab "IndividualsPage" using Papa Parse.
+// The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    
+    getSiteTheme(); // Update the site theme to what the user has selected.
+    
+    // Initially call the data in from Google Sheets tab "IndividualsPage" using Papa Parse.
     Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv", {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
