@@ -1,0 +1,27 @@
+/* Site Theme 1. */
+
+/* The main css style file used for Site Theme 1 styling. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	--main-style-color: #FF3CAC;
+	--main-background-color: darkgrey;
+	--accent-color-1: blue;
+	--accent-color-2: orange;
+	--accent-color-3: maroon;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	--accent-color-black-rgb: 34, 34, 34;
+	--main-font-family: 'Calibri', sans-serif;
+	--headerHeight: 45px; /* Define the header height variable. */
+	--footerHeight: 60px; /* Define the footer height variable. */
+	--table-padding: 0.2rem;
+	--gallery-image-height: 130px; /* For the Gallery page */
+	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
+	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
+	--user-image-height: 5rem; /* For the Users page */
+	--user-name-height: 1.2rem; /* For the Users page */
+	--pagewidth: 98%; /* Used for controlling the width of items on each page */
+	/* line-height: 15px; */
+}

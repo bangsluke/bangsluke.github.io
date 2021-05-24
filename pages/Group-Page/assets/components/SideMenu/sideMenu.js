@@ -88,6 +88,24 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Text-Container">
+                    <button onclick="changeSiteTheme(1)">Original Site Theme</button>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Text-Container">
+                        <button onclick="changeSiteTheme(2)">Dark Grey Orange Site Theme</button>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Text-Container">
+                        <button onclick="changeSiteTheme(3)">Blue Green Site Theme</button>
+                    </div>
+                </div>
+
+                <div class="sideMenu-Container">
+                    <div class="sideMenu-Text-Container">
                         <a href="/pages/Group-Page/index.html">Log Out</a>
                     </div>
                 </div>

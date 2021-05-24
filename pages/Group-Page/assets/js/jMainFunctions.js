@@ -2,6 +2,45 @@
 
 // Main Function scripts used across many pages
 
+console.log("Main functions running.");
+
+function changeSiteTheme(siteThemeName) {
+    
+    console.log("changeSiteTheme clicked.")
+
+    sessionStorage.setItem("siteThemeName", siteThemeName); // Save the variable to session storage.
+
+    if (siteThemeName == "1") {
+        siteThemeHref = "OriginalTheme.css";
+    } else if (siteThemeName == "2") {
+        siteThemeHref = "DarkGreyOrange.css";
+    } else if (siteThemeName == "3") {
+        siteThemeHref = "BlueGreen.css";
+    } else {
+        siteThemeHref = "OriginalTheme.css"; // Default back to the original if any issues.
+    }
+    
+    console.log("siteThemeName = " + siteThemeName);
+
+    siteThemeHref = "/pages/Group-Page/assets/css/Themes/" + siteThemeHref;
+
+    console.log("siteThemeHref = " + siteThemeHref);
+
+    sessionStorage.setItem("siteThemeHref", siteThemeHref); // Save the variable to session storage.
+
+    document.getElementById('css-theme').href = siteThemeHref;
+    console.log("Site theme changed.");
+}
+
+function getSiteTheme() {
+    var siteThemeName = sessionStorage.getItem("siteThemeName"); // Retrieve the variable passed to session storage.
+    var siteThemeHref = sessionStorage.getItem("siteThemeHref"); // Retrieve the variable passed to session storage.
+    document.getElementById('css-theme').href = siteThemeHref; // Update the site theme to the defined theme.
+    console.log("siteThemeName = " + siteThemeName);
+}
+
+
+
 // Full Screen functions (https://stackoverflow.com/a/23971798/14290169).
 
 function isFullScreen() {
@@ -41,8 +80,6 @@ function toggleFullScreen(element) {
         requestFullScreen(element || document.documentElement);
     }
 }
-
-
 
 function zoomOutMobile() {
     console.log("Zoom back out to initial scale.");
