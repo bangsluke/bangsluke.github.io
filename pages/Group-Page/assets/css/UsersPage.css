@@ -5,17 +5,16 @@
 /* Add custom users page styling. */
 
 .glass-card {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	/* width: 90%; */
 	width: var(--pagewidth, 90%);
 	height: max-content;
 	padding: 0.5em 0 0.1em 0; /* Space the content inside the glass card. */
 	margin: 0.7em 0 0.7em 0; /* Add vertical spacing between the glass cards */
-	background: rgba( 255, 255, 255, 0.20 );
 	/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
 	backdrop-filter: blur( 12.0px );
 	-webkit-backdrop-filter: blur( 12.0px );
 	border-radius: 10px;
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .user-container {
@@ -67,8 +66,8 @@
 }
 
 .alias-container {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	/* background-color: red; */
-	background-color: rgba( 255, 255, 255, 0.18 );
 	border-radius: 10px;
 	height: calc(var(--user-image-height) - var(--user-name-height) - 0.3rem);
 	overflow-y: scroll; /* Alows vertical scroll */
@@ -78,10 +77,10 @@
 }
 
 ul {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	list-style-type: circle;
 	list-style: circle;
 	list-style-position: inside;
-	color: var(--accent-color-white, white);
 }
 
 ul > li {
@@ -90,5 +89,6 @@ ul > li {
 }
 
 li:hover {
-	background-color: var(--accent-color-1, pink);
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
 }

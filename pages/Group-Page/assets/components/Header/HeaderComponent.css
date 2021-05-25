@@ -6,20 +6,19 @@
 
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
 .header-area {
-    /* background-color: var(--accent-color-2); */
     left: 0px;
     top: 0px;
     /*--headerHeight: 45px; /* Define the header variable. */
     height: 45px; /* Fallback if needed. */
     height: var(--headerHeight, 45px); /* Get the header height variable from GroupPageMain.css. */
     width: 100%;
-    border-bottom: solid 2px var(--accent-color-white);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 2px;
     z-index: 2;
     position: fixed;
+    border-bottom: solid 2px var(--accent-color-white, white);
 }
 
 /* For homepage only. */
@@ -36,10 +35,10 @@
 /* For subpages. */
 
 .header-area.subpage {
-    background-color: var(--accent-color-2);
+    background-color: var(--accent-color-black, darkgrey);
 }
 
-/* Avatar class for the main image. */
+/* Avatar classes for the main image. */
 .avatar-container {
     /* background-color: maroon; */
     height: 43px; /* Fallback if needed. */
@@ -50,11 +49,11 @@
 
 .avatar {
     background-color: rgba(255, 255, 255, 0.075);
+    border: solid 1px var(--accent-color-white, white);
     height: 43px; /* Fallback if needed. */
     height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
     width: auto;
     border-radius: 100%;
-    border: solid 1px var(--accent-color-white);
     cursor: pointer;
 }
 
@@ -67,12 +66,13 @@
 }
 
 .subpage-header-text {
-    color: var(--accent-color-white);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     height: max-content;
     margin: auto;
+    color: var(--accent-color-white, white);
 }
 
 /* Header area media queries. */
@@ -129,7 +129,8 @@
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/TopMenu.css" */
 
 .topMenu { /* The top menu bar which conatins all further containers. */
-    background: var(--accent-color-black);
+    background: var(--accent-color-black, black);
+    border-left: solid 1px var(--accent-color-1);
     position: fixed;
     height: 80px;
     width: 80%;
@@ -138,7 +139,6 @@
     z-index: 1;
     transition: 0.5s;
     padding-top: 20px;
-    border-left: solid 1px var(--accent-color-1);
 }
 
 .topMenu-Container {
@@ -174,8 +174,8 @@
 }
 
 .topMenu a {
+    color: var(--accent-color-white, white);
     text-decoration: none;
-    color: var(--accent-color-white);
     transition: 0.3s;
     font-size: 18px;
     text-transform: uppercase;
@@ -184,7 +184,6 @@
 
 .topMenu a:hover {
     color: var(--accent-color-2);
-    /* background: var(--accent-color-white); */
 }
 
 
@@ -233,23 +232,21 @@
 
 /* Side Menu CSS */
 
-
-/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/SideMenu.css" */
-
 .burgericon-container {
-    height: 43px;
-    height: calc(var(--headerHeight) - 2px);
-    width: 43px;
-    width: calc(var(--headerHeight) - 2px);
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    width: 43px; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
     padding-right: 5px;
 }
 
 .burgericon {
-    color: var(--accent-color-white);
+    color: var(--accent-color-white, white);
+    filter: invert(1) hue-rotate(180deg);
     top: 0px;
     left: 0px;
-    height: 43px;
-    height: calc(var(--headerHeight) - 2px);
+    height: 43px; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
     width: auto;
     display: block;
     font-size: 40px;
@@ -257,62 +254,150 @@
     padding: 0.5em;
     margin: 0;
     padding: 0;
-    filter: invert(1) hue-rotate(180deg);
+    /* width: 80px; */
+    /* border-style: solid; */
 }
 
 .burgericon:hover {
     color: var(--accent-color-2);
 }
 
+/* SideMenu is the full dark grey side menu that appears. */
+
+.sideMenu {
+	background: var(--accent-color-black, black);
+    height: 100%;
+	width: 0; /* Width of sideMenu is modified dynamically in sideMenu.js. */
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	/* border-left: solid 1px var(--accent-color-1); */
+	display: inline;
+}
+
+/* sideMenu-Main-Container holds all of the smaller icon and text containers. */
+.sideMenu-Main-Container {
+    /* background: orange; */
+    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+/* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
+.sideMenu-Container {
+    /* background: green; */
+    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: row;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+/* sideMenu-Icon-Container holds just the sideMenu-Icon. */
+.sideMenu-Icon-Container {
+    /* background: red; */
+    width: 60px;
+    height: max-content;
+	height: 3rem; /* Controls the vertical height between each set of icons and links. */
+}
+
+.sideMenu-Icon {
+	height: 40px;
+	filter: brightness(0) invert(1);
+	margin-top: 4px;
+}
+
+.sideMenu-Text-Container {
+    /* background: blue; */
+    width: 150px;
+    /*height: max-content; /* Set the div to be the height of the text. */
+	height: 2rem;
+    text-align: left; /* Left align the text in the div. */
+    margin-left: 0px; /* Add spacing between the icon and text. */
+}
+
+.sideMenu a {
+	color: var(--accent-color-white, white);
+    padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.sideMenu a i {
+	padding-right: 15px;
+}
+
+.main-menu a:hover {
+	color: var(--accent-color-2);
+	background: var(--accent-color-white, white);
+}
+
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	padding: 0.2em;
+}
 
 /* Side menu media queries. */
-
 
 /* Mobile size. */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 }
-
 
 /* Scale up for screens larger than mobile. */
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
-    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-    .sideMenu {
-        display: inline;
-        /* Show the side menu for smaller screens. */
-    }
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    /* Covers iPads and other tablets. */
-    .sideMenu {
-        display: inline;
-        /* Show the side menu for smaller screens. */
-    }
+	/* Covers iPads and other tablets. */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
 }
 
 @media only screen and (min-width: 1224px) {
-    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
-    .sideMenu {
-        display: none;
-        /* Hide the side menu for larger screens. */
-    }
-    .burgericon {
-        display: none;
-        /* Hide the burger icon for larger screens. */
-    }
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
 }
 
 @media only screen and (min-width: 1824px) {
-    /* Desktops and Laptops - For larger monitors and displays. */
-    .sideMenu {
-        display: none;
-        /* Hide the side menu for larger screens. */
-    }
-    .burgericon {
-        display: none;
-        /* Hide the burger icon for larger screens. */
-    }
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
 }

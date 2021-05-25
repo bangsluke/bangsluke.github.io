@@ -6,21 +6,6 @@
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
-:root {
-    /* CSS variables - Add variables below like the given example. */
-    --main-style-color: #FF3CAC;
-    --main-background-color: #FF3CAC;
-    --accent-color-1: #FF3CAC;
-    --accent-color-2: #784BA0;
-    --accent-color-3: #2B86C5;
-    --accent-color-white: #ffffff;
-    --accent-color-black: #222222;
-    --main-font-family: 'Calibri', sans-serif;
-    
-    /* Additional snap tabs variables. */
-    --main-style-color-rgb: 255, 60, 172;
-}
-
 /* Added Luke Styling. */
 
 .snap-tabs-container {
@@ -71,19 +56,17 @@ h2:first-of-type {
 }
 
 article {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     box-sizing: border-box;
     font-family: var(--main-font-family);
     font-size: 1rem;
     line-height: 1;
-    color: var(--accent-color-white);
 }
 
 /* Specific snap-tabs styling with elements not used elsewhere on site. */
 
 snap-tabs {
-    --hue: 328deg;
-    --accent: var(--hue) 100% 54%;
-    --accent-reduced: var(--hue) 90% 90%;
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     --indicator-size: 2px;
     --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
@@ -94,7 +77,7 @@ snap-tabs {
 }
 
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
-    outline-color: hsl(var(--accent));
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     outline-offset: -5px;
 }
 
@@ -124,9 +107,7 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
 }
 
 snap-tabs>snap-tabs-header {
-    --text-color: var(--accent-color-black);
-    --text-color: var(--accent-color-3);
-    --text-active-color: var(--accent-color-white);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     flex-shrink: 0;
     min-block-size: -webkit-fit-content;
     min-block-size: -moz-fit-content;
@@ -140,19 +121,20 @@ snap-tabs>snap-tabs-header>nav {
 }
 
 snap-tabs>snap-tabs-header a {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     scroll-snap-align: start;
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
     font-size: .8rem;
-    color: var(--text-color);
     font-weight: 700;
     text-decoration: none;
     padding: var(--vertical-space) var(--horizontal-space);
 }
 
 snap-tabs>snap-tabs-header a:hover {
-    background: hsl(var(--accent)/5%);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
 }
 
 snap-tabs>snap-tabs-header a:focus {
@@ -160,10 +142,10 @@ snap-tabs>snap-tabs-header a:focus {
 }
 
 snap-tabs>snap-tabs-header>.snap-indicator {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     inline-size: 0;
     block-size: var(--indicator-size);
     border-radius: var(--indicator-size);
-    background: hsl(var(--accent));
 }
 
 snap-tabs>section {

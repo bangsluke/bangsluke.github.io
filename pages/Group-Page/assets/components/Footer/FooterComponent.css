@@ -9,9 +9,7 @@
 /* Originally from "/pages/Group-Page/assets/components/Footer/CSS Files/footer.css" */
 
 footer {
-    /* background-color: green; */
-    /* background: var(--accent-color-black); */
-    background-color: rgba(var(--accent-color-black-rgb), 0.5);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     /* grid-area: footer; */
     width: 100%;
     height: 60px; /* Fallback if needed. */
@@ -24,7 +22,6 @@ footer {
 	/* top: -moz-calc(100% - 60px); /* Firefox */
     /* bottom: 0px; */
     top: calc(100vh - 60px);
-    color: var(--accent-color-white, white);
     justify-self: center;
     align-content: center;
     text-align: center;
@@ -38,21 +35,21 @@ footer ul {
 }
 
 footer li {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     display: inline-block;
     padding: none;
     font-size: 0.5rem;
     text-decoration: none;
-    color: var(--accent-color-white);
 }
 
 footer li a {
-    text-decoration: none;
-    color: var(--accent-color-white);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
 }
 
 footer li a:hover {
-    color: var(--accent-color-1);
-    text-decoration: var(--accent-color-white);
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
 }
 
 footer p {
