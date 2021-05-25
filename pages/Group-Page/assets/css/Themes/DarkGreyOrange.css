@@ -368,7 +368,7 @@ input:focus + .slider {
 }
 
 .alias-container {
-	background-color: rgba(var(--accent-color-white), 0.8);
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 h2.user-name {

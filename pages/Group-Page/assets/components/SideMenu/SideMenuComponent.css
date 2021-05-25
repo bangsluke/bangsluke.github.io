@@ -124,6 +124,37 @@
 	padding: 0.2em;
 }
 
+
+/* Style the theme buttons. */
+
+/* Select all three buttons first. */
+.sideMenu-Container button {
+	width: max-content;
+	padding: 0.4rem 0.2rem;
+	margin: 0.2rem;
+	border: none;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 0.1rem;
+}
+
+#button-theme-1 {
+	background-color: #FF3CAC;
+	color: white;
+}
+
+#button-theme-2 {
+	background-color: #32303E;
+	color: #F7573A;
+}
+
+#button-theme-3 {
+	background-color: #2D3047;
+	color: white;
+	box-shadow: 0px 0px 2px 2px var(--accent-color-white, white), 0px 0px 1px 1px var(--accent-color-white, white); /* Add the glowing white effect. */
+}
+
+
 /* Side menu media queries. */
 
 /* Mobile size. */

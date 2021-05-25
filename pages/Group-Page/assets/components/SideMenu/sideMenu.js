@@ -87,21 +87,9 @@ sideMenuTemplate.innerHTML = `
                 <br>
 
                 <div class="sideMenu-Container">
-                    <div class="sideMenu-Text-Container">
-                    <button onclick="changeSiteTheme(1)">Theme 1</button>
-                    </div>
-                </div>
-
-                <div class="sideMenu-Container">
-                    <div class="sideMenu-Text-Container">
-                        <button onclick="changeSiteTheme(2)">Theme 2</button>
-                    </div>
-                </div>
-
-                <div class="sideMenu-Container">
-                    <div class="sideMenu-Text-Container">
-                        <button onclick="changeSiteTheme(3)">Theme 3</button>
-                    </div>
+                        <button onclick="changeSiteTheme(1)" id="button-theme-1">Theme 1</button>
+                        <button onclick="changeSiteTheme(2)" id="button-theme-2">Theme 2</button>
+                        <button onclick="changeSiteTheme(3)" id="button-theme-3">Theme 3</button>
                 </div>
 
                 <div class="sideMenu-Container">

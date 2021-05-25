@@ -152,7 +152,7 @@ body {
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
 	width: var(--pagewidth, 98%);
-	margin: 0.5em auto;
+	margin: 1em auto; /* Add a margin above and below each section. */
 	padding: 0.5em;
 	border-radius: 5px;
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
