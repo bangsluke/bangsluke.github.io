@@ -45,6 +45,7 @@
 	--user-image-height: 5rem; /* For the Users page */
 	--user-name-height: 1.2rem; /* For the Users page */
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
+	--border-radius: 0.2rem;
 	/* line-height: 15px; */
 
 	/* Fonts */
@@ -154,7 +155,7 @@ body {
 	width: var(--pagewidth, 98%);
 	margin: 1em auto; /* Add a margin above and below each section. */
 	padding: 0.5em;
-	border-radius: 5px;
+	border-radius: var(--border-radius, 0.2rem);
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 	/* overflow: auto; */
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
@@ -276,7 +277,21 @@ table {
 	font-size: 0.7rem;
 	border: none;
 	border-collapse: collapse;
-	/* border-collapse: separate; */
+	border-radius: var(--border-radius, 0.2rem);
+}
+
+/* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */
+tr:first-child th:first-child {
+	border-top-left-radius: var(--border-radius, 0.2rem);
+}
+tr:first-child th:last-child {
+	border-top-right-radius: var(--border-radius, 0.2rem);
+}
+tr:last-child td:first-child {
+	border-bottom-left-radius: var(--border-radius, 0.2rem);
+}
+tr:last-child td:last-child {
+	border-bottom-right-radius: var(--border-radius, 0.2rem);
 }
 
 th {

@@ -28,6 +28,12 @@ function changeSiteTheme(siteThemeName) {
 function getSiteTheme() {
     var siteThemeName = sessionStorage.getItem("siteThemeName"); // Retrieve the variable passed to session storage.
     var siteThemeHref = sessionStorage.getItem("siteThemeHref"); // Retrieve the variable passed to session storage.
+    // Default back to the original if any issues.
+    if (siteThemeName == null) {
+        siteThemeName = 2;
+        siteThemeHref = "DarkGreyOrange.css";
+        siteThemeHref = "/pages/Group-Page/assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
+    }
     document.getElementById('css-theme').href = siteThemeHref; // Update the site theme to the defined theme.
     console.log("siteThemeName = " + siteThemeName); // Log a final success message.
 }
