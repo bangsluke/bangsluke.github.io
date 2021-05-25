@@ -14,33 +14,50 @@
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
+	
 	/* CSS variables - Add variables below like the given example. */
-	--main-style-color: #FF3CAC;
+	
+	/* Colours */
+
+	/* The below colour variables are controlled by the theme CSS files. */
+	/* --main-style-color: #FF3CAC;
 	--main-background-color: #FF3CAC;
 	--accent-color-1: #FF3CAC;
 	--accent-color-2: #784BA0;
 	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
-	--accent-color-black: #222222;
+	--accent-color-black: #222222; */
+
+	/* The below colour variables are constant throughout all themes and so exist here. */
 	--accent-color-black-rgb: 34, 34, 34;
-	--main-font-family: 'Calibri', sans-serif;
+	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
+	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
+	--championship-text-color: #2346A0; /* Pro Team Championship Formatting - for the Individuals Page */
+	--championship-accent-color: #FA0F10; /* Pro Team Championship Formatting - for the Individuals Page */
+
+	/* Distances & Spacing */
+
+	/* The below distance variables are constant throughout themes and so exist here. */
 	--headerHeight: 45px; /* Define the header height variable. */
 	--footerHeight: 60px; /* Define the footer height variable. */
 	--table-padding: 0.2rem;
 	--gallery-image-height: 130px; /* For the Gallery page */
-	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
-	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
 	--user-image-height: 5rem; /* For the Users page */
 	--user-name-height: 1.2rem; /* For the Users page */
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	/* line-height: 15px; */
+
+	/* Fonts */
+
+	/* The below font variables are constant throughout all themes and so exist here. */
+	--main-font-family: 'Calibri', sans-serif;
 }
 
 /* HTML updates to cover the full webpage. */
 html {
-	/* background: var(--main-background-color, var(--accent-color-1)); */
 	/* background: orange; */
-	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
 	height: max-content;
@@ -127,8 +144,10 @@ body {
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
+	
 	/* background-color: aqua; */
-	background: rgba( 255, 255, 255, 0.10 );
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	
 	backdrop-filter: blur( 12.0px );
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
@@ -170,7 +189,7 @@ a[target="_blank"]:before, a[target="new"]:before {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, legend {
-	color: var(--accent-color-white);
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
 
@@ -232,45 +251,42 @@ h6 {
 	text-align: center;
 }
 
-fieldset {
+/* fieldset is archived code on the Events.html page. */
+
+/* fieldset {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	border: 1px solid var(--accent-color-white);
 	padding: 0.5em;
-}
+} */
 
-.fieldset-row {
+/* .fieldset-row {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-}
+} */
 
 /* Table classes */
 
 table {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	width: 100%;
 	text-align: center;
 	font-size: 0.7rem;
-	color: var(--accent-color-white);
 	border: none;
 	border-collapse: collapse;
 	/* border-collapse: separate; */
 }
 
 th {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-style: bold; /* Make the header text bold */
 	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
 	position: sticky; /* Make the header row sticky position to lock it out. */
 	top: 0px; /* Make the header row sticky position to lock it out. */
-	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--accent-color-3,red);
-	/*border-bottom: 4px solid var(--accent-color-1, red); /* Add a nice border below the header row */
-	box-shadow: inset 0 0px 0 red, inset 0 -4px 0 var(--accent-color-1, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 }
-
-.stats
 
 td {
 	font-size: 0.6rem;
@@ -279,8 +295,7 @@ td {
 }
 
 tr:hover {
-	background-color: var(--accent-color-1, pink);
-	color: var(--accent-color-white, white);
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font: bold;
 }
 
@@ -296,11 +311,9 @@ tr:hover {
 }
 
 .sticky-col {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: -webkit-sticky;
 	position: sticky;
-	background-color: red;
-	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--accent-color-3,red);
 	z-index: 1;
 }
 
@@ -318,9 +331,9 @@ tr:hover {
 
 /* Add 4th row underline for Titan status. */
 .titan4thRow tr:nth-child(4){
-	border-bottom: 4px double var(--accent-color-1, red);
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
 }
-
 
 /* Add a hidden class for hiding components that are not yet ready. */
 
@@ -328,69 +341,11 @@ tr:hover {
 	display: none;
 }
 
-
 /* Footer Styling */
 
 /* footer {
 	bottom: 0px;
 } */
-
-/* Resizing the webpage for all devices. */
-
-/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
-	240 pixels (old Android portrait mode)
-	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
-	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
-	384 pixels (Android Nexus portrait)
-	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
-	480 pixels (iPhone 3 and 4 landscape mode)
-	568 pixels (iPhone 5 and iPhone SE landscape)
-	600 pixels (Android Nexus landscape, Kindle portrait)
-	667 pixels (iPhone 6, 7 and 8 landscape)
-	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
-	768 pixels (iPad portrait)
-	812 pixels (iPhone X landscape)
-	1024 pixels (iPad landscape) */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-	html {
-		/* background: blue; */
-		background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	}
-}
-
-@media only screen and (min-width: 480px) and (max-width: 1223px) {
-	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-	html {
-		/* background: green; */
-		background-image: linear-gradient(225deg, green 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	}
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	/* Covers iPads and other tablets. */
-	html {
-		/* background: orange; */
-		background-image: linear-gradient(225deg, orange 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	}
-}
-
-@media only screen and (min-width: 1224px) {
-	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-	html {
-		/* background: red; */
-		background-image: linear-gradient(225deg, red 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	}
-}
-
-@media only screen and (min-width: 1824px) {
-	/* Desktops and Laptops - For larger monitors and displays. */
-	html {
-		/* background: yellow; */
-		background-image: linear-gradient(225deg, yellow 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-	}
-}
 
 /* CSS Tips and Tricks. */
 

@@ -4,31 +4,26 @@
 
 /* Specific Homepage Header styling is in HeaderComponent.css. */
 
-
 /* Lock all scrolling just on the homepgae. */
 body {
 	overflow: hidden;
 }
 
-
-
 /* Style the visible text on the homepage. */
 
 .content-text {
-	/* background-color: green; */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	min-height: 450px;
 	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
 	width: 100%; /* Note padding in all-content-area limiting width */
 	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
 	text-align: center; /* Center align both heading texts below. */
-	color: var(--accent-color-white, white); /* Make both heading texts below white font. */
 	transition: transform 250ms; /* Add a transform transition to both sets of text. */
 }
 
 /* The header container around "TITS GROUP PAGE". */
 .headercontainer {
-	background: var(--accent-color-1, pink);
-	/* background-color: red; */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: fixed; /* Lock the position of the box. */
 	top: 38%; /* Set the top position of the box from the top of the screen. */
 	width: 15rem; /* Set the width of the header box. */
@@ -69,7 +64,6 @@ footer {
 	position: fixed;
 	width: 100%;
 }
-
 
 /* Content media queries. */
 
@@ -120,11 +114,10 @@ footer {
 }
 
 .avatar {
-	background-color: rgba(255, 255, 255, 0.075);
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	height: 55px;
 	width: auto;
 	border-radius: 100%;
-	border: solid 1px var(--accent-color-1);
 	cursor: pointer;
 }
 

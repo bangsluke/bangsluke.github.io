@@ -13,8 +13,9 @@
 }
 
 .burgericon {
-    color: var(--accent-color-white);
-    top: 0px;
+    color: var(--accent-color-white, white);
+    filter: invert(1) hue-rotate(180deg);
+	top: 0px;
     left: 0px;
     height: 43px; /* Fallback if needed. */
     height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
@@ -27,23 +28,22 @@
     padding: 0;
     /* width: 80px; */
     /* border-style: solid; */
-    filter: invert(1) hue-rotate(180deg);
 }
 
 .burgericon:hover {
-    color: var(--accent-color-2);
+	color: var(--accent-color-2);
 }
 
 /* SideMenu is the full dark grey side menu that appears. */
 
 .sideMenu {
+	background: var(--accent-color-black, black);
 	height: 100%;
 	width: 0; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
 	z-index: 3;
 	top: 0;
 	right: 0;
-	background: var(--accent-color-black);
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
@@ -95,9 +95,9 @@
 }
 
 .sideMenu a {
+	color: var(--accent-color-white, white);
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	color: var(--accent-color-white);
 	display: block;
 	transition: 0.3s;
 	font-size: 18px;
@@ -112,7 +112,7 @@
 
 .main-menu a:hover {
 	color: var(--accent-color-2);
-	background: var(--accent-color-white);
+	background: var(--accent-color-white, white);
 }
 
 .sideMenu .closebtn {

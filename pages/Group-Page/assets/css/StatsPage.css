@@ -53,14 +53,14 @@ select {
 
 /* Syle the displayed stats information. */
 
-/* Add a min heigh to the stats holding div so it doesn't look weird on initial load when there's no data. */
+/* Add a min height to the stats holding div so it doesn't look weird on initial load when there's no data. */
 .stats-page-section {
 	min-height: 10rem;
 }
 
 #stats-title {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	text-align: center;
-	color: var(--accent-color-white, white);
 	padding-bottom: 1em;
 }
 
@@ -74,7 +74,7 @@ select {
 /* Reporting Link formatting */
 
 .reporting-link-container {
-	color: white;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	text-align: center;
 	font-size: 10px;
 }
