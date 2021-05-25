@@ -603,6 +603,10 @@ A collection of tools to support web development. Some are very much untried.
 
 #### CSS Examples
 
+##### Learn CSS
+- [Learn CSS Web Dev Course](https://web.dev/learn/css/)
+- [CSS Viewport Units](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
+
 ##### CSS Formatting
 - [Centering in CSS](https://moderncss.dev/complete-guide-to-centering-in-css/)
 - [CSS position](https://webdevsimplified.com/css-position.html)
@@ -616,11 +620,13 @@ A collection of tools to support web development. Some are very much untried.
 ##### CSS Transitions
 - [CSS Transitions](https://www.joshwcomeau.com/animation/css-transitions/)
 - [CSS Transitions examples](https://www.freecodecamp.org/news/css-transition-examples/)
+- [CSS Gradient Background Animation](https://www.codingflicks.com/2021/05/pure-css-gradient-background-animation.html)
 
 ##### CSS Component Examples
 - [Shrink Text on Hover](https://www.codingflicks.com/2021/02/shrink-text-on-hover.html)
 - [CSS buttons](https://www.codingflicks.com/2021/01/css-buttons.html)
 - [CSS loading page](https://www.codingflicks.com/2020/12/pure-css-loading-animation.html)
+- [CSS Buttons Styles](https://dev.to/gscode/20-css-buttons-4cni)
 
 ##### CSS Grid & Flexbox
 - [CSS Grids](https://jst.hashnode.dev/css-grid-tutorial)
