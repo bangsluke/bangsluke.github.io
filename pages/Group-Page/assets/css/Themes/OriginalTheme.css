@@ -373,6 +373,7 @@ li:hover {
 		html {
 			/* background: blue; */
 			background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+			background-color: red;
 		}
 	}
 	
@@ -381,6 +382,7 @@ li:hover {
 		html {
 			/* background: green; */
 			background-image: linear-gradient(225deg, green 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+			background-color: red;
 		}
 	}
 	
@@ -389,6 +391,7 @@ li:hover {
 		html {
 			/* background: orange; */
 			background-image: linear-gradient(225deg, orange 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+			background-color: red;
 		}
 	}
 	
@@ -397,6 +400,7 @@ li:hover {
 		html {
 			/* background: red; */
 			background-image: linear-gradient(225deg, red 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+			background-color: red;
 		}
 	}
 	
@@ -405,5 +409,6 @@ li:hover {
 		html {
 			/* background: yellow; */
 			background-image: linear-gradient(225deg, yellow 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
+			background-color: red;
 		}
 	}
