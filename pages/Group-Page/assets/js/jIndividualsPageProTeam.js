@@ -79,9 +79,15 @@ function generateTableHead(table, data) {
 
 function generateTable(table, data) {
     console.log("generateTable called.") // Log an initial message to show the function has been called.
+    
+    
     for (let element of data) { // Loop through each row of the data.
+        
+        console.log("CHECK HERE - ROW - element " + element);
+        
         let row = table.insertRow(); // Insert a row for each bit of table data.
         for (key in element) { // Loop through each cell in each row.
+            console.log("CHECK HERE - ROW - element[key] " + element[key]);
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.

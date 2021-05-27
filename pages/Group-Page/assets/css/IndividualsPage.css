@@ -9,13 +9,6 @@
 	padding-top: 0px;
 }
 
-/* Text formatting. */
-
-a {
-	color: inherit;
-	text-decoration: underline;
-}
-
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* Profile Tab */
@@ -34,11 +27,9 @@ a {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	width: 100%;
 	text-align: center;
-	font-size: 14px;
 }
 
 .individualsTable td {
-	font-size: 0.7rem;
 	text-align: left;
 	line-height: 20px;
 }
@@ -88,7 +79,8 @@ a {
 #proTeamLeagueLogo {
 	width: 80%;
 	height: auto;
-	margin: auto auto 1rem auto;
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	padding-bottom: 1rem;
 }
 
 /* Wrapper div around the pro team table. */
@@ -107,10 +99,13 @@ a {
 	text-align: center;
 	font-size: 0.7rem;
 	line-height: 20px;
-	color: var(--proTeam-text-color,black);
 	border: none;
 	border-collapse: collapse;
 	background-color: var(--accent-color-white,white);
+}
+
+#pro-team-table td, #pro-team-table th {
+	color: var(--proTeam-text-color,black);
 }
 
 /* premierLeague Styling. */
@@ -122,9 +117,9 @@ a {
 
 /* Select the 4th row to highlight the selected team. */
 .premierLeague>thead>:nth-child(4){ 
-	/* your css here */
 	background-color: var(--proTeam-text-color, #37003d);
-	color: var(--accent-color-white,white);
+	color: var(--accent-color-white,white) !important;
+	color: white !important;
 }
 
 /* Ensure the header row is white and clear the normal header box-shadow. */
@@ -170,6 +165,7 @@ a {
 
 /* Add a header container section to hold the logo and title. */
 .dorkiniansHeaderContainer {
+	/* background-color: blue; */
 	display: grid;
 	grid-column-gap: 10px;
 	grid-template-columns: 60px 70%;
@@ -186,7 +182,7 @@ a {
 #dorkiniansLogo {
 	height: 60px;
 	width: auto;
-	margin: 0 auto;
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 	/* filter: brightness(0) invert(1); */
 }
 
@@ -200,7 +196,7 @@ a {
 }
 
 .dorkiniansHeaderText {
-	margin: auto;
+	margin: auto 0; /* Add an auto margin above and below the text to vertically center align the header. */
 }
 
 .dorkiniansTableHeaderText {
@@ -213,6 +209,13 @@ a {
 .AFCTable table {
 	/* background-color: blue; */
 	margin-left: -0.4rem;
+	width: 100%;
+}
+
+/* Reset the colour of the hyperlinks in the AFCTable. */
+.AFCTable a {
+	/* background-color: blue; */
+	color: #333;
 }
 
 /* Offset the England Logo back into place. */
@@ -223,7 +226,7 @@ a {
 
 /* Make the font size in the table smaller to fit the table in. */
 .AFCTable table td {
-	font-size: 0.4rem;
+	/* font-size: 0.4rem; */
 }
 
 /* AFC Results and Fixtures Formatting */
@@ -255,10 +258,24 @@ a {
 
 /* Ashcombe School */
 
+#ashcombeSchoolLogoContainer {
+	display: flex; /* Add flexbox to the container. */
+	flex-direction: row; /* Wrap along in a row direction. */
+	flex-wrap: nowrap; /* Don't allow the images to wrap down onto different lines. */
+}
+
 #ashcombeLogo {
-	width: 100%;
-	height: auto;
-	margin: auto;
+	height: 3rem;
+	width: auto;
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	align-self: center; /* Vertically center the image. */
+}
+
+#ashcombeLogoText {
+	height: 3.5rem;
+	width: auto;
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	align-self: center; /* Vertically center the image. */
 }
 
 /* Brockham Badgers */
@@ -280,8 +297,7 @@ a {
 #brockhamBadgersLogo {
 	height: 60px;
 	width: auto;
-	margin: 0 auto;
-	filter: brightness(0) invert(1);
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 .brockhamBadgersTextContainer {
@@ -294,7 +310,7 @@ a {
 }
 
 .brockhamBadgersHeaderText {
-	margin: auto;
+	margin: auto 0; /* Add an auto margin above and below the text to vertically center align the header. */
 }
 
 #brockhamBadgersPicture {

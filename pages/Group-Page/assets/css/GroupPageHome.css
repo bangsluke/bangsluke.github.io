@@ -35,14 +35,14 @@ body {
 /* The main header text. */
 .content-text h1 {
 	display: inline-block;
-	font-size: 1.3rem;
+	/* font-size: 1.3rem; */
 }
 
 /* The sub header container around "CLICK TO ENTER". */
 .subheadercontainer {
 	/* background-color: red; */
 	position: fixed; /* Lock the position of the box. */
-	top: 48%; /* Set the top position of the box from the top of the screen. */
+	top: 53%; /* Set the top position of the box from the top of the screen. */
 	width: 12rem; /* Set the width of the sub header box. */
 	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
 	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
@@ -50,12 +50,12 @@ body {
 
 /* The sub header text. */
 .content-text h3 {
-	font-size: 1.2rem;
+	/* font-size: 1.2rem; */
 	/* letter-spacing: 1px; */
 }
 
 /* Add a hover animation to both clickable links. */
-.content-text h1:hover, .content-text h3:hover {
+.content-text h3:hover {
 	transform: translateY(-5px); /* Make the text move slightly up on hover. */
 }
 

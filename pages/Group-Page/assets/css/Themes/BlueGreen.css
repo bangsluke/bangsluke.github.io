@@ -44,16 +44,37 @@ html {
 
 /* Text styling. */
 
-h1, h2, h3, h4, h5, h6, p, ul, legend {
+h1, h3, h4, h5, h6, p, th, tr, td, small, section, article, span, ul, li, legend, select, option, button {
 	color: var(--accent-color-white, white);
 }
 
+/* Specifically style the h2 header text to be a different colour. */
 h2 {
 	color: var(--accent-color-2, orange);
 }
 
+/* Specifically style the a hyperlink text to be a different colour. */
 a {
 	color: var(--accent-color-2, orange);
+}
+
+/* Add a class that can be added to text to give it the theme colour. */
+.theme-colour-text {
+	color: var(--accent-color-2, orange);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Component classes */
+
+/* Used for dropdown selection lists text across the site. */
+select, option {
+	color: black; /* Select the colour of the font for the dropdown components. */
+}
+
+/* Used for buttons text across the site. */
+button {
+	color: black; /* Select the colour of the font for the dropdown components. */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -332,19 +353,37 @@ input:focus + .slider {
 
 /* Add individuals table styling. */
 
-.individualsTable {
-	color: var(--accent-color-white, white);
-}
-
 .individualsTable tr:hover {
 	background-color: var(--accent-color-1, pink);
 	color: var(--accent-color-white, white);
 }
 
-.individualsTable td {
-	color: var(--accent-color-2, white);
+/* Consider inverting the logos to make them white. */
+
+#proTeamLeagueLogo {
+	filter: brightness(0) invert(1);
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
+#dorkiniansLogo {
+	/* filter: brightness(0) invert(1); */
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+}
+
+#ashcombeLogo {
+	/* filter: brightness(0) invert(1); */
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+}
+
+#ashcombeLogoText {
+	filter: brightness(0) invert(1);
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+}
+
+#brockhamBadgersLogo {
+	filter: brightness(0) invert(1);
+	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+}
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 

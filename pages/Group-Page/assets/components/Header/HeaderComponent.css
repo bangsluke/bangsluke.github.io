@@ -67,9 +67,6 @@
 
 .subpage-header-text {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
     height: max-content;
     margin: auto;
     color: var(--accent-color-white, white);
@@ -177,7 +174,6 @@
     color: var(--accent-color-white, white);
     text-decoration: none;
     transition: 0.3s;
-    font-size: 18px;
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -328,7 +324,6 @@
 	text-decoration: none;
 	display: block;
 	transition: 0.3s;
-	font-size: 18px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-weight: 900;

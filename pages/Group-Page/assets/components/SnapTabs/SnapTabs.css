@@ -24,7 +24,6 @@
     justify-content: center;
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-    /* font-family: var(--main-font-family); */
     z-index: 1;
     /* visibility: hidden; */
 }
@@ -34,7 +33,6 @@
 p {
     max-inline-size: 35ch;
     margin-block: .5ch;
-    font-family: var(--main-font-family);
 }
 
 p+p {
@@ -47,7 +45,6 @@ h2 {
     -webkit-margin-after: .5rem;
     margin-block-end: .5rem;
     line-height: 1;
-    font-family: var(--main-font-family);
 }
 
 h2:first-of-type {
@@ -58,7 +55,6 @@ h2:first-of-type {
 article {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     box-sizing: border-box;
-    font-family: var(--main-font-family);
     font-size: 1rem;
     line-height: 1;
 }
@@ -126,8 +122,7 @@ snap-tabs>snap-tabs-header a {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
-    font-size: .8rem;
-    font-weight: 700;
+    font-size: 1rem; /* Make the snap-tabs-header hyperlinks larger than normal hyperlinks. */
     text-decoration: none;
     padding: var(--vertical-space) var(--horizontal-space);
 }

@@ -47,30 +47,24 @@
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.2rem;
 	/* line-height: 15px; */
-
-	/* Fonts */
-
-	/* The below font variables are constant throughout all themes and so exist here. */
-	--main-font-family: 'Calibri', sans-serif;
 }
 
 /* HTML updates to cover the full webpage. */
 html {
 	/* background: orange; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
-
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+	
 	height: max-content;
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
-
-	font-family: var(--main-font-family, 'Calibri'); /* Specify the main font family to be used across the site. */
-	font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
-	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
-
 	overflow-y: scroll;
+
+	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
+	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
+	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 }
 
 /* Add code below. */
@@ -82,13 +76,7 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-
-	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
-	max-width: 100%;
-	/* overflow-x: hidden;
-	overflow-y: hidden;
-	position: relative; */
-	/* display: block; */
+	max-width: 100%; /* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */  /* overflow-x: hidden;  overflow-y: hidden;  position: relative; */  /* display: block; */
 }
 
 /* Generic body class for all HTML pages using this CSS format. */
@@ -96,7 +84,6 @@ body {
 	top: 0px;
 	left: 0px;
 	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
-	font-family: inherit;
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0;
@@ -145,7 +132,6 @@ body {
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
-	
 	/* background-color: aqua; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	
@@ -169,49 +155,90 @@ body {
 
 /* Text styling. */
 
-h1, h2, h3, h4, h5, h6, p, ul, legend {
+h1, h2, h3, h4, h5, h6, p, a, th, tr, td, small, section, article, span, ul, li, legend, select, option, button {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
 
 /* Font Families */
 
-h1, h2, h3, h4, h5, h6 {
+/* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
+h1, h2, h3, h4, h5, h6, span {
 	font-family: 'Montserrat', sans-serif;
 }
 
-p, a, tr, td, small {
+/* Apply the 'Roboto' body font style to all body elements. */
+p, a, th, tr, td, small, section, article, ul, li, legend, select, option, button {
 	font-family: 'Roboto', sans-serif;
 }
 
+/* Define the sizes and other styles to each individual text style. */
 
+/* Used for top header text. */
 h1 {
-	font-size: 1rem;
+	font-size: 32px; /* Fallback value. */
+  	font-size: 2rem; /* Relative to root value. */
+  	text-transform: uppercase;
+  	/* margin-bottom: 1rem; */ /* h1 doesn't need a margin-bottom as no other text is ever below it. */
+	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
 }
 
+/* Used for main headers in page-content section. */
 h2 {
-	font-size: 0.9rem;
+	font-size: 24px; /* Fallback value. */
+	font-size: 1.5rem; /* Relative to root value. */
 	text-transform: uppercase;
+	margin-bottom: 0.75rem;
 }
 
+/* Used for smaller headers in page-content section. */
 h3 {
-	font-size: 0.8rem;
+	font-size: 19px; /* Fallback value. */
+	font-size: 1.2rem; /* Relative to root value. */
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
 }
 
+/* Used for even smaller headers in page-content section. */
 h4 {
-	font-size: 0.7rem;
+	font-size: 18px; /* Fallback value. */
+	font-size: 1.1rem; /* Relative to root value. */
+	margin-bottom: 0.5rem;
 }
 
+/* Used for even smaller headers in page-content section. */
 h5 {
-	font-size: 0.6rem;
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+	margin-bottom: 0.25rem;
 }
 
+/* Used for the smallest headers in page-content section. */
 h6 {
-	font-size: 0.5rem;
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+	margin-bottom: 0.25rem;
+	font-style: italic;
 }
 
+/* Used for the header text across the site in the header-component. */
+span {
+	font-size: 21px; /* Fallback value. */
+	font-size: 1.3rem; /* Relative to root value. */
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* Used for text bulk on page. */
+p {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+}
+
+/* Used for hyperlinks across the site. */
 a {
-	color: inherit;
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
 	text-decoration: none;
 }
 
@@ -224,6 +251,67 @@ a[target="_blank"]:before, a[target="new"]:before {
 	background:#ff9;
 	font:12px “Zapf Dingbats”;
 	content: “\279C”;
+}
+
+/* Used for table headers across the site. */
+th {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-style: bold; /* Make the header text bold */
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
+	position: sticky; /* Make the header row sticky position to lock it out. */
+	top: 0px; /* Make the header row sticky position to lock it out. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
+}
+
+/* Used for table rows across the site. */
+tr {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+}
+
+/* Used for table cell text across the site. */
+td {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
+}
+
+/* Used for small text quotes and sources. */
+small {
+	font-size: 8px; /* Fallback value. */
+	font-size: 0.5rem; /* Relative to root value. */
+}
+
+/* section and article don't need further CSS rules. */
+
+/* Used for unordered and ordered lists text across the site. */
+ul, li {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+}
+
+/* legend is an unused property. */
+
+/* Used for dropdown selection lists text across the site. */
+select, option {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+}
+
+select {
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+}
+
+
+/* Used for buttons text across the site. */
+button {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
 }
 
 /* Text Styles */
@@ -283,7 +371,6 @@ table {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	width: 100%;
 	text-align: center;
-	font-size: 0.7rem;
 	border: none;
 	border-collapse: collapse;
 	border-radius: var(--border-radius, 0.2rem);
@@ -301,21 +388,6 @@ tr:last-child td:first-child {
 }
 tr:last-child td:last-child {
 	border-bottom-right-radius: var(--border-radius, 0.2rem);
-}
-
-th {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	font-style: bold; /* Make the header text bold */
-	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
-	position: sticky; /* Make the header row sticky position to lock it out. */
-	top: 0px; /* Make the header row sticky position to lock it out. */
-	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
-}
-
-td {
-	font-size: 0.6rem;
-	text-align: center;
-	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 }
 
 tr:hover {

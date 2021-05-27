@@ -20,12 +20,14 @@
     <meta name="robots" content="nofollow" />
 
     <!-- Link to fonts to be used on site. -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
 
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
-    <link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+    <link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+        id="css-theme" /> <!-- CSS site theme -->
     <link href="/pages/Group-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet"> <!-- SnapTabs styling -->
     <link href="/pages/Group-Page/assets/css/IndividualsPage.css" rel="stylesheet"> <!-- Individuals Page styling -->
 
@@ -93,7 +95,7 @@
                         <!-- Profile Image Section -->
                         <!-- <section class="page-section"> -->
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                        <img src="/pages/Group-Page/assets/images/Placeholder.png"
                             class="center fadein" alt="Individuals Profile Photo" id="profilePicture">
 
                         <!-- </section> -->
@@ -101,7 +103,9 @@
                         <!-- Profile Detail Section -->
                         <section class="page-section">
 
-                            <h3 id="fullName">Name</h3>
+                            <h2 class="textcenter" id="fullName">Name</h2>
+
+                            <h4 class="textcenter hidden" id="andyTitles">MEng CEng MICE</h4>
 
                             <!-- Add a table that stores all of the pieces of individuals information. -->
                             <table class="individualsTable">
@@ -141,28 +145,28 @@
                                             src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png">
                                     </td>
                                     <td>Email:</td>
-                                    <td><a id="email" href="_blank" alt>--</a></td>
+                                    <td><a class="underline" id="email" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Facebook Logo" class="individualsPageIcon"
                                             src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png">
                                     </td>
                                     <td>Facebook:</td>
-                                    <td><a id="facebook" href="_blank" alt>--</a></td>
+                                    <td><a class="underline" id="facebook" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Twitter Logo" class="individualsPageIcon"
                                             src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png">
                                     </td>
                                     <td>Twitter:</td>
-                                    <td><a id="twitter" href="_blank" alt>--</a></td>
+                                    <td><a class="underline" id="twitter" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Instagram Logo" class="individualsPageIcon"
                                             src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png">
                                     </td>
                                     <td>Instagram:</td>
-                                    <td><a id="instagram" href="_blank" alt>--</a></td>
+                                    <td><a class="underline" id="instagram" href="_blank" alt>--</a></td>
                                 </tr>
 
                             </table>
@@ -176,8 +180,9 @@
 
                             <div class="subpage-content-area fadein">
 
-                                <h6 class="reporting-link center underline" onclick="dataMessage()">I'm not happy with
-                                    how my personal data is being used</h6>
+                                <p class="reporting-link center underline theme-colour-text" onclick="dataMessage()">I'm
+                                    not happy with
+                                    how my personal data is being used</p>
 
                             </div>
 
@@ -208,7 +213,7 @@
                         <!-- Football Header Image Section -->
                         <!--<section class="page-section"> -->
 
-                        <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                        <img src="/pages/Group-Page/assets/images/Placeholder.png"
                             class="center fadein" alt="Football Header" id="footballHeader">
 
                         <!--</section> -->
@@ -216,7 +221,7 @@
                         <!-- Pro Team Table Section -->
                         <section class="page-section">
 
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                            <img src="/pages/Group-Page/assets/images/Placeholder.png"
                                 class="center fadein" alt="League Logo" id="proTeamLeagueLogo">
 
                             <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
@@ -226,7 +231,8 @@
                                 </table>
                             </div>
 
-                            <a target="_blank" href="#_" id="proTeamLeagueURL" class="center">Click here for full table</a>
+                            <a target="_blank" href="#_" id="proTeamLeagueURL" class="center underline">Click here for
+                                full table</a>
 
                         </section>
 
@@ -246,7 +252,7 @@
 
                                 <div class="dorkiniansTextContainer">
 
-                                    <h3 class="dorkiniansHeaderText">Dorkinians</h3>
+                                    <h3 class="dorkiniansHeaderText textleft">Dorkinians</h3>
 
                                 </div>
 
@@ -257,10 +263,10 @@
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Premier</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep118512309" class="AFCTable" style="width: 300px;">Data loading....<a
+                                <div id="lrep118512309" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
                                         here for Premier Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -275,7 +281,7 @@
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
                             <div id="dorkinians2sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Senior Two</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Senior Two</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep710535041" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -293,7 +299,7 @@
                             <!-- Add a div to hold the Dorkinians 3s code within. -->
                             <div id="dorkinians3sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC One South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep57161422" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -311,7 +317,7 @@
                             <!-- Add a div to hold the Dorkinians 4s code within. -->
                             <div id="dorkinians4sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Four South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep778268394" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -329,7 +335,7 @@
                             <!-- Add a div to hold the Dorkinians 5s code within. -->
                             <div id="dorkinians5sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Five South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Five South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep190854409" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -347,7 +353,7 @@
                             <!-- Add a div to hold the Dorkinians 6s code within. -->
                             <div id="dorkinians6sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Six South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep311599615" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -365,7 +371,7 @@
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
                             <div id="dorkinians7sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Seven South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Seven South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep93079112" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -383,7 +389,7 @@
                             <!-- Add a div to hold the Dorkinians 8s code within. -->
                             <div id="dorkinians8sTable">
 
-                                <h3 class="dorkiniansTableHeaderText">AFC Eight South</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep812886273" class="AFCTable" style="width: 300px;">Data loading....<a
@@ -398,19 +404,21 @@
 
                             </div>
 
-                            <button class="center" id="toggleResultsAndFixtures" onclick="toggleResultsAndFixturesSection()">Show results and fixtures details</button>
+                            <button class="center" id="toggleResultsAndFixtures"
+                                onclick="toggleResultsAndFixturesSection()">Show results and fixtures details</button>
 
                         </section>
 
                         <!-- Dorkinians Results and Fixtures Section -->
-                        <section class="page-section page-section-added-bottom-margin hidden" id="results-and-fixtures-section">
+                        <section class="page-section page-section-added-bottom-margin hidden"
+                            id="results-and-fixtures-section">
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 1s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and Fixtures</h4>
 
                                 <div id="lrep884356525" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -428,7 +436,7 @@
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
                             <div id="dorkinians2sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 2s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and Fixtures</h4>
 
                                 <div id="lrep678186881" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -446,16 +454,16 @@
                             <!-- Add a div to hold the Dorkinians 3s code within. -->
                             <div id="dorkinians3sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 3s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 3s Results and Fixtures</h4>
 
-                                <p>Dorkinians III ended season early.</p>
+                                <p>Dorkinians III ended season early and so there is no table data to show, as the team was removed from the league.</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 4s code within. -->
                             <div id="dorkinians4sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 4s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and Fixtures</h4>
 
                                 <div id="lrep355450147" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -473,7 +481,7 @@
                             <!-- Add a div to hold the Dorkinians 5s code within. -->
                             <div id="dorkinians5sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 5s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 5s Results and Fixtures</h4>
 
                                 <div id="lrep318288599" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -491,16 +499,16 @@
                             <!-- Add a div to hold the Dorkinians 6s code within. -->
                             <div id="dorkinians6sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 6s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 6s Results and Fixtures</h4>
 
-                                <p>Dorkinians VI ended season early.</p>
+                                <p>Dorkinians VI ended season early and so there is no table data to show, as the team was removed from the league.</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
                             <div id="dorkinians7sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 7s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and Fixtures</h4>
 
                                 <div id="lrep531227286" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -518,7 +526,7 @@
                             <!-- Add a div to hold the Dorkinians 8s code within. -->
                             <div id="dorkinians8sResultsAndFixtures">
 
-                                <h3 class="dorkiniansTableHeaderText">Dorkinians 8s Results and Fixtures</h3>
+                                <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and Fixtures</h4>
 
                                 <div id="lrep568890794" class="AFCResultsAndFixtures" style="width: 300px;">Data
                                     loading....<a
@@ -542,8 +550,12 @@
                         <!-- Ashcombe Quote Section -->
                         <section class="page-section">
 
-                            <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo.png"
-                                class="center fadein" alt="Ashcombe School Logo" id="ashcombeLogo">
+                            <div class="center fadein" id="ashcombeSchoolLogoContainer">
+                                <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo - Logo.png"
+                                    alt="Ashcombe School Logo" id="ashcombeLogo">
+                                <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo - Text.png"
+                                    alt="Ashcombe School Logo Text" id="ashcombeLogoText">
+                            </div>
 
                             <br>
 
@@ -591,7 +603,7 @@
 
                             <br>
 
-                            <img src="http://www.europe-together.eu/wp-content/themes/sd/images/user-placeholder.svg"
+                            <img src="/pages/Group-Page/assets/images/Placeholder.png"
                                 class="center fadein" alt="Brockham Badgers Photo" id="brockhamBadgersPicture">
 
                             <br>
@@ -685,7 +697,7 @@
                         <!-- Stats Section -->
                         <section class="page-section">
 
-                            <h2>Stats</h2>
+                            <h3>Stats</h3>
                             <p>Add high level summary of key stats of user.</p>
 
                         </section>
@@ -693,7 +705,7 @@
                         <!-- Titan Section -->
                         <section class="page-section page-section-added-bottom-margin">
 
-                            <h2>Titan Status</h2>
+                            <h3>Titan Status</h3>
                             <p>- Have a summary of number of Titan spots owned.</p>
                             <p>- Add biggest Titan lead?</p>
 
@@ -744,7 +756,8 @@
     <!-- Get Individuals Page Dorkinians JS -->
     <!-- Get the second (and main) PapaParse JS -->
     <script src="/pages/Group-Page/assets/js/jIndividualsPage.js"></script> <!-- Get Individuals Page JS -->
-    <script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+    <script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+    <!-- Add the Main Functions JS -->
 
 </body>
 
