@@ -41,7 +41,7 @@ html {
 
 /* Text styling. */
 
-h1, h3, h4, h5, h6, p, th, tr, td, small, section, article, span, ul, li, legend, select, option, button {
+h1, h3, h4, h5, h6, p, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
 	color: var(--accent-color-white, white);
 }
 

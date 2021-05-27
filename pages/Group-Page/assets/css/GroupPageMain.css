@@ -155,7 +155,7 @@ body {
 
 /* Text styling. */
 
-h1, h2, h3, h4, h5, h6, p, a, th, tr, td, small, section, article, span, ul, li, legend, select, option, button {
+h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, span {
 }
 
 /* Apply the 'Roboto' body font style to all body elements. */
-p, a, th, tr, td, small, section, article, ul, li, legend, select, option, button {
+p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, button {
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -280,10 +280,16 @@ td {
 	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 }
 
+/* Used for quotes mainly on individuals page. */
+q {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+}
+
 /* Used for small text quotes and sources. */
-small {
-	font-size: 8px; /* Fallback value. */
-	font-size: 0.5rem; /* Relative to root value. */
+cite {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
 }
 
 /* section and article don't need further CSS rules. */
