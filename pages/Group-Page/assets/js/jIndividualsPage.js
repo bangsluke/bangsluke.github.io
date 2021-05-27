@@ -100,6 +100,7 @@ function getData(data, selectedUserName) {
     // Old code solution.
     //var lrcode = data[foundRow].dorkiniansLeagueCode;
     //getDorkiniansTable(lrcode);
+    document.getElementById("dorkiniansMainHeaderText").innerHTML = "Dorkinians " + data[foundRow].dorkiniansTeam + "s"; // Modify the text inside the element.
 
     // Add code here to show hide tables.
     var DorkiniansTeam = parseInt(data[foundRow].dorkiniansTeam);
