@@ -461,6 +461,7 @@ A collection of tools to support web development. Some are very much untried.
 
 #### CSS Gradients (best to worst)
 - [Gradient Generator Tool](https://learnui.design/tools/gradient-generator.html)
+- [Complex gradient generator](https://colorgradient.dev/)
 - [CSS Gradient Tool](https://cssgradient.io/)
 - [Grabient](https://www.grabient.com/)
 - [CSS easing gradients](https://larsenwork.com/easing-gradients/)
