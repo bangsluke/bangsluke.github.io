@@ -9,10 +9,8 @@
 	/* background-color: rgba(255, 255, 255, 0.2); */
 	height: max-content;
 	width: 100%;
-	margin: auto;
-	/* margin-top: 2em; */
-	padding: 1em;
-	border-radius: 10px;
+	/* padding: 1rem; No need for padding as padding coming from the parent div "page-section". */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius. */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between; /* Add horizontal space between each element. */
@@ -25,21 +23,17 @@
 	/* background-color: red; */
 	text-align: center;
 	min-width: 40%;
-	/* width: 50%; */
 	width: 450px;
 	flex: 0 1 auto;
 	align-self: flex-start; /* Vertically align the element within the container. */
-	margin-bottom: 10px;
-}
-
-.dropdown-div h3 {
-	font-size: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .stats-dropdown {
 	/* background-color: rgba(255, 255, 255, 0.1); */
 	width: 80%;
 	margin: auto;
+	margin-top: 0.5rem; /* Add spacing betwen the p text and the dropdown box. */
 }
 
 /* Change font size of dropdown so that mobile doesn't zoom. (https://github.com/jquery/jquery-mobile/issues/2069). */
@@ -57,24 +51,20 @@
 #stats-title {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	text-align: center;
-	padding-bottom: 1em;
+	padding-bottom: 0.5rem;
 }
 
-.stats-table-area {
-	height: max-content;
-	width: 96%;
-	margin: auto;
-	margin-top: 2em;
+#stats-source {
+	margin-top: 1rem; /* Add space from the last updated text to the source text. */
 }
 
 /* Reporting Link formatting */
 
-.reporting-link-container {
+.reporting-link {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	text-align: center;
-	font-size: 10px;
 }
 
 .reporting-link:hover {
-	text-decoration: underline;
+	color: var(--accent-color-white, white);
 }

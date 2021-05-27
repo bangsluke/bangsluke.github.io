@@ -65,6 +65,11 @@
 	width: 35%;
 }
 
+.reporting-link:hover {
+	color: var(--accent-color-white, white);
+}
+
+
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* Football Tab */
@@ -80,7 +85,7 @@
 	width: 80%;
 	height: auto;
 	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
-	padding-bottom: 1rem;
+	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 /* Wrapper div around the pro team table. */
@@ -104,8 +109,12 @@
 	background-color: var(--accent-color-white,white);
 }
 
-#pro-team-table td, #pro-team-table th {
+.premierLeague td, .premierLeague th {
 	color: var(--proTeam-text-color,black);
+}
+
+.championship td, .championship th {
+	color: var(--championship-text-color,black);
 }
 
 /* premierLeague Styling. */
@@ -116,16 +125,16 @@
 }
 
 /* Select the 4th row to highlight the selected team. */
-.premierLeague>thead>:nth-child(4){ 
+/* .premierLeague>thead>:nth-child(4){ 
 	background-color: var(--proTeam-text-color, #37003d);
-	color: var(--accent-color-white,white) !important;
-	color: white !important;
-}
+	color: var(--accent-color-white,white);
+} */
 
 .premierLeague-highlight-row {
-	background-color: red;
+	/* background-color: red; */
+	background-color: var(--proTeam-text-color, #37003d);
+	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
-
 
 /* Ensure the header row is white and clear the normal header box-shadow. */
 .premierLeague th {
@@ -147,10 +156,15 @@
 }
 
 /* Select the 4th row to highlight the selected team. */
-.championship>thead>:nth-child(4){ 
-	/* your css here */
+/* .championship>thead>:nth-child(4){ 
 	background-color: var(--championship-text-color, #2346A0);
 	color: white;
+} */
+
+.championship-highlight-row {
+	/* background-color: red; */
+	background-color: var(--championship-text-color, #2346A0);
+	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
 
 /* Ensure the header row is white and clear the normal header box-shadow. */
@@ -176,7 +190,7 @@
 	grid-template-columns: 60px 70%;
   	grid-template-rows: 60px;
   	grid-template-areas: "logo-section text-section";
-	margin-bottom: 1rem;
+	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 .dorkiniansLogoContainer {
@@ -230,11 +244,6 @@
 	margin-left: 1.5rem;
 }
 
-/* Make the font size in the table smaller to fit the table in. */
-.AFCTable table td {
-	/* font-size: 0.4rem; */
-}
-
 /* AFC Results and Fixtures Formatting */
 
 /* Offset the table left to fit it on screen. */
@@ -260,8 +269,12 @@
 
 /* History Tab */
 
-.quote {
-	font-style:italic;
+.quote-section {
+	margin-bottom: 2rem;
+}
+
+.quote-section-header {
+	margin-bottom: 1rem;
 }
 
 /* Ashcombe School */
@@ -270,6 +283,7 @@
 	display: flex; /* Add flexbox to the container. */
 	flex-direction: row; /* Wrap along in a row direction. */
 	flex-wrap: nowrap; /* Don't allow the images to wrap down onto different lines. */
+	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 #ashcombeLogo {
@@ -295,6 +309,7 @@
 	grid-template-columns: 60px 70%;
   	grid-template-rows: 60px;
   	grid-template-areas: "logo-section text-section";
+	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 .brockhamBadgersLogoContainer {
@@ -325,6 +340,7 @@
 	height: 100px;
 	width: auto;
 	margin: auto;
+	margin-bottom: 2rem; /* Add space below the logo. */
 }
 
 cite {

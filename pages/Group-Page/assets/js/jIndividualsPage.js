@@ -92,6 +92,11 @@ function getData(data, selectedUserName) {
     sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
     var proTeamRank = data[foundRow].proTeamLeaguePosition; // Get the proTeamLeaguePosition from the IndividualsPage table.
     sessionStorage.setItem("proTeamRank", proTeamRank); // Save the variable to session storage.
+    var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
+    sessionStorage.setItem("proTeamLeague", proTeamLeague); // Save the variable to session storage.
+    if (proTeamLeague == "premierLeague") { // Invert the logo colour if it's the Premier League.
+        document.getElementById("proTeamLeagueLogo").classList.add("colour-invert"); // Add the correct CSS class to the ProTeamLeagueLogo to style it correctly.
+    }
     getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
     var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
     document.getElementById("pro-team-table").classList.add(proTeamLeague); // Add the correct CSS class to the ProTeamTable to style it correctly.

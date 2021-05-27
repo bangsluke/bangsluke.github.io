@@ -80,26 +80,41 @@ function generateTableHead(table, data) {
 function generateTable(table, data) {
     console.log("generateTable called.") // Log an initial message to show the function has been called.
     var proTeamRank = sessionStorage.getItem("proTeamRank"); // Retrieve the variable passed to session storage.
-    console.log("Pro Team Rank is = " + proTeamRank); // Log the proTeamRank
+    var proTeamLeague = sessionStorage.getItem("proTeamLeague"); // Retrieve the variable passed to session storage.
+    console.log("Pro Team Rank is = " + proTeamRank + ", and is proTeamLeague = " + proTeamLeague); // Log the proTeamRank and proTeamLeague.
     let counter = 0; // Initially define a counter.
+    let rowCounter = 1; // Initially define a row counter.
+    let foundRowNumber = 0; // Initially define a foundRowNumber.
+    //console.log("counter intially = " + counter + " and rowCounter initially = " + rowCounter); // Log to the console.
     for (let element of data) { // Loop through each row of the data.
         let row = table.insertRow(); // Insert a row for each bit of table data.
         for (key in element) { // Loop through each cell in each row.
             counter = counter + 1; // Increment the counter.
-            console.log("Counter = " + counter + ", cell value = " + element[key]);
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             if (counter == 1 && element[key] == proTeamRank) { // If the counter is 1 and the element[key] is equal to the proTeamRank, this is the row to highlight.
-                cell.classList.add("premierLeague-highlight-row"); // Add the premierLeague-highlight-row class to the cell.
+                //console.log("counter = " + counter + ", and element[key] = " + element[key] + " which is equal to proTeamRank = " + proTeamRank) // Log to the console.
+                foundRowNumber = rowCounter; // Set up the foundRowNumber.
+                //console.log("foundRowNumber = " + foundRowNumber); // Log the foundRowNumber to the console.
+            }
+            if (rowCounter == foundRowNumber) { // If the row counter matches the foundRowNumber, apply the style to the row.
+                //console.log("rowCounter = " + rowCounter + ", foundRowNumber = " + foundRowNumber); // Log the foundRowNumber to the console.
+                if (proTeamLeague == "premierLeague") { // Format the found row depending on which league the team is in.
+                    cell.classList.add("premierLeague-highlight-row"); // Add the premierLeague-highlight-row class to the cell.
+                } else {
+                    cell.classList.add("championship-highlight-row"); // Add the championship-highlight-row class to the cell.
+                }
+                //console.log("Counter = " + counter + ", cell value = " + element[key] + ", rowCounter = " + rowCounter + " and so added formatting."); // Log to the console.
             } else { // Add the data without adding the highlighting class.
                 // Do nothing extra to the cell.
+                //console.log("Counter = " + counter + ", cell value = " + element[key] + ", rowCounter = " + rowCounter); // Log to the console.
             }
             cell.appendChild(text); // Append the text to the cell.
             if (counter % 10 == 0) { // Reset the counter backdown to 0 if the counter is divisible by 10 as its a new row.
                 counter = 0; // Reset the counter backdown.
+                rowCounter = rowCounter + 1; // Increment the rowCounter.
+                //console.log("counter now = " + counter + " and rowCounter = " + rowCounter); // Log to the console.
             }
-
-
         }
     }
     console.log("generateTable finished.") // Log a final message to show the function is complete.

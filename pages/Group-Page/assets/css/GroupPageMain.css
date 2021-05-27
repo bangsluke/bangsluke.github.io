@@ -140,7 +140,7 @@ body {
 	height: max-content;
 	width: var(--pagewidth, 98%);
 	margin: 1em auto; /* Add a margin above and below each section. */
-	padding: 0.5em;
+	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	border-radius: var(--border-radius, 0.2rem);
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 	/* overflow: auto; */
@@ -240,6 +240,7 @@ a {
 	font-size: 12px; /* Fallback value. */
 	font-size: 0.75rem; /* Relative to root value. */
 	text-decoration: none;
+	cursor: pointer;
 }
 
 /* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
@@ -282,6 +283,7 @@ td {
 
 /* Used for quotes mainly on individuals page. */
 q {
+	font-style: italic; /* Make the text italic. */
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
 }
@@ -310,14 +312,19 @@ select, option {
 
 select {
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+	margin: 0.5rem auto 1rem auto;
 }
-
 
 /* Used for buttons text across the site. */
 button {
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+}
+
+/* Used on the Gallery page. */
+label {
+	margin-bottom: 0.5rem;
 }
 
 /* Text Styles */
@@ -353,6 +360,14 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.colour-invert {
+	filter: brightness(0) invert(1);
+}
+
+.no-bottom-margin {
+	margin-bottom: 0rem !important;
 }
 
 /* fieldset is archived code on the Events.html page. */
@@ -441,6 +456,12 @@ tr:hover {
 
 .hidden {
 	display: none;
+}
+
+/* Add a area class for the Stats and Titan pages. */
+
+.date-and-source-area {
+	margin-top: 1rem; /* Add space from the table down to the last updated text. */
 }
 
 /* Footer Styling */

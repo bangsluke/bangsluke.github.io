@@ -37,7 +37,6 @@ html {
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
 	box-shadow: 0px 0px 2px 2px var(--accent-color-white, white), 0px 0px 1px 1px var(--accent-color-white, white); /* Add the glowing white effect. */
-	margin: 2em auto; /* Add a margin above and below each section. */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -361,7 +360,7 @@ input:focus + .slider {
 /* Consider inverting the logos to make them white. */
 
 #proTeamLeagueLogo {
-	filter: brightness(0) invert(1);
+	/* filter: brightness(0) invert(1); */
 	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 

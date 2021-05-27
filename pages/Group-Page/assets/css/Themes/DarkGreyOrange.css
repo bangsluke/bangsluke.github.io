@@ -359,7 +359,7 @@ input:focus + .slider {
 /* Consider inverting the logos to make them white. */
 
 #proTeamLeagueLogo {
-	filter: brightness(0) invert(1);
+	/* filter: brightness(0) invert(1); */
 	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
