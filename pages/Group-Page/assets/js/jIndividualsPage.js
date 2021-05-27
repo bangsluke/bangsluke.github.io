@@ -90,6 +90,8 @@ function getData(data, selectedUserName) {
     document.getElementById("proTeamLeagueLogo").src = data[foundRow].proTeamLeagueLogoImagePath; // Modify the source of the image.
     var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
     sessionStorage.setItem("proTeam", proTeam); // Save the variable to session storage.
+    var proTeamRank = data[foundRow].proTeamLeaguePosition; // Get the proTeamLeaguePosition from the IndividualsPage table.
+    sessionStorage.setItem("proTeamRank", proTeamRank); // Save the variable to session storage.
     getProTeamTable(); // Call the getProTeamTable() function from jIndividualsPageProTeam.js to get the league table into the sheet.
     var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
     document.getElementById("pro-team-table").classList.add(proTeamLeague); // Add the correct CSS class to the ProTeamTable to style it correctly.

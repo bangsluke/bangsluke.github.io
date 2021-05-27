@@ -122,6 +122,11 @@
 	color: white !important;
 }
 
+.premierLeague-highlight-row {
+	background-color: red;
+}
+
+
 /* Ensure the header row is white and clear the normal header box-shadow. */
 .premierLeague th {
 	background-color: var(--accent-color-white,white);
@@ -328,6 +333,12 @@ cite {
 	margin: 0 auto;
 	padding-left: 60%;
 	text-align: right;
+}
+
+/* Make the awards text larger to match the quote sizes above. */
+#BBsAwards {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
