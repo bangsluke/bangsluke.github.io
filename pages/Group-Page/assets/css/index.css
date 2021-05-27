@@ -17,7 +17,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* Width of the black overlay of the background image. */
   height: 100%;
   background: rgba(10, 10, 10, 0.8);
   text-align: center;
@@ -34,7 +34,7 @@ div.vertical {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: var(--pagewidth, 98%); /* Width of the lighter holding div box. */
 }
 
 .box {

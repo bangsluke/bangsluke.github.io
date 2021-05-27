@@ -169,30 +169,21 @@ body {
 
 /* Text styling. */
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-/* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
-a[target="_blank"]:before, a[target="new"]:before {
-	margin:0 5px 0 0;
-	padding:1px;
-	outline:1px solid #333;
-	color:#333;
-	background:#ff9;
-	font:12px “Zapf Dingbats”;
-	content: “\279C”;
-}
-
-.underline {
-	text-decoration: underline;
-}
-
 h1, h2, h3, h4, h5, h6, p, ul, legend {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
+
+/* Font Families */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p, a, tr, td, small {
+	font-family: 'Roboto', sans-serif;
+}
+
 
 h1 {
 	font-size: 1rem;
@@ -219,8 +210,26 @@ h6 {
 	font-size: 0.5rem;
 }
 
-h6 {
-	font-size: 0.5rem;
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
+a[target="_blank"]:before, a[target="new"]:before {
+	margin:0 5px 0 0;
+	padding:1px;
+	outline:1px solid #333;
+	color:#333;
+	background:#ff9;
+	font:12px “Zapf Dingbats”;
+	content: “\279C”;
+}
+
+/* Text Styles */
+
+.underline {
+	text-decoration: underline;
 }
 
 .textcenter {
