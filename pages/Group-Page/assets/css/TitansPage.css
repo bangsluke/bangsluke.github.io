@@ -19,10 +19,24 @@
 	display: inline;
 }
 
+/* Add a class to hold the buttons at the bottom of the Titans page. */
+
+.additional-titan-detail-area {
+	/* background-color: blue; */
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+
 /* Add a class for the Titan Buttons. */
 
 .titanButtons {
 	width: 48%;
 	height: 2rem;
-	font-size: 0.9rem;
+	align-self: center;
 }

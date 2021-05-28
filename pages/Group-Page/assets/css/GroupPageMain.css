@@ -319,6 +319,7 @@ select {
 button {
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
+	font-size: 0.8rem; /* Relative to root value. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
 	width: 10rem; /* Define a base button width. */
 	height: 3rem; /* Define a base button height. */
