@@ -167,7 +167,7 @@ function toggleResultsAndFixturesSection() {
         element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
         toggleButton.innerText = "Hide results and fixtures details"; // Set the button text to change.
         // Also remove the "page-section-added-bottom-margin" class for the page-section above results and fixtures section.
-        document.getElementById("dorkinians-tables-section").classList.remove("page-section-added-bottom-margin"); // Add the page-section-added-bottom-margin class.
+        document.getElementById("dorkinians-tables-section").classList.remove("page-section-added-bottom-margin"); // Remove the page-section-added-bottom-margin class.
     } else {
         element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
         toggleButton.innerText = "Show results and fixtures details"; // Set the button text to change.

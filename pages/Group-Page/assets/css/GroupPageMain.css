@@ -370,6 +370,11 @@ label {
 	margin-bottom: 0rem !important;
 }
 
+.deactivated {
+	color: grey; /* Grey out the deactivated selection box. */
+	pointer-events: none; /* Disable any actions from the user clicking on the deactivated component. */
+}
+
 /* fieldset is archived code on the Events.html page. */
 
 /* fieldset {

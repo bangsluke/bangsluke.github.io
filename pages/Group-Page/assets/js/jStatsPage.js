@@ -144,16 +144,13 @@ function init() {
 
     // 1st Dropdown - React when the user changes the statsCategoryDropdown.
     statsCategoryDropdown.onchange = function () {
-        // Log the function call to the console.
-        console.log("NEW 1. statsCategoryDropdown.onchange called. statsSelectionDropdown populated with values.")
-        // Empty the stat selection dropdown.
-        statsSelectionDropdown.length = 1;
-        // Display correct values in statsSelectionDropdown.
-        for (var y in statsObject[this.value]) {
+        console.log("NEW 1. statsCategoryDropdown.onchange called. statsSelectionDropdown populated with values.") // Log the function call to the console.
+        statsSelectionDropdown.length = 1; // Empty the stat selection dropdown.
+        for (var y in statsObject[this.value]) { // Display correct values in statsSelectionDropdown.
             statsSelectionDropdown.options[statsSelectionDropdown.options.length] = new Option(y, y);
         }
-        // Set the focus onto the next dropdown box.
-        document.getElementById("stat-selection-option").focus();
+        document.getElementById("stat-selection-option").classList.remove("deactivated"); // Remove the deactivated class.
+        document.getElementById("stat-selection-option").focus(); // Set the focus onto the next dropdown box.
     }
 
     // 2nd Dropdown - React when the user changes the statsSelectionDropdown.
