@@ -280,24 +280,27 @@
 /* Ashcombe School */
 
 #ashcombeSchoolLogoContainer {
+	/* background-color: brown; */
 	display: flex; /* Add flexbox to the container. */
 	flex-direction: row; /* Wrap along in a row direction. */
 	flex-wrap: nowrap; /* Don't allow the images to wrap down onto different lines. */
 	margin-bottom: 1rem; /* Add space below the logo. */
+	justify-content: flex-start;
 }
 
 #ashcombeLogo {
 	height: 3rem;
 	width: auto;
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem 1rem 0rem 0.5rem; /* Add no margin above or below, but small margins either side to position the logo. */
 	align-self: center; /* Vertically center the image. */
 }
 
 #ashcombeLogoText {
-	height: 3.5rem;
+	height: 4rem;
 	width: auto;
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem 0rem 0rem -0.5rem; /* Add no margin above or below, but a small negative margin to the left to position the logo. */
 	align-self: center; /* Vertically center the image. */
+	text-align: left;
 }
 
 /* Brockham Badgers */
