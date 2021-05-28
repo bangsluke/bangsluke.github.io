@@ -81,52 +81,58 @@ body {
 
 /* Quotes Ticker Styling */
 
-/* Outer Container */
-.tcontainer {
-	position: fixed;
-	width: 98%;
+/* Outer Ticker Container */
+.ticker-container {
+	position: fixed; /* Lock the position of the ticker container box. */
+	top: 0rem; /* Set the top position of the ticker container box from the top of the screen. */
+	left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
+	width: 100%; /* Set the width of the ticker container box. */
 	overflow: hidden; /* Hide scroll bar */
-	margin-top: 95%;
+	margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
 }
    
- /* Middle Container */
+/* Middle Ticker Container */
 .ticker-wrap {
 	width: 100%;
-	padding-left: 100%; /* Push contents to right side of screen */
+	/*padding-left: 100%; /* Push contents to right side of screen */
 	background-color: #eee;
 }
   
-/* Inner Container */
+/* Inner Ticker Container */
 @keyframes ticker {
-	0% { transform: translate3d(0, 0, 0); }
-	100% { transform: translate3d(-100%, 0, 0); }
+	0% {
+		/* transform: translate3d(0, 0, 0); */
+		padding-left: 120%;
+	}
+	100% {
+		/* transform: translate3d(-100%, 0, 0); */
+		padding-left: -120%;
+	}
 }
 
 .ticker-move {
 	/* Basically move items from right side of screen to left in infinite loop */
-	display: inline-block;
+	/* display: inline-block; */ /* Only add if you have multiple text divs with class ticker-move. */
 	white-space: nowrap;
-	padding-right: 100%;
+	/* padding-right: 100%; */
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: ticker;
 	animation-duration: 10s;
+	width: 100%;
 }
 
-.ticker-move:hover{
+.ticker-move:hover {
 	animation-play-state: paused; /* Pause scroll on mouse hover */
 }
   
-  /* ITEMS */
-  .ticker-item{
+/* Items */
+.ticker-item {
 	display: inline-block; /* Lay items in a horizontal line */
-	padding: 0 2rem;
-	color: black;
+	/* padding: 0 2rem; */
+	color: var(--accent-color-white, white);
 	font-size: 1rem;
-  }
-
-
-
+}
 
 
 
@@ -153,6 +159,9 @@ footer {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.ticker-move {
+		animation-duration: 5s;
+	}
 }
 
 /* Scale up for screens larger than mobile. */
@@ -162,12 +171,18 @@ footer {
 	.avatar {
 		height: 8rem;
 	}
+	.ticker-move {
+		animation-duration: 5s;
+	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* Covers iPads and other tablets. */
 	.avatar {
 		height: 8rem;
+	}
+	.ticker-move {
+		animation-duration: 5s;
 	}
 }
 
@@ -179,6 +194,9 @@ footer {
 	.content-text h1 {
 		padding: 15px 35px;
 	}
+	.ticker-move {
+		animation-duration: 5s;
+	}
 }
 
 @media only screen and (min-width: 1824px) {
@@ -188,5 +206,8 @@ footer {
 	}
 	.content-text h1 {
 		padding: 15px 35px;
+	}
+	.ticker-move {
+		animation-duration: 5s;
 	}
 }

@@ -278,6 +278,11 @@ footer li a:hover {
 	border: solid 1px var(--accent-color-1);
 }
 
+/* Middle Ticker Container */
+.ticker-wrap {
+	background: rgba(0, 0, 0, 0.90);
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Gallery Styling */

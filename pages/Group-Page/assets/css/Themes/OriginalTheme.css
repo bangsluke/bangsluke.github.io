@@ -34,7 +34,7 @@ html {
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
 	/* background-color: aqua; */
-	background: rgba( 255, 255, 255, 0.10 );
+	background: rgba(255, 255, 255, 0.10);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -258,6 +258,11 @@ footer li a:hover {
 .avatar {
 	background-color: rgba(255, 255, 255, 0.075);
 	border: solid 1px var(--accent-color-1);
+}
+
+/* Middle Ticker Container */
+.ticker-wrap {
+	background: rgba(255, 255, 255, 0.10);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
