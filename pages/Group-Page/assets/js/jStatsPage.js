@@ -194,10 +194,9 @@ function init() {
 
         console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
 
-        // Call the statSelected function to display the data on the site.
-        statSelected();
+        statSelected(); // Call the statSelected function to display the data on the site.
 
-        zoomOutMobile();
+        // zoomOutMobile(); // Ignore for now as not needed?
     }
 
     // 3rd Dropdown - React when the user changes the filterHeaderSelectionDropdown.
