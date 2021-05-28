@@ -28,14 +28,16 @@
 
 	<!-- Link to fonts to be used on site. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
-	<link href="/pages/Group-Page/assets/css/GroupPageHome.css" rel="stylesheet"> <!-- Home Page specific styling -->
 	<link href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet">
 	<!-- Header styling -->
-	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/GroupPageHome.css" rel="stylesheet"> <!-- Home Page specific styling -->
+	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" /> <!-- CSS site theme -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
@@ -54,16 +56,15 @@
 			<!-- Add a homepage link by adding a group icon image. Add it within a container. -->
 			<div class="avatar-container">
 
-				<!-- Add group icon image. -->
-				<img class="avatar center fadein" src="/pages/Group-Page/assets/images/Page Icon.jpg"
-					alt="Group Page Logo">
+				<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
 
 			</div>
 
 			<!-- Add some heading text. Add it within a container. -->
 			<div class="heading-container">
-				<!-- Add some heading text. -->
-				<h1 class="center subpage-header-text fadein"></h1>
+
+				<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
+
 			</div>
 
 			<!-- Top Menu - not considered part of the "main-content-area" -->
@@ -155,10 +156,18 @@
 		<!-- Main content section. -->
 		<div class="content-text">
 
+			<!-- Add group icon image. -->
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html">
+				<img class="avatar center fadein" src="/pages/Group-Page/assets/images/Page Icon.jpg"
+					alt="Group Page Logo">
+			</a>
+
 			<!-- Add pink main header box. -->
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html"></a>
 			<div class="headercontainer">
 				<h1>Tits Group Page.</h1>
 			</div>
+			</a>
 
 			<!-- Add link below to enter the site. -->
 			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html">
@@ -166,6 +175,18 @@
 					<h3>Click to enter</h3>
 				</div>
 			</a>
+
+			<!-- Add ticker quotes that move across the screen. -->
+			<div class="tcontainer">
+				<div class="ticker-wrap">
+					<div class="ticker-move">
+						<div class="ticker-item"><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div>
+						<div class="ticker-item">Aliquam consequat varius consequat.</div>
+						<div class="ticker-item">Fusce dapibus turpis vel nisi malesuada sollicitudin.</div>
+						<div class="ticker-item">Pellentesque auctor molestie orci ut blandit.</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
@@ -188,7 +209,8 @@
 	<!-- Add the common footer JS -->
 	<script src="/pages/Group-Page/assets/js/jGroupHomePage.js" type="text/javascript" defer></script>
 	<!-- Add the Group Home Page JS -->
-	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	<!-- Add the Main Functions JS -->
 
 </body>
 
