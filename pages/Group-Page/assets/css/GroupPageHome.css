@@ -9,18 +9,28 @@ body {
 	overflow: hidden;
 }
 
+/* Style the main content area on the home page. */
+
+.homepage-content-area {
+	/* background-color: blue; */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	min-height: 20rem;
+	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
+	width: 100%; /* Note padding in all-content-area limiting width */
+	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
+	text-align: center; /* Center align both heading texts below. */
+	transition: transform 250ms; /* Add a transform transition to both sets of text. */
+	padding-top: 2rem; /* Add space from the top of the container (just below the header) to the top of the avatar image. */
+}
+
 /* Avatar class for the main image. */
 
 .avatar {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	position: fixed; /* Fix the image so it doesn't move with scroll. */
-	margin: 0rem; /* Clear all margins and padding on the image. */
-	padding: 0rem; /* Clear all margins and padding on the image. */
+	padding: 0rem; /* Clear all padding on the image. */
+	margin: 0rem auto 1rem auto; /* Set up margins on the image. */
 	height: 8rem; /* Set the height of the image. */
 	width: auto; /* Set the width of the image to be automatically the same as the image height. */
-	top: 6rem; /* Add an offset rom the top of the screen. */
-	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
-	margin-left: -4rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 	border-radius: 100%; /* Add a 100% border radius to make it a circle. */
 	cursor: pointer; /* Change the cursor to become a pointer on hover over. */
 }
@@ -32,30 +42,12 @@ body {
 
 /* Style the visible text on the homepage. */
 
-.content-text {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	min-height: 450px;
-	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
-	width: 100%; /* Note padding in all-content-area limiting width */
-	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
-	text-align: center; /* Center align both heading texts below. */
-	transition: transform 250ms; /* Add a transform transition to both sets of text. */
-}
-
 /* The header container around "TITS GROUP PAGE". */
 .headercontainer {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	position: fixed; /* Lock the position of the box. */
-	top: 38%; /* Set the top position of the box from the top of the screen. */
-	width: 15rem; /* Set the width of the header box. */
-	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
-	margin-left: -7.5rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 	padding: 0.5rem 0.2rem; /* Add padding between the text and the surrounding box. */
-}
-
-/* The main header text. */
-.content-text h1 {
-	display: inline-block;
+	margin: 0rem auto 1rem auto; /* Set up margins on the text container. */
+	width: 15rem; /* Set the width of the header box. */
 }
 
 /* Add a hover animation to the clickable link. */
@@ -66,11 +58,9 @@ body {
 /* The sub header container around "CLICK TO ENTER". */
 .subheadercontainer {
 	/* background-color: red; */
-	position: fixed; /* Lock the position of the box. */
-	top: 53%; /* Set the top position of the box from the top of the screen. */
+	padding: 0rem; /* Clear all padding on the image. */
+	margin: 0rem auto 1rem auto; /* Set up margins on the text container. */
 	width: 12rem; /* Set the width of the sub header box. */
-	left: 50%; /* Set the width to 50% - https://stackoverflow.com/a/2006008/14290169. */
-	margin-left: -6rem; /* Set the left margin to half the width - https://stackoverflow.com/a/2006008/14290169. */
 }
 
 /* Add a hover animation to the clickable link. */
@@ -78,76 +68,74 @@ body {
 	transform: translateY(-5px); /* Make the text move slightly up on hover. */
 }
 
+/* Quotes Ticker Styling - (https://codeconvey.com/horizontal-news-ticker-css/) */
 
-/* Quotes Ticker Styling */
-
-/* Outer Ticker Container */
-.ticker-container {
+/* Ticker container */
+.ticker-wrap {
+	/* background-color: red; */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: fixed; /* Lock the position of the ticker container box. */
 	top: 0rem; /* Set the top position of the ticker container box from the top of the screen. */
-	left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
-	width: 100%; /* Set the width of the ticker container box. */
-	overflow: hidden; /* Hide scroll bar */
-	margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
+    left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
+    width: 100%; /* Set the width of the ticker container box. */
+    overflow: hidden; /* Hide scroll bar */
+    margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
+	height: 2rem; /* Control the height of the ticker. */
+	box-sizing: content-box; /* Add box-sizing control. */
 }
-   
-/* Middle Ticker Container */
-.ticker-wrap {
-	width: 100%;
-	/*padding-left: 100%; /* Push contents to right side of screen */
-	background-color: #eee;
+
+/* Ticker animation CSS */
+.ticker-wrap .ticker {
+	--ticker-animation-duration: 15s; /* Set up the animation duration. */
+	display: inline-block; /* Update the display of the elements. */
+	height: 2rem; /* Define the height of the elements. */
+	line-height: 1rem; /* Define the text line height of the elements. */
+	white-space: nowrap; /* Remove all white space between text. */
+	padding-right: 100%; /* Intially offset the text off to the right out of the screen. */
+	box-sizing: content-box; /* Add box-sizing control. */
+	-webkit-animation-iteration-count: infinite; /* Loop the animation infinitely. */
+	animation-iteration-count: infinite; /* Loop the animation infinitely. */
+	-webkit-animation-timing-function: linear; /* Add a linear animation function. */
+	animation-timing-function: linear; /* Add a linear animation function. */
+	-webkit-animation-name: ticker; /* Link the div to the animation function. */
+	animation-name: ticker; /* Link the div to the animation function. */
+	-webkit-animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
+	animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
 }
-  
-/* Inner Ticker Container */
-@keyframes ticker {
+
+/* Ticker item styling */
+.ticker-wrap .ticker-item {
+	display: inline-block; /* Update the display of the elements. */
+	padding: 0.5rem 5rem; /* Add padding within the ticker wrap and between ticker items. */
+	font-size: 1rem; /* Define the font size of the ticker. */
+	color: white; /* Define the font colour of the ticker. */
+}
+
+/* Add animation CSS styles for horizontal ticker movement. */
+
+@-webkit-keyframes ticker {
 	0% {
-		/* transform: translate3d(0, 0, 0); */
-		padding-left: 120%;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	  visibility: visible;
 	}
 	100% {
-		/* transform: translate3d(-100%, 0, 0); */
-		padding-left: -120%;
+	  -webkit-transform: translate3d(-100%, 0, 0);
+	  transform: translate3d(-100%, 0, 0);
 	}
 }
 
-.ticker-move {
-	/* Basically move items from right side of screen to left in infinite loop */
-	/* display: inline-block; */ /* Only add if you have multiple text divs with class ticker-move. */
-	white-space: nowrap;
-	/* padding-right: 100%; */
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-name: ticker;
-	animation-duration: 10s;
-	width: 100%;
+@keyframes ticker {
+	0% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	  visibility: visible;
+	}
+	100% {
+	  -webkit-transform: translate3d(-100%, 0, 0);
+	  transform: translate3d(-100%, 0, 0);
+	}
 }
-
-.ticker-move:hover {
-	animation-play-state: paused; /* Pause scroll on mouse hover */
-}
-  
-/* Items */
-.ticker-item {
-	display: inline-block; /* Lay items in a horizontal line */
-	/* padding: 0 2rem; */
-	color: var(--accent-color-white, white);
-	font-size: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* lock the position of the footer, just on the homepage. */
 footer {
@@ -159,8 +147,8 @@ footer {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-	.ticker-move {
-		animation-duration: 5s;
+	.ticker-wrap .ticker { /* Ticker animation CSS */
+		--ticker-animation-duration: 18s; /* Set up the animation duration. */
 	}
 }
 
@@ -171,8 +159,8 @@ footer {
 	.avatar {
 		height: 8rem;
 	}
-	.ticker-move {
-		animation-duration: 5s;
+	.ticker-wrap .ticker { /* Ticker animation CSS */
+		--ticker-animation-duration: 16s; /* Set up the animation duration. */
 	}
 }
 
@@ -181,8 +169,8 @@ footer {
 	.avatar {
 		height: 8rem;
 	}
-	.ticker-move {
-		animation-duration: 5s;
+	.ticker-wrap .ticker { /* Ticker animation CSS */
+		--ticker-animation-duration: 14s; /* Set up the animation duration. */
 	}
 }
 
@@ -194,8 +182,8 @@ footer {
 	.content-text h1 {
 		padding: 15px 35px;
 	}
-	.ticker-move {
-		animation-duration: 5s;
+	.ticker-wrap .ticker { /* Ticker animation CSS */
+		--ticker-animation-duration: 12s; /* Set up the animation duration. */
 	}
 }
 
@@ -207,7 +195,7 @@ footer {
 	.content-text h1 {
 		padding: 15px 35px;
 	}
-	.ticker-move {
-		animation-duration: 5s;
+	.ticker-wrap .ticker { /* Ticker animation CSS */
+		--ticker-animation-duration: 10s; /* Set up the animation duration. */
 	}
 }
