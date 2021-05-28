@@ -139,7 +139,7 @@ body {
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
 	width: var(--pagewidth, 98%);
-	margin: 1rem auto 1rem auto; /* Add a margin below each section. */
+	margin: 1rem auto 1rem auto; /* Add a margin above and below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	border-radius: var(--border-radius, 0.2rem);
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
@@ -188,7 +188,7 @@ h2 {
 	font-size: 24px; /* Fallback value. */
 	font-size: 1.5rem; /* Relative to root value. */
 	text-transform: uppercase;
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.5rem;
 }
 
 /* Used for smaller headers in page-content section. */
@@ -196,7 +196,7 @@ h3 {
 	font-size: 19px; /* Fallback value. */
 	font-size: 1.2rem; /* Relative to root value. */
 	text-transform: uppercase;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 /* Used for even smaller headers in page-content section. */
