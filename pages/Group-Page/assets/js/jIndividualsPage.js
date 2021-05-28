@@ -11,26 +11,33 @@
 console.time();
 
 // Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
-var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=114011454&single=true&output=csv';
-
-// Log the file location.
-console.log("The published spreadsheet is located at " + publicSpreadsheetUrlCSV); // Log the file location.
+var individualsPageUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv";
+var statsSummaryUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=327910275&single=true&output=csv";
 
 // Wait for the window to load and then run the init function below.
 window.addEventListener('DOMContentLoaded', init)
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
-    
+
     getSiteTheme(); // Update the site theme to what the user has selected.
-    
+
     // Initially call the data in from Google Sheets tab "IndividualsPage" using Papa Parse.
-    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv", {
+    Papa.parse(individualsPageUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     })
+
+    // Then call the data in from Google Sheets tab "StatsSummary" using Papa Parse.
+    Papa.parse(statsSummaryUrlCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showSelectedInfo2, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    })
+
 }
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
@@ -56,7 +63,7 @@ function getData(data, selectedUserName) {
 
     }
 
-    console.log("Found Row = " + foundRow)
+    console.log("Found Row = " + foundRow);
 
     // Modify HTML elements with the found data.
 
@@ -81,11 +88,19 @@ function getData(data, selectedUserName) {
     document.getElementById("instagram").innerHTML = data[foundRow].instagramHandle; // Modify the text inside the element.
     document.getElementById("instagram").setAttribute('href', data[foundRow].instagramURL); // Update the href of the link dynamically.
 
+    // Weather Widget
+    //document.querySelector(".weatherwidget-io").innerHTML = data[foundRow].weatherWidgetHomeTown; // Modify the text inside the element.
+    document.querySelector(".weatherwidget-io").setAttribute('href', data[foundRow].weatherWidgetURL); // Update the href of the link dynamically to the correct URL.
+    document.querySelector(".weatherwidget-io").setAttribute('data-label_1', data[foundRow].weatherWidgetHomeTown); // Update the data label 1 dynamically to read the town name. 
+
+    // Once the widget has been updated with the new attributes, re-run the JavaScript for the widget (copied directly from 'https://weatherwidget.io/js/widget.min.js').
+    "use strict"; function __weatherwidget_init() { var a = document.getElementsByClassName("weatherwidget-io"), i = []; if (0 !== a.length) { for (var t = function (t) { var e = a[t], o = {}; o.id = "weatherwidget-io-" + t, o.href = e.href, o.label_1 = e.getAttribute("data-label_1"), o.label_2 = e.getAttribute("data-label_2"), o.font = e.getAttribute("data-font"), o.icons = e.getAttribute("data-icons"), o.mode = e.getAttribute("data-mode"), o.days = e.getAttribute("data-days"), o.theme = e.getAttribute("data-theme"), o.basecolor = e.getAttribute("data-basecolor"), o.accent = e.getAttribute("data-accent"), o.textcolor = e.getAttribute("data-textcolor"), o.textAccent = e.getAttribute("data-textAccent"), o.highcolor = e.getAttribute("data-highcolor"), o.lowcolor = e.getAttribute("data-lowcolor"), o.suncolor = e.getAttribute("data-suncolor"), o.mooncolor = e.getAttribute("data-mooncolor"), o.cloudcolor = e.getAttribute("data-cloudcolor"), o.cloudfill = e.getAttribute("data-cloudfill"), o.raincolor = e.getAttribute("data-raincolor"), o.snowcolor = e.getAttribute("data-snowcolor"), o.windcolor = e.getAttribute("data-windcolor"), o.fogcolor = e.getAttribute("data-fogcolor"), o.thundercolor = e.getAttribute("data-thundercolor"), o.hailcolor = e.getAttribute("data-hailcolor"), o.dayscolor = e.getAttribute("data-dayscolor"), o.tempcolor = e.getAttribute("data-tempcolor"), o.desccolor = e.getAttribute("data-desccolor"), o.label1color = e.getAttribute("data-label1color"), o.label2color = e.getAttribute("data-label2color"), o.shadow = e.getAttribute("data-shadow"), o.scale = e.getAttribute("data-scale"), (r = document.getElementById(o.id)) && e.removeChild(r), i[o.id] = document.createElement("iframe"), i[o.id].setAttribute("id", o.id), i[o.id].setAttribute("class", "weatherwidget-io-frame"), i[o.id].setAttribute("title", "Weather Widget"), i[o.id].setAttribute("scrolling", "no"), i[o.id].setAttribute("frameBorder", "0"), i[o.id].setAttribute("width", "100%"), i[o.id].setAttribute("src", "https://weatherwidget.io/w/"), i[o.id].style.display = "block", i[o.id].style.position = "absolute", i[o.id].style.top = "0", i[o.id].onload = function () { i[o.id].contentWindow.postMessage(o, "https://weatherwidget.io") }, e.style.display = "block", e.style.position = "relative", e.style.height = "150px", e.style.padding = "0", e.style.overflow = "hidden", e.style.textAlign = "left", e.style.textIndent = "-299rem", e.appendChild(i[o.id]) }, e = 0, o = Math.min(a.length, 10); e < o; e++) { var r; t(e) } window.addEventListener("message", function (t) { "https://weatherwidget.io" === t.origin && i[t.data.wwId] && i[t.data.wwId].parentNode && (i[t.data.wwId].style.height = t.data.wwHeight + "px", i[t.data.wwId].parentNode.style.height = t.data.wwHeight + "px") }) } else setTimeout(__weatherwidget_init, 1500) } setTimeout(__weatherwidget_init, 100);
+
     // Football Tab
-    
+
     /// Football Header
     document.getElementById("footballHeader").src = data[foundRow].footballHeaderImagePath; // Modify the source of the image.
-    
+
     /// Pro Team
     document.getElementById("proTeamLeagueLogo").src = data[foundRow].proTeamLeagueLogoImagePath; // Modify the source of the image.
     var proTeam = data[foundRow].proTeam; // Get the proTeam from the IndividualsPage table.
@@ -101,9 +116,9 @@ function getData(data, selectedUserName) {
     var proTeamLeague = data[foundRow].proTeamLeague; // Get the proTeamLeague from the IndividualsPage table.
     document.getElementById("pro-team-table").classList.add(proTeamLeague); // Add the correct CSS class to the ProTeamTable to style it correctly.
     document.getElementById("proTeamLeagueURL").setAttribute('href', data[foundRow].proTeamLeagueURL); // Update the href of the link dynamically.
-    
+
     /// Dorkinians
-    
+
     // Old code solution.
     //var lrcode = data[foundRow].dorkiniansLeagueCode;
     //getDorkiniansTable(lrcode);
@@ -123,7 +138,7 @@ function getData(data, selectedUserName) {
     }
 
     // History Tab
-    
+
     /// Ashcombe
     document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote; // Modify the text inside the element.
     document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote; // Modify the text inside the element.
@@ -143,21 +158,11 @@ function getData(data, selectedUserName) {
     document.getElementById("BBsU16sQuote").innerHTML = data[foundRow].BBsU16sQuote; // Modify the text inside the element.
     document.getElementById("BBsU16sCite").innerHTML = data[foundRow].BBsU16sCite; // Modify the text inside the element.
     document.getElementById("BBsAwards").innerHTML = data[foundRow].BBsAwards; // Modify the text inside the element.
-
-    // Widgets Tab
-    //document.querySelector(".weatherwidget-io").innerHTML = data[foundRow].weatherWidgetHomeTown; // Modify the text inside the element.
-    document.querySelector(".weatherwidget-io").setAttribute('href', data[foundRow].weatherWidgetURL); // Update the href of the link dynamically to the correct URL.
-    document.querySelector(".weatherwidget-io").setAttribute('data-label_1', data[foundRow].weatherWidgetHomeTown); // Update the data label 1 dynamically to read the town name. 
-
-    // Once the widget has been updated with the new attributes, re-run the JavaScript for the widget (copied directly from 'https://weatherwidget.io/js/widget.min.js').
-    "use strict"; function __weatherwidget_init() { var a = document.getElementsByClassName("weatherwidget-io"), i = []; if (0 !== a.length) { for (var t = function (t) { var e = a[t], o = {}; o.id = "weatherwidget-io-" + t, o.href = e.href, o.label_1 = e.getAttribute("data-label_1"), o.label_2 = e.getAttribute("data-label_2"), o.font = e.getAttribute("data-font"), o.icons = e.getAttribute("data-icons"), o.mode = e.getAttribute("data-mode"), o.days = e.getAttribute("data-days"), o.theme = e.getAttribute("data-theme"), o.basecolor = e.getAttribute("data-basecolor"), o.accent = e.getAttribute("data-accent"), o.textcolor = e.getAttribute("data-textcolor"), o.textAccent = e.getAttribute("data-textAccent"), o.highcolor = e.getAttribute("data-highcolor"), o.lowcolor = e.getAttribute("data-lowcolor"), o.suncolor = e.getAttribute("data-suncolor"), o.mooncolor = e.getAttribute("data-mooncolor"), o.cloudcolor = e.getAttribute("data-cloudcolor"), o.cloudfill = e.getAttribute("data-cloudfill"), o.raincolor = e.getAttribute("data-raincolor"), o.snowcolor = e.getAttribute("data-snowcolor"), o.windcolor = e.getAttribute("data-windcolor"), o.fogcolor = e.getAttribute("data-fogcolor"), o.thundercolor = e.getAttribute("data-thundercolor"), o.hailcolor = e.getAttribute("data-hailcolor"), o.dayscolor = e.getAttribute("data-dayscolor"), o.tempcolor = e.getAttribute("data-tempcolor"), o.desccolor = e.getAttribute("data-desccolor"), o.label1color = e.getAttribute("data-label1color"), o.label2color = e.getAttribute("data-label2color"), o.shadow = e.getAttribute("data-shadow"), o.scale = e.getAttribute("data-scale"), (r = document.getElementById(o.id)) && e.removeChild(r), i[o.id] = document.createElement("iframe"), i[o.id].setAttribute("id", o.id), i[o.id].setAttribute("class", "weatherwidget-io-frame"), i[o.id].setAttribute("title", "Weather Widget"), i[o.id].setAttribute("scrolling", "no"), i[o.id].setAttribute("frameBorder", "0"), i[o.id].setAttribute("width", "100%"), i[o.id].setAttribute("src", "https://weatherwidget.io/w/"), i[o.id].style.display = "block", i[o.id].style.position = "absolute", i[o.id].style.top = "0", i[o.id].onload = function () { i[o.id].contentWindow.postMessage(o, "https://weatherwidget.io") }, e.style.display = "block", e.style.position = "relative", e.style.height = "150px", e.style.padding = "0", e.style.overflow = "hidden", e.style.textAlign = "left", e.style.textIndent = "-299rem", e.appendChild(i[o.id]) }, e = 0, o = Math.min(a.length, 10); e < o; e++) { var r; t(e) } window.addEventListener("message", function (t) { "https://weatherwidget.io" === t.origin && i[t.data.wwId] && i[t.data.wwId].parentNode && (i[t.data.wwId].style.height = t.data.wwHeight + "px", i[t.data.wwId].parentNode.style.height = t.data.wwHeight + "px") }) } else setTimeout(__weatherwidget_init, 1500) } setTimeout(__weatherwidget_init, 100);
 }
 
-// Add an alert message when a user tries to complain about how their personal data is being used.
-function dataMessage() {
-    alert("Get fucked you Signal prick");
+function dataMessage() { // Add an alert message when a user tries to complain about how their personal data is being used.
+    alert("Get fucked you Signal prick"); // Add alert.
 }
-
 
 function toggleResultsAndFixturesSection() {
     // Toggle between showing and hiding the results and fixtures section.
@@ -173,7 +178,41 @@ function toggleResultsAndFixturesSection() {
         toggleButton.innerText = "Show results and fixtures details"; // Set the button text to change.
         // Also re-add the "page-section-added-bottom-margin" class for the page-section above results and fixtures section.
         document.getElementById("dorkinians-tables-section").classList.add("page-section-added-bottom-margin"); // Add the page-section-added-bottom-margin class.
-    }  
+    }
+}
+
+
+
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
+function showSelectedInfo2(results) {
+    var data = results.data
+    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
+    console.log(data); // Log the data in the console.
+    // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
+    var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
+    if (selectedUserName == null) { selectedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
+    getStatsData(data, selectedUserName); // Pass the data to the getData function to be processed.
+}
+
+// Get the stats data into a table form to be shown on the page.
+function getStatsData(data, selectedUserName) {
+
+    console.log("getStatsData function called.");
+    console.log("number of columns for Stats data is = " + data[0].length);
+
+    // Loop through data array and match the user to return the column in the array of objects that relates to the user.
+    for (let x = 0; x < data[0].length; x++) {
+        console.log("x = " + x + ", data[x] = " + data[x]); // Show the looping process.
+        if (data[x] === selectedUserName) {
+            var foundRow = x; // The found row containing the correct user object.
+        }
+
+    }
+
+    console.log("Found Row = " + foundRow);
+
+
+
 }
 
 

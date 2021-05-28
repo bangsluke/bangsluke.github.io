@@ -230,14 +230,14 @@ span {
 
 /* Used for text bulk on page. */
 p {
-	font-size: 12px; /* Fallback value. */
-	font-size: 0.75rem; /* Relative to root value. */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
 }
 
 /* Used for hyperlinks across the site. */
 a {
-	font-size: 12px; /* Fallback value. */
-	font-size: 0.75rem; /* Relative to root value. */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -257,8 +257,8 @@ a[target="_blank"]:before, a[target="new"]:before {
 th {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-style: bold; /* Make the header text bold */
-	font-size: 12px; /* Fallback value. */
-	font-size: 0.75rem; /* Relative to root value. */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
 	text-align: center; /* By default, center all table text. */
 	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
 	position: sticky; /* Make the header row sticky position to lock it out. */
@@ -268,14 +268,14 @@ th {
 
 /* Used for table rows across the site. */
 tr {
-	font-size: 12px; /* Fallback value. */
-	font-size: 0.75rem; /* Relative to root value. */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
 }
 
 /* Used for table cell text across the site. */
 td {
-	font-size: 12px; /* Fallback value. */
-	font-size: 0.75rem; /* Relative to root value. */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 }

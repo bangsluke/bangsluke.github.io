@@ -35,7 +35,7 @@ a {
 	text-decoration: underline;
 }
 
-#peterAlertImage {
-	width: 90%;
+button, #peterAlertImage {
 	height: auto;
+	margin-bottom: 1.5rem !important;
 }
