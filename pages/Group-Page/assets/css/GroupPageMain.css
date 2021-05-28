@@ -139,7 +139,7 @@ body {
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
 	width: var(--pagewidth, 98%);
-	margin: 1em auto; /* Add a margin above and below each section. */
+	margin: 1rem auto 1rem auto; /* Add a margin below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	border-radius: var(--border-radius, 0.2rem);
 	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
@@ -150,7 +150,7 @@ body {
 
 /* Added bottom margin for some page sections on individuals page. */
 .page-section-added-bottom-margin {
-	margin-bottom: 2.5rem;
+	margin-bottom: 3rem;
 }
 
 /* Text styling. */

@@ -78,7 +78,7 @@
 	width: var(--pagewidth, 98%);
 	height: auto;
 	border-radius: 5px;
-	margin: 0.5em auto; /* Add a margin above the football header that offsets it down the same as page-section. */
+	margin: 1rem auto; /* Add a margin above the football header that offsets it down the same as page-section. */
 }
 
 #proTeamLeagueLogo {
