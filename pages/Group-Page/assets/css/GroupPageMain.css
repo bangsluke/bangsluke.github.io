@@ -134,7 +134,6 @@ body {
 .page-section {
 	/* background-color: aqua; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
-	
 	backdrop-filter: blur( 12.0px );
 	-webkit-backdrop-filter: blur( 12.0px );
 	height: max-content;
