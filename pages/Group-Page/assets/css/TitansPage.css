@@ -32,11 +32,10 @@
 	align-items: center;
 }
 
-
 /* Add a class for the Titan Buttons. */
 
 .titanButtons {
 	width: 48%;
-	height: 2rem;
+	height: 3rem;
 	align-self: center;
 }
