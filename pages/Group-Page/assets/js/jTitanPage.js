@@ -417,12 +417,12 @@ function toggleTitanFactorsExplainedSection() {
     // Toggle between showing and hiding the Titan factors explanation section.
     var toggleButton = document.getElementById("toggleTitanFactorsExplainedButton") // Get the toggle button by its ID.
     var element = document.getElementById("titan-factors-explained-section") // Get the id of the section to be shown/hidden.
-    if (toggleButton.innerText == "Show Titan Factors explanation") {
+    if (toggleButton.innerText == "Show factors explanation") {
         element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
-        toggleButton.innerText = "Hide Titan Factors explanation"; // Set the button text to change.
+        toggleButton.innerText = "Hide factors explanation"; // Set the button text to change.
     } else {
         element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
-        toggleButton.innerText = "Show Titan Factors explanation"; // Set the button text to change.
+        toggleButton.innerText = "Show factors explanation"; // Set the button text to change.
     }
 }
 

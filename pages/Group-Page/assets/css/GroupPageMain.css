@@ -315,11 +315,22 @@ select {
 	margin: 0.5rem auto 1rem auto;
 }
 
-/* Used for buttons text across the site. */
+/* Used for buttons text across the site. See (https://dev.to/gscode/20-css-buttons-4cni) for styles and details. */
 button {
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+	width: 10rem; /* Define a base button width. */
+	height: 3rem; /* Define a base button height. */
+    border-style: none; /* Remove the border. */
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.2rem;
+    overflow: hidden;
+    transition: all .5s;
 }
 
 /* Used on the Gallery page. */
