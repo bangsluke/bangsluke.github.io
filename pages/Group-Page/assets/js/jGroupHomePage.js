@@ -34,9 +34,9 @@ function showSelectedInfo(results) {
     console.log("Function: showSelectedInfo(results) called.")
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    console.log(data); // Log the data in the console.
+    //console.log(data); // Log the data in the console.
     var quoteCount = data.length; // Define the number of quotes.
     var randomQuoteNumber = Math.floor(Math.random() * quoteCount); // Randomise the quote from the list of possible quotes. (https://www.w3schools.com/JS/js_random.asp).
+    console.log("Random number = " + randomQuoteNumber + " selected from a total of " + quoteCount + " quotes.") // Log random number to console.
     document.getElementById("ticker-text").innerHTML = data[randomQuoteNumber]; // Modify the text inside the element.
-
 }
