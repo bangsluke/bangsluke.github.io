@@ -88,7 +88,8 @@ var statsObject = {
         "Poker": ["n/a"],
         "Punctuality": ["n/a"],
         "Spike Ball": ["n/a"],
-        "Thumb Rating": ["n/a"]
+        "Thumb Rating": ["n/a"],
+        "WhatsApp": ["n/a"]
     },
 
 
