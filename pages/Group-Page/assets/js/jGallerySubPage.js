@@ -16,14 +16,15 @@ function init() {
     showVideoSection() // Show the Video Section at the bottom of the Gallery Subpage if the gallery is Football.
 }
 
-// Change the header name to reflect which Gallery is being shown.
+// Change the header names to reflect which Gallery is being shown.
 function setGalleryHeaderName() {
     var clickedAlbumName = sessionStorage.getItem("clickedAlbumName", clickedAlbumName); // Get the saved variable from session storage.
     if (clickedAlbumName == null) { // Update clickedAlbumName to be General by deafult if error.
         clickedAlbumName = "General";
     }
     //console.log(clickedAlbumName);
-    document.getElementById("pageMainHeader").innerHTML = clickedAlbumName + " Gallery"; // Modify the text inside the element.
+    document.getElementById("pageMainHeader").innerHTML = clickedAlbumName; // Modify the text inside the header component element.
+    document.getElementById("subpageHeader").innerHTML = clickedAlbumName + " Gallery."; // Modify the text inside the subpage header element.
 }
 
 // Loop through the images populating their sources correctly.

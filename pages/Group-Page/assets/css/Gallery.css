@@ -4,14 +4,25 @@
 
 /* Add custom gallery page styling. */
 
+.peaModeToggleArea {
+    display: flex; /* Add flex to the container. */
+    flex-direction: row; 
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: center; /* Horizontally center the links inside the container. */
+    flex-wrap: nowrap; /* Ensure the items always stay in line with each other. */
+    align-self: center;
+}
+
 /* Toggle Button styling. https://www.w3schools.com/howto/howto_css_switch.asp */
 
 /* The switch - the box around the slider */
 .switch {
+    /* background-color: aqua; */
     position: relative;
     display: inline-block;
     width: 3.75rem;
     height: 2rem;
+    margin-right: 0.5rem; /* Add a slight margin to the right to add space between the switch and the text. */
 }
   
 /* Hide default HTML checkbox */
@@ -69,6 +80,15 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
+}
+
+#peaModeToggleHeader {
+    /* background-color: aquamarine; */
+    padding: 0rem;
+    margin: 0rem;
+    align-self: center;
+    margin-left: 0.5rem; /* Add a slight margin to the left to add space between the switch and the text. */
+    margin-bottom: 0.4rem; /* Add a slight margin to the bottom to push the text up to align with the switch. */
 }
 
 /* Album cover styling. */
