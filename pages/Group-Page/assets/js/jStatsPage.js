@@ -79,6 +79,7 @@ var statsObject = {
         "April 2021": ["n/a"]
     },
     "Skills, Games and Misc": {
+        "Breakfast Cooking": ["n/a"],
         "Driving": ["n/a"],
         "Fifa": ["n/a"],
         "Mario Kart": ["n/a"],
