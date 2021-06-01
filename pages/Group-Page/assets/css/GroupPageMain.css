@@ -435,13 +435,13 @@ tr:hover {
 }
 
 /* Add a class that can be assigned to all table elements. */
-.tableText {
+/*.tableText {
 	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem !important; /* Relative to root value. */
-	-webkit-text-size-adjust: 100%;
+	/*font-size: 0.9rem !important;  /*Relative to root value. */
+	/*-webkit-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-}
+}*/
 
 /* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
 
