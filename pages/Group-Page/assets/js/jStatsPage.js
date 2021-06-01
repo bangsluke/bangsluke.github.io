@@ -386,6 +386,7 @@ function createFullTable(array) {
 // Create a table of data from the received data.
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
+// Create the table head including the table headers.
 function generateTableHead(table, data) {
     console.log("Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
@@ -409,11 +410,12 @@ function generateTableHead(table, data) {
     console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
+// Create the rest of the table below head including all table rows.
 function generateTable(table, data) {
     console.log("Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
-    var counter;
-    var testedValue;
-    var dataType;
+    var counter; // Define a counter for checking which column to apply stick-col rule to.
+    var testedValue; // Define a variable for parsing each element through.
+    var dataType; // Define a variable to store the data variable type.
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
     for (let element of data) { // Loop through each row of the data.
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
@@ -422,6 +424,7 @@ function generateTable(table, data) {
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
+            cell.classList.add("tableText"); // Add the tableText class to every table cell.
             
             // Loop through the columns to apply styling.
             if (counter == 0) { // If the counter = 0, it's the first column.
