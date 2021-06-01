@@ -65,6 +65,22 @@ var statsObject = {
         "2017/18": ["n/a"],
         "2016/17": ["n/a"]
     },
+    "Fantasy": {
+        "Overall Fantasy": ["n/a"],
+        "2007/08 Season": ["n/a"],
+        "2008/09 Season": ["n/a"],
+        "2010/11 Season": ["n/a"],
+        "2011/12 Season": ["n/a"],
+        "2012/13 Season": ["n/a"],
+        "2013/14 Season": ["n/a"],
+        "2014/15 Season": ["n/a"],
+        "2015/16 Season": ["n/a"],
+        "2016/17 Season": ["n/a"],
+        "2017/18 Season": ["n/a"],
+        "2018/19 Season": ["n/a"],
+        "2019/20 Season": ["n/a"],
+        "2020/21 Season": ["n/a"]
+    },
     "Football": {
         "Jelly Legs": ["n/a"],
         "Two Touch": ["n/a"],
