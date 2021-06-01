@@ -278,6 +278,9 @@ td {
 	font-size: 0.9rem; /* Relative to root value. */
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
+	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-moz-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
 }
 
 /* Used for quotes mainly on individuals page. */

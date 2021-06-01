@@ -425,7 +425,7 @@ function generateTable(table, data) {
             let cell = row.insertCell(); // Create the cell.
             let text = document.createTextNode(element[key]); // Add the cell text.
             cell.appendChild(text); // Append the text to the cell.
-            cell.classList.add("tableText"); // Add the tableText class to every table cell.
+            //cell.classList.add("tableText"); // Add the tableText class to every table cell.
             
             // Loop through the columns to apply styling.
             if (counter == 0) { // If the counter = 0, it's the first column.
