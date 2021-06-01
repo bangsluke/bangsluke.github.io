@@ -435,7 +435,6 @@ tr:hover {
 .tableText {
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.9rem !important; /* Relative to root value. */
-	word-wrap: break-word;
 }
 
 /* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
