@@ -445,7 +445,7 @@ function generateTable(table, data) {
                 dataType = typeof testedValue;
                 cell.classList.add("textcenter"); // Add the textcenter class to the cell.
             }
-            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
+            console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'. Data length is " + element[key].length)
             console.log("-");
             
             counter = counter + 1; // Increment the counter.
