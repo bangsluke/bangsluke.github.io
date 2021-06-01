@@ -92,13 +92,14 @@ var statsObject = {
         "Thumb Rating": ["n/a"],
         "WhatsApp": ["n/a"]
     },
-
-
-
     "Strava Stats": {
-        "HTML": ["Links", "Images", "Tables", "Lists"],
-        "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-        "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+        "Overall Strava": ["n/a"],
+        "1k Times": ["n/a"],
+        "5k Times": ["n/a"],
+        "10k Times": ["n/a"],
+        "Half Marathon Times": ["n/a"],
+        "2021 Distance": ["n/a"],
+        "All Time Distance": ["n/a"]
     }
 
     // Keep as example.
