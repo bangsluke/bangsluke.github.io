@@ -68,6 +68,11 @@ var statsObject = {
     "Football": {
         "Jelly Legs": ["n/a"],
         "Two Touch": ["n/a"],
+        "Overall Season Long Bets": ["n/a"],
+        "2020/21 Season Long Bets Stats": ["n/a"],
+        "2021/22 Season Long Bets Stats": ["n/a"],
+        "2020/21 Bets List": ["n/a"],
+        "2021/22 Bets List": ["n/a"],
         "Premier League Table": ["n/a"],
         "Championship Table": ["n/a"]
     },
