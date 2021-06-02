@@ -44,15 +44,24 @@
 	/* background-color: blueviolet; */
 	justify-content: center;
 	align-content: center;
+	height: var(--user-card-height, 8rem);
+	position:relative; /* Set as position relative to the IMG will move relative to this container */
+}
+
+/* Add a helper span class. (https://stackoverflow.com/a/7310398/14290169). */
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 /* The user image. */
 .user-image {
 	height: var(--user-image-height);
 	width: var(--user-image-height);
-	object-fit: cover;
+	object-fit: cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
-	/* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+	vertical-align: middle;
 }
 
 /* User Texts Styling */
@@ -81,10 +90,10 @@ h3 {
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
 	/* height: calc(var(--user-image-height) - var(--user-name-height) - 0.3rem); /* Old height. */
 	height: calc(var(--user-card-height) - var(--user-name-height) - 0.3rem);
-	overflow-y: scroll; /* Alows vertical scroll */
+	/*overflow-y: scroll; /* Alows vertical scroll */
 	overflow-x: none;
 	text-overflow: clip; /* Stops the text overrunning the size of the box */
-	padding: 0 0.5rem;
+	padding: 0.1rem 0.5rem 0.5rem;
 }
 
 ul {
