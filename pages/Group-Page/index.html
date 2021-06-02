@@ -46,10 +46,13 @@
 
 			<div class="vertical">
 
+				<!-- Add a back button to my main page. -->
+				<a href="/Homepage.html"><p class="textleft" id="passwordLoginPageBackButton">&lt;</p></a>
+
 				<div class="box">
 
 					<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
-					<div class="userdropdown-container">
+					<div class="userdropdown-container center">
 						<form class="userdropdown">
 							<select name="User" id="userdropdown">
 								<option value="Alex">Althom</option>
@@ -65,10 +68,10 @@
 					</div>
 
 					<input style="margin: 16px; text-align: center;" id="password" type="password"
-						placeholder="password" /> <br />
+						placeholder="Enter password" class="center" /> <br />
 
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
+					<button id="loginbutton" type="button" class="center">Enter</button>
+					<p id="wrongPassword" style="display: none">Wrong password</p>
 				</div>
 
 			</div>

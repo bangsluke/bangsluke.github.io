@@ -4,12 +4,28 @@
 
 /* Add custom index page styling. */
 
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+	
+	/* CSS variables - Add variables below like the given example. */
+	
+	--font-size: 0.8rem;
+}
+
 body {
   background-image: url('/pages/Group-Page/assets/images/Background.JPG');
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: auto 100%;
   color: #333;
+}
+
+#passwordLoginPageBackButton {
+  font-size: 2rem;
+  color: #333;
+  z-index: 3;
+  padding: 0.5rem;
+  font-size: var(--font-size, 1rem);
 }
 
 .lightbox {
@@ -44,19 +60,35 @@ div.vertical {
   padding: 12px;
 }
 
+select {
+  font-size: var(--font-size, 1rem);
+}
+
+input {
+  font-size: var(--font-size, 1rem);
+  width: 10rem;
+}
+
 ::-webkit-input-placeholder {
-  color: #955;
+  color: #222;
   text-align: center;
 }
 
 ::-moz-placeholder {
-  color: #955;
+  color: #222;
   text-align: center;
 }
 
 :-ms-input-placeholder {
-  color: #955;
+  color: #222;
   text-align: center;
+}
+
+button {
+  background-color: #888;
+  width: 6rem;
+  height: 2rem;
+  font-size: var(--font-size, 1rem);
 }
 
 /* Resizing the webpage for all devices. */
