@@ -202,7 +202,7 @@ ul {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     html {
-        background: blue;
+        /* background: blue; */
     }
     .body-homepage {
         grid-gap: 20px;
@@ -217,7 +217,7 @@ ul {
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
     html {
-        background: green;
+        /* background: green; */
     }
     .body-homepage {
         grid-gap: 20px;
@@ -230,7 +230,7 @@ ul {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     html {
-        background: orange;
+        /* background: orange; */
     }
     .body-homepage {
         grid-gap: 20px;
@@ -245,7 +245,7 @@ ul {
 
 @media only screen and (min-width: 1224px) {
     html {
-        background: red;
+        /* background: red; */
     }
     .body-homepage {
         grid-gap: 20px;
@@ -260,7 +260,7 @@ ul {
 
 @media only screen and (min-width: 1824px) {
     html {
-        background: yellow;
+        /* background: yellow; */
     }
     .body-homepage {
         grid-gap: 20px;

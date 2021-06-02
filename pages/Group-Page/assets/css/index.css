@@ -60,8 +60,16 @@ div.vertical {
   padding: 12px;
 }
 
+form {
+  font-size: var(--font-size, 1rem);
+  width: 6rem;
+  text-align: center;
+}
+
 select {
   font-size: var(--font-size, 1rem);
+  width: 6rem;
+  text-align: center;
 }
 
 input {
