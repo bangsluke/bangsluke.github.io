@@ -54,27 +54,27 @@ div.vertical {
 }
 
 .box {
-  border-radius: 3px;
+  border-radius: 0.5rem;
   background: rgba(101, 101, 101, 0.7);
   margin: auto;
-  padding: 12px;
+  padding: 1rem;
 }
 
 form {
   font-size: var(--font-size, 1rem);
-  width: 6rem;
+  width: 8rem;
   text-align: center;
 }
 
 select {
   font-size: var(--font-size, 1rem);
-  width: 6rem;
+  width: 8rem;
   text-align: center;
 }
 
 input {
   font-size: var(--font-size, 1rem);
-  width: 10rem;
+  width: 12rem;
 }
 
 ::-webkit-input-placeholder {
@@ -94,7 +94,7 @@ input {
 
 button {
   background-color: #888;
-  width: 6rem;
+  width: 8rem;
   height: 2rem;
   font-size: var(--font-size, 1rem);
 }
