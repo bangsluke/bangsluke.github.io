@@ -94,8 +94,8 @@ input {
 
 button {
   background-color: #888;
-  width: 10rem;
-  height: 3rem;
+  width: 8rem;
+  height: 2.5rem;
   font-size: var(--font-size, 1rem);
 }
 
