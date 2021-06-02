@@ -62,19 +62,19 @@ div.vertical {
 
 form {
   font-size: var(--font-size, 1rem);
-  width: 8rem;
+  width: 10rem;
   text-align: center;
 }
 
 select {
   font-size: var(--font-size, 1rem);
-  width: 8rem;
+  width: 10rem;
   text-align: center;
 }
 
 input {
   font-size: var(--font-size, 1rem);
-  width: 12rem;
+  width: 14rem;
 }
 
 ::-webkit-input-placeholder {
@@ -94,8 +94,8 @@ input {
 
 button {
   background-color: #888;
-  width: 8rem;
-  height: 2rem;
+  width: 10rem;
+  height: 3rem;
   font-size: var(--font-size, 1rem);
 }
 
