@@ -15,6 +15,8 @@ function peterButtonClick() {
     console.log("Peter button clicked.")  // Log the function in the console.
     document.getElementById("peterAlertButton").classList.add("hidden"); // Add the hidden class to the clicked button.
     document.getElementById("peterAlertImage").classList.remove("hidden"); // Remove the hidden class on the Peter Griffin image.
+    var audio = new Audio('/pages/Group-Page/assets/audio/DecoysLois.mp3'); // Define the audio file to be played.
+    audio.play(); // Trigger the audio file.
     document.getElementById("main-events-section").classList.add("hidden"); // Add the hidden class to the main-events-section.
     window.setTimeout(resetEventsPage, 1000); // Wait 1 second and then call the reset page function. (https://www.w3schools.com/js/js_timing.asp).
 }
