@@ -20,14 +20,6 @@ body {
   color: #333;
 }
 
-#passwordLoginPageBackButton {
-  font-size: 2rem;
-  color: #333;
-  z-index: 3;
-  padding: 0.5rem;
-  font-size: var(--font-size, 1rem);
-}
-
 .lightbox {
   zoom: 1.5;
   position: fixed;
@@ -38,6 +30,14 @@ body {
   background: rgba(10, 10, 10, 0.8);
   text-align: center;
   margin: auto;
+}
+
+#passwordLoginPageBackButton {
+  font-size: 2rem;
+  color: #333;
+  z-index: 3;
+  padding: 0.5rem;
+  font-size: var(--font-size, 1rem);
 }
 
 div.horizontal {
@@ -53,8 +53,9 @@ div.vertical {
   width: var(--pagewidth, 98%); /* Width of the lighter holding div box. */
 }
 
+/* The lighter coloured box with the content in it. */
 .box {
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
   background: rgba(101, 101, 101, 0.7);
   margin: auto;
   padding: 1rem;
