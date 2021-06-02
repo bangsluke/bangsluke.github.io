@@ -307,6 +307,7 @@ Below are my recommended places to start learning and building.
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
 - [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
+- [Domain names for cheap](https://alldomains.hosting/en/index.html).
 - [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
 - [Making A Website Accessible To All: How to make your website more accessible for people with disabilities](https://www.freecodecamp.org/news/build-an-accessible-web-app-with-html-sass-and-javascript/). This course will cover some core HTML elements, some useful JavaScript features, and styling with Sass. (2 hour YouTube course).
