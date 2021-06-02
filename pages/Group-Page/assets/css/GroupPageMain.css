@@ -42,8 +42,9 @@
 	--footerHeight: 60px; /* Define the footer height variable. */
 	--table-padding: 0.2rem;
 	--gallery-image-height: 130px; /* For the Gallery page */
-	--user-image-height: 5rem; /* For the Users page */
-	--user-name-height: 1.2rem; /* For the Users page */
+	--user-card-height: 8rem; /* For the Users page */
+	--user-image-height: 6rem; /* For the Users page */
+	--user-name-height: 2.6rem; /* For the Users page */
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.2rem;
 	/* line-height: 15px; */
