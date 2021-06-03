@@ -182,7 +182,7 @@ function toggleResultsAndFixturesSection() {
 }
 
 
-
+// Load in data for the Individual Stats section.
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo2(results) {
     var data = results.data
