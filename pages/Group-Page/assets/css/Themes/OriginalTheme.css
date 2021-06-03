@@ -370,6 +370,18 @@ input:focus + .slider {
 	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
+/* Add styling for the Individual Stats table. */
+
+.first-col-individuals-stats {
+	background-color: rgba( 255, 255, 255, 0.0); /* Removes all background colour. */
+}
+
+.data-col-individuals-stats {
+	color: var(--accent-color-1,red);
+	font-weight: bold;
+}
+
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Stats Styling */

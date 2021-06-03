@@ -14,6 +14,9 @@ console.time();
 var individualsPageUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv";
 var statsSummaryUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=327910275&single=true&output=csv";
 
+// Define the foundColumn variable used later.
+var foundColumn;
+
 // Wait for the window to load and then run the init function below.
 window.addEventListener('DOMContentLoaded', init)
 
@@ -35,7 +38,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showSelectedInfo2, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+        complete: showIndividualsStatsInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsStatsInfo function.
     })
 
 }
@@ -184,36 +187,155 @@ function toggleResultsAndFixturesSection() {
 
 // Load in data for the Individual Stats section.
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
-function showSelectedInfo2(results) {
+function showIndividualsStatsInfo(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     console.log(data); // Log the data in the console.
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
     var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
     if (selectedUserName == null) { selectedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
-    getStatsData(data, selectedUserName); // Pass the data to the getData function to be processed.
+    getIndividualsStatsDataColumn(data, selectedUserName); // Pass the data to the getData function to be processed.
+
+    clearTableIndividualsStats(); // Call the clearTable function to empty the table.
+    createFullTableIndividualsStats(data, foundColumn); // Call the createFullTable function, passing the data from PapaParse and the foundColumn.
+
 }
 
 // Get the stats data into a table form to be shown on the page.
-function getStatsData(data, selectedUserName) {
-
-    console.log("getStatsData function called.");
-    console.log("number of columns for Stats data is = " + data[0].length);
-
+function getIndividualsStatsDataColumn(data, selectedUserName) {
+    console.log("getIndividualsStatsDataColumn function called."); // Log an initial message to show the function has been called.
+    console.log("number of columns for Stats data is = " + data[0].length); // Log how many columns of data the array has.
     // Loop through data array and match the user to return the column in the array of objects that relates to the user.
     for (let x = 0; x < data[0].length; x++) {
-        console.log("x = " + x + ", data[x] = " + data[x]); // Show the looping process.
-        if (data[x] === selectedUserName) {
-            var foundRow = x; // The found row containing the correct user object.
+        //console.log("x = " + x + ", data[x] = " + data[x]); // Show the looping process.
+        if (data[0][x] === selectedUserName) {
+            foundColumn = x; // The found column containing the correct user. This is defined at global scope at the very top of this page.
         }
+    }
+    console.log("User = " + selectedUserName + ", Found Column = " + foundColumn); // Log a final completion message.
+    //return foundColumn; // Return the foundColumn value for later use.
+}
 
+
+
+
+
+
+
+
+
+
+
+// Table Functions.
+
+// Clear the table to make space for new data.
+function clearTableIndividualsStats() {
+    console.log("Function: clearTableIndividualsStats() called.") // Log an initial message to show the function has been called.
+    // https://stackoverflow.com/a/3955238/14290169
+    const myNode = document.querySelector("#individuals-stats-table"); // Select the parent from which to delete all child elements from. This selector only works if the HTML page has only one table element.
+    while (myNode.firstChild) { // Loop through all child elements.
+        myNode.removeChild(myNode.lastChild); // Remove each child element.
+    }
+    console.log("Function: Table Cleared.") // Log a final message to show the function is complete.
+}
+
+// Create the table by passing the data array to the function. No need to create a table header for this table.
+function createFullTableIndividualsStats(array, foundColumn) {
+    console.log("Function: createFullTableIndividualsStats(array) called.") // Log an initial message to show the function has been called.
+    let table = document.querySelector("#individuals-stats-table"); // Select the parent element from which to build the table. This selector only works if the HTML page has only one table element.
+    //let data = Object.keys(array[0]); // Create a data variable from the array data received.
+    //generateTableHeadIndividualsStats(table, data, foundColumn); // Call the generateTableHeadIndividualsStats function to create the table headers.
+    generateTableIndividualsStats(table, array, foundColumn); // Call the generateTableIndividualsStats function to populate the rest of the table data.
+    console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
+}
+
+// Create a table of data from the received data.
+// Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
+
+// Create the table without headers by looping through the array and picking the right user data to display.
+function generateTableIndividualsStats(table, data, foundColumn) {
+    console.log("Function: generateTableIndividualsStats(table, data) called.") // Log an initial message to show the function has been called.
+    var columnCounter; // Define a columnCounter for checking which column to apply stick-col rule to.
+    var rowCounter = 0; // Define a rowCounter for checking which row we're on.
+    var testedValue; // Define a variable for parsing each element through.
+    var dataType; // Define a variable to store the data variable type.
+    let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
+    for (let element of data) { // Loop through each row of the data array.
+        let row = tbody.insertRow(); // Insert a row for each bit of table data.
+        columnCounter = 0; // Define a columnCounter for checking which column to apply stick-col rule to.
+        for (key in element) { // Loop through each cell in each row.
+
+            // Check if the data is not the first row (0), and is either the first column or the correct user column (foundColumn).
+            if (rowCounter >= 1 && (columnCounter == 0 || columnCounter == foundColumn)) {
+                console.log("CRITERIA MET: column is " + columnCounter + " which = 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which >= 1");
+
+                let cell = row.insertCell(); // Create the cell.
+                let text = document.createTextNode(element[key]); // Add the cell text.
+                cell.appendChild(text); // Append the text to the cell.
+
+                if (rowCounter == 1 && columnCounter == 0) { // Check if its the very first cell.
+                    cell.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
+                }
+
+                // Loop through the columns to apply styling.
+                if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
+                    cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
+                    cell.classList.add("first-col"); // Add the first-col class to the first column.
+                    cell.classList.add("first-col-individuals-stats"); // Add the first-col-individuals-stats class to the first column.
+                } else {
+                    cell.classList.add("data-col-individuals-stats"); // Add the data-col-individuals-stats class to all other columns.
+                }
+
+                // Get the data type of the value being added to the cell.
+                console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+                testedValue = parseInt(element[key]); // First, parseInt the value.
+                if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
+                    dataType = "string";
+                    cell.classList.add("textleft"); // Add the textleft class to the cell.
+                } else { // If not NaN, get the typeof of the value.
+                    dataType = typeof testedValue;
+                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+                }
+                console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'. Data length is " + element[key].length)
+                console.log("-");
+
+
+            } else {
+                // For all other cases, log a message as to why the data was not included.
+                console.log("CRITERIA NOT MET: column is " + columnCounter + " which /= 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which />= 1");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            columnCounter = columnCounter + 1; // Increment the columnCounter.
+        }
+        rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
 
-    console.log("Found Row = " + foundRow);
+    console.log("Check HERE --------------------");
 
-
-
+    console.log("Function: generateTableIndividualsStats finished.") // Log a final message to show the function is complete.
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

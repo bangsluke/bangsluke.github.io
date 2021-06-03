@@ -458,11 +458,12 @@ tr:hover {
 	min-width: 100px;
 	max-width: 100px; */
 	width: max-content;
-	left: 0px;
+	left: 0rem;
 }
 
 .first-cell { /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
 	z-index: 2;
+	border-top-left-radius: var(--border-radius, 0.2rem);
 }
 
 /* Add 4th row underline for Titan status. */
