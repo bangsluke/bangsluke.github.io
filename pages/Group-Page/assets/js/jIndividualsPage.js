@@ -13,6 +13,7 @@ console.time();
 // Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var individualsPageUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv";
 var statsSummaryUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=327910275&single=true&output=csv";
+var titanSummaryUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1702753145&single=true&output=csv";
 
 // Define the foundColumn variable used later.
 var foundColumn;
@@ -31,7 +32,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
+    });
 
     // Then call the data in from Google Sheets tab "StatsSummary" using Papa Parse.
     Papa.parse(statsSummaryUrlCSV, {
@@ -39,7 +40,15 @@ function init() {
         header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showIndividualsStatsInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsStatsInfo function.
-    })
+    });
+
+    // Then call the data in from Google Sheets tab "TitanStatusSummary" using Papa Parse.
+    Papa.parse(titanSummaryUrlCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showIndividualsTitansInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsTitansInfo function.
+    });
 
 }
 
@@ -188,17 +197,14 @@ function toggleResultsAndFixturesSection() {
 // Load in data for the Individual Stats section.
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showIndividualsStatsInfo(results) {
-    var data = results.data
-    //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
+    var data = results.data // Define the passed data.
     console.log(data); // Log the data in the console.
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
     var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
     if (selectedUserName == null) { selectedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
     getIndividualsStatsDataColumn(data, selectedUserName); // Pass the data to the getData function to be processed.
-
     clearTableIndividualsStats(); // Call the clearTable function to empty the table.
     createFullTableIndividualsStats(data, foundColumn); // Call the createFullTable function, passing the data from PapaParse and the foundColumn.
-
 }
 
 // Get the stats data into a table form to be shown on the page.
@@ -217,6 +223,15 @@ function getIndividualsStatsDataColumn(data, selectedUserName) {
 }
 
 
+// Load in data for the Individual Titan section.
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
+function showIndividualsTitansInfo(results) {
+    var data = results.data // Define the passed data.
+    console.log(data); // Log the data in the console.
+    clearTableIndividualsTitans(); // Call the clearTable function to empty the table.
+    createFullTableIndividualsTitans(data, foundColumn); // Call the createFullTable function, passing the data from PapaParse and the foundColumn.
+}
+
 
 
 
@@ -232,7 +247,7 @@ function getIndividualsStatsDataColumn(data, selectedUserName) {
 function clearTableIndividualsStats() {
     console.log("Function: clearTableIndividualsStats() called.") // Log an initial message to show the function has been called.
     // https://stackoverflow.com/a/3955238/14290169
-    const myNode = document.querySelector("#individuals-stats-table"); // Select the parent from which to delete all child elements from. This selector only works if the HTML page has only one table element.
+    const myNode = document.querySelector("#individuals-stats-table"); // Select the parent from which to delete all child elements from.
     while (myNode.firstChild) { // Loop through all child elements.
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
@@ -242,7 +257,7 @@ function clearTableIndividualsStats() {
 // Create the table by passing the data array to the function. No need to create a table header for this table.
 function createFullTableIndividualsStats(array, foundColumn) {
     console.log("Function: createFullTableIndividualsStats(array) called.") // Log an initial message to show the function has been called.
-    let table = document.querySelector("#individuals-stats-table"); // Select the parent element from which to build the table. This selector only works if the HTML page has only one table element.
+    let table = document.querySelector("#individuals-stats-table"); // Select the parent element from which to build the table.
     //let data = Object.keys(array[0]); // Create a data variable from the array data received.
     //generateTableHeadIndividualsStats(table, data, foundColumn); // Call the generateTableHeadIndividualsStats function to create the table headers.
     generateTableIndividualsStats(table, array, foundColumn); // Call the generateTableIndividualsStats function to populate the rest of the table data.
@@ -264,19 +279,15 @@ function generateTableIndividualsStats(table, data, foundColumn) {
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
         columnCounter = 0; // Define a columnCounter for checking which column to apply stick-col rule to.
         for (key in element) { // Loop through each cell in each row.
-
             // Check if the data is not the first row (0), and is either the first column or the correct user column (foundColumn).
             if (rowCounter >= 1 && (columnCounter == 0 || columnCounter == foundColumn)) {
                 console.log("CRITERIA MET: column is " + columnCounter + " which = 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which >= 1");
-
                 let cell = row.insertCell(); // Create the cell.
                 let text = document.createTextNode(element[key]); // Add the cell text.
                 cell.appendChild(text); // Append the text to the cell.
-
                 if (rowCounter == 1 && columnCounter == 0) { // Check if its the very first cell.
                     cell.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
                 }
-
                 // Loop through the columns to apply styling.
                 if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
                     cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
@@ -285,7 +296,6 @@ function generateTableIndividualsStats(table, data, foundColumn) {
                 } else {
                     cell.classList.add("data-col-individuals-stats"); // Add the data-col-individuals-stats class to all other columns.
                 }
-
                 // Get the data type of the value being added to the cell.
                 console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
                 testedValue = parseInt(element[key]); // First, parseInt the value.
@@ -298,34 +308,101 @@ function generateTableIndividualsStats(table, data, foundColumn) {
                 }
                 console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'. Data length is " + element[key].length)
                 console.log("-");
-
-
             } else {
                 // For all other cases, log a message as to why the data was not included.
                 console.log("CRITERIA NOT MET: column is " + columnCounter + " which /= 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which />= 1");
             }
-
-
-
-
-
-
-
-
-
-
-
-
             columnCounter = columnCounter + 1; // Increment the columnCounter.
         }
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
-
     console.log("Check HERE --------------------");
-
     console.log("Function: generateTableIndividualsStats finished.") // Log a final message to show the function is complete.
 }
 
+
+
+
+
+
+
+
+// Clear the table to make space for new data.
+function clearTableIndividualsTitans() {
+    console.log("Function: clearTableIndividualsTitans() called.") // Log an initial message to show the function has been called.
+    // https://stackoverflow.com/a/3955238/14290169
+    const myNode = document.querySelector("#individuals-titan-table"); // Select the parent from which to delete all child elements from.
+    while (myNode.firstChild) { // Loop through all child elements.
+        myNode.removeChild(myNode.lastChild); // Remove each child element.
+    }
+    console.log("Function: Table Cleared.") // Log a final message to show the function is complete.
+}
+
+// Create the table by passing the data array to the function. No need to create a table header for this table.
+function createFullTableIndividualsTitans(array, foundColumn) {
+    console.log("Function: createFullTableIndividualsTitans(array) called.") // Log an initial message to show the function has been called.
+    let table = document.querySelector("#individuals-titan-table"); // Select the parent element from which to build the table.
+    //let data = Object.keys(array[0]); // Create a data variable from the array data received.
+    //generateTableHeadIndividualsStats(table, data, foundColumn); // Call the generateTableHeadIndividualsStats function to create the table headers.
+    generateTableIndividualsTitans(table, array, foundColumn); // Call the generateTableIndividualsStats function to populate the rest of the table data.
+    console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
+}
+
+// Create a table of data from the received data.
+// Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
+
+// Create the table without headers by looping through the array and picking the right user data to display.
+function generateTableIndividualsTitans(table, data, foundColumn) {
+    console.log("Function: generateTableIndividualsTitans(table, data) called.") // Log an initial message to show the function has been called.
+    var columnCounter; // Define a columnCounter for checking which column to apply stick-col rule to.
+    var rowCounter = 0; // Define a rowCounter for checking which row we're on.
+    var testedValue; // Define a variable for parsing each element through.
+    var dataType; // Define a variable to store the data variable type.
+    let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
+    for (let element of data) { // Loop through each row of the data array.
+        let row = tbody.insertRow(); // Insert a row for each bit of table data.
+        columnCounter = 0; // Define a columnCounter for checking which column to apply stick-col rule to.
+        for (key in element) { // Loop through each cell in each row.
+            // Check if the data is not the first row (0), and is either the first column or the correct user column (foundColumn).
+            if (rowCounter >= 1 && (columnCounter == 0 || columnCounter == foundColumn)) {
+                console.log("CRITERIA MET: column is " + columnCounter + " which = 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which >= 1");
+                let cell = row.insertCell(); // Create the cell.
+                let text = document.createTextNode(element[key]); // Add the cell text.
+                cell.appendChild(text); // Append the text to the cell.
+                if (rowCounter == 1 && columnCounter == 0) { // Check if its the very first cell.
+                    cell.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
+                }
+                // Loop through the columns to apply styling.
+                if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
+                    cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
+                    cell.classList.add("first-col"); // Add the first-col class to the first column.
+                    cell.classList.add("first-col-individuals-stats"); // Add the first-col-individuals-stats class to the first column.
+                } else {
+                    cell.classList.add("data-col-individuals-stats"); // Add the data-col-individuals-stats class to all other columns.
+                }
+                // Get the data type of the value being added to the cell.
+                console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+                testedValue = parseInt(element[key]); // First, parseInt the value.
+                if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
+                    dataType = "string";
+                    cell.classList.add("textleft"); // Add the textleft class to the cell.
+                } else { // If not NaN, get the typeof of the value.
+                    dataType = typeof testedValue;
+                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+                }
+                console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'. Data length is " + element[key].length)
+                console.log("-");
+            } else {
+                // For all other cases, log a message as to why the data was not included.
+                console.log("CRITERIA NOT MET: column is " + columnCounter + " which /= 0 or foundColumn (" + foundColumn + "), row is " + rowCounter + " which />= 1");
+            }
+            columnCounter = columnCounter + 1; // Increment the columnCounter.
+        }
+        rowCounter = rowCounter + 1; // Increment the rowCounter.
+    }
+    console.log("Check HERE --------------------");
+    console.log("Function: generateTableIndividualsTitans finished.") // Log a final message to show the function is complete.
+}
 
 
 
