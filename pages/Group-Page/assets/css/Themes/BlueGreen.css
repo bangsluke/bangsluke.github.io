@@ -19,6 +19,7 @@
 	--accent-color-black: #222222;
 	--snap-tabs-hue: 328deg;
 	--snap-tabs-hue: 150deg; /* Makes it green. */
+	--text-color: var(--accent-color-2); /* Change the colour of the non active snap tabs header links. */
 	--main-style-color-rgb: 65, 157, 120; /* Used for the snap tabs active a link tab. */
 	
 }
@@ -205,8 +206,6 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
 }
 
 snap-tabs>snap-tabs-header {
-    --text-color: var(--accent-color-black);
-    --text-color: var(--accent-color-3);
     --text-active-color: var(--accent-color-white, white);
 }
 
