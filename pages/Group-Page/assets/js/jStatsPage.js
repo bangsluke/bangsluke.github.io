@@ -493,8 +493,11 @@ function updateAdditionalStatsInformation(lastUpdatedDate, sourceText) {
 // Add a border below the 4th person if the table is flagged as a Titan table.
 function applyTitanTableFormatting(titanBoolean) {
     if (titanBoolean == "TRUE") {
-        console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
+        console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean); // Log that the class is being added.
         document.getElementById("stats-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
+    } else {
+        console.log("Removing titan4thRow class to the table as titanBoolean is " + titanBoolean); // Log that the class is being removed.
+        document.getElementById("stats-table").classList.remove("titan4thRow"); // Get the stats-table table by id and remove the titan4thRow class to the table.
     }
 }
 

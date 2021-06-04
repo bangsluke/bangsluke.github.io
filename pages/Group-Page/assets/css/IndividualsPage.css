@@ -374,6 +374,11 @@ cite {
 	text-align: right;
 }
 
+#individuals-stats-section {
+	height: calc(max-content + 1rem);
+}
+
+
 #individuals-titan-table {
 	margin-bottom: 2rem; /* Add space below the table. */
 }

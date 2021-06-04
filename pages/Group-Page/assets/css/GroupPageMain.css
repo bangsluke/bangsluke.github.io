@@ -443,7 +443,7 @@ tr:hover {
 	/* overflow-x: scroll; */
 	/* border: 1px solid white; */
 	white-space: nowrap;
-	max-height: 20rem; /* Limit the height of table to allow the header row to be locked. */
+	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
 
 .sticky-col {
@@ -476,6 +476,16 @@ tr:hover {
 
 .hidden {
 	display: none;
+}
+
+/* Add a class to stop scrolling in certain divs. */
+
+.noscroll {
+	overflow: hidden;
+}
+
+.max-content {
+	height: max-content;
 }
 
 /* Add a area class for the Stats and Titan pages. */
