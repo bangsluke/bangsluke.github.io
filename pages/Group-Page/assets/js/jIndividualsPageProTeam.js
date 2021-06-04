@@ -30,13 +30,13 @@ function selectProTable(results) {
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
     var proTeam = sessionStorage.getItem("proTeam"); // Retrieve the variable passed to session storage.
-    console.log("getProTeamTable() called with team " + proTeam + " passed.") // Pass a message to show the value has been successfully retrieved.
+    //console.log("getProTeamTable() called with team " + proTeam + " passed.") // Pass a message to show the value has been successfully retrieved.
     // Loop through data array and match the proTeam value to find the relevant table URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].TableName == proTeam) {
             var selectedURL = data[x].URL;
-            console.log(selectedURL);
+            //console.log(selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
@@ -56,7 +56,7 @@ function getPapaData(selectedURL) {
 function showProTable(results) {
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
-    console.log(data); // Log the data in the console.
+    //console.log(data); // Log the data in the console.
     clearTable(); // Call the clearTable function to empty the table.
     createFullTable(data); // Call the createFullTable function, passing the data from PapaParse.
 }
@@ -65,7 +65,7 @@ function showProTable(results) {
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
 function generateTableHead(table, data) {
-    console.log("generateTableHead called.") // Log an initial message to show the function has been called.
+    //console.log("generateTableHead called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
     for (let key of data) { // Loop through each column header of the data.
@@ -74,14 +74,14 @@ function generateTableHead(table, data) {
         th.appendChild(text); // Append the new data to the table.
         row.appendChild(th); // Append the new data to the table.
     }
-    console.log("generateTableHead finished.") // Log a final message to show the function is complete.
+    //console.log("generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
 function generateTable(table, data) {
-    console.log("generateTable called.") // Log an initial message to show the function has been called.
+    //console.log("generateTable called.") // Log an initial message to show the function has been called.
     var proTeamRank = sessionStorage.getItem("proTeamRank"); // Retrieve the variable passed to session storage.
     var proTeamLeague = sessionStorage.getItem("proTeamLeague"); // Retrieve the variable passed to session storage.
-    console.log("Pro Team Rank is = " + proTeamRank + ", and is proTeamLeague = " + proTeamLeague); // Log the proTeamRank and proTeamLeague.
+    //console.log("Pro Team Rank is = " + proTeamRank + ", and is proTeamLeague = " + proTeamLeague); // Log the proTeamRank and proTeamLeague.
     let counter = 0; // Initially define a counter.
     let rowCounter = 1; // Initially define a row counter.
     let foundRowNumber = 0; // Initially define a foundRowNumber.
@@ -117,28 +117,28 @@ function generateTable(table, data) {
             }
         }
     }
-    console.log("generateTable finished.") // Log a final message to show the function is complete.
+    //console.log("generateTable finished.") // Log a final message to show the function is complete.
 }
 
 // Create the table by passing the data to the function.
 function createFullTable(array) {
-    console.log("createFullTable called.") // Log an initial message to show the function has been called.
+    //console.log("createFullTable called.") // Log an initial message to show the function has been called.
     let table = document.querySelector("#pro-team-table"); // Select the parent element from which to build the table. Use the id "#pro-team-table".
     let data = Object.keys(array[0]); // Create a data variable from the array data received.
     generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
     generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
-    console.log("createFullTable finished.") // Log a final message to show the function is complete.
+    //console.log("createFullTable finished.") // Log a final message to show the function is complete.
 }
 
 // Clear the table to make space for new data.
 function clearTable() {
-    console.log("Clear Table called.") // Log an initial message to show the function has been called.
+    //console.log("Clear Table called.") // Log an initial message to show the function has been called.
     // https://stackoverflow.com/a/3955238/14290169
     const myNode = document.querySelector("#pro-team-table"); // Select the parent from which to delete all child elements from. Use the id "#pro-team-table".
     while (myNode.firstChild) { // Loop through all child elements.
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
-    console.log("Table Cleared.") // Log a final message to show the function is complete.
+    //console.log("Table Cleared.") // Log a final message to show the function is complete.
 }
 
 // End the console timer.

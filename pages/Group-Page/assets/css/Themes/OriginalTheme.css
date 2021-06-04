@@ -204,7 +204,7 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
 snap-tabs>snap-tabs-header {
     --text-color: var(--accent-color-white);
     --text-color: var(--accent-color-2);
-	--text-color: red;
+	--text-color: green;
     --text-active-color: var(--accent-color-white, white);
 }
 
