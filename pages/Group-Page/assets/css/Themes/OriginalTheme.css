@@ -18,9 +18,7 @@
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
 	--snap-tabs-hue: 328deg;
-	--text-color: var(--accent-color-3); /* Change the colour of the non active snap tabs header links. */
 	--main-style-color-rgb: 255, 60, 172; /* Used for the snap tabs active a link tab. */
-	
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -207,7 +205,8 @@ snap-tabs>snap-tabs-header {
 }
 
 snap-tabs>snap-tabs-header a {
-    color: var(--text-color);
+    --text-color: var(--accent-color-3, white); /* Need the variable --text-color as needed in the JavaScript. */
+	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
 }
 
 snap-tabs>snap-tabs-header a:hover {
