@@ -484,10 +484,6 @@ tr:hover {
 	overflow: hidden;
 }
 
-.max-content {
-	height: max-content;
-}
-
 /* Add a area class for the Stats and Titan pages. */
 
 .date-and-source-area {

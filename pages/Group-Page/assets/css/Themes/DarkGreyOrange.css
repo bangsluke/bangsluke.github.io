@@ -226,6 +226,13 @@ snap-tabs>snap-tabs-header>.snap-indicator {
 }
 
 @media (prefers-reduced-motion:reduce) {
+    snap-tabs>snap-tabs-header a {
+        /* -webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
+        border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%); */
+        -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
+        border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
+        transition: color .7s ease, border-color .5s ease;
+    }
     snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-tabs>snap-tabs-header a[active] {
         /* background-color: hsl(var(--accent-reduced)); */
         background-color: rgba(var(--main-style-color-rgb), 0.2);
