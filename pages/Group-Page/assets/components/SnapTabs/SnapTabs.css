@@ -5,6 +5,11 @@
 /* https://web.dev/building-a-tabs-component/. */
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+    --indicator-size: 2px;
+    --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
+}
 
 /* Added Luke Styling. */
 
@@ -63,9 +68,6 @@ article {
 
 snap-tabs {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    --indicator-size: 2px;
-    --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
-    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     display: flex;
     flex-direction: column;
     overflow: hidden;

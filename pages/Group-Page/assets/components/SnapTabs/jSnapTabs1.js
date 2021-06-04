@@ -63,7 +63,8 @@ if (motionOK) {
 
 const setActiveTab = tabbtn => {
     console.log("setActiveTab"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
-    console.log(tabbtn);
+    console.log("tabnav (starting tab) is = " + tabnav);
+    console.log("tabbtn (ending tab) is = " + tabbtn);
     tabnav
         .querySelector(':scope a[active]') // Select the <a> tag that previously had the active attribute.
         .removeAttribute('active') // Remove the active attribute.
