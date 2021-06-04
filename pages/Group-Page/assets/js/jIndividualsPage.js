@@ -34,21 +34,7 @@ function init() {
         complete: showSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     });
 
-    // Then call the data in from Google Sheets tab "StatsSummary" using Papa Parse.
-    Papa.parse(statsSummaryUrlCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showIndividualsStatsInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsStatsInfo function.
-    });
-
-    // Then call the data in from Google Sheets tab "TitanStatusSummary" using Papa Parse.
-    Papa.parse(titanSummaryUrlCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showIndividualsTitansInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsTitansInfo function.
-    });
+    // Note that the Individual Stats table and Titan Status table are called from within showSelectedInfo.
 
 }
 
@@ -170,6 +156,23 @@ function getData(data, selectedUserName) {
     document.getElementById("BBsU16sQuote").innerHTML = data[foundRow].BBsU16sQuote; // Modify the text inside the element.
     document.getElementById("BBsU16sCite").innerHTML = data[foundRow].BBsU16sCite; // Modify the text inside the element.
     document.getElementById("BBsAwards").innerHTML = data[foundRow].BBsAwards; // Modify the text inside the element.
+
+    // Stats and Titans Tab
+
+    /// Individual Stats
+    // Call the data in from Google Sheets tab "StatsSummary" using Papa Parse.
+    Papa.parse(statsSummaryUrlCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showIndividualsStatsInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsStatsInfo function.
+    });
+
+    /// Titan Status
+    // The Titan data is parsed and triggered at the end of showIndividualsStatsInfo.
+
+    // Update the Top Titan Titles below the table.
+    document.getElementById("top-titan-titles").innerHTML = data[foundRow].TopTitanCategories; // Modify the text inside the element.
 }
 
 function dataMessage() { // Add an alert message when a user tries to complain about how their personal data is being used.
@@ -205,6 +208,15 @@ function showIndividualsStatsInfo(results) {
     getIndividualsStatsDataColumn(data, selectedUserName); // Pass the data to the getData function to be processed.
     clearTableIndividualsStats(); // Call the clearTable function to empty the table.
     createFullTableIndividualsStats(data, foundColumn); // Call the createFullTable function, passing the data from PapaParse and the foundColumn.
+
+    // After the individuals stats are done, move to Titan.
+    // Call the data in from Google Sheets tab "TitanStatusSummary" using Papa Parse.
+    Papa.parse(titanSummaryUrlCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showIndividualsTitansInfo, // The callback to execute when parsing is complete. Once done, call the showIndividualsTitansInfo function.
+    });
 }
 
 // Get the stats data into a table form to be shown on the page.

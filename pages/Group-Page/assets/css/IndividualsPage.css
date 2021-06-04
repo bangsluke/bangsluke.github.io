@@ -368,6 +368,12 @@ cite {
 	font-size: 0.8rem;
 }
 
+.data-col-individuals-stats {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-weight: bold;
+	text-align: right;
+}
 
-
-
+#individuals-titan-table {
+	margin-bottom: 2rem; /* Add space below the table. */
+}
