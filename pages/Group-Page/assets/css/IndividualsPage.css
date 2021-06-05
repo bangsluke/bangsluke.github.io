@@ -4,6 +4,11 @@
 
 /* Add custom individuals page styling. */
 
+#header-offset-div {
+	height: var(--headerHeight, 45px);
+}
+
+
 .allContentFrame {
 	/* Add an "offset" value for all content so that it sits below the fixed header. */
 	padding-top: 0px;
