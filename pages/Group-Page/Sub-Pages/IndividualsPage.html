@@ -34,6 +34,12 @@
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
+
+
+
+    <link rel="stylesheet" href="/pages/Group-Page/Archive/bundle.css">
+    <script src="/pages/Group-Page/Archive/bundle.js" type="module" defer></script>
+
 </head>
 
 <body>
@@ -735,29 +741,35 @@
 
     <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-    <script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
-    <!-- Add the common header JS -->
-    <script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
-    <!-- Add the common sideMenu JS -->
-    <script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
-    <!-- Add the common footer JS -->
-    <script src="/pages/Group-Page/assets/components/SnapTabs/scroll-timeline.js"></script>
-    <!-- Get Scroll-Timeline JS -->
-    <script src="/pages/Group-Page/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
-    <script src="/pages/Group-Page/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
-    <script src="/pages/Group-Page/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
 
+    <!-- Add the common header JS -->
+    <script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
+    <!-- Add the common sideMenu JS -->
+    <script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+    <!-- Add the common footer JS -->
+    <script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+
+    <!-- Old SnapTabs JavaScript -->
+    <!--<script src="/pages/Group-Page/assets/components/SnapTabs/scroll-timeline.js"></script> -->
+    <!-- Get Scroll-Timeline JS -->
+    <!-- <script src="/pages/Group-Page/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+    <!-- <script src="/pages/Group-Page/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
+    <!-- <script src="/pages/Group-Page/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
+
+    <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
-    <!-- Get the first PapaParse JS which isn't called immediately -->
-    <script src="/pages/Group-Page/assets/js/jIndividualsPageProTeam.js"></script>
+    
     <!-- Get Individuals Page Pro Team JS -->
-    <script src="/pages/Group-Page/assets/js/jIndividualsPageDorkinians.js"></script>
+    <script src="/pages/Group-Page/assets/js/jIndividualsPageProTeam.js"></script>
     <!-- Get Individuals Page Dorkinians JS -->
+    <script src="/pages/Group-Page/assets/js/jIndividualsPageDorkinians.js"></script>
+    
     <!-- Get the second (and main) PapaParse JS -->
     <script src="/pages/Group-Page/assets/js/jIndividualsPage.js"></script> <!-- Get Individuals Page JS -->
-    <script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+    
     <!-- Add the Main Functions JS -->
+    <script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
 
 </body>
 
