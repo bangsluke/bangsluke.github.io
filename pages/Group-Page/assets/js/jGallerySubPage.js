@@ -76,22 +76,21 @@ function populateImageSources() {
         if (x <= albumSize) { // If the image number falls within the album size, update the source of the image.
             var sourcePath = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
             document.getElementById("image" + x).src = sourcePath; // Set the source of the image dynamically.
-            document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
+            //document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
         } else { // If the image number is larger than the album size, hide the placeholder.
             document.getElementById("image" + x).classList.add("hidden"); // Add the hidden class to the image.
-            document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
+            //document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
         }
     }
+    document.getElementById("modalimage").src = sourcePath; // Set the source of the modal image dynamically.
 }
 
 // Show the Video Section at the bottom of the Gallery Subpage if the gallery is Football.
 function showVideoSection() {
-    
     var clickedAlbumName = sessionStorage.getItem("clickedAlbumName", clickedAlbumName); // Get the saved variable from session storage.
     if (clickedAlbumName == "Football") { // React if the gallery selected is Football.
         document.getElementById("gallery-subpage-video-section").classList.remove("hidden"); // Remove the hidden class for the video section.
     }
-
 }
 
 // https://www.w3schools.com/howto/howto_js_lightbox.asp
@@ -111,10 +110,28 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-    console.log("plusSlides called and passed n = " + n);
-    console.log("slideIndex was = " + slideIndex);
-    console.log("slideIndex is = " + (slideIndex += n));
-    showSlides(slideIndex += n); // Call the show slides function, passing the next or previous integer.
+    console.log("-----------------------------------------------------------");
+    console.log("plusSlides called and passed n = " + n); // Log an intial message that the function has been called.
+    console.log("slideIndex was = " + slideIndex); // Log the original slideIndex.
+    var newSlideIndex = Number(slideIndex) + n; // Define a new variable for the newSlideIndex for use in the console.log below.
+    var albumSize = sessionStorage.getItem("albumSize", albumSize); // Get the saved variable from session storage.
+    console.log("newSlideIndex is = " + newSlideIndex); // Log the new slideIndex.
+    if (newSlideIndex == 0) { // If the newSlideIndex is an impossible 0.
+        console.log("newSlideIndex = 0 so skipping to album size."); // Log what case has been reached.
+        newSlideIndex = albumSize; // Reset the newSlideIndex to the album size.
+        console.log("slideIndex is = " + newSlideIndex); // Log the newSlideIndex.
+        showSlides(albumSize); // Call the show slides function, passing the next or previous integer.
+    } else if (newSlideIndex > albumSize) { // If the newSlideIndex is larger than the album size.
+        console.log("newSlideIndex > album size so resetting to 1."); // Log what case has been reached.
+        newSlideIndex = 1; // Reset the newSlideIndex to 1.
+        console.log("slideIndex is = " + newSlideIndex); // Log the newSlideIndex.
+        showSlides(1); // Call the show slides function, passing the next or previous integer.
+    } else { // If the newSlideIndex is any other case.
+        console.log("newSlideIndex is not 0 or > album size so moving to next image."); // Log what case has been reached.
+        console.log("slideIndex is = " + newSlideIndex); // Log the newSlideIndex.
+        showSlides(newSlideIndex); // Call the show slides function, passing the next or previous integer.
+    }
+    slideIndex = newSlideIndex; // Update the global slideIndex variable to be equal to the new slide index.
 }
 
 // Thumbnail image controls
@@ -123,61 +140,29 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+    console.log("Function showSlides(n) called with n = " + n); // Log an intial message that the function has been called.
     var clickedAlbumName = sessionStorage.getItem("clickedAlbumName", clickedAlbumName); // Get the saved variable from session storage.
     var albumSize = sessionStorage.getItem("albumSize", albumSize); // Get the saved variable from session storage.
-    if (clickedAlbumName == null) { // Update clickedAlbumName to be General by deafult if error.
-        clickedAlbumName = "General";
+    if (clickedAlbumName == null) { // Update clickedAlbumName to be General by default if error.
+        clickedAlbumName = "General"; // Set the default.
     }
-    var slides = document.getElementsByClassName("mySlides"); // Get all images with class "mySlides".
-    console.log(slides.length);
-    //var dots = document.getElementsByClassName("demo"); // Get all images with class "dots".
-    //var captionText = document.getElementById("caption"); // Get the caption id text.
-    // if (n == 0) {
-    //     slideIndex = albumSize;
-    // }
-    if (n > albumSize) { // Deal with n going over the maximum number of images.
-    //if (n > slides.length) { // Deal with n going over the maximum number of images.
-        slideIndex = 1;
-    }
-    if (n < 1) { // Deal with n going under 1.
-        console.log("Before change n = " + n);
-        //slideIndex = slides.length;
-        slideIndex = albumSize;
-        console.log("After change slideIndex = " + slideIndex);
-    }
-    var i; // Define the variable for looping.
-    // Update the image number text.
-    document.getElementById("numbertext").innerHTML = slideIndex + "/" + albumSize; // Modify the text inside the element.
-    //document.getElementById("numbertext").innerHTML = slideIndex + "/" + slides.length; // Modify the text inside the element.
-    for (i = 0; i < albumSize; i++) {
-    //for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    //for (i = 0; i < dots.length; i++) { // Loop through the images with class "dots".
-    //dots[i].className = dots[i].className.replace(" active", "");
-    //}
-
-    var x = n; // Set up the x variable.
-    //console.log("x = " + x);
+    document.getElementById("numbertext").innerHTML = n + "/" + albumSize; // Update the image number text. Modify the text inside the element.
     var img = new Image(); // Get the image height and width from making a new image. https://stackoverflow.com/a/5633302/14290169.
-    img.src = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Setting the source.
+    img.src = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
     var height = img.height // Getting the height.
     var width = img.width // getting the width.
-    console.log("image height is = " + height + " and width is " + width);
-
-    if (height >= width ) {
+    //console.log("image height is = " + height + " and width is " + width); // Log the images height and width.
+    if (height >= width ) { // Check if the images height is bigger than the width to define what way round the image should be.
         // Image type is portrait-image.
-        document.getElementById("modalimage" + x).classList.add("portrait-image"); // Add the portrait-image class to the div housing the image.
-        console.log("Height is bigger than width so applying portrait class.")
+        //console.log("Height is bigger than width so applying portrait class.")
+        document.getElementById("modalimage").classList.add("portrait-image"); // Add the portrait-image class to the div housing the image.
     } else {
         // Image type is landscape-image.
-        document.getElementById("modalimage" + x).classList.add("landscape-image"); // Add the landscape-image class to the div housing the image.
-        console.log("Width is bigger than height so applying landscape class.")
+        //console.log("Width is bigger than height so applying landscape class.")
+        document.getElementById("modalimage").classList.add("landscape-image"); // Add the landscape-image class to the div housing the image.
     }
- 
-    console.log(n);
-    slides[slideIndex - 1].style.display = "block"; // Load the selected image.
-    
-    // dots[slideIndex - 1].className += " active"; // Add the active class to the demo class image.
-    //captionText.innerHTML = dots[slideIndex - 1].alt; // Update the caption text based on the alt property of the demo class image.
+    var slides = document.getElementsByClassName("mySlides"); // Get all images with class "mySlides".
+    slides[0].style.display = "block"; // Load the selected image.
+    var sourcePath = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Define the source path used for both images.
+    document.getElementById("modalimage").src = sourcePath; // Set the source of the modal image dynamically.
 }
