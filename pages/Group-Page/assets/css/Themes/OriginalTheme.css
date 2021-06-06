@@ -44,19 +44,19 @@ h1, h3, h4, h5, h6, p, th, tr, td, q, cite, section, article, span, ul, li, lege
 	color: var(--accent-color-white, white);
 }
 
-/* Specifically style the h2 header text to be a different colour. For this theme, it is still white. */
+/* Specifically style the h2 header text to be a different colour. */
 h2 {
-	color: var(--accent-color-white, white);
+	color: var(--accent-color-1, white);
 }
 
-/* Specifically style the a hyperlink text to be a different colour. For this theme, it is still white. */
+/* Specifically style the a hyperlink text to be a different colour. */
 a {
-	color: var(--accent-color-white,white);
+	color: var(--accent-color-1,white);
 }
 
-/* Add a class that can be added to text to give it the theme colour. For this theme, it is still white. */
+/* Add a class that can be added to text to give it the theme colour. */
 .theme-colour-text {
-	color: var(--accent-color-white,white);
+	color: var(--accent-color-1,white);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
