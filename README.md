@@ -333,6 +333,7 @@ Below are my recommended places to start learning and building.
 - [React Gallery Component](https://yifaneye.github.io/react-gallery-carousel/#Introduction)
 - [swiperjs.com](https://swiperjs.com/)
 - [PhotoSwipe](https://photoswipe.com/)
+- [Compress images for free](https://compressimage.io/)
 - [Maximally optimizing image loading for the web in 2021](https://www.industrialempathy.com/posts/image-optimizations/)
 
 ##### Password Control
