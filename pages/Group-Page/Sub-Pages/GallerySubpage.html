@@ -21,11 +21,13 @@
 
 	<!-- Link to fonts to be used on site. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
-	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" /> <!-- CSS site theme -->
 	<link href="/pages/Group-Page/assets/css/Gallery.css" rel="stylesheet"> <!-- Gallery styling -->
 	<link href="/pages/Group-Page/assets/css/GallerySubPage.css" rel="stylesheet"> <!-- Gallery Sub Page styling -->
 
@@ -63,7 +65,9 @@
 
 			<!-- Add a back button to take the user back out of the gallery subpage, back to the gallery. -->
 			<!-- Note that &lt; is the < (less-than) character in HTML. https://www.lifewire.com/special-characters-in-html-3466714 -->
-			<a href="/pages/Group-Page/Sub-Pages/Gallery.html"><h2 class="center theme-colour-text" id="back-button-text">&lt; Back To Tits Gallery</h2></a>
+			<a href="/pages/Group-Page/Sub-Pages/Gallery.html">
+				<h2 class="center theme-colour-text" id="back-button-text">&lt; Back To Tits Gallery</h2>
+			</a>
 
 			<!-- Add a gallery sub page header. -->
 			<!-- <h2 class="center" id="subpageHeader">Gallery.</h2> -->
@@ -131,16 +135,16 @@
 			<div id="numbertext">1 / 10</div>
 
 			<!-- Add the content of the modal. -->
-			<div class="modal-content">
+			<!-- <div class="modal-content"> -->
 
-				<div class="mySlides">
-					<img id="modalimage" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
-				</div>
+			<div class="mySlides">
+				<img id="modalimage" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
+			</div>
 
-				<!-- <div class="mySlides">
+			<!-- <div class="mySlides">
 					<img id="modalimage1" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
-				</div> -->
-				<!-- <div class="mySlides">
+				</div>
+				<div class="mySlides">
 					<img id="modalimage2" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div>
 				<div class="mySlides">
@@ -198,19 +202,27 @@
 					<img id="modalimage20" src="/pages/Group-Page/assets/images/Placeholder.png" class="modal-image">
 				</div> -->
 
-				<!-- Next/previous controls -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">
+				<div class="button-div" id="prevButton">
+					<p>&#10094;</p>
+				</div>
+			</a>
+			<a class="next" onclick="plusSlides(1)">
+				<div class="button-div" id="nextButton">
+					<p>&#10095;</p>
+				</div>
+			</a>
 
-				<!-- Caption text -->
-				<!-- Turned off for now. -->
-				<!-- <div class="caption-container">
+			<!-- Caption text -->
+			<!-- Turned off for now. -->
+			<!-- <div class="caption-container">
 					<p id="caption"></p>
 				</div> -->
 
-				<!-- Thumbnail image controls -->
-				<!-- Turned off for now. -->
-				<!-- <div class="thumbnail-container">
+			<!-- Thumbnail image controls -->
+			<!-- Turned off for now. -->
+			<!-- <div class="thumbnail-container">
 
 					<div class="column">
 						<img class="demo" src="/pages/Group-Page/assets/images/Gallery/Glastonbury/Glastonbury 1.jpg"
@@ -255,7 +267,7 @@
 
 				</div> -->
 
-			</div>
+			<!-- </div> -->
 
 		</div>
 
@@ -270,7 +282,7 @@
 					<source src="/pages/Group-Page/assets/videos/Pick Me Video.mp4" type='video/mp4'>
 					<source src="/pages/Group-Page/assets/videos/Pick-Me-Video.webm" type='video/webm'>
 					<source src="/pages/Group-Page/assets/videos/Pick-Me-Video.ogg"
-						type='video/ogg; codecs="theora, vorbis"'/>
+						type='video/ogg; codecs="theora, vorbis"' />
 					<p>Video is not visible, most likely because your browser does not support HTML5 video</p>
 				</video>
 			</div>
@@ -297,7 +309,8 @@
 	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
 	<!-- Add the common footer JS -->
 	<script src="/pages/Group-Page/assets/js/jGallerySubPage.js"></script> <!-- Get Gallery SubPage JS -->
-	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	<!-- Add the Main Functions JS -->
 
 </body>
 
