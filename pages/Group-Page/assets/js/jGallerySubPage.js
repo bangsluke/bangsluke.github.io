@@ -24,7 +24,7 @@ function setGalleryHeaderName() {
     }
     //console.log(clickedAlbumName);
     document.getElementById("pageMainHeader").innerHTML = clickedAlbumName; // Modify the text inside the header component element.
-    document.getElementById("subpageHeader").innerHTML = clickedAlbumName + " Gallery."; // Modify the text inside the subpage header element.
+    //document.getElementById("subpageHeader").innerHTML = clickedAlbumName + " Gallery."; // Modify the text inside the subpage header element.
 }
 
 // Loop through the images populating their sources correctly.
