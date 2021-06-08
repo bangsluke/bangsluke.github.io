@@ -149,16 +149,29 @@ function showSlides(n) {
     document.getElementById("numbertext").innerHTML = n + "/" + albumSize; // Update the image number text. Modify the text inside the element.
     var img = new Image(); // Get the image height and width from making a new image. https://stackoverflow.com/a/5633302/14290169.
     img.src = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
+    var width = img.width // Getting the width.
     var height = img.height // Getting the height.
-    var width = img.width // getting the width.
-    //console.log("image height is = " + height + " and width is " + width); // Log the images height and width.
+    console.log("image width is " + width + "and height is = " + height); // Log the images height and width.
     if (height >= width ) { // Check if the images height is bigger than the width to define what way round the image should be.
         // Image type is portrait-image.
-        //console.log("Height is bigger than width so applying portrait class.")
+        console.log("Height is bigger than width so applying portrait-image class.")
+        document.getElementById("modalimage").classList.remove("landscape-image"); // Remove the landscape-image class to the div housing the image.
+        document.getElementById("modalimage").classList.remove("portrait-image-reduced-width"); // Remove the portrait-image-reduced-width class to the div housing the image.
         document.getElementById("modalimage").classList.add("portrait-image"); // Add the portrait-image class to the div housing the image.
+
+        var heightToWidthRatio = height / width;
+        console.log("heightToWidthRatio is " + heightToWidthRatio);
+        if (heightToWidthRatio > 1.5) {
+            console.log("heightToWidthRatio is big so applying portrait-image-reduced-width class.");
+            document.getElementById("modalimage").classList.add("portrait-image-reduced-width"); // Add the portrait-image-reduced-width class to the div housing the image.
+        }
+
+
     } else {
         // Image type is landscape-image.
-        //console.log("Width is bigger than height so applying landscape class.")
+        console.log("Width is bigger than height so applying landscape-image class.")
+        document.getElementById("modalimage").classList.remove("portrait-image"); // Remove the portrait-image class to the div housing the image.
+        document.getElementById("modalimage").classList.remove("portrait-image-reduced-width"); // Remove the portrait-image-reduced-width class to the div housing the image.
         document.getElementById("modalimage").classList.add("landscape-image"); // Add the landscape-image class to the div housing the image.
     }
     var slides = document.getElementsByClassName("mySlides"); // Get all images with class "mySlides".

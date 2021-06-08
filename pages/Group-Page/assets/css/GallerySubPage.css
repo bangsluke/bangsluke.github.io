@@ -48,11 +48,11 @@ img {
     clear: both;
 } */
   
-/* Create four equal columns that floats next to eachother */
-.column {
+/* Create four equal columns that floats next to eachother - not needed for now. */
+/* .column {
     float: left;
     width: 25%;
-}
+} */
   
 /* The Modal (background) */
 .modal {
@@ -88,17 +88,26 @@ img {
     width: auto; */
     margin: auto;
     opacity: 1;
+    /* max-width: 100vw; */
+    /* max-height: 40rem; */
 }
 
 /* Define a portrait class to be dynamically added for when the image is taller than it is wide. */
 .portrait-image {
-    height: 100vw;
     width: auto;
+    max-width: var(--pagewidth, 95%); /*Set a maximum width equal to the pagewidth variable. */
+    height: auto;
+}
+
+.portrait-image-reduced-width {
+    width: auto;
+    height: 30rem;
 }
 
 /* Define a landscape class to be dynamically added for when the image is wider than it is tall. */
 .landscape-image {
-    width: 100%;
+    width: var(--pagewidth, 95%); /* Set the width equal to the pagewidth variable. */
+    max-width: var(--pagewidth, 95%); /* Set a maximum width equal to the pagewidth variable. */
     height: auto;
 }
 
@@ -152,7 +161,7 @@ img {
 }
 
 .button-div {
-    background-color: red;
+    /* background-color: red; */
     height: 100vh;
     height: 40rem;
     line-height: 20rem;
