@@ -35,7 +35,7 @@
 /* For subpages. */
 
 .header-area.subpage {
-    /* background-color: var(--accent-color-black, darkgrey); */
+    background-color: var(--accent-color-black, darkgrey);
 }
 
 /* Avatar classes for the main image. */

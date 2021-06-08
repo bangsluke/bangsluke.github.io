@@ -158,15 +158,12 @@ function showSlides(n) {
         document.getElementById("modalimage").classList.remove("landscape-image"); // Remove the landscape-image class to the div housing the image.
         document.getElementById("modalimage").classList.remove("portrait-image-reduced-width"); // Remove the portrait-image-reduced-width class to the div housing the image.
         document.getElementById("modalimage").classList.add("portrait-image"); // Add the portrait-image class to the div housing the image.
-
-        var heightToWidthRatio = height / width;
-        console.log("heightToWidthRatio is " + heightToWidthRatio);
-        if (heightToWidthRatio > 1.5) {
-            console.log("heightToWidthRatio is big so applying portrait-image-reduced-width class.");
+        var heightToWidthRatio = height / width; // Create a ratio of height to width to decide if to apply reduced width style.
+        console.log("heightToWidthRatio is " + heightToWidthRatio); // Log the ratio.
+        if (heightToWidthRatio > 1.6) { // Check if the ratio is larger than 1.6 and act if so.
+            console.log("heightToWidthRatio is big so applying portrait-image-reduced-width class."); // Log that the class will be applied
             document.getElementById("modalimage").classList.add("portrait-image-reduced-width"); // Add the portrait-image-reduced-width class to the div housing the image.
         }
-
-
     } else {
         // Image type is landscape-image.
         console.log("Width is bigger than height so applying landscape-image class.")

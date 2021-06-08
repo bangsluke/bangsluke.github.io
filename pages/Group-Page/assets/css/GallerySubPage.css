@@ -66,7 +66,7 @@ img {
     height: 100%; /* Set the modal to cover the full screen. */
     z-index: 5; /* Make the modal the highest level z-index item. */
     overflow: auto;
-    padding-top: 4rem; /* Offset the height of the image from the top of the modal. */
+    padding-top: 3.2rem; /* Offset the height of the image from the top of the modal. */
 }
   
 /* Modal Content - not needed for now. */
@@ -101,7 +101,7 @@ img {
 
 .portrait-image-reduced-width {
     width: auto;
-    height: 25rem;
+    height: 20rem;
 }
 
 /* Define a landscape class to be dynamically added for when the image is wider than it is tall. */
@@ -116,7 +116,7 @@ img {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     position: absolute; /* Set the position to be absolute to ignore its container div. */
     z-index: 2;
-    top: 1.5rem;
+    top: 1.2rem;
     left: 1.6rem;
     font-size: 1rem;
     font-weight: bold;
@@ -127,7 +127,7 @@ img {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     position: absolute; /* Set the position to be absolute to ignore its container div. */
     z-index: 2;
-    top: 1.5rem;
+    top: 1.2rem;
     right: 1.6rem;
     font-size: 2rem;
     font-weight: bold;
@@ -160,15 +160,16 @@ img {
     -webkit-user-select: none;   
 }
 
-.button-div {
+.button-div, .prev, .next {
     /* background-color: red; */
+    /* height: 40rem; */
     height: 100vh;
-    height: 40rem;
-    line-height: 20rem;
+    /* line-height: 40rem; */
+    line-height: 100vh; /* Make the line-height the same as the height of the div to vertically center the text. */
     position: fixed;
     left: 0rem;
     top: 0rem;
-    margin-top: var(--headerHeight, 2rem);
+    /* margin-top: var(--headerHeight, 2rem); */
     cursor: pointer;
     width: 2rem;
     padding: 1rem;
@@ -176,15 +177,9 @@ img {
     transition: 0.6s ease;
     user-select: none;
     -webkit-user-select: none;
-}
-
-/* Format the arrow text within the div. */
-.button-div p {
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
     font-weight: bold;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -194,7 +189,7 @@ img {
 }
 
 /* Position the "next button" to the right */
-#nextButton {
+#nextButton, .next {
     right: 0rem;
     left: auto;
     border-radius: var(--border-radius, 0.2rem) 0 0 var(--border-radius, 0.2rem);

@@ -322,7 +322,7 @@ input:focus + .slider {
 /* The Modal (background) */
 .modal {
     background-color: var(--accent-color-black, black);
-	background-color: aqua;
+	/* background-color: aqua; */
 }
 
 /* Number text (1/3 etc) */
