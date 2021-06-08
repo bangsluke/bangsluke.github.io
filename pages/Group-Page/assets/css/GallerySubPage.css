@@ -101,7 +101,7 @@ img {
 
 .portrait-image-reduced-width {
     width: auto;
-    height: 20rem;
+    height: 16rem;
 }
 
 /* Define a landscape class to be dynamically added for when the image is wider than it is tall. */
@@ -117,7 +117,7 @@ img {
     position: absolute; /* Set the position to be absolute to ignore its container div. */
     z-index: 2;
     top: 1.2rem;
-    left: 1.6rem;
+    left: 2.2rem;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -128,7 +128,7 @@ img {
     position: absolute; /* Set the position to be absolute to ignore its container div. */
     z-index: 2;
     top: 1.2rem;
-    right: 1.6rem;
+    right: 2.2rem;
     font-size: 2rem;
     font-weight: bold;
 }
