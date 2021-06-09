@@ -75,30 +75,13 @@
 
             <snap-tabs>
 
-                <!-- The horizontal scrollable section. -->
-                <snap-tabs-header class="scroll-snap-x">
-
-                    <nav id="nav-bar">
-                        <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>                       
-                        
-                        <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
-                        <a class="anchor thing-with-anchor" href="#football" onclick="scrollToLinkWithOffset('nav-bar')" >Football</a>
-                        <a class="anchor thing-with-anchor" href="#history" onclick="scrollToLinkWithOffset('nav-bar')" >History</a>
-                        <a class="anchor thing-with-anchor" href="#statsAndTitan" onclick="scrollToLinkWithOffset('nav-bar')" >Stats and Titan</a>
-                        <!--<a href="#widgets">Widgets</a>-->
-                    </nav>
-
-                    <span class="snap-indicator"></span>
-
-                </snap-tabs-header>
-
                 <section class="scroll-snap-x">
 
                     <article class="nav-targets" id="profile">
 
 
-                        <!-- Add some initial loader anomation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                        <div class="loader">
+                        <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                        <!-- <div class="loader">
                             <div class="duo duo1">
                                 <div class="dot dot-a"></div>
                                 <div class="dot dot-b"></div>
@@ -107,7 +90,7 @@
                                 <div class="dot dot-a"></div>
                                 <div class="dot dot-b"></div>
                             </div>
-                        </div>
+                        </div> -->
 
 
 
@@ -739,6 +722,23 @@
                     </article> -->
 
                 </section>
+
+                <!-- The horizontal scrollable section. -->
+                <snap-tabs-header class="scroll-snap-x">
+
+                    <nav id="nav-bar">
+                        <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>                       
+                        
+                        <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
+                        <a class="anchor thing-with-anchor" href="#football" onclick="scrollToLinkWithOffset('nav-bar')" >Football</a>
+                        <a class="anchor thing-with-anchor" href="#history" onclick="scrollToLinkWithOffset('nav-bar')" >History</a>
+                        <a class="anchor thing-with-anchor" href="#statsAndTitan" onclick="scrollToLinkWithOffset('nav-bar')" >Stats and Titan</a>
+                        <!--<a href="#widgets">Widgets</a>-->
+                    </nav>
+
+                    <span class="snap-indicator"></span>
+
+                </snap-tabs-header>
 
             </snap-tabs>
 
