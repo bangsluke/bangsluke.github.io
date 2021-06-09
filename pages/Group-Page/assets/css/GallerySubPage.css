@@ -222,3 +222,8 @@ img.hover-shadow {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     font-size: inherit;
 }
+
+/* Add styling to the div surrounding the bonus football video. */
+#football-video-div {
+    margin-top: -3rem; /* Remove the excess space above the football video. */
+}
