@@ -14,7 +14,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: orange;
+    background-color: blue;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -31,7 +31,27 @@
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     z-index: 1;
     /* visibility: hidden; */
+    scroll-padding: 5rem 0rem 0rem 0rem;
 }
+
+/* Add styling to the anchor links to avoid the issue of the fixed header. */
+
+/* a.anchor {
+    display: block;
+    position: relative;
+    top: 10px;
+    visibility: hidden;
+} */
+
+.thing-with-anchor:before {
+    content: '';
+    display: block;
+    position: relative; 
+    width: 0;
+    height: 10rem;
+    margin-top: -10rem;
+}
+
 
 /* Original Snap Tabs CSS Styling. */
 
