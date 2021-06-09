@@ -126,7 +126,7 @@
     padding: var(--space-2) var(--space-3);
 } */
 
-@media (prefers-reduced-motion:reduce) {
+/* @media (prefers-reduced-motion:reduce) {
     snap-tabs>header a {
         -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
         border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
@@ -139,14 +139,14 @@
     snap-tabs .snap-indicator {
         visibility: hidden
     }
-}
+} */
 
-html {
+/* html {
     block-size: 100%;
     inline-size: 100%
-}
+} */
 
-body {
+/* body {
     min-block-size: 100%;
     min-inline-size: 100%;
     margin: 0;
@@ -156,39 +156,39 @@ body {
     justify-content: center;
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif
-}
+} */
 
-p {
+/* p {
     max-inline-size: 35ch;
     margin-block: .5ch
-}
+} */
 
-p+p {
+/* p+p {
     -webkit-margin-before: 1rem;
     margin-block-start: 1rem
-}
+} */
 
-h2 {
+/* h2 {
     font-size: 2.5rem;
     -webkit-margin-after: .5rem;
     margin-block-end: .5rem;
     line-height: 1
-}
+} */
 
-h2:first-of-type {
+/* h2:first-of-type {
     -webkit-margin-before: 0;
     margin-block-start: 0
-}
+} */
 
-article {
+/* article {
     box-sizing: border-box;
     font-family: Blokk;
     font-size: 1.25rem;
     line-height: 1;
     color: #333
-}
+} */
 
-.github-corner {
+/* .github-corner {
     fill: #ccc;
     color: #fff
 }
@@ -220,4 +220,4 @@ article {
     40%, 80% {
         transform: rotate(10deg)
     }
-}
+} */

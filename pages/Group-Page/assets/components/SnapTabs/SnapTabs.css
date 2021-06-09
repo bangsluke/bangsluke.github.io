@@ -14,7 +14,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -22,6 +22,11 @@
     width: 100%;
     height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    
+    height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    
+    
     /* Below is copied from body above. */
     box-sizing: border-box;
     display: grid;
@@ -68,22 +73,44 @@ p {
     margin-block: .5ch;
 }
 
+/* p {
+    max-inline-size: 35ch;
+    margin-block: .5ch
+} */
+
 p+p {
     -webkit-margin-before: 1rem;
     margin-block-start: 1rem;
 }
 
+/* p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem
+} */
+
 h2 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     -webkit-margin-after: .5rem;
     margin-block-end: .5rem;
     line-height: 1;
 }
 
+/* h2 {
+    font-size: 2.5rem;
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1
+} */
+
 h2:first-of-type {
     -webkit-margin-before: 0rem;
     margin-block-start: 0rem;
 }
+
+/* h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+} */
 
 article {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
@@ -91,6 +118,14 @@ article {
     font-size: 1rem;
     line-height: 1;
 }
+
+/* article {
+    box-sizing: border-box;
+    font-family: Blokk;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #333
+} */
 
 /* Specific snap-tabs styling with elements not used elsewhere on site. */
 
@@ -299,6 +334,21 @@ snap-tabs>section>article {
         visibility: hidden;
     }
 }
+
+/* @media (prefers-reduced-motion:reduce) {
+    snap-tabs>header a {
+        -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
+        border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
+        transition: color .7s ease, border-color .5s ease;
+    }
+    snap-tabs>header a:active, snap-tabs>header a:target, snap-tabs>header a[active] {
+        color: var(--text-active-color);
+        border-block-end-color: hsl(var(--accent));
+    }
+    snap-tabs .snap-indicator {
+        visibility: hidden
+    }
+} */
 
 /* Method C from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
 .nav-targets {
