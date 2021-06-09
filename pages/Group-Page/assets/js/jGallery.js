@@ -3,6 +3,32 @@
 // Gallery scripts
 
 
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      console.log('DOM is ready.')
+      hideLoaderDots();
+    }
+};
+
+// function ready(callbackFunction) {
+//     console.log("document.readystate = " + document.readystate);
+//     if (document.readyState != 'loading') {
+//         init2();
+//     } else {
+//         document.addEventListener("DOMContentLoaded", init2)
+//     }
+// }
+// ready(event => {
+//     console.log('DOM is ready.')
+// })
+
+// function init2() {
+//     console.log("init2 called.");
+// } 
+
+
+
+
 // Wait for the window to load and then run the init function below.
 window.addEventListener('DOMContentLoaded', init)
 

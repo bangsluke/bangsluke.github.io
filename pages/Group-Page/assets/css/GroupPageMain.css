@@ -479,7 +479,7 @@ tr:hover {
 /* Add a hidden class for hiding components that are not yet ready. */
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 /* Add a class to stop scrolling in certain divs. */
