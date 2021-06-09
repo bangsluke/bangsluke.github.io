@@ -14,7 +14,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: lightcoral;
+    background-color: grey;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -28,8 +28,8 @@
     /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     /* min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     
-    height: calc(100vh - var(--headerHeight, 2.8rem));
-    min-height: calc(100vh - var(--headerHeight, 2.8rem));
+    height: calc(100vh - var(--headerHeight, 2.8rem) - 6rem);
+    min-height: calc(100vh - var(--headerHeight, 2.8rem) - 6rem);
     
     /* Below is copied from body above. */
     box-sizing: border-box;
