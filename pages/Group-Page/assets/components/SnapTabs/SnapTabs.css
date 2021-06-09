@@ -14,7 +14,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: violet;
+    background-color: lightblue;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -34,6 +34,8 @@
     /* scroll-padding: 5rem 0rem 0rem 0rem; */
     padding-top: var(--headerHeight, 2.8rem);
     margin-top: -var(--headerHeight, 2.8rem);
+
+    overflow: hidden;
 }
 
 /* Add styling to the anchor links to avoid the issue of the fixed header. */
@@ -214,14 +216,39 @@ snap-tabs>snap-tabs-header a {
     padding: var(--vertical-space) var(--horizontal-space);
 }
 
+/* snap-tabs>header a {
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: .8rem;
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+} */
+
+/* snap-tabs>header a>svg {
+    inline-size: 1.5rem;
+    pointer-events: none;
+} */
+
 snap-tabs>snap-tabs-header a:hover {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     font-size: inherit;
 }
 
+/* snap-tabs>header a:hover {
+    background: hsl(var(--accent)/5%);
+} */
+
 snap-tabs>snap-tabs-header a:focus {
     outline-offset: -.5ch;
 }
+
+/* snap-tabs>header a:focus {
+    outline-offset: -.5ch;
+} */
 
 snap-tabs>snap-tabs-header>.snap-indicator {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
@@ -230,12 +257,26 @@ snap-tabs>snap-tabs-header>.snap-indicator {
     border-radius: var(--indicator-size);
 }
 
+/* snap-tabs>header>.snap-indicator {
+    inline-size: 0;
+    block-size: var(--indicator-size);
+    border-radius: var(--indicator-size);
+    background: hsl(var(--accent));
+} */
+
 snap-tabs>section {
     block-size: 100%;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
 }
+
+/* snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+} */
 
 snap-tabs>section>article {
     /* background-color: blue; */
@@ -245,6 +286,13 @@ snap-tabs>section>article {
     /* padding: var(--vertical-space) var(--horizontal-space); */
     padding: 0rem 0rem;
 }
+
+/* snap-tabs>section>article {
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding: var(--space-2) var(--space-3);
+} */
 
 @media (prefers-reduced-motion:reduce) {
     snap-tabs .snap-indicator {

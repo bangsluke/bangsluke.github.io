@@ -80,7 +80,7 @@
     display: flex;
 } */
 
-snap-tabs>header a {
+/* snap-tabs>header a {
     scroll-snap-align: start;
     display: inline-flex;
     align-items: center;
@@ -90,41 +90,41 @@ snap-tabs>header a {
     font-weight: 700;
     text-decoration: none;
     padding: var(--space-2) var(--space-3);
-}
+} */
 
-snap-tabs>header a>svg {
+/* snap-tabs>header a>svg {
     inline-size: 1.5rem;
     pointer-events: none;
-}
+} */
 
-snap-tabs>header a:hover {
+/* snap-tabs>header a:hover {
     background: hsl(var(--accent)/5%);
-}
+} */
 
-snap-tabs>header a:focus {
+/* snap-tabs>header a:focus {
     outline-offset: -.5ch;
-}
+} */
 
-snap-tabs>header>.snap-indicator {
+/* snap-tabs>header>.snap-indicator {
     inline-size: 0;
     block-size: var(--indicator-size);
     border-radius: var(--indicator-size);
     background: hsl(var(--accent));
-}
+} */
 
-snap-tabs>section {
+/* snap-tabs>section {
     block-size: 100%;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
-}
+} */
 
-snap-tabs>section>article {
+/* snap-tabs>section>article {
     scroll-snap-align: start;
     overflow-y: auto;
     overscroll-behavior-y: contain;
     padding: var(--space-2) var(--space-3);
-}
+} */
 
 @media (prefers-reduced-motion:reduce) {
     snap-tabs>header a {
