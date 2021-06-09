@@ -2,6 +2,14 @@
 
 // Gallery SubPage scripts
 
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function(){
+    // Everything has loaded!
+    console.log('Everything has loaded!');
+    
+    hideLoaderDots();
+  });
+
 // Wait for the window to load and then run the init function below.
 window.addEventListener('DOMContentLoaded', init)
 
