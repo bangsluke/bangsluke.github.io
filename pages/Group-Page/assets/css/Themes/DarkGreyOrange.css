@@ -282,7 +282,7 @@ footer li a:hover {
 /* Avatar class for the main image. */
 .avatar {
 	background-color: rgba(255, 255, 255, 0.075);
-	border: solid 0.06rem var(--accent-color-1);
+	border: solid 0.2rem var(--accent-color-1);
 }
 
 /* Middle Ticker Container */
