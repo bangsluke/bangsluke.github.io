@@ -413,5 +413,28 @@ function generateTableIndividualsTitans(table, data, foundColumn) {
     //console.log("Function: generateTableIndividualsTitans finished.") // Log a final message to show the function is complete.
 }
 
+
+function scrollToLinkWithOffset(elementID) {
+    
+    console.log("scrollToLinkWithOffset(elementID) called")
+    
+    const element = document.getElementById(elementID);
+    const offset = 90;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
+
 // End the console timer.
 console.timeEnd();

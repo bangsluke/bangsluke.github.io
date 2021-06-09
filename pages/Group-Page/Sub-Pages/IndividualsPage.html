@@ -27,6 +27,7 @@
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
     <link href="/pages/Group-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet"> <!-- SnapTabs styling -->
+    <link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet"> <!-- Loader Dots styling -->
     <link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
         id="css-theme" /> <!-- CSS site theme -->
     <link href="/pages/Group-Page/assets/css/IndividualsPage.css" rel="stylesheet"> <!-- Individuals Page styling -->
@@ -38,7 +39,7 @@
 
     <!-- SnapTab styling and scripts -->
     <!-- <link rel="stylesheet" href="/pages/Group-Page/assets/components/SnapTabs/bundle.css"> -->
-    
+
 
 </head>
 
@@ -78,11 +79,12 @@
                 <snap-tabs-header class="scroll-snap-x">
 
                     <nav id="nav-bar">
-                        <a class="anchor thing-with-anchor" href="#profile" active>Profile</a>
+                        <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>                       
+                        
                         <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
-                        <a class="anchor thing-with-anchor" href="#football">Football</a>
-                        <a class="anchor thing-with-anchor" href="#history">History</a>
-                        <a class="anchor thing-with-anchor" href="#statsAndTitan">Stats and Titan</a>
+                        <a class="anchor thing-with-anchor" href="#football" onclick="scrollToLinkWithOffset('nav-bar')" >Football</a>
+                        <a class="anchor thing-with-anchor" href="#history" onclick="scrollToLinkWithOffset('nav-bar')" >History</a>
+                        <a class="anchor thing-with-anchor" href="#statsAndTitan" onclick="scrollToLinkWithOffset('nav-bar')" >Stats and Titan</a>
                         <!--<a href="#widgets">Widgets</a>-->
                     </nav>
 
@@ -93,6 +95,21 @@
                 <section class="scroll-snap-x">
 
                     <article class="nav-targets" id="profile">
+
+
+                        <!-- Add some initial loader anomation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                        <div class="loader">
+                            <div class="duo duo1">
+                                <div class="dot dot-a"></div>
+                                <div class="dot dot-b"></div>
+                            </div>
+                            <div class="duo duo2">
+                                <div class="dot dot-a"></div>
+                                <div class="dot dot-b"></div>
+                            </div>
+                        </div>
+
+
 
                         <!--<details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details> -->
@@ -743,10 +760,10 @@
 
     <!-- Add the common header JS -->
     <script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
-    
+
     <!-- Add the common sideMenu JS -->
     <script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
-    
+
     <!-- Add the common footer JS -->
     <script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
 
@@ -763,16 +780,16 @@
     <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
-    
+
     <!-- Get Individuals Page Pro Team JS -->
     <script src="/pages/Group-Page/assets/js/jIndividualsPageProTeam.js"></script>
-    
+
     <!-- Get Individuals Page Dorkinians JS -->
     <script src="/pages/Group-Page/assets/js/jIndividualsPageDorkinians.js"></script>
-    
+
     <!-- Get the second (and main) PapaParse JS -->
     <script src="/pages/Group-Page/assets/js/jIndividualsPage.js"></script> <!-- Get Individuals Page JS -->
-    
+
     <!-- Add the Main Functions JS -->
     <script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
 
