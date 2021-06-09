@@ -47,7 +47,7 @@
 
 .avatar {
     background-color: rgba(255, 255, 255, 0.075);
-    border: solid 0.125rem var(--accent-color-white, white);
+    border: solid 0.06rem var(--accent-color-white, white);
     height: 2.7rem; /* Fallback if needed. */
     height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
     width: auto;

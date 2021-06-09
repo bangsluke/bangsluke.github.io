@@ -34,6 +34,9 @@
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
+	<!-- Add the loader dots JS -->
+	<script src="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
@@ -87,7 +90,7 @@
 
 
 				<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-				<div class="loader" id="loader-dots-container">
+				<div class="loader">
 					<div class="duo duo1">
 						<div class="dot dot-a"></div>
 						<div class="dot dot-b"></div>
@@ -108,7 +111,7 @@
 						<h3 class="gallery-cover-text">Big Nights Out</h3>
 						<img class="gallery-cover-image" id="bigNightsOutCover"
 							src="/pages/Group-Page/assets/images/Gallery/Covers/Big Nights Out Cover.jpg"
-							alt="Big Nights Out Album Cover">
+							alt="Big Nights Out Album Cover" onload="hideLoaderDots()">
 					</a>
 				</div>
 

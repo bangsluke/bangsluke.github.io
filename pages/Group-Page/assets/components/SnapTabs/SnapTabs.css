@@ -14,17 +14,18 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: yellowgreen;
+    background-color: lightcoral;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
-    margin-top: 0rem;
+    /* margin-top: 0rem; */
+    margin-top: var(--headerHeight, 2.8rem);
     width: 100%;
     height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     
-    height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
-    min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    /* min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     
     
     /* Below is copied from body above. */
@@ -37,8 +38,9 @@
     z-index: 1;
     /* visibility: hidden; */
     /* scroll-padding: 5rem 0rem 0rem 0rem; */
-    padding-top: var(--headerHeight, 2.8rem);
-    margin-top: -var(--headerHeight, 2.8rem);
+    
+    /* padding-top: var(--headerHeight, 2.8rem); */
+    /* margin-top: -var(--headerHeight, 2.8rem); */
 
     overflow: hidden;
 }
