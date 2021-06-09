@@ -11,7 +11,7 @@
 	position: fixed;
 	height: 80px;
 	width: 80%;
-	top: 0;
+	top: 0rem;
 	left: 20%;
 	z-index: 1;
 	transition: 0.5s;

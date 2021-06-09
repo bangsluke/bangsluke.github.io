@@ -11,12 +11,12 @@
     height: max-content;
     width: 100%;
     margin: auto;
-	margin-top: 10px;
+	margin-top: 0.625rem;
 	/* overflow: none; */
 }
 
 .shared-calendar {
-	height: 400px;
+	height: 25rem;
 	width: 100%;
 	/* overflow: none; */
 }
@@ -27,7 +27,7 @@
 	height: max-content;
     width: 95%;
     margin: auto;
-	margin-top: 10px;
+	margin-top: 0.625rem;
 	/* overflow-y: scroll; */
 }
 

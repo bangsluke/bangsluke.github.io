@@ -85,8 +85,8 @@ table {
 th {
 	background-color: rgba( 255, 255, 255, 0.10);
 	background-color: var(--accent-color-3,red);
-	/*border-bottom: 4px solid var(--accent-color-1, red); /* Add a nice border below the header row */
-	box-shadow: inset 0 0px 0 red, inset 0 -4px 0 var(--accent-color-1, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	/*border-bottom: 0.25rem solid var(--accent-color-1, red); /* Add a nice border below the header row */
+	box-shadow: inset 0rem 0rem 0rem red, inset 0rem -0.25rem 0rem var(--accent-color-1, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 }
 
 tr:hover {
@@ -101,7 +101,7 @@ tr:hover {
 
 /* Add 4th row underline for Titan status. */
 .titan4thRow tr:nth-child(4){
-	border-bottom: 4px double var(--accent-color-1, red);
+	border-bottom: 0.25rem double var(--accent-color-1, red);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -112,7 +112,7 @@ tr:hover {
 As a solution, have a generic header styling across all themes. */
 
 /* .header-area {
-    border-bottom: solid 2px var(--accent-color-white, white);
+    border-bottom: solid 0.125rem var(--accent-color-white, white);
 } */
 
 /* For subpages. */
@@ -124,7 +124,7 @@ As a solution, have a generic header styling across all themes. */
 /* Avatar classes for the main image. */
 /* .avatar {
     background-color: rgba(255, 255, 255, 0.075);
-    border: solid 1px var(--accent-color-white, white);
+    border: solid 0.06rem var(--accent-color-white, white);
 } */
 
 /* Main subpage header text class. */
@@ -143,7 +143,7 @@ As a solution, have a generic top menu styling across all themes. */
 /* The top menu bar which conatins all further containers. */
 /* .topMenu {
     background: var(--accent-color-black, black);
-    border-left: solid 1px var(--accent-color-1);
+    border-left: solid 0.06rem var(--accent-color-1);
 } */
 
 /* .topMenu a {
@@ -274,7 +274,7 @@ footer li a:hover {
 /* Avatar class for the main image. */
 .avatar {
 	background-color: rgba(255, 255, 255, 0.075);
-	border: solid 1px var(--accent-color-1);
+	border: solid 0.06rem var(--accent-color-1);
 }
 
 /* Middle Ticker Container */
@@ -299,7 +299,7 @@ input:checked + .slider {
 }
   
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0rem 0rem 0.06rem #2196F3;
 }
 
 .gallery-cover-text {
@@ -345,7 +345,7 @@ input:focus + .slider {
 }
 
 .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.2), 0rem 0.375rem 1.25rem 0rem rgba(0, 0, 0, 0.19);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -363,27 +363,27 @@ input:focus + .slider {
 
 #proTeamLeagueLogo {
 	/* filter: brightness(0) invert(1); */
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 #dorkiniansLogo {
 	/* filter: brightness(0) invert(1); */
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 #ashcombeLogo {
 	/* filter: brightness(0) invert(1); */
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 #ashcombeLogoText {
 	/* filter: brightness(0) invert(1); */
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 #brockhamBadgersLogo {
 	filter: brightness(0) invert(1);
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 /* Add styling for the Individual Stats table. */
@@ -417,7 +417,7 @@ input:focus + .slider {
 
 .glass-card {
 	background: rgba( 255, 255, 255, 0.20 );
-	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	border: 0.06rem solid rgba( 255, 255, 255, 0.18 );
 }
 
 .alias-container {

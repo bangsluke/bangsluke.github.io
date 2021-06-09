@@ -39,7 +39,7 @@ img {
 /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
 
 /* .row > .column {
-    padding: 0 8px;
+    padding: 0rem 0.5rem;
 }
   
 .row:after {
@@ -59,9 +59,9 @@ img {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     display: none; /* Initially on load, don't show the modal. */
     position: fixed; /* Set the modal as fixed position. */
-    left: 0; /* Fix the modal to the left. */
-    top: 0; /* Fallback. */
-    top: var(--headerHeight, 45px); /* Offset below the header height */
+    left: 0rem; /* Fix the modal to the left. */
+    top: 0rem; /* Fallback. */
+    top: var(--headerHeight, 2.8rem); /* Offset below the header height */
     width: 100%; /* Set the modal to cover the full screen. */
     height: 100%; /* Set the modal to cover the full screen. */
     z-index: 5; /* Make the modal the highest level z-index item. */
@@ -76,9 +76,9 @@ img {
     position: relative;
     margin: auto; /* Align the modal content box correctly in the window. */
     /*margin-top: 20%;
-    padding: 0 auto;
+    padding: 0rem auto;
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
 }*/
 
 /* Define a class for the image when its the main image in the modal. */
@@ -154,7 +154,7 @@ img {
     margin-top: -2rem;
     font-weight: bold;
     font-size: 1.8rem;
-    border-radius: var(--border-radius, 0.2rem) 0 0 var(--border-radius, 0.2rem);
+    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
     transition: 0.6s ease;
     user-select: none;
     -webkit-user-select: none;   
@@ -173,7 +173,7 @@ img {
     cursor: pointer;
     width: 2rem;
     padding: 1rem;
-    border-radius: var(--border-radius, 0.2rem) 0 0 var(--border-radius, 0.2rem);
+    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
     transition: 0.6s ease;
     user-select: none;
     -webkit-user-select: none;
@@ -192,7 +192,7 @@ img {
 #nextButton, .next {
     right: 0rem;
     left: auto;
-    border-radius: var(--border-radius, 0.2rem) 0 0 var(--border-radius, 0.2rem);
+    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
 }
 
 /* Caption text */

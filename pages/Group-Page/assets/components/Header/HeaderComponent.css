@@ -6,29 +6,27 @@
 
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
 .header-area {
-    left: 0px;
-    top: 0px;
-    /*--headerHeight: 45px; /* Define the header variable. */
-    height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight, 45px); /* Get the header height variable from GroupPageMain.css. */
+    left: 0rem;
+    top: 0rem;
+    height: 2.8rem; /* Fallback if needed. */
+    height: var(--headerHeight, 2.8rem); /* Get the header height variable from GroupPageMain.css. */
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2px;
+    padding: 0.125rem;
     z-index: 2;
     position: fixed;
-    border-bottom: solid 2px var(--accent-color-white, white);
+    border-bottom: solid 0.125rem var(--accent-color-white, white);
 }
 
 /* For homepage only. */
 
 .header-area.homepage {
     /* background-color: lightcoral; */
-    height: 45px; /* Fallback if needed. */
-    height: var(--headerHeight, 45px); /* Define the header height using the variable. */
-    /* height: 0px; */
-    padding: 15px;
+    height: 2.8rem; /* Fallback if needed. */
+    height: var(--headerHeight, 2.8rem); /* Define the header height using the variable. */
+    padding: 1rem;
     border-bottom: none;
 }
 
@@ -41,17 +39,17 @@
 /* Avatar classes for the main image. */
 .avatar-container {
     /* background-color: maroon; */
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
-    width: 43px; /* Fallback if needed. */
-    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    width: 2.7rem; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
 }
 
 .avatar {
     background-color: rgba(255, 255, 255, 0.075);
-    border: solid 1px var(--accent-color-white, white);
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    border: solid 0.125rem var(--accent-color-white, white);
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
     width: auto;
     border-radius: 100%;
     cursor: pointer;
@@ -80,7 +78,7 @@
     /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
     .avatar {
         height: 70px;
-        margin: 0.3em 0.7em;
+        margin: 0.3rem 0.7rem;
     }
     .subpage-header-text {
         font-size: 30px;
@@ -91,7 +89,7 @@
     /* Covers iPads and other tablets. */
     .avatar {
         height: 70px;
-        margin: 0.3em 0.7em;
+        margin: 0.3rem 0.7rem;
     }
     .subpage-header-text {
         font-size: 35px;
@@ -102,7 +100,7 @@
     /* Desktops and Laptops - For most normal size screen desktops and laptops. */
     .avatar {
         height: 70px;
-        margin: 0.3em 0.7em;
+        margin: 0.3rem 0.7rem;
     }
     .subpage-header-text {
         font-size: 40px;
@@ -113,7 +111,7 @@
     /* Desktops and Laptops - For larger monitors and displays. */
     .avatar {
         height: 70px;
-        margin: 0.3em 0.7em;
+        margin: 0.3rem 0.7rem;
     }
     .subpage-header-text {
         font-size: 40px;
@@ -127,22 +125,22 @@
 
 .topMenu { /* The top menu bar which conatins all further containers. */
     background: var(--accent-color-black, black);
-    border-left: solid 1px var(--accent-color-1);
+    border-left: solid 0.125rem var(--accent-color-1);
     position: fixed;
-    height: 80px;
+    height: 5rem;
     width: 80%;
-    top: 0;
+    top: 0rem;
     left: 20%;
     z-index: 1;
     transition: 0.5s;
-    padding-top: 20px;
+    padding-top: 1.25rem;
 }
 
 .topMenu-Container {
     /* background: green; */
-    width: 600px;
+    width: 37.5rem;
     height: inherit;
-    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: row;
     align-items: center; /* Vertically center the div's inside the container. */
@@ -156,9 +154,9 @@
 }
 
 .topMenu-Icon {
-	height: 40px;
+	height: 2.5rem;
 	filter: brightness(0) invert(1);
-	margin-top: 4px;
+	margin-top: 0.25rem;
 }
 
 .topMenu-Text-Container {
@@ -166,8 +164,8 @@
     width: max-content;
     height: max-content; /* Set the div th be the height of the text. */
     text-align: center; /* Center the text in the div. */
-    margin-left: 10px; /* Add spacing between the icon and text. */
-    margin-right: 40px; /* Add spacing between each link. */
+    margin-left: 0.625rem; /* Add spacing between the icon and text. */
+    margin-right: 2.5rem; /* Add spacing between each link. */
 }
 
 .topMenu a {
@@ -229,28 +227,27 @@
 /* Side Menu CSS */
 
 .burgericon-container {
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
-    width: 43px; /* Fallback if needed. */
-    width: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
-    padding-right: 5px;
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    width: 2.7rem; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    padding-right: 0.3rem;
 }
 
 .burgericon {
     color: var(--accent-color-white, white);
     filter: invert(1) hue-rotate(180deg);
-    top: 0px;
-    left: 0px;
-    height: 43px; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 2px); /* Make the avatar just smaller than the header height. */
+    top: 0rem;
+    left: 0rem;
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
     width: auto;
     display: block;
-    font-size: 40px;
+    font-size: 2.5rem;
     cursor: pointer;
-    padding: 0.5em;
-    margin: 0;
-    padding: 0;
-    /* width: 80px; */
+    padding: 0.5rem;
+    margin: 0rem;
+    padding: 0rem;
     /* border-style: solid; */
 }
 
@@ -263,22 +260,22 @@
 .sideMenu {
 	background: var(--accent-color-black, black);
     height: 100%;
-	width: 0; /* Width of sideMenu is modified dynamically in sideMenu.js. */
+	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
 	z-index: 3;
-	top: 0;
-	right: 0;
+	top: 0rem;
+	right: 0rem;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 60px;
-	/* border-left: solid 1px var(--accent-color-1); */
+	padding-top: 3.75rem;
+	/* border-left: solid 0.125rem var(--accent-color-1); */
 	display: inline;
 }
 
 /* sideMenu-Main-Container holds all of the smaller icon and text containers. */
 .sideMenu-Main-Container {
     /* background: orange; */
-    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: column;
     align-items: center; /* Vertically center the div's inside the container. */
@@ -288,7 +285,7 @@
 /* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
 .sideMenu-Container {
     /* background: green; */
-    padding: 0 20px;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: row;
     align-items: center; /* Vertically center the div's inside the container. */
@@ -298,39 +295,39 @@
 /* sideMenu-Icon-Container holds just the sideMenu-Icon. */
 .sideMenu-Icon-Container {
     /* background: red; */
-    width: 60px;
+    width: 3.75rem;
     height: max-content;
 	height: 3rem; /* Controls the vertical height between each set of icons and links. */
 }
 
 .sideMenu-Icon {
-	height: 40px;
+	height: 2.5rem;
 	filter: brightness(0) invert(1);
-	margin-top: 4px;
+	margin-top: 0.25rem;
 }
 
 .sideMenu-Text-Container {
     /* background: blue; */
-    width: 150px;
+    width: 9.5rem;
     /*height: max-content; /* Set the div to be the height of the text. */
 	height: 2rem;
     text-align: left; /* Left align the text in the div. */
-    margin-left: 0px; /* Add spacing between the icon and text. */
+    margin-left: 0rem; /* Add spacing between the icon and text. */
 }
 
 .sideMenu a {
 	color: var(--accent-color-white, white);
-    padding: 8px 8px 8px 32px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
 	text-decoration: none;
 	display: block;
 	transition: 0.3s;
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 	text-transform: uppercase;
 	font-weight: 900;
 }
 
 .sideMenu a i {
-	padding-right: 15px;
+	padding-right: 1rem;
 }
 
 .main-menu a:hover {
@@ -340,11 +337,11 @@
 
 .sideMenu .closebtn {
 	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
-	padding: 0.2em;
+	top: 0rem;
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
 }
 
 /* Side menu media queries. */

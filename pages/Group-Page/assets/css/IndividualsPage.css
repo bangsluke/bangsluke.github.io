@@ -5,13 +5,12 @@
 /* Add custom individuals page styling. */
 
 #header-offset-div {
-	height: var(--headerHeight, 45px);
+	height: var(--headerHeight, 2.8rem);
 }
-
 
 .allContentFrame {
 	/* Add an "offset" value for all content so that it sits below the fixed header. */
-	padding-top: 0px;
+	padding-top: 0rem;
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
@@ -36,7 +35,7 @@
 
 .individualsTable td {
 	text-align: left;
-	line-height: 20px;
+	line-height: 1.25rem;
 }
 
 .individualsTable tr:hover {
@@ -47,7 +46,7 @@
 /* individuals table icon styling. */
 
 .individualsPageIcon {
-	width: 20px;
+	width: 1.25rem;
 	height: auto;
 	filter: brightness(0) invert(1);
 }
@@ -82,14 +81,14 @@
 #footballHeader {
 	width: var(--pagewidth, 98%);
 	height: auto;
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	margin: 1rem auto; /* Add a margin above the football header that offsets it down the same as page-section. */
 }
 
 #proTeamLeagueLogo {
 	width: 80%;
 	height: auto;
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
@@ -108,7 +107,7 @@
 	width: 100%;
 	text-align: center;
 	font-size: 0.7rem;
-	line-height: 20px;
+	line-height: 1.25rem;
 	border: none;
 	border-collapse: collapse;
 	background-color: var(--accent-color-white,white);
@@ -126,7 +125,7 @@
 
 /* Add the border below the header rows. */
 .premierLeague>thead>:nth-child(1) {
-	border-bottom: 4px solid var(--proTeam-accent-color, #02F785);
+	border-bottom: 0.25rem solid var(--proTeam-accent-color, #02F785);
 }
 
 /* Select the 4th row to highlight the selected team. */
@@ -157,7 +156,7 @@
 
 /* Add the border below the header rows. */
 .championship>thead>:nth-child(1) {
-	border-bottom: 4px solid var(--championship-accent-color, #FA0F10);
+	border-bottom: 0.25rem solid var(--championship-accent-color, #FA0F10);
 }
 
 /* Select the 4th row to highlight the selected team. */
@@ -191,9 +190,9 @@
 .dorkiniansHeaderContainer {
 	/* background-color: blue; */
 	display: grid;
-	grid-column-gap: 10px;
-	grid-template-columns: 60px 70%;
-  	grid-template-rows: 60px;
+	grid-column-gap: 0.625rem;
+	grid-template-columns: 3.75rem 70%;
+  	grid-template-rows: 3.75rem;
   	grid-template-areas: "logo-section text-section";
 	margin-bottom: 1rem; /* Add space below the logo. */
 }
@@ -204,9 +203,9 @@
 }
 
 #dorkiniansLogo {
-	height: 60px;
+	height: 3.75rem;
 	width: auto;
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 	/* filter: brightness(0) invert(1); */
 }
 
@@ -220,7 +219,7 @@
 }
 
 .dorkiniansHeaderText {
-	margin: auto 0; /* Add an auto margin above and below the text to vertically center align the header. */
+	margin: auto 0rem; /* Add an auto margin above and below the text to vertically center align the header. */
 }
 
 .dorkiniansTableHeaderText {
@@ -313,9 +312,9 @@
 /* Add a header container section to hold the logo and title. */
 .brockhamBadgersHeaderContainer {
 	display: grid;
-	grid-column-gap: 10px;
-	grid-template-columns: 60px 70%;
-  	grid-template-rows: 60px;
+	grid-column-gap: 0.625rem;
+	grid-template-columns: 3.75rem 70%;
+  	grid-template-rows: 3.75rem;
   	grid-template-areas: "logo-section text-section";
 	margin-bottom: 1rem; /* Add space below the logo. */
 }
@@ -326,9 +325,9 @@
 }
 
 #brockhamBadgersLogo {
-	height: 60px;
+	height: 3.75rem;
 	width: auto;
-	margin: 0 auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
 }
 
 .brockhamBadgersTextContainer {
@@ -341,11 +340,11 @@
 }
 
 .brockhamBadgersHeaderText {
-	margin: auto 0; /* Add an auto margin above and below the text to vertically center align the header. */
+	margin: auto 0rem; /* Add an auto margin above and below the text to vertically center align the header. */
 }
 
 #brockhamBadgersPicture {
-	height: 100px;
+	height: 0.625rem;
 	width: auto;
 	margin: auto;
 	margin-bottom: 2rem; /* Add space below the logo. */
@@ -354,7 +353,7 @@
 cite {
 	/* background-color: red; */
 	width: 100%;
-	margin: 0 auto;
+	margin: 0rem auto;
 	padding-left: 60%;
 	text-align: right;
 }

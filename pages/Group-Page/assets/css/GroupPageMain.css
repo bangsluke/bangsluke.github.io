@@ -38,16 +38,15 @@
 	/* Distances & Spacing */
 
 	/* The below distance variables are constant throughout themes and so exist here. */
-	--headerHeight: 45px; /* Define the header height variable. */
-	--footerHeight: 60px; /* Define the footer height variable. */
+	--headerHeight: 2.8rem; /* Define the header height variable. */
+	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--table-padding: 0.2rem;
-	--gallery-image-height: 130px; /* For the Gallery page */
+	--gallery-image-height: 8.125rem; /* For the Gallery page */
 	--user-card-height: 9rem; /* For the Users page */
 	--user-image-height: 6rem; /* For the Users page */
 	--user-name-height: 2.6rem; /* For the Users page */
 	--pagewidth: 98%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.2rem;
-	/* line-height: 15px; */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -75,19 +74,19 @@ html {
 /* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0rem;
+	padding: 0rem;
 	max-width: 100%; /* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */  /* overflow-x: hidden;  overflow-y: hidden;  position: relative; */  /* display: block; */
 }
 
 /* Generic body class for all HTML pages using this CSS format. */
 body {
-	top: 0px;
-	left: 0px;
+	top: 0rem;
+	left: 0rem;
 	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
 	min-block-size: 100%;
 	min-inline-size: 100%;
-	margin: 0;
+	margin: 0rem;
 
 	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
 	max-width: 100%;
@@ -99,7 +98,7 @@ body {
 
 /* Completely disable all vertical scrolling across all pages. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
 /* html, body {
-	margin: 0; 
+	margin: 0rem; 
 	height: 100%;
 	overflow: hidden;
 } */
@@ -107,20 +106,20 @@ body {
 /* Main content styling. */
 .main-content-area {
 	/* background: lightblue; */
-	margin-top: 50px; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 45px header. */
-	top: 0px;
-	left: 0px;
+	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	top: 0rem;
+	left: 0rem;
 	width: 100%;
 	
-	min-height: 568px; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
-	min-height: calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* 45px header + 5px padding + 60px footer (https://stackoverflow.com/a/26090114/14290169) */
-	min-height: -o-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Opera */
-	min-height: -webkit-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Google, Safari */
-	min-height: -moz-calc(100vh - var(--headerHeight) - 5px - var(--footerHeight)); /* Firefox */
+	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
+	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: -o-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Opera */
+	min-height: -webkit-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Google, Safari */
+	min-height: -moz-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Firefox */
 	
 	height: max-content;
 	transition: margin-left .5s;
-	padding: 5px; /* Add all round padding to content to slightly center it. */
+	padding: 0.3125rem; /* Add all round padding to content to slightly center it. */
 	
 	/* overflow: scroll; */
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
@@ -135,14 +134,14 @@ body {
 .page-section {
 	/* background-color: aqua; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
-	backdrop-filter: blur( 12.0px );
-	-webkit-backdrop-filter: blur( 12.0px );
+	backdrop-filter: blur( 0.75rem );
+	-webkit-backdrop-filter: blur( 0.75rem );
 	height: max-content;
 	width: var(--pagewidth, 98%);
 	margin: 1rem auto 1rem auto; /* Add a margin above and below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
-	/* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+	/* border: 0.06rem solid rgba( 255, 255, 255, 0.18 ); */
 	/* overflow: auto; */
 	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
 	/* scroll-behavior: smooth; */
@@ -246,12 +245,12 @@ a {
 
 /* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
 a[target="_blank"]:before, a[target="new"]:before {
-	margin:0 5px 0 0;
-	padding:1px;
-	outline:1px solid #333;
-	color:#333;
-	background:#ff9;
-	font:12px “Zapf Dingbats”;
+	margin: 0rem 0.3125rem 0rem 0rem;
+	padding: 0.06rem;
+	outline: 0.06rem solid #333;
+	color: #333;
+	background: #ff9;
+	font: 0.75rem “Zapf Dingbats”;
 	content: “\279C”;
 }
 
@@ -264,7 +263,7 @@ th {
 	text-align: center; /* By default, center all table text. */
 	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
 	position: sticky; /* Make the header row sticky position to lock it out. */
-	top: 0px; /* Make the header row sticky position to lock it out. */
+	top: 0rem; /* Make the header row sticky position to lock it out. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 }
 
@@ -396,8 +395,8 @@ label {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	border: 1px solid var(--accent-color-white);
-	padding: 0.5em;
+	border: 0.06rem solid var(--accent-color-white);
+	padding: 0.5rem;
 } */
 
 /* .fieldset-row {
@@ -442,7 +441,7 @@ tr:hover {
 	position: relative;
 	overflow: auto;
 	/* overflow-x: scroll; */
-	/* border: 1px solid white; */
+	/* border: 0.06rem solid white; */
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
@@ -455,9 +454,9 @@ tr:hover {
 }
 
 .first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
-	/* width: 100px;
-	min-width: 100px;
-	max-width: 100px; */
+	/* width: 6.25rem;
+	min-width: 6.25rem;
+	max-width: 6.25rem; */
 	width: max-content;
 	left: 0rem;
 }
@@ -494,7 +493,7 @@ tr:hover {
 /* Footer Styling */
 
 /* footer {
-	bottom: 0px;
+	bottom: 0rem;
 } */
 
 /* CSS Tips and Tricks. */

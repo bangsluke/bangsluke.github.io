@@ -23,8 +23,8 @@ body {
 .lightbox {
   zoom: 1.5;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0rem;
+  left: 0rem;
   width: 100%; /* Width of the black overlay of the background image. */
   height: 100%;
   background: rgba(10, 10, 10, 0.8);

@@ -23,7 +23,7 @@
 	/* background-color: red; */
 	text-align: center;
 	min-width: 40%;
-	width: 450px;
+	width: 28rem;
 	flex: 0 1 auto;
 	align-self: flex-start; /* Vertically align the element within the container. */
 	margin-bottom: 1rem;

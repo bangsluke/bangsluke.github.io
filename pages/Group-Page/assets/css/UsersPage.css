@@ -12,9 +12,9 @@
 	height: max-content;
 	padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Space the content inside the glass card. */
 	margin: 1rem 0rem 1rem 0rem; /* Add vertical spacing between the glass cards */	
-	/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-	backdrop-filter: blur( 12.0px );
-	-webkit-backdrop-filter: blur( 12.0px );
+	/* box-shadow: 0rem 0.5rem 2rem 0rem rgba( 31, 38, 135, 0.37 ); */
+	backdrop-filter: blur( 0.75rem );
+	-webkit-backdrop-filter: blur( 0.75rem );
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
 }
 

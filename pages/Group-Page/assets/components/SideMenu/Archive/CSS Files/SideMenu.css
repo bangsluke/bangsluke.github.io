@@ -14,7 +14,6 @@
 	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
-	/* line-height: 15px; */
 }
 
 /* Side Menu CSS */
@@ -34,11 +33,11 @@
 	display: block;
 	font-size: 40px;
 	cursor: pointer;
-	padding: 0.5em;
+	padding: 0.5rem;
 	height: 55px;
 	width: auto;
-	margin: 0;
-	padding: 0;
+	margin: 0rem;
+	padding: 0rem;
 	/* width: 80px; */
 	/* border-style: solid; */
 	filter: invert(1) hue-rotate(180deg);
@@ -50,11 +49,11 @@
 
 .sideMenu {
 	height: 100%;
-	width: 0;
+	width: 0rem;
 	position: fixed;
 	z-index: 1;
-	top: 0;
-	right: 0;
+	top: 0rem;
+	right: 0rem;
 	background: var(--accent-color-black);
 	overflow-x: hidden;
 	transition: 0.5s;
@@ -68,7 +67,7 @@
 	letter-spacing: 7px;
 	color: var(--accent-color-white);
 	background: var(--accent-color-1);
-	padding: 20px 0;
+	padding: 1.25rem 0rem;
 }
 
 .sideMenu a {
@@ -94,11 +93,11 @@
 
 .sideMenu .closebtn {
 	position: absolute;
-	top: 0;
+	top: 0rem;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
-	padding: 0.2em;
+	padding: 0.2rem;
 }
 
 /* Side menu media queries. */

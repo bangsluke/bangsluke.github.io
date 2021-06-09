@@ -37,7 +37,7 @@ html, body {
 
 /* Add a hover animation to the clickable image link. */
 .avatar:hover {
-	transform: translateY(-5px); /* Make the image move slightly up on hover. */
+	transform: translateY(-0.3125rem); /* Make the image move slightly up on hover. */
 }
 
 /* Style the visible text on the homepage. */
@@ -52,7 +52,7 @@ html, body {
 
 /* Add a hover animation to the clickable link. */
 .content-text h1:hover {
-	transform: translateY(-5px); /* Make the text move slightly up on hover. */
+	transform: translateY(-0.3125rem); /* Make the text move slightly up on hover. */
 }
 
 /* The sub header container around "CLICK TO ENTER". */
@@ -65,7 +65,7 @@ html, body {
 
 /* Add a hover animation to the clickable link. */
 .content-text h3:hover {
-	transform: translateY(-5px); /* Make the text move slightly up on hover. */
+	transform: translateY(-0.3125rem); /* Make the text move slightly up on hover. */
 }
 
 /* Quotes Ticker Styling - (https://codeconvey.com/horizontal-news-ticker-css/) */
