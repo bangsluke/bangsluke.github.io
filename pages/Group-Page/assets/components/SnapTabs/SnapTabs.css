@@ -28,8 +28,8 @@
     /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     /* min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
     
-    height: calc(100vh - var(--headerHeight, 2.8rem) - 6rem);
-    min-height: calc(100vh - var(--headerHeight, 2.8rem) - 6rem);
+    height: calc(100vh - var(--headerHeight, 2.8rem) - 5.5rem);
+    min-height: calc(100vh - var(--headerHeight, 2.8rem) - 5.5rem);
     
     /* Below is copied from body above. */
     box-sizing: border-box;
@@ -47,29 +47,6 @@
 
     overflow: hidden;
 }
-
-/* Add styling to the anchor links to avoid the issue of the fixed header. */
-
-/* a.anchor {
-    display: block;
-    position: relative;
-    top: 10px;
-    visibility: hidden;
-} */
-
-/* .thing-with-anchor:before {
-    content: '';
-    display: block;
-    position: relative; 
-    width: 0;
-    height: 10rem;
-    margin-top: -10rem;
-} */
-
-/* .anchor {
-    padding-top: 45px;
-    margin-top: -45px;
-} */
 
 /* Original Snap Tabs CSS Styling. */
 
