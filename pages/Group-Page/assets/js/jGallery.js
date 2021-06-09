@@ -2,13 +2,20 @@
 
 // Gallery scripts
 
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function(){
+    // Everything has loaded!
+    console.log('Everything has loaded!');
+    
+    hideLoaderDots();
+  });
 
-document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-      console.log('DOM is ready.')
-      hideLoaderDots();
-    }
-};
+// document.onreadystatechange = () => {
+//     if (document.readyState === 'complete') {
+//       console.log('The webpage DOM is ready.')
+//       hideLoaderDots();
+//     }
+// };
 
 // function ready(callbackFunction) {
 //     console.log("document.readystate = " + document.readystate);
@@ -25,6 +32,8 @@ document.onreadystatechange = () => {
 // function init2() {
 //     console.log("init2 called.");
 // } 
+
+
 
 
 
