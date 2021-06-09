@@ -14,7 +14,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: blue;
+    background-color: violet;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -31,7 +31,9 @@
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     z-index: 1;
     /* visibility: hidden; */
-    scroll-padding: 5rem 0rem 0rem 0rem;
+    /* scroll-padding: 5rem 0rem 0rem 0rem; */
+    padding-top: var(--headerHeight, 2.8rem);
+    margin-top: -var(--headerHeight, 2.8rem);
 }
 
 /* Add styling to the anchor links to avoid the issue of the fixed header. */
@@ -43,15 +45,19 @@
     visibility: hidden;
 } */
 
-.thing-with-anchor:before {
+/* .thing-with-anchor:before {
     content: '';
     display: block;
     position: relative; 
     width: 0;
     height: 10rem;
     margin-top: -10rem;
-}
+} */
 
+/* .anchor {
+    padding-top: 45px;
+    margin-top: -45px;
+} */
 
 /* Original Snap Tabs CSS Styling. */
 
@@ -94,10 +100,28 @@ snap-tabs {
     position: relative;
 }
 
+/* snap-tabs {
+    --hue: 328deg;
+    --accent: var(--hue) 100% 54%;
+    --indicator-size: 2px;
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+} */
+
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     outline-offset: -0.3rem;
 }
+
+/* snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
+    outline-color: hsl(var(--accent));
+    outline-offset: -5px;
+} */
 
 .scroll-snap-x {
     overflow-x: auto;
@@ -108,11 +132,26 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
     scroll-snap-type: x mandatory;
 }
 
+/* .scroll-snap-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+} */
+
 @media (prefers-reduced-motion:no-preference) {
     .scroll-snap-x {
         scroll-behavior: smooth;
     }
 }
+
+/* @media (prefers-reduced-motion:no-preference) {
+    .scroll-snap-x {
+        scroll-behavior: smooth;
+    }
+} */
 
 @media (hover:none) {
     .scroll-snap-x {
@@ -124,6 +163,16 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
     }
 }
 
+/* @media (hover:none) {
+    .scroll-snap-x {
+        scrollbar-width: none;
+    }
+    .scroll-snap-x::-webkit-scrollbar {
+        width: 0rem;
+        height: 0rem;
+    }
+} */
+
 snap-tabs>snap-tabs-header {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     flex-shrink: 0;
@@ -134,9 +183,25 @@ snap-tabs>snap-tabs-header {
     flex-direction: column;
 }
 
+/* snap-tabs>header {
+    --text-color: hsl(var(--hue) 5% 40%);
+    --text-active-color: hsl(var(--hue) 20% 10%);
+    flex-shrink: 0;
+    min-block-size: -webkit-fit-content;
+    min-block-size: -moz-fit-content;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+} */
+
+
 snap-tabs>snap-tabs-header>nav {
     display: flex;
 }
+
+/* snap-tabs>header>nav {
+    display: flex;
+} */
 
 snap-tabs>snap-tabs-header a {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
@@ -194,9 +259,4 @@ snap-tabs>section>article {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-}
-
-/* Remove some minor padding from the .main-content-area class used on all other pages. */
-.main-content-area {
-    padding-top: 0rem;
 }

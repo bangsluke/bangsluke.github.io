@@ -1,4 +1,4 @@
-.device {
+/* .device {
     display: flex;
     flex-direction: column;
     inline-size: 300px;
@@ -20,9 +20,9 @@
 
 .device>.tabs {
     flex: 1;
-}
+} */
 
-snap-tabs {
+/* snap-tabs {
     --hue: 328deg;
     --accent: var(--hue) 100% 54%;
     --indicator-size: 2px;
@@ -33,23 +33,23 @@ snap-tabs {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-}
+} */
 
-snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
+/* snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
     outline-color: hsl(var(--accent));
     outline-offset: -5px;
-}
+} */
 
-.scroll-snap-x {
+/* .scroll-snap-x {
     overflow-x: auto;
     overflow-y: hidden;
     overflow: auto hidden;
     overscroll-behavior-x: contain;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
-}
+} */
 
-@media (prefers-reduced-motion:no-preference) {
+/* @media (prefers-reduced-motion:no-preference) {
     .scroll-snap-x {
         scroll-behavior: smooth;
     }
@@ -63,9 +63,9 @@ snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs secti
         width: 0rem;
         height: 0rem;
     }
-}
+} */
 
-snap-tabs>header {
+/* snap-tabs>header {
     --text-color: hsl(var(--hue) 5% 40%);
     --text-active-color: hsl(var(--hue) 20% 10%);
     flex-shrink: 0;
@@ -74,11 +74,11 @@ snap-tabs>header {
     min-block-size: fit-content;
     display: flex;
     flex-direction: column;
-}
+} */
 
-snap-tabs>header>nav {
+/* snap-tabs>header>nav {
     display: flex;
-}
+} */
 
 snap-tabs>header a {
     scroll-snap-align: start;

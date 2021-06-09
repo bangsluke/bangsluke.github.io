@@ -87,7 +87,7 @@ body {
 	min-block-size: 100%;
 	min-inline-size: 100%;
 	margin: 0rem;
-
+	padding: 0rem;
 	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
 	max-width: 100%;
 	overflow-x: hidden;

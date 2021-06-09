@@ -4,9 +4,10 @@
 
 /* Add custom individuals page styling. */
 
-.allContentFrame {
-	/* Add an "offset" value for all content so that it sits below the fixed header. */
-	padding-top: 0rem;
+/* Slightly change the main-content-area of the individuals page to avoid the normal margin-top offset. */
+
+#IndividualsPage-main-content-area {
+	margin-top: 0rem;
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
