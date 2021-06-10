@@ -12,22 +12,24 @@
 	<title>Titans | Group Page</title>
 
 	<!-- Initial Meta Data -->
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="description" content="The single most awesome and offensive friends group website ever created."/>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="The single most awesome and offensive friends group website ever created." />
 	<meta name="author" content="bangsluke" />
 	<meta name="copyright" content="bangsluke" />
-	<meta name="robots" content="nofollow"/>
+	<meta name="robots" content="nofollow" />
 
 	<!-- Link to fonts to be used on site. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
 	<!-- Loader Dots styling -->
-	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" /> <!-- CSS site theme -->
 	<link href="/pages/Group-Page/assets/css/TitansPage.css" rel="stylesheet"> <!-- Titans Page styling -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
@@ -64,13 +66,15 @@
 
 		<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
 		<div class="loader" id="loader-div">
-			<div class="duo duo1">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
-			</div>
-			<div class="duo duo2">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
+			<div class="duo-loader">
+				<div class="duo duo1">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+				<div class="duo duo2">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
 			</div>
 		</div>
 
@@ -81,13 +85,15 @@
 
 			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
 			<div class="loader-small" id="titan-loader">
-				<div class="duo duo1">
-					<div class="dot dot-a"></div>
-					<div class="dot dot-b"></div>
-				</div>
-				<div class="duo duo2">
-					<div class="dot dot-a"></div>
-					<div class="dot dot-b"></div>
+				<div class="duo-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
 				</div>
 			</div>
 
@@ -122,21 +128,29 @@
 
 				<h3>Details</h3>
 
-				<p>The above data is calculated from </p><p class="theme-colour-text bold" id="data-source-count">X</p><p> different sources of data, across </p><p class="theme-colour-text bold" id="unique-skill-count">X</p><p> criteria of skill.</p>
-				<p>All data used to show Titan positions is 100% ratified and agreed via the Tits Data Convention 2021, bylaw 16.2.5.</p>
-				<p>All challenges should be considered before being put forward. If you have problems with your position, consider being less shit.</p>
+				<p>The above data is calculated from </p>
+				<p class="theme-colour-text bold" id="data-source-count">X</p>
+				<p> different sources of data, across </p>
+				<p class="theme-colour-text bold" id="unique-skill-count">X</p>
+				<p> criteria of skill.</p>
+				<p>All data used to show Titan positions is 100% ratified and agreed via the Tits Data Convention 2021,
+					bylaw 16.2.5.</p>
+				<p>All challenges should be considered before being put forward. If you have problems with your
+					position, consider being less shit.</p>
 
 			</div>
 
 			<!-- Add a section for two buttons to be placed under all Titan data to show additional information. -->
 			<div class="subpage-content-area fadein additional-titan-detail-area">
 
-				<button class="titanButtons" id="toggleDataExplanationButton" onclick="toggleDataExplanationSection()">Show data details</button>
+				<button class="titanButtons" id="toggleDataExplanationButton"
+					onclick="toggleDataExplanationSection()">Show data details</button>
 
-				<button class="titanButtons" id="toggleTitanFactorsExplainedButton" onclick="toggleTitanFactorsExplainedSection()">Show factors explanation</button>
+				<button class="titanButtons" id="toggleTitanFactorsExplainedButton"
+					onclick="toggleTitanFactorsExplainedSection()">Show factors explanation</button>
 
 			</div>
-			
+
 		</section>
 
 		<!-- Titans Data Explanation Section -->
@@ -200,7 +214,8 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 	<!-- Get the first PapaParse JS -->
 	<script src="/pages/Group-Page/assets/js/jTitanPage.js"></script> <!-- Get Titan page JS -->
-	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	<!-- Add the Main Functions JS -->
 
 </body>
 

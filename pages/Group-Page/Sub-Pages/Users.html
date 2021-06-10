@@ -21,13 +21,15 @@
 
 	<!-- Link to fonts to be used on site. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
 	<!-- Loader Dots styling -->
-	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" /> <!-- CSS site theme -->
 	<link href="/pages/Group-Page/assets/css/UsersPage.css" rel="stylesheet"> <!-- Users Page CSS styling -->
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
@@ -64,203 +66,213 @@
 
 		<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
 		<div class="loader" id="loader-div">
-			<div class="duo duo1">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
-			</div>
-			<div class="duo duo2">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
+			<div class="duo-loader">
+				<div class="duo duo1">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+				<div class="duo duo2">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
 			</div>
 		</div>
 
 		<!-- Users Section -->
 		<!--<section class="page-section">-->
 
-			<!-- Alex Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Alex" onclick="passUserName(this);">
-					<div class="user-container">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Alex.JPG" alt="Alex">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Alexander<br>Thomas</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>Altom</li>
-									<li>Althom</li>
-									<li>Thomas The Tank Engine</li>
-									<li>Ho Chi Minh</li>
-								</ul>
-							</div>
+		<!-- Alex Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Alex" onclick="passUserName(this);">
+				<div class="user-container">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Alex.JPG" alt="Alex">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Alexander<br>Thomas</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>Altom</li>
+								<li>Althom</li>
+								<li>Thomas The Tank Engine</li>
+								<li>Ho Chi Minh</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Ali Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Ali" onclick="passUserName(this);">
-					<div class="user-container reverse">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Ali.JPG" alt="Ali">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Alistair<br>Robins</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">'Ali'ases:</h3>
-								<ul class="textleft">
-									<li>Peahead</li>
-									<li>Pea</li>
-									<li>Ali Robbbins</li>
-									<li>ThatAnnoyingHyperFucker</li>
-								</ul>
-							</div>
+		<!-- Ali Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Ali" onclick="passUserName(this);">
+				<div class="user-container reverse">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Ali.JPG" alt="Ali">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Alistair<br>Robins</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">'Ali'ases:</h3>
+							<ul class="textleft">
+								<li>Peahead</li>
+								<li>Pea</li>
+								<li>Ali Robbbins</li>
+								<li>ThatAnnoyingHyperFucker</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Andy Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Andy" onclick="passUserName(this);">
-					<div class="user-container">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Andy.JPG" alt="Andy">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Andrew<br>Higgins</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>Higgins</li>
-									<li>Higgo</li>
-									<li>Lord Higgins</li>
-									<li>Andy Higgins MEng CEng MICE</li>
-									<li>Cunt McGee</li>
-								</ul>
-							</div>
+		<!-- Andy Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Andy" onclick="passUserName(this);">
+				<div class="user-container">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Andy.JPG" alt="Andy">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Andrew<br>Higgins</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>Higgins</li>
+								<li>Higgo</li>
+								<li>Lord Higgins</li>
+								<li>Andy Higgins MEng CEng MICE</li>
+								<li>Cunt McGee</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Dom Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Dom" onclick="passUserName(this);">
-					<div class="user-container reverse">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Dom.JPG" alt="Dom">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Dominic<br>Paul</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>DP</li>
-									<li>Dirty Knees</li>
-									<li>Token</li>
-								</ul>
-							</div>
+		<!-- Dom Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Dom" onclick="passUserName(this);">
+				<div class="user-container reverse">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Dom.JPG" alt="Dom">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Dominic<br>Paul</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>DP</li>
+								<li>Dirty Knees</li>
+								<li>Token</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Jon Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Jonny" onclick="passUserName(this);">
-					<div class="user-container">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Jonny.JPG" alt="Jon">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Jonathan<br>Sourris</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>Jacobs</li>
-									<li>Bonny Suarez</li>
-									<li>Snake</li>
-									<li>Big Nose</li>
-									<li>That Lanky Cunt</li>
-								</ul>
-							</div>
+		<!-- Jon Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Jonny" onclick="passUserName(this);">
+				<div class="user-container">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Jonny.JPG" alt="Jon">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Jonathan<br>Sourris</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>Jacobs</li>
+								<li>Bonny Suarez</li>
+								<li>Snake</li>
+								<li>Big Nose</li>
+								<li>That Lanky Cunt</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Kieran Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Kieran" onclick="passUserName(this);">
-					<div class="user-container reverse">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Kieran.JPG" alt="Kieran">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Kieran<br>Mackrell</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>Karen</li>
-									<li>Kizza</li>
-									<li>Mackerel</li>
-									<li>GrouchyMcFuckerson</li>
-								</ul>
-							</div>
+		<!-- Kieran Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Kieran" onclick="passUserName(this);">
+				<div class="user-container reverse">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Kieran.JPG" alt="Kieran">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Kieran<br>Mackrell</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>Karen</li>
+								<li>Kizza</li>
+								<li>Mackerel</li>
+								<li>GrouchyMcFuckerson</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Luke Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Luke" onclick="passUserName(this);">
-					<div class="user-container">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Luke.jpg" alt="Luke">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Luke<br>Bangs</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>Bango</li>
-									<li>Bongo</li>
-									<li>One Sexy Motherfucker</li>
-									<li>The Thumb</li>
-									<li>Beached Whale</li>
-								</ul>
-							</div>
+		<!-- Luke Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Luke" onclick="passUserName(this);">
+				<div class="user-container">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Luke.jpg" alt="Luke">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Luke<br>Bangs</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>Bango</li>
+								<li>Bongo</li>
+								<li>One Sexy Motherfucker</li>
+								<li>The Thumb</li>
+								<li>Beached Whale</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
-			<!-- Oli Image -->
-			<div class="glass-card center">
-				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Oli" onclick="passUserName(this);">
-					<div class="user-container reverse">
-						<div class="user-image-container">
-							<span class="helper"></span><img class="user-image" src="/pages/Group-Page/assets/images/Users/Oli.JPG" alt="Oli">
-						</div>
-						<div class="user-text-container">
-							<h2 class="user-name bold textcenter">Oliver<br>Goddard</h2>
-							<div class="alias-container">
-								<h3 class="italic textleft">Aliases:</h3>
-								<ul class="textleft">
-									<li>OG</li>
-									<li>Olly</li>
-									<li>Dalmatian</li>
-								</ul>
-							</div>
+		<!-- Oli Image -->
+		<div class="glass-card center">
+			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html" id="Oli" onclick="passUserName(this);">
+				<div class="user-container reverse">
+					<div class="user-image-container">
+						<span class="helper"></span><img class="user-image"
+							src="/pages/Group-Page/assets/images/Users/Oli.JPG" alt="Oli">
+					</div>
+					<div class="user-text-container">
+						<h2 class="user-name bold textcenter">Oliver<br>Goddard</h2>
+						<div class="alias-container">
+							<h3 class="italic textleft">Aliases:</h3>
+							<ul class="textleft">
+								<li>OG</li>
+								<li>Olly</li>
+								<li>Dalmatian</li>
+							</ul>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+			</a>
+		</div>
 
 		<!--</section>-->
 
@@ -285,7 +297,8 @@
 	<!-- Add the common footer JS -->
 	<script src="/pages/Group-Page/assets/js/jUser.js" type="text/javascript" defer></script>
 	<!-- Add the User Page JS -->
-	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	<!-- Add the Main Functions JS -->
 
 </body>
 

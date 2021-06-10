@@ -56,11 +56,19 @@
     height: 21rem; /* Update the height of the smaller loaders to be bespoke. */
 }
 
+/* Create a helper holder div above the duo dots that allows me to center the dots in the middle of the screen. */
+.duo-loader {
+    background-color: red;
+    height: 1.3rem;
+    width: 5.05rem;
+    position: absolute; /* Set the position to be absolute to allow me to set the children to also be absolute. */
+}
+
 .duo {
     height: 1.25rem;
     width: 3.125rem;
     background: hsla(0, 0%, 0%, 0.0);
-    /* position: absolute; */
+    position: absolute;
 }
 
 .duo, .dot {
@@ -138,3 +146,86 @@
     animation-name: onOff;
     animation-direction: reverse;
 }
+
+
+
+
+
+/* .loader {
+    position: relative;
+    width: 80px;
+    margin: 100px auto;
+  } */
+  
+  /* .duo {
+    height: 20px;
+    width: 50px;
+    background: hsla(0, 0%, 0%, 0.0);
+    position: absolute;
+    
+  }
+  
+  .duo, .dot {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .duo1 {
+    left: 0;
+  }
+  
+  .duo2 {
+    left: 30px
+  }
+  
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #333;
+    position: absolute;
+  }
+  
+  .dot-a {
+    left: 0px;  
+  }
+  
+  .dot-b {
+    right: 0px;
+  }
+  
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg) }
+     50% { transform: rotate(180deg) }
+    100% { transform: rotate(180deg) }
+  }
+  
+  @keyframes onOff {
+      0% { opacity: 0; }
+     49% { opacity: 0; }
+     50% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+  
+  .duo1 {
+    animation-name: spin;
+  }
+  
+  .duo2 {
+    animation-name: spin;
+    animation-direction: reverse;
+  }
+  
+  .duo2 .dot-b {
+    animation-name: onOff;
+  }
+  
+  .duo1 .dot-a {
+    opacity: 0;
+    animation-name: onOff;
+    animation-direction: reverse;
+  }
+   */
