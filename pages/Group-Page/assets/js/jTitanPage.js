@@ -169,6 +169,8 @@ function showSelectedInfo1(results) {
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("table"); // Call the clearTable function to empty the table.
     createFullTable(data, "table"); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('titan-loader'); // Hide the loader dots. See LoaderDots.js.
+    showDateAndSourceArea(); // Show the date and source area which is initially hidden.
 }
 
 // Updates the Titan Table source, last updated text and additional link.
@@ -436,10 +438,7 @@ function toggleTitanFactorsExplainedSection() {
     }
 }
 
-
-
-
-
-
-// End the console timer.
-console.timeEnd();
+// Show the data and source area.
+function showDateAndSourceArea() {
+    document.getElementById("date-and-source-area").classList.remove("hidden"); // Remove the hidden class to the loader dots.
+}

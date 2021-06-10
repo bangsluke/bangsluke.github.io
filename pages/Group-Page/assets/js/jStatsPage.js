@@ -223,7 +223,7 @@ function init() {
         console.log("   Full selection name (" + fullSelectionName + ") saved to local session storage.")
         //console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
         clearTable(); // Call the clearTable function to empty the table.
-        showLoaderDots('stats-loader'); // Hide the loader dots. See LoaderDots.js. 
+        showLoaderDots('stats-loader'); // Show the loader dots. See LoaderDots.js. 
         statSelected(); // Call the statSelected function to display the data on the site.
         // zoomOutMobile(); // Ignore for now as not needed?
     }

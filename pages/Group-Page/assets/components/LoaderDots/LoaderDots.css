@@ -32,9 +32,17 @@
     align-items: center; /* Vertically center the dots in the container div. */
 }
 
-#stats-loader {
+#stats-loader, #titan-loader {
     height: 12rem;
     width: 100%;
+}
+
+#stats-loader {
+    height: 12rem;
+}
+
+#titan-loader {
+    height: 15rem;
 }
 
 .duo {

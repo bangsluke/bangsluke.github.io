@@ -79,6 +79,18 @@
 
 			<h2 class="center">Titans Table.</h2>
 
+			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+			<div class="loader-small" id="titan-loader">
+				<div class="duo duo1">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+				<div class="duo duo2">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+			</div>
+
 			<!-- Add a div to house the Titan table. -->
 			<div class="subpage-content-area fadein">
 
@@ -92,7 +104,7 @@
 			</div>
 
 			<!-- Add the last updated date and stats source. -->
-			<div class="subpage-content-area fadein date-and-source-area">
+			<div class="subpage-content-area fadein date-and-source-area hidden" id="date-and-source-area">
 
 				<p id="data-last-updated" class="textright">Last Updated:</p>
 
