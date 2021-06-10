@@ -6,7 +6,8 @@
 
 /* The top level container div. */
 .loader {
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: rgba(255, 255, 255, 0.50);
     position: fixed; /* Fix the position of the container div. */
     z-index: 6; /* Bring the container div to the very front. */
     height: 100vh; /* Make the container div the height of the viewport. */
@@ -21,7 +22,7 @@
 
 /* The top level container div for the smaller loading dots. Define the sizes by using the id. */
 .loader-small {
-    background-color: pink;
+    /* background-color: pink; */
     /*position: fixed; /* Fix the position of the container div. */
     z-index: 6; /* Bring the container div to the very front. */
     top: 0rem; /* Position the container div at the top of the page. */
@@ -42,7 +43,7 @@
 }
 
 #titan-loader {
-    height: 15rem;
+    height: 21rem;
 }
 
 .duo {

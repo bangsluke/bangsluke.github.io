@@ -51,10 +51,10 @@ function init() {
     // Initially add the Titan table.
 
     // Log the function call to the console.
-    console.log("0. init() called. Code started for each of the three sub processes.")
+    console.log("> 0. init() called. Code started for each of the three sub processes.")
 
     // Log the function call to the console.
-    console.log("1. Titan table loaded and populated with values.")
+    console.log("> 1. Titan table loaded and populated with values.")
 
     Papa.parse(publicSpreadsheetUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -64,7 +64,7 @@ function init() {
     })
 
     // Log the function call to the console.
-    console.log("2. Titan Calculated table loaded and populated with values.")
+    console.log("> 2. Titan Calculated table loaded and populated with values.")
 
     Papa.parse(publicSpreadsheetUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -74,7 +74,7 @@ function init() {
     })
 
     // Log the function call to the console.
-    console.log("3. Initial Factor Explained table loaded and populated with values.")
+    console.log("> 3. Initial Factor Explained table loaded and populated with values.")
 
     Papa.parse(publicSpreadsheetUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -97,7 +97,7 @@ function init() {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showInitialTitanInfo(results) {
-    console.log("Function: showInitialTitanInfo(results) called.")
+    console.log("> Function: showInitialTitanInfo(results) called.")
     var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
     getInitialTitanData(data); // Pass the data as an array of objects (as header is true).
 }
@@ -105,7 +105,7 @@ function showInitialTitanInfo(results) {
 // Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
 function getInitialTitanData(data) {
 
-    console.log("Function: getInitialTitanData(data) called.")
+    console.log("> Function: getInitialTitanData(data) called.")
 
     // Define the count variables used within the loop.
     let dataSourceCount = 0;
@@ -119,11 +119,11 @@ function getInitialTitanData(data) {
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
             var titanBoolean = data[x].TitanBoolean;
-            console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
+            //console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
 
         // Within the loop, count up the number of data sources.
-        console.log("Row: " + x + " dataSourceCount = " + dataSourceCount + " and the data[x].DataSource is = " + data[x].DataSource);
+        //console.log("Row: " + x + " dataSourceCount = " + dataSourceCount + " and the data[x].DataSource is = " + data[x].DataSource);
         if (data[x].DataSource == "") { // Deal with if there is a blank field in the DataSource column.
             // Do nothing.
         } else if (data[x].DataSource == 0) { // Deal with if the DataSource column has a 0.
@@ -133,7 +133,7 @@ function getInitialTitanData(data) {
         }
 
         // Do the same for uniqueSkillCount.
-        console.log("Row: " + x + " uniqueSkillCount = " + uniqueSkillCount + " and the data[x].UniqueSkill is = " + data[x].UniqueSkill);
+        //console.log("Row: " + x + " uniqueSkillCount = " + uniqueSkillCount + " and the data[x].UniqueSkill is = " + data[x].UniqueSkill);
         if (data[x].UniqueSkill == "") { // Deal with if there is a blank field in the UniqueSkill column.
             // Do nothing.
         } else if (data[x].UniqueSkill == 0) { // Deal with if the UniqueSkill column has a 0.
@@ -150,7 +150,7 @@ function getInitialTitanData(data) {
 
 // Get the data of the selected stats by using the selected URL. 
 function getPapaData1(selectedURL) {
-    console.log("Function: getPapaData1(selectedURL) called.")
+    console.log("> Function: getPapaData1(selectedURL) called.")
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -161,7 +161,7 @@ function getPapaData1(selectedURL) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo1(results) {
-    console.log("Function: showSelectedInfo1(results) called.")
+    console.log("> Function: showSelectedInfo1(results) called.")
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
@@ -175,7 +175,7 @@ function showSelectedInfo1(results) {
 
 // Updates the Titan Table source, last updated text and additional link.
 function updateAdditionalTableInformation(lastUpdatedDate, sourceText) {
-    console.log("Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called.")
+    console.log("> Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called.")
     var element = document.getElementById("data-last-updated"); // Get the data-last-updated element by id.
     element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
     element = document.getElementById("data-source"); // Get the data-source element by id.
@@ -195,22 +195,20 @@ function updateAdditionalTableInformation(lastUpdatedDate, sourceText) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showTitanCalculatedInfo(results) {
-    console.log("Function: showTitanCalculatedInfo(results) called.")
+    console.log("> Function: showTitanCalculatedInfo(results) called.")
     var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
     getTitanCalculatedData(data); // Pass the data as an array of objects (as header is true).
 }
 
 // Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
 function getTitanCalculatedData(data) {
-
-    console.log("Function: getTitanCalculatedData(data) called.")
-
+    console.log("> Function: getTitanCalculatedData(data) called.")
     // Loop through the data array from the tblStatsConfig tab and match the table name var TitanCalculatedTableName to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].FullSelectionName == TitanCalculatedTableName) {
             var selectedURL = data[x].URL;
-            console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
+            //console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData2(selectedURL); // Call the function getPapaData to return the data from that table.
@@ -218,7 +216,7 @@ function getTitanCalculatedData(data) {
 
 // Get the data of the selected stats by using the selected URL. 
 function getPapaData2(selectedURL) {
-    console.log("Function: getPapaData2(selectedURL) called.")
+    console.log("> Function: getPapaData2(selectedURL) called.")
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -229,7 +227,7 @@ function getPapaData2(selectedURL) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo2(results) {
-    console.log("Function: showSelectedInfo2(results) called.")
+    console.log("> Function: showSelectedInfo2(results) called.")
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
@@ -249,16 +247,14 @@ function showSelectedInfo2(results) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showTitanFactorExplainedInfo(results) {
-    console.log("Function: showTitanFactorExplainedInfo(results) called.")
+    console.log("> Function: showTitanFactorExplainedInfo(results) called.")
     var data = results.data // Read carefully: data is an array of rows. If header is false, rows are arrays; otherwise they are objects of data keyed by the field name.
     getTitanFactorExplainedData(data); // Pass the data as an array of objects (as header is true).
 }
 
 // Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
 function getTitanFactorExplainedData(data) {
-
-    console.log("Function: getTitanFactorExplainedData(data) called.")
-
+    console.log("> Function: getTitanFactorExplainedData(data) called.")
     // Loop through the data array from the tblStatsConfig tab and match the table name var TitanFactorExplainedTableName to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
@@ -283,7 +279,7 @@ function getPapaData3(selectedURL) {
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo3(results) {
-    console.log("Function: showSelectedInfo3(results) called.")
+    console.log("> Function: showSelectedInfo3(results) called.")
     var data = results.data
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
@@ -306,30 +302,30 @@ function showSelectedInfo3(results) {
 
 // Clear the table to make space for new data.
 function clearTable(selector) {
-    console.log("Re-usable Function: clearTable() called.") // Log an initial message to show the function has been called.
+    console.log("> Re-usable Function: clearTable() called.") // Log an initial message to show the function has been called.
     // https://stackoverflow.com/a/3955238/14290169
     const myNode = document.querySelector(selector); // Select the parent from which to delete all child elements from. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     while (myNode.firstChild) { // Loop through all child elements.
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
-    console.log("Function: Table Cleared.") // Log a final message to show the function is complete.
+    //console.log("Function: Table Cleared.") // Log a final message to show the function is complete.
 }
 
 // Create the table by passing the data to the function.
 function createFullTable(array, selector) {
-    console.log("Re-usable Function: createFullTable(array) called.") // Log an initial message to show the function has been called.
+    console.log("> Re-usable Function: createFullTable(array) called.") // Log an initial message to show the function has been called.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     let data = Object.keys(array[0]); // Create a data variable from the array data received.
     generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
     generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
-    console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
+    //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
 }
 
 // Create a table of data from the received data.
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
 function generateTableHead(table, data) {
-    console.log("Re-usable Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
+    console.log("> Re-usable Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
     var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
@@ -347,11 +343,11 @@ function generateTableHead(table, data) {
         row.appendChild(th); // Append the new table header to the table.
         counter = counter + 1; // Increment the counter.
     }
-    console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
+    //console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
 function generateTable(table, data) {
-    console.log("Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
+    console.log("> Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
     var counter;
     var testedValue;
     var dataType;
@@ -388,7 +384,7 @@ function generateTable(table, data) {
             counter = counter + 1; // Increment the counter.
         }
     }
-    console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
+    //console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
 }
 
 
@@ -396,14 +392,14 @@ function generateTable(table, data) {
 // Add a border below the 4th person if the table is flagged as a Titan table.
 function applyTitanTableFormatting(titanBoolean) {
     if (titanBoolean == "TRUE") {
-        console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
+        //console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
         document.getElementById("titans-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
     }
 }
 
 // Update the data source and unique skill count in the summary text below the Titan table.
 function updateStatSourcesCount(dataSourceCount, uniqueSkillCount) {
-    console.log("dataSourceCount passed is " + dataSourceCount);
+    //console.log("dataSourceCount passed is " + dataSourceCount);
     dataSourceCount = parseInt(dataSourceCount);
     document.getElementById("data-source-count").innerHTML = dataSourceCount; // Get the id of the text to be updated and update the text inside the element with the data source count.
     document.getElementById("unique-skill-count").innerHTML = uniqueSkillCount; // Get the id of the text to be updated and update the text inside the element with the unique skill count.
