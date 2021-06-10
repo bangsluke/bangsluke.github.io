@@ -341,10 +341,11 @@
 }
 
 #brockhamBadgersPicture {
-	height: 0.625rem;
+	height: 8rem; /* Define the height of the Brockham Badgers photo card. */
 	width: auto;
 	margin: auto;
 	margin-bottom: 2rem; /* Add space below the logo. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
 }
 
 cite {
