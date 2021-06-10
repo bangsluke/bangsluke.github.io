@@ -2,52 +2,28 @@
 
 // Gallery scripts
 
+console.time(); // Start the console timer.
+
+// Ready Events
+// First add a DOMContentLoaded event to fire when the HTML DOM is in place and then add a load event listener for when all images and other resources are loaded.
+
+window.addEventListener('DOMContentLoaded', init) // Wait for the window to load and then run the init function below.
+
 // Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
-window.addEventListener('load', function(){
-    // Everything has loaded!
-    console.log('Everything has loaded!');
-    
-    hideLoaderDots();
-  });
+window.addEventListener('load', function () {
+    console.log('%c' + '> Gallery page images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
+    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    console.timeEnd(); // End the console timer.
+});
 
-// document.onreadystatechange = () => {
-//     if (document.readyState === 'complete') {
-//       console.log('The webpage DOM is ready.')
-//       hideLoaderDots();
-//     }
-// };
-
-// function ready(callbackFunction) {
-//     console.log("document.readystate = " + document.readystate);
-//     if (document.readyState != 'loading') {
-//         init2();
-//     } else {
-//         document.addEventListener("DOMContentLoaded", init2)
-//     }
-// }
-// ready(event => {
-//     console.log('DOM is ready.')
-// })
-
-// function init2() {
-//     console.log("init2 called.");
-// } 
-
-
-
-
-
-
-// Wait for the window to load and then run the init function below.
-window.addEventListener('DOMContentLoaded', init)
+// Other Functions
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    console.log('%c' + '> Gallery page DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
-
-    console.log("Gallery page loaded."); // Provide an initial load message.
     var peaMode = sessionStorage.getItem("peaMode"); // Retrieve the variable passed to session storage.
-    console.log("On initial load, peaMode is = " + peaMode); // Check what the initial loaded state is.
+    console.log("> On initial load, peaMode is = " + peaMode); // Check what the initial loaded state is.
     if (peaMode == "true") { // If Pea mode was true, turn the check box on and modify the images.
         // console.log("Triggered");
         document.getElementById("peaModeToggle").checked = true;
@@ -55,7 +31,6 @@ function init() {
     } else { // If Pea mode was false, do nothing.
         // console.log("Not triggered");
     }
-
 }
 
 // Change the pea mode when the user has clicked on the toggle.
