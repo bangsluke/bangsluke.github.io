@@ -2,22 +2,28 @@
 
 // Gallery SubPage scripts
 
-// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
-window.addEventListener('load', function(){
-    // Everything has loaded!
-    console.log('Everything has loaded!');
-    
-    hideLoaderDots();
-  });
+console.time(); // Start the console timer.
 
-// Wait for the window to load and then run the init function below.
-window.addEventListener('DOMContentLoaded', init)
+// Ready Events
+// First add a DOMContentLoaded event to fire when the HTML DOM is in place and then add a load event listener for when all images and other resources are loaded.
+
+window.addEventListener('DOMContentLoaded', init) // Wait for the window to load and then run the init function below.
+
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function () {
+    console.log('%c' + '> Gallery Subpage images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
+    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    console.timeEnd(); // End the console timer.
+});
+
+// Other Functions
 
 // Define a maximum number of possible photos in any one gallery folder.
 var maxImageCount = 20;
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    console.log('%c' + '> Gallery Subpage DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
     setGalleryHeaderName(); // Change the header name to reflect which Gallery is being shown.
     populateImageSources(); // Loop through the images populating their sources correctly.
