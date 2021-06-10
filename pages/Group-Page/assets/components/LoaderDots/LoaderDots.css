@@ -58,7 +58,7 @@
 
 /* Create a helper holder div above the duo dots that allows me to center the dots in the middle of the screen. */
 .duo-loader {
-    background-color: red;
+    /* background-color: red; */
     height: 1.3rem;
     width: 5.05rem;
     position: absolute; /* Set the position to be absolute to allow me to set the children to also be absolute. */
