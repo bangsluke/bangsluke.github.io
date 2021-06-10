@@ -5,8 +5,6 @@
 // How to use Papa Parse - https://dev.to/bornfightcompany/using-google-sheets-as-a-simple-database-with-papa-parse-2k7o
 // TableTop - https://github.com/jsoma/tabletop
 
-// Code
-
 // * Process Explained
 
 // To load the table data across three different tables on the Titans tab, the JavaScript file runs the same Papa Parse process three times, each with a different selector.
@@ -16,8 +14,23 @@
 // 2. Is the Titan Calculated data table.
 // 3. Is the Titan Factor Explained table.
 
-// Start the console timer.
-console.time();
+// Code
+
+console.time(); // Start the console timer.
+
+// Ready Events
+// First add a DOMContentLoaded event to fire when the HTML DOM is in place and then add a load event listener for when all images and other resources are loaded.
+
+window.addEventListener('DOMContentLoaded', init) // Wait for the window to load and then run the init function below.
+
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function () {
+    console.log('%c' + '> Gallery page images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
+    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    console.timeEnd(); // End the console timer.
+});
+
+// Other Functions
 
 // Publically define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=114011454&single=true&output=csv';
@@ -30,12 +43,9 @@ var TitanTableName = "Titan - Titan";
 var TitanCalculatedTableName = "Titan - Factor Calculated"
 var TitanFactorExplainedTableName = "Titan - Explained"
 
-// Wait for the window to load and then run the init function below. DOMContentLoaded details - (https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
-window.addEventListener('DOMContentLoaded', init)
-
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
-
+    console.log('%c' + '> Gallery page DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
 
     // Initially add the Titan table.

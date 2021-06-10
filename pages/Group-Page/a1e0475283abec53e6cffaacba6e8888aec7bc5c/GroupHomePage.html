@@ -33,6 +33,8 @@
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
+	<link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
+	<!-- Loader Dots styling -->
 	<link href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet">
 	<!-- Header styling -->
 	<link href="/pages/Group-Page/assets/css/GroupPageHome.css" rel="stylesheet"> <!-- Home Page specific styling -->
@@ -42,9 +44,24 @@
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
+	<!-- Add the loader dots JS -->
+	<script src="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
+
+	<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+	<div class="loader" id="loader-div">
+		<div class="duo duo1">
+			<div class="dot dot-a"></div>
+			<div class="dot dot-b"></div>
+		</div>
+		<div class="duo duo2">
+			<div class="dot dot-a"></div>
+			<div class="dot dot-b"></div>
+		</div>
+	</div>
 
 	<!-- Header -->
 

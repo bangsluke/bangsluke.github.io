@@ -2,19 +2,31 @@
 
 // Group Home Page scripts
 
+console.time(); // Start the console timer.
+
+// Ready Events
+// First add a DOMContentLoaded event to fire when the HTML DOM is in place and then add a load event listener for when all images and other resources are loaded.
+
+window.addEventListener('DOMContentLoaded', init) // Wait for the window to load and then run the init function below.
+
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function () {
+    console.log('%c' + '> HomePage images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
+    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    console.timeEnd(); // End the console timer.
+});
+
+// Other Functions
+
 // Publically define the location of the Google Sheet Quotes CSV.
 var quotesUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=210059862&single=true&output=csv';
 
-// Wait for the window to load and then run the init function below.
-window.addEventListener('DOMContentLoaded', init)
-
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
-
+    console.log('%c' + '> HomePage DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
     var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
-    console.log("selectedUserName = " + selectedUserName);
-
+    console.log("> selectedUserName = " + selectedUserName); // Log the selected user name.
     getPapaData(quotesUrlCSV); // Call the getPapaData function to pull in the quote information.
 }
 

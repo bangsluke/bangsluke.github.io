@@ -7,8 +7,21 @@
 
 // Code
 
-// Start the console timer.
-console.time();
+console.time(); // Start the console timer.
+
+// Ready Events
+// First add a DOMContentLoaded event to fire when the HTML DOM is in place and then add a load event listener for when all images and other resources are loaded.
+
+window.addEventListener('DOMContentLoaded', init) // Wait for the window to load and then run the init function below.
+
+// Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
+window.addEventListener('load', function () {
+    console.log('%c' + '> Individuals page images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
+    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    console.timeEnd(); // End the console timer.
+});
+
+// Other Functions
 
 // Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var individualsPageUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=1451461694&single=true&output=csv";
@@ -18,14 +31,10 @@ var titanSummaryUrlCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooC
 // Define the foundColumn variable used later.
 var foundColumn;
 
-// Wait for the window to load and then run the init function below.
-window.addEventListener('DOMContentLoaded', init)
-
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
-
+    console.log('%c' + '> Individuals page DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
-
     // Initially call the data in from Google Sheets tab "IndividualsPage" using Papa Parse.
     Papa.parse(individualsPageUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -33,9 +42,7 @@ function init() {
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     });
-
     // Note that the Individual Stats table and Titan Status table are called from within showSelectedInfo.
-
 }
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
@@ -413,28 +420,19 @@ function generateTableIndividualsTitans(table, data, foundColumn) {
     //console.log("Function: generateTableIndividualsTitans finished.") // Log a final message to show the function is complete.
 }
 
-
-function scrollToLinkWithOffset(elementID) {
+// function scrollToLinkWithOffset(elementID) {
     
-    console.log("scrollToLinkWithOffset(elementID) called")
+//     console.log("scrollToLinkWithOffset(elementID) called")
     
-    const element = document.getElementById(elementID);
-    const offset = 90;
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const elementRect = element.getBoundingClientRect().top;
-    const elementPosition = elementRect - bodyRect;
-    const offsetPosition = elementPosition - offset;
+//     const element = document.getElementById(elementID);
+//     const offset = 90;
+//     const bodyRect = document.body.getBoundingClientRect().top;
+//     const elementRect = element.getBoundingClientRect().top;
+//     const elementPosition = elementRect - bodyRect;
+//     const offsetPosition = elementPosition - offset;
 
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-    });
-}
-
-
-
-
-
-
-// End the console timer.
-console.timeEnd();
+//     window.scrollTo({
+//         top: offsetPosition,
+//         behavior: 'smooth'
+//     });
+// }
