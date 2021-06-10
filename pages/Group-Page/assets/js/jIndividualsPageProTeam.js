@@ -139,6 +139,8 @@ function clearTable() {
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
     //console.log("Table Cleared.") // Log a final message to show the function is complete.
+
+    hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.  
 }
 
 // End the console timer.

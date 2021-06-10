@@ -27,9 +27,10 @@
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
     <link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
-	<!-- Loader Dots styling -->
+    <!-- Loader Dots styling -->
     <link href="/pages/Group-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet"> <!-- SnapTabs styling -->
-    <link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet"> <!-- Loader Dots styling -->
+    <link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
+    <!-- Loader Dots styling -->
     <link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
         id="css-theme" /> <!-- CSS site theme -->
     <link href="/pages/Group-Page/assets/css/IndividualsPage.css" rel="stylesheet"> <!-- Individuals Page styling -->
@@ -38,7 +39,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
     <!-- Add the loader dots JS -->
-	<script src="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+    <script src="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
 
 
     <!-- SnapTab styling and scripts -->
@@ -72,16 +73,16 @@
     <div class="main-content-area fadein" id="IndividualsPage-main-content-area">
 
         <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-		<div class="loader" id="loader-div">
-			<div class="duo duo1">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
-			</div>
-			<div class="duo duo2">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
-			</div>
-		</div>
+        <div class="loader" id="loader-div">
+            <div class="duo duo1">
+                <div class="dot dot-a"></div>
+                <div class="dot dot-b"></div>
+            </div>
+            <div class="duo duo2">
+                <div class="dot dot-a"></div>
+                <div class="dot dot-b"></div>
+            </div>
+        </div>
 
         <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
@@ -94,21 +95,6 @@
                 <section class="scroll-snap-x">
 
                     <article class="nav-targets" id="profile">
-
-
-                        <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                        <!-- <div class="loader">
-                            <div class="duo duo1">
-                                <div class="dot dot-a"></div>
-                                <div class="dot dot-b"></div>
-                            </div>
-                            <div class="duo duo2">
-                                <div class="dot dot-a"></div>
-                                <div class="dot dot-b"></div>
-                            </div>
-                        </div> -->
-
-
 
                         <!--<details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details> -->
@@ -237,6 +223,18 @@
                             alt="Football Header" id="footballHeader">
 
                         <!--</section> -->
+
+                        <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                        <div class="loader" id="football-loader">
+                            <div class="duo duo1">
+                                <div class="dot dot-a"></div>
+                                <div class="dot dot-b"></div>
+                            </div>
+                            <div class="duo duo2">
+                                <div class="dot dot-a"></div>
+                                <div class="dot dot-b"></div>
+                            </div>
+                        </div>
 
                         <!-- Pro Team Table Section -->
                         <section class="page-section">
@@ -743,7 +741,7 @@
                 <snap-tabs-header class="scroll-snap-x">
 
                     <nav id="nav-bar">
-                        <a href="#profile" active>Profile</a>                       
+                        <a href="#profile" active>Profile</a>
                         <!-- <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>  -->
                         <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
                         <a href="#football">Football</a>
@@ -766,8 +764,8 @@
 
     <!-- <footer> -->
 
-        <!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
-        <!-- <footer-component></footer-component> -->
+    <!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
+    <!-- <footer-component></footer-component> -->
 
     <!-- </footer> -->
 
