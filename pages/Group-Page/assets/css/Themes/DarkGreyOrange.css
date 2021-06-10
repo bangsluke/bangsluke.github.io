@@ -237,7 +237,7 @@ snap-tabs>snap-tabs-header>.snap-indicator {
         background-color: rgba(var(--main-style-color-rgb), 0.2);
         color: var(--text-active-color);
         border-block-start-color: hsl(var(--accent));
-        /* border-block-end-color: hsl(var(--accent)); */
+        border-block-end-color: hsl(var(--accent));
     }
 }
 
