@@ -34,16 +34,15 @@
 }
 
 #stats-loader, #titan-loader {
-    height: 12rem;
-    width: 100%;
+    width: 100%; /* Update the width of the smaller loaders to fill the width of their container. */
 }
 
 #stats-loader {
-    height: 12rem;
+    height: 12rem; /* Update the height of the smaller loaders to be bespoke. */
 }
 
 #titan-loader {
-    height: 21rem;
+    height: 21rem; /* Update the height of the smaller loaders to be bespoke. */
 }
 
 .duo {
