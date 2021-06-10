@@ -222,7 +222,7 @@ snap-tabs>snap-tabs-header>.snap-indicator {
     snap-tabs>snap-tabs-header a {
         /* Turn below two code blocks on for the indicator to be above the header text. */
 		border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
-		-webkit-border-start: var(--indicator-size) solid hsl(var(--accent)/0%);
+		-webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
         /* Turn below two code blocks on for the indicator to be below the header text. */
 		/* -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
 		border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%); */
