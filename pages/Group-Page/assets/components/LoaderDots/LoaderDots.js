@@ -1,5 +1,15 @@
+// LoaderDots.js JavaScript
+
+// Keep in separate file as need to call the function at the top of each HTML page. Don't add to Main Functions.
+
 // Hide the loader dots when all images loaded.
-function hideLoaderDots() {
-    console.log("> Loader dots hidden.");
-    document.getElementById("loader-div").classList.add("hidden"); // Add the first-col-individuals-stats class to the first column.
+function hideLoaderDots(loaderDotsElementID) {
+    document.getElementById(loaderDotsElementID).classList.add("hidden"); // Add the hidden class to the first column.
+    console.log("> Loader dots id (" + loaderDotsElementID + ") hidden."); // Log that the loader dots have been hidden.
+}
+
+// Show the loader dots when required.
+function showLoaderDots(loaderDotsElementID) {
+    document.getElementById(loaderDotsElementID).classList.remove("hidden"); // Remove the hidden class to the first column.
+    console.log("> Loader dots id (" + loaderDotsElementID + ") shown."); // Log that the loader dots have been displayed.
 }

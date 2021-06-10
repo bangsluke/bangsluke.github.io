@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 // Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
 window.addEventListener('load', function () {
     console.log('%c' + '> Gallery Subpage images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
-    hideLoaderDots(); // Hide the loader dots. See LoaderDots.js.    
+    hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.    
     console.timeEnd(); // End the console timer.
 });
 

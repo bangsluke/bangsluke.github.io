@@ -12,22 +12,24 @@
 	<title>Stats | Group Page</title>
 
 	<!-- Initial Meta Data -->
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
-	<meta name="description" content="The single most awesome and offensive friends group website ever created."/>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+	<meta name="description" content="The single most awesome and offensive friends group website ever created." />
 	<meta name="author" content="bangsluke" />
 	<meta name="copyright" content="bangsluke" />
-	<meta name="robots" content="nofollow"/>
+	<meta name="robots" content="nofollow" />
 
 	<!-- Link to fonts to be used on site. -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
 
 	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
 	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
 	<link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
 	<!-- Loader Dots styling -->
-	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all" id="css-theme"/> <!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/Themes/OriginalTheme.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" /> <!-- CSS site theme -->
 	<link href="/pages/Group-Page/assets/css/StatsPage.css" rel="stylesheet"> <!-- Stats Page styling -->
 	<!--<link href="/pages/Group-Page/assets/css/DropdownOptions.css" rel="stylesheet"> <!-- Dropdown Menu styling -->
 
@@ -126,7 +128,8 @@
 				</div>
 
 				<!-- Add a third drop down select box for the user to further filter down the selected stats. -->
-				<div class="dropdown-div hidden"> <!-- Hidden whilst in development. -->
+				<div class="dropdown-div hidden">
+					<!-- Hidden whilst in development. -->
 					<h3>Filter the results by header:</h3>
 					<select name="StatsFilter" class="stats-dropdown" id="stats-filter">
 						<option value="" selected="selected">Select header</option>
@@ -134,7 +137,8 @@
 				</div>
 
 				<!-- Add a fourth drop down select box for the user to add a value by which to filter by. -->
-				<div class="dropdown-div hidden"> <!-- Hidden whilst in development. -->
+				<div class="dropdown-div hidden">
+					<!-- Hidden whilst in development. -->
 					<h3>Filter the results value:</h3>
 					<select name="StatsFilter" class="stats-dropdown" id="stats-filter-value">
 						<option value="" selected="selected">Select value</option>
@@ -153,6 +157,18 @@
 			<div class="subpage-content-area fadein">
 
 				<h3 id="stats-title">New Stats Selected</h3>
+
+				<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+				<div class="loader-small" id="stats-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+				</div>
 
 				<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
 				<div class="table-wrapper">
@@ -182,7 +198,10 @@
 
 			<div class="subpage-content-area fadein">
 
-				<a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="reporting-link"><p class="theme-colour-text underline">Click here to report an inaccuracy in the stats shown on this page</p></a>
+				<a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="reporting-link">
+					<p class="theme-colour-text underline">Click here to report an inaccuracy in the stats shown on this
+						page</p>
+				</a>
 
 			</div>
 
