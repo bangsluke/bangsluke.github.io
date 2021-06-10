@@ -337,6 +337,7 @@ function generateTableIndividualsStats(table, data, foundColumn) {
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
     //console.log("Function: generateTableIndividualsStats finished.") // Log a final message to show the function is complete.
+    hideLoaderDots('individuals-stats-table-loader'); // Hide the loader dots. See LoaderDots.js.
 }
 
 
@@ -420,6 +421,7 @@ function generateTableIndividualsTitans(table, data, foundColumn) {
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
     //console.log("Function: generateTableIndividualsTitans finished.") // Log a final message to show the function is complete.
+    hideLoaderDots('individuals-titans-table-loader'); // Hide the loader dots. See LoaderDots.js.
 }
 
 // function scrollToLinkWithOffset(elementID) {

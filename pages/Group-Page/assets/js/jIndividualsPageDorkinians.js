@@ -4,9 +4,6 @@
 
 // Code
 
-// Start the console timer.
-console.time();
-
 // Add callable function "getDorkiniansTable" to be called in "jIndividualsPage.js".
 function getDorkiniansTable(lrcode) {
     var randno = Math.random();
@@ -15,6 +12,3 @@ function getDorkiniansTable(lrcode) {
     el.type = "text/javascript";
     document.getElementsByTagName("head")[0].appendChild(el);
 }
-
-// End the console timer.
-console.timeEnd();

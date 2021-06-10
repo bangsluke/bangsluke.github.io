@@ -27,14 +27,25 @@
     z-index: 6; /* Bring the container div to the very front. */
     top: 0rem; /* Position the container div at the top of the page. */
     left: 0rem; /* Position the container div at the left of the page. */
+    /*height: Controlled by ids, see below. */
+    width: 100%; /* Update the width of the smaller loaders to fill the width of their container. */
     display: flex; /* Apply Flex to the parent div. */
     justify-content: center; /* Horizontally center the dots in the container div. */
     justify-content: center; /* Vertically center the dots in the container div. */
     align-items: center; /* Vertically center the dots in the container div. */
 }
 
-#stats-loader, #titan-loader {
-    width: 100%; /* Update the width of the smaller loaders to fill the width of their container. */
+
+#football-loader {
+    height: 10rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#individuals-stats-table-loader {
+    height: 21rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#individuals-titans-table-loader {
+    height: 10rem; /* Update the height of the smaller loaders to be bespoke. */
 }
 
 #stats-loader {

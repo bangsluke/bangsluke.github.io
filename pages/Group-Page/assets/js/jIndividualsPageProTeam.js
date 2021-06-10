@@ -7,9 +7,6 @@
 
 // Code
 
-// Start the console timer.
-console.time();
-
 // Define the location of the Google Sheet. Link to the tblStatsConfig first before selecting which stat to show.
 var publicSpreadsheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHooCS-JL0ScJZ5ugygKMhP5vY_3QknMdzaEkAw8hZ5OLIXASxByceszcjvEv7P9ecV1QMVrCv3ty3/pub?gid=114011454&single=true&output=csv';
 
@@ -139,9 +136,5 @@ function clearTable() {
         myNode.removeChild(myNode.lastChild); // Remove each child element.
     }
     //console.log("Table Cleared.") // Log a final message to show the function is complete.
-
     hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.  
 }
-
-// End the console timer.
-console.timeEnd();
