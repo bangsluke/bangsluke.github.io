@@ -7,7 +7,7 @@
 /* The top level container div. */
 .loader {
     /* background-color: blue; */
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color: rgba(255, 255, 255, 0.20);
     position: fixed; /* Fix the position of the container div. */
     z-index: 6; /* Bring the container div to the very front. */
     height: 100vh; /* Make the container div the height of the viewport. */

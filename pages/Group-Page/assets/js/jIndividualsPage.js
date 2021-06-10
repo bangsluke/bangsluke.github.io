@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 // Add a load event listener (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
 window.addEventListener('load', function () {
     console.log('%c' + '> Individuals page images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
-    hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.    
+    //hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.    
     console.timeEnd(); // End the console timer.
 });
 
@@ -179,6 +179,8 @@ function getData(data, selectedUserName) {
 
     // Update the Top Titan Titles below the table.
     document.getElementById("top-titan-titles").innerHTML = data[foundRow].TopTitanCategories; // Modify the text inside the element.
+
+    hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.  
 }
 
 function dataMessage() { // Add an alert message when a user tries to complain about how their personal data is being used.
