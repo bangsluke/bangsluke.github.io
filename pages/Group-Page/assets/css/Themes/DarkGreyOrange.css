@@ -227,6 +227,29 @@ snap-tabs>snap-tabs-header>.snap-indicator {
     background: hsl(var(--accent));
 }
 
+
+
+
+snap-tabs>snap-tabs-header a {
+	/* Turn below two code blocks on for the indicator to be above the header text. */
+	border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
+	-webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
+	/* Turn below two code blocks on for the indicator to be below the header text. */
+	-webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
+	border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
+	transition: color .7s ease, border-color .5s ease;
+}
+snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-tabs>snap-tabs-header a[active] {
+	/* background-color: hsl(var(--accent-reduced)); */
+	background-color: rgba(var(--main-style-color-rgb), 0.2);
+	color: var(--text-active-color);
+	border-block-start-color: hsl(var(--accent));
+	border-block-end-color: hsl(var(--accent));
+}
+
+
+
+
 @media (prefers-reduced-motion:reduce) {
     snap-tabs>snap-tabs-header a {
         /* Turn below two code blocks on for the indicator to be above the header text. */
