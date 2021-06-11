@@ -202,6 +202,8 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
 
 snap-tabs>snap-tabs-header {
     --text-active-color: var(--accent-color-white, white);
+	background-color: var(--accent-color-black, black);
+	border-top: 0.125rem solid var(--accent-color-white, white);
 }
 
 snap-tabs>snap-tabs-header a {

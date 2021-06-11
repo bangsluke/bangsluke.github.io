@@ -15,7 +15,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: darkmagenta;
+    background-color: darkred;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -164,8 +164,10 @@ article {
 /* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
 snap-tabs>snap-tabs-header {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    position: fixed;
-    top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem));
+    position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
+    top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
+    left: 0rem; /* Force the header section to the left. */
+    width: 100vw; /* Set the width to be the full viewport width. */
     flex-shrink: 0;
     min-block-size: -webkit-fit-content;
     min-block-size: -moz-fit-content;
