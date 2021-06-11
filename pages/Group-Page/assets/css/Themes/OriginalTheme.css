@@ -227,8 +227,8 @@ snap-tabs>snap-tabs-header>.snap-indicator {
 		border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
 		-webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
         /* Turn below two code blocks on for the indicator to be below the header text. */
-		/* -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
-		border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%); */
+		-webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
+		border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
         transition: color .7s ease, border-color .5s ease;
     }
     snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-tabs>snap-tabs-header a[active] {
@@ -236,7 +236,7 @@ snap-tabs>snap-tabs-header>.snap-indicator {
         background-color: rgba(var(--main-style-color-rgb), 0.2);
         color: var(--text-active-color);
         border-block-start-color: hsl(var(--accent));
-        /* border-block-end-color: hsl(var(--accent)); */
+        border-block-end-color: hsl(var(--accent));
     }
 }
 
