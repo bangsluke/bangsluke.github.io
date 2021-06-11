@@ -108,6 +108,20 @@ tr:hover {
 	border-bottom: 0.25rem double var(--accent-color-3, red);
 }
 
+/* Tooltip Styling - used in tables. */
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	background-color: var(--main-background-color, black);
+	color: var(--accent-color-white, white);
+	border: 0.2rem solid var(--accent-color-white, white);
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.tooltip .tooltiptext::after {
+    border-color: transparent transparent var(--main-background-color, black) transparent; /* This will make the top border black */
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Header Styling */

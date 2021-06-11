@@ -298,10 +298,7 @@ td {
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-	
-	background-color: black;
-	color: #fff;
-	
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	min-height: 2rem;
 	max-height: 20rem;
@@ -319,6 +316,18 @@ td {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.tooltip .tooltiptext::after {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	content: " ";
+    position: absolute;
+    bottom: 100%;  /* This will position the arrow at the top of the tooltip */
+    left: 50%;
+    margin-left: -0.3rem;    
+    border-width: 0.2rem;
+    border-style: solid;
 }
 
 p.tooltiptext {
