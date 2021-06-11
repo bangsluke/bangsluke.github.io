@@ -65,13 +65,14 @@ a {
 
 /* Used for dropdown selection lists text across the site. */
 select, option {
+	background: var(--accent-color-white, white); /* Add a background colour to the dropdown. */
 	color: black; /* Select the colour of the font for the dropdown components. */
 }
 
 /* Used for buttons text across the site. */
 button {
-	color: var(--accent-color-white, white); /* Select the colour of the font for the button components. */
 	background: var(--accent-color-1, pink); /* Add a background colour to the button. */
+	color: var(--accent-color-white, white); /* Select the colour of the font for the button components. */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */

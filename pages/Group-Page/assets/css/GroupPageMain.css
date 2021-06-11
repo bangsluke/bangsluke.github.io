@@ -241,7 +241,7 @@ a {
 }
 
 /* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
-a[target="_blank"]:before, a[target="new"]:before {
+/* a[target="_blank"]:before, a[target="new"]:before {
 	margin: 0rem 0.3125rem 0rem 0rem;
 	padding: 0.06rem;
 	outline: 0.06rem solid #333;
@@ -249,7 +249,7 @@ a[target="_blank"]:before, a[target="new"]:before {
 	background: #ff9;
 	font: 0.75rem “Zapf Dingbats”;
 	content: “\279C”;
-}
+} */
 
 /* Used for table headers across the site. */
 th {
@@ -310,13 +310,20 @@ select, option {
 	font-size: 1rem; /* Relative to root value. */
 }
 
+/* Style the dropdown options. */
 select {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	height: 2rem;
+	width: 10rem;
+	text-align: center;
+	border: none;
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
-	margin: 0.5rem auto 1rem auto;
+	padding: 0.2rem;
 }
 
 /* Used for buttons text across the site. See (https://dev.to/gscode/20-css-buttons-4cni) for styles and details. */
 button {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
