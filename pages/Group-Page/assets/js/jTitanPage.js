@@ -64,24 +64,24 @@ function init() {
     })
 
     // Log the function call to the console.
-    console.log("> 2. Titan Calculated table loaded and populated with values.")
+    //console.log("> 2. Titan Calculated table loaded and populated with values.")
 
-    Papa.parse(publicSpreadsheetUrlCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showTitanCalculatedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
+    // Papa.parse(publicSpreadsheetUrlCSV, {
+    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+    //     complete: showTitanCalculatedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    // })
 
     // Log the function call to the console.
-    console.log("> 3. Initial Factor Explained table loaded and populated with values.")
+    // console.log("> 3. Initial Factor Explained table loaded and populated with values.")
 
-    Papa.parse(publicSpreadsheetUrlCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showTitanFactorExplainedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
+    // Papa.parse(publicSpreadsheetUrlCSV, {
+    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+    //     complete: showTitanFactorExplainedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    // })
 }
 
 
@@ -153,7 +153,8 @@ function getPapaData1(selectedURL) {
     console.log("> Function: getPapaData1(selectedURL) called.")
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        // Note, the above has been changed to false so that the Titans data is passed through as an array, not as an object.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showSelectedInfo1, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     })
@@ -163,12 +164,13 @@ function getPapaData1(selectedURL) {
 function showSelectedInfo1(results) {
     console.log("> Function: showSelectedInfo1(results) called.")
     var data = results.data
+    var toolTipBoolean = true;
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
 
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("table"); // Call the clearTable function to empty the table.
-    createFullTable(data, "table"); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(data, "table", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
     hideLoaderDots('titan-loader'); // Hide the loader dots. See LoaderDots.js.
     showDateAndSourceArea(); // Show the date and source area which is initially hidden.
 }
@@ -312,12 +314,53 @@ function clearTable(selector) {
 }
 
 // Create the table by passing the data to the function.
-function createFullTable(array, selector) {
-    console.log("> Re-usable Function: createFullTable(array) called.") // Log an initial message to show the function has been called.
+function createFullTable(array, selector, toolTipBoolean) {
+    console.log("> Re-usable Function: createFullTable(array, selector) called.") // Log an initial message to show the function has been called.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
-    let data = Object.keys(array[0]); // Create a data variable from the array data received.
-    generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
-    generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
+
+
+    console.log("ARRAY PRINT -------------");
+    console.log(array);
+    console.log("toolTipBoolean = " + toolTipBoolean);
+
+    if (toolTipBoolean == true) {
+        console.log("toolTipBoolean = " + toolTipBoolean + " therefore pass through data as the first row of data of the array.");
+        var headerdata = array[0];
+        console.log("headerdata printed below:");
+        console.log(headerdata);
+    } else {
+        var headerdata = Object.keys(array[0]); // Create an array of the object headers from the array data received.
+    }
+
+
+
+
+    //let toolTipData = Object.keys(array[1]); // Create a data variable from the array data received.
+
+
+
+
+    // console.log("Object.keys(array[0]) PRINT -------------");
+    // console.log(Object.keys(array[0]));
+
+    // console.log("Object.keys(array[1]) PRINT -------------");
+    // console.log(Object.keys(array[1]));
+
+    // console.log("Object.keys(array[2]) PRINT -------------");
+    // console.log(Object.keys(array[2]));
+
+    // console.log("DATA PRINT 1 -------------");
+    // console.log(data);
+
+    // console.log("TOOL TIP DATA PRINT 1 -------------");
+    // console.log(toolTipData);
+
+    // console.log("ARRAY PRINT 1 -------------");
+    // console.log(array);
+
+
+    generateTableHead(table, headerdata, array, toolTipBoolean); // Call the generateTableHead function to create the table headers. Note that headerdata contains the headers only, array contains the full data.
+    generateTable(table, array, toolTipBoolean); // Call the generateTable function to populate the rest of the table data.
     //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
 }
 
@@ -325,37 +368,31 @@ function createFullTable(array, selector) {
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
 // Create the table head including the table headers.
-function generateTableHead(table, data) {
+function generateTableHead(table, headerdata, array, toolTipBoolean) {
     console.log("> Re-usable Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
     var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
-    
-    var toolTipBoolean = true;
-    
-    for (let key of data) { // Loop through each column header of the data.
+
+    for (let key of headerdata) { // Loop through each column header of the headerdata.
         let th = document.createElement("th"); // Create the th element.
-        th.classList.add("tooltip"); // Add the tooltip class to the th element.
-
-        if (toolTipBoolean == true) {
+        
+        if (toolTipBoolean == true) { // Define how to add the text depending on if toolTips are enabled for the table.
             console.log("toolTipBoolean is true so adding tooltip.");
-            var text = document.createTextNode(key);
+            th.classList.add("tooltip"); // Add the tooltip class to the th element (the container element).
+            var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
-            var toolTip = document.createElement("SPAN");
-            toolTip.innerHTML = "test Text tool tip wooo";
-            toolTip.classList.add("tooltiptext");
-            th.appendChild(toolTip);
-
-            // <span class='tooltiptext'>Tooltip text</span>
-
+            var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
+            toolTip.innerHTML = array[1][counter]; // Add the text of the second row, counter column to the new paragraph element.
+            toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
+            toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
+            th.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
         } else { // Add text the normal way.
             console.log("toolTipBoolean is false so not adding tooltip.");
-            var text = document.createTextNode(key); // Add the column header text normally.
+            var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
         }
-        
-        
-        
+
         if (counter == 0) { // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
@@ -366,11 +403,15 @@ function generateTableHead(table, data) {
         row.appendChild(th); // Append the new table header to the table.
         counter = counter + 1; // Increment the counter.
     }
+
+
+
+
     //console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
 // Create the rest of the table below head including all table rows.
-function generateTable(table, data) {
+function generateTable(table, data, toolTipBoolean) {
     console.log("> Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
     var counter;
     var testedValue;
@@ -428,7 +469,6 @@ function updateStatSourcesCount(dataSourceCount, uniqueSkillCount) {
     document.getElementById("data-source-count").innerHTML = dataSourceCount; // Get the id of the text to be updated and update the text inside the element with the data source count.
     document.getElementById("unique-skill-count").innerHTML = uniqueSkillCount; // Get the id of the text to be updated and update the text inside the element with the unique skill count.
 }
-
 
 // Write functions for the two buttons on the Titans page.
 

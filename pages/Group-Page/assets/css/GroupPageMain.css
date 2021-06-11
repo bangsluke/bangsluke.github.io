@@ -291,27 +291,42 @@ td {
 
 /* Tooltip container */
 .tooltip {
-	border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
+	text-decoration: underline; /* Add dots under the hoverable text. */
+    text-decoration-color: white;  
+    text-decoration-style: dotted; 
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-	visibility: hidden;
-	width: 120px;
+	
 	background-color: black;
 	color: #fff;
-	text-align: center;
-	padding: 5px 0;
-	border-radius: 6px;
-   
-	/* Position the tooltip text - see examples below! */
+	
+	visibility: hidden; /* Initially set the visibility as hidden. */
+	min-height: 2rem;
+	max-height: 20rem;
+	width: 15rem;
+	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
-  }
+ 	top: 100%;
+  	left: 50%;
+  	margin-left: -7.5rem; /* Use half of the width (15/2 = 7.5), to center the tooltip */
+}
   
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
+}
+
+p.tooltiptext {
+	/* color: red !important; */
+	font-size: 12.8px; /* Fallback value. */
+	font-size: 0.8rem; /* Relative to root value. */
+	text-transform: none;
+	text-align: left;
 }
 
 
@@ -412,6 +427,18 @@ label {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.wordwrap {
+	/* Wrap long text and urls */
+	/* https://www.dotnettricks.com/learn/stylesheet/css-to-force-long-text-and-urls-to-wrap-on-all-browser */
+	white-space: pre; /* CSS 2.0 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3.0 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	word-wrap: break-word; /* IE 5+ */
 }
 
 .colour-invert {
