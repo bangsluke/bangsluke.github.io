@@ -324,15 +324,38 @@ function createFullTable(array, selector) {
 // Create a table of data from the received data.
 // Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
+// Create the table head including the table headers.
 function generateTableHead(table, data) {
     console.log("> Re-usable Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
     var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
+    
+    var toolTipBoolean = true;
+    
     for (let key of data) { // Loop through each column header of the data.
         let th = document.createElement("th"); // Create the th element.
-        let text = document.createTextNode(key); // Add the column header text.
-        th.appendChild(text); // Append the text to the table header.
+        th.classList.add("tooltip"); // Add the tooltip class to the th element.
+
+        if (toolTipBoolean == true) {
+            console.log("toolTipBoolean is true so adding tooltip.");
+            var text = document.createTextNode(key);
+            th.appendChild(text); // Append the text to the table header.
+            var toolTip = document.createElement("SPAN");
+            toolTip.innerHTML = "test Text tool tip wooo";
+            toolTip.classList.add("tooltiptext");
+            th.appendChild(toolTip);
+
+            // <span class='tooltiptext'>Tooltip text</span>
+
+        } else { // Add text the normal way.
+            console.log("toolTipBoolean is false so not adding tooltip.");
+            var text = document.createTextNode(key); // Add the column header text normally.
+            th.appendChild(text); // Append the text to the table header.
+        }
+        
+        
+        
         if (counter == 0) { // If the counter = 0, it's the first column.
             th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
             th.classList.add("first-col"); // Add the first-col class to the first column.
@@ -346,6 +369,7 @@ function generateTableHead(table, data) {
     //console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
 }
 
+// Create the rest of the table below head including all table rows.
 function generateTable(table, data) {
     console.log("> Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
     var counter;
