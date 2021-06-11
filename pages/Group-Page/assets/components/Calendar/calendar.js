@@ -7,7 +7,7 @@ console.log("Calendar.js initiated");
 // Initially define required variables.
 
 // The two keys (clientId and apiKey) are generated from the 'enable apis' section of your project in the google developers console (https://console.cloud.google.com/apis/dashboard?project=tits-group-page&folder=) and you're looking for the "create credentials" dropdown to create an API key and an OAuth Client ID.
-var clientId = "556098195944-b2v5o5ggokqemrbiei3ckekb48uammfj.apps.googleusercontent.com"; // Choose web app client Id, redirect URI and Javascript origin set to http://localhost.
+var clientId = "556098195944-b67uttdh8ogmoln1cglqrnt23rtr1rpi.apps.googleusercontent.com"; // Choose web app client Id, redirect URI and Javascript origin set to http://localhost.
 var apiKey = "AIzaSyAiguB1wMSswLe082_-Uf0Lq7dii8640c4"; // Choose public apiKey, any IP allowed (leave blank the allowed IP boxes in Google Dev Console).
 
 var userEmail = "tits.group.page@gmail.com"; //your calendar Id
@@ -77,6 +77,10 @@ function handleClientLoad() {
 //--------------------- check Auth
 function checkAuth() {
     console.log("Function: checkAuth() called."); // Log the function to the console.
+    
+    console.log("clientId = " + clientId);
+    console.log("scopes = " + scopes);
+    
     gapi.auth.authorize({
         client_id: clientId,
         scope: scopes,
