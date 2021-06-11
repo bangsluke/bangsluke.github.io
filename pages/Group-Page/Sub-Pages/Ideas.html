@@ -86,16 +86,15 @@
 					- [DONE]. Do same for drop down selections. (https://www.w3schools.com/howto/howto_custom_select.asp).
 					- Sort out how styling sheets will deal with shadow DOMs. Ensure font flows down to shadow DOMs. Should I have all shadow DOM styling as local stylng and the external style sheet is the one that is changed?
 					- Disable all horizontal scrolling on pages that don't need it. (https://www.tomred.net/css-html-js/disable-or-enable-horizontal-or-vertical-scrollbar.html). Fix all horizontal and weird vertical scrolling that happens on mobile. Looks all fixed on homepage but no other page. Lock scroll for all elements and then individually allow scroll or individual elements.
-					- Sort out viewport units for mobile - https://css-tricks.com/the-trick-to-viewport-units-on-mobile/.
 					</p>
 
 					<p>
 					- Final Tidy Up:
+						- [DONE]. Make all opacities match.	
 						- Remove different colour HTML backgrounds so overscroll on mobile shows white background.
 						- Sort out dark mode (see dark mode section below).
-						- Make all opacities match.
-						- Clean up all console logs.
-						- Put website through a website test (https://search.google.com/test/mobile-friendly).
+						- Clean up all console logs. Reduce down logs to what is useful.
+						- Put website through a website test (https://search.google.com/test/mobile-friendly). Test out in Chrome tools too.
 					</p>
 
 				</div>
@@ -129,6 +128,7 @@
 					- Add Try Catch to all JavaScript functions to prevent errors. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 					- Add cursor: pointer to all buttons and hyperlinks on site. Also add hover code that changes colour.
 					- Add a full screen toggle option on Desktop (https://stackoverflow.com/questions/7836204/chrome-fullscreen-api). Hide the toggle for Mobile.
+					- Sort out viewport units for mobile - https://css-tricks.com/the-trick-to-viewport-units-on-mobile/.
 					- Look at CSS post-processors.
 					- Consider adding large text with the text background being coloured. Search for "Add text below for homepage" in Gmail if image to right doesn't work. (https://mail.google.com/mail/u/0?ui=2&ik=c3c77e4581&attid=0.1&permmsgid=msg-a:r4129830546323262163&th=179a549f4839a646&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_7-zg1sy_VH2cfsoLKvnSm1rE3Q1A90hUzo4CwY6cjx1KBTicBOGD3xdx6FbiiK69uKn-KQ5zorA2_1fi2ml8ndbprFAl23TIb1ct--BPFz0IvrjupiFk5h8g&disp=emb&realattid=179a549d6a3e519db2b1).
 					- How to Find Unused Javascript and CSS code? (https://www.youtube.com/watch?v=MTZC-OSrPmE&ab_channel=RethinkingUI).
@@ -267,12 +267,12 @@
 					- [DONE]. Use the <cite></cite> style for all quotes.
 					- [DONE]. Make Martin Brockham Badgers quotes text smaller so stays on one line.
 					- [DONE]. Make Dorkinians and Brockham Badgers header left bigger and left aligned.
+					- [DONE]. Add summary table of stats and Titan performance.
+					- Nice to have: make heading links work. Work on getting the click event to work on clicking on another tab header. Currently click doesn't work.
 					- When scrolling left right, the background doesn't change on the header. Fix this.
 					- Snap tabs non active a links, change font colour.
-					- Add summary table of stats and Titan performance.
 					- Tests Premier League data not loaded in on Brys phone.
 					- Last snap tabs header doesn’t snap into focus when scrolled onto that tab.
-					- Nice to have: make heading links work. Work on getting the click event to work on clicking on another tab header. Currently click doesn't work.
 					</p>
 
 				</div>
@@ -364,7 +364,7 @@
 					<p>
 					- [DONE]. Add Peter Griffin audio noise behind Easter egg. Decoys Lois.
 					- Check that all upcoming Tits events are in the calendar.
-						- Add everyone's birthdays to main calendar as repeating event.
+						- [DONE]. Add everyone's birthdays to main calendar as repeating event.
 						- Add all known upcoming events.
 					- Check that Events links in text block below calendar work. Does it subscribe?
 					- Nice to have; next upcoming event. (https://stackoverflow.com/a/28393656) (https://stackoverflow.com/questions/28262674/retrieve-google-calendar-events-using-api-v3-in-javascript).
@@ -742,14 +742,17 @@
 
 	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
 	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	<script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
+	
 	<!-- Add the common header JS -->
-	<script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+	<script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
 	<!-- Add the common sideMenu JS -->
-	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
 	<!-- Add the common footer JS -->
-	<script src="/pages/Group-Page/assets/js/jDomsCorner.js"></script> <!-- Get Dom's Corner JS -->
-	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script> <!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<!-- Get Dom's Corner JS -->
+	<script src="/pages/Group-Page/assets/js/jDomsCorner.js"></script>
+	<!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
 
 </body>
 

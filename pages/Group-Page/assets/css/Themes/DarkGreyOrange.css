@@ -227,9 +227,7 @@ snap-tabs>snap-tabs-header>.snap-indicator {
     background: hsl(var(--accent));
 }
 
-
-
-
+/* Add snap-tab-header links styling for users with no reduced motion settings. */
 snap-tabs>snap-tabs-header a {
 	/* Turn below two code blocks on for the indicator to be above the header text. */
 	border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
@@ -247,9 +245,7 @@ snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-t
 	border-block-end-color: hsl(var(--accent));
 }
 
-
-
-
+/* Add snap-tab-header links styling for users with reduced motion settings. */
 @media (prefers-reduced-motion:reduce) {
     snap-tabs>snap-tabs-header a {
         /* Turn below two code blocks on for the indicator to be above the header text. */

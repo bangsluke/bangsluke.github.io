@@ -7,7 +7,7 @@
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
     --ChromeSafari-bottom-bar-height: 5.2rem; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
-    --indicator-size: 0.25rem; /* Used in the snap-indicator class later on. */
+    --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
 }
@@ -15,7 +15,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
