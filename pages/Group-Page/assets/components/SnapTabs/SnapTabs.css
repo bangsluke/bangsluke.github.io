@@ -15,7 +15,7 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    background-color: darksalmon;
+    background-color: darkmagenta;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
@@ -165,7 +165,7 @@ article {
 snap-tabs>snap-tabs-header {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
     position: fixed;
-    top: calc(100vh - var(--ChromeSafari-bottom-bar-height, 5.6rem));
+    top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem));
     flex-shrink: 0;
     min-block-size: -webkit-fit-content;
     min-block-size: -moz-fit-content;
