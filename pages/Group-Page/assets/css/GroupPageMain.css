@@ -19,14 +19,7 @@
 	
 	/* Colours */
 
-	/* The below colour variables are controlled by the theme CSS files. */
-	/* --main-style-color: #FF3CAC;
-	--main-background-color: #FF3CAC;
-	--accent-color-1: #FF3CAC;
-	--accent-color-2: #784BA0;
-	--accent-color-3: #2B86C5;
-	--accent-color-white: #ffffff;
-	--accent-color-black: #222222; */
+	/* The main colour variables are controlled by the theme CSS files. */
 
 	/* The below colour variables are constant throughout all themes and so exist here. */
 	--accent-color-black-rgb: 34, 34, 34;

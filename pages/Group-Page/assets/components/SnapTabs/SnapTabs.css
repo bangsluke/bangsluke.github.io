@@ -15,11 +15,10 @@
 /* Added Luke Styling. */
 
 .snap-tabs-container {
-    /* background-color: darksalmon; */
+    background-color: darksalmon;
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
-    /* margin-top: 0rem; */
     margin-top: var(--headerHeight, 2.8rem);
     width: 100%;
     
@@ -38,75 +37,10 @@
     place-content: center;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
     z-index: 1;
-    /* visibility: hidden; */
-    /* scroll-padding: 5rem 0rem 0rem 0rem; */
-    
-    /* padding-top: var(--headerHeight, 2.8rem); */
-    /* margin-top: -var(--headerHeight, 2.8rem); */
-
     overflow: hidden;
 }
 
-/* Original Snap Tabs CSS Styling. */
-
-p {
-    max-inline-size: 35ch;
-    margin-block: .5ch;
-}
-
-/* p {
-    max-inline-size: 35ch;
-    margin-block: .5ch
-} */
-
-p+p {
-    -webkit-margin-before: 1rem;
-    margin-block-start: 1rem;
-}
-
-/* p+p {
-    -webkit-margin-before: 1rem;
-    margin-block-start: 1rem
-} */
-
-h2 {
-    /* font-size: 1.5rem; */
-    -webkit-margin-after: .5rem;
-    margin-block-end: .5rem;
-    line-height: 1;
-}
-
-/* h2 {
-    font-size: 2.5rem;
-    -webkit-margin-after: .5rem;
-    margin-block-end: .5rem;
-    line-height: 1
-} */
-
-h2:first-of-type {
-    -webkit-margin-before: 0rem;
-    margin-block-start: 0rem;
-}
-
-/* h2:first-of-type {
-    -webkit-margin-before: 0rem;
-    margin-block-start: 0rem;
-} */
-
-article {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    box-sizing: border-box;
-    font-size: 1rem;
-    line-height: 1;
-}
-
-/* article {
-    box-sizing: border-box;
-    font-family: Blokk;
-    font-size: 1.25rem;
-    line-height: 1;
-    color: #333
-} */
+/* Original (but modified) Snap Tabs CSS Styling. */
 
 /* Specific snap-tabs styling with elements not used elsewhere on site. */
 
@@ -131,16 +65,21 @@ snap-tabs {
     position: relative;
 } */
 
-snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    outline-offset: -0.3rem;
+snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
 }
 
-/* snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
-    outline-color: hsl(var(--accent));
-    outline-offset: -5px;
+/* snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
 } */
 
+/* Add a section with class .scroll-snap-x. */
 .scroll-snap-x {
     overflow-x: auto;
     overflow-y: hidden;
@@ -191,8 +130,42 @@ snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-
     }
 } */
 
+snap-tabs>section>article {
+    /* background-color: blue; */
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    /* padding: var(--vertical-space) var(--horizontal-space); */
+    padding: 0rem 0rem;
+}
+
+/* snap-tabs>section>article {
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding: var(--space-2) var(--space-3);
+} */
+
+article {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* article {
+    box-sizing: border-box;
+    font-family: Blokk;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #333
+} */
+
+/* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
 snap-tabs>snap-tabs-header {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    position: fixed;
+    top: calc(100vh - var(--ChromeSafari-bottom-bar-height, 5.6rem));
     flex-shrink: 0;
     min-block-size: -webkit-fit-content;
     min-block-size: -moz-fit-content;
@@ -280,35 +253,6 @@ snap-tabs>snap-tabs-header>.snap-indicator {
     background: hsl(var(--accent));
 } */
 
-snap-tabs>section {
-    block-size: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-}
-
-/* snap-tabs>section {
-    block-size: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-} */
-
-snap-tabs>section>article {
-    /* background-color: blue; */
-    scroll-snap-align: start;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    /* padding: var(--vertical-space) var(--horizontal-space); */
-    padding: 0rem 0rem;
-}
-
-/* snap-tabs>section>article {
-    scroll-snap-align: start;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    padding: var(--space-2) var(--space-3);
-} */
 
 @media (prefers-reduced-motion:reduce) {
     snap-tabs .snap-indicator {
@@ -339,3 +283,57 @@ snap-tabs>section>article {
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
+
+snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    outline-offset: -0.3rem;
+}
+
+/* snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
+    outline-color: hsl(var(--accent));
+    outline-offset: -5px;
+} */
+
+h2 {
+    /* font-size: 1.5rem; */
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1;
+}
+
+/* h2 {
+    font-size: 2.5rem;
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1
+} */
+
+h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+}
+
+/* h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+} */
+
+p {
+    max-inline-size: 35ch;
+    margin-block: .5ch;
+}
+
+/* p {
+    max-inline-size: 35ch;
+    margin-block: .5ch
+} */
+
+p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem;
+}
+
+/* p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem
+} */
