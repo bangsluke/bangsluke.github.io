@@ -225,7 +225,7 @@ function init() {
         sessionStorage.setItem("fullSelectionName", fullSelectionName); // Save the variable fullSelectionName to session storage.
         console.log("   Full selection name (" + fullSelectionName + ") saved to local session storage.")
         //console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
-        clearTable("stats-table"); // Call the clearTable function to empty the table.
+        clearTable("#stats-table"); // Call the clearTable function to empty the table.
         showLoaderDots('stats-loader'); // Show the loader dots. See LoaderDots.js. 
         statSelected(); // Call the statSelected function to display the data on the site.
         // zoomOutMobile(); // Ignore for now as not needed?
@@ -353,7 +353,7 @@ function getStatSelection(data) {
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
     updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
-    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
+    applyTitanTableFormatting('stats-table', titanBoolean, toolTipBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 
     // TODO: BELOW TO BE CODED PROPERLY
 
@@ -423,17 +423,6 @@ function updateAdditionalStatsInformation(lastUpdatedDate, sourceText) {
     element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
     element = document.getElementById("stats-source"); // Get the stats-source element by id.
     element.innerHTML = "Source: " + sourceText; // Update the text inside the element with the stats source.
-}
-
-// Add a border below the 4th person if the table is flagged as a Titan table.
-function applyTitanTableFormatting(titanBoolean) {
-    if (titanBoolean == "TRUE") {
-        //console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean); // Log that the class is being added.
-        document.getElementById("stats-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
-    } else {
-        //console.log("Removing titan4thRow class to the table as titanBoolean is " + titanBoolean); // Log that the class is being removed.
-        document.getElementById("stats-table").classList.remove("titan4thRow"); // Get the stats-table table by id and remove the titan4thRow class to the table.
-    }
 }
 
 

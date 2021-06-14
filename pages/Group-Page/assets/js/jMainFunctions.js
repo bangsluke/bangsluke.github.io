@@ -201,13 +201,19 @@ function generateTable(table, data, toolTipBoolean) {
 
 // Add a border below the 4th person if the table is flagged as a Titan table.
 function applyTitanTableFormatting(tableID, titanBoolean, toolTipBoolean) {
+    console.log('%c' + '>> Re-usable Function: applyTitanTableFormatting(tableID, titanBoolean, toolTipBoolean) called. Passed variables: tableID = ' + tableID + ', titanBoolean = ' + titanBoolean + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightcyan; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     if (titanBoolean == "TRUE") { // Check that the titanBoolean is true.
         //console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
         if (toolTipBoolean == true) { // Tool tip is required so add the special titan4thRowToolTip class that deals with the tool tip.
+            document.getElementById(tableID).classList.remove("titan4thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
             document.getElementById(tableID).classList.add("titan4thRowToolTip"); // Get the titans-table table by id and add the titan4thRowToolTip class to the table.
         } else { // Tool tip isn't required so add the normal titan4thRow class.
+            document.getElementById(tableID).classList.remove("titan4thRowToolTip"); // Remove the titans-table table by id and add the titan4thRow class to the table.
             document.getElementById(tableID).classList.add("titan4thRow"); // Get the titans-table table by id and add the titan4thRow class to the table.
         }
+    } else { // For all non Titan tables, remove the Titan table classes.
+        document.getElementById(tableID).classList.remove("titan4thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
+        document.getElementById(tableID).classList.remove("titan4thRowToolTip"); // Remove the titans-table table by id and add the titan4thRow class to the table.
     }
 }
 
