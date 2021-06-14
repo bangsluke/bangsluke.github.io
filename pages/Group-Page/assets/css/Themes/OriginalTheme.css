@@ -222,7 +222,8 @@ snap-tabs>snap-tabs-header {
 }
 
 snap-tabs>snap-tabs-header a {
-    --text-color: var(--accent-color-3, white); /* Need the variable --text-color as needed in the JavaScript. */
+    --text-color: #BDBDBD; /* Need the variable --text-color as needed in the JavaScript. */
+	/*--text-color: var(--accent-color-3, white); /* Need the variable --text-color as needed in the JavaScript. */
 	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
 	color: var(--accent-color-3, white);
 }
