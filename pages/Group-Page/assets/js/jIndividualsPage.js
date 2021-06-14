@@ -53,21 +53,24 @@ function showSelectedInfo(results) {
     // Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
     var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
     if (selectedUserName == null) { selectedUserName = "Alex"; } // Deal with initial load of the page where no user has been selected.
+    console.log("Passed user name = " + selectedUserName); // Log the passed user name.
     getData(data, selectedUserName); // Pass the data to the getData function to be processed.
 }
 
 // Get the data out into usable values to be passed to the HTML elements.
 function getData(data, selectedUserName) {
 
+    // console.log(data);
+
     // Loop through data array and match the user to return the row in the array of objects that relates to the user.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].fullName = " + data[x].fullName); // Show the looping process.
-        if (data[x].User === selectedUserName) {
+        if (data[x].Name === selectedUserName) {
             var foundRow = x; // The found row containing the correct user object.
         }
 
     }
-    //console.log("Found Row = " + foundRow);
+    // console.log("Found Row = " + foundRow);
 
     // Modify HTML elements with the found data.
 
@@ -83,7 +86,7 @@ function getData(data, selectedUserName) {
     document.getElementById("weight").innerHTML = data[foundRow].weight; // Modify the text inside the element.
     document.getElementById("phone").innerHTML = data[foundRow].phone; // Modify the text inside the element.
     document.getElementById("email").innerHTML = data[foundRow].email; // Modify the text inside the element.
-    console.log('mailto:' + data[foundRow].email);
+    // console.log('mailto:' + data[foundRow].email);
     document.getElementById("email").setAttribute('href', 'mailto:' + data[foundRow].email); // Update the href of the link dynamically.
     document.getElementById("facebook").innerHTML = data[foundRow].facebookHandle; // Modify the text inside the element.
     document.getElementById("facebook").setAttribute('href', data[foundRow].facebookURL); // Update the href of the link dynamically.
