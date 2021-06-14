@@ -309,8 +309,9 @@ td {
 	position: absolute;
 	z-index: 1;
  	top: 100%;
-  	left: 50%;
-  	margin-left: -7.5rem; /* Use half of the width (15/2 = 7.5), to center the tooltip */
+  	/* left: 50%; */
+	left: 0rem;
+  	/*margin-left: -7.5rem; /* Use half of the width (15/2 = 7.5), to center the tooltip */
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -494,12 +495,15 @@ table {
 tr:first-child th:first-child {
 	border-top-left-radius: var(--border-radius, 0.2rem);
 }
+
 tr:first-child th:last-child {
 	border-top-right-radius: var(--border-radius, 0.2rem);
 }
+
 tr:last-child td:first-child {
 	border-bottom-left-radius: var(--border-radius, 0.2rem);
 }
+
 tr:last-child td:last-child {
 	border-bottom-right-radius: var(--border-radius, 0.2rem);
 }
@@ -520,7 +524,7 @@ tr:hover {
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
 
-.sticky-col {
+.sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: -webkit-sticky;
 	position: sticky;
@@ -535,8 +539,8 @@ tr:hover {
 	left: 0rem;
 }
 
-.first-cell { /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
-	z-index: 2;
+.first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
+	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
 	border-top-left-radius: var(--border-radius, 0.2rem);
 }
 
