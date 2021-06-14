@@ -303,6 +303,7 @@ td {
 	min-height: 2rem;
 	max-height: 20rem;
 	width: 15rem;
+	min-width: 8rem;
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
@@ -325,7 +326,7 @@ td {
 	content: " ";
     position: absolute;
     bottom: 100%;  /* This will position the arrow at the top of the tooltip */
-    left: 50%;
+    left: 10%;
     margin-left: -0.3rem;    
     border-width: 0.2rem;
     border-style: solid;
