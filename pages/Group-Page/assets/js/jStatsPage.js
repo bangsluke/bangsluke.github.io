@@ -289,14 +289,21 @@ function getInitiallyLoadedStatSelection(data) {
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
             var titanBoolean = data[x].TitanBoolean;
-            toolTipBoolean = data[x].ToolTip; // Set the toolTipBoolean to be equal to the value saved in the data sheet stats config sheet.
+            // Set the toolTipBoolean to be equal to the value saved in the data sheet stats config sheet.
+            if (data[x].TitanBoolean == "TRUE") { // Get the TRUE or FALSE value from the data sheet and process it to be the correct case sizing.
+                toolTipBoolean = true; // Set the toolTipBoolean as true.
+            } else if (data[x].TitanBoolean == "FALSE") { // Deal with FALSE.
+                toolTipBoolean = false; // Set the toolTipBoolean as false.
+            } else { // Deal with no value in the sheet.
+                toolTipBoolean = false; // Set the toolTipBoolean as false by default.
+            }
             //console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
     getPapaData(selectedURL); // Call the function getPapaData to return the data from that table.
     updateStatsTitle(fullSelectionName); // Update the stats title text.
     updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
-    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
+    applyTitanTableFormatting('stats-table', titanBoolean, toolTipBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 }
 
 

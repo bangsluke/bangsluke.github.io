@@ -146,7 +146,8 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 
 // Create the rest of the table below head including all table rows.
 function generateTable(table, data, toolTipBoolean) {
-    console.log(">> Re-usable Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
+    console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    console.log(data); // Log the passed array to the console.
     var rowCounter = 0; // Define a counter for checking which row to work with.
     var columnCounter;
     var testedValue;
