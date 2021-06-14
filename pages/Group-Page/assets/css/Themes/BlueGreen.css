@@ -108,6 +108,12 @@ tr:hover {
 	border-bottom: 0.25rem double var(--accent-color-3, red);
 }
 
+/* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
+.titan4thRowToolTip tr:nth-child(6){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	border-bottom: 0.25rem double var(--accent-color-3, red);
+}
+
 /* Tooltip Styling - used in tables. */
 
 /* Tooltip text */

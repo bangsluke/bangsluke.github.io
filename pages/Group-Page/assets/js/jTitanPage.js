@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 window.addEventListener('load', function () {
     console.log('%c' + '> Gallery page images and other resources all loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.    
+    showLoaderDots('titan-loader'); // Show the loader dots. See LoaderDots.js. 
     console.timeEnd(); // End the console timer.
 });
 
@@ -42,6 +43,9 @@ console.log("   The published spreadsheet is located at " + publicSpreadsheetUrl
 var TitanTableName = "Titan - Titan";
 var TitanCalculatedTableName = "Titan - Factor Calculated"
 var TitanFactorExplainedTableName = "Titan - Explained"
+
+// Set the Titans table as requiring tool tips.
+var toolTipBoolean = true;
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
@@ -145,7 +149,7 @@ function getInitialTitanData(data) {
     }
     getPapaData1(selectedURL); // Call the function getPapaData to return the data from that table.
     updateAdditionalTableInformation(lastUpdatedDate, sourceText); // Updates the Titan table source, last updated text and additional link.
-    applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
+    applyTitanTableFormatting('titans-table', titanBoolean, toolTipBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
     updateStatSourcesCount(dataSourceCount, uniqueSkillCount); // Update the stat count in the summary text below the Titan table.
 }
 
@@ -165,7 +169,6 @@ function getPapaData1(selectedURL) {
 function showSelectedInfo1(results) {
     console.log("> Function [Titan Table]: showSelectedInfo1(results) called.")
     var dataArray = results.data // Data comes through from results as an array of arrays. This is because the header setting on the above papa parse is set to false.
-    var toolTipBoolean = true; // Set the Titans table as requiring tool tips.
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(">> Data through for showSelectedInfo1 is in an array format.") // Log a message about the data.
     //console.log(dataArray); // Log the data in the console.
@@ -449,10 +452,14 @@ function generateTable(table, data, toolTipBoolean) {
 // Additional functions.
 
 // Add a border below the 4th person if the table is flagged as a Titan table.
-function applyTitanTableFormatting(titanBoolean) {
-    if (titanBoolean == "TRUE") {
+function applyTitanTableFormatting(tableID, titanBoolean, toolTipBoolean) {
+    if (titanBoolean == true) { // Check that the titanBoolean is true.
         //console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
-        document.getElementById("titans-table").classList.add("titan4thRow"); // Get the stats-table table by id and add the titan4thRow class to the table.
+        if (toolTipBoolean == true) { // Tool tip is required so add the special titan4thRowToolTip class that deals with the tool tip.
+            document.getElementById(tableID).classList.add("titan4thRowToolTip"); // Get the titans-table table by id and add the titan4thRowToolTip class to the table.
+        } else { // Tool tip isn't required so add the normal titan4thRow class.
+            document.getElementById(tableID).classList.add("titan4thRow"); // Get the titans-table table by id and add the titan4thRow class to the table.
+        }
     }
 }
 

@@ -546,6 +546,12 @@ tr:hover {
 	font-size: inherit;
 }
 
+/* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
+.titan4thRowToolTip tr:nth-child(6){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
+}
+
 /* Add a hidden class for hiding components that are not yet ready. */
 
 .hidden {
