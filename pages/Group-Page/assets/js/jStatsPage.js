@@ -33,6 +33,9 @@ console.log("   The published spreadsheet is located at " + publicSpreadsheetUrl
 var InitialStatsTableName = "COD - Multiplayer Kills";
 // var InitialStatsTableName = "Brockham Badgers B's - Overall Stats";
 
+// Define a global toolTipBoolean. Change based on the table selected.
+var toolTipBoolean = true; // Set the toolTipBoolean to be true as default for the initial stats table.
+
 // New Stats
 
 // Define a statsObjects that defines the drop down values within the first drop down options on the page. https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp.
@@ -222,11 +225,14 @@ function init() {
         sessionStorage.setItem("fullSelectionName", fullSelectionName); // Save the variable fullSelectionName to session storage.
         console.log("   Full selection name (" + fullSelectionName + ") saved to local session storage.")
         //console.log("Try to call statsSelected and pass fullSelectionName through to it via local session storage.")
-        clearTable(); // Call the clearTable function to empty the table.
+        clearTable("stats-table"); // Call the clearTable function to empty the table.
         showLoaderDots('stats-loader'); // Show the loader dots. See LoaderDots.js. 
         statSelected(); // Call the statSelected function to display the data on the site.
         // zoomOutMobile(); // Ignore for now as not needed?
     }
+
+    // Early return until the filtering code is written.
+    return
 
     // 3rd Dropdown - React when the user changes the filterHeaderSelectionDropdown.
     filterHeaderSelectionDropdown.onchange = function () {
@@ -271,13 +277,10 @@ function showInitiallyLoadedInfo(results) {
 
 // Create a function that returns what the user has selected from the table (see http://corelangs.com/js/progs/options.html for dropdown JavaScript).
 function getInitiallyLoadedStatSelection(data) {
-
     console.log("> Function: getInitiallyLoadedStatSelection(data) called.")
-
     // Define an initial fullSelectionName, used to look up the correct data set from the Group Data Page.
     var fullSelectionName = InitialStatsTableName;
     //console.log("   Full selection name = " + fullSelectionName); // Display what the full selection name is from the combined drop downs.
-
     // Loop through the data array from the tblStatsConfig tab and match the selected stat value to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
@@ -286,6 +289,7 @@ function getInitiallyLoadedStatSelection(data) {
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
             var titanBoolean = data[x].TitanBoolean;
+            toolTipBoolean = data[x].ToolTip; // Set the toolTipBoolean to be equal to the value saved in the data sheet stats config sheet.
             //console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
@@ -294,6 +298,13 @@ function getInitiallyLoadedStatSelection(data) {
     updateAdditionalStatsInformation(lastUpdatedDate, sourceText); // Updates the stats source, last updated text and additional link.
     applyTitanTableFormatting(titanBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
 }
+
+
+
+
+
+
+
 
 
 // NORMAL LOAD FUNCTIONS
@@ -321,7 +332,6 @@ function showInfo(results) {
 function getStatSelection(data) {
     console.log("> Function: getStatSelection(data) called.")
     var fullSelectionName = sessionStorage.getItem("fullSelectionName"); // Retrieve the variable fullSelectionName passed earlier to session storage.
-
     // Loop through the data array from the tblStatsConfig tab and match the selected stat value to find the relevant URL to get data from.
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
@@ -341,7 +351,6 @@ function getStatSelection(data) {
     // TODO: BELOW TO BE CODED PROPERLY
 
     // Populate the Filter Header dropdown from the received data.
-
     //// Filter Header Selection.
     //var dropdownFilterHeaderSelector = document.getElementById("stats-filter"); // Select the "stats-filter" element by id.
     //var filterHeaderText = dropdownFilterHeaderSelector.options[dropdownFilterHeaderSelector.selectedIndex].text; // Get the corresponding value from the filter header selected.
@@ -359,7 +368,7 @@ function getPapaData(selectedURL) {
     console.log("> Function: getPapaData(selectedURL) called.")
     Papa.parse(selectedURL, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showSelectedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     })
@@ -368,112 +377,30 @@ function getPapaData(selectedURL) {
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showSelectedInfo(results) {
     console.log("> Function: showSelectedInfo(results) called.")
-    var data = results.data
+    var dataArray = results.data // Data comes through from results as an array of arrays. This is because the header setting on the above papa parse is set to false.
+    
+    console.log("========================================")
+    console.log(dataArray);
+    
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
-
-    var filterHeader = "Name";
-    var filterValue = "Bangs";
+    //var filterHeader = "Name";
+    //var filterValue = "Bangs";
     //data = filterData(data, filterHeader, filterValue);
-
-    createFullTable(data); // Call the createFullTable function, passing the data from PapaParse.
-    populateFilterHeaderDropDown(data) // Call the populateFilterHeaderDropDown function to populate the dropdown list for the Filter Header dropdown.
-
+    createFullTable(dataArray, "#stats-table", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('stats-loader'); // Hide the loader dots. See LoaderDots.js.
+    //populateFilterHeaderDropDown(dataArray) // Call the populateFilterHeaderDropDown function to populate the dropdown list for the Filter Header dropdown.
 }
 
 
 
-// Table Functions.
 
-// Clear the table to make space for new data.
-function clearTable() {
-    console.log("> Function: clearTable() called.") // Log an initial message to show the function has been called.
-    // https://stackoverflow.com/a/3955238/14290169
-    const myNode = document.querySelector("table"); // Select the parent from which to delete all child elements from. This selector only works if the HTML page has only one table element.
-    while (myNode.firstChild) { // Loop through all child elements.
-        myNode.removeChild(myNode.lastChild); // Remove each child element.
-    }
-    //console.log("Function: Table Cleared.") // Log a final message to show the function is complete.
-}
 
-// Create the table by passing the data to the function.
-function createFullTable(array) {
-    console.log("> Function: createFullTable(array) called.") // Log an initial message to show the function has been called.
-    let table = document.querySelector("table"); // Select the parent element from which to build the table. This selector only works if the HTML page has only one table element.
-    let data = Object.keys(array[0]); // Create a data variable from the array data received.
-    generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
-    generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
-    //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
-}
 
-// Create a table of data from the received data.
-// Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
-// Create the table head including the table headers.
-function generateTableHead(table, data) {
-    console.log("> Function: generateTableHead(table, data) called.") // Log an initial message to show the function has been called.
-    let thead = table.createTHead(); // Create table headers.
-    let row = thead.insertRow(); // Insert a row for the table headers.
-    var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
-    for (let key of data) { // Loop through each column header of the data.
-        let th = document.createElement("th"); // Create the th element.
-        let text = document.createTextNode(key); // Add the column header text.
-        th.appendChild(text); // Append the text to the table header.
-        th.classList.add("textleft"); // Add the textleft class to the tableheader.
-        if (counter == 0) { // If the counter = 0, it's the first column.
-            th.classList.add("sticky-col"); // Add the sticky-col class to the first column.
-            th.classList.add("first-col"); // Add the first-col class to the first column.
-            th.classList.add("first-cell"); // Add the first-cell class to the first column. This only applies to the top left cell of the table.
-        } else {
-            // Do nothing as not first column.
-        }
-        row.appendChild(th); // Append the new table header to the table.
-        counter = counter + 1; // Increment the counter.
-    }
-    //console.log("Function: generateTableHead finished.") // Log a final message to show the function is complete.
-}
 
-// Create the rest of the table below head including all table rows.
-function generateTable(table, data) {
-    console.log("> Function: generateTable(table, data) called.") // Log an initial message to show the function has been called.
-    var counter; // Define a counter for checking which column to apply stick-col rule to.
-    var testedValue; // Define a variable for parsing each element through.
-    var dataType; // Define a variable to store the data variable type.
-    let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
-    for (let element of data) { // Loop through each row of the data.
-        let row = tbody.insertRow(); // Insert a row for each bit of table data.
-        counter = 0; // Define a counter for checking which column to apply stick-col rule to.
-        for (key in element) { // Loop through each cell in each row.
-            let cell = row.insertCell(); // Create the cell.
-            let text = document.createTextNode(element[key]); // Add the cell text.
-            cell.appendChild(text); // Append the text to the cell.
-            
-            // Loop through the columns to apply styling.
-            if (counter == 0) { // If the counter = 0, it's the first column.
-                cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
-                cell.classList.add("first-col"); // Add the first-col class to the first column.
-            } else {
-                // Do nothing as not first column.
-            }
 
-            // Get the data type of the value being added to the cell.
-            //console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
-            testedValue = parseInt(element[key]); // First, parseInt the value.
-            if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
-                dataType = "string";
-                cell.classList.add("textleft"); // Add the textleft class to the cell.
-            } else { // If not NaN, get the typeof of the value.
-                dataType = typeof testedValue;
-                cell.classList.add("textcenter"); // Add the textcenter class to the cell.
-            }
-            //console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'. Data length is " + element[key].length)
-            //console.log("-");
-            counter = counter + 1; // Increment the counter.
-        }
-    }
-    hideLoaderDots('stats-loader'); // Hide the loader dots. See LoaderDots.js. 
-    //console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
-}
+// Other Functions.
 
 // Update the title above the stats table with the selected stats name.
 function updateStatsTitle(selectionText) {
@@ -501,6 +428,11 @@ function applyTitanTableFormatting(titanBoolean) {
         document.getElementById("stats-table").classList.remove("titan4thRow"); // Get the stats-table table by id and remove the titan4thRow class to the table.
     }
 }
+
+
+
+
+
 
 
 
