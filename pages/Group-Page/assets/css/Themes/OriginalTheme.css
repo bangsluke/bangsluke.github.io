@@ -17,6 +17,8 @@
 	--accent-color-3: #2B86C5;
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
+	--accent-color-shadow: #784BA0; /* Used in the Shadow DOMs. */
+	--accent-color-shadow-rgb: 255, 255, 255; /* Used in the Shadow DOMs. */
 	--snap-tabs-hue: 328deg;
 	--main-style-color-rgb: 255, 60, 172; /* Used for the snap tabs active a link tab. */
 }
@@ -285,7 +287,7 @@ snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-t
 /* Footer Styling */
 
 footer {
-    background-color: rgba(var(--accent-color-black-rgb), 0.5);
+    background-color: rgba(var(--accent-color-shadow-rgb), 0.1);
     color: var(--accent-color-white, white);
 }
 

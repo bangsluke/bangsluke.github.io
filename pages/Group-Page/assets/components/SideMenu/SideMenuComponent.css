@@ -36,17 +36,17 @@
 /* SideMenu is the full dark grey side menu that appears. */
 
 .sideMenu {
-	background: var(--accent-color-black, black);
+	background: var(--accent-color-shadow, black);
     height: 100%;
 	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
 	z-index: 3;
 	top: 0rem;
-	right: 0rem;
+	right: -0.1rem; /* Slightly position the side-menu off to the side to avoid seing the border. */
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 3.75rem;
-	/* border-left: solid 0.125rem var(--accent-color-1); */
+	border-left: solid 0.125rem var(--accent-color-1);
 	display: inline;
 }
 

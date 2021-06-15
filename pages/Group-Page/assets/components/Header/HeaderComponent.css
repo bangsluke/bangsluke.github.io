@@ -33,7 +33,7 @@
 /* For subpages. */
 
 .header-area.subpage {
-    background-color: var(--accent-color-black, darkgrey);
+    background-color: var(--accent-color-shadow, darkgrey); /* Note that CSS custom properties can get into the Shadow DOM from the outside (https://css-tricks.com/encapsulating-style-and-structure-with-shadow-dom/#css-custom-properties). */
 }
 
 /* Avatar classes for the main image. */

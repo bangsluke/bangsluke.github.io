@@ -118,26 +118,26 @@ sideMenuTemplate.innerHTML = `
 // Create a class for the element
 class sideMenu extends HTMLElement {
 
-  // Always call super first in constructor
-  constructor() {
-    super();
-  }
+    // Always call super first in constructor
+    constructor() {
+        super();
+    }
 
-  connectedCallback() {
+    connectedCallback() {
 
-    // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+        // Create a shadow root
+        const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    // Apply external styles to the shadow DOM
-    const styleSheet = document.createElement('link');
-    styleSheet.setAttribute('rel', 'stylesheet');
-    styleSheet.setAttribute('href', '/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css');
-    shadowRoot.appendChild(styleSheet);
+        // Apply external styles to the shadow DOM
+        const styleSheet = document.createElement('link');
+        styleSheet.setAttribute('rel', 'stylesheet');
+        styleSheet.setAttribute('href', '/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css');
+        shadowRoot.appendChild(styleSheet);
 
-    // Attach the created elements to the shadow DOM
-    shadowRoot.appendChild(sideMenuTemplate.content);
+        // Attach the created elements to the shadow DOM
+        shadowRoot.appendChild(sideMenuTemplate.content);
 
-  }
+    }
 
 }
 
@@ -150,36 +150,38 @@ customElements.define('side-menu-component', sideMenu);
 
 function openNav() {
 
-  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "15.6rem"; // Increase the width of the side-menu to make it visible.
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "15.6rem"; // Increase the width of the side-menu to make it visible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
 
-  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
-  var myEle = document.getElementsByTagName('header-component')[0];
-  if (myEle) {
-    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-    document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "none"; // Hide the burger icon.
-  } else {
-    //console.log("not doing anything");
-  }
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "none"; // Hide the burger icon.
+    } else {
+        //console.log("not doing anything");
+    }
 
-  // document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
+    // document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
 
 }
 
 function closeNav() {
 
-  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-  document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
 
-  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
-  var myEle = document.getElementsByTagName('header-component')[0];
-  if (myEle) {
-    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-    document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "inline"; // Show the burger icon.
-  } else {
-    //console.log("not doing anything");
-  }
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('burgericon').style.display = "inline"; // Show the burger icon.
+    } else {
+        //console.log("not doing anything");
+    }
 
-  // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
+    // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
 
 }
