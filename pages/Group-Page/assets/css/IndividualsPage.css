@@ -266,6 +266,12 @@
 	font-size: 0.4rem;
 }
 
+/* Offset the button slightly down. */
+#toggleResultsAndFixtures {
+	margin-top: 1rem;
+}
+
+
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* History Tab */
