@@ -29,7 +29,8 @@
 html {
 	/* background: var(--main-background-color, var(--accent-color-1)); */
 	/* background: orange; */
-	background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
+	/* background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
+	background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
 }
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
@@ -482,7 +483,7 @@ li:hover {
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Resizing the webpage for all devices. */
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
 
 /* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
 	240 pixels (old Android portrait mode)
@@ -502,44 +503,41 @@ li:hover {
 	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 		html {
-			/* background: blue; */
 			background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-			/* background-color: red; */
 		}
 	}
 	
-	@media only screen and (min-width: 480px) and (max-width: 1223px) {
-		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	@media only screen and (min-width: 480px) and (max-width: 768px) {
+		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 		html {
-			/* background: green; */
 			background-image: linear-gradient(225deg, green 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-			/* background-color: red; */
 		}
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 		/* Covers iPads and other tablets. */
 		html {
-			/* background: orange; */
 			background-image: linear-gradient(225deg, orange 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-			/* background-color: red; */
+		}
+	}
+
+	@media only screen and (min-width: 1024px) and (max-width: 1224px) {
+		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		html {
+			background-image: linear-gradient(225deg, cyan 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
 		}
 	}
 	
 	@media only screen and (min-width: 1224px) {
 		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 		html {
-			/* background: red; */
 			background-image: linear-gradient(225deg, red 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-			/* background-color: red; */
 		}
 	}
 	
 	@media only screen and (min-width: 1824px) {
 		/* Desktops and Laptops - For larger monitors and displays. */
 		html {
-			/* background: yellow; */
 			background-image: linear-gradient(225deg, yellow 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-			/* background-color: red; */
 		}
 	}

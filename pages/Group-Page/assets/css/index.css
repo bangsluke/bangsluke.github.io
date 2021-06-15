@@ -99,7 +99,9 @@ button {
   font-size: var(--font-size, 1rem);
 }
 
-/* Resizing the webpage for all devices. */
+/* Index Media Queries */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
 
 /* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
 	240 pixels (old Android portrait mode)
@@ -118,13 +120,15 @@ button {
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+    /* background: blue; */
     body {
       background-size: auto 100%;
     }
   }
   
-  @media only screen and (min-width: 480px) and (max-width: 1223px) {
-    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: green; */
     body {
       background-size: auto 100%;
     }
@@ -132,13 +136,23 @@ button {
   
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /* Covers iPads and other tablets. */
+    /* background: orange; */
     body {
       background-size: auto 100%;
     }
   }
   
+  @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+    body {
+      background-size: 100% auto;
+    }
+  }
+  
   @media only screen and (min-width: 1224px) {
     /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+    /* background: red; */
     body {
       background-size: 100% auto;
     }
@@ -146,6 +160,7 @@ button {
   
   @media only screen and (min-width: 1824px) {
     /* Desktops and Laptops - For larger monitors and displays. */
+    /* background: yellow; */
     body {
       background-size: 100% auto;
     }

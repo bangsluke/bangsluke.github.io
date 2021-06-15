@@ -59,7 +59,7 @@ html {
 	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 
-	/* DELETE IF MANJOR ISSUES */
+	/* DELETE IF MAJOR ISSUES */
 	block-size: 100%;
     inline-size: 100%
 }
@@ -605,6 +605,99 @@ tr:hover {
 		opacity: 1;
 	}
 }
+
+
+
+
+/* Main styling sheet media queries. */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* background: blue; */
+    :root {
+		--headerHeight: 2.8rem; /* Define the header height variable. */
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: green; */
+	:root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 95%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Covers iPads and other tablets. */
+	/* background: orange; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+	:root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	/* background: red; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+    /* Desktops and Laptops - For larger monitors and displays. */
+	/* background: yellow; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+
+
 
 /* Add a set up for media devices with preference for dark mode. */
 
