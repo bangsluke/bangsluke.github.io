@@ -52,29 +52,42 @@ function getPapaData(selectedURL) {
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data.
 function showProTable(results) {
     var data = results.data
+    toolTipBoolean = false; // Set the toolTipBoolean to be false.
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
-    clearTable(); // Call the clearTable function to empty the table.
-    createFullTable(data); // Call the createFullTable function, passing the data from PapaParse.
+    clearTable('#pro-team-table'); // Call the clearTable function to empty the table.
+    createFullTableProTeam(data, '#pro-team-table', toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.
 }
 
-// Create a table of data from the received data.
-// Back To The Basics: How To Generate a Table With JavaScript - https://www.valentinog.com/blog/html-table/
 
-function generateTableHead(table, data) {
-    //console.log("generateTableHead called.") // Log an initial message to show the function has been called.
-    let thead = table.createTHead(); // Create table headers.
-    let row = thead.insertRow(); // Insert a row for the table headers.
-    for (let key of data) { // Loop through each column header of the data.
-        let th = document.createElement("th"); // Create the th element.
-        let text = document.createTextNode(key); // Add the column header text.
-        th.appendChild(text); // Append the new data to the table.
-        row.appendChild(th); // Append the new data to the table.
+
+
+
+
+
+// Specific Pro Team table functions.
+
+// Create the table by passing the data to the function.
+function createFullTableProTeam(data, selector, toolTipBoolean) {
+    console.log('%c' + '>> Re-usable Function: createFullTable(array, selector, toolTipBoolean) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    console.log(data); // Log the passed data to the console.
+    let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
+    // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
+    if (toolTipBoolean == true) { // Define the header data as from the array.
+        //console.log("toolTipBoolean = " + toolTipBoolean + " therefore pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
+        var headerdata = data[0]; // Get the header data from the first element of the array.
+        //console.log("headerdata printed below:");
+        //console.log(headerdata);
+    } else { // Define the header data as the keys of the object.
+        var headerdata = Object.keys(data[0]); // Create an array of the object headers from the array data received.
     }
-    //console.log("generateTableHead finished.") // Log a final message to show the function is complete.
+    generateTableHead(table, headerdata, data, toolTipBoolean); // Call the generateTableHead function to create the table headers. Note that headerdata contains the headers only, array contains the full data.
+    generateTableProTeam(table, data, toolTipBoolean); // Call the generateTable function to populate the rest of the table data.
+    //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
 }
 
-function generateTable(table, data) {
+function generateTableProTeam(table, data) {
     //console.log("generateTable called.") // Log an initial message to show the function has been called.
     var proTeamRank = sessionStorage.getItem("proTeamRank"); // Retrieve the variable passed to session storage.
     var proTeamLeague = sessionStorage.getItem("proTeamLeague"); // Retrieve the variable passed to session storage.
@@ -115,26 +128,4 @@ function generateTable(table, data) {
         }
     }
     //console.log("generateTable finished.") // Log a final message to show the function is complete.
-}
-
-// Create the table by passing the data to the function.
-function createFullTable(array) {
-    //console.log("createFullTable called.") // Log an initial message to show the function has been called.
-    let table = document.querySelector("#pro-team-table"); // Select the parent element from which to build the table. Use the id "#pro-team-table".
-    let data = Object.keys(array[0]); // Create a data variable from the array data received.
-    generateTableHead(table, data); // Call the generateTableHead function to create the table headers.
-    generateTable(table, array); // Call the generateTable function to populate the rest of the table data.
-    //console.log("createFullTable finished.") // Log a final message to show the function is complete.
-}
-
-// Clear the table to make space for new data.
-function clearTable() {
-    //console.log("Clear Table called.") // Log an initial message to show the function has been called.
-    // https://stackoverflow.com/a/3955238/14290169
-    const myNode = document.querySelector("#pro-team-table"); // Select the parent from which to delete all child elements from. Use the id "#pro-team-table".
-    while (myNode.firstChild) { // Loop through all child elements.
-        myNode.removeChild(myNode.lastChild); // Remove each child element.
-    }
-    //console.log("Table Cleared.") // Log a final message to show the function is complete.
-    hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.  
 }
