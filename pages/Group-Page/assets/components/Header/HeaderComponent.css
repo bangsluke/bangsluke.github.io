@@ -157,9 +157,9 @@
 
 .burgericon-container {
     height: 2.7rem; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
     width: 2.7rem; /* Fallback if needed. */
-    width: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    width: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
     padding-right: 0.3rem;
 }
 
@@ -169,12 +169,11 @@
     top: 0rem;
     left: 0rem;
     height: 2.7rem; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
     width: auto;
     display: block;
     font-size: 2.5rem;
     cursor: pointer;
-    padding: 0.5rem;
     margin: 0rem;
     padding: 0rem;
     /* border-style: solid; */
@@ -231,11 +230,17 @@
     /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
     /* background: green; */
     .avatar {
-        height: 70px;
+        height: 3.2rem; /* Fallback if needed. */
+        height: calc(var(--headerHeight) - 0.8rem); /* Make the avatar just smaller than the header height. */
         margin: 0.3rem 0.7rem;
     }
     .subpage-header-text {
         font-size: 30px;
+    }
+    .burgericon {
+        height: 3.2rem; /* Fallback if needed. */
+        height: calc(var(--headerHeight) - 0.8rem); /* Make the burger icon just smaller than the header height. */
+        margin-top: 0.4rem;
     }
     .topMenu {
         display: none;
@@ -270,8 +275,8 @@
         font-size: 35px;
     }
     .topMenu {
-        display: none;
-        /* Hide the top menu for smaller screens. */
+        display: inline;
+        /* Show the top menu for larger screens. */
     }
 }
 
