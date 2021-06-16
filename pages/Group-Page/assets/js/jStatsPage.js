@@ -33,8 +33,9 @@ console.log("   The published spreadsheet is located at " + publicSpreadsheetUrl
 var InitialStatsTableName = "COD - Multiplayer Kills";
 // var InitialStatsTableName = "Brockham Badgers B's - Overall Stats";
 
-// Define a global toolTipBoolean. Change based on the table selected.
+// Define a global toolTipBoolean and titanBoolean. Change based on the table selected.
 var toolTipBoolean = true; // Set the toolTipBoolean to be true as default for the initial stats table.
+var titanBoolean = true; // Set the titanBoolean to be true as default for the initial stats table.
 
 // New Stats
 
@@ -202,7 +203,7 @@ function init() {
         }
 
         // Set the focus onto the next dropdown box.
-        document.getElementById("stats-filter").focus();
+        //document.getElementById("stats-filter").focus();
 
         // Get the selected stat catgeory and statistic and concatenate the names.
         // Category Selection.
@@ -290,9 +291,9 @@ function getInitiallyLoadedStatSelection(data) {
             var sourceText = data[x].Source;
             var titanBoolean = data[x].TitanBoolean;
             // Set the toolTipBoolean to be equal to the value saved in the data sheet stats config sheet.
-            if (data[x].TitanBoolean == "TRUE") { // Get the TRUE or FALSE value from the data sheet and process it to be the correct case sizing.
+            if (data[x].ToolTip == "TRUE") { // Get the TRUE or FALSE value from the data sheet and process it to be the correct case sizing.
                 toolTipBoolean = true; // Set the toolTipBoolean as true.
-            } else if (data[x].TitanBoolean == "FALSE") { // Deal with FALSE.
+            } else if (data[x].ToolTip == "FALSE") { // Deal with FALSE.
                 toolTipBoolean = false; // Set the toolTipBoolean as false.
             } else { // Deal with no value in the sheet.
                 toolTipBoolean = false; // Set the toolTipBoolean as false by default.
@@ -343,10 +344,19 @@ function getStatSelection(data) {
     for (let x = 0; x < data.length; x++) {
         //console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
         if (data[x].FullSelectionName == fullSelectionName) {
+            console.log(">> fullSelectionName passed = " + fullSelectionName + ", which is TableName = " + data[x].TableName);
             var selectedURL = data[x].URL;
             var lastUpdatedDate = data[x].LastUpdated;
             var sourceText = data[x].Source;
-            var titanBoolean = data[x].TitanBoolean;
+            titanBoolean = data[x].TitanBoolean;
+            // Set the toolTipBoolean to be equal to the value saved in the data sheet stats config sheet.
+            if (data[x].ToolTip == "TRUE") { // Get the TRUE or FALSE value from the data sheet and process it to be the correct case sizing.
+                toolTipBoolean = true; // Set the toolTipBoolean as true.
+            } else if (data[x].ToolTip == "FALSE") { // Deal with FALSE.
+                toolTipBoolean = false; // Set the toolTipBoolean as false.
+            } else { // Deal with no value in the sheet.
+                toolTipBoolean = false; // Set the toolTipBoolean as false by default.
+            }
             //console.log("   Table name selected is " + data[x].TableName + " and Selected URL is: " + selectedURL);
         }
     }
@@ -388,13 +398,16 @@ function showSelectedInfo(results) {
     
     console.log("========================================")
     console.log(dataArray);
+    console.log("toolTipBoolean = " + toolTipBoolean)
+    console.log("titanBoolean = " + titanBoolean)
     
     //alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed. 
     //console.log(data); // Log the data in the console.
     //var filterHeader = "Name";
     //var filterValue = "Bangs";
     //data = filterData(data, filterHeader, filterValue);
-    createFullTable(dataArray, "#stats-table", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(dataArray, "#stats-table", toolTipBoolean, "array"); // Call the createFullTable function, passing the data from PapaParse.
+    applyTitanTableFormatting('stats-table', titanBoolean, toolTipBoolean); // Add a border below the 4th person if the table is flagged as a Titan table.
     hideLoaderDots('stats-loader'); // Hide the loader dots. See LoaderDots.js.
     //populateFilterHeaderDropDown(dataArray) // Call the populateFilterHeaderDropDown function to populate the dropdown list for the Filter Header dropdown.
 }

@@ -79,18 +79,23 @@ function clearTable(selector) {
 }
 
 // Create the table by passing the data to the function.
-function createFullTable(data, selector, toolTipBoolean) {
-    console.log('%c' + '>> Re-usable Function: createFullTable(array, selector, toolTipBoolean) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+function createFullTable(data, selector, toolTipBoolean, dataForm) {
+    console.log('%c' + '>> Re-usable Function: createFullTable(data, selector, toolTipBoolean, dataForm) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean + ', dataForm = ' + dataForm, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     console.log(data); // Log the passed data to the console.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
-    if (toolTipBoolean == true) { // Define the header data as from the array.
-        //console.log("toolTipBoolean = " + toolTipBoolean + " therefore pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
+    if (dataForm == "array") { // Define the header data as from the array.
+        console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
         var headerdata = data[0]; // Get the header data from the first element of the array.
-        //console.log("headerdata printed below:");
-        //console.log(headerdata);
-    } else { // Define the header data as the keys of the object.
+        console.log("headerdata printed below:");
+        console.log(headerdata);
+    } else if (dataForm == "object") { // Define the header data as the keys of the object.
+        console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
         var headerdata = Object.keys(data[0]); // Create an array of the object headers from the array data received.
+        console.log("headerdata printed below:");
+        console.log(headerdata);
+    } else {
+        alert("Error - No dataForm passed to 'createFullTable' in jMainFunctions.js.");
     }
     generateTableHead(table, headerdata, data, toolTipBoolean); // Call the generateTableHead function to create the table headers. Note that headerdata contains the headers only, array contains the full data.
     generateTable(table, data, toolTipBoolean); // Call the generateTable function to populate the rest of the table data.
@@ -148,52 +153,72 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 function generateTable(table, data, toolTipBoolean) {
     console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     console.log(data); // Log the passed array to the console.
-    var rowCounter = 0; // Define a counter for checking which row to work with.
+    var rowCounter = 1; // Define a counter for checking which row to work with.
     var columnCounter;
     var testedValue;
-    var dataType;
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
+    
+    // console.log("--------------------------------------")
+    // console.log("Generate Table Data Start")
+    // console.log("Starting Row Counter = " + rowCounter);
+    // console.log("toolTipBoolean = " + toolTipBoolean);
+
     for (let element of data) { // Loop through each row of the data.
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
         columnCounter = 0; // Define a counter for checking which column to apply stick-col rule to.
-        
-        console.log("toolTipBoolean = " + toolTipBoolean);
 
-        if (toolTipBoolean == true && rowCounter <= 1) { // Define how to add the text depending on if toolTips are enabled for the table.
-            // Skip doing the first two rows for tables that have tooltips.
-            console.log("toolTipBoolean is true so skipping row = " + rowCounter + ".");
+        // console.log("-------------------------------------")
+        // console.log("Row data = below")
+        // console.log(element)
+
+        if (rowCounter <= 1) { // Skip the first row regardless.
+
+            // Do nothing.
+            // console.log("Row count " + rowCounter + " skipped as this is the table headers.")
 
         } else {
 
-            for (key in element) { // Loop through each cell in each row.
-                let cell = row.insertCell(); // Create the cell.
-                let text = document.createTextNode(element[key]); // Add the cell text.
-                cell.appendChild(text); // Append the text to the cell.
-    
-                // Loop through the columns to apply styling.
-                if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
-                    cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
-                    cell.classList.add("first-col"); // Add the first-col class to the first column.
-                } else {
-                    // Do nothing as not first column.
+            if (toolTipBoolean == true && rowCounter == 2) {
+            //if (toolTipBoolean == true && rowCounter <= 1) { // Define how to add the text depending on if toolTips are enabled for the table.
+                // Skip doing the first two rows for tables that have tooltips.
+                // console.log("toolTipBoolean is true so skipping row = " + rowCounter + ".");
+
+            } else {
+
+                // console.log("toolTipBoolean is false so not skipping row = " + rowCounter + ".");
+
+                for (key in element) { // Loop through each cell in each row.
+                    let cell = row.insertCell(); // Create the cell.
+                    let text = document.createTextNode(element[key]); // Add the cell text.
+                    cell.appendChild(text); // Append the text to the cell.
+        
+                    // Loop through the columns to apply styling.
+                    if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
+                        cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
+                        cell.classList.add("first-col"); // Add the first-col class to the first column.
+                    } else {
+                        // Do nothing as not first column.
+                    }
+        
+                    // Get the data type of the value being added to the cell.
+                    //console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
+                    testedValue = parseInt(element[key]); // First, parseInt the value.
+                    if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
+                        dataType = "string";
+                        cell.classList.add("textleft"); // Add the textleft class to the cell.
+                    } else { // If not NaN, get the typeof of the value.
+                        dataType = typeof testedValue;
+                        cell.classList.add("textcenter"); // Add the textcenter class to the cell.
+                    }
+                    //console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
+                    //console.log("-");
+        
+                    columnCounter = columnCounter + 1; // Increment the columnCounter.
                 }
-    
-                // Get the data type of the value being added to the cell.
-                //console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
-                testedValue = parseInt(element[key]); // First, parseInt the value.
-                if (isNaN(testedValue) == true) { // If the parseInt returns "NaN", it's a string.
-                    dataType = "string";
-                    cell.classList.add("textleft"); // Add the textleft class to the cell.
-                } else { // If not NaN, get the typeof of the value.
-                    dataType = typeof testedValue;
-                    cell.classList.add("textcenter"); // Add the textcenter class to the cell.
-                }
-                //console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
-                //console.log("-");
-    
-                columnCounter = columnCounter + 1; // Increment the columnCounter.
             }
+
         }
+
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
     //console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
@@ -202,18 +227,18 @@ function generateTable(table, data, toolTipBoolean) {
 // Add a border below the 4th person if the table is flagged as a Titan table.
 function applyTitanTableFormatting(tableID, titanBoolean, toolTipBoolean) {
     console.log('%c' + '>> Re-usable Function: applyTitanTableFormatting(tableID, titanBoolean, toolTipBoolean) called. Passed variables: tableID = ' + tableID + ', titanBoolean = ' + titanBoolean + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightcyan; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
-    if (titanBoolean == "TRUE") { // Check that the titanBoolean is true.
+    if (titanBoolean == "TRUE" || titanBoolean == true) { // Check that the titanBoolean is true.
         //console.log("Adding titan4thRow class to the table as titanBoolean is " + titanBoolean);
-        if (toolTipBoolean == true) { // Tool tip is required so add the special titan4thRowToolTip class that deals with the tool tip.
-            document.getElementById(tableID).classList.remove("titan4thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
-            document.getElementById(tableID).classList.add("titan4thRowToolTip"); // Get the titans-table table by id and add the titan4thRowToolTip class to the table.
+        if (toolTipBoolean == true) { // Tool tip is required so add the special titan5thRow or titan6thRow class that deals with the tool tip.
+            document.getElementById(tableID).classList.remove("titan5thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
+            document.getElementById(tableID).classList.add("titan6thRow"); // Get the titans-table table by id and add the titan6thRow class to the table.
         } else { // Tool tip isn't required so add the normal titan4thRow class.
-            document.getElementById(tableID).classList.remove("titan4thRowToolTip"); // Remove the titans-table table by id and add the titan4thRow class to the table.
-            document.getElementById(tableID).classList.add("titan4thRow"); // Get the titans-table table by id and add the titan4thRow class to the table.
+            document.getElementById(tableID).classList.remove("titan6thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
+            document.getElementById(tableID).classList.add("titan5thRow"); // Get the titans-table table by id and add the titan4thRow class to the table.
         }
     } else { // For all non Titan tables, remove the Titan table classes.
-        document.getElementById(tableID).classList.remove("titan4thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
-        document.getElementById(tableID).classList.remove("titan4thRowToolTip"); // Remove the titans-table table by id and add the titan4thRow class to the table.
+        document.getElementById(tableID).classList.remove("titan5thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
+        document.getElementById(tableID).classList.remove("titan6thRow"); // Remove the titans-table table by id and add the titan4thRow class to the table.
     }
 }
 

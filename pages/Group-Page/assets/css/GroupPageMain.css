@@ -546,13 +546,19 @@ tr:hover {
 }
 
 /* Add 4th row underline for Titan status. */
-.titan4thRow tr:nth-child(4){
+/* .titan4thRow tr:nth-child(4){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	/* font-size: inherit;
+}*/
+
+/* Add 5th row underline for Titan status. */
+.titan5thRow tr:nth-child(5){
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-size: inherit;
 }
 
 /* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
-.titan4thRowToolTip tr:nth-child(6){
+.titan6thRow tr:nth-child(6){
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-size: inherit;
 }

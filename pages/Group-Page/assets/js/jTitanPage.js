@@ -169,7 +169,7 @@ function showSelectedInfo1(results) {
     //console.log(dataArray); // Log the data in the console.
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("table"); // Call the clearTable function to empty the table.
-    createFullTable(dataArray, "table", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(dataArray, "table", toolTipBoolean, "array"); // Call the createFullTable function, passing the data from PapaParse.
     hideLoaderDots('titan-loader'); // Hide the loader dots. See LoaderDots.js.
     showDateAndSourceArea(); // Show the date and source area which is initially hidden.
 }
@@ -236,7 +236,7 @@ function showSelectedInfo2(results) {
     //console.log(dataObject); // Log the data in the console.
     // Call the clearTable and createFullTable functions, passing the id "titanFactorCalculatedTable" selector on which element to act on.
     clearTable("#titanFactorCalculatedTable"); // Call the clearTable function to empty the table.
-    createFullTable(dataObject, "#titanFactorCalculatedTable", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(dataObject, "#titanFactorCalculatedTable", toolTipBoolean, "object"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
 
@@ -288,7 +288,7 @@ function showSelectedInfo3(results) {
     //console.log(dataObject); // Log the data in the console.
     // Call the clearTable and createFullTable functions, passing the id "titanFactorExplainedTable" selector on which element to act on.
     clearTable("#titanFactorExplainedTable"); // Call the clearTable function to empty the table.
-    createFullTable(dataArray, "#titanFactorExplainedTable", toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(dataArray, "#titanFactorExplainedTable", toolTipBoolean, "array"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
 
