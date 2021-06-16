@@ -281,7 +281,6 @@ td {
 	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
 }
 
-
 /* Tooltip Styling - used in tables. https://www.w3schools.com/css/css_tooltip.asp. */
 
 /* Example HTML 
@@ -490,6 +489,13 @@ table {
 	border: none;
 	border-collapse: collapse;
 	border-radius: var(--border-radius, 0.2rem);
+	/* For interior borders, look at the td class. */
+}
+
+.table-column-lines {
+	/* Add table borders. */
+	border-right-style: solid;
+	border-width: 0.1rem;
 }
 
 /* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */

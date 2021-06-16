@@ -98,6 +98,11 @@ th {
 	box-shadow: inset 0rem 0rem 0rem red, inset 0rem -0.25rem 0rem var(--accent-color-3, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 }
 
+.table-column-lines {
+	/* Add table borders. */
+	border-right-color: var(--accent-color-1,white);
+}
+
 tr:hover {
 	background-color: var(--accent-color-1, pink);
 	color: var(--accent-color-white, white);
