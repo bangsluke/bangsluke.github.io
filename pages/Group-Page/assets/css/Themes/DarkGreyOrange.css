@@ -30,8 +30,6 @@
 
 /* HTML updates to cover the full webpage. */
 html {
-	/* background: var(--main-background-color, var(--accent-color-1)); */
-	/* background: orange; */
 	/* background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
 	background-color: var(--main-background-color, black);
 	background-image: linear-gradient(225deg, var(--main-background-color, black) 0%, var(--secondary-background-colour, black) 100%);
@@ -39,7 +37,6 @@ html {
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
-	/* background-color: aqua; */
 	background: rgba(0, 0, 0, 0.90);
 	background-color: rgba(var(--page-section-color-rgba), 0.9);
 }
@@ -94,12 +91,11 @@ table {
 th {
 	background-color: rgba( 255, 255, 255, 0.10);
 	background-color: var(--accent-color-2,red);
-	/*border-bottom: 0.25rem solid var(--accent-color-1, red); /* Add a nice border below the header row */
 	box-shadow: inset 0rem 0rem 0rem red, inset 0rem -0.25rem 0rem var(--accent-color-3, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 }
 
+/* Add table borders. */
 .table-column-lines {
-	/* Add table borders. */
 	border-right-color: var(--accent-color-1,white);
 }
 
@@ -142,86 +138,6 @@ tr:hover {
 .tooltip .tooltiptext::after {
     border-color: transparent transparent var(--secondary-background-colour, black) transparent; /* This will make the top border black */
 }
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Header Styling */
-
-/* Note, because the header is done using a shadow DOM, only one stylesheet can be applied to it at a time.
-As a solution, have a generic header styling across all themes. */
-
-/* .header-area {
-    border-bottom: solid 0.125rem var(--accent-color-white, white);
-} */
-
-/* For subpages. */
-
-/* .header-area.subpage {
-    background-color: var(--accent-color-2);
-} */
-
-/* Avatar classes for the main image. */
-/* .avatar {
-    background-color: rgba(255, 255, 255, 0.075);
-    border: solid 0.06rem var(--accent-color-white, white);
-} */
-
-/* Main subpage header text class. */
-
-/* .subpage-header-text {
-    color: var(--accent-color-white, white);
-} */
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Top Menu styling. */
-
-/* Note, because the top menu is done using a shadow DOM, only one stylesheet can be applied to it at a time.
-As a solution, have a generic top menu styling across all themes. */
-
-/* The top menu bar which conatins all further containers. */
-/* .topMenu {
-    background: var(--accent-color-black, black);
-    border-left: solid 0.06rem var(--accent-color-1);
-} */
-
-/* .topMenu a {
-    color: var(--accent-color-white, white);
-} */
-
-/* .topMenu a:hover {
-    color: var(--accent-color-2);
-} */
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Side Menu CSS */
-
-/* Note, because the side menu is done using a shadow DOM, only one stylesheet can be applied to it at a time.
-As a solution, have a generic side menu styling across all themes. */
-
-/* .burgericon {
-    color: var(--accent-color-white, white);
-    filter: invert(1) hue-rotate(180deg);
-} */
-
-/* .burgericon:hover {
-    color: var(--accent-color-2);
-} */
-
-/* .sideMenu {
-	background: var(--accent-color-black, black);
-} */
-
-/* .sideMenu a {
-	color: var(--accent-color-white, white);
-} */
-
-/* .main-menu a:hover {
-	color: var(--accent-color-2);
-	background: var(--accent-color-white, white);
-} */
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
