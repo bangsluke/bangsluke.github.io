@@ -143,6 +143,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
         } else {
             // Do nothing as not first column.
         }
+        th.classList.add("textleft"); // Add the textleft class to all column headers.
         row.appendChild(th); // Append the new table header to the table.
         counter = counter + 1; // Increment the counter.
     }
