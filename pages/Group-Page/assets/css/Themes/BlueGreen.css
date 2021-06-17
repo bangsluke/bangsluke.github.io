@@ -337,7 +337,7 @@ input:focus + .slider {
 
 /* On hover, add a black background color with a little bit see-through */
 .button-div:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(var(--accent-color-shadow-rgb), 0.2);
 }
 
 /* Caption text */
