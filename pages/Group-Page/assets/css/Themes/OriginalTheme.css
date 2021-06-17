@@ -108,7 +108,7 @@ tr:hover {
 }
 
 /* Column highlighting. */
-td:hover::after, th:hover::after {
+.column-highlight td:hover::after, th:hover::after {
 	background-color: var(--accent-color-1, pink); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--accent-color-1-rgb), 0.3); /* Same colour with opacity. */
 	color: var(--accent-color-white, white);
