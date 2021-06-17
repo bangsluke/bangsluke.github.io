@@ -162,7 +162,7 @@ function showSlides(n) {
     }
     document.getElementById("numbertext").innerHTML = n + "/" + albumSize; // Update the image number text. Modify the text inside the element.
     var img = new Image(); // Get the image height and width from making a new image. https://stackoverflow.com/a/5633302/14290169.
-    img.src = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
+    img.src = "/pages/Group-Page/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
     var width = img.width // Getting the width.
     var height = img.height // Getting the height.
     console.log("image width is " + width + "and height is = " + height); // Log the images height and width.
@@ -187,6 +187,6 @@ function showSlides(n) {
     }
     var slides = document.getElementsByClassName("mySlides"); // Get all images with class "mySlides".
     slides[0].style.display = "block"; // Load the selected image.
-    var sourcePath = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Define the source path used for both images.
+    var sourcePath = "/pages/Group-Page/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Define the source path used for both images.
     document.getElementById("modalimage").src = sourcePath; // Set the source of the modal image dynamically.
 }
