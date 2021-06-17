@@ -295,7 +295,6 @@ p.tooltiptext {
 	text-align: left;
 }
 
-
 /* Used for quotes mainly on individuals page. */
 q {
 	font-style: italic; /* Make the text italic. */
@@ -430,6 +429,7 @@ table {
 	border-radius: var(--border-radius, 0.2rem);
 	/*overflow: hidden; /* Required for column highlighting. */
 	/* For interior borders, look at the td class. */
+	overflow: scroll;
 }
 
 /* Cell highlighting. */
