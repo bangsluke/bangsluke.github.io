@@ -450,7 +450,8 @@ td, th {
 	position: relative;
 }
 
-td:hover::after, th:hover::after {
+/* Column highlighting. Only on tables with class "column-highlight". */
+.column-highlight td:hover::after, th:hover::after {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: "";
 	position: absolute;
