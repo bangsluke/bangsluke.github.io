@@ -12,7 +12,6 @@ html, body {
 /* Style the main content area on the home page. */
 
 .homepage-content-area {
-	/* background-color: blue; */
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	min-height: 20rem;
 	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
@@ -57,7 +56,6 @@ html, body {
 
 /* The sub header container around "CLICK TO ENTER". */
 .subheadercontainer {
-	/* background-color: red; */
 	padding: 0rem; /* Clear all padding on the image. */
 	margin: 0rem auto 1rem auto; /* Set up margins on the text container. */
 	width: 12rem; /* Set the width of the sub header box. */
@@ -72,7 +70,6 @@ html, body {
 
 /* Ticker container */
 .ticker-wrap {
-	/* background-color: red; */
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: fixed; /* Lock the position of the ticker container box. */
 	top: 0rem; /* Set the top position of the ticker container box from the top of the screen. */
@@ -89,7 +86,6 @@ html, body {
 	--ticker-animation-duration: 10s; /* Set up the animation duration. */
 	display: inline-block; /* Update the display of the elements. */
 	height: 2rem; /* Define the height of the elements. */
-	/* line-height: 1rem; /* Define the text line height of the elements. */
 	white-space: nowrap; /* Remove all white space between text. */
 	padding-right: 100%; /* Intially offset the text off to the right out of the screen. */
 	box-sizing: content-box; /* Add box-sizing control. */
@@ -107,7 +103,6 @@ html, body {
 .ticker-wrap .ticker-item {
 	display: inline-block; /* Update the display of the elements. */
 	padding: 0.5rem 5rem; /* Add padding within the ticker wrap and between ticker items. */
-	/* font-size: 1rem; /* Define the font size of the ticker. */
 	color: white; /* Define the font colour of the ticker. */
 	font-style: italic;
 }

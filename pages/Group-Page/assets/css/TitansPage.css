@@ -22,7 +22,6 @@
 /* Add a class to hold the buttons at the bottom of the Titans page. */
 
 .additional-titan-detail-area {
-	/* background-color: blue; */
 	width: 100%;
 	display: flex;
 	flex-direction: row;

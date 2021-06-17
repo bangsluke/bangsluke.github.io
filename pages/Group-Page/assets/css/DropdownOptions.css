@@ -5,29 +5,20 @@
 /* New dropdown styling. */
 
 form {
-	/* background-color: aqua; */
-	/* position: relative; */
 	width: 80%;
 	height: 1rem;
-	/* margin-top: 8vh; */
 }
 
 .chosen-value, .value-list {
   position: absolute;
-  /* top: 0rem; */
-  /* left: 0rem; */
   width: 80%;
   height: 2rem;
   margin: auto;
 }
 
 .chosen-value {
-	/* font-family: 'Ek Mukta'; */
 	text-transform: uppercase;
 	font-weight: 200;
-	/* letter-spacing: 0.25rem; */
-	/* height: 4rem; */
-	/* font-size: 1.1rem; */
 	padding: 0.4rem;
 	background-color: #FAFCFD;
 	background-color: #ffffff;
@@ -40,8 +31,6 @@ form {
 }
 	
 .chosen-value:hover {
-	/* background-color: #FF908B; */
-	/* background-color: blue; */
 	background-color: #ffffff;
 	cursor: pointer;
 }
@@ -53,7 +42,6 @@ form {
 .chosen-value:focus, .open {
 	box-shadow: 0rem 0.3125rem 0.5rem 0.5rem rgba(0,0,0,0.2);
 	outline: 0;
-	/* background-color: #FF908B; */
 	background-color: #ffffff;
 	color: #000;
 }
@@ -64,7 +52,6 @@ form {
   
 .value-list {
 	list-style: none;
-	/* margin-top: 4rem; */
 	margin-top: 2rem;
 	box-shadow: 0rem 0.3125rem 0.5rem 0rem rgba(0,0,0,0.2);
 	overflow: hidden;

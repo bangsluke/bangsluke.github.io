@@ -17,7 +17,6 @@
 
 /* The switch - the box around the slider */
 .switch {
-    /* background-color: aqua; */
     position: relative;
     display: inline-block;
     width: 3.75rem;
@@ -83,7 +82,6 @@ input:checked + .slider:before {
 }
 
 #peaModeToggleHeader {
-    /* background-color: aquamarine; */
     padding: 0rem;
     margin: 0rem;
     align-self: center;
@@ -94,7 +92,6 @@ input:checked + .slider:before {
 /* Album cover styling. */
 
 .album-covers-container {
-    /* background-color: burlywood; */
     height: max-content;
     width: 100%;
     margin: auto;
@@ -103,12 +100,9 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    /* overflow: auto; */
 }
 
 .gallery-cover-container {
-    /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-    /* background-color: purple; */
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
     margin: 0.3rem;
@@ -127,12 +121,9 @@ input:checked + .slider:before {
 }
 
 .gallery-cover-image {
-    /* background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%); */
-    /* background-color: red; */
     height: var(--gallery-image-height);
     width: var(--gallery-image-height);
     object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
-    /* margin: auto; */
     position: absolute; /* By making this position absolute (and having its parent as relative), we're defining this item to have position absolute in relation to its parent. */
     top: 0rem;
     left: 0rem;

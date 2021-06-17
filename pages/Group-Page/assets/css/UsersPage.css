@@ -7,12 +7,10 @@
 /* The main container for each user, holding the image, name and aliases text.  */
 .glass-card {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	/* width: 90%; */
 	width: var(--pagewidth, 90%);
 	height: max-content;
 	padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Space the content inside the glass card. */
 	margin: 1rem 0rem 1rem 0rem; /* Add vertical spacing between the glass cards */	
-	/* box-shadow: 0rem 0.5rem 2rem 0rem rgba( 31, 38, 135, 0.37 ); */
 	backdrop-filter: blur( 0.75rem );
 	-webkit-backdrop-filter: blur( 0.75rem );
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
@@ -20,11 +18,9 @@
 
 /* A secondary smaller flex container that sits in the glass-card and allows the users image/text order to be reversed. */
 .user-container {
-	/* background-color: aqua; */
 	margin: 0rem; /* Remove all margin. */
 	padding: 0rem; /* Remove all padding. */
 	width: 100%;
-	/* height: var(--user-image-height); */
 	height: var(--user-card-height, 8rem); /* Make the container larger to increase the size of each user card to hold all content. */
 	display: flex;
 	flex-direction: row;
@@ -41,7 +37,6 @@
 
 /* The div holding the users image. */
 .user-image-container {
-	/* background-color: blueviolet; */
 	justify-content: center;
 	align-content: center;
 	height: var(--user-card-height, 8rem);
@@ -68,14 +63,12 @@
 
 /* The div holding all text about the user. */
 .user-text-container {
-	/* background-color: burlywood; */
 	height: 100%;
 	width: 60%;
 }
 
 /* The div holding the users name. */
 .user-name {
-	/* background-color: green; */
 	height: var(--user-name-height);
 	margin-bottom: 0.3rem;
 }
@@ -86,11 +79,8 @@ h3 {
 
 .alias-container {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	/* background-color: red; */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
-	/* height: calc(var(--user-image-height) - var(--user-name-height) - 0.3rem); /* Old height. */
 	height: calc(var(--user-card-height) - var(--user-name-height) - 0.3rem);
-	/*overflow-y: scroll; /* Alows vertical scroll */
 	overflow-x: none;
 	text-overflow: clip; /* Stops the text overrunning the size of the box */
 	padding: 0.1rem 0.5rem 0.5rem;

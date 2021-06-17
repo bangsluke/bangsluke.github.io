@@ -8,10 +8,6 @@
 	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
 */
 
-/* Import the Open Sans font or another font from Google fonts.
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
- */
-
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
 	
@@ -44,7 +40,6 @@
 
 /* HTML updates to cover the full webpage. */
 html {
-	/* background: orange; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
@@ -88,48 +83,29 @@ body {
 	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
 	max-width: 100%;
 	overflow-x: hidden;
-	/* overflow-y: hidden; */
 	position: relative;
-	/* display: block; */
 }
-
-/* Completely disable all vertical scrolling across all pages. https://stackoverflow.com/questions/28411499/disable-scrolling-on-body */
-/* html, body {
-	margin: 0rem; 
-	height: 100%;
-	overflow: hidden;
-} */
 
 /* Main content styling. */
 .main-content-area {
-	/* background: lightblue; */
 	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
 	top: 0rem;
 	left: 0rem;
 	width: 100%;
-	
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
 	min-height: -o-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Opera */
 	min-height: -webkit-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Google, Safari */
 	min-height: -moz-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Firefox */
-	
 	height: max-content;
 	transition: margin-left .5s;
 	padding: 0.3125rem; /* Add all round padding to content to slightly center it. */
-	
-	/* overflow: scroll; */
-	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
-	/* scroll-behavior: smooth;
-	overflow: auto; */
 	overflow-x: hidden;
-	/* overflow-y: hidden; */
 	max-width: 100%;
 }
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
-	/* background-color: aqua; */
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	backdrop-filter: blur( 0.75rem );
 	-webkit-backdrop-filter: blur( 0.75rem );
@@ -138,10 +114,6 @@ body {
 	margin: 1rem auto 1rem auto; /* Add a margin above and below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
-	/* border: 0.06rem solid rgba( 255, 255, 255, 0.18 ); */
-	/* overflow: auto; */
-	/* overflow-y: scroll; /* Allows user to scroll in y within the container. https://css-tricks.com/almanac/properties/s/scroll-behavior/ */
-	/* scroll-behavior: smooth; */
 }
 
 /* Added bottom margin for some page sections on individuals page. */
@@ -175,7 +147,6 @@ h1 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 2rem; /* Relative to root value. */
   	text-transform: uppercase;
-  	/* margin-bottom: 1rem; */ /* h1 doesn't need a margin-bottom as no other text is ever below it. */
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
 }
 
@@ -240,17 +211,6 @@ a {
 	cursor: pointer;
 }
 
-/* https://www.pixelstech.net/article/1546593722-7-Incredibly-Useful-CSS-Tricks-for-Responsive-Web-Design */
-/* a[target="_blank"]:before, a[target="new"]:before {
-	margin: 0rem 0.3125rem 0rem 0rem;
-	padding: 0.06rem;
-	outline: 0.06rem solid #333;
-	color: #333;
-	background: #ff9;
-	font: 0.75rem “Zapf Dingbats”;
-	content: “\279C”;
-} */
-
 /* Used for table headers across the site. */
 th {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
@@ -283,11 +243,6 @@ td {
 
 /* Tooltip Styling - used in tables. https://www.w3schools.com/css/css_tooltip.asp. */
 
-/* Example HTML 
-<div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span>
-</div> */
-
 /* Tooltip container */
 .tooltip {
 	text-decoration: underline; /* Add dots under the hoverable text. */
@@ -309,9 +264,7 @@ td {
 	position: absolute;
 	z-index: 1;
  	top: 100%;
-  	/* left: 50%; */
 	left: 0rem;
-  	/*margin-left: -7.5rem; /* Use half of the width (15/2 = 7.5), to center the tooltip */
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -332,7 +285,6 @@ td {
 }
 
 p.tooltiptext {
-	/* color: red !important; */
 	font-size: 12.8px; /* Fallback value. */
 	font-size: 0.8rem; /* Relative to root value. */
 	text-transform: none;
@@ -440,8 +392,7 @@ label {
 }
 
 .wordwrap {
-	/* Wrap long text and urls */
-	/* https://www.dotnettricks.com/learn/stylesheet/css-to-force-long-text-and-urls-to-wrap-on-all-browser */
+	/* Wrap long text and urls - (https://www.dotnettricks.com/learn/stylesheet/css-to-force-long-text-and-urls-to-wrap-on-all-browser) */
 	white-space: pre; /* CSS 2.0 */
 	white-space: pre-wrap; /* CSS 2.1 */
 	white-space: pre-line; /* CSS 3.0 */
@@ -464,22 +415,6 @@ label {
 	pointer-events: none; /* Disable any actions from the user clicking on the deactivated component. */
 }
 
-/* fieldset is archived code on the Events.html page. */
-
-/* fieldset {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	border: 0.06rem solid var(--accent-color-white);
-	padding: 0.5rem;
-} */
-
-/* .fieldset-row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-} */
-
 /* Table classes */
 
 table {
@@ -491,6 +426,17 @@ table {
 	border-radius: var(--border-radius, 0.2rem);
 	/* For interior borders, look at the td class. */
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .table-column-lines {
 	/* Add table borders. */
@@ -525,8 +471,6 @@ tr:hover {
 .table-wrapper {
 	position: relative;
 	overflow: auto;
-	/* overflow-x: scroll; */
-	/* border: 0.06rem solid white; */
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
@@ -539,9 +483,6 @@ tr:hover {
 }
 
 .first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
-	/* width: 6.25rem;
-	min-width: 6.25rem;
-	max-width: 6.25rem; */
 	width: max-content;
 	left: 0rem;
 }
@@ -570,39 +511,21 @@ tr:hover {
 }
 
 /* Add a hidden class for hiding components that are not yet ready. */
-
 .hidden {
 	display: none !important;
 }
 
 /* Add a class to stop scrolling in certain divs. */
-
 .noscroll {
 	overflow: hidden;
 }
 
 /* Add a area class for the Stats and Titan pages. */
-
 .date-and-source-area {
 	margin-top: 1rem; /* Add space from the table down to the last updated text. */
 }
 
-/* Footer Styling */
-
-/* footer {
-	bottom: 0rem;
-} */
-
-/* CSS Tips and Tricks. */
-
-/* Change the background colour of when a user highlights text to orange. */
-
-/* h1::selection {
-    background: var(--accent-color-pink, #F575FF);
-} */
-
 /* Add an id for fading in an item over two seconds. */
-
 .fadein {
 	animation: fadein 2s ease forwards;
 }
@@ -617,9 +540,6 @@ tr:hover {
 		opacity: 1;
 	}
 }
-
-
-
 
 /* Main styling sheet media queries. */
 

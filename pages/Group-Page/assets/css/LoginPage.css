@@ -20,23 +20,16 @@ h1 {
 }
 
 .center-container {
-    /* background-color: lavender; */
     display: flex;
     flex-direction: row;
 }
 
-.left-text-container {
-    /* background-color: lawngreen; */
-}
-
 .usertext-container {
-    /* background-color: orange; */
     width: 100%;
     height: 1.875rem;
 }
 
 .passwordtext-container {
-    /* background-color: blue; */
     width: 100%;
     height: 1.875rem;
 }
@@ -45,16 +38,11 @@ h1 {
     text-align: right;
 }
 
-.right-item-container {
-    /* background-color: lightpink; */
-}
-
 .left-align {
     text-align: left;
 }
 
 .userdropdown-container {
-    /* background-color: green; */
     width: 100%;
     height: 1.875rem;
 }
@@ -64,7 +52,6 @@ h1 {
 }
 
 .passwordbox-container {
-    /* background-color: magenta; */
     width: 100%;
     height: 1.875rem;
 }

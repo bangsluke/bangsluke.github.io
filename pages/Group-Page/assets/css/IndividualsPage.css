@@ -41,7 +41,6 @@
 }
 
 /* individuals table icon styling. */
-
 .individualsPageIcon {
 	width: 1.25rem;
 	height: auto;
@@ -53,13 +52,11 @@
 .iconColumn {
 	width: 15%;
 	text-align: center;
-	/* background-color: var(--accent-color-3, blue); */
 }
 
 .itemColumn {
 	width: 30%;
 	font: bold;
-	/* background-color: var(--accent-color-3, blue); */
 }
 
 .infoColumn {
@@ -69,7 +66,6 @@
 .reporting-link:hover {
 	color: var(--accent-color-white, white);
 }
-
 
 /* ------------------------------------------------------------------------------------------------------- */
 
@@ -132,7 +128,6 @@
 } */
 
 .premierLeague-highlight-row {
-	/* background-color: red; */
 	background-color: var(--proTeam-text-color, #37003d);
 	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
@@ -163,7 +158,6 @@
 } */
 
 .championship-highlight-row {
-	/* background-color: red; */
 	background-color: var(--championship-text-color, #2346A0);
 	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
@@ -185,7 +179,6 @@
 
 /* Add a header container section to hold the logo and title. */
 .dorkiniansHeaderContainer {
-	/* background-color: blue; */
 	display: grid;
 	grid-column-gap: 0.625rem;
 	grid-template-columns: 3.75rem 70%;
@@ -195,7 +188,6 @@
 }
 
 .dorkiniansLogoContainer {
-	/* background: red; */
 	grid-area: logo-section;	
 }
 
@@ -207,9 +199,7 @@
 }
 
 .dorkiniansTextContainer {
-	/* background: green; */
 	grid-area: text-section;
-	/* padding: auto; */
 	display: flex;
 	align-items: flex-start;
     justify-content:flex-start;
@@ -227,21 +217,17 @@
 
 /* Offset the table left to fit it on screen. */
 .AFCTable table {
-	/* background-color: blue; */
-	/* margin-left: -0.4rem; */
 	width: 100%;
 	margin-bottom: 1rem; /* Add space below the table. */
 }
 
 /* Reset the colour of the hyperlinks in the AFCTable. */
 .AFCTable a {
-	/* background-color: blue; */
 	color: #333;
 }
 
 /* Offset the England Logo back into place. */
 .AFCTable table tbody tr td table tbody tr td a img {
-	/* background-color: blue; */
 	margin-left: 1.5rem;
 }
 
@@ -249,15 +235,12 @@
 
 /* Offset the table left to fit it on screen. */
 .AFCResultsAndFixtures table {
-	/* background-color: blue; */
-	/* margin-left: -0.4rem; */
 	width: 100%;
 	margin-bottom: 1rem; /* Add space below the table. */
 }
 
 /* Offset the England Logo back into place. */
 .AFCResultsAndFixtures table tbody tr td table tbody tr td a img {
-	/* background-color: blue; */
 	margin-left: 1.5rem;
 }
 
@@ -287,7 +270,6 @@
 /* Ashcombe School */
 
 #ashcombeSchoolLogoContainer {
-	/* background-color: brown; */
 	display: flex; /* Add flexbox to the container. */
 	flex-direction: row; /* Wrap along in a row direction. */
 	flex-wrap: nowrap; /* Don't allow the images to wrap down onto different lines. */
@@ -323,7 +305,6 @@
 }
 
 .brockhamBadgersLogoContainer {
-	/* background: red; */
 	grid-area: logo-section;	
 }
 
@@ -334,9 +315,7 @@
 }
 
 .brockhamBadgersTextContainer {
-	/* background: green; */
 	grid-area: text-section;
-	/* padding: auto; */
 	display: flex;
 	align-items: flex-start;
     justify-content:flex-start;
@@ -355,7 +334,6 @@
 }
 
 cite {
-	/* background-color: red; */
 	width: 100%;
 	margin: 0rem auto;
 	padding-left: 60%;
@@ -385,7 +363,6 @@ cite {
 #individuals-stats-section {
 	height: calc(max-content + 1rem);
 }
-
 
 #individuals-titan-table {
 	margin-bottom: 2rem; /* Add space below the table. */
