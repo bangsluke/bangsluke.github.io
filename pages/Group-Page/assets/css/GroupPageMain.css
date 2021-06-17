@@ -456,7 +456,9 @@ td:hover::after, th:hover::after {
 	position: absolute;
 	left: 0;
 	top: -5000px;
+	/* top: 0px; */
 	height: 10000px;
+	/* height: 100%; */
 	width: 100%;
 	z-index: -1;
 }
@@ -487,6 +489,7 @@ tr:last-child td:last-child {
 .table-wrapper {
 	position: relative;
 	overflow: auto;
+	overflow-y: hidden;
 	/* overflow: hidden; */
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
