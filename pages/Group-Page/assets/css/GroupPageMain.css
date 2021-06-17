@@ -429,7 +429,7 @@ table {
 	border-radius: var(--border-radius, 0.2rem);
 	/*overflow: hidden; /* Required for column highlighting. */
 	/* For interior borders, look at the td class. */
-	overflow: scroll;
+	/* overflow: scroll; */
 }
 
 /* Cell highlighting. */
@@ -454,7 +454,6 @@ td:hover::after, th:hover::after {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: "";
 	position: absolute;
-	background-color: #ffa;
 	left: 0;
 	top: -5000px;
 	height: 10000px;
@@ -488,7 +487,7 @@ tr:last-child td:last-child {
 .table-wrapper {
 	position: relative;
 	overflow: auto;
-	overflow: hidden;
+	/* overflow: hidden; */
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
