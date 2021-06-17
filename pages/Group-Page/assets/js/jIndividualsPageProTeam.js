@@ -57,7 +57,7 @@ function showProTable(results) {
     //console.log(data); // Log the data in the console.
     clearTable('#pro-team-table'); // Call the clearTable function to empty the table.
     createFullTableProTeam(data, '#pro-team-table', toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
-    //hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.
+    hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.
 }
 
 
@@ -70,7 +70,7 @@ function showProTable(results) {
 
 // Create the table by passing the data to the function.
 function createFullTableProTeam(data, selector, toolTipBoolean) {
-    console.log('%c' + '>> Re-usable Function: createFullTable(array, selector, toolTipBoolean) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    console.log('%c' + '>> Re-usable Function: createFullTableProTeam(data, selector, toolTipBoolean) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     console.log(data); // Log the passed data to the console.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
