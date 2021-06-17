@@ -91,20 +91,6 @@ function populateImageSources() {
             var sourcePath = "/pages/Group-Page/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
             document.getElementById("image" + x).src = sourcePath; // Set the source of the image dynamically.
             //document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
-            
-            
-            
-            
-            
-            
-            alert(sourcePath);
-
-
-
-
-
-
-
         } else { // If the image number is larger than the album size, hide the placeholder.
             document.getElementById("image" + x).classList.add("hidden"); // Add the hidden class to the image.
             //document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.

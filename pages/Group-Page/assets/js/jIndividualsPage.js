@@ -78,15 +78,6 @@ function getData(data, selectedUserName) {
 
     // Profile Tab
     document.getElementById("profilePicture").src = data[foundRow].profilePictureURL; // Modify the source of the image.
-    
-    
-    
-    
-    alert(data[foundRow].profilePictureURL);
-
-
-
-
     document.getElementById("fullName").innerHTML = data[foundRow].funName; // Modify the text inside the element.
     if (data[foundRow].funName == "Andrew Higgins") { // Unhide Andy's titles if it's his page being loaded.
         document.getElementById("andyTitles").classList.remove("hidden"); // Remove the hidden CSS class to show the titles.
