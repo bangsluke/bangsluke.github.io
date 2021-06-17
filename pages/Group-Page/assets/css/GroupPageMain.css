@@ -424,7 +424,7 @@ table {
 	border: none;
 	border-collapse: collapse;
 	border-radius: var(--border-radius, 0.2rem);
-	overflow: hidden; /* Required for column highlighting. */
+	/*overflow: hidden; /* Required for column highlighting. */
 	/* For interior borders, look at the td class. */
 }
 
@@ -463,15 +463,12 @@ td:hover::after, th:hover::after {
 tr:first-child th:first-child {
 	border-top-left-radius: var(--border-radius, 0.2rem);
 }
-
 tr:first-child th:last-child {
 	border-top-right-radius: var(--border-radius, 0.2rem);
 }
-
 tr:last-child td:first-child {
 	border-bottom-left-radius: var(--border-radius, 0.2rem);
 }
-
 tr:last-child td:last-child {
 	border-bottom-right-radius: var(--border-radius, 0.2rem);
 }
