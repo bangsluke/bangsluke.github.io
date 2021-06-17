@@ -102,6 +102,8 @@ th {
 tr:hover {
 	background-color: var(--accent-color-1, pink);
 	color: var(--accent-color-white, white);
+
+	background-color: red;
 }
 
 .sticky-col {
