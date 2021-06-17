@@ -41,7 +41,7 @@ function togglePeaMode() {
     if (peaMode == true) {
         console.log("Pea mode toggle has just been turned on.");
         // Change the sources of the images to show Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
-        document.getElementById("croatiaCover").src = "/pages/Group-Page/assets/images/GalleryImages/Covers/Croatia Pea Cover.JPG"; // Modify the source of the image.
+        document.getElementById("croatiaCover").src = "/pages/Group-Page/assets/images/GalleryImages/Covers/Croatia Pea Cover.jpg"; // Modify the source of the image.
         document.getElementById("glastonburyCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Glastonbury Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("bigNightsOutCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Big Nights Out Pea Cover.JPG"; // Modify the source of the image.
         document.getElementById("lockdownCover").src = "/pages/Group-Page/assets/images/Gallery/Covers/Lockdown Pea Cover.jpg"; // Modify the source of the image.
