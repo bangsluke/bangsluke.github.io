@@ -88,9 +88,10 @@ function populateImageSources() {
     for (x = 1; x <= maxImageCount; x++) { // Loop through all images.
         //console.log(x);
         if (x <= albumSize) { // If the image number falls within the album size, update the source of the image.
-            var sourcePath = "/pages/Group-Page/assets/images/Gallery/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
+            var sourcePath = "/pages/Group-Page/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
             document.getElementById("image" + x).src = sourcePath; // Set the source of the image dynamically.
             //document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
+            alert(sourcePath);
         } else { // If the image number is larger than the album size, hide the placeholder.
             document.getElementById("image" + x).classList.add("hidden"); // Add the hidden class to the image.
             //document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
