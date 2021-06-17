@@ -484,6 +484,7 @@ tr:last-child td:last-child {
 .table-wrapper {
 	position: relative;
 	overflow: auto;
+	overflow: hidden;
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
