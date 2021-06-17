@@ -428,6 +428,12 @@ table {
 	/* For interior borders, look at the td class. */
 }
 
+/* Cell highlighting. */
+td:hover {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-weight: bold;
+}
+
 /* Add row highlighting. */
 tr:hover {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */

@@ -23,7 +23,6 @@
 
 /* sideMenu-Main-Container holds all of the smaller icon and text containers. */
 .sideMenu-Main-Container {
-    /* background: orange; */
     padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: column;
@@ -33,7 +32,6 @@
 
 /* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
 .sideMenu-Container {
-    /* background: green; */
     padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: row;
@@ -43,7 +41,6 @@
 
 /* sideMenu-Icon-Container holds just the sideMenu-Icon. */
 .sideMenu-Icon-Container {
-    /* background: red; */
     width: 3.75rem;
     height: max-content;
 	height: 3rem; /* Controls the vertical height between each set of icons and links. */
@@ -56,9 +53,7 @@
 }
 
 .sideMenu-Text-Container {
-    /* background: blue; */
     width: 9.5rem;
-    /*height: max-content; /* Set the div to be the height of the text. */
 	height: 2rem;
     text-align: left; /* Left align the text in the div. */
     margin-left: 0rem; /* Add spacing between the icon and text. */
@@ -92,7 +87,6 @@
 	margin-left: 3.125rem;
 	padding: 0.2rem;
 }
-
 
 /* Style the theme buttons. */
 

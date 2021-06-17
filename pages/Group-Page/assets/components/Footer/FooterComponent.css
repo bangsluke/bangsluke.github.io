@@ -18,7 +18,6 @@ footer {
     top: -o-calc(100vh - 3.75rem); /* Opera */
 	top: -webkit-calc(100vh - 3.75rem); /* Google, Safari */
 	top: -moz-calc(100vh - 3.75rem); /* Firefox */
-    /* bottom: 0rem; */
     justify-self: center;
     align-content: center;
     text-align: center;

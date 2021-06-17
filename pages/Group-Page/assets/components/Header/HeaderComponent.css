@@ -23,7 +23,6 @@
 /* For homepage only. */
 
 .header-area.homepage {
-    /* background-color: lightcoral; */
     height: 2.8rem; /* Fallback if needed. */
     height: var(--headerHeight, 2.8rem); /* Define the header height using the variable. */
     padding: 1rem;
@@ -38,7 +37,6 @@
 
 /* Avatar classes for the main image. */
 .avatar-container {
-    /* background-color: maroon; */
     height: 2.7rem; /* Fallback if needed. */
     height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
     width: 2.7rem; /* Fallback if needed. */
@@ -58,7 +56,6 @@
 /* Main subpage header text class. */
 
 .heading-container {
-    /* background-color: grey; */
     height: max-content;
     margin: auto;
 }
@@ -100,7 +97,6 @@
 }
 
 .topMenu-Container {
-    /* background: green; */
     width: 37.5rem;
     height: inherit;
     padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
@@ -111,7 +107,6 @@
 }
 
 .topMenu-Icon-Container {
-    /* background: red; */
     width: max-content;
     height: max-content;
 }
@@ -123,7 +118,6 @@
 }
 
 .topMenu-Text-Container {
-    /* background: blue; */
     width: max-content;
     height: max-content; /* Set the div th be the height of the text. */
     text-align: center; /* Center the text in the div. */
@@ -176,7 +170,6 @@
     cursor: pointer;
     margin: 0rem;
     padding: 0rem;
-    /* border-style: solid; */
 }
 
 .burgericon:hover {

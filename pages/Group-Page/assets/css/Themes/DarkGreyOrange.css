@@ -17,6 +17,7 @@
 	--accent-color-1: #EF8C73;
 	--accent-color-2: #F7573A;
 	--accent-color-3: #fc1d00;
+	--accent-color-1-rgb: 239, 140, 115; /* Used for table highlighting. */
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
 	--accent-color-shadow: #22202C; /* Used in the Shadow DOMs. */
@@ -99,15 +100,22 @@ th {
 	border-right-color: var(--accent-color-1,white);
 }
 
+/* Cell highlighting. */
+td:hover {
+	border: 0.1rem solid var(--accent-color-white,white);
+}
+
 /* Row highlighting. */
 tr:hover {
-	background-color: var(--accent-color-1, pink);
+	background-color: var(--accent-color-1, pink); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--accent-color-1-rgb), 0.3); /* Same colour with opacity. */
 	color: var(--accent-color-white, white);
 }
 
 /* Column highlighting. */
 td:hover::after, th:hover::after {
-	background-color: var(--accent-color-1, pink);
+	background-color: var(--accent-color-1, pink); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--accent-color-1-rgb), 0.3); /* Same colour with opacity. */
 	color: var(--accent-color-white, white);
 }
 
