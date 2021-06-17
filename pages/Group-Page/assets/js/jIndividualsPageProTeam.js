@@ -57,7 +57,7 @@ function showProTable(results) {
     //console.log(data); // Log the data in the console.
     clearTable('#pro-team-table'); // Call the clearTable function to empty the table.
     createFullTableProTeam(data, '#pro-team-table', toolTipBoolean); // Call the createFullTable function, passing the data from PapaParse.
-    hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.
+    //hideLoaderDots('football-loader'); // Hide the loader dots. See LoaderDots.js.
 }
 
 
