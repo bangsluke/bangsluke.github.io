@@ -8,7 +8,8 @@
 
 .sideMenu {
 	background: var(--accent-color-shadow, black);
-    height: 100%;
+	/* background-color: lightgreen; */
+	height: 100%;
 	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
 	z-index: 3;
@@ -21,9 +22,20 @@
 	display: inline;
 }
 
+/* The x close button. */
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+
 /* sideMenu-Main-Container holds all of the smaller icon and text containers. */
 .sideMenu-Main-Container {
-    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+	/* background-color: lightpink; */
+	padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
     flex-direction: column;
     align-items: center; /* Vertically center the div's inside the container. */
@@ -32,8 +44,10 @@
 
 /* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
 .sideMenu-Container {
-    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
-    display: flex; /* Add flex to the top level container. */
+    /* background-color: lightseagreen; */
+	padding: 0rem 1.25rem; /* Add padding to the left and right of the links to offset them from the far left and right. */
+    margin-bottom: 0.2rem; /* Add vertical spacing between each link. */
+	display: flex; /* Add flex to the top level container. */
     flex-direction: row;
     align-items: center; /* Vertically center the div's inside the container. */
     justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
@@ -41,7 +55,8 @@
 
 /* sideMenu-Icon-Container holds just the sideMenu-Icon. */
 .sideMenu-Icon-Container {
-    width: 3.75rem;
+    /* background-color: lime; */
+	width: 3.75rem;
     height: max-content;
 	height: 3rem; /* Controls the vertical height between each set of icons and links. */
 }
@@ -49,16 +64,18 @@
 .sideMenu-Icon {
 	height: 2.5rem;
 	filter: brightness(0) invert(1);
-	margin-top: 0.25rem;
+	margin-top: -0.1rem;
 }
 
 .sideMenu-Text-Container {
-    width: 9.5rem;
+    /* background-color: maroon; */
+	width: 9.5rem;
 	height: 2rem;
     text-align: left; /* Left align the text in the div. */
     margin-left: 0rem; /* Add spacing between the icon and text. */
 }
 
+/* Style the text in the side menu to be Montserrat. */
 .sideMenu a {
 	color: var(--accent-color-white, white);
 	padding: 0.5rem 0.5rem 0.5rem 2rem;
@@ -68,6 +85,7 @@
 	margin-bottom: 1.25rem;
 	text-transform: uppercase;
 	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .sideMenu a i {
@@ -79,16 +97,17 @@
 	background: var(--accent-color-white, white);
 }
 
-.sideMenu .closebtn {
-	position: absolute;
-	top: 0rem;
-	right: 1.5rem;
-	font-size: 2.25rem;
-	margin-left: 3.125rem;
-	padding: 0.2rem;
+/* Style the theme buttons. */
+
+/* Add a styled container around each button. */
+.sideMenu-Button-Container {
+	padding: 0.1rem;
+	margin-left: 0.1rem;
 }
 
-/* Style the theme buttons. */
+.sideMenu-Button-Container-Border {
+	border: 0.1rem solid var(--accent-color-3);
+}
 
 /* Select all three buttons first. */
 .sideMenu-Container button {

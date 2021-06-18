@@ -11,6 +11,7 @@ function changeSiteTheme(siteThemeName) {
     var siteThemeHref;
     var siteThemeMainStyleHexColour;
     var siteThemeBackgroundHexColour;
+    // Add the border class to the selected theeme button in the side menu and remove the border from the others.
     if (siteThemeName == "1") { // Check which site theme has been selected and provide the href link to the CSS sheet.
         siteThemeHref = "OriginalTheme.css";
         siteThemeMainStyleHexColour = "#FF3CAC";
@@ -28,6 +29,7 @@ function changeSiteTheme(siteThemeName) {
         siteThemeMainStyleHexColour = "#F7573A";
         siteThemeBackgroundHexColour = "#222129";
     }
+    getSideMenuSiteThemeSelection(); // Call the getSideMenuSiteThemeSelection() function.
     console.log('%c' + '> Site theme changed: siteThemeName = ' + siteThemeName + ', siteThemeHref = ' + siteThemeHref, ' background-color:' + siteThemeBackgroundHexColour + '; color:' + siteThemeMainStyleHexColour + '; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     siteThemeHref = "/pages/Group-Page/assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
     sessionStorage.setItem("siteThemeHref", siteThemeHref); // Save the variable to session storage.
@@ -52,11 +54,33 @@ function getSiteTheme() {
         siteThemeMainStyleHexColour = "#F7573A";
         siteThemeBackgroundHexColour = "#222129";
     }
+    getSideMenuSiteThemeSelection(); // Call the getSideMenuSiteThemeSelection() function.
     document.getElementById('css-theme').href = siteThemeHref; // Update the site theme to the defined theme.
     console.log('%c' + '> siteThemeName = ' + siteThemeName + ', siteThemeMainStyleHexColour = ' + siteThemeMainStyleHexColour, ' background-color:' + siteThemeBackgroundHexColour + '; color:' + siteThemeMainStyleHexColour + '; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
 }
 
-
+// Change the side menu theme selection based on the selected theme.
+function getSideMenuSiteThemeSelection() {
+    var siteThemeName = sessionStorage.getItem("siteThemeName"); // Retrieve the variable passed to session storage.
+    // Add the border class to the selected theeme button in the side menu and remove the border from the others.
+    if (siteThemeName == "1") {
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-1').classList.add("sideMenu-Button-Container-Border"); // Add the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-2').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-3').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+    } else if (siteThemeName == "2") {
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-1').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-2').classList.add("sideMenu-Button-Container-Border"); // Add the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-3').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+    } else if (siteThemeName == "3") {
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-1').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-2').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-3').classList.add("sideMenu-Button-Container-Border"); // Add the sideMenu-Button-Container-Border class.
+    } else {
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-1').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-2').classList.add("sideMenu-Button-Container-Border"); // Add the sideMenu-Button-Container-Border class.
+        document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('button-container-theme-3').classList.remove("sideMenu-Button-Container-Border"); // Remove the sideMenu-Button-Container-Border class.
+    }
+}
 
 
 

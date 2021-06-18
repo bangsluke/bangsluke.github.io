@@ -6,6 +6,7 @@
 
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
 .header-area {
+    /* background-color: pink; */
     left: 0rem;
     top: 0rem;
     height: 2.8rem; /* Fallback if needed. */
@@ -84,20 +85,24 @@
 /* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/TopMenu.css" */
 
 .topMenu { /* The top menu bar which conatins all further containers. */
-    background: var(--accent-color-black, black);
+    background: var(--accent-color-shadow, black);
+    /* background-color: green; */
     border-left: solid 0.125rem var(--accent-color-1);
     position: fixed;
-    height: 5rem;
-    width: 80%;
+    /* height: 5rem; */
+    height: 2.8rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight, 2.8rem) + 0.3rem); /* Get the header height variable from GroupPageMain.css. Add a small value to account for other paddding. */
+    width: 90%;
     top: 0rem;
-    left: 20%;
+    left: 10%;
     z-index: 1;
     transition: 0.5s;
-    padding-top: 1.25rem;
+    /* padding-top: 1.25rem; */
 }
 
 .topMenu-Container {
-    width: 37.5rem;
+    /* background-color: lightblue; */
+    width: 100%;
     height: inherit;
     padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     display: flex; /* Add flex to the top level container. */
@@ -107,22 +112,31 @@
 }
 
 .topMenu-Icon-Container {
+    /* background-color: lightcoral; */
     width: max-content;
-    height: max-content;
+    height: auto;
+}
+
+/* Style the text in the top header to be Montserrat. */
+.topMenu-Text-Container a {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .topMenu-Icon {
 	height: 2.5rem;
+    width: 2.5rem;
 	filter: brightness(0) invert(1);
 	margin-top: 0.25rem;
 }
 
 .topMenu-Text-Container {
+    /* background-color: lightgreen; */
     width: max-content;
     height: max-content; /* Set the div th be the height of the text. */
     text-align: center; /* Center the text in the div. */
-    margin-left: 0.625rem; /* Add spacing between the icon and text. */
-    margin-right: 2.5rem; /* Add spacing between each link. */
+    margin-left: 0.25rem; /* Add spacing between the icon and text. */
+    margin-right: 1rem; /* Add spacing between each link. */
 }
 
 .topMenu a {
