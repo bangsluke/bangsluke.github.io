@@ -35,6 +35,14 @@
 	<!-- Events Page styling -->
 	<link href="/pages/Group-Page/assets/css/EventsPage.css" rel="stylesheet">
 
+	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+	<!-- The Header styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style">
+	<!-- The Side Menu styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
+	<!-- The Footer styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Footer/FooterComponent.css" rel="stylesheet" as="style">
+
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 

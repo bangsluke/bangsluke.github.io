@@ -37,6 +37,14 @@
 	<!-- Gallery Sub Page styling -->
 	<link href="/pages/Group-Page/assets/css/GallerySubPage.css" rel="stylesheet">
 
+	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+	<!-- The Header styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style">
+	<!-- The Side Menu styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
+	<!-- The Footer styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Footer/FooterComponent.css" rel="stylesheet" as="style">
+	
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
@@ -105,45 +113,45 @@
 
 				<!-- Images used to open the lightbox -->
 				<img id="image1" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(1)" class="hover-shadow">
+					onclick="openModal();currentSlide(1)" class="hover-shadow" width="50" height="50">
 				<img id="image2" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(2)" class="hover-shadow">
+					onclick="openModal();currentSlide(2)" class="hover-shadow" width="50" height="50">
 				<img id="image3" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(3)" class="hover-shadow">
+					onclick="openModal();currentSlide(3)" class="hover-shadow" width="50" height="50">
 				<img id="image4" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(4)" class="hover-shadow">
+					onclick="openModal();currentSlide(4)" class="hover-shadow" width="50" height="50">
 				<img id="image5" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(5)" class="hover-shadow">
+					onclick="openModal();currentSlide(5)" class="hover-shadow" width="50" height="50">
 				<img id="image6" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(6)" class="hover-shadow">
+					onclick="openModal();currentSlide(6)" class="hover-shadow" width="50" height="50">
 				<img id="image7" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(7)" class="hover-shadow">
+					onclick="openModal();currentSlide(7)" class="hover-shadow" width="50" height="50">
 				<img id="image8" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(8)" class="hover-shadow">
+					onclick="openModal();currentSlide(8)" class="hover-shadow" width="50" height="50">
 				<img id="image9" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(9)" class="hover-shadow">
+					onclick="openModal();currentSlide(9)" class="hover-shadow" width="50" height="50">
 				<img id="image10" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(10)" class="hover-shadow">
+					onclick="openModal();currentSlide(10)" class="hover-shadow" width="50" height="50">
 				<img id="image11" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(11)" class="hover-shadow">
+					onclick="openModal();currentSlide(11)" class="hover-shadow" width="50" height="50">
 				<img id="image12" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(12)" class="hover-shadow">
+					onclick="openModal();currentSlide(12)" class="hover-shadow" width="50" height="50">
 				<img id="image13" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(13)" class="hover-shadow">
+					onclick="openModal();currentSlide(13)" class="hover-shadow" width="50" height="50">
 				<img id="image14" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(14)" class="hover-shadow">
+					onclick="openModal();currentSlide(14)" class="hover-shadow" width="50" height="50">
 				<img id="image15" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(15)" class="hover-shadow">
+					onclick="openModal();currentSlide(15)" class="hover-shadow" width="50" height="50">
 				<img id="image16" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(16)" class="hover-shadow">
+					onclick="openModal();currentSlide(16)" class="hover-shadow" width="50" height="50">
 				<img id="image17" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(17)" class="hover-shadow">
+					onclick="openModal();currentSlide(17)" class="hover-shadow" width="50" height="50">
 				<img id="image18" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(18)" class="hover-shadow">
+					onclick="openModal();currentSlide(18)" class="hover-shadow" width="50" height="50">
 				<img id="image19" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(19)" class="hover-shadow">
+					onclick="openModal();currentSlide(19)" class="hover-shadow" width="50" height="50">
 				<img id="image20" src="/pages/Group-Page/assets/images/PersonPlaceholder.png"
-					onclick="openModal();currentSlide(20)" class="hover-shadow">
+					onclick="openModal();currentSlide(20)" class="hover-shadow" width="50" height="50">
 
 			</div>
 
@@ -161,7 +169,7 @@
 			<!-- <div class="modal-content"> -->
 
 			<div class="mySlides">
-				<img id="modalimage" src="/pages/Group-Page/assets/images/PersonPlaceholder.png" class="modal-image">
+				<img id="modalimage" src="/pages/Group-Page/assets/images/PersonPlaceholder.png" class="modal-image" width="50" height="50">
 			</div>
 
 			<!-- <div class="mySlides">

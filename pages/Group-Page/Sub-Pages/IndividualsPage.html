@@ -39,6 +39,13 @@
     <!-- Individuals Page styling -->
     <link href="/pages/Group-Page/assets/css/IndividualsPage.css" rel="stylesheet">
 
+	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+	<!-- The Header styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style">
+	<!-- The Side Menu styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
+
+
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
 
@@ -104,7 +111,7 @@
                         <!-- <section class="page-section"> -->
 
                         <img src="/pages/Group-Page/assets/images/PersonPlaceholder.png" class="center fadein"
-                            alt="Individuals Profile Photo" id="profilePicture">
+                            alt="Individuals Profile Photo" id="profilePicture" width="50" height="50">
 
                         <!-- </section> -->
 
@@ -132,46 +139,46 @@
                                 <!-- All other rows -->
                                 <tr>
                                     <td><img alt="Height Icon" class="individualsPageIcon"
-                                            src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"></td>
+                                            src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png" width="20" height="20"></td>
                                     <td>Height:</td>
                                     <td id="height">--</td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Weight Icon" class="individualsPageIcon"
-                                            src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"></td>
+                                            src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png" width="20" height="20"></td>
                                     <td>Weight:</td>
                                     <td id="weight">--</td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Phone Icon" class="individualsPageIcon"
-                                            src="http://cdn.onlinewebfonts.com/svg/img_198352.png"></td>
+                                            src="http://cdn.onlinewebfonts.com/svg/img_198352.png" width="20" height="20"></td>
                                     <td>Phone:</td>
                                     <td id="phone">--</td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Email Icon" class="individualsPageIcon"
-                                            src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png">
+                                            src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" width="20" height="20">
                                     </td>
                                     <td>Email:</td>
                                     <td><a class="underline" id="email" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Facebook Logo" class="individualsPageIcon"
-                                            src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png">
+                                            src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png" width="20" height="20">
                                     </td>
                                     <td>Facebook:</td>
                                     <td><a class="underline" id="facebook" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Twitter Logo" class="individualsPageIcon"
-                                            src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png">
+                                            src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png" width="20" height="20">
                                     </td>
                                     <td>Twitter:</td>
                                     <td><a class="underline" id="twitter" href="_blank" alt>--</a></td>
                                 </tr>
                                 <tr>
                                     <td><img alt="Instagram Logo" class="individualsPageIcon"
-                                            src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png">
+                                            src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png" width="20" height="20">
                                     </td>
                                     <td>Instagram:</td>
                                     <td><a class="underline" id="instagram" href="_blank" alt>--</a></td>
@@ -221,7 +228,7 @@
                         <!--<section class="page-section"> -->
 
                         <img src="/pages/Group-Page/assets/images/ImagePlaceholder.png" class="center fadein"
-                            alt="Football Header" id="footballHeader">
+                            alt="Football Header" id="footballHeader" width="50" height="50">
 
                         <!--</section> -->
 
@@ -229,7 +236,7 @@
                         <section class="page-section">
 
                             <img src="/pages/Group-Page/assets/images/ImagePlaceholder.png" class="center fadein"
-                                alt="League Logo" id="proTeamLeagueLogo">
+                                alt="League Logo" id="proTeamLeagueLogo" width="50" height="50">
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
                             <div class="loader-small" id="football-loader">
@@ -267,7 +274,7 @@
                                 <div class="dorkiniansLogoContainer">
 
                                     <img src="/pages/Group-Page/assets/images/IndividualsPage/Dorkinians.png"
-                                        class="center fadein" alt="Dorkinians Logo" id="dorkiniansLogo">
+                                        class="center fadein" alt="Dorkinians Logo" id="dorkiniansLogo" width="60" height="60">
 
                                 </div>
 
@@ -586,9 +593,9 @@
 
                             <div class="center fadein" id="ashcombeSchoolLogoContainer">
                                 <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo - Logo.png"
-                                    alt="Ashcombe School Logo" id="ashcombeLogo">
+                                    alt="Ashcombe School Logo" id="ashcombeLogo" width="54" height="48">
                                 <img src="/pages/Group-Page/assets/images/IndividualsPage/Ashcombe School Logo - Text.png"
-                                    alt="Ashcombe School Logo Text" id="ashcombeLogoText">
+                                    alt="Ashcombe School Logo Text" id="ashcombeLogoText" width="245" height="64">
                             </div>
 
                             <div class="quote-section fadein">
@@ -618,7 +625,7 @@
                                 <div class="brockhamBadgersLogoContainer">
 
                                     <img src="/pages/Group-Page/assets/images/IndividualsPage/Brockham Badgers.png"
-                                        class="center fadein" alt="Brockham Badgers Logo" id="brockhamBadgersLogo">
+                                        class="center fadein" alt="Brockham Badgers Logo" id="brockhamBadgersLogo" width="59" height="60">
 
                                 </div>
 
@@ -631,7 +638,7 @@
                             </div>
 
                             <img src="/pages/Group-Page/assets/images/ImagePlaceholder.png" class="center fadein"
-                                alt="Brockham Badgers Photo" id="brockhamBadgersPicture">
+                                alt="Brockham Badgers Photo" id="brockhamBadgersPicture" width="50" height="50">
 
                             <div class="quote-section fadein">
 
