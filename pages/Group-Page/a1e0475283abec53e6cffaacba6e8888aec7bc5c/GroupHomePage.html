@@ -42,7 +42,13 @@
 	<link href="/pages/Group-Page/assets/css/GroupPageHome.css" rel="stylesheet">
 	<!-- CSS site theme -->
 	<link href="/pages/Group-Page/assets/css/Themes/DarkGreyOrange.css" rel="stylesheet" type="text/css" media="all"
-		id="css-theme" /> 
+		id="css-theme" />
+
+	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+	<!-- The Side Menu styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
+	<!-- The Footer styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Footer/FooterComponent.css" rel="stylesheet" as="style">
 
 	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
@@ -157,7 +163,7 @@
 				<!-- Add burger icon with JavaScript functionality. -->
 				<!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
 				<img class="center burgericon fadein" src="/pages/Group-Page/assets/images/Burger Menu Icon.png"
-					alt="Burger Menu Icon" onclick="openNav()">
+					alt="Burger Menu Icon" width="50" height="50" onclick="openNav()">
 
 			</div>
 
@@ -181,7 +187,7 @@
 			<!-- Add group icon image. -->
 			<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html">
 				<img class="avatar center fadein" src="/pages/Group-Page/assets/images/Page Icon.jpg"
-					alt="Group Page Logo">
+					alt="Group Page Logo" width="100" height="100">
 			</a>
 
 			<!-- Add pink main header box. -->

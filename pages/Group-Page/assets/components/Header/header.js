@@ -42,42 +42,42 @@ headerTemplate.innerHTML = `
         <nav class="topMenu" id="top-menu">
             <div class="topMenu-Container">
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="topMenu-Icon" alt="Email Logo"></a>
+                    <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="topMenu-Icon" alt="Email Logo" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="topMenu-Icon" alt="Users Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="topMenu-Icon" alt="Users Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Users.html">Users</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="topMenu-Icon" alt="Events Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="topMenu-Icon" alt="Events Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Events.html">Events</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Stats Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Stats Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Stats.html">Stats</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Titans.html">Titans</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="topMenu-Icon" alt="Gallery Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="topMenu-Icon" alt="Gallery Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Gallery.html">Gallery</a>
@@ -88,7 +88,7 @@ headerTemplate.innerHTML = `
                 </div>
 
                 <!-- <div class="topMenu-Icon-Container">
-                    <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon"></a>
+                    <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon" width="30" height="30"></a>
                 </div>
                 <div class="topMenu-Text-Container">
                     <a href="/pages/Group-Page/Sub-Pages/Ideas.html">Ideas</a>
@@ -102,7 +102,7 @@ headerTemplate.innerHTML = `
             <!-- Add burger icon with JavaScript functionality. -->
             <!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
             <img class="center burgericon fadein" id="burgericon" src="/pages/Group-Page/assets/images/Burger Menu Icon.png"
-                alt="Burger Menu Icon" onclick="openNav()">
+                alt="Burger Menu Icon"  width="50" height="50" onclick="openNav()">
 
         </div>
 
