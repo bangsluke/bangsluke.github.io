@@ -35,6 +35,7 @@ var foundColumn;
 function init() {
     console.log('%c' + '> Individuals page DOM content loaded.', 'background-color: black; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
     getSiteTheme(); // Update the site theme to what the user has selected.
+    showLoaderDots('football-loader'); // Show the loader dots. See LoaderDots.js.
     // Initially call the data in from Google Sheets tab "IndividualsPage" using Papa Parse.
     Papa.parse(individualsPageUrlCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
