@@ -20,7 +20,7 @@
 
 	--headerHeight: 2.8rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
-	--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
 }
 
@@ -76,8 +76,7 @@ body {
 
 /* Main content styling. Add a lighter opacity rounded edges container. */
 .main-content-area {
-	backdrop-filter: blur( 0.75rem );
-	-webkit-backdrop-filter: blur( 0.75rem );
+	
     margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
 	top: 0rem;
 	left: 0rem;
@@ -94,9 +93,17 @@ body {
 	overflow-x: hidden;
 	/* max-width: 100%; */
     border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+    background: rgba(255, 255, 255, 0.10);
+	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
+    backdrop-filter: blur( 20px );
+	-webkit-backdrop-filter: blur( 20px );
 }
 
 
+
+.logo {
+    height: 5rem;
+}
 
 
 
@@ -104,4 +111,20 @@ body {
 /* Add a hidden class for hiding components that are not yet ready. */
 .hidden {
 	display: none !important;
+}
+
+/* Add an id for fading in an item over two seconds. */
+.fadein {
+	animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+	from {
+		display: none;
+		opacity: 0;
+	}
+	to {
+		display: block;
+		opacity: 1;
+	}
 }

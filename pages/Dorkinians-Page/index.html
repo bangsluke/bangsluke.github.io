@@ -32,15 +32,17 @@
     <!-- Loader Dots styling -->
     <link href="/pages/Dorkinians-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
 
-	<!-- Consider Pre-Loading some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-	<!-- The Header styling -->
-	<!-- <link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style"> -->
+    <!-- Consider Pre-Loading some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+    <!-- The Header styling -->
+    <!-- <link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style"> -->
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Green Logo - 32 Pixels.png" />
+    <link rel="shortcut icon" type="image/x-icon"
+        href="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Green Logo - 32 Pixels.png" />
 
     <!-- Add the loader dots JS -->
-    <script src="/pages/Dorkinians-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+    <script src="/pages/Dorkinians-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript"
+        defer></script>
 
 </head>
 
@@ -48,11 +50,26 @@
 
     <!-- Header -->
 
-    <header>
+    <header class="header-area">
 
-        
+        <!-- Add a homepage link by adding a group icon image. Add it within a container. -->
+        <div class="avatar-container">
+
+            <!-- Add group icon image. -->
+            <img class="logo fadein" src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                    alt="Dorkinians Logo">
+
+        </div>
+
+        <!-- Add some heading text. Add it within a container. -->
+        <div class="heading-container">
+            <!-- Add some heading text. -->
+            <h1>Dorkinians Stats Page</h1>
+        </div>
+
 
     </header>
+
 
     <!-- Side Menu -->
 
@@ -91,7 +108,7 @@
 
                 <section class="scroll-snap-x">
 
-                    <article class="nav-targets" id="profile">
+                    <article class="nav-targets" id="stats">
 
                         <!--<details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details> -->
@@ -99,48 +116,19 @@
                         <!-- Profile Detail Section -->
                         <section class="page-section">
 
-                            <h2 class="textcenter" id="fullName">Name</h2>
+                            <h2 class="textcenter" id="fullName">Stats</h2>
 
                             <h4 class="textcenter theme-colour-text hidden" id="andyTitles">(MEng CEng MICE)</h4>
 
 
                         </section>
 
-                        <!-- Personal Data Complaint Section -->
-                        <section class="page-section">
 
-                            <!-- Add a div to house the personal complaint link. -->
-
-                            <div class="subpage-content-area fadein">
-
-                                <p class="reporting-link center underline theme-colour-text" onclick="dataMessage()">I'm
-                                    not happy with how my personal data is being used</p>
-
-                            </div>
-
-                        </section>
-
-                        <!-- Weather Widget Section -->
-                        <section class="page-section page-section-added-bottom-margin">
-
-                            <section class="weather">
-                                <a class="weatherwidget-io" SameSite=None
-                                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
-                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
-                                    data-icons="Climacons Animated" data-theme="original"
-                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
-                                    data-cloudfill="#494A66" data-raincolor="#99b998">WOODHAM FERRERS Weather</a>
-                                <script>
-                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                </script>
-                            </section>
-
-                        </section>
+                        
 
                     </article>
 
-                    <article class="nav-targets" id="football">
+                    <article class="nav-targets" id="results">
 
                         <!-- Dorkinians Table Section -->
                         <section class="page-section page-section-added-bottom-margin" id="dorkinians-tables-section">
@@ -148,13 +136,6 @@
                             <!-- House the Dorkinians logo and header text in a grid container. -->
 
                             <div class="dorkiniansHeaderContainer">
-
-                                <div class="dorkiniansLogoContainer">
-
-                                    <img src="/pages/Group-Page/assets/images/IndividualsPage/Dorkinians.png"
-                                        class="center fadein" alt="Dorkinians Logo" id="dorkiniansLogo" width="60" height="60">
-
-                                </div>
 
                                 <div class="dorkiniansTextContainer">
 
@@ -464,7 +445,7 @@
 
                     </article>
 
-                    <article class="nav-targets" id="statsAndTitan">
+                    <article class="nav-targets" id="tables">
 
                         <section>
 
@@ -472,8 +453,35 @@
 
                     </article>
 
-                    <!-- <article class="nav-targets" id="widgets">
-                    </article> -->
+                    <article class="nav-targets" id="fixtures">
+
+                        <section>
+
+                        </section>
+
+                    </article>
+
+                    <article class="nav-targets" id="weather">
+
+                        <!-- Weather Widget Section -->
+                        <section class="page-section page-section-added-bottom-margin">
+
+                            <section class="weather">
+                                <a class="weatherwidget-io" SameSite=None
+                                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+                                    data-label_1="SOUTH WOODHAM FERRERS" data-label_2="Weather"
+                                    data-icons="Climacons Animated" data-theme="original"
+                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                    data-highcolor="#f54768" data-lowcolor="#99b998" data-suncolor="#ff9678"
+                                    data-cloudfill="#494A66" data-raincolor="#99b998">WOODHAM FERRERS Weather</a>
+                                <script>
+                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                </script>
+                            </section>
+
+                        </section>
+
+                    </article>
 
                 </section>
 
@@ -481,13 +489,11 @@
                 <snap-tabs-header class="scroll-snap-x">
 
                     <nav id="nav-bar">
-                        <a href="#profile" active>Profile</a>
-                        <!-- <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>  -->
-                        <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
-                        <a href="#football">Football</a>
-                        <a href="#history">History</a>
-                        <a href="#statsAndTitan">Stats and Titan</a>
-                        <!--<a href="#widgets">Widgets</a>-->
+                        <a href="#stats" active>Stats</a>
+                        <a href="#results">Results</a>
+                        <a href="#tables">Tables</a>
+                        <a href="#fixtures">Fixtures</a>
+                        <a href="#weather">Weather</a>
                     </nav>
 
                     <span class="snap-indicator"></span>
@@ -504,8 +510,8 @@
 
     <footer>
 
-    <!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
-    <!-- <footer-component></footer-component> -->
+        <!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
+        <!-- <footer-component></footer-component> -->
 
     </footer>
 
