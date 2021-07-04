@@ -10,6 +10,7 @@
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
+    --snap-tabs-hue: 328deg;
 }
 
 /* Added Luke Styling. */
@@ -19,7 +20,7 @@
     top: 0rem;
     left: 0rem;
     padding-top: 0rem;
-    margin-top: var(--headerHeight, 2.8rem);
+    /* margin-top: var(--headerHeight, 2.8rem); */
     width: 100%;
     
     /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -45,7 +46,8 @@
 /* Specific snap-tabs styling with elements not used elsewhere on site. */
 
 snap-tabs {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    --accent: var(--snap-tabs-hue) 100% 54%;
+    --accent-reduced: var(--snap-tabs-hue) 90% 90%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -147,7 +149,7 @@ snap-tabs>section>article {
 } */
 
 article {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    color: white;
     box-sizing: border-box;
     font-size: 1rem;
     line-height: 1;
@@ -163,7 +165,10 @@ article {
 
 /* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
 snap-tabs>snap-tabs-header {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    --text-active-color: var(--main-dorkinians-yellow-colour, yellow);
+    background-color: var(--main-dorkinians-green-colour, darkgreen);
+	border-top: 0.125rem solid var(--accent-color-white, white);
+
     position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
     top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
     left: 0rem; /* Force the header section to the left. */
@@ -197,7 +202,11 @@ snap-tabs>snap-tabs-header>nav {
 } */
 
 snap-tabs>snap-tabs-header a {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    --text-color: white; /* Need the variable --text-color as needed in the JavaScript. */
+	/*--text-color: var(--accent-color-2, white); /* Need the variable --text-color as needed in the JavaScript. */
+	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
+	color: var(--accent-color-2, white);
+
     scroll-snap-align: start;
     display: inline-flex;
     align-items: center;
@@ -225,7 +234,7 @@ snap-tabs>snap-tabs-header a {
 } */
 
 snap-tabs>snap-tabs-header a:hover {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    background: hsl(var(--accent)/5%);
     font-size: inherit;
 }
 
@@ -242,7 +251,7 @@ snap-tabs>snap-tabs-header a:focus {
 } */
 
 snap-tabs>snap-tabs-header>.snap-indicator {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    background: hsl(var(--accent));
     inline-size: 0rem;
     block-size: var(--indicator-size);
     border-radius: var(--indicator-size);
@@ -278,13 +287,14 @@ snap-tabs>snap-tabs-header>.snap-indicator {
 } */
 
 /* Method C from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
-.nav-targets {
+/* .nav-targets {
+    background-color: orange;
     border-top: 3.125rem solid transparent;
     margin-top: -3.125rem;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-}
+} */
 
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */

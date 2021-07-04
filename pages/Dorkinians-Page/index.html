@@ -26,7 +26,7 @@
 
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <!-- Main CSS styling -->
-    <link href="/pages/Dorkinians-Page/assets/css/main.css" rel="stylesheet">
+    <link href="/pages/Dorkinians-Page/assets/css/DorkiniansMain.css" rel="stylesheet">
     <!-- SnapTabs styling -->
     <link href="/pages/Dorkinians-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet">
     <!-- Loader Dots styling -->
@@ -50,23 +50,36 @@
 
     <!-- Header -->
 
-    <header class="header-area">
+    <header class="header-area center">
 
-        <!-- Add a homepage link by adding a group icon image. Add it within a container. -->
-        <div class="avatar-container">
-
-            <!-- Add group icon image. -->
-            <img class="logo fadein" src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
-                    alt="Dorkinians Logo">
-
+        <div class="logo-container">
+            <!-- Add Dorkinians logo. -->
+            <!-- Link back to the main homepage. Delete later or minimise. -->
+            <a href="\Homepage.html"><img class="logo fadein center"
+                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                alt="Dorkinians Logo"></a>
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
-        <div class="heading-container">
+        <div class="title-container">
             <!-- Add some heading text. -->
-            <h1>Dorkinians Stats Page</h1>
+            <h1>Stats Page</h1>
         </div>
 
+        <div class="selection-container">
+            <!-- Add a drop down select box for the user to change the statistic category. -->
+            <select name="TeamSelection" class="team-selection-dropdown">
+                <option value="" selected="selected">Select team</option>
+                <option value="1st XI">1st XI</option>
+                <option value="2nd XI">2nd XI</option>
+                <option value="3rd XI">3rd XI</option>
+                <option value="4th XI">4th XI</option>
+                <option value="5th XI">5th XI</option>
+                <option value="6th XI">6th XI</option>
+                <option value="7th XI">7th XI</option>
+                <option value="8th XI">8th XI</option>
+            </select>
+        </div>
 
     </header>
 
@@ -80,9 +93,6 @@
 
     <!-- This is all the content between the header and footer. -->
     <div class="main-content-area fadein" id="IndividualsPage-main-content-area">
-
-        <!-- Link back to the main homepage. Delete later or minimise. -->
-        <a href="\Homepage.html">Homepage</a>
 
         <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
         <div class="loader hidden" id="loader-div">
@@ -110,41 +120,54 @@
 
                     <article class="nav-targets" id="stats">
 
-                        <!--<details>An individual page for each member providing them details pertinent to them (their
-                            address, their favourite teams league position and upcoming fixtures).</details> -->
-
-                        <!-- Profile Detail Section -->
                         <section class="page-section">
 
                             <h2 class="textcenter" id="fullName">Stats</h2>
 
-                            <h4 class="textcenter theme-colour-text hidden" id="andyTitles">(MEng CEng MICE)</h4>
+                            <details>All stats are collected each week by the Captains and reported to the club for reference here.</details>
 
 
                         </section>
-
-
-                        
 
                     </article>
 
                     <article class="nav-targets" id="results">
 
+                        <section class="page-section">
+
+                            <h2 class="textcenter" id="fullName">Results</h2>
+
+                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                            <div class="loader hidden" id="results-loader-div">
+                                <div class="duo-loader">
+                                    <div class="duo duo1">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                    <div class="duo duo2">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                            <div class="table-wrapper">
+                                <table id="results-table" class="column-highlight">
+                                    <!-- Data loaded into here by jDorkiniansMain.js -->
+                                </table>
+                            </div>
+
+                        </section>
+
+                    </article>
+
+                    <article class="nav-targets" id="tables">
+
                         <!-- Dorkinians Table Section -->
                         <section class="page-section page-section-added-bottom-margin" id="dorkinians-tables-section">
 
-                            <!-- House the Dorkinians logo and header text in a grid container. -->
-
-                            <div class="dorkiniansHeaderContainer">
-
-                                <div class="dorkiniansTextContainer">
-
-                                    <h3 class="dorkiniansHeaderText textleft" id="dorkiniansMainHeaderText">Dorkinians
-                                    </h3>
-
-                                </div>
-
-                            </div>
+                            <h2 class="textcenter" id="fullName">Tables</h2>
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
@@ -445,17 +468,11 @@
 
                     </article>
 
-                    <article class="nav-targets" id="tables">
-
-                        <section>
-
-                        </section>
-
-                    </article>
-
                     <article class="nav-targets" id="fixtures">
 
-                        <section>
+                        <section class="page-section">
+
+                            <h2 class="textcenter" id="fullName">Fixtures</h2>
 
                         </section>
 
@@ -465,6 +482,8 @@
 
                         <!-- Weather Widget Section -->
                         <section class="page-section page-section-added-bottom-margin">
+
+                            <h2 class="textcenter" id="fullName">Weather</h2>
 
                             <section class="weather">
                                 <a class="weatherwidget-io" SameSite=None
@@ -524,6 +543,9 @@
     <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+
+    <!-- Get main page JS -->
+    <script src="/pages/Dorkinians-Page/assets/js/jDorkiniansMain.js"></script>
 
 </body>
 
