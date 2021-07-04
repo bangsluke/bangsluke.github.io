@@ -473,6 +473,7 @@ A collection of tools to support web development. Some are very much untried.
 ### Structure & Website Set Up
 - [Mobile Responsive designs](https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml)
 - [Mobile phone screen sizes for scaling CSS](https://viewportsizer.com/devices/)
+- [CSS Layout Tool] (https://layout.bradwoods.io/)
 - [CSS grid tool](https://css-tricks.com/layoutit-grid-learning-css-grid-visually-with-a-generator/)
 
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
