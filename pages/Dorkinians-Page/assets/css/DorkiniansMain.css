@@ -36,6 +36,7 @@ Section 1
 	/* Colours */
 	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
+	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
 
 	/* Distances & Spacing */
 	--headerHeight: 3rem; /* Define the header height variable. */
@@ -134,6 +135,15 @@ h1 {
 	color: white;
 }
 
+/* Used for tab header text. */
+h2 {
+	font-size: 32px; /* Fallback value. */
+  	font-size: 1.4rem; /* Relative to root value. */
+  	text-transform: uppercase;
+	color: white;
+	padding-bottom: 1rem;
+}
+
 /* Used for text bulk on page. */
 p {
 	font-size: 14px; /* Fallback value. */
@@ -147,38 +157,6 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 }
-
-/* Used for table headers across the site. */
-th {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	font-style: bold; /* Make the header text bold */
-	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
-	text-align: center; /* By default, center all table text. */
-	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
-	position: sticky; /* Make the header row sticky position to lock it out. */
-	top: 0rem; /* Make the header row sticky position to lock it out. */
-	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
-}
-
-/* Used for table rows across the site. */
-tr {
-	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
-}
-
-/* Used for table cell text across the site. */
-td {
-	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
-	text-align: center; /* By default, center all table text. */
-	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
-	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
-	-moz-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
-	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
-}
-
-
 
 /* Text Styles */
 
@@ -209,7 +187,9 @@ td {
 /* Table classes */
 
 table {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	/* background-color: white; */
+	color: var(--main-dorkinians-green-colour, darkgreen);
+	color: white;
 	width: 100%;
 	text-align: center;
 	border: none;
@@ -220,16 +200,51 @@ table {
 	/* overflow: scroll; */
 }
 
+/* Used for table headers across the site. */
+th {
+	background-color: rgba( 255, 255, 255, 0.10);
+	background-color: var(--main-dorkinians-green-colour, darkgreen);
+	box-shadow: inset 0rem 0rem 0rem var(--main-dorkinians-yellow-colour, yellow), inset 0rem -0.25rem 0rem var(--main-dorkinians-yellow-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	font-style: bold; /* Make the header text bold */
+	font-size: 14px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
+	position: sticky; /* Make the header row sticky position to lock it out. */
+	top: 0rem; /* Make the header row sticky position to lock it out. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
+	height: 2rem;
+}
+
+/* Used for table rows across the site. */
+tr {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+}
+
+/* Used for table cell text across the site. */
+td {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
+	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-moz-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+}
+
 /* Cell highlighting. */
 td:hover {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-weight: bold;
+	border: 0.1rem solid white;
 }
 
 /* Add row highlighting. */
 tr:hover {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font: bold;
+	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: white;
 }
 
 /* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */ 
@@ -240,7 +255,9 @@ td, th {
 
 /* Column highlighting. Only on tables with class "column-highlight". */
 .column-highlight td:hover::after, th:hover::after {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: white;
 	content: "";
 	position: absolute;
 	left: 0;
@@ -254,7 +271,7 @@ td, th {
 
 /* Add table column lines. */
 .table-column-lines {
-	/* Add table borders. */
+	border-right-color: var(--main-dorkinians-yellow-colour,yellow);
 	border-right-style: solid;
 	border-width: 0.1rem;
 }
@@ -285,7 +302,7 @@ tr:last-child td:last-child {
 }
 
 .sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	background-color: var(--main-dorkinians-green-colour,darkgreen);
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 1;
@@ -417,7 +434,7 @@ Section 3
 	grid-template-areas: 
 	  "Logo Title Burger"
 	  "Logo Selection Burger";
-	border-bottom: 0.125rem solid var(--accent-color-white, white);
+	border-bottom: 0.125rem solid white;
 }
 
 .logo-container {
@@ -458,7 +475,7 @@ Section 3
 }
 
 .burgericon {
-    color: var(--accent-color-white, white);
+    color: white;
     filter: invert(1) hue-rotate(180deg);
     top: 0rem;
     left: 0rem;
@@ -520,6 +537,11 @@ Section 3
 
 /* Tables Tab */
 
+.dorkiniansTableHeaderText {
+	padding-bottom: 0.5rem;
+	text-align: center;
+}
+
 .AFCTable {
 	padding-bottom: 2rem;
 }
@@ -527,6 +549,10 @@ Section 3
 
 /* Fixtures Tab */
 
+
+.AFCResultsAndFixtures {
+	padding-bottom: 2rem;
+}
 
 /* Weather Tab */
 

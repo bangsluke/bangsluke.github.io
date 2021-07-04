@@ -35,28 +35,29 @@ window.addEventListener('load', function () {
 // Other Functions
 
 // Publically define the location of the Google Sheets.
-var resultsSheetUrlCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
+var resultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
+var matchDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1016205165&single=true&output=csv';
 // define more url csv constants.
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
     console.log('%c' + '> Dorkinians page DOM content loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
-    
+
     // Step 0.
     console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Step 1. Stats tab data.
     console.log('%c' + '> 1. Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    // Papa.parse(publicSpreadsheetUrlCSV, {
-    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: showInitialTitanInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    // })
+    Papa.parse(matchDetailsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    })
 
     // Step 2. Results tab data.
     console.log('%c' + '> 2. Results tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    Papa.parse(resultsSheetUrlCSV, {
+    Papa.parse(resultsSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
@@ -84,8 +85,27 @@ function init() {
 
 // 1. Stats tab data.
 
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+function showStatsTabInfo(results) {
+    console.log("> Function [Stats Table]: showStatsTabInfo(results) called.")
 
+    // Process the original array of objects received.
+    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    console.log("Original Length = " + objectLength); // Log the original length.
 
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "PLAYER NAME", "Henry Warne"); // Call the created filterArrayOfObjects function.
+    console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    console.log("New Length = " + objectLength); // Log the original length.
+
+    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
+    clearTable("#stats-table"); // Call the clearTable function to empty the table.
+    createFullTable(filteredArrayOfObjects, "#stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('stats-loader-div'); // Hide the loader dots. See LoaderDots.js.
+}
 
 
 
@@ -100,10 +120,23 @@ function init() {
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showResultsTabInfo(results) {
     console.log("> Function [Results Table]: showResultsTabInfo(results) called.")
-    var dataArray = results.data // Data comes through from results as an array of arrays. This is because the header setting on the above papa parse is set to false.
+
+    // Process the original array of objects received.
+    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    console.log("Original Length = " + objectLength); // Log the original length.
+
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "TEAM", "1st XI"); // Call the created filterArrayOfObjects function.
+    console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    console.log("New Length = " + objectLength); // Log the original length.
+
+
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#results-table"); // Call the clearTable function to empty the table.
-    createFullTable(dataArray, "#results-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(filteredArrayOfObjects, "#results-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
     hideLoaderDots('results-loader-div'); // Hide the loader dots. See LoaderDots.js.
 }
 
@@ -252,7 +285,7 @@ function generateTable(table, data, toolTipBoolean) {
     var columnCounter;
     var testedValue;
     let tbody = table.createTBody(); // Create table body - https://stackoverflow.com/a/6483237/14290169.
-    
+
     // console.log("--------------------------------------")
     // console.log("Generate Table Data Start")
     // console.log("Starting Row Counter = " + rowCounter);
@@ -274,7 +307,7 @@ function generateTable(table, data, toolTipBoolean) {
         } else {
 
             if (toolTipBoolean == true && rowCounter == 2) {
-            //if (toolTipBoolean == true && rowCounter <= 1) { // Define how to add the text depending on if toolTips are enabled for the table.
+                //if (toolTipBoolean == true && rowCounter <= 1) { // Define how to add the text depending on if toolTips are enabled for the table.
                 // Skip doing the first two rows for tables that have tooltips.
                 // console.log("toolTipBoolean is true so skipping row = " + rowCounter + ".");
 
@@ -286,7 +319,7 @@ function generateTable(table, data, toolTipBoolean) {
                     let cell = row.insertCell(); // Create the cell.
                     let text = document.createTextNode(element[key]); // Add the cell text.
                     cell.appendChild(text); // Append the text to the cell.
-        
+
                     // Loop through the columns to apply styling.
                     if (columnCounter == 0) { // If the columnCounter = 0, it's the first column.
                         cell.classList.add("sticky-col"); // Add the sticky-col class to the first column.
@@ -294,7 +327,7 @@ function generateTable(table, data, toolTipBoolean) {
                     } else {
                         // Do nothing as not first column.
                     }
-        
+
                     // Get the data type of the value being added to the cell.
                     //console.log("Data type of untested value '" + element[key] + "' is '" + dataType + "'.")
                     testedValue = parseInt(element[key]); // First, parseInt the value.
@@ -307,7 +340,7 @@ function generateTable(table, data, toolTipBoolean) {
                     }
                     //console.log("Data type of tested value '" + element[key] + "' is '" + dataType + "'.")
                     //console.log("-");
-        
+
                     columnCounter = columnCounter + 1; // Increment the columnCounter.
                 }
             }
@@ -320,7 +353,13 @@ function generateTable(table, data, toolTipBoolean) {
 }
 
 
-
+// Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the define objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+function filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
+    console.log('%c' + '>> Re-usable Function: filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) called. Passed variables: ArrayOfObjects = not shown, keyName = ' + keyName + ', filterValue = ' + filterValue, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // Receive an Array of Objects, a key name and a filter value.
+    const filteredArrayOfObjects = ArrayOfObjects.filter(data => (data[keyName].includes(filterValue))); // Filter down the data into a new array of objects.
+    return filteredArrayOfObjects; // Return the new filtered array of objects.
+}
 
 
 

@@ -69,7 +69,7 @@
         <div class="selection-container">
             <!-- Add a drop down select box for the user to change the statistic category. -->
             <select name="TeamSelection" class="team-selection-dropdown">
-                <option value="" selected="selected">Select team</option>
+                <option value="" selected="selected">Whole club</option>
                 <option value="1st XI">1st XI</option>
                 <option value="2nd XI">2nd XI</option>
                 <option value="3rd XI">3rd XI</option>
@@ -132,6 +132,26 @@
 
                             <details>All stats are collected each week by the Captains and reported to the club for reference here.</details>
 
+                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                            <div class="loader hidden" id="stats-loader-div">
+                                <div class="duo-loader">
+                                    <div class="duo duo1">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                    <div class="duo duo2">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                            <div class="table-wrapper">
+                                <table id="stats-table" class="column-highlight">
+                                    <!-- Data loaded into here by jDorkiniansMain.js -->
+                                </table>
+                            </div>
 
                         </section>
 
@@ -180,7 +200,7 @@
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Premier</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep118512309" class="AFCTable">Data loading....<a
@@ -198,7 +218,7 @@
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
                             <div id="dorkinians2sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Senior Two</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Senior Two</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep710535041" class="AFCTable">Data loading....<a
@@ -216,7 +236,7 @@
                             <!-- Add a div to hold the Dorkinians 3s code within. -->
                             <div id="dorkinians3sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC One South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep57161422" class="AFCTable">Data loading....<a
@@ -234,7 +254,7 @@
                             <!-- Add a div to hold the Dorkinians 4s code within. -->
                             <div id="dorkinians4sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Four South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep778268394" class="AFCTable">Data loading....<a
@@ -252,7 +272,7 @@
                             <!-- Add a div to hold the Dorkinians 5s code within. -->
                             <div id="dorkinians5sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Five South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Five South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep190854409" class="AFCTable">Data loading....<a
@@ -270,7 +290,7 @@
                             <!-- Add a div to hold the Dorkinians 6s code within. -->
                             <div id="dorkinians6sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Six South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep311599615" class="AFCTable">Data loading....<a
@@ -288,7 +308,7 @@
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
                             <div id="dorkinians7sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Seven South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Seven South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep93079112" class="AFCTable">Data loading....<a
@@ -306,7 +326,7 @@
                             <!-- Add a div to hold the Dorkinians 8s code within. -->
                             <div id="dorkinians8sTable">
 
-                                <h4 class="dorkiniansTableHeaderText theme-colour-text">AFC Eight South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
                                 <div id="lrep812886273" class="AFCTable">Data loading....<a
@@ -323,14 +343,15 @@
 
                             <p class="center">Click on the table for more details on the AFC site</p>
 
-                            <button class="center" id="toggleResultsAndFixtures"
-                                onclick="toggleResultsAndFixturesSection()">Show results and fixtures details</button>
-
                         </section>
 
-                        <!-- Dorkinians Results and Fixtures Section -->
-                        <section class="page-section page-section-added-bottom-margin hidden"
-                            id="results-and-fixtures-section">
+                    </article>
+
+                    <article class="nav-targets" id="fixtures">
+
+                        <section class="page-section">
+
+                            <h2 class="textcenter" id="fullName">Fixtures</h2>
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
@@ -469,16 +490,6 @@
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
-
-                        </section>
-
-                    </article>
-
-                    <article class="nav-targets" id="fixtures">
-
-                        <section class="page-section">
-
-                            <h2 class="textcenter" id="fullName">Fixtures</h2>
 
                         </section>
 
