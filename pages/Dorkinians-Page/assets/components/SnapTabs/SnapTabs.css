@@ -167,7 +167,7 @@ article {
 snap-tabs>snap-tabs-header {
     --text-active-color: var(--main-dorkinians-yellow-colour, yellow);
     background-color: var(--main-dorkinians-green-colour, darkgreen);
-	border-top: 0.125rem solid var(--accent-color-white, white);
+	border-top: 0.125rem solid var(--main-dorkinians-yellow-colour, yellow);
 
     position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
     top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
@@ -234,7 +234,7 @@ snap-tabs>snap-tabs-header a {
 } */
 
 snap-tabs>snap-tabs-header a:hover {
-    background: hsl(var(--accent)/5%);
+    background: hsl(var(--accent)/10%);
     font-size: inherit;
 }
 

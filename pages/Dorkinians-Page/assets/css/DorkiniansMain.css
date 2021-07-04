@@ -38,7 +38,7 @@ Section 1
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
 
 	/* Distances & Spacing */
-	--headerHeight: 5rem; /* Define the header height variable. */
+	--headerHeight: 3rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
@@ -128,7 +128,7 @@ p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, but
 /* Used for top header text. */
 h1 {
 	font-size: 32px; /* Fallback value. */
-  	font-size: 2rem; /* Relative to root value. */
+  	font-size: 1.6rem; /* Relative to root value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
 	color: white;
@@ -411,12 +411,12 @@ Section 3
 .header-area {
 	/* background-color: violet; */
 	display: grid; 
-	grid-template-columns: 5rem 1fr; 
-	grid-template-rows: 3rem 2rem;
+	grid-template-columns: 3rem 1fr 3rem; 
+	grid-template-rows: 1.8rem 1.2rem;
 	gap: 0.2rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "Logo Title"
-	  "Logo Selection";
+	  "Logo Title Burger"
+	  "Logo Selection Burger";
 	border-bottom: 0.125rem solid var(--accent-color-white, white);
 }
 
@@ -427,25 +427,53 @@ Section 3
 }
 
 .logo {
-	width: 5rem;
+	width: 3rem;
 	height: auto;
 }
 
 .title-container {
 	/* background-color: red; */
 	grid-area: Title;
-	padding: 0.3rem;
+	padding-top: 0.3rem;
 }
 
 .selection-container {
 	/* background-color: yellowgreen; */
 	grid-area: Selection;
-	padding: 0.3rem;
+	padding-bottom: 0.3rem;
 }
 
 .team-selection-dropdown {
 	width: 80%;
+	background-color: rgba(255, 255, 255, 0.10);;
+	color: white;
+	border: none;
+	
 }
+
+.burger-container {
+	/* background-color: blue; */
+	grid-area: Burger;
+	padding: 0.3rem;
+}
+
+.burgericon {
+    color: var(--accent-color-white, white);
+    filter: invert(1) hue-rotate(180deg);
+    top: 0rem;
+    left: 0rem;
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
+    width: auto;
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+
+
 
 /* Main content styling. Houses all page content below the header. */
 .main-content-area {
@@ -486,10 +514,21 @@ Section 3
 
 
 
+/* Results Tab */
 
 
 
+/* Tables Tab */
 
+.AFCTable {
+	padding-bottom: 2rem;
+}
+
+
+/* Fixtures Tab */
+
+
+/* Weather Tab */
 
 
 
