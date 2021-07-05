@@ -56,8 +56,8 @@
             <!-- Add Dorkinians logo. -->
             <!-- Link back to the main homepage. Delete later or minimise. -->
             <a href="\Homepage.html"><img class="logo fadein center"
-                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
-                alt="Dorkinians Logo"></a>
+                    src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                    alt="Dorkinians Logo"></a>
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -83,12 +83,12 @@
 
         <div class="burger-container">
             <!-- Add burger menu icon with JavaScript functionality. -->
-            <img class="center burgericon fadein" id="burgericon" src="/pages/Group-Page/assets/images/Burger Menu Icon.png"
-                alt="Burger Menu Icon"  width="50" height="50" onclick="openNav()">
+            <img class="center burgericon fadein" id="burgericon"
+                src="/pages/Group-Page/assets/images/Burger Menu Icon.png" alt="Burger Menu Icon" width="50" height="50"
+                onclick="openNav()">
         </div>
 
     </header>
-
 
     <!-- Side Menu -->
 
@@ -124,16 +124,20 @@
 
                 <section class="scroll-snap-x">
 
-                    <article class="nav-targets" id="stats">
+                    <article class="nav-targets" id="club-stats">
 
                         <section class="page-section">
 
-                            <h2 class="textcenter" id="fullName">Stats</h2>
+                            <h2 class="textcenter">Club Stats</h2>
 
-                            <details>All stats are collected each week by the Captains and reported to the club for reference here.</details>
+                            <details>All stats are collected each week by the Captains and reported to the club for
+                                reference here.</details>
+
+                            <p>- Show total club stats, total recorded goals scored etc.</p>
+                            <p>- How many members</p>
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                            <div class="loader hidden" id="stats-loader-div">
+                            <div class="loader hidden" id="club-stats-loader-div">
                                 <div class="duo-loader">
                                     <div class="duo duo1">
                                         <div class="dot dot-a"></div>
@@ -146,22 +150,34 @@
                                 </div>
                             </div>
 
-                            <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                            <div class="table-wrapper">
-                                <table id="stats-table" class="column-highlight">
-                                    <!-- Data loaded into here by jDorkiniansMain.js -->
-                                </table>
-                            </div>
+
 
                         </section>
 
-                    </article>
+                        <!-- Weather Widget Section -->
+                        <section class="page-section">
 
-                    <article class="nav-targets" id="results">
+                            <h2 class="textcenter">Weather</h2>
+
+                            <!-- https://weatherwidget.io/ -->
+                            <section class="weather">
+                                <a class="weatherwidget-io" SameSite=None
+                                    href="https://forecast7.com/en/51d23n0d33/dorking/"
+                                    data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
+                                    data-icons="Climacons Animated" data-theme="original"
+                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                    data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
+                                    data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
+                                <script>
+                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                </script>
+                            </section>
+
+                        </section>
 
                         <section class="page-section">
 
-                            <h2 class="textcenter" id="fullName">Results</h2>
+                            <h2 class="textcenter">All Club Results</h2>
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
                             <div class="loader hidden" id="results-loader-div">
@@ -188,12 +204,118 @@
 
                     </article>
 
-                    <article class="nav-targets" id="tables">
+                    <article class="nav-targets" id="player-stats">
+
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
+
+                            <h2 class="textcenter">Player Stats</h2>
+
+                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                            <div class="loader hidden" id="stats-loader-div">
+                                <div class="duo-loader">
+                                    <div class="duo duo1">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                    <div class="duo duo2">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add a top level holder section area. -->
+                            <section class="player-stats-area">
+
+                                <section class="player-stats-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                                        <select name="PlayerSelection" class="player-selection-dropdown">
+                                            <option value="" selected="selected">Select Player</option>
+                                            <option value="lukebangs">Luke Bangs</option>
+                                        </select>
+                                    </div>
+
+                                </section>
+
+                                <section class="player-stats-profile-container">
+
+                                    <h3 class="textleft">Profile</h3>
+
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.png" alt="Profile">
+
+                                </section>
+
+                                <section class="player-stats-this-season-container">
+
+                                    <h3 class="textleft">This Season</h3>
+
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png" alt="ThisSeason">
+
+                                </section>
+
+                                <section class="player-stats-minute-by-minute-container">
+
+                                    <h3 class="textleft">Minute By Minute</h3>
+
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.png" alt="MinuteByMinute">
+
+                                </section>
+
+                                <section class="player-stats-all-time-container">
+
+                                    <h3 class="textleft">All Time</h3>
+
+                                </section>
+
+                                <section class="player-stats-game-record-container">
+
+                                    <h3 class="textleft">Game Record</h3>
+
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <div class="table-wrapper">
+                                        <table id="stats-table" class="column-highlight">
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        </table>
+                                    </div>
+
+                                </section>
+
+                            </section>
+
+
+
+
+                        </section>
+
+
+
+
+
+
+
+                    </article>
+
+                    <article class="nav-targets" id="team-of-the-week">
+
+
+
+                    </article>
+
+                    <article class="nav-targets" id="comparison">
+
+
+
+                    </article>
+
+                    <article class="nav-targets" id="results-tables-fixtures">
 
                         <!-- Dorkinians Table Section -->
-                        <section class="page-section page-section-added-bottom-margin" id="dorkinians-tables-section">
+                        <section class="page-section" id="dorkinians-tables-section">
 
-                            <h2 class="textcenter" id="fullName">Tables</h2>
+                            <h2 class="textcenter">Tables</h2>
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
@@ -345,13 +467,9 @@
 
                         </section>
 
-                    </article>
-
-                    <article class="nav-targets" id="fixtures">
-
                         <section class="page-section">
 
-                            <h2 class="textcenter" id="fullName">Fixtures</h2>
+                            <h2 class="textcenter">Fixtures</h2>
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
@@ -495,42 +613,17 @@
 
                     </article>
 
-                    <article class="nav-targets" id="weather">
-
-                        <!-- Weather Widget Section -->
-                        <section class="page-section page-section-added-bottom-margin">
-
-                            <h2 class="textcenter" id="fullName">Weather</h2>
-
-                            <!-- https://weatherwidget.io/ -->
-                            <section class="weather">
-                                <a class="weatherwidget-io" SameSite=None
-                                    href="https://forecast7.com/en/51d23n0d33/dorking/"
-                                    data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
-                                    data-icons="Climacons Animated" data-theme="original"
-                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                    data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
-                                    data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
-                                <script>
-                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                </script>
-                            </section>
-
-                        </section>
-
-                    </article>
-
                 </section>
 
                 <!-- The horizontal scrollable section. -->
                 <snap-tabs-header class="scroll-snap-x">
 
                     <nav id="nav-bar">
-                        <a href="#stats" active>Stats</a>
-                        <a href="#results">Results</a>
-                        <a href="#tables">Tables</a>
-                        <a href="#fixtures">Fixtures</a>
-                        <a href="#weather">Weather</a>
+                        <a href="#club-stats" active>Club Stats</a>
+                        <a href="#player-stats">Player Stats</a>
+                        <a href="#team-of-the-week">Team of the Week</a>
+                        <a href="#comparison">Comparison</a>
+                        <a href="#results-tables-fixtures">Results, Tables & Fixtures</a>
                     </nav>
 
                     <span class="snap-indicator"></span>

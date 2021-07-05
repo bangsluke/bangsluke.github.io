@@ -140,6 +140,15 @@ h2 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 1.4rem; /* Relative to root value. */
   	text-transform: uppercase;
+	color: var(--main-dorkinians-yellow-colour, yellow);
+	padding-bottom: 1rem;
+}
+
+/* Used for sub section header text. */
+h3 {
+	font-size: 32px; /* Fallback value. */
+  	font-size: 1.2rem; /* Relative to root value. */
+  	text-transform: uppercase;
 	color: white;
 	padding-bottom: 1rem;
 }
@@ -458,6 +467,7 @@ Section 3
 	/* background-color: yellowgreen; */
 	grid-area: Selection;
 	padding-bottom: 0.3rem;
+	text-align: center;
 }
 
 .team-selection-dropdown {
@@ -465,7 +475,7 @@ Section 3
 	background-color: rgba(255, 255, 255, 0.10);;
 	color: white;
 	border: none;
-	
+	text-align: center;
 }
 
 .burger-container {
@@ -527,15 +537,69 @@ Section 3
   
 
 
-/* Stats Tab */
+/* Club Stats Tab */
 
 
 
-/* Results Tab */
+/* Player Stats Tab */
+
+.player-stats-area {
+	/* background-color: violet; */
+	display: grid; 
+	grid-template-columns: 1fr 2fr; 
+	grid-template-rows: max-content max-content max-content 1fr 1fr;
+	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "Selection Selection"
+	  "Profile ThisSeason"
+	  "MinuteByMinute MinuteByMinute"
+	  "AllTime AllTime"
+	  "GameRecord GameRecord";
+}
+
+.player-stats-selection-container {
+	/* background-color: blue; */
+	grid-area: Selection;
+	padding: 0.3rem;
+}
+
+.player-stats-profile-container {
+	/* background-color: red; */
+	grid-area: Profile;
+	padding: 0.3rem;
+}
+
+.player-stats-this-season-container {
+	/* background-color: green; */
+	grid-area: ThisSeason;
+	padding: 0.3rem;
+}
+
+.player-stats-minute-by-minute-container {
+	/* background-color: yellow; */
+	grid-area: MinuteByMinute;
+	padding: 0.3rem;
+}
+
+.player-stats-all-time-container {
+	/* background-color: Orange; */
+	grid-area: AllTime;
+	padding: 0.3rem;
+}
+
+.player-stats-game-record-container {
+	/* background-color: purple; */
+	grid-area: GameRecord;
+	padding: 0.3rem;
+}
 
 
 
-/* Tables Tab */
+
+/* Comparison Tab */
+
+
+/* Results, Tables & Fixtures Tab */
 
 .dorkiniansTableHeaderText {
 	padding-bottom: 0.5rem;
