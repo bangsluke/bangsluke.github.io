@@ -81,10 +81,10 @@
             </select>
         </div>
 
-        <div class="burger-container">
-            <!-- Add burger menu icon with JavaScript functionality. -->
-            <img class="center burgericon fadein" id="burgericon"
-                src="/pages/Group-Page/assets/images/Burger Menu Icon.png" alt="Burger Menu Icon" width="50" height="50"
+        <div class="filter-container">
+            <!-- Add filter icon with JavaScript functionality. -->
+            <img class="center filtericon fadein" id="filtericon"
+                src="/images/Icons&Logos/FilterIcon.svg" alt="Filter Icon" width="30" height="30"
                 onclick="openNav()">
         </div>
 
@@ -126,15 +126,10 @@
 
                     <article class="nav-targets" id="club-stats">
 
+                        <!-- Add the main lighter coloured page section. -->
                         <section class="page-section">
 
                             <h2 class="textcenter">Club Stats</h2>
-
-                            <details>All stats are collected each week by the Captains and reported to the club for
-                                reference here.</details>
-
-                            <p>- Show total club stats, total recorded goals scored etc.</p>
-                            <p>- How many members</p>
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
                             <div class="loader hidden" id="club-stats-loader-div">
@@ -150,55 +145,68 @@
                                 </div>
                             </div>
 
+                            <section class="club-stats-area">
 
+                                <section class="club-stats-clubStats-container">
 
-                        </section>
+                                    <details>All stats are collected each week by the Captains and reported to the club
+                                        for
+                                        reference here.</details>
 
-                        <!-- Weather Widget Section -->
-                        <section class="page-section">
+                                    <p>- Show total club stats, total recorded goals scored etc.</p>
+                                    <p>- How many members</p>
 
-                            <h2 class="textcenter">Weather</h2>
+                                </section>
 
-                            <!-- https://weatherwidget.io/ -->
-                            <section class="weather">
-                                <a class="weatherwidget-io" SameSite=None
-                                    href="https://forecast7.com/en/51d23n0d33/dorking/"
-                                    data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
-                                    data-icons="Climacons Animated" data-theme="original"
-                                    data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                    data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
-                                    data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
-                                <script>
-                                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                </script>
+                                <!-- Weather Widget Section -->
+                                <section class="club-stats-weather-container">
+
+                                    <h3 class="textleft">Weather Forecast</h3>
+
+                                    <!-- https://weatherwidget.io/ -->
+                                    <section class="weather">
+                                        <a class="weatherwidget-io" SameSite=None
+                                            href="https://forecast7.com/en/51d23n0d33/dorking/"
+                                            data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
+                                            data-icons="Climacons Animated" data-theme="original"
+                                            data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                            data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
+                                            data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
+                                        <script>
+                                            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                        </script>
+                                    </section>
+
+                                </section>
+
+                                <section class="club-stats-all-club-results-container">
+
+                                    <h3 class="textleft">All Club Results</h3>
+
+                                    <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                                    <div class="loader hidden" id="results-loader-div">
+                                        <div class="duo-loader">
+                                            <div class="duo duo1">
+                                                <div class="dot dot-a"></div>
+                                                <div class="dot dot-b"></div>
+                                            </div>
+                                            <div class="duo duo2">
+                                                <div class="dot dot-a"></div>
+                                                <div class="dot dot-b"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <div class="table-wrapper">
+                                        <table id="results-table" class="column-highlight">
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        </table>
+                                    </div>
+
+                                </section>
+
                             </section>
-
-                        </section>
-
-                        <section class="page-section">
-
-                            <h2 class="textcenter">All Club Results</h2>
-
-                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                            <div class="loader hidden" id="results-loader-div">
-                                <div class="duo-loader">
-                                    <div class="duo duo1">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                    <div class="duo duo2">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                            <div class="table-wrapper">
-                                <table id="results-table" class="column-highlight">
-                                    <!-- Data loaded into here by jDorkiniansMain.js -->
-                                </table>
-                            </div>
 
                         </section>
 
@@ -244,7 +252,8 @@
 
                                     <h3 class="textleft">Profile</h3>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.png" alt="Profile">
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.png"
+                                        alt="Profile">
 
                                 </section>
 
@@ -252,7 +261,8 @@
 
                                     <h3 class="textleft">This Season</h3>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png" alt="ThisSeason">
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png"
+                                        alt="ThisSeason">
 
                                 </section>
 
@@ -260,7 +270,8 @@
 
                                     <h3 class="textleft">Minute By Minute</h3>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.png" alt="MinuteByMinute">
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.png"
+                                        alt="MinuteByMinute">
 
                                 </section>
 
@@ -300,11 +311,116 @@
 
                     <article class="nav-targets" id="team-of-the-week">
 
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
 
+                            <h2 class="textcenter">Team of the Week</h2>
+
+                            <section class="team-of-the-week-area">
+
+                                <section class="totw-week-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                                        <select name="WeekSelection" class="week-selection-dropdown">
+                                            <option value="" selected="selected">Select Week</option>
+                                            <option value="week1">Week 1</option>
+                                        </select>
+                                    </div>
+    
+                                </section>
+
+                                <section class="totw-team-of-the-week-container">
+
+                                    <h3 class="textleft">TOTW</h3>
+
+                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Team Of The Week 2020-10-24.BMP"
+                                        alt="Profile">
+    
+                                </section>
+
+                                <section class="totw-top-performers-container">
+
+                                    <h3 class="textleft">Top TOTW Performers</h3>
+    
+                                    <p>- Players who have been in the TOTW the most number of times.</p>
+                                    <p>- Most likely to get in next week.</p>
+                                    <p>- Hall of famers.</p>
+
+                                </section>
+
+                            </section>
+
+                        </section>
 
                     </article>
 
                     <article class="nav-targets" id="comparison">
+
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
+
+                            <h2 class="textcenter">Comparison</h2>
+
+                            <section class="comparison-area">
+
+                                <section class="comparison-player-1-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the selected player. -->
+                                        <select name="Player1Selection" class="week-selection-dropdown">
+                                            <option value="" selected="selected">Select Player 1</option>
+                                            <option value="lukebangs">Luke Bangs</option>
+                                        </select>
+                                    </div>
+    
+                                </section>
+
+                                <section class="comparison-player-2-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the selected player. -->
+                                        <select name="Player2Selection" class="week-selection-dropdown">
+                                            <option value="" selected="selected">Select Player 2</option>
+                                            <option value="lukebangs">Luke Bangs</option>
+                                        </select>
+                                    </div>
+    
+                                </section>
+
+                                <section class="comparison-player-1-stats-container">
+
+                                    <h3 class="textright">Player 1 Stats</h3>
+    
+                                        <div class="comparison-stat-bar bar-right"></div>
+
+                                </section>
+
+                                <section class="comparison-icons-container">
+    
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.png"
+                                    alt="MoM Icon" class="comparison-icon">
+
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.png"
+                                    alt="MoM Icon" class="comparison-icon">
+
+                                </section>
+
+                                <section class="comparison-player-2-stats-container">
+
+                                    <h3 class="textleft">Player 2 Stats</h3>
+    
+                                        <div class="comparison-stat-bar bar-left"></div>
+
+                                </section>
+
+                            </section>
+
+                        </section>
+
+
+
+
 
 
 
