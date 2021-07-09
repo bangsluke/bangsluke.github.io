@@ -306,7 +306,8 @@ Below are my recommended places to start learning and building.
 
 ### Setting Up A Webiste
 ###### <sup>[To Top](#table-of-contents)</sup>
-- [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course). 
+- [How To Build A Website: How to put a website online](https://www.freecodecamp.org/news/how-to-put-a-website-online-guide-to-website-creation-custom-domain-and-hosting/). This course will show you how to build a static website, host it, and give it a custom domain. If you want to build a personal website or a website for a small business, this is a good place to start. (1 hour YouTube course).
+- [The complete guide to becoming a frontend web developer in 2021](https://codedamn.com/news/become-a-frontend-developer)
 - [Domain names for cheap](https://alldomains.hosting/en/index.html).
 - [What is Open Source?](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
 - [Web Design in 4 minutes](https://jgthms.com/web-design-in-4-minutes/)
@@ -734,6 +735,8 @@ A collection of tools to support web development. Some are very much untried.
 
 #### React Examples
 - [Learn React for Free](https://scrimba.com/learn/learnreact)
+- [How much JavaScript to learn before learning React?](https://codedamn.com/news/react-prerequisites-javascript
+- [React JS 7 hour course](https://www.freecodecamp.org/news/learn-react-js-in-this-free-7-hour-course/
 - [React JavaScript 10 Hour Course](https://www.freecodecamp.org/news/react-10-hour-course/)
 - [React spring cheatsheet](https://storage.googleapis.com/joshwcomeau/react-spring.pdf)
 - [How to make a TODO App in React + BONUS ANIMATIONS](https://www.youtube.com/watch?v=CXHndAQN-Qs&t=1s)
