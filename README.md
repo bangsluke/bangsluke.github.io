@@ -130,6 +130,10 @@ The other projects do not yet have set up instructions.
 ## [Links To Read](https://bangsluke.github.io/#links-to-read)
 ###### <sup>[To Top](#table-of-contents)</sup>
 
+- [How Git branches work](https://www.freecodecamp.org/news/how-git-branches-work/)
+- [What's New in React 18 Alpha? Concurrency, Batching, the Transition API and More](https://www.freecodecamp.org/news/whats-new-in-react-18/)
+- [UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/ui-ux-design-guide/)
+
 <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/46485/large_large_Poly_RoyalBlue_3_2935U_1471509912.jpg" width="1000" height="1">
 
 ### [HTML and CSS Links](https://bangsluke.github.io/#html-and-css-links)
