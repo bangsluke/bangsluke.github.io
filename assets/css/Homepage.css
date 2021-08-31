@@ -10,6 +10,19 @@
 
 :root {}
 
+
+#QuickLinks-container {
+	/* background-color: blue; */
+	background-color: rgba(255,255,255,0.05);
+	min-width: 300px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 20px 40px 20px;
+	margin: 0px auto 20px auto;
+}
+
+
 /* main-link-container holds the three columns of links. */
 
 .main-link-container {
