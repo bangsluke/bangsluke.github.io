@@ -8,7 +8,9 @@
 
 /*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
-:root {}
+/* :root {
+
+} */
 
 
 #QuickLinks-container {
