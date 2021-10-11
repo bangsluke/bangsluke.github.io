@@ -65,16 +65,6 @@ var statsObject = {
         "Warzone Score": ["n/a"],
         "Warzone Wins": ["n/a"]
     },
-    "Sport": {
-        "Boxing": ["n/a"],
-        "Cricket": ["n/a"],
-        "Darts": ["n/a"],
-        "Golf": ["n/a"],
-        "Karting": ["n/a"],
-        "Skiing": ["n/a"],
-        "Table Tennis": ["n/a"],
-        "Tennis": ["n/a"]
-    },
     "Dorkinians": {
         "Overall Stats": ["n/a"],
         "2020/21": ["n/a"],
@@ -117,6 +107,12 @@ var statsObject = {
         "August 2019": ["n/a"],
         "April 2021": ["n/a"]
     },
+    "Karting": {
+        "Overall Karting": ["n/a"],
+        "Qualification": ["n/a"],
+        "Race": ["n/a"],
+        "Fastest Lap": ["n/a"]
+    },
     "Skills, Games and Misc": {
         "Breakfast Cooking": ["n/a"],
         "Driving": ["n/a"],
@@ -130,6 +126,15 @@ var statsObject = {
         "Spike Ball": ["n/a"],
         "Thumb Rating": ["n/a"],
         "WhatsApp": ["n/a"]
+    },
+    "Sport": {
+        "Boxing": ["n/a"],
+        "Cricket": ["n/a"],
+        "Darts": ["n/a"],
+        "Golf": ["n/a"],
+        "Skiing": ["n/a"],
+        "Table Tennis": ["n/a"],
+        "Tennis": ["n/a"]
     },
     "Strava Stats": {
         "Overall Strava": ["n/a"],
