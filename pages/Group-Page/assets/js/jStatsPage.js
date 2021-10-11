@@ -70,6 +70,7 @@ var statsObject = {
         "Cricket": ["n/a"],
         "Darts": ["n/a"],
         "Golf": ["n/a"],
+        "Karting": ["n/a"],
         "Skiing": ["n/a"],
         "Table Tennis": ["n/a"],
         "Tennis": ["n/a"]
