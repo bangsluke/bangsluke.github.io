@@ -41,7 +41,7 @@ Section 1
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
 
 	/* Distances & Spacing */
-	--headerHeight: 3rem; /* Define the header height variable. */
+	--headerHeight: 2.5rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
@@ -457,6 +457,13 @@ p.tooltiptext {
 
 /* 3. Dropdown styling */
 
+/* Add a class for all common selection container styling. */
+.selection-container {
+	/* background-color: yellowgreen; */
+	padding-bottom: 0.3rem;
+	text-align: center;
+}
+
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
 	background-color: rgba(255, 255, 255, 0.10);;
@@ -464,6 +471,7 @@ p.tooltiptext {
 	border: none;
 	text-align: center;
 	width: 20%;
+	margin: auto;
 }
 
 
@@ -485,11 +493,10 @@ Section 3
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 3rem 1fr 3rem; 
-	grid-template-rows: 1.8rem 1.2rem;
-	gap: 0.2rem 0.3rem; /* First value is between rows, second columns. */
+	grid-template-rows: var(--headerHeight, 2.5rem);
+	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "Logo Title Filter"
-	  "Logo Selection Filter";
+	  "Logo Title Filter";
 	border-bottom: 0.125rem solid white;
 }
 
@@ -500,7 +507,7 @@ Section 3
 }
 
 .logo {
-	width: 3rem;
+	width: 2.5rem;
 	height: auto;
 }
 
@@ -508,18 +515,6 @@ Section 3
 	/* background-color: red; */
 	grid-area: Title;
 	padding-top: 0.3rem;
-}
-
-.selection-container {
-	/* background-color: yellowgreen; */
-	grid-area: Selection;
-	padding-bottom: 0.3rem;
-	text-align: center;
-}
-
-/* Add an id styling for the very top club dropdown styling. */
-#main-team-selection-dropdown {
-	width: 80%;
 }
 
 .filter-container {
@@ -533,7 +528,7 @@ Section 3
     filter: invert(1) hue-rotate(180deg);
     top: 0rem;
     left: 0rem;
-    height: 2.7rem; /* Fallback if needed. */
+    height: 2.5rem; /* Fallback if needed. */
     height: calc(var(--headerHeight) - 0.5rem); /* Make the filter icon just smaller than the header height. */
     width: auto;
     display: block;
@@ -581,9 +576,7 @@ Section 3
 
 /* All Stats Tab */
 
-#all-stats-table {
-	/* font-size: 0.6rem !important; */
-}
+
 
 
 
@@ -753,7 +746,11 @@ Section 3
 
 
 
-/* Results, Tables & Fixtures Tab */
+/* Tables, Results & Fixtures Tab */
+
+#tables-results-fixtures-team-selection-dropdown {
+	width: 80%;
+}
 
 .dorkiniansTableHeaderText {
 	padding-bottom: 0.5rem;
