@@ -411,33 +411,33 @@ function multiFilterArrayOfObjects(ArrayOfObjects, keyNameSeason, filterValueSea
     // Filter the Array of Objects for multiple criteria.
         
         // Filter the Array of Objects for the defined season.
-        if (filterValueSeason === "Select Season") { // Don't filter if unpicked.
+        if (filterValueSeason === "Season") { // Don't filter if unpicked.
             // Do nothing as season hasn't been selected.
-            console.log(">>> Data not filtered for seasons as 'Select Season' still picked.")
+            console.log(">>> Data not filtered for seasons as 'Season' still picked.")
         } else { // Filter the Array of Objects.
             filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameSeason].includes(filterValueSeason))); // Filter down the data into a new array of objects.
         }
 
         // Filter the Array of Objects for the selected player.
-        if (filterValuePlayer === "Select Player") { // Don't filter if unpicked.
+        if (filterValuePlayer === "Player") { // Don't filter if unpicked.
             // Do nothing as player hasn't been selected.
-            console.log(">>> Data not filtered for players as 'Select Player' still picked.")
+            console.log(">>> Data not filtered for players as 'Player' still picked.")
         } else { // Filter the Array of Objects.
             filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNamePlayer].includes(filterValuePlayer))); // Filter down the data into a new array of objects.
         }
 
         // Filter the Array of Objects for the selected team.
-        if (filterValueTeam === "Select Team") { // Don't filter if unpicked.
+        if (filterValueTeam === "Team") { // Don't filter if unpicked.
             // Do nothing as team hasn't been selected.
-            console.log(">>> Data not filtered for teams as 'Select Team' still picked.")
+            console.log(">>> Data not filtered for teams as 'Team' still picked.")
         } else { // Filter the Array of Objects.
             filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameTeam].includes(filterValueTeam))); // Filter down the data into a new array of objects.
         }
 
         // Filter the Array of Objects for the selected location.
-        if (filterValueLocation === "Select Location") { // Don't filter if unpicked.
+        if (filterValueLocation === "Location") { // Don't filter if unpicked.
             // Do nothing as location hasn't been selected.
-            console.log(">>> Data not filtered for locations as 'Select Location' still picked.")
+            console.log(">>> Data not filtered for locations as 'Location' still picked.")
         } else { // Filter the Array of Objects.
             filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameLocation].includes(filterValueLocation))); // Filter down the data into a new array of objects.
         }
