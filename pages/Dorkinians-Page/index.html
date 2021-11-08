@@ -109,6 +109,7 @@
 
                 <section class="scroll-snap-x">
 
+                    <!-- Club Stats Tab -->
                     <article class="nav-targets" id="club-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -116,19 +117,36 @@
 
                             <h2 class="textcenter">Club Stats</h2>
 
-                            <!-- Let the user pick which team to filter for. -->
-                            <select name="TeamSelection" class="selection-dropdown" id="club-stats-team-selection-dropdown" onchange="TBC()">
-                                <option value="" selected="selected">Team</option>
-                                <option value="WholeClub">Whole club</option>
-                                <option value="1st XI">1st XI</option>
-                                <option value="2nd XI">2nd XI</option>
-                                <option value="3rd XI">3rd XI</option>
-                                <option value="4th XI">4th XI</option>
-                                <option value="5th XI">5th XI</option>
-                                <option value="6th XI">6th XI</option>
-                                <option value="7th XI">7th XI</option>
-                                <option value="8th XI">8th XI</option>
-                            </select>
+                            <div class="selection-container">
+                                        
+                                <!-- Add a drop down select box for the user to change the statistic category. -->
+
+                                <!-- Let the user pick which season to filter for. -->
+                                <select name="SeasonSelection" class="selection-dropdown" id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Season</option>
+                                    <option value="2016/17">2016/17</option>
+                                    <option value="2017/18">2017/18</option>
+                                    <option value="2018/19">2018/19</option>
+                                    <option value="2019/20">2019/20</option>
+                                    <option value="2020/21">2020/21</option>
+                                    <option value="2021/22">2021/22</option>
+                                </select>
+
+                                <!-- Let the user pick which team to filter for. -->
+                                <select name="TeamSelection" class="selection-dropdown" id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Team</option>
+                                    <option value="WholeClub">Whole club</option>
+                                    <option value="1st XI">1st XI</option>
+                                    <option value="2nd XI">2nd XI</option>
+                                    <option value="3rd XI">3rd XI</option>
+                                    <option value="4th XI">4th XI</option>
+                                    <option value="5th XI">5th XI</option>
+                                    <option value="6th XI">6th XI</option>
+                                    <option value="7th XI">7th XI</option>
+                                    <option value="8th XI">8th XI</option>
+                                </select>
+                            
+                            </div>
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
                             <div class="loader hidden" id="club-stats-loader-div">
@@ -146,7 +164,7 @@
 
                             <section class="club-stats-area">
 
-                                <section class="club-stats-clubStats-container">
+                                <!-- <section class="club-stats-clubStats-container">
 
                                     <details>All stats are collected each week by the Captains and reported to the club
                                         for
@@ -155,7 +173,7 @@
                                     <p>- Show total club stats, total recorded goals scored etc.</p>
                                     <p>- How many members</p>
 
-                                </section>
+                                </section> -->
 
                                 <!-- Weather Widget Section -->
                                 <section class="club-stats-weather-container">
@@ -211,6 +229,7 @@
 
                     </article>
 
+                    <!-- All Stats Tab -->
                     <article class="nav-targets" id="all-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -238,6 +257,7 @@
                                 <section class="player-stats-selection-container">
 
                                     <div class="selection-container">
+
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
                                         
                                             <!-- Let the user pick which season to filter for. -->
@@ -302,6 +322,7 @@
 
                     </article>
 
+                    <!-- Player Stats Tab -->
                     <article class="nav-targets" id="player-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -399,6 +420,7 @@
 
                     </article>
 
+                    <!-- Team of the Week Tab -->
                     <article class="nav-targets" id="team-of-the-week">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -445,6 +467,7 @@
 
                     </article>
 
+                    <!-- Comparison Tab -->
                     <article class="nav-targets" id="comparison">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -516,7 +539,8 @@
 
                     </article>
 
-                    <article class="nav-targets" id="results-tables-fixtures">
+                    <!-- Tables, Results & Fixture Tab -->
+                    <article class="nav-targets" id="tables-results-fixtures">
 
                         <!-- Dorkinians Table Section -->
                         <section class="page-section" id="dorkinians-tables-section">
@@ -525,19 +549,23 @@
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
-                            <!-- Let the user pick which team to filter for. -->
-                            <select name="TeamSelection" class="selection-dropdown" id="tables-results-fixtures-team-selection-dropdown" onchange="TBC()">
-                                <option value="" selected="selected">Team</option>
-                                <option value="WholeClub">Whole club</option>
-                                <option value="1st XI">1st XI</option>
-                                <option value="2nd XI">2nd XI</option>
-                                <option value="3rd XI">3rd XI</option>
-                                <option value="4th XI">4th XI</option>
-                                <option value="5th XI">5th XI</option>
-                                <option value="6th XI">6th XI</option>
-                                <option value="7th XI">7th XI</option>
-                                <option value="8th XI">8th XI</option>
-                            </select>
+                            <div class="selection-container">
+
+                                <!-- Let the user pick which team to filter for. -->
+                                <select name="TeamSelection" class="selection-dropdown" id="tables-results-fixtures-team-selection-dropdown" onchange="TBC()">
+                                    <option value="" selected="selected">Team</option>
+                                    <option value="WholeClub">Whole club</option>
+                                    <option value="1st XI">1st XI</option>
+                                    <option value="2nd XI">2nd XI</option>
+                                    <option value="3rd XI">3rd XI</option>
+                                    <option value="4th XI">4th XI</option>
+                                    <option value="5th XI">5th XI</option>
+                                    <option value="6th XI">6th XI</option>
+                                    <option value="7th XI">7th XI</option>
+                                    <option value="8th XI">8th XI</option>
+                                </select>
+
+                            </div>
 
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sTable">
