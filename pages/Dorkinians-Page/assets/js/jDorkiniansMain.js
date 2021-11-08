@@ -89,6 +89,8 @@ function init() {
 function showStatsTabInfo(results) {
     console.log("> Function [Stats Table]: showStatsTabInfo(results) called.")
 
+    console.log("MODIFIED HERE")
+
     // Process the original array of objects received.
     var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
     console.log(dataArrayOfObjects); // Log the received array of objects.
@@ -96,7 +98,14 @@ function showStatsTabInfo(results) {
     console.log("Original Length = " + objectLength); // Log the original length.
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-    const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "PLAYER NAME", "Henry Warne"); // Call the created filterArrayOfObjects function.
+    
+        // First filter for the player name.
+        //const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "PLAYER NAME", "Henry Warne"); // Call the created filterArrayOfObjects function.
+
+        // Then filter for the season.
+        const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "SEASON", "2021/22"); // Call the created filterArrayOfObjects function.
+
+    
     console.log(filteredArrayOfObjects); // Log the filtered array of objects.
     objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
     console.log("New Length = " + objectLength); // Log the original length.
@@ -353,7 +362,7 @@ function generateTable(table, data, toolTipBoolean) {
 }
 
 
-// Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the define objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+// Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
 function filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
     console.log('%c' + '>> Re-usable Function: filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) called. Passed variables: ArrayOfObjects = not shown, keyName = ' + keyName + ', filterValue = ' + filterValue, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // Receive an Array of Objects, a key name and a filter value.
@@ -361,7 +370,13 @@ function filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
     return filteredArrayOfObjects; // Return the new filtered array of objects.
 }
 
-
+// Filter an Array of Objects based on multiple inputs and return another Array of Objects, filtered by the input values, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+function multiFilterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
+    console.log('%c' + '>> Re-usable Function: filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) called. Passed variables: ArrayOfObjects = not shown, keyName = ' + keyName + ', filterValue = ' + filterValue, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // Receive an Array of Objects, a key name and a filter value.
+    const filteredArrayOfObjects = ArrayOfObjects.filter(data => (data[keyName].includes(filterValue))); // Filter down the data into a new array of objects.
+    return filteredArrayOfObjects; // Return the new filtered array of objects.
+}
 
 
 

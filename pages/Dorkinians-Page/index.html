@@ -212,6 +212,64 @@
 
                     </article>
 
+                    <article class="nav-targets" id="all-stats">
+
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
+
+                            <h2 class="textcenter">All Stats</h2>
+
+                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+                            <div class="loader hidden" id="stats-loader-div">
+                                <div class="duo-loader">
+                                    <div class="duo duo1">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                    <div class="duo duo2">
+                                        <div class="dot dot-a"></div>
+                                        <div class="dot dot-b"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add a top level holder section area. -->
+                            <section class="player-stats-area">
+
+                                <section class="player-stats-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                                        <select name="PlayerSelection" class="player-selection-dropdown">
+                                            <option value="" selected="selected">Select Player</option>
+                                            <option value="lukebangs">Luke Bangs</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <div class="table-wrapper">
+                                        <table id="stats-table" class="column-highlight">
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        </table>
+                                    </div>
+
+                                </section>
+
+                            </section>
+
+
+
+
+                        </section>
+
+
+
+
+
+
+
+                    </article>
+
                     <article class="nav-targets" id="player-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -736,6 +794,7 @@
 
                     <nav id="nav-bar">
                         <a href="#club-stats" active>Club Stats</a>
+                        <a href="#all-stats">All Stats</a>
                         <a href="#player-stats">Player Stats</a>
                         <a href="#team-of-the-week">Team of the Week</a>
                         <a href="#comparison">Comparison</a>
