@@ -10,7 +10,9 @@
 	1.3. * rules.
 	1.4. body rules.
 2. All general rules.
-	2.1. Text rules.
+	2.1. Text styling.
+	2.2  Table styling.
+	2.3  Dropdown styling.
 3. Page layout specific rules.
 4. Media Queries
 	4.1. Scaling rules.
@@ -138,7 +140,7 @@ Section 2
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Text styling. */
+/* 1. Text styling. */
 
 h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
@@ -162,7 +164,7 @@ p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, but
 /* Used for top header text. */
 h1 {
 	font-size: 32px; /* Fallback value. */
-  	font-size: 1.6rem; /* Relative to root value. */
+  	font-size: 1.6rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
 	color: white;
@@ -171,7 +173,7 @@ h1 {
 /* Used for tab header text. */
 h2 {
 	font-size: 32px; /* Fallback value. */
-  	font-size: 1.4rem; /* Relative to root value. */
+  	font-size: 1.4rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	color: var(--main-dorkinians-yellow-colour, yellow);
 	padding-bottom: 1rem;
@@ -180,7 +182,7 @@ h2 {
 /* Used for sub section header text. */
 h3 {
 	font-size: 32px; /* Fallback value. */
-  	font-size: 1.2rem; /* Relative to root value. */
+  	font-size: 1.2rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	color: white;
 	padding-bottom: 1rem;
@@ -189,13 +191,13 @@ h3 {
 /* Used for text bulk on page. */
 p {
 	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
 }
 
 /* Used for hyperlinks across the site. */
 a {
 	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -226,7 +228,9 @@ a {
 	font-style: oblique;
 }
 
-/* Table classes */
+
+
+/* 2. Table classes */
 
 table {
 	/* background-color: white; */
@@ -237,6 +241,8 @@ table {
 	border: none;
 	border-collapse: collapse;
 	border-radius: var(--border-radius, 0.2rem);
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.7rem; /* Relative to root (html) value. */
 	/*overflow: hidden; /* Required for column highlighting. */
 	/* For interior borders, look at the td class. */
 	/* overflow: scroll; */
@@ -249,7 +255,7 @@ th {
 	box-shadow: inset 0rem 0rem 0rem var(--main-dorkinians-yellow-colour, yellow), inset 0rem -0.25rem 0rem var(--main-dorkinians-yellow-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 	font-style: bold; /* Make the header text bold */
 	font-size: 14px; /* Fallback value. */
-	font-size: 1rem; /* Relative to root value. */
+	font-size: 0.8rem; /* Relative to root (html) value. */
 	text-align: center; /* By default, center all table text. */
 	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
 	position: sticky; /* Make the header row sticky position to lock it out. */
@@ -260,14 +266,14 @@ th {
 
 /* Used for table rows across the site. */
 tr {
-	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
+	/* font-size: 14px; /* Fallback value. */
+	/* font-size: 0.9rem; /* Relative to root (html) value. */
 }
 
 /* Used for table cell text across the site. */
 td {
-	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
+	/* font-size: 14px; /* Fallback value. */
+	/* font-size: 0.9rem; /* Relative to root (html) value. */
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
@@ -409,7 +415,7 @@ tr:last-child td:last-child {
 
 p.tooltiptext {
 	font-size: 12.8px; /* Fallback value. */
-	font-size: 0.8rem; /* Relative to root value. */
+	font-size: 0.8rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
 }
@@ -449,8 +455,15 @@ p.tooltiptext {
 	}
 }
 
+/* 3. Dropdown styling */
 
-
+/* Add a class for all common selection dropdown styling. */
+.selection-dropdown {
+	background-color: rgba(255, 255, 255, 0.10);;
+	color: white;
+	border: none;
+	text-align: center;
+}
 
 
 
@@ -503,12 +516,9 @@ Section 3
 	text-align: center;
 }
 
-.team-selection-dropdown {
+/* Add an id styling for the very top club dropdown styling. */
+#main-team-selection-dropdown {
 	width: 80%;
-	background-color: rgba(255, 255, 255, 0.10);;
-	color: white;
-	border: none;
-	text-align: center;
 }
 
 .filter-container {
@@ -567,6 +577,12 @@ Section 3
 	padding: 0.3rem;
 }
 
+
+/* All Stats Tab */
+
+#all-stats-table {
+	/* font-size: 0.6rem !important; */
+}
 
 
 
