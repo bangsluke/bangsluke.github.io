@@ -68,7 +68,7 @@
 
         <div class="selection-container">
             <!-- Add a drop down select box for the user to change the statistic category. -->
-            <select name="TeamSelection" class="team-selection-dropdown">
+            <select name="TeamSelection" class="selection-dropdown" id="main-team-selection-dropdown">
                 <option value="" selected="selected">Whole club</option>
                 <option value="1st XI">1st XI</option>
                 <option value="2nd XI">2nd XI</option>
@@ -240,15 +240,57 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
-                                        <select name="PlayerSelection" class="player-selection-dropdown">
-                                            <option value="" selected="selected">Select Player</option>
-                                            <option value="lukebangs">Luke Bangs</option>
-                                        </select>
+                                        
+                                            <!-- Let the user pick which season to filter for. -->
+                                            <select name="SeasonSelection" class="selection-dropdown" id="season-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
+                                                <option value="" selected="selected">Select Season</option>
+                                                <option value="2016/17">2016/17</option>
+                                                <option value="2017/18">2017/18</option>
+                                                <option value="2018/19">2018/19</option>
+                                                <option value="2019/20">2019/20</option>
+                                                <option value="2020/21">2020/21</option>
+                                                <option value="2021/22">2021/22</option>
+                                            </select>
+
+                                            <!-- Let the user pick which player to filter for. -->
+                                            <select name="PlayerSelection" class="selection-dropdown" id="player-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
+                                                <option value="" selected="selected">Select Player</option>
+                                                <option value="lukebangs">Luke Bangs</option>
+                                                <option>Sam Slade</option>
+                                                <option>Al Thom</option>
+                                                <option>Andy Higgins</option>
+                                                <option>Ali Robins</option>
+                                                <option>Jonny Sourris</option>
+                                                <option>Kieran Mackrell</option>
+                                                <option>Oli Goddard</option>
+                                            </select>
+
+                                            <!-- Let the user pick which team to filter for. -->
+                                            <select name="TeamSelection" class="selection-dropdown" id="team-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
+                                                <option value="" selected="selected">Select Team</option>
+                                                <option value="WholeClub">Whole club</option>
+                                                <option value="1st XI">1st XI</option>
+                                                <option value="2nd XI">2nd XI</option>
+                                                <option value="3rd XI">3rd XI</option>
+                                                <option value="4th XI">4th XI</option>
+                                                <option value="5th XI">5th XI</option>
+                                                <option value="6th XI">6th XI</option>
+                                                <option value="7th XI">7th XI</option>
+                                                <option value="8th XI">8th XI</option>
+                                            </select>
+
+                                            <!-- Let the user pick which location to filter for. -->
+                                            <select name="LocationSelection" class="selection-dropdown" id="location-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
+                                                <option value="" selected="selected">Select Location</option>
+                                                <option value="Home">Home</option>
+                                                <option value="Away">Away</option>
+                                            </select>
+
                                     </div>
 
                                     <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                     <div class="table-wrapper">
-                                        <table id="stats-table" class="column-highlight">
+                                        <table id="all-stats-table" class="column-highlight">
                                             <!-- Data loaded into here by jDorkiniansMain.js -->
                                         </table>
                                     </div>
@@ -257,16 +299,7 @@
 
                             </section>
 
-
-
-
                         </section>
-
-
-
-
-
-
 
                     </article>
 
