@@ -66,21 +66,6 @@
             <h1>Stats Page</h1>
         </div>
 
-        <div class="selection-container">
-            <!-- Add a drop down select box for the user to change the statistic category. -->
-            <select name="TeamSelection" class="selection-dropdown" id="main-team-selection-dropdown">
-                <option value="" selected="selected">Whole club</option>
-                <option value="1st XI">1st XI</option>
-                <option value="2nd XI">2nd XI</option>
-                <option value="3rd XI">3rd XI</option>
-                <option value="4th XI">4th XI</option>
-                <option value="5th XI">5th XI</option>
-                <option value="6th XI">6th XI</option>
-                <option value="7th XI">7th XI</option>
-                <option value="8th XI">8th XI</option>
-            </select>
-        </div>
-
         <div class="filter-container">
             <!-- Add filter icon with JavaScript functionality. -->
             <img class="center filtericon fadein" id="filtericon"
@@ -124,12 +109,44 @@
 
                 <section class="scroll-snap-x">
 
+                    <!-- Club Stats Tab -->
                     <article class="nav-targets" id="club-stats">
 
                         <!-- Add the main lighter coloured page section. -->
                         <section class="page-section">
 
                             <h2 class="textcenter">Club Stats</h2>
+
+                            <div class="selection-container">
+                                        
+                                <!-- Add a drop down select box for the user to change the statistic category. -->
+
+                                <!-- Let the user pick which season to filter for. -->
+                                <select name="SeasonSelection" class="selection-dropdown" id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Season</option>
+                                    <option value="2016/17">2016/17</option>
+                                    <option value="2017/18">2017/18</option>
+                                    <option value="2018/19">2018/19</option>
+                                    <option value="2019/20">2019/20</option>
+                                    <option value="2020/21">2020/21</option>
+                                    <option value="2021/22">2021/22</option>
+                                </select>
+
+                                <!-- Let the user pick which team to filter for. -->
+                                <select name="TeamSelection" class="selection-dropdown" id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Team</option>
+                                    <option value="WholeClub">Whole club</option>
+                                    <option value="1st XI">1st XI</option>
+                                    <option value="2nd XI">2nd XI</option>
+                                    <option value="3rd XI">3rd XI</option>
+                                    <option value="4th XI">4th XI</option>
+                                    <option value="5th XI">5th XI</option>
+                                    <option value="6th XI">6th XI</option>
+                                    <option value="7th XI">7th XI</option>
+                                    <option value="8th XI">8th XI</option>
+                                </select>
+                            
+                            </div>
 
                             <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
                             <div class="loader hidden" id="club-stats-loader-div">
@@ -147,7 +164,7 @@
 
                             <section class="club-stats-area">
 
-                                <section class="club-stats-clubStats-container">
+                                <!-- <section class="club-stats-clubStats-container">
 
                                     <details>All stats are collected each week by the Captains and reported to the club
                                         for
@@ -156,7 +173,7 @@
                                     <p>- Show total club stats, total recorded goals scored etc.</p>
                                     <p>- How many members</p>
 
-                                </section>
+                                </section> -->
 
                                 <!-- Weather Widget Section -->
                                 <section class="club-stats-weather-container">
@@ -212,6 +229,7 @@
 
                     </article>
 
+                    <!-- All Stats Tab -->
                     <article class="nav-targets" id="all-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -239,6 +257,7 @@
                                 <section class="player-stats-selection-container">
 
                                     <div class="selection-container">
+
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
                                         
                                             <!-- Let the user pick which season to filter for. -->
@@ -303,6 +322,7 @@
 
                     </article>
 
+                    <!-- Player Stats Tab -->
                     <article class="nav-targets" id="player-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -400,6 +420,7 @@
 
                     </article>
 
+                    <!-- Team of the Week Tab -->
                     <article class="nav-targets" id="team-of-the-week">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -446,6 +467,7 @@
 
                     </article>
 
+                    <!-- Comparison Tab -->
                     <article class="nav-targets" id="comparison">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -517,7 +539,8 @@
 
                     </article>
 
-                    <article class="nav-targets" id="results-tables-fixtures">
+                    <!-- Tables, Results & Fixture Tab -->
+                    <article class="nav-targets" id="tables-results-fixtures">
 
                         <!-- Dorkinians Table Section -->
                         <section class="page-section" id="dorkinians-tables-section">
@@ -526,13 +549,31 @@
 
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
+                            <div class="selection-container">
+
+                                <!-- Let the user pick which team to filter for. -->
+                                <select name="TeamSelection" class="selection-dropdown" id="tables-results-fixtures-team-selection-dropdown" onchange="TBC()">
+                                    <option value="" selected="selected">Team</option>
+                                    <option value="WholeClub">Whole club</option>
+                                    <option value="1st XI">1st XI</option>
+                                    <option value="2nd XI">2nd XI</option>
+                                    <option value="3rd XI">3rd XI</option>
+                                    <option value="4th XI">4th XI</option>
+                                    <option value="5th XI">5th XI</option>
+                                    <option value="6th XI">6th XI</option>
+                                    <option value="7th XI">7th XI</option>
+                                    <option value="8th XI">8th XI</option>
+                                </select>
+
+                            </div>
+
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sTable">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep118512309" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep118512309" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
                                         here for Premier Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -540,7 +581,7 @@
                                     var lrcode = '118512309'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -550,7 +591,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Senior Two</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep710535041" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep710535041" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
                                         here for Senior Two South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -558,7 +599,7 @@
                                     var lrcode = '710535041'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -568,7 +609,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep57161422" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep57161422" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=841231919">click
                                         here for One South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -576,7 +617,7 @@
                                     var lrcode = '57161422'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -586,7 +627,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep778268394" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep778268394" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
                                         here for Four South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -594,7 +635,7 @@
                                     var lrcode = '778268394'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -604,7 +645,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Five South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep190854409" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep190854409" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009">click
                                         here for Five South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -612,7 +653,7 @@
                                     var lrcode = '190854409'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -622,7 +663,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep311599615" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep311599615" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=626187179">click
                                         here for Six South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -630,7 +671,7 @@
                                     var lrcode = '311599615'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -640,7 +681,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Seven South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep93079112" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep93079112" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
                                         here for Seven South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -648,7 +689,7 @@
                                     var lrcode = '93079112'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -658,7 +699,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep812886273" class="AFCTable">Data loading....<a
+                                <!-- <div id="lrep812886273" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
                                         here for Eight South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -666,7 +707,7 @@
                                     var lrcode = '812886273'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -686,7 +727,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep884356525" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep884356525" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
                                         here for Premier</a><br /><br /><a
@@ -695,7 +736,7 @@
                                     var lrcode = '884356525'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -705,7 +746,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep678186881" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep678186881" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
                                         here for Senior Two South</a><br /><br /><a
@@ -714,7 +755,7 @@
                                     var lrcode = '678186881'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -735,7 +776,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep355450147" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep355450147" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
                                         here for Four South</a><br /><br /><a
@@ -744,7 +785,7 @@
                                     var lrcode = '355450147'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -754,7 +795,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 5s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep318288599" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep318288599" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009">click
                                         here for Five South</a><br /><br /><a
@@ -763,7 +804,7 @@
                                     var lrcode = '318288599'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -784,7 +825,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep531227286" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep531227286" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
                                         here for Seven South</a><br /><br /><a
@@ -793,7 +834,7 @@
                                     var lrcode = '531227286'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -803,7 +844,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep568890794" class="AFCResultsAndFixtures">Data
+                                <!-- <div id="lrep568890794" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
                                         here for Eight South</a><br /><br /><a
@@ -812,7 +853,7 @@
                                     var lrcode = '568890794'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
 
                             </div>
 
@@ -831,7 +872,7 @@
                         <a href="#player-stats">Player Stats</a>
                         <a href="#team-of-the-week">Team of the Week</a>
                         <a href="#comparison">Comparison</a>
-                        <a href="#results-tables-fixtures">Results, Tables & Fixtures</a>
+                        <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
                     </nav>
 
                     <span class="snap-indicator"></span>
