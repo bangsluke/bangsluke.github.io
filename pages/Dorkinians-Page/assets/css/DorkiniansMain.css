@@ -241,6 +241,7 @@ table {
 	border: none;
 	border-collapse: collapse;
 	border-radius: var(--border-radius, 0.2rem);
+	cursor: pointer; /* Turn the cusor into a pointer when over the table. */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	/*overflow: hidden; /* Required for column highlighting. */
@@ -471,7 +472,10 @@ p.tooltiptext {
 	border: none;
 	text-align: center;
 	width: 20%;
+	height: 1.5rem;
 	margin: auto;
+	font-size: 0.8rem; /* Relative to root (html) value. */
+	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 }
 
 

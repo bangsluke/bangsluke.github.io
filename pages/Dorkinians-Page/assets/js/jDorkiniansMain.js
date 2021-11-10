@@ -7,6 +7,10 @@
 
 // * Process Explained
 
+// Firstly, there are three arrays of data to load in;
+    // 1. The full club fixtures list - fixturesListSheetURLCSV
+    // 2. The all stats table - displayDetailsSheetCSV
+    // 3. The all time player stats - allTimeStatsSheetCSV
 // TBC
 // To load the table data across three different tables on the three Dorkinians tabs, the JavaScript file runs the same Papa Parse process three times, each with a different selector.
 // Firstly, an init function calls all three sub processes.
@@ -32,13 +36,22 @@ window.addEventListener('load', function () {
     console.timeEnd(); // End the console timer.
 });
 
-// Other Functions
+// Initiation Function
 
 // Publically define the location of the Google Sheets.
-var resultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
-var matchDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1016205165&single=true&output=csv';
-var displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
-// define more url csv constants.
+
+// Fixtures List Tab
+const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
+
+// Match Details Tab
+//var matchDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1016205165&single=true&output=csv';
+
+// Display Details Tab
+const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
+
+// All Time Stats Tab
+const allTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1722492164&single=true&output=csv';
+
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
@@ -59,7 +72,7 @@ function init() {
 
     // Step 2. Results tab data.
     console.log('%c' + '> 2. Results tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    Papa.parse(resultsSheetURLCSV, {
+    Papa.parse(fixturesListSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
@@ -83,76 +96,11 @@ function init() {
 
 
 
+// Tab Functions
 
+// 1. Club/Team Stats Tab
 
-// 1.1. All Stats tab data.
-
-// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-function showAllStatsTabInfo(results) {
-    console.log("> Function [Stats Table]: showAllStatsTabInfo(results) called.")
-
-    // Process the original array of objects received.
-    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
-    //console.log(dataArrayOfObjects); // Log the received array of objects.
-    //var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    //console.log("Original Length = " + objectLength); // Log the original length.
-
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-    
-        // Old code. // First filter for the player name.
-        //const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "PLAYER NAME", "Henry Warne"); // Call the created filterArrayOfObjects function.
-
-        // Get the selections from the selection boxes.
-            // Season selection.
-                var seasonValueDropdown = document.getElementById("season-selection-dropdown"); // Get the season selected dropdown.
-                var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-                //console.log("seasonValue = " + seasonValue);
-            // Player selection.
-                var playerValueDropdown = document.getElementById("player-selection-dropdown"); // Get the player selected dropdown.
-                var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-                //console.log("playerValue = " + playerValue);
-            // Team selection.
-                var teamValueDropdown = document.getElementById("team-selection-dropdown"); // Get the team selected dropdown.
-                var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-                //console.log("teamValue = " + teamValue);
-            // Location selection.
-                var locationValueDropdown = document.getElementById("location-selection-dropdown"); // Get the location selected dropdown.
-                var locationValue = locationValueDropdown.options[locationValueDropdown.selectedIndex].text; // Get the location selected. (https://stackoverflow.com/a/8549358/14290169).
-                //console.log("locationValue = " + locationValue);
-
-        // Filter for all selections.
-        const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", playerValue, "TEAM", teamValue, "LOCATION", locationValue); // Call the created filterArrayOfObjects function.
-
-    //console.log(filteredArrayOfObjects); // Log the filtered array of objects.
-    //objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
-    //console.log("New Length = " + objectLength); // Log the original length.
-
-    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
-    clearTable("#all-stats-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#all-stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
-    hideLoaderDots('stats-loader-div'); // Hide the loader dots. See LoaderDots.js.
-}
-
-// 1.2. All Stats tab data refresh.
-
-// Create a function that is called when the user changes a dropdown. This function is called from the HTML select elements.
-function showAllStatsTabUpdatedInfo() {
-    console.log("> Function [Stats Table]: showAllStatsTabUpdatedInfo(results) called.")
-
-    Papa.parse(displayDetailsSheetCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showAllStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
-}
-
-
-
-
-
-
-// 2.1. Club Stats tab data.
+// 1.1. Club/Team Stats tab data.
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showResultsTabInfo(results) {
@@ -165,19 +113,19 @@ function showResultsTabInfo(results) {
     //console.log("Original Length = " + objectLength); // Log the original length.
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-        // Season selection.
-        var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
-        var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-        //console.log("seasonValue = " + seasonValue);
-        // Team selection.
-        var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
-        var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-        //console.log("teamValue = " + teamValue);
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("seasonValue = " + seasonValue);
+    // Team selection.
+    var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
+    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("teamValue = " + teamValue);
 
-        // Filter for all selections.
-        // Re-use the re-usable function but don't pass all arguments.
-        const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
-    
+    // Filter for all selections.
+    // Re-use the re-usable function but don't pass all arguments.
+    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
+
     //console.log(filteredArrayOfObjects); // Log the filtered array of objects.
     //objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
     //console.log("New Length = " + objectLength); // Log the original length.
@@ -188,7 +136,7 @@ function showResultsTabInfo(results) {
     hideLoaderDots('results-loader-div'); // Hide the loader dots. See LoaderDots.js.
 }
 
-// 2.2. Club Stats Results tab data refresh.
+// 1.2. Club Stats Results tab data refresh.
 
 // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
 function showAllResultsTabUpdatedInfo() {
@@ -206,27 +154,87 @@ function showAllResultsTabUpdatedInfo() {
 
 
 
-
-
-// 3. Fixtures tab data.
-
+// 2. Player Stats Tab
 
 
 
 
 
+// 3. All Stats Tab
+
+// 3.1. All Stats tab data.
+
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+function showAllStatsTabInfo(results) {
+    console.log("> Function [Stats Table]: showAllStatsTabInfo(results) called.")
+
+    // Process the original array of objects received.
+    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    //console.log(dataArrayOfObjects); // Log the received array of objects.
+    //var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    //console.log("Original Length = " + objectLength); // Log the original length.
+
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+
+    // Old code. // First filter for the player name.
+    //const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "PLAYER NAME", "Henry Warne"); // Call the created filterArrayOfObjects function.
+
+    // Get the selections from the selection boxes.
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("seasonValue = " + seasonValue);
+    // Player selection.
+    var playerValueDropdown = document.getElementById("player-selection-dropdown"); // Get the player selected dropdown.
+    var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("playerValue = " + playerValue);
+    // Team selection.
+    var teamValueDropdown = document.getElementById("team-selection-dropdown"); // Get the team selected dropdown.
+    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("teamValue = " + teamValue);
+    // Location selection.
+    var locationValueDropdown = document.getElementById("location-selection-dropdown"); // Get the location selected dropdown.
+    var locationValue = locationValueDropdown.options[locationValueDropdown.selectedIndex].text; // Get the location selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("locationValue = " + locationValue);
+
+    // Filter for all selections.
+    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", playerValue, "TEAM", teamValue, "LOCATION", locationValue); // Call the created filterArrayOfObjects function.
+
+    //console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    //objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    //console.log("New Length = " + objectLength); // Log the original length.
+
+    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
+    clearTable("#all-stats-table"); // Call the clearTable function to empty the table.
+    createFullTable(filteredArrayOfObjects, "#all-stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('stats-loader-div'); // Hide the loader dots. See LoaderDots.js.
+}
+
+// 3.2. All Stats tab data refresh.
+
+// Create a function that is called when the user changes a dropdown. This function is called from the HTML select elements.
+function showAllStatsTabUpdatedInfo() {
+    console.log("> Function [Stats Table]: showAllStatsTabUpdatedInfo(results) called.")
+
+    Papa.parse(displayDetailsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showAllStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    })
+}
 
 
 
 
+// 4. Team of the Week Tab
 
 
 
+// 5. Comparison Tab
 
 
-
-
-
+// 6. Tables, Results & Fixture Tab
 
 
 
@@ -395,6 +403,8 @@ function generateTable(table, data, toolTipBoolean) {
 }
 
 
+// Filter Array Functions
+
 // Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
 function filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
     // Receive an Array of Objects, a key name and a filter value.
@@ -410,39 +420,39 @@ function multiFilterArrayOfObjects(ArrayOfObjects, keyNameSeason, filterValueSea
     // Initially define the variable that will be manipulated and produced.
     var filteredArrayOfObjects = ArrayOfObjects;
     // Filter the Array of Objects for multiple criteria.
-        
-        // Filter the Array of Objects for the defined season.
-        if (filterValueSeason === "Season") { // Don't filter if unpicked.
-            // Do nothing as season hasn't been selected.
-            console.log(">>> Data not filtered for seasons as 'Season' still picked.")
-        } else { // Filter the Array of Objects.
-            filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameSeason].includes(filterValueSeason))); // Filter down the data into a new array of objects.
-        }
 
-        // Filter the Array of Objects for the selected player.
-        if (filterValuePlayer === "Player") { // Don't filter if unpicked.
-            // Do nothing as player hasn't been selected.
-            console.log(">>> Data not filtered for players as 'Player' still picked.")
-        } else { // Filter the Array of Objects.
-            filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNamePlayer].includes(filterValuePlayer))); // Filter down the data into a new array of objects.
-        }
+    // Filter the Array of Objects for the defined season.
+    if (filterValueSeason === "Season") { // Don't filter if unpicked.
+        // Do nothing as season hasn't been selected.
+        console.log(">>> Data not filtered for seasons as 'Season' still picked.")
+    } else { // Filter the Array of Objects.
+        filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameSeason].includes(filterValueSeason))); // Filter down the data into a new array of objects.
+    }
 
-        // Filter the Array of Objects for the selected team.
-        if (filterValueTeam === "Team") { // Don't filter if unpicked.
-            // Do nothing as team hasn't been selected.
-            console.log(">>> Data not filtered for teams as 'Team' still picked.")
-        } else { // Filter the Array of Objects.
-            filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameTeam].includes(filterValueTeam))); // Filter down the data into a new array of objects.
-        }
+    // Filter the Array of Objects for the selected player.
+    if (filterValuePlayer === "Player") { // Don't filter if unpicked.
+        // Do nothing as player hasn't been selected.
+        console.log(">>> Data not filtered for players as 'Player' still picked.")
+    } else { // Filter the Array of Objects.
+        filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNamePlayer].includes(filterValuePlayer))); // Filter down the data into a new array of objects.
+    }
 
-        // Filter the Array of Objects for the selected location.
-        if (filterValueLocation === "Location") { // Don't filter if unpicked.
-            // Do nothing as location hasn't been selected.
-            console.log(">>> Data not filtered for locations as 'Location' still picked.")
-        } else { // Filter the Array of Objects.
-            filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameLocation].includes(filterValueLocation))); // Filter down the data into a new array of objects.
-        }
-    
+    // Filter the Array of Objects for the selected team.
+    if (filterValueTeam === "Team") { // Don't filter if unpicked.
+        // Do nothing as team hasn't been selected.
+        console.log(">>> Data not filtered for teams as 'Team' still picked.")
+    } else { // Filter the Array of Objects.
+        filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameTeam].includes(filterValueTeam))); // Filter down the data into a new array of objects.
+    }
+
+    // Filter the Array of Objects for the selected location.
+    if (filterValueLocation === "Location") { // Don't filter if unpicked.
+        // Do nothing as location hasn't been selected.
+        console.log(">>> Data not filtered for locations as 'Location' still picked.")
+    } else { // Filter the Array of Objects.
+        filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameLocation].includes(filterValueLocation))); // Filter down the data into a new array of objects.
+    }
+
     return filteredArrayOfObjects; // Return the new filtered array of objects.
 }
 
