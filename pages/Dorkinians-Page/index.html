@@ -252,6 +252,35 @@
                                 </div>
                             </div>
 
+
+                            <section class="player-stats-selection-container">
+
+                                <div class="selection-container">
+                                    <!-- Add a drop down select box for the user to change the statistic category. -->
+                                    <select name="player-stats-player-selection" class="selection-dropdown" id="player-stats-player-selection">
+                                        <option >Luke Bangs</option>
+                                        <option selected="selected">Sam Slade</option>
+                                    </select>
+                                </div>
+
+                            </section>
+
+                            <!-- Add a top level holder section area. -->
+                            <section class="player-stats-area">
+
+                                <h3 class="textleft">All Time Player Stats</h3>
+
+                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                <div class="table-wrapper">
+                                    <table id="all-time-player-stats-table" class="column-highlight">
+                                        <!-- Data loaded into here by jDorkiniansMain.js -->
+                                    </table>
+                                </div>
+
+                            </section>
+
+                            <!-- OLD -->
+
                             <!-- Add a top level holder section area. -->
                             <section class="player-stats-area">
 
@@ -267,12 +296,14 @@
 
                                 </section>
 
+                                
+
                                 <section class="player-stats-profile-container">
 
                                     <h3 class="textleft">Profile</h3>
 
                                     <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.webp"
-                                    width="410" height="324" alt="Profile">
+                                        width="410" height="324" alt="Profile">
 
                                 </section>
 
@@ -281,7 +312,7 @@
                                     <h3 class="textleft">This Season</h3>
 
                                     <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.webp"
-                                    width="847" height="574" alt="ThisSeason">
+                                        width="847" height="574" alt="ThisSeason">
 
                                 </section>
 
@@ -290,7 +321,7 @@
                                     <h3 class="textleft">Minute By Minute</h3>
 
                                     <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.webp"
-                                    width="841" height="510" alt="MinuteByMinute">
+                                        width="841" height="510" alt="MinuteByMinute">
 
                                 </section>
 
@@ -368,7 +399,7 @@
                                             <option value="2018/19">2018/19</option>
                                             <option value="2019/20">2019/20</option>
                                             <option value="2020/21">2020/21</option>
-                                            <option value="2021/22"selected="selected">2021/22</option>
+                                            <option value="2021/22" selected="selected">2021/22</option>
                                         </select>
 
                                         <!-- Let the user pick which player to filter for. -->
@@ -452,7 +483,7 @@
                                     <h3 class="textleft">TOTW</h3>
 
                                     <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Team Of The Week 2020-10-24.webp"
-                                    width="943" height="1209" class="center" alt="Profile">
+                                        width="943" height="1209" class="center" alt="Profile">
 
                                 </section>
 

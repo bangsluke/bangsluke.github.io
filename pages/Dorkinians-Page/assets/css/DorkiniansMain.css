@@ -586,18 +586,25 @@ Section 3
 
 /* Player Stats Tab */
 
+#all-time-player-stats-table {
+	height: 5 rem;
+	padding-bottom: 6rem;
+	margin-bottom: 1rem;
+}
+
+
 .player-stats-area {
 	/* background-color: violet; */
-	display: grid; 
+	/* display: grid; 
 	grid-template-columns: 1fr 2fr; 
-	grid-template-rows: max-content max-content max-content 1fr 1fr;
+	grid-template-rows: max-content max-content max-content 1fr 1fr; */
 	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
-	grid-template-areas: 
+	/* grid-template-areas: 
 	  "Selection Selection"
 	  "Profile ThisSeason"
 	  "MinuteByMinute MinuteByMinute"
 	  "AllTime AllTime"
-	  "GameRecord GameRecord";
+	  "GameRecord GameRecord"; */
 }
 
 .player-stats-selection-container {

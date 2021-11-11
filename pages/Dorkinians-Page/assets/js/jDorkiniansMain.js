@@ -50,7 +50,7 @@ const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-
 const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
 
 // All Time Stats Tab
-const allTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1722492164&single=true&output=csv';
+const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=246566173&single=true&output=csv';
 
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
@@ -59,6 +59,19 @@ function init() {
 
     // Step 0.
     console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+
+    // Step 1. 
+    // Player Stats Tab.
+    // All Time Player Stats data.
+    console.log('%c' + '> 1. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    Papa.parse(displayAllTimeStatsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: showPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+    })
+
 
     // Step 1. All Stats tab data.
     console.log('%c' + '> 1. All Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -156,7 +169,37 @@ function showAllResultsTabUpdatedInfo() {
 
 // 2. Player Stats Tab
 
+// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+function showPlayerStatsTabInfo(results) {
+    console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
 
+    console.log("SEE HEEEEEEEEEERE");
+
+    // Process the original array of objects received.
+    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    console.log("Original Length = " + objectLength); // Log the original length.
+
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    // Player selection.
+    var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
+    var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    //console.log("playerValue = " + playerValue);
+
+    // Filter for the selection.
+    // Re-use the re-usable function..
+    const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
+
+    console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    console.log("New Length = " + objectLength); // Log the original length.
+
+    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
+    clearTable("#all-time-player-stats-table"); // Call the clearTable function to empty the table.
+    createFullTable(filteredArrayOfObjects, "#all-time-player-stats-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+    hideLoaderDots('results-loader-div'); // Hide the loader dots. See LoaderDots.js.
+}
 
 
 
@@ -258,16 +301,16 @@ function clearTable(selector) {
 // Create the table by passing the data to the function.
 function createFullTable(data, selector, toolTipBoolean, dataForm) {
     console.log('%c' + '>> Re-usable Function: createFullTable(data, selector, toolTipBoolean, dataForm) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean + ', dataForm = ' + dataForm, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
-    //console.log(data); // Log the passed data to the console.
+    // console.log(data); // Log the passed data to the console.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
     if (dataForm == "array") { // Define the header data as from the array.
-        //console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
+        // console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
         var headerdata = data[0]; // Get the header data from the first element of the array.
         //console.log("headerdata printed below:");
         //console.log(headerdata);
     } else if (dataForm == "object") { // Define the header data as the keys of the object.
-        //console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
+        // console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
         var headerdata = Object.keys(data[0]); // Create an array of the object headers from the array data received.
         //console.log("headerdata printed below:");
         //console.log(headerdata);
@@ -294,7 +337,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
         let th = document.createElement("th"); // Create the th element.
         // If the toolTipBoolean is true, create the headers to also include the tool tips.
         if (toolTipBoolean == true) { // Define how to add the text depending on if toolTips are enabled for the table.
-            //console.log("toolTipBoolean is true so adding tooltip.");
+            console.log("toolTipBoolean is true so adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
             // Skip the first column.
