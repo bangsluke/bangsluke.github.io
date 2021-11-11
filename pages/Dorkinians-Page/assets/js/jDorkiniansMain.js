@@ -8,13 +8,12 @@
 // * Process Explained
 
 // Firstly, there are three arrays of data to load in;
-    // 1. The full club fixtures list - fixturesListSheetURLCSV
-    // 2. The all stats table - displayDetailsSheetCSV
-    // 3. The all time player stats - allTimeStatsSheetCSV
+// 1. The full club fixtures list - fixturesListSheetURLCSV
+// 2. The all stats table - displayDetailsSheetCSV
+// 3. The all time player stats - allTimeStatsSheetCSV
 // TBC
 // To load the table data across three different tables on the three Dorkinians tabs, the JavaScript file runs the same Papa Parse process three times, each with a different selector.
 // Firstly, an init function calls all three sub processes.
-// An event listener hides the loader dots when images
 // First section loads in the Stats tab data.
 // Second section loads in the Results tab data.
 // Third section loads in the Fixtures tab data.
@@ -30,10 +29,11 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 
 // Add a load event listener - which completes after the init() function below - (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
 window.addEventListener('load', function () {
-    console.log('%c' + '> Dorkinians page images and other resources all loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
-    //hideLoaderDots('loader-div'); // Hide the loader dots. See LoaderDots.js.    
-    //showLoaderDots('titan-loader'); // Show the loader dots. See LoaderDots.js. 
+    console.log('%c' + '> Dorkinians page images and other resources all loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message. 
     console.timeEnd(); // End the console timer.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    // stopRotateLogo();
 });
 
 // Initiation Function
@@ -60,6 +60,8 @@ function init() {
     // Step 0.
     console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo();
 
     // Step 1. 
     // Player Stats Tab.
@@ -100,6 +102,9 @@ function init() {
     //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
     //     complete: showTitanFactorExplainedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     // })
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    // stopRotateLogo();
 }
 
 
@@ -146,7 +151,9 @@ function showResultsTabInfo(results) {
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#results-table"); // Call the clearTable function to empty the table.
     createFullTable(filteredArrayOfObjects, "#results-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
-    hideLoaderDots('results-loader-div'); // Hide the loader dots. See LoaderDots.js.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo();
 }
 
 // 1.2. Club Stats Results tab data refresh.
@@ -155,12 +162,18 @@ function showResultsTabInfo(results) {
 function showAllResultsTabUpdatedInfo() {
     console.log("> Function [Stats Table]: showAllResultsTabUpdatedInfo(results) called.")
 
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo();
+
     Papa.parse(resultsSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showResultsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     })
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    // stopRotateLogo();
 }
 
 
@@ -172,8 +185,6 @@ function showAllResultsTabUpdatedInfo() {
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showPlayerStatsTabInfo(results) {
     console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
-
-    console.log("SEE HEEEEEEEEEERE");
 
     // Process the original array of objects received.
     var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
@@ -198,7 +209,6 @@ function showPlayerStatsTabInfo(results) {
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#all-time-player-stats-table"); // Call the clearTable function to empty the table.
     createFullTable(filteredArrayOfObjects, "#all-time-player-stats-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
-    hideLoaderDots('results-loader-div'); // Hide the loader dots. See LoaderDots.js.
 }
 
 
@@ -250,7 +260,6 @@ function showAllStatsTabInfo(results) {
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#all-stats-table"); // Call the clearTable function to empty the table.
     createFullTable(filteredArrayOfObjects, "#all-stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
-    hideLoaderDots('stats-loader-div'); // Hide the loader dots. See LoaderDots.js.
 }
 
 // 3.2. All Stats tab data refresh.
@@ -259,12 +268,18 @@ function showAllStatsTabInfo(results) {
 function showAllStatsTabUpdatedInfo() {
     console.log("> Function [Stats Table]: showAllStatsTabUpdatedInfo(results) called.")
 
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo();
+
     Papa.parse(displayDetailsSheetCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: showAllStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     })
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    // stopRotateLogo();
 }
 
 
@@ -541,4 +556,30 @@ function toggleFullScreen(element) {
         console.log("Entering full screen mode.");
         requestFullScreen(element || document.documentElement);
     }
+}
+
+
+
+// Dorkinians Logo Rotation Functions
+
+// Start Rotation
+function rotateLogo() {
+    console.log('%c' + '> rotateLogo() called. Dorkinians logo rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Add classes to the Dorkinians logo in the top left corner to simulate loading.
+    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    dorkiniansLogo.classList.add("rotate"); // Add the "rotate" class to the logo.
+    dorkiniansLogo.classList.add("linear"); // Add the "linear" class to the logo.
+    dorkiniansLogo.classList.add("infinite"); // Add the "infinite" class to the logo.
+}
+
+// Finish Rotation
+function stopRotateLogo() {
+    console.log('%c' + '> stopRotateLogo() called. Dorkinians logo stopped rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Remove classes from the Dorkinians logo in the top left corner to simulate loading being completed.
+    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    dorkiniansLogo.classList.remove("rotate"); // Remove the "rotate" class from the logo.
+    dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
+    dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
 }

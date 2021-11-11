@@ -13,10 +13,11 @@
 	2.1. Text styling.
 	2.2  Table styling.
 	2.3  Dropdown styling.
-3. Page layout specific rules.
-4. Media Queries
-	4.1. Scaling rules.
-	4.2. Dark mode rules. */
+3. Page layout (header/footer) specific rules.
+4. Tab layout rules.
+5. Media Queries
+	5.1. Scaling rules.
+	5.2. Dark mode rules. */
 
 /* CSS Best Coding Practice
 	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
@@ -125,11 +126,6 @@ body {
     backdrop-filter: blur( 20px );
 	-webkit-backdrop-filter: blur( 20px );
 }
-
-
-
-
-
 
 
 
@@ -456,6 +452,10 @@ p.tooltiptext {
 	}
 }
 
+
+
+
+
 /* 3. Dropdown styling */
 
 /* Add a class for all common selection container styling. */
@@ -472,6 +472,7 @@ p.tooltiptext {
 	border: none;
 	text-align: center;
 	width: 20%;
+	min-width: 10rem;
 	height: 1.5rem;
 	margin: auto;
 	font-size: 0.8rem; /* Relative to root (html) value. */
@@ -496,54 +497,92 @@ Section 3
 .header-area {
 	/* background-color: violet; */
 	display: grid; 
-	grid-template-columns: 3rem 1fr 3rem; 
-	grid-template-rows: var(--headerHeight, 2.5rem);
+	grid-template-columns: 4rem 1fr 4rem; 
+	grid-template-rows: var(--headerHeight, 2.5rem); /* Fallback if needed. */
+	grid-template-rows: calc(var(--headerHeight) - 0.9rem); /* Make the header a decent height. */
 	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "Logo Title Filter";
+	  "Logo Title Options";
 	border-bottom: 0.125rem solid white;
 }
 
+/* Style the Dorkinians logo in the top left corner. */
 .logo-container {
-	/* background-color: blue; */
+	/* background-color: purple; */
 	grid-area: Logo;
 	padding: 0.3rem;
 }
-
 .logo {
-	width: 2.5rem;
-	height: auto;
+	height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
+	width: auto;
 }
 
+/* Style the central title section. */
 .title-container {
 	/* background-color: red; */
 	grid-area: Title;
-	padding-top: 0.3rem;
+	padding-top: 0.8rem;
 }
 
-.filter-container {
+/* Style the menu options button in the top right corner. */
+.options-container {
 	/* background-color: blue; */
-	grid-area: Filter;
+	grid-area: Options;
 	padding: 0.3rem;
 }
-
-.filtericon {
-    color: white;
+.optionsbutton {
+    color: var(--accent-color-white, white);
     filter: invert(1) hue-rotate(180deg);
     top: 0rem;
     left: 0rem;
-    height: 2.5rem; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 0.5rem); /* Make the filter icon just smaller than the header height. */
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
     width: auto;
     display: block;
     font-size: 2.5rem;
     cursor: pointer;
     margin: 0rem;
-    padding: 0.3rem 0rem 0rem 0rem;
+    padding: 0rem;
 }
 
-  
+.optionsbutton:hover {
+    color: var(--main-dorkinians-yellow-colour);
+}
 
+
+/* Add a rotation set up for the Dorkinians logo in the top left. */
+.rotate {
+	animation: rotation 3s;
+  }
+  .linear {
+	animation-timing-function: linear;
+  }
+  .infinite {
+	animation-iteration-count: infinite;
+  }
+  @keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+  }
+
+
+
+/* Footer Section */
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 4
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Everything below initially designed for mobile. */
 
 /* Club Stats Tab */
 
@@ -759,10 +798,6 @@ Section 3
 
 /* Tables, Results & Fixtures Tab */
 
-#tables-results-fixtures-team-selection-dropdown {
-	width: 80%;
-}
-
 .dorkiniansTableHeaderText {
 	padding-bottom: 0.5rem;
 	text-align: center;
@@ -788,7 +823,7 @@ Section 3
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Section 4
+Section 5
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -878,9 +913,6 @@ Section 4
 			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
 		}
 	}
-	
-	
-	
 	
 	/* Add a set up for media devices with preference for dark mode. */
 	
