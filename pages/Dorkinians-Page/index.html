@@ -29,8 +29,6 @@
     <link href="/pages/Dorkinians-Page/assets/css/DorkiniansMain.css" rel="stylesheet">
     <!-- SnapTabs styling -->
     <link href="/pages/Dorkinians-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet">
-    <!-- Loader Dots styling -->
-    <link href="/pages/Dorkinians-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
 
     <!-- Consider Pre-Loading some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
     <!-- The Header styling -->
@@ -39,10 +37,6 @@
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon"
         href="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Green Logo - 32 Pixels.png" />
-
-    <!-- Add the loader dots JS -->
-    <script src="/pages/Dorkinians-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript"
-        defer></script>
 
 </head>
 
@@ -55,9 +49,9 @@
         <div class="logo-container">
             <!-- Add Dorkinians logo. -->
             <!-- Link back to the main homepage. Delete later or minimise. -->
-            <a href="\Homepage.html"><img class="logo fadein center"
+            <a href="\Homepage.html"><img class="logo fadein center" id="dorkiniansLogo"
                     src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
-                    alt="Dorkinians Logo"></a>
+                    alt="Dorkinians Logo" width="30" height="30"></a>
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -66,10 +60,10 @@
             <h1>Stats Page</h1>
         </div>
 
-        <div class="filter-container">
-            <!-- Add filter icon with JavaScript functionality. -->
-            <img class="center filtericon fadein" id="filtericon" src="/images/Icons&Logos/FilterIcon.svg"
-                alt="Filter Icon" width="30" height="30" onclick="openNav()">
+        <div class="options-container">
+            <!-- Add options burger menu button with JavaScript functionality. -->
+            <img class="center fadein optionsbutton" id="optionsbutton" src="/pages/Dorkinians-Page/assets/images/Burger Menu Icon.png"
+                alt="Options Button" width="54" height="54" onclick="openNav()">
         </div>
 
     </header>
@@ -83,20 +77,6 @@
 
     <!-- This is all the content between the header and footer. -->
     <div class="main-content-area fadein" id="IndividualsPage-main-content-area">
-
-        <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-        <div class="loader hidden" id="loader-div">
-            <div class="duo-loader">
-                <div class="duo duo1">
-                    <div class="dot dot-a"></div>
-                    <div class="dot dot-b"></div>
-                </div>
-                <div class="duo duo2">
-                    <div class="dot dot-a"></div>
-                    <div class="dot dot-b"></div>
-                </div>
-            </div>
-        </div>
 
         <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
@@ -149,20 +129,6 @@
 
                             </div>
 
-                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                            <div class="loader hidden" id="club-stats-loader-div">
-                                <div class="duo-loader">
-                                    <div class="duo duo1">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                    <div class="duo duo2">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <section class="club-stats-area">
 
                                 <!-- <section class="club-stats-clubStats-container">
@@ -201,20 +167,6 @@
 
                                     <h3 class="textleft">All Club Results</h3>
 
-                                    <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                                    <div class="loader hidden" id="results-loader-div">
-                                        <div class="duo-loader">
-                                            <div class="duo duo1">
-                                                <div class="dot dot-a"></div>
-                                                <div class="dot dot-b"></div>
-                                            </div>
-                                            <div class="duo duo2">
-                                                <div class="dot dot-a"></div>
-                                                <div class="dot dot-b"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                     <div class="table-wrapper">
                                         <table id="results-table" class="column-highlight">
@@ -237,21 +189,6 @@
                         <section class="page-section">
 
                             <h2 class="textcenter">Player Stats</h2>
-
-                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                            <div class="loader hidden" id="stats-loader-div">
-                                <div class="duo-loader">
-                                    <div class="duo duo1">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                    <div class="duo duo2">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                </div>
-                            </div>
-
 
                             <section class="player-stats-selection-container">
 
@@ -367,20 +304,6 @@
 
                             <h2 class="textcenter">All Stats</h2>
 
-                            <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                            <div class="loader hidden" id="stats-loader-div">
-                                <div class="duo-loader">
-                                    <div class="duo duo1">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                    <div class="duo duo2">
-                                        <div class="dot dot-a"></div>
-                                        <div class="dot dot-b"></div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Add a top level holder section area. -->
                             <section class="player-stats-area">
 
@@ -443,7 +366,7 @@
 
                                     <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                     <div class="table-wrapper">
-                                        <table id="all-stats-table" class="column-highlight">
+                                        <table id="all-stats-table" class="column-highlight table-column-lines">
                                             <!-- Data loaded into here by jDorkiniansMain.js -->
                                         </table>
                                     </div>
@@ -470,7 +393,7 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                                        <select name="WeekSelection" class="week-selection-dropdown">
+                                        <select name="WeekSelection" class="selection-dropdown" id="TOTW-week-selection-dropdown">
                                             <option value="" selected="selected">Select Week</option>
                                             <option value="week1">Week 1</option>
                                         </select>
@@ -517,7 +440,7 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player1Selection" class="week-selection-dropdown">
+                                        <select name="Player1Selection" class="selection-dropdown" id="comparison-player-1-dropdown">
                                             <option value="" selected="selected">Select Player 1</option>
                                             <option value="lukebangs">Luke Bangs</option>
                                         </select>
@@ -529,7 +452,7 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player2Selection" class="week-selection-dropdown">
+                                        <select name="Player2Selection" class="selection-dropdown" id="comparison-player-1-dropdown">
                                             <option value="" selected="selected">Select Player 2</option>
                                             <option value="lukebangs">Luke Bangs</option>
                                         </select>
