@@ -248,32 +248,51 @@ function showPlayerStatsTabInfo(results) {
     // Populate the stats information on the page.
 
     // Appearances:
-    const appearancesHeaderElement = document.getElementById("player-stats-appearances-header"); // Get the appearancesHeaderElement.
-    const appearancesElement = document.getElementById("player-stats-appearances"); // Get the appearancesElement.
-    appearancesElement.innerHTML = Number(filteredArrayOfObjects[0].APP); // Use the APP key for appearances.
+    // const appearancesHeaderElement = document.getElementById("player-stats-appearances-header"); // Get the appearancesHeaderElement.
+    // const appearancesElement = document.getElementById("player-stats-appearances"); // Get the appearancesElement.
+    // // appearancesElement.innerHTML = Number(filteredArrayOfObjects[0].APP); // Use the APP key for appearances.
 
-    // Minutes played:
-    const minutesPlayedHeaderElement = document.getElementById("player-stats-minutes-played-header"); // Get the minutesPlayedHeaderElement.
-    const minutesPlayedElement = document.getElementById("player-stats-minutes-played"); // Get the minutesPlayedElement.
-    minutesPlayedElement.innerHTML = Number(filteredArrayOfObjects[0].M).toLocaleString("en-UK"); // Use the M key for minutes. Convert the minutes played to a number and then add a comma by using the "toLocaleString" method.
+    // // Minutes played:
+    // const minutesPlayedHeaderElement = document.getElementById("player-stats-minutes-played-header"); // Get the minutesPlayedHeaderElement.
+    // const minutesPlayedElement = document.getElementById("player-stats-minutes-played"); // Get the minutesPlayedElement.
+    // minutesPlayedElement.innerHTML = Number(filteredArrayOfObjects[0].M).toLocaleString("en-UK"); // Use the M key for minutes. Convert the minutes played to a number and then add a comma by using the "toLocaleString" method.
 
-    // Goals scored:
-    const goalsScoredHeaderElement = document.getElementById("player-stats-goals-scored-header"); // Get the goalsScoredHeaderElement.
-    const goalsScoredElement = document.getElementById("player-stats-goals-scored"); // Get the goalsScoredElement.
-    goalsScoredElement.innerHTML = Number(filteredArrayOfObjects[0].G); // Use the G key for goal scored.
-    // Add a tooltip hover over.
-    // goalsScoredHeaderElement.classList.add("tooltip"); // Add the tooltip class to the element (the container element).
-    // var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
-    // toolTip.innerHTML = "Test text"; // Add the text of the second row, counter column to the new paragraph element.
-    // toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
-    // toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
-    // goalsScoredHeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
+    // // Goals scored:
+    // const goalsScoredHeaderElement = document.getElementById("player-stats-goals-scored-header"); // Get the goalsScoredHeaderElement.
+    // const goalsScoredElement = document.getElementById("player-stats-goals-scored"); // Get the goalsScoredElement.
+    // goalsScoredElement.innerHTML = Number(filteredArrayOfObjects[0].G); // Use the G key for goal scored.
+    // // Add a tooltip hover over.
+    // // goalsScoredHeaderElement.classList.add("tooltip"); // Add the tooltip class to the element (the container element).
+    // // var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
+    // // toolTip.innerHTML = "Test text"; // Add the text of the second row, counter column to the new paragraph element.
+    // // toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
+    // // toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
+    // // goalsScoredHeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
 
-    // Assists:
-    const assistsHeaderElement = document.getElementById("player-stats-assists-header"); // Get the assistsHeaderElement.
-    const assistsElement = document.getElementById("player-stats-assists"); // Get the assistsElement.
-    assistsElement.innerHTML = Number(filteredArrayOfObjects[0].A); // Use the A key for assists.
+    // // Assists:
+    // const assistsHeaderElement = document.getElementById("player-stats-assists-header"); // Get the assistsHeaderElement.
+    // const assistsElement = document.getElementById("player-stats-assists"); // Get the assistsElement.
+    // assistsElement.innerHTML = Number(filteredArrayOfObjects[0].A); // Use the A key for assists.
 
+
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    for (let i = 0; i < statArray.length; i++) {
+        console.log(statArray[i]); // Log the stat being updated.
+        var HeaderElement = document.getElementById("player-stats-" + statArray[i] + "-header"); // Get the HeaderElement dynamically.
+        var TextElement = document.getElementById("player-stats-" + statArray[i]); // Get the Text Element dynamically.
+        var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+        console.log("displayText = " + displayText); // Log the text that will be displayed.
+        TextElement.innerHTML = displayText; // Add the text to the HTML element.
+        console.log(statArray[i] + " done"); // Log that the stat has been done.
+        // Add a tooltip hover over.
+        // HeaderElement.classList.add("tooltip"); // Add the tooltip class to the element (the container element).
+        // var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
+        // toolTip.innerHTML = "Test text"; // Add the text of the second row, counter column to the new paragraph element.
+        // toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
+        // toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
+        // HeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
+    }
 
     console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
 
