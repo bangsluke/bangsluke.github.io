@@ -381,9 +381,7 @@ tr:last-child td:last-child {
 	width: 15rem;
 	min-width: 8rem;
 	/* min-width: 150%; */
-
 	/* overflow: visible; */
-
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
