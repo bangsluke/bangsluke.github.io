@@ -210,135 +210,181 @@
 
                             </section>
 
+                            <br>
+
+                            <h3 class="textleft">All Time Player Stats</h3>
+
                             <!-- Add a top level holder section area. -->
                             <section class="player-stats-area">
 
-                                <h3 class="textleft">All Time Player Stats</h3>
+                                <div class="player-stats-container" id="player-stats-minutes-container">
 
-                                <h4 class="textleft" id="player-stats-M-header">Minutes Played:</h4>
-                                <p id="player-stats-M">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                        <p id="player-stats-M" class="font-huge-bold">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </p>
+                                        <p id="player-stats-M-header">minutes played</p>
 
-                                <h4 class="textleft" id="player-stats-APP-header">Appearances:</h4>
-                                <p id="player-stats-APP">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                        <br>
 
-                                <h4 class="textleft" id="player-stats-G-header">Goals Scored:</h4>
-                                <p id="player-stats-G">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                        <p id="player-stats-APP-header">across </p>
+                                        <p id="player-stats-APP" class="font-big-bold">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </p>
+                                        <p id="player-stats-APP-header"> appearances</p>
 
-                                <h4 class="textleft" id="player-stats-A-header">Assists:</h4>
-                                <p id="player-stats-A">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-MOM-header">Man of the Matches:</h4>
-                                <p id="player-stats-MOM">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-Y-header">Yellow cards:</h4>
-                                <p id="player-stats-Y">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-R-header">Red cards:</h4>
-                                <p id="player-stats-R">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-R-header">Own Goals:</h4>
-                                <p id="player-stats-OG">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-C-header">Goals Conceded:</h4>
-                                <p id="player-stats-C">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-CLS-header">Clean Sheets:</h4>
-                                <p id="player-stats-CLS">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
-                                <p id="player-stats-GperAPP">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:</h4>
-                                <p id="player-stats-CperAPP">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
-                                <p id="player-stats-MperG">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
-
-                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                <div class="table-wrapper">
-                                    <table id="all-time-player-stats-table" class="column-highlight">
-                                        <!-- Data loaded into here by jDorkiniansMain.js -->
-                                    </table>
                                 </div>
+
+                                <div class="player-stats-container" id="player-stats-MOM-container">
+
+                                    <p id="player-stats-MOM" class="font-big-bold">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+                                    <p id="player-stats-MOM-header" class="font-small"> man of the match performances</p>
+                                    
+                                </div>
+
+                                <div class="player-stats-container" id="player-stats-goals-container">
+
+                                    <p id="player-stats-G-header" class="font-big-bold">Goals scored</p>
+                                    <br>
+                                    <p id="player-stats-G" class="font-huge-bold">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+
+                                </div>
+
+                                <div class="player-stats-container" id="player-stats-assists-container">
+
+                                    <p id="player-stats-A" class="font-big-bold">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+                                    <p id="player-stats-A-header"> assists for goals</p>
+
+                                </div>
+
+                                <div class="player-stats-container" id="player-stats-cards-container">
+
+                                    <h4 class="textleft" id="player-stats-Y-header">Yellow cards:</h4>
+                                    <p id="player-stats-Y">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+
+                                    <h4 class="textleft" id="player-stats-R-header">Red cards:</h4>
+                                    <p id="player-stats-R">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+
+                                </div>
+
+                                <div class="player-stats-container" id="player-stats-OG-container">
+
+                                    
+                                    <p id="player-stats-OG">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+                                    <p class="textleft" id="player-stats-R-header">own goals</p>
+
+                                </div>
+
+                                <div class="player-stats-container" id="player-stats-conceded-container">
+
+                                    <h4 class="textleft" id="player-stats-C-header">Goals Conceded:</h4>
+                                    <p id="player-stats-C">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+
+                                    <h4 class="textleft" id="player-stats-CLS-header">Clean Sheets:</h4>
+                                    <p id="player-stats-CLS">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+
+                                </div>
+
 
                             </section>
 
-                            <!-- OLD -->
+                            <!-- <section class="player-stats-this-season-container">
 
-                            <!-- Add a top level holder section area. -->
-                            <!-- <section class="player-stats-area">
+                                <h3 class="textleft">Stats Inspiration</h3>
 
-                                <section class="player-stats-profile-container">
-
-                                    <h3 class="textleft">Profile</h3>
-
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.webp"
-                                        width="410" height="324" alt="Profile">
-
-                                </section>
-
-                                <section class="player-stats-this-season-container">
-
-                                    <h3 class="textleft">This Season</h3>
-
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.webp"
-                                        width="847" height="574" alt="ThisSeason">
-
-                                </section>
-
-                                <section class="player-stats-minute-by-minute-container">
-
-                                    <h3 class="textleft">Minute By Minute</h3>
-
-                                    <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.webp"
-                                        width="841" height="510" alt="MinuteByMinute">
-
-                                </section>
-
-                                <section class="player-stats-all-time-container">
-
-                                    <h3 class="textleft">All Time</h3>
-
-                                </section>
-
-                                <section class="player-stats-game-record-container">
-
-                                    <h3 class="textleft">Game Record</h3>
-
-                                </section>
+                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/LayoutInspirationStats.png" alt="ThisSeason">
 
                             </section> -->
 
+                            <br>
 
+                            <br>
 
+                            <br>
+
+                            <h3 class="textleft">Minute By Minute Stats</h3>
+
+                            <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
+                            <p id="player-stats-GperAPP">
+                                <!-- Text loaded into here by jDorkiniansMain.js -->
+                            </p>
+
+                            <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:
+                            </h4>
+                            <p id="player-stats-CperAPP">
+                                <!-- Text loaded into here by jDorkiniansMain.js -->
+                            </p>
+
+                            <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
+                            <p id="player-stats-MperG">
+                                <!-- Text loaded into here by jDorkiniansMain.js -->
+                            </p>
 
                         </section>
+
+                        <!-- OLD -->
+
+                        <!-- Add a top level holder section area. -->
+                        <!-- <section class="player-stats-area-old">
+
+                            <section class="player-stats-profile-container">
+
+                                <h3 class="textleft">Profile</h3>
+
+                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.webp" width="410"
+                                    height="324" alt="Profile">
+
+                            </section>
+
+                            <section class="player-stats-this-season-container">
+
+                                <h3 class="textleft">This Season</h3>
+
+                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.webp"
+                                    width="847" height="574" alt="ThisSeason">
+
+                            </section>
+
+                            <section class="player-stats-minute-by-minute-container">
+
+                                <h3 class="textleft">Minute By Minute</h3>
+
+                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.webp"
+                                    width="841" height="510" alt="MinuteByMinute">
+
+                            </section>
+
+                            <section class="player-stats-all-time-container">
+
+                                <h3 class="textleft">All Time</h3>
+
+                            </section>
+
+                            <section class="player-stats-game-record-container">
+
+                                <h3 class="textleft">Game Record</h3>
+
+                            </section>
+
+                        </section> -->
+
+
+
 
 
 
