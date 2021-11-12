@@ -186,29 +186,49 @@ function showAllResultsTabUpdatedInfo() {
 function showPlayerStatsTabInfo(results) {
     console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
 
+    console.log('%c' + '>> See here for latest changes.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
     // Process the original array of objects received.
     var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
     console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    console.log("Original Length = " + objectLength); // Log the original length.
+    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // The passed data needs to have the toolTip row of data removed before it is filtered to avoid losing it.
+
+    // Create a toolTipDataArray of the information to be shown in the tool tip. Create it as a new array.
+    console.log("toolTipDataArray data = ");
+    var toolTipDataArray = new Array(dataArrayOfObjects[0]);
+    console.log(toolTipDataArray);
+
+    // Then filter down the entire array to find the players data.
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
     var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    //console.log("playerValue = " + playerValue);
+    // console.log("playerValue = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
     const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
+    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    // objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // console.log("New Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    console.log(filteredArrayOfObjects); // Log the filtered array of objects.
-    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
-    console.log("New Length = " + objectLength); // Log the original length.
+    // Once you have the filtered data and the toolTip data as two separate arrays, merge them together to create an array to be passed to creating the table.
+
+    // Merge the toolTipDataArray with the filteredArrayOfObjects. https://stackoverflow.com/a/53404382/14290169
+    const completeFilteredArrayOfObjects = [...toolTipDataArray, ...filteredArrayOfObjects];
+    // console.log("completeFilteredArrayOfObjects = ");
+    // console.log(completeFilteredArrayOfObjects); // Log the complete filtered array (including toolTip data).
 
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#all-time-player-stats-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#all-time-player-stats-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(completeFilteredArrayOfObjects, "#all-time-player-stats-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+
+    console.log('%c' + '>> See here for end of latest changes.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
 }
 
 
@@ -316,25 +336,31 @@ function clearTable(selector) {
 // Create the table by passing the data to the function.
 function createFullTable(data, selector, toolTipBoolean, dataForm) {
     console.log('%c' + '>> Re-usable Function: createFullTable(data, selector, toolTipBoolean, dataForm) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean + ', dataForm = ' + dataForm, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    
+    console.log('%c' + '>> See here for latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+
     // console.log(data); // Log the passed data to the console.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
     if (dataForm == "array") { // Define the header data as from the array.
-        // console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
+        console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
         var headerdata = data[0]; // Get the header data from the first element of the array.
         //console.log("headerdata printed below:");
         //console.log(headerdata);
     } else if (dataForm == "object") { // Define the header data as the keys of the object.
-        // console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
+        console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
         var headerdata = Object.keys(data[0]); // Create an array of the object headers from the array data received.
-        //console.log("headerdata printed below:");
-        //console.log(headerdata);
+        // console.log("headerdata printed below:");
+        // console.log(headerdata);
     } else {
         alert("Error - No dataForm passed to 'createFullTable' in jMainFunctions.js.");
     }
     generateTableHead(table, headerdata, data, toolTipBoolean); // Call the generateTableHead function to create the table headers. Note that headerdata contains the headers only, array contains the full data.
     generateTable(table, data, toolTipBoolean); // Call the generateTable function to populate the rest of the table data.
     //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
+
+    console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+
 }
 
 // Create a table of data from the received data.
@@ -343,8 +369,12 @@ function createFullTable(data, selector, toolTipBoolean, dataForm) {
 // Create the table head including the table headers.
 function generateTableHead(table, headerdata, array, toolTipBoolean) {
     console.log('%c' + '>> Re-usable Function: generateTableHead(table, data) called. Passed variables: table = not shown, headerdata = shown below, array = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightyellow; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
-    //console.log(headerdata); // Log the passed headerdata to the console.
-    //console.log(array); // Log the passed array to the console.
+    
+    // console.log("Header data is an array:");
+    // console.log(headerdata); // Log the passed headerdata to the console.
+    console.log("Array is an array of objects:");
+    console.log(array); // Log the passed array to the console.
+
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
     var counter = 0; // Define a counter for checking which column to apply stick-col rule to.
@@ -353,12 +383,26 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
         // If the toolTipBoolean is true, create the headers to also include the tool tips.
         if (toolTipBoolean == true) { // Define how to add the text depending on if toolTips are enabled for the table.
             console.log("toolTipBoolean is true so adding tooltip.");
+            
+            // Create a toolTipDataArray of the information to be shown in the tool tip. Create it as a new array.
+            var toolTipDataArray = new Array(array[0]);
+            console.log("toolTipDataArray is an array:");
+            console.log(toolTipDataArray); // Log the created array to the console.
+
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
             // Skip the first column.
             if (counter == 0) { // If the counter = 0, it's the first column.
                 // Do nothing.
             } else { // For all other columns, add the tool tip.
+
+                // console.log("array[0][" + counter +"] = " + array[0][counter]);
+                // console.log("array[1] = " + array[1]);
+                // console.log("array[1].name = " + array[1].name);
+
+                console.log("key = " + key)
+                console.log("array[0]." + key + " = " + array[0].key);
+
                 th.classList.add("tooltip"); // Add the tooltip class to the th element (the container element).
                 var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
                 toolTip.innerHTML = array[1][counter]; // Add the text of the second row, counter column to the new paragraph element.
@@ -366,8 +410,8 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
                 toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
                 th.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
             }
-        } else { // Add text the normal way.
-            //console.log("toolTipBoolean is false so not adding tooltip.");
+        } else { // If toolTipBoolean is false, add text the normal way.
+            console.log("toolTipBoolean is false so not adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
         }
