@@ -62,8 +62,9 @@
 
         <div class="options-container">
             <!-- Add options burger menu button with JavaScript functionality. -->
-            <img class="center fadein optionsbutton" id="optionsbutton" src="/pages/Dorkinians-Page/assets/images/Burger Menu Icon.png"
-                alt="Options Button" width="54" height="54" onclick="openNav()">
+            <img class="center fadein optionsbutton" id="optionsbutton"
+                src="/pages/Dorkinians-Page/assets/images/Burger Menu Icon.png" alt="Options Button" width="54"
+                height="54" onclick="openNav()">
         </div>
 
     </header>
@@ -194,9 +195,16 @@
 
                                 <div class="selection-container">
                                     <!-- Add a drop down select box for the user to change the statistic category. -->
-                                    <select name="player-stats-player-selection" class="selection-dropdown" id="player-stats-player-selection">
-                                        <option >Luke Bangs</option>
+                                    <select name="player-stats-player-selection" class="selection-dropdown"
+                                        id="player-stats-player-selection" onchange="showPlayerStatsTabUpdatedInfo()">
+                                        <option>Luke Bangs</option>
                                         <option selected="selected">Sam Slade</option>
+                                        <option>Kieran Mackrell</option>
+                                        <option>Al Thom</option>
+                                        <option>Ali Robins</option>
+                                        <option>Andy Higgins</option>
+                                        <option>Oli Goddard</option>
+                                        <option>Jonny Sourris</option>
                                     </select>
                                 </div>
 
@@ -206,6 +214,26 @@
                             <section class="player-stats-area">
 
                                 <h3 class="textleft">All Time Player Stats</h3>
+
+                                <h4 class="textleft" id="player-stats-minutes-played-header">Minutes Played:</h4>
+                                <p id="player-stats-minutes-played">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
+
+                                <h4 class="textleft" id="player-stats-appearances-header">Appearances:</h4>
+                                <p id="player-stats-appearances">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
+
+                                <h4 class="textleft" id="player-stats-goals-scored-header">Goals Scored:</h4>
+                                <p id="player-stats-goals-scored">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
+
+                                <h4 class="textleft" id="player-stats-assists-header">Assists:</h4>
+                                <p id="player-stats-assists">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
 
                                 <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                 <div class="table-wrapper">
@@ -361,26 +389,26 @@
                     <!-- 4. Team of the Week Tab -->
                     <!-- <article class="nav-targets" id="team-of-the-week"> -->
 
-                        <!-- Add the main lighter coloured page section. -->
-                        <!-- <section class="page-section"> -->
+                    <!-- Add the main lighter coloured page section. -->
+                    <!-- <section class="page-section"> -->
 
-                            <!-- <h2 class="textcenter">Team of the Week</h2> -->
+                    <!-- <h2 class="textcenter">Team of the Week</h2> -->
 
-                            <!-- <section class="team-of-the-week-area"> -->
+                    <!-- <section class="team-of-the-week-area"> -->
 
-                                <!-- <section class="totw-week-selection-container"> -->
+                    <!-- <section class="totw-week-selection-container"> -->
 
-                                    <!-- <div class="selection-container"> -->
-                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                                        <!-- <select name="WeekSelection" class="selection-dropdown" id="TOTW-week-selection-dropdown">
+                    <!-- <div class="selection-container"> -->
+                    <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                    <!-- <select name="WeekSelection" class="selection-dropdown" id="TOTW-week-selection-dropdown">
                                             <option value="" selected="selected">Select Week</option>
                                             <option value="week1">Week 1</option>
                                         </select> -->
-                                    <!-- </div> -->
+                    <!-- </div> -->
 
-                                <!-- </section> -->
+                    <!-- </section> -->
 
-                                <!-- <section class="totw-team-of-the-week-container">
+                    <!-- <section class="totw-team-of-the-week-container">
 
                                     <h3 class="textleft">TOTW</h3>
 
@@ -389,7 +417,7 @@
 
                                 </section> -->
 
-                                <!-- <section class="totw-top-performers-container">
+                    <!-- <section class="totw-top-performers-container">
 
                                     <h3 class="textleft">Top TOTW Performers</h3>
 
@@ -399,9 +427,9 @@
 
                                 </section> -->
 
-                            <!-- </section> -->
+                    <!-- </section> -->
 
-                        <!-- </section> -->
+                    <!-- </section> -->
 
                     <!-- </article> -->
 
@@ -419,7 +447,8 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player1Selection" class="selection-dropdown" id="comparison-player-1-dropdown">
+                                        <select name="Player1Selection" class="selection-dropdown"
+                                            id="comparison-player-1-dropdown">
                                             <option value="" selected="selected">Select Player 1</option>
                                             <option value="lukebangs">Luke Bangs</option>
                                         </select>
@@ -431,7 +460,8 @@
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player2Selection" class="selection-dropdown" id="comparison-player-1-dropdown">
+                                        <select name="Player2Selection" class="selection-dropdown"
+                                            id="comparison-player-1-dropdown">
                                             <option value="" selected="selected">Select Player 2</option>
                                             <option value="lukebangs">Luke Bangs</option>
                                         </select>
