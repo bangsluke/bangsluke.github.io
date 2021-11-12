@@ -42,7 +42,7 @@ Section 1
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
 
 	/* Distances & Spacing */
-	--headerHeight: 2.5rem; /* Define the header height variable. */
+	--headerHeight: 4rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
@@ -848,7 +848,7 @@ Section 5
 		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 		/* background: blue; */
 		:root {
-			--headerHeight: 2.8rem; /* Define the header height variable. */
+			/* --headerHeight: 2.8rem; Define the header height variable. */
 		}
 	}
 	
@@ -856,7 +856,7 @@ Section 5
 		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 		/* background: green; */
 		:root {
-			--headerHeight: 4rem; /* Define the header height variable. */
+			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 95%; /* Used for controlling the width of items on each page */
 		}
 		html {
@@ -868,7 +868,7 @@ Section 5
 		/* Covers iPads and other tablets. */
 		/* background: orange; */
 		:root {
-			--headerHeight: 4rem; /* Define the header height variable. */
+			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
@@ -880,7 +880,7 @@ Section 5
 		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 		/* background: cyan; */
 		:root {
-			--headerHeight: 4rem; /* Define the header height variable. */
+			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
@@ -892,7 +892,7 @@ Section 5
 		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 		/* background: red; */
 		:root {
-			--headerHeight: 4rem; /* Define the header height variable. */
+			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
@@ -904,7 +904,7 @@ Section 5
 		/* Desktops and Laptops - For larger monitors and displays. */
 		/* background: yellow; */
 		:root {
-			--headerHeight: 4rem; /* Define the header height variable. */
+			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
