@@ -219,18 +219,18 @@
 
                                 <div class="player-stats-container" id="player-stats-minutes-container">
 
-                                        <p id="player-stats-M" class="font-huge-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-M-header">minutes played</p>
+                                    <p id="player-stats-M" class="font-huge-bold">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+                                    <p id="player-stats-M-header">minutes played</p>
 
-                                        <br>
+                                    <br>
 
-                                        <p id="player-stats-APP-header">across </p>
-                                        <p id="player-stats-APP" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-APP-header"> appearances</p>
+                                    <p id="player-stats-APP-header">across </p>
+                                    <p id="player-stats-APP" class="font-big-bold">
+                                        <!-- Text loaded into here by jDorkiniansMain.js -->
+                                    </p>
+                                    <p id="player-stats-APP-header"> appearances</p>
 
                                 </div>
 
@@ -239,8 +239,9 @@
                                     <p id="player-stats-MOM" class="font-big-bold">
                                         <!-- Text loaded into here by jDorkiniansMain.js -->
                                     </p>
-                                    <p id="player-stats-MOM-header" class="font-small"> man of the match performances</p>
-                                    
+                                    <p id="player-stats-MOM-header" class="font-small"> man of the match performances
+                                    </p>
+
                                 </div>
 
                                 <div class="player-stats-container" id="player-stats-goals-container">
@@ -264,22 +265,45 @@
 
                                 <div class="player-stats-container" id="player-stats-cards-container">
 
-                                    <h4 class="textleft" id="player-stats-Y-header">Yellow cards:</h4>
-                                    <p id="player-stats-Y">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
+                                    <!-- Add a top header section for the phrase "Discipline". -->
+                                    <div class="player-stats-container font-small"
+                                        id="player-stats-cards-container-discipline">
+                                        <h4 class="textleft">Discipline</h4>
+                                    </div>
 
-                                    <h4 class="textleft" id="player-stats-R-header">Red cards:</h4>
-                                    <p id="player-stats-R">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
+                                    <!-- Add a section to hold the text "Yellow Cards". -->
+                                    <div class="player-stats-container center"
+                                        id="player-stats-cards-container-yellowheader">
+                                        <h4 class="textleft" id="player-stats-Y-header">cards</h4>
+                                    </div>
+
+                                    <!-- Add a section to hold the text "Red Cards". -->
+                                    <div class="player-stats-container center"
+                                        id="player-stats-cards-container-redheader">
+                                        <h4 class="textleft" id="player-stats-R-header">cards</h4>
+                                    </div>
+
+                                    <!-- Add a section to hold the number of Yellow Cards. -->
+                                    <div class="player-stats-container center"
+                                        id="player-stats-cards-container-yellowcards">
+                                        <p id="player-stats-Y" class="font-big-bold">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </p>
+                                    </div>
+
+                                    <!-- Add a section to hold the number of Red Cards. -->
+                                    <div class="player-stats-container center"
+                                        id="player-stats-cards-container-redcards">
+                                        <p id="player-stats-R" class="font-big-bold">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </p>
+                                    </div>
 
                                 </div>
 
                                 <div class="player-stats-container" id="player-stats-OG-container">
 
-                                    
-                                    <p id="player-stats-OG">
+                                    <p id="player-stats-OG" class="font-big-bold">
                                         <!-- Text loaded into here by jDorkiniansMain.js -->
                                     </p>
                                     <p class="textleft" id="player-stats-R-header">own goals</p>
@@ -288,15 +312,17 @@
 
                                 <div class="player-stats-container" id="player-stats-conceded-container">
 
-                                    <h4 class="textleft" id="player-stats-C-header">Goals Conceded:</h4>
                                     <p id="player-stats-C">
                                         <!-- Text loaded into here by jDorkiniansMain.js -->
                                     </p>
 
-                                    <h4 class="textleft" id="player-stats-CLS-header">Clean Sheets:</h4>
-                                    <p id="player-stats-CLS">
+                                    <h4 class="textleft font-small" id="player-stats-C-header">goals conceded and </h4>
+
+                                    <p id="player-stats-CLS" class="font-big-bold">
                                         <!-- Text loaded into here by jDorkiniansMain.js -->
                                     </p>
+
+                                    <h4 class="textleft font-small" id="player-stats-CLS-header"> clean sheets</h4>
 
                                 </div>
 
@@ -315,25 +341,74 @@
 
                             <br>
 
-                            <br>
-
                             <h3 class="textleft">Minute By Minute Stats</h3>
 
-                            <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
-                            <p id="player-stats-GperAPP">
-                                <!-- Text loaded into here by jDorkiniansMain.js -->
-                            </p>
+                            <div class="player-stats-container" id="player-stats-minutes-by-minutes-container">
 
-                            <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:
-                            </h4>
-                            <p id="player-stats-CperAPP">
-                                <!-- Text loaded into here by jDorkiniansMain.js -->
-                            </p>
+                                <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
+                                <p id="player-stats-GperAPP">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
 
-                            <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
-                            <p id="player-stats-MperG">
-                                <!-- Text loaded into here by jDorkiniansMain.js -->
-                            </p>
+                                <br>
+
+                                <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:
+                                </h4>
+                                <p id="player-stats-CperAPP">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
+
+                                <br>
+
+                                <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
+                                <p id="player-stats-MperG">
+                                    <!-- Text loaded into here by jDorkiniansMain.js -->
+                                </p>
+
+                            </div>
+
+                            <br>
+
+                            <br>
+
+                            <h3 class="textleft">All Stats</h3>
+
+                            <div class="selection-container">
+
+                                <!-- Add a drop down select box for the user to change the statistic category. -->
+
+                                <!-- Let the user pick which season to filter for. -->
+                                <select name="SeasonSelection" class="selection-dropdown"
+                                    id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Season</option>
+                                    <option value="2016/17">2016/17</option>
+                                    <option value="2017/18">2017/18</option>
+                                    <option value="2018/19">2018/19</option>
+                                    <option value="2019/20">2019/20</option>
+                                    <option value="2020/21">2020/21</option>
+                                    <option value="2021/22">2021/22</option>
+                                </select>
+
+                                <!-- Let the user pick which team to filter for. -->
+                                <select name="TeamSelection" class="selection-dropdown"
+                                    id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
+                                    <option value="" selected="selected">Team</option>
+                                    <option value="WholeClub">Whole club</option>
+                                    <option value="1st XI">1st XI</option>
+                                    <option value="2nd XI">2nd XI</option>
+                                    <option value="3rd XI">3rd XI</option>
+                                    <option value="4th XI">4th XI</option>
+                                    <option value="5th XI">5th XI</option>
+                                    <option value="6th XI">6th XI</option>
+                                    <option value="7th XI">7th XI</option>
+                                    <option value="8th XI">8th XI</option>
+                                </select>
+
+                            </div>
+
+                            <br>
+
+                            <p>To be added.</p>
 
                         </section>
 
