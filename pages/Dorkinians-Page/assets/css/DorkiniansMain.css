@@ -465,7 +465,7 @@ p.tooltiptext {
 
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
-	background-color: rgba(255, 255, 255, 0.10);;
+	background-color: rgba(255, 255, 255, 0.10);
 	color: white;
 	border: none;
 	text-align: center;
@@ -477,6 +477,11 @@ p.tooltiptext {
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 }
 
+/* Style the dropdown menu that appears for the user to click on. */
+option {
+	color: black; /* The font colour of the text. */ 
+	background-color: white; /* The background colour behind the text. */ 
+}
 
 
 
