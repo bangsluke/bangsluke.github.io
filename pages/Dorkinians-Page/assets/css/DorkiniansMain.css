@@ -424,7 +424,7 @@ p.tooltiptext {
 	text-align: center;
 }
 
-/* Add a hidden class for hiding components that are not yet ready. */
+/* Add a hidden class for hiding components that are not yet ready or shouldn't be shown. */
 .hidden {
 	display: none !important;
 }
