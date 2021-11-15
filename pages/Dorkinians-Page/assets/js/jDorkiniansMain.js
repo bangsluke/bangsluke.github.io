@@ -371,7 +371,44 @@ function showAllStatsTabUpdatedInfo() {
 
 // 6. Tables, Results & Fixture Tab
 
+function updateTablesResultsandFixturesTab() {
+    console.log("> Function: updateTablesResultsandFixturesTab() called.")
 
+    // Get the team selection dropdown and get the team picked.
+    var teamSelectionDropdown = document.getElementById("tables-results-fixtures-team-selection-dropdown");
+    var teamSelection = teamSelectionDropdown.options[teamSelectionDropdown.selectedIndex].value; // Get the team selected value (which comes through as 1s etc). (https://stackoverflow.com/a/8549358/14290169).
+    
+    // Define an array of teams to update. Each team corresponds to an HTML element.
+    let teamArray = ["1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s"];
+    for (let i = 0; i < teamArray.length; i++) {
+        console.log("Processing " + teamArray[i]); // Log the team being updated.
+
+        // Select the teamTableDiv and teamResultsAndFixturesDiv for the team.
+        var teamTableDiv = document.getElementById("dorkinians" + teamArray[i] + "Table"); // Get the Teams table div dynamically.
+        console.log("> teamTableDiv for " + teamArray[i] + " is: dorkinians" + teamArray[i] + "Table"); // Log the teamTableDiv being updated.
+        var teamResultsAndFixturesDiv = document.getElementById("dorkinians" + teamArray[i] + "ResultsAndFixtures"); // Get the Teams results and fixtures div dynamically.
+        console.log("> teamResultsAndFixturesDiv for " + teamArray[i] + " is: dorkinians" + teamArray[i] + "ResultsAndFixtures"); // Log the teamResultsAndFixturesDiv being updated.
+
+        // Either add or remove the "hidden" class from the gathered element.
+        if (teamArray[i] === teamSelection){
+            teamTableDiv.classList.remove("hidden"); // Remove the hidden class from the selected element so that it is shown.
+            console.log("> dorkinians" + teamArray[i] + "Table is shown by removing the 'hidden' class"); // Log the teamTableDiv being updated.
+            teamResultsAndFixturesDiv.classList.remove("hidden"); // Remove the hidden class from the selected element so that it is shown.
+            console.log("> dorkinians" + teamArray[i] + "ResultsAndFixtures is shown by removing the 'hidden' class"); // Log the teamResultsAndFixturesDiv being updated.
+        } else if (teamSelection === "WholeClub") {
+            teamTableDiv.classList.remove("hidden"); // Remove the hidden class from the selected element so that it is shown.
+            console.log("> dorkinians" + teamArray[i] + "Table is shown by removing the 'hidden' class"); // Log the teamTableDiv being updated.
+            teamResultsAndFixturesDiv.classList.remove("hidden"); // Remove the hidden class from the selected element so that it is shown.
+            console.log("> dorkinians" + teamArray[i] + "ResultsAndFixtures is shown by removing the 'hidden' class"); // Log the teamResultsAndFixturesDiv being updated.
+        
+        } else {
+            teamTableDiv.classList.add("hidden"); // Add the hidden class to the selected element so that it is hidden.
+            console.log("> dorkinians" + teamArray[i] + "Table is hidden by adding the 'hidden' class"); // Log the teamTableDiv being updated.
+            teamResultsAndFixturesDiv.classList.add("hidden"); // Add the hidden class to the selected element so that it is hidden.
+            console.log("> dorkinians" + teamArray[i] + "ResultsAndFixtures is hidden by adding the 'hidden' class"); // Log the teamResultsAndFixturesDiv being updated.
+        }
+    }
+}
 
 
 
