@@ -607,61 +607,147 @@
 
                             <h2 class="textcenter">Comparison</h2>
 
-                            <section class="comparison-area">
+                            <!-- Add a div to hold the full comparison area.  -->
+                            <div class="comparison-area">
 
-                                <section class="comparison-player-1-selection-container">
+                                <!-- Add a div to hold the player dropdown. -->
+                                <div class="comparison-player-1-selection-container">
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player1Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
-                                            <option value="" selected="selected">Select Player 1</option>
-                                            <option value="lukebangs">Luke Bangs</option>
+                                            id="comparison-player-1-dropdown" onchange="updateComparisonStatData()">
+                                            <option selected="selected">Select Player 1</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Sam Slade</option>
+                                            <option>Oli Goddard</option>
                                         </select>
                                     </div>
 
-                                </section>
+                                </div>
 
-                                <section class="comparison-player-2-selection-container">
+                                <!-- Add a div to hold the player dropdown. -->
+                                <div class="comparison-player-2-selection-container">
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player2Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
-                                            <option value="" selected="selected">Select Player 2</option>
-                                            <option value="lukebangs">Luke Bangs</option>
+                                            id="comparison-player-2-dropdown" onchange="updateComparisonStatData()">
+                                            <option selected="selected">Select Player 2</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Sam Slade</option>
+                                            <option>Oli Goddard</option>
                                         </select>
                                     </div>
 
-                                </section>
+                                </div>
 
-                                <section class="comparison-player-1-stats-container">
+                                <!-- Add a div to hold the player stats header. -->
+                                <div class="comparison-player-1-stats-container">
 
-                                    <h3 class="textright">Player 1 Stats</h3>
+                                    <h4 class="center">Player 1 Stats</h4>
 
-                                    <div class="comparison-stat-bar bar-right"></div>
+                                </div>
 
-                                </section>
+                                <!-- Add a div to hold the player stats header. -->
+                                <div class="comparison-player-2-stats-container">
 
-                                <section class="comparison-icons-container">
+                                    <h4 class="center">Player 2 Stats</h4>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.webp" alt="MoM Icon"
-                                        class="comparison-icon">
+                                </div>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.webp"
-                                        alt="MoM Icon" class="comparison-icon">
 
-                                </section>
+                                <!-- Create a div containing a table of all the stats for the comparison. -->
+                                <div class="comparison-stats-table">
 
-                                <section class="comparison-player-2-stats-container">
+                                    <!-- Create multiple divs to fill as either values or bars to show the stats. -->
 
-                                    <h3 class="textleft">Player 2 Stats</h3>
+                                    <!-- APP stats -->
+                                    <div class="comparison-stats-table-row-container">
 
-                                    <div class="comparison-stat-bar bar-left"></div>
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-left" id="comparison-APP-player-1-bar"></div>
+                                        </div>
 
-                                </section>
+                                        <div class="cell center" id="comparison-APP-player-1-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
 
-                            </section>
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/appearance.png"
+                                            alt="APP Icon" class="comparison-icon center">
+
+                                        <div class="cell center" id="comparison-APP-player-2-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-right" id="comparison-APP-player-2-bar"></div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- MoM stats -->
+                                    <div class="comparison-stats-table-row-container">
+
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-left" id="comparison-MOM-player-1-bar"></div>
+                                        </div>
+
+                                        <div class="cell center" id="comparison-MOM-player-1-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.webp"
+                                            alt="MoM Icon" class="comparison-icon center">
+
+                                        <div class="cell center" id="comparison-MOM-player-2-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-right" id="comparison-MOM-player-2-bar"></div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- G stats -->
+                                    <div class="comparison-stats-table-row-container">
+
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-left" id="comparison-G-player-1-bar"></div>
+                                        </div>
+
+                                        <div class="cell center" id="comparison-G-player-1-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.webp"
+                                            alt="G Icon" class="comparison-icon center">
+
+                                        <div class="cell center" id="comparison-G-player-2-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-right" id="comparison-G-player-2-bar"></div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </section>
 
@@ -718,7 +804,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -738,7 +824,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -758,7 +844,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -778,7 +864,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -807,7 +893,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -827,7 +913,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
@@ -847,7 +933,7 @@
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
-                                    <p class="center">Click on the table for more details on the AFC site</p>
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
