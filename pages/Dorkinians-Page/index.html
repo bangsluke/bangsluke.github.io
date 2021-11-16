@@ -616,7 +616,7 @@
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player1Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
+                                            id="comparison-player-1-dropdown" onchange="updateComparisonStatData()">
                                             <option selected="selected">Select Player 1</option>
                                             <option>Luke Bangs</option>
                                             <option>Sam Slade</option>
@@ -632,8 +632,8 @@
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player2Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
-                                            <option value="" selected="selected">Select Player 2</option>
+                                            id="comparison-player-2-dropdown" onchange="updateComparisonStatData()">
+                                            <option selected="selected">Select Player 2</option>
                                             <option>Luke Bangs</option>
                                             <option>Sam Slade</option>
                                             <option>Oli Goddard</option>
@@ -662,62 +662,86 @@
 
                                     <!-- Create multiple divs to fill as either values or bars to show the stats. -->
 
+                                    <!-- APP stats -->
+                                    <div class="comparison-stats-table-row-container">
+
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-left" id="comparison-APP-player-1-bar"></div>
+                                        </div>
+
+                                        <div class="cell center" id="comparison-APP-player-1-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/appearance.png"
+                                            alt="APP Icon" class="comparison-icon center">
+
+                                        <div class="cell center" id="comparison-APP-player-2-value">
+                                            <!-- Text loaded into here by jDorkiniansMain.js -->
+                                        </div>
+
+                                        <div class="cell bar-container">
+                                            <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                            <div class="comparison-stat-bar bar-right" id="comparison-APP-player-2-bar"></div>
+                                        </div>
+
+                                    </div>
+
                                     <!-- MoM stats -->
                                     <div class="comparison-stats-table-row-container">
 
-                                        <div class="cell" id="comparison-MOM-player-1-bar">
+                                        <div class="cell bar-container">
                                             <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
-                                            <div class="comparison-stat-bar bar-left"></div>
+                                            <div class="comparison-stat-bar bar-left" id="comparison-MOM-player-1-bar"></div>
                                         </div>
 
                                         <div class="cell center" id="comparison-MOM-player-1-value">
                                             <!-- Text loaded into here by jDorkiniansMain.js -->
-                                            30
                                         </div>
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.webp"
                                             alt="MoM Icon" class="comparison-icon center">
 
-                                        <div class="cell center" id="comparison-MOM-player-1-value">
-                                            14
+                                        <div class="cell center" id="comparison-MOM-player-2-value">
                                             <!-- Text loaded into here by jDorkiniansMain.js -->
                                         </div>
 
-                                        <div class="cell" id="comparison-MOM-player-1-bar">
+                                        <div class="cell bar-container">
                                             <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
-                                            <div class="comparison-stat-bar bar-right"></div>
+                                            <div class="comparison-stat-bar bar-right" id="comparison-MOM-player-2-bar"></div>
                                         </div>
 
                                     </div>
 
-                                    <!-- Goals stats -->
+                                    <!-- G stats -->
                                     <div class="comparison-stats-table-row-container">
 
-                                        <div class="cell" id="comparison-G-player-1-bar">
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
+                                        <div class="cell bar-container">
                                             <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
-                                            <div class="comparison-stat-bar bar-right"></div>
+                                            <div class="comparison-stat-bar bar-left" id="comparison-G-player-1-bar"></div>
                                         </div>
 
                                         <div class="cell center" id="comparison-G-player-1-value">
-                                            30
                                             <!-- Text loaded into here by jDorkiniansMain.js -->
                                         </div>
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.webp"
-                                            alt="MoM Icon" class="comparison-icon center">
+                                            alt="G Icon" class="comparison-icon center">
 
-                                        <div class="cell center" id="comparison-G-player-1-value">
-                                            14
+                                        <div class="cell center" id="comparison-G-player-2-value">
                                             <!-- Text loaded into here by jDorkiniansMain.js -->
                                         </div>
 
-                                        <div class="cell" id="comparison-G-player-1-bar">
+                                        <div class="cell bar-container">
                                             <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
-                                            <div class="comparison-stat-bar bar-right"></div>
+                                            <div class="comparison-stat-bar bar-right" id="comparison-G-player-2-bar"></div>
                                         </div>
-
 
                                     </div>
 

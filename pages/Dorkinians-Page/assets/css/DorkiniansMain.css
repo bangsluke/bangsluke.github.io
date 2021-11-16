@@ -809,7 +809,7 @@ Section 4
 /* Comparison Tab */
 
 .comparison-area {
-	background-color: violet;
+	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 45% 1.5rem 45%; 
 	grid-template-rows: 2rem 2rem max-content; /* Repeat the same height row x number of times. */
@@ -821,29 +821,29 @@ Section 4
 }
 
 .comparison-player-1-selection-container {
-	background-color: blue;
+	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 }
 .comparison-player-2-selection-container {
-	background-color: green;
+	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
 }
 .comparison-player-1-stats-container {
-	background-color: yellow;
+	/* background-color: yellow; */
 	grid-area: Player1Stats;
 	padding: 0.3rem;
 }
 .comparison-player-2-stats-container {
-	background-color: red;
+	/* background-color: red; */
 	grid-area: Player2Stats;
 	padding: 0.3rem;
 }
 
 /* Add a class to style the overall holding container of all stats rows. */
 .comparison-stats-table {
-	background-color: purple;
+	/* background-color: purple; */
 	grid-area: ComparisonStatsTable;
 	display: grid;
 	flex-flow: column wrap;
@@ -854,7 +854,7 @@ Section 4
 
 /* Add a class to style each row container of the comparison table. */
 .comparison-stats-table-row-container {
-	background-color: lightgreen;
+	/* background-color: lightgreen; */
 	display: grid;
 	flex-flow: column wrap;
 	grid-template-columns: 3fr 1fr 1fr 1fr 3fr; /* 5 columns of varying width. */
@@ -864,7 +864,7 @@ Section 4
 
 div.cell {
 	/* background: LightBlue; */
-	border: 1px solid Blue;
+	/* border: 1px solid Blue; */
 	display: flex;
     flex-wrap: wrap;
   	align-content: center;
@@ -872,19 +872,52 @@ div.cell {
 	text-align: center;
 }
 
+
+/* Below two classes, id and animation are copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech */
+
+.bar-container {
+	/* background-color: red; */
+	position: relative;
+	/* height: 1.5rem; */
+	/* border-radius: 1rem; */
+}
+
 /* Create an initial styling for the comparison bars which start white. */
-.comparison-stat-bar {
-	/* background-color: white; */
-	height: 1rem;
-	width: 5rem;
+.bar-container .comparison-stat-bar {
+	background-color: white;
+	/* background-color: green; */
+	position: absolute;
+	height: 80%;
 	border-radius: 0.4rem;
 }
 
+.play-animation {
+	animation: progress-animation 3s forwards;
+}
 
-.comparison-stat-bar .bar-right {
+@keyframes progress-animation {
+	0% {width: 0%;}
+	100% {width: 100%;}
+}
+
+.bar-right {
+	left: 0rem;
+}
+
+.bar-left {
+	right: 0rem;
+}
+
+/* Create a class to be added to the bar that is greater/or less. */
+.yellow {
+	background-color: #F9ED32 !important;
+}
+
+
+/* .comparison-stat-bar .bar-right {
 	background: red;
 	margin: 0 0 0 auto;
-}
+} */
 
 
 
@@ -897,18 +930,6 @@ div.cell {
 	grid-area: Icons;
 	padding: 3.5rem 0rem 0.3rem 0rem;
 	text-align: center;
-}
-
-
-
-.bar-left {
-	left: 0rem;
-	background-color: #F9ED32;
-}
-
-.bar-right {
-	right: 0rem;
-	background-color: white;
 }
 
 .comparison-icon {
