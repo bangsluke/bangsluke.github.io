@@ -209,8 +209,6 @@ function showPlayerStatsTabInfo(results) {
     // Display the retrieved data onto the page.
     console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
 
-    console.log('%c' + '>> See here for latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
-
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
     // console.log("dataArrayOfObjects = "); // Log the received array of objects.
@@ -265,8 +263,6 @@ function showPlayerStatsTabInfo(results) {
         // toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
         // HeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
     }
-
-    console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
 
 }
 
@@ -367,6 +363,167 @@ function showAllStatsTabUpdatedInfo() {
 
 
 // 5. Comparison Tab
+
+function updateComparisonStatData() {
+
+
+    // Reset all stats bars on the Comparison tab.
+    resetStatsBars();
+
+    let player1NameDropdown = document.getElementById("comparison-player-1-dropdown"); // Get the player 1 dropdown.
+    let player1NameValue = player1NameDropdown.options[player1NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // console.log("Selected player 1 (player1NameValue) = " + player1NameValue);
+
+    let player2NameDropdown = document.getElementById("comparison-player-2-dropdown"); // Get the player 2 dropdown.
+    let player2NameValue = player2NameDropdown.options[player2NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // console.log("Selected player 2 (player2NameValue) = " + player2NameValue);
+
+    if (player1NameValue === "Select Player 1" && player2NameValue === "Select Player 2") {
+        // Do nothing as neither dropdown has had anything selected.
+        console.log("Neither dropdown has a player selected.");
+    } else if (player1NameValue === "Select Player 1") {
+        // Player 1 dropdown is blank so fill in details for player 2.
+        console.log("Player 1 dropdown is blank so fill in details for player 2.");
+        loadInComparisonStatNumbers(player2NameValue, 2, false);
+    } else if (player2NameValue === "Select Player 2") {
+        // Player 2 dropdown is blank so fill in details for player 1.
+        console.log("Player 2 dropdown is blank so fill in details for player 1.");
+        loadInComparisonStatNumbers(player1NameValue, 1, false);
+    } else {
+        // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
+        loadInComparisonStatNumbers(player1NameValue, 1, true);
+        loadInComparisonStatNumbers(player2NameValue, 2, true);
+    }
+
+    // For the comparison page, have two dropdown selection boxes.
+
+    // Select Name 1            Select Name 2
+    //                         Icon
+    //                         Icon
+
+
+    // When the user changes "Select Name 1", show the scores of the player 1. Don't load in the score bar, just show the number of the score.
+
+    // Select Name 1            Select Name 2
+    //             Score  Icon
+    //             Score  Icon
+
+
+    // When the user changes the "Select Name 2", show the scores of both players then animate the bars loading in;
+
+    // Select Name 1            Select Name 2
+    //             Score  Icon   Score
+    //             Score  Icon   Score
+
+    // Animate:
+
+    // Select Name 1            Select Name 2
+    // ----------  Score  Icon   Score ----
+    //         --   Score  Icon   Score -------
+
+    // Have these functions;
+
+    // loadInScore (statName, selectNumber) - loads in the score value given which statName and which selectNumber (1 or 2) to load into.
+
+    // animateComparison - which triggers when both Select Name 1 and Select Name 2 have been populated.
+
+    // Have a reset button to clear both names and then clear animations.
+
+    
+
+}
+
+function loadInComparisonStatNumbers(playerName, playerNumber, fillBarsBoolean) {
+
+    // Use the global variable "displayAllTimeStatsArrayOfObjects" and filter it down for the defined player name.
+
+    // console.log(displayAllTimeStatsArrayOfObjects); // Log the received array of objects.
+    var objectLength = displayAllTimeStatsArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of displayAllTimeStatsArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Filter down the entire array to find the players data.
+
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    // console.log("Selected player (playerName) = " + playerName);
+
+    // Filter for the selection.
+    // Re-use the re-usable function..
+    const filteredArrayOfObjects = filterArrayOfObjects(displayAllTimeStatsArrayOfObjects, "NAME", playerName); // Call the created filterArrayOfObjects function.
+    // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
+    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // console.log("New Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    if (objectLength > 1) { // If the objectLength is greater than 1, flag an alert error.
+        alert("More than one record returned for player selected!");
+    }
+
+    // Log the data that will be displayed.
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
+
+    // Populate the stats information on the page.
+
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["APP", "MOM", "G"];
+    // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
+        var TextElement = document.getElementById("comparison-" + statArray[i] + "-player-" + playerNumber + "-value"); // Get the Text Element dynamically.
+        var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+        // console.log("displayText = " + displayText); // Log the text that will be displayed.
+        TextElement.innerHTML = displayText; // Add the text to the HTML element.
+    }
+
+    // Fill both bars if the passed boolean is true.
+    if (fillBarsBoolean === true) {
+        // Fill the bars as the boolean is true.
+        console.log("Filling the stats bars as fillBarsBoolean is true.");
+        fillStatsBars(playerNumber);
+    } else {
+        // Do nothing as fillBarsBoolean is false.
+        console.log("Not filling the stats bars as fillBarsBoolean is false.");
+    }
+}
+
+
+function fillStatsBars(playerNumber) {
+
+    console.log('%c' + '>> See here for latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["APP", "MOM", "G"];
+    // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        // console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
+        // Set the player stats bar.
+        var BarElement = document.getElementById("comparison-" + statArray[i] + "-player-" + playerNumber + "-bar"); // Get the Bar Element dynamically.
+        // BarElement.setAttribute('id', 'play-animation');
+        BarElement.classList.add("play-animation"); // Add the play-animation class from the selected element.
+    }
+
+    console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+}
+
+function resetStatsBars() {
+
+    console.log("function resetStatsBars called.")
+    let statArray = ["APP", "MOM", "G"];
+    // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        // console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
+        // Reset the player stats bar by removing the animation.
+        var BarElement = document.getElementById("comparison-" + statArray[i] + "-player-1-bar"); // Get the Bar Element dynamically.
+        // BarElement.removeAttribute('id', 'play-animation');
+        BarElement.classList.remove("play-animation"); // Remove the play-animation class from the selected element.
+    }
+}
+
+
+
 
 
 // 6. Tables, Results & Fixture Tab
