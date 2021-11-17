@@ -872,7 +872,6 @@ div.cell {
 	text-align: center;
 }
 
-
 /* Below two classes, id and animation are copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech */
 
 .bar-container {
@@ -880,6 +879,7 @@ div.cell {
 	position: relative;
 	/* height: 1.5rem; */
 	/* border-radius: 1rem; */
+	/* width: 100%; */
 }
 
 /* Create an initial styling for the comparison bars which start white. */
@@ -901,27 +901,19 @@ div.cell {
 }
 
 .bar-right {
-	left: 0rem;
+	left: 0rem !important; /* Lock the bar to the left side of its container. */
+	justify-self: start; /* Position the bar container to the left side of its container. */
 }
 
 .bar-left {
-	right: 0rem;
+	right: 0rem !important; /* Lock the bar to the right side of its container. */
+	justify-self: end; /* Position the bar container to the right side of its container. */
 }
 
 /* Create a class to be added to the bar that is greater/or less. */
 .yellow {
 	background-color: #F9ED32 !important;
 }
-
-
-/* .comparison-stat-bar .bar-right {
-	background: red;
-	margin: 0 0 0 auto;
-} */
-
-
-
-
 
 
 
@@ -935,8 +927,11 @@ div.cell {
 .comparison-icon {
 	height: 1.4rem;
 	width: auto;
-	filter: brightness(0) invert(1);
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
+}
+
+.comparison-icon.white {
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
 }
 
 
