@@ -40,6 +40,7 @@ Section 1
 	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
+	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
 
 	/* Distances & Spacing */
 	--headerHeight: 4rem; /* Define the header height variable. */
@@ -109,7 +110,7 @@ body {
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-    margin: 1rem auto 5rem auto; /* Add a margin above and below each section. */
+    margin: 1rem auto 2rem auto; /* Add a margin above and below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -205,23 +206,23 @@ a {
 }
 
 .textcenter {
-	text-align: center;
+	text-align: center !important;
 }
 
 .textleft {
-	text-align: left;
+	text-align: left !important;
 }
 
 .textright {
-	text-align: right;
+	text-align: right !important;
 }
 
 .bold {
-	font-weight: bold;
+	font-weight: bold !important;
 }
 
 .italic {
-	font-style: oblique;
+	font-style: oblique !important;
 }
 
 
@@ -368,8 +369,8 @@ tr:last-child td:last-child {
 /* Tooltip container */
 .tooltip {
 	text-decoration: underline; /* Add dots under the hoverable text. */
-    text-decoration-color: white;  
-    text-decoration-style: dotted; 
+    text-decoration-color: white;
+    text-decoration-style: dotted;
 }
 
 /* Tooltip text */
@@ -403,7 +404,7 @@ tr:last-child td:last-child {
     position: absolute;
     bottom: 100%;  /* This will position the arrow at the top of the tooltip */
     left: 10%;
-    margin-left: -0.3rem;    
+    margin-left: -0.3rem;
     border-width: 0.2rem;
     border-style: solid;
 }
@@ -424,7 +425,7 @@ p.tooltiptext {
 	text-align: center;
 }
 
-/* Add a hidden class for hiding components that are not yet ready. */
+/* Add a hidden class for hiding components that are not yet ready or shouldn't be shown. */
 .hidden {
 	display: none !important;
 }
@@ -484,7 +485,72 @@ option {
 }
 
 
+/* 4. Information bar styling */
 
+.information-bar {
+	/* background-color: aqua; */
+	width: 100%;
+	text-align: center;
+	font-size: 0.7rem;
+	font-style: italic;
+	margin-bottom: 1rem;
+}
+
+/* 5. Stats ToolTip styling */
+
+/* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Stats Tooltip container */
+.stats-tooltip {
+	/* background-color: red; */
+	position: relative;
+  	display: inline-block;	
+}
+
+/* Tooltip text */
+.stats-tooltip .stats-tooltip-text {
+	/* background-color: blue; */
+	background-color: var(--page-dark-grey-colour, grey);
+	visibility: hidden; /* Initially set the visibility as hidden. */
+	/* min-width: 20rem; */
+	width: 90%;
+	min-height: 1rem;
+	/* max-height: 30rem; */
+	/* min-width: 150%; */
+	/* overflow: visible; */
+	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	/* Position the tooltip text below the text its explaining. */
+	position: absolute;
+	z-index: 1;
+  	bottom: 110%; /* Position above the container div. */
+  	left: 50%; /* Center align the tooltip across the page. */
+  	margin-left: -45%; /* Use half of the width, to center the tooltip */
+}
+  
+/* Show the stats tooltip text when you mouse over the stats tooltip container */
+.stats-tooltip:hover .stats-tooltip-text {
+	visibility: visible; /* Change the visibility to visible when hovered on. */
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.stats-tooltip .stats-tooltip-text::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+}
+
+.stats-tooltip-text {
+	font-size: 12.8px; /* Fallback value. */
+	font-size: 0.7rem; /* Relative to root (html) value. */
+	text-transform: none;
+	text-align: left;
+}
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -812,11 +878,12 @@ Section 4
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 45% 1.5rem 45%; 
-	grid-template-rows: max-content max-content max-content;
+	grid-template-rows: 2rem 2rem max-content; /* Repeat the same height row x number of times. */
 	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
-	  "Player1Stats Icons Player2Stats";
+	  "Player1Stats Blank Player2Stats"
+	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
 
 .comparison-player-1-selection-container {
@@ -824,59 +891,130 @@ Section 4
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 }
-
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
 }
-
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
 	padding: 0.3rem;
-	position: relative;
 }
-
-.comparison-icons-container {
-	/* background-color: orange; */
-	grid-area: Icons;
-	padding: 3.5rem 0rem 0.3rem 0rem;
-}
-
 .comparison-player-2-stats-container {
 	/* background-color: red; */
 	grid-area: Player2Stats;
 	padding: 0.3rem;
+}
+
+/* Add a class to style the overall holding container of all stats rows. */
+.comparison-stats-table {
+	/* background-color: purple; */
+	grid-area: ComparisonStatsTable;
+	display: grid;
+	flex-flow: column wrap;
+	grid-template-columns: 100%; /* 1 column of full width. */
+	grid-template-rows: repeat(12, 1.5rem); /* Repeat the same height row x number of times. */
+	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+}
+
+/* Add a class to style each row container of the comparison table. */
+.comparison-stats-table-row-container {
+	/* background-color: lightgreen; */
+	display: grid;
+	flex-flow: column wrap;
+	grid-template-columns: 3fr 1fr 1fr 1fr 3fr; /* 5 columns of varying width. */
+	grid-template-rows: 1.5rem; /* One row height. */
+	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+}
+
+div.cell {
+	/* background: LightBlue; */
+	/* border: 1px solid Blue; */
+	display: flex;
+    flex-wrap: wrap;
+  	align-content: center;
+  	align-items: center;
+	text-align: center;
+}
+
+/* Below two classes, id and animation are copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech */
+
+.bar-container {
+	/* background-color: red; */
 	position: relative;
-	min-height: 20rem;
+	/* height: 1.5rem; */
+	/* border-radius: 1rem; */
+	/* width: 100%; */
 }
 
-.comparison-stat-bar {
-	background-color: red;
-	height: 1rem;
-	width: 2rem;
+/* Create an initial styling for the comparison bars which start white. */
+.bar-container .comparison-stat-bar {
+	background-color: white;
+	/* background-color: green; */
 	position: absolute;
-	border-radius: 0.4rem;
+	height: 80%;
+	border-radius: 0.3rem;
 }
 
-.bar-left {
-	left: 0rem;
-	background-color: red;
+.play-animation {
+	animation: progress-animation 3s forwards;
+}
+
+@keyframes progress-animation {
+	0% {width: 0%;}
+	100% {width: 100%;}
 }
 
 .bar-right {
-	right: 0rem;
-	background-color: blue;
+	left: 0rem !important; /* Lock the bar to the left side of its container. */
+	justify-self: start; /* Position the bar container to the left side of its container. */
 }
 
+.bar-left {
+	right: 0rem !important; /* Lock the bar to the right side of its container. */
+	justify-self: end; /* Position the bar container to the right side of its container. */
+}
+
+/* Create a class to be added to the bar that is greater/or less. */
+.yellow {
+	background-color: #F9ED32 !important;
+}
+
+
+/* Create a container class to house the icons. */
+.comparison-icons-container {
+	background-color: orange;
+	grid-area: Icons;
+	padding: 3.5rem 0rem 0.3rem 0rem;
+	text-align: center;
+}
+
+/* Create an icon class to apply to all icons. */
 .comparison-icon {
 	height: 1.4rem;
 	width: auto;
-	filter: brightness(0) invert(1);
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
 }
 
+/* Create a class to turn the icons white. */
+.comparison-icon.white {
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+}
+
+/* Create two card shapes using CSS. */
+.card-icon {
+	border-radius: 2px;
+	width: 0.9rem;
+	height: 1.1rem;
+	transform: rotate(20deg);
+}
+.card-icon#yellow-card {
+	background-color: #F9ED32;
+}
+.card-icon#red-card {
+	background-color: red;
+}
 
 
 /* Tables, Results & Fixtures Tab */

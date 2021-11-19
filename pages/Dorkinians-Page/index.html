@@ -97,6 +97,9 @@
 
                             <h2 class="textcenter">Club Stats</h2>
 
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="club-stats-information-bar"></div>
+
                             <div class="selection-container">
 
                                 <!-- Add a drop down select box for the user to change the statistic category. -->
@@ -190,6 +193,9 @@
                         <section class="page-section">
 
                             <h2 class="textcenter">Player Stats</h2>
+
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="player-stats-information-bar"></div>
 
                             <section class="player-stats-selection-container">
 
@@ -477,6 +483,9 @@
 
                             <h2 class="textcenter">All Stats</h2>
 
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="all-stats-information-bar"></div>
+
                             <!-- Add a top level holder section area. -->
                             <section class="player-stats-area">
 
@@ -560,6 +569,9 @@
 
                     <!-- <h2 class="textcenter">Team of the Week</h2> -->
 
+                    <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                    <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
+
                     <!-- <section class="team-of-the-week-area"> -->
 
                     <!-- <section class="totw-week-selection-container"> -->
@@ -607,69 +619,492 @@
 
                             <h2 class="textcenter">Comparison</h2>
 
-                            <section class="comparison-area">
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="comparison-information-bar"></div>
 
-                                <section class="comparison-player-1-selection-container">
+                            <!-- Add a div to hold the full comparison area.  -->
+                            <div class="comparison-area">
+
+                                <!-- Add a div to hold the player dropdown. -->
+                                <div class="comparison-player-1-selection-container">
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player1Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
-                                            <option value="" selected="selected">Select Player 1</option>
-                                            <option value="lukebangs">Luke Bangs</option>
+                                            id="comparison-player-1-dropdown" onchange="updateComparisonStatData()">
+                                            <option selected="selected">Select Player 1</option>
+                                            <option>Al Thom</option>
+                                            <option>Ali Robins</option>
+                                            <option>Andy Higgins</option>
+                                            <option>Jonny Sourris</option>
+                                            <option>Kieran Mackrell</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Oli Goddard</option>
+                                            <option>Sam Slade</option>
                                         </select>
                                     </div>
 
-                                </section>
+                                </div>
 
-                                <section class="comparison-player-2-selection-container">
+                                <!-- Add a div to hold the player dropdown. -->
+                                <div class="comparison-player-2-selection-container">
 
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the selected player. -->
                                         <select name="Player2Selection" class="selection-dropdown"
-                                            id="comparison-player-1-dropdown">
-                                            <option value="" selected="selected">Select Player 2</option>
-                                            <option value="lukebangs">Luke Bangs</option>
+                                            id="comparison-player-2-dropdown" onchange="updateComparisonStatData()">
+                                            <option selected="selected">Select Player 2</option>
+                                            <option>Al Thom</option>
+                                            <option>Ali Robins</option>
+                                            <option>Andy Higgins</option>
+                                            <option>Jonny Sourris</option>
+                                            <option>Kieran Mackrell</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Oli Goddard</option>
+                                            <option>Sam Slade</option>
                                         </select>
                                     </div>
 
-                                </section>
+                                </div>
 
-                                <section class="comparison-player-1-stats-container">
+                                <!-- Add a div to hold the player stats header. -->
+                                <div class="comparison-player-1-stats-container">
 
-                                    <h3 class="textright">Player 1 Stats</h3>
+                                    <h4 class="center">Player 1 Stats</h4>
 
-                                    <div class="comparison-stat-bar bar-right"></div>
+                                </div>
 
-                                </section>
+                                <!-- Add a div to hold the player stats header. -->
+                                <div class="comparison-player-2-stats-container">
 
-                                <section class="comparison-icons-container">
+                                    <h4 class="center">Player 2 Stats</h4>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.webp" alt="MoM Icon"
-                                        class="comparison-icon">
+                                </div>
 
-                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.webp"
-                                        alt="MoM Icon" class="comparison-icon">
 
-                                </section>
+                                <!-- Create a div containing a table of all the stats for the comparison. -->
+                                <div class="comparison-stats-table">
 
-                                <section class="comparison-player-2-stats-container">
+                                    <!-- Create multiple divs to fill as either values or bars to show the stats. -->
 
-                                    <h3 class="textleft">Player 2 Stats</h3>
+                                    <!-- APP stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
 
-                                    <div class="comparison-stat-bar bar-left"></div>
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
 
-                                </section>
+                                        <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-APP-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-APP-player-1-bar">
+                                            </div>
+                                        </div>
 
-                            </section>
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-APP-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                                            alt="APP Icon" class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-APP-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-APP-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-APP-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of appearances the player has made.</span>
+
+                                    </div>
+
+                                    <!-- M stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
+
+                                        <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-M-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-M-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-M-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                                            alt="Minutes Icon" class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-M-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-M-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-M-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of minutes played by the player.</span>
+
+                                    </div>
+
+                                    <!-- MoM stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-MOM-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-MOM-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MOM-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Icon.png"
+                                            alt="MoM Icon" class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MOM-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-MOM-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-MOM-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of Man of the Match performances the player has made.</span>
+
+                                    </div>
+
+                                    <!-- G stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-G-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-G-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-G-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Goals Icon.png"
+                                            alt="Goals Icon" class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-G-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-G-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-G-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of goals scored by the player.</span>
+
+                                    </div>
+
+                                    <!-- A stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-A-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-A-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-A-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png" alt="Assist Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-A-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-A-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-A-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of goals assisted by the player. </span>
+
+                                    </div>
+
+                                    <!-- Y stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-Y-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-Y-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-Y-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <!-- Create the yellow card icon using CSS. -->
+                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-Y-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-Y-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-Y-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of yellow cards obtained by the player.</span>
+
+                                    </div>
+
+                                    <!-- R stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-R-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-R-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-R-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <!-- Create the red card icon using CSS. -->
+                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-R-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-R-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-R-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of red cards obtained by the player.</span>
+
+                                    </div>
+
+                                    <!-- OG stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-OG-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-OG-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-OG-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
+                                                alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-OG-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-OG-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-OG-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of own goals scored by the player.</span>
+
+                                    </div>
+
+                                    <!-- C stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-C-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-C-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-C-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png" alt="Conceded Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-C-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-C-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-C-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of goals conceded by the player.</span>
+
+                                    </div>
+
+                                    <!-- CLS stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-CLS-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-CLS-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-CLS-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png" alt="Clean Sheet Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-CLS-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-CLS-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-CLS-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The number of clean sheets achieved by the player.</span>
+
+                                    </div>
+
+                                    <!-- GperAPP stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-GperAPP-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-GperAPP-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-GperAPP-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png" alt="GperAPP Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-GperAPP-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-GperAPP-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-GperAPP-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The average number of goals scored per appearance made.</span>
+
+                                    </div>
+
+                                    <!-- CperAPP stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-CperAPP-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-CperAPP-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-CperAPP-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png" alt="CperAPP Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-CperAPP-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-CperAPP-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-CperAPP-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The average number of goals conceded per appearance.</span>
+
+                                    </div>
+
+                                    <!-- MperG stats -->
+                                    <div class="comparison-stats-table-row-container stats-tooltip">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-MperG-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-MperG-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MperG-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png" alt="MperG Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MperG-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-MperG-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-MperG-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                        <span class="stats-tooltip-text">The average number of minutes required per goal scored by the player.</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </section>
-
-
-
-
-
-
 
                     </article>
 
@@ -681,23 +1116,26 @@
 
                             <h2 class="textcenter">Tables</h2>
 
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="tables-results-fixtures-information-bar"></div>
+
                             <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
 
                             <div class="selection-container">
 
                                 <!-- Let the user pick which team to filter for. -->
                                 <select name="TeamSelection" class="selection-dropdown"
-                                    id="tables-results-fixtures-team-selection-dropdown" onchange="TBC()">
-                                    <option value="" selected="selected">Team</option>
+                                    id="tables-results-fixtures-team-selection-dropdown"
+                                    onchange="updateTablesResultsandFixturesTab()">
                                     <option value="WholeClub">Whole club</option>
-                                    <option value="1st XI">1st XI</option>
-                                    <option value="2nd XI">2nd XI</option>
-                                    <option value="3rd XI">3rd XI</option>
-                                    <option value="4th XI">4th XI</option>
-                                    <option value="5th XI">5th XI</option>
-                                    <option value="6th XI">6th XI</option>
-                                    <option value="7th XI">7th XI</option>
-                                    <option value="8th XI">8th XI</option>
+                                    <option value="1s" selected="selected">1st XI</option>
+                                    <option value="2s">2nd XI</option>
+                                    <option value="3s">3rd XI</option>
+                                    <option value="4s">4th XI</option>
+                                    <option value="5s">5th XI</option>
+                                    <option value="6s">6th XI</option>
+                                    <option value="7s">7th XI</option>
+                                    <option value="8s">8th XI</option>
                                 </select>
 
                             </div>
@@ -708,7 +1146,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep118512309" class="AFCTable">Data loading....<a
+                                <div id="lrep118512309" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
                                         here for Premier Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -716,17 +1154,19 @@
                                     var lrcode = '118512309'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
-                            <div id="dorkinians2sTable">
+                            <div id="dorkinians2sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Senior Two</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep710535041" class="AFCTable">Data loading....<a
+                                <div id="lrep710535041" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
                                         here for Senior Two South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -734,17 +1174,19 @@
                                     var lrcode = '710535041'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 3s code within. -->
-                            <div id="dorkinians3sTable">
+                            <div id="dorkinians3sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep57161422" class="AFCTable">Data loading....<a
+                                <div id="lrep57161422" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=841231919">click
                                         here for One South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -752,17 +1194,19 @@
                                     var lrcode = '57161422'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 4s code within. -->
-                            <div id="dorkinians4sTable">
+                            <div id="dorkinians4sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep778268394" class="AFCTable">Data loading....<a
+                                <div id="lrep778268394" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
                                         here for Four South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -770,35 +1214,28 @@
                                     var lrcode = '778268394'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 5s code within. -->
-                            <div id="dorkinians5sTable">
+                            <div id="dorkinians5sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Five South</h4>
 
-                                <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep190854409" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009">click
-                                        here for Five South Division</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
-                                <script language="javascript" type="text/javascript">
-                                    var lrcode = '190854409'
-                                </script>
-                                <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                <p>Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 6s code within. -->
-                            <div id="dorkinians6sTable">
+                            <div id="dorkinians6sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep311599615" class="AFCTable">Data loading....<a
+                                <div id="lrep311599615" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=626187179">click
                                         here for Six South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -806,17 +1243,19 @@
                                     var lrcode = '311599615'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
-                            <div id="dorkinians7sTable">
+                            <div id="dorkinians7sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Seven South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep93079112" class="AFCTable">Data loading....<a
+                                <div id="lrep93079112" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
                                         here for Seven South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -824,17 +1263,19 @@
                                     var lrcode = '93079112'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 8s code within. -->
-                            <div id="dorkinians8sTable">
+                            <div id="dorkinians8sTable" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <!-- <div id="lrep812886273" class="AFCTable">Data loading....<a
+                                <div id="lrep812886273" class="AFCTable">Data loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
                                         here for Eight South Division</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -842,11 +1283,11 @@
                                     var lrcode = '812886273'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+
+                                <p class="center">Click on the table for more details on the AFC site</p>
 
                             </div>
-
-                            <p class="center">Click on the table for more details on the AFC site</p>
 
                         </section>
 
@@ -862,7 +1303,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep884356525" class="AFCResultsAndFixtures">Data
+                                <div id="lrep884356525" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
                                         here for Premier</a><br /><br /><a
@@ -871,17 +1312,17 @@
                                     var lrcode = '884356525'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
-                            <div id="dorkinians2sResultsAndFixtures">
+                            <div id="dorkinians2sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep678186881" class="AFCResultsAndFixtures">Data
+                                <div id="lrep678186881" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
                                         here for Senior Two South</a><br /><br /><a
@@ -890,12 +1331,12 @@
                                     var lrcode = '678186881'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 3s code within. -->
-                            <div id="dorkinians3sResultsAndFixtures">
+                            <div id="dorkinians3sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 3s Results and
                                     Fixtures</h4>
@@ -906,12 +1347,12 @@
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 4s code within. -->
-                            <div id="dorkinians4sResultsAndFixtures">
+                            <div id="dorkinians4sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep355450147" class="AFCResultsAndFixtures">Data
+                                <div id="lrep355450147" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
                                         here for Four South</a><br /><br /><a
@@ -920,31 +1361,22 @@
                                     var lrcode = '355450147'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 5s code within. -->
-                            <div id="dorkinians5sResultsAndFixtures">
+                            <div id="dorkinians5sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 5s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep318288599" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009">click
-                                        here for Five South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
-                                <script language="javascript" type="text/javascript">
-                                    var lrcode = '318288599'
-                                </script>
-                                <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                <p>Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 6s code within. -->
-                            <div id="dorkinians6sResultsAndFixtures">
+                            <div id="dorkinians6sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 6s Results and
                                     Fixtures</h4>
@@ -955,12 +1387,12 @@
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
-                            <div id="dorkinians7sResultsAndFixtures">
+                            <div id="dorkinians7sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep531227286" class="AFCResultsAndFixtures">Data
+                                <div id="lrep531227286" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
                                         here for Seven South</a><br /><br /><a
@@ -969,17 +1401,17 @@
                                     var lrcode = '531227286'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
                             <!-- Add a div to hold the Dorkinians 8s code within. -->
-                            <div id="dorkinians8sResultsAndFixtures">
+                            <div id="dorkinians8sResultsAndFixtures" class="hidden">
 
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and
                                     Fixtures</h4>
 
-                                <!-- <div id="lrep568890794" class="AFCResultsAndFixtures">Data
+                                <div id="lrep568890794" class="AFCResultsAndFixtures">Data
                                     loading....<a
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
                                         here for Eight South</a><br /><br /><a
@@ -988,7 +1420,7 @@
                                     var lrcode = '568890794'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
-                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script> -->
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
