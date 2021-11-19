@@ -618,13 +618,14 @@
                                         <select name="Player1Selection" class="selection-dropdown"
                                             id="comparison-player-1-dropdown" onchange="updateComparisonStatData()">
                                             <option selected="selected">Select Player 1</option>
-                                            <option>Luke Bangs</option>
-                                            <option>Sam Slade</option>
-                                            <option>Oli Goddard</option>
-                                            <option>Kieran Mackrell</option>
-                                            <option>Andy Higgins</option>
-                                            <option>Althom</option>
+                                            <option>Al Thom</option>
                                             <option>Ali Robins</option>
+                                            <option>Andy Higgins</option>
+                                            <option>Jonny Sourris</option>
+                                            <option>Kieran Mackrell</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Oli Goddard</option>
+                                            <option>Sam Slade</option>
                                         </select>
                                     </div>
 
@@ -638,13 +639,14 @@
                                         <select name="Player2Selection" class="selection-dropdown"
                                             id="comparison-player-2-dropdown" onchange="updateComparisonStatData()">
                                             <option selected="selected">Select Player 2</option>
-                                            <option>Luke Bangs</option>
-                                            <option>Sam Slade</option>
-                                            <option>Oli Goddard</option>
-                                            <option>Kieran Mackrell</option>
-                                            <option>Andy Higgins</option>
-                                            <option>Althom</option>
+                                            <option>Al Thom</option>
                                             <option>Ali Robins</option>
+                                            <option>Andy Higgins</option>
+                                            <option>Jonny Sourris</option>
+                                            <option>Kieran Mackrell</option>
+                                            <option>Luke Bangs</option>
+                                            <option>Oli Goddard</option>
+                                            <option>Sam Slade</option>
                                         </select>
                                     </div>
 
@@ -686,8 +688,8 @@
                                         <div class="cell center" id="comparison-APP-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/appearance.png"
-                                            alt="APP Icon" class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                                            alt="APP Icon" class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-APP-player-2-value"> </div>
@@ -717,8 +719,8 @@
                                         <div class="cell center" id="comparison-M-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC"
-                                            alt="Min" class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                                            alt="Minutes Icon" class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-M-player-2-value"> </div>
@@ -746,8 +748,8 @@
                                         <div class="cell center" id="comparison-MOM-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Trophy.webp"
-                                            alt="MoM Icon" class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Icon.png"
+                                            alt="MoM Icon" class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MOM-player-2-value"> </div>
@@ -775,8 +777,8 @@
                                         <div class="cell center" id="comparison-G-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/football-ball.webp"
-                                            alt="G Icon" class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Goals Icon.png"
+                                            alt="Goals Icon" class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-G-player-2-value"> </div>
@@ -804,8 +806,8 @@
                                         <div class="cell center" id="comparison-A-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="A"
-                                            class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png" alt="Assist Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-A-player-2-value"> </div>
@@ -833,8 +835,8 @@
                                         <div class="cell center" id="comparison-Y-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Football Card Yellow.png"
-                                            alt="Y Icon" class="comparison-icon center">
+                                        <!-- Create the yellow card icon using CSS. -->
+                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-Y-player-2-value"> </div>
@@ -862,8 +864,8 @@
                                         <div class="cell center" id="comparison-R-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Football Card Red.png"
-                                            alt="R Icon" class="comparison-icon center">
+                                        <!-- Create the red card icon using CSS. -->
+                                        <div id="red-card" class="comparison-icon center card-icon"></div>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-R-player-2-value"> </div>
@@ -891,8 +893,8 @@
                                         <div class="cell center" id="comparison-OG-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC"
-                                                alt="OG" class="comparison-icon white center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
+                                                alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-OG-player-2-value"> </div>
@@ -920,8 +922,8 @@
                                         <div class="cell center" id="comparison-C-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="CON"
-                                            class="comparison-icon center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png" alt="Conceded Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-C-player-2-value"> </div>
@@ -949,8 +951,8 @@
                                         <div class="cell center" id="comparison-CLS-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="CLS"
-                                            class="comparison-icon center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png" alt="Clean Sheet Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CLS-player-2-value"> </div>
@@ -979,8 +981,8 @@
                                         <div class="cell center" id="comparison-GperAPP-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="GperAPP"
-                                            class="comparison-icon center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png" alt="GperAPP Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-GperAPP-player-2-value"> </div>
@@ -1010,8 +1012,8 @@
                                         <div class="cell center" id="comparison-CperAPP-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="CperAPP"
-                                            class="comparison-icon center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png" alt="CperAPP Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CperAPP-player-2-value"> </div>
@@ -1041,8 +1043,8 @@
                                         <div class="cell center" id="comparison-MperG-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/TBC" alt="MperG"
-                                            class="comparison-icon center">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png" alt="MperG Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MperG-player-2-value"> </div>
@@ -1062,12 +1064,6 @@
                             </div>
 
                         </section>
-
-
-
-
-
-
 
                     </article>
 

@@ -888,7 +888,7 @@ div.cell {
 	/* background-color: green; */
 	position: absolute;
 	height: 80%;
-	border-radius: 0.4rem;
+	border-radius: 0.3rem;
 }
 
 .play-animation {
@@ -916,7 +916,7 @@ div.cell {
 }
 
 
-
+/* Create a container class to house the icons. */
 .comparison-icons-container {
 	background-color: orange;
 	grid-area: Icons;
@@ -924,16 +924,31 @@ div.cell {
 	text-align: center;
 }
 
+/* Create an icon class to apply to all icons. */
 .comparison-icon {
 	height: 1.4rem;
 	width: auto;
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
 }
 
+/* Create a class to turn the icons white. */
 .comparison-icon.white {
 	filter: brightness(0) invert(1); /* Ensure the icon is white. */
 }
 
+/* Create two card shapes using CSS. */
+.card-icon {
+	border-radius: 2px;
+	width: 0.9rem;
+	height: 1.1rem;
+	transform: rotate(20deg);
+}
+.card-icon#yellow-card {
+	background-color: #F9ED32;
+}
+.card-icon#red-card {
+	background-color: red;
+}
 
 
 /* Tables, Results & Fixtures Tab */
