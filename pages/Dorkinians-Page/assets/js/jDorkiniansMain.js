@@ -113,6 +113,30 @@ function init() {
     //     complete: showTitanFactorExplainedInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
     // })
 
+    // Club Stats tab.
+    // Update the information bar.
+    displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
+
+    // Player Stats tab.
+    // Update the information bar.
+    displayInformation("player-stats-information-bar", "Select a player to view their stats. Or just marvel at Slado's achievements...");
+
+    // All Stats tab.
+    // Update the information bar.
+    displayInformation("all-stats-information-bar", "Select a filter to begin reviewing further detailed stats");
+
+    // Team of the Week tab.
+    // Update the information bar.
+    // displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
+
+    // Comparison tab.
+    // Update the information bar.
+    displayInformation("comparison-information-bar", "Select a first player to view their stats");
+
+    // Comparison tab.
+    // Update the information bar.
+    displayInformation("tables-results-fixtures-information-bar", "Select a team to see their league table, results and fixtures");
+
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo();
 }
@@ -387,32 +411,47 @@ function updateComparisonStatData() {
     if (player1NameValue === "Select Player 1" && player2NameValue === "Select Player 2") {
         // Do nothing as neither dropdown has had anything selected.
         console.log("Neither dropdown has a player selected.");
+        // Update the information bar.
+        displayInformation("comparison-information-bar", "Select a first player to view their stats");
     } else if (player1NameValue === "Select Player 1") {
         // Player 1 dropdown is blank so fill in details for player 2.
         console.log("Player 1 dropdown is blank so fill in details for player 2.");
+        // Update the information bar.
+        displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statArray.length; i++) {
             // higherBetterBoolean = statHigherBetterBooleanArray[i];
             loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean);
         }
-
     } else if (player2NameValue === "Select Player 2") {
         // Player 2 dropdown is blank so fill in details for player 1.
         console.log("Player 2 dropdown is blank so fill in details for player 1.");
+        // Update the information bar.
+        displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statArray.length; i++) {
             // higherBetterBoolean = statHigherBetterBooleanArray[i];
             loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean);
         }
-
-    } else {
-        // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
+    } else if (player1NameValue === player2NameValue) {
+        // Both dropdowns are the same.
+        console.log("Both dropdowns are the same.");
+        // Update the information bar.
+        displayInformation("comparison-information-bar", "Why are you comparing the same player you weirdo?");
         // Loop through the stat array calling in the load stat data function and filling the bars.
         for (let i = 0; i < statArray.length; i++) {
             higherBetterBoolean = statHigherBetterBooleanArray[i];
             loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean);
         }
-
+    } else {
+        // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
+        // Update the information bar.
+        displayInformation("comparison-information-bar", "Click on any stat row to see an explanation of the stat");
+        // Loop through the stat array calling in the load stat data function and filling the bars.
+        for (let i = 0; i < statArray.length; i++) {
+            higherBetterBoolean = statHigherBetterBooleanArray[i];
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean);
+        }
     }
 
     // For the comparison page, have two dropdown selection boxes.
@@ -974,4 +1013,13 @@ function stopRotateLogo() {
     dorkiniansLogo.classList.remove("rotate"); // Remove the "rotate" class from the logo.
     dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
     dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
+}
+
+// Information Bar Function
+
+// Display New Message
+function displayInformation(informationBarID, displayMessage) {
+    // Update the identified information bar with a given message. 
+    var informationBar = document.getElementById(informationBarID); // Get the Information Bar using the provided ID.
+    informationBar.innerHTML = displayMessage; // Add the text to the HTML element.
 }
