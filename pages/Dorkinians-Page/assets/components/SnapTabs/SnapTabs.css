@@ -10,7 +10,8 @@
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
-    --snap-tabs-hue: 328deg;
+    /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
+    --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
 }
 
 /* Added Luke Styling. */
