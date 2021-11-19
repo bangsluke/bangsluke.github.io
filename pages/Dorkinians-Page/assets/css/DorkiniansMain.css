@@ -40,6 +40,7 @@ Section 1
 	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
+	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
 
 	/* Distances & Spacing */
 	--headerHeight: 4rem; /* Define the header height variable. */
@@ -109,7 +110,7 @@ body {
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-    margin: 1rem auto 5rem auto; /* Add a margin above and below each section. */
+    margin: 1rem auto 2rem auto; /* Add a margin above and below each section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -368,8 +369,8 @@ tr:last-child td:last-child {
 /* Tooltip container */
 .tooltip {
 	text-decoration: underline; /* Add dots under the hoverable text. */
-    text-decoration-color: white;  
-    text-decoration-style: dotted; 
+    text-decoration-color: white;
+    text-decoration-style: dotted;
 }
 
 /* Tooltip text */
@@ -403,7 +404,7 @@ tr:last-child td:last-child {
     position: absolute;
     bottom: 100%;  /* This will position the arrow at the top of the tooltip */
     left: 10%;
-    margin-left: -0.3rem;    
+    margin-left: -0.3rem;
     border-width: 0.2rem;
     border-style: solid;
 }
@@ -495,6 +496,61 @@ option {
 	margin-bottom: 1rem;
 }
 
+/* 5. Stats ToolTip styling */
+
+/* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Stats Tooltip container */
+.stats-tooltip {
+	/* background-color: red; */
+	position: relative;
+  	display: inline-block;	
+}
+
+/* Tooltip text */
+.stats-tooltip .stats-tooltip-text {
+	/* background-color: blue; */
+	background-color: var(--page-dark-grey-colour, grey);
+	visibility: hidden; /* Initially set the visibility as hidden. */
+	/* min-width: 20rem; */
+	width: 90%;
+	min-height: 1rem;
+	/* max-height: 30rem; */
+	/* min-width: 150%; */
+	/* overflow: visible; */
+	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	/* Position the tooltip text below the text its explaining. */
+	position: absolute;
+	z-index: 1;
+  	bottom: 110%; /* Position above the container div. */
+  	left: 50%; /* Center align the tooltip across the page. */
+  	margin-left: -45%; /* Use half of the width, to center the tooltip */
+}
+  
+/* Show the stats tooltip text when you mouse over the stats tooltip container */
+.stats-tooltip:hover .stats-tooltip-text {
+	visibility: visible; /* Change the visibility to visible when hovered on. */
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.stats-tooltip .stats-tooltip-text::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+}
+
+.stats-tooltip-text {
+	font-size: 12.8px; /* Fallback value. */
+	font-size: 0.7rem; /* Relative to root (html) value. */
+	text-transform: none;
+	text-align: left;
+}
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
