@@ -878,9 +878,9 @@ Section 4
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
-	grid-template-columns: 45% 5% 45%; 
+	grid-template-columns: 45% 4% 45%; 
 	grid-template-rows: 2rem 2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 0.5rem; /* First value is between rows, second columns. */
+	gap: 1rem 3%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
 	  "Player1Stats Blank Player2Stats"
@@ -917,7 +917,7 @@ Section 4
 	flex-flow: column wrap;
 	grid-template-columns: 100%; /* 1 column of full width. */
 	grid-template-rows: repeat(12, 1.5rem); /* Repeat the same height row x number of times. */
-	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+	gap: 0.2rem 0; /* First value is between rows, second columns. */
 	margin: 0 auto 0 auto;
 }
 
