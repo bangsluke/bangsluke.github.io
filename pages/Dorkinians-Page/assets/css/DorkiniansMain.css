@@ -484,6 +484,16 @@ option {
 }
 
 
+/* 4. Information bar styling */
+
+.information-bar {
+	/* background-color: aqua; */
+	width: 100%;
+	text-align: center;
+	font-size: 0.7rem;
+	font-style: italic;
+	margin-bottom: 1rem;
+}
 
 
 
