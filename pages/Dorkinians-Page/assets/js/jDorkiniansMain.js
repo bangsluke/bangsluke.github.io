@@ -123,7 +123,7 @@ function init() {
 
     // All Stats tab.
     // Update the information bar.
-    displayInformation("all-stats-information-bar", "Select a filter to begin reviewing further detailed stats");
+    // displayInformation("all-stats-information-bar", "Select a filter to begin reviewing further detailed stats");
 
     // Team of the Week tab.
     // Update the information bar.
