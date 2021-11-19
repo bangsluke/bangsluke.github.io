@@ -266,6 +266,7 @@ th {
 tr {
 	/* font-size: 14px; /* Fallback value. */
 	/* font-size: 0.9rem; /* Relative to root (html) value. */
+	color: white;
 }
 
 /* Used for table cell text across the site. */
@@ -1072,6 +1073,7 @@ Section 5
 		/* background: blue; */
 		:root {
 			/* --headerHeight: 2.8rem; Define the header height variable. */
+			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
 	}
 	
