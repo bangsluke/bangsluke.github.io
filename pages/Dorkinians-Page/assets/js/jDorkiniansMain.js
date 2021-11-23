@@ -251,7 +251,7 @@ function showPlayerStatsTabInfo(results) {
     // Player selection.
     const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    console.log("Selected player (playerValue) = " + playerValue);
+    // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
@@ -265,8 +265,8 @@ function showPlayerStatsTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    console.log("filteredArrayOfObjects[0] = ");
-    console.log(filteredArrayOfObjects[0]);
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
 
     // Populate the stats information on the page.
 
