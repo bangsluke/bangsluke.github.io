@@ -672,6 +672,9 @@ function updateTablesResultsandFixturesTab() {
     var teamSelectionDropdown = document.getElementById("tables-results-fixtures-team-selection-dropdown");
     var teamSelection = teamSelectionDropdown.options[teamSelectionDropdown.selectedIndex].value; // Get the team selected value (which comes through as 1s etc). (https://stackoverflow.com/a/8549358/14290169).
 
+    // Update the information bar.
+    displayInformation("tables-results-fixtures-information-bar", "Click on a table for more details on the AFC site");
+
     // Define an array of teams to update. Each team corresponds to an HTML element.
     let teamArray = ["1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s"];
     for (let i = 0; i < teamArray.length; i++) {
