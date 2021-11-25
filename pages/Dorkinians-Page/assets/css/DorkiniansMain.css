@@ -1014,13 +1014,18 @@ div.cell {
 
 /* Tables, Results & Fixtures Tab */
 
+.dorkiniansTable {
+	padding-top: 1rem;
+}
+
 .dorkiniansTableHeaderText {
 	padding-bottom: 0.5rem;
 	text-align: center;
 }
 
 .AFCTable {
-	padding-bottom: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 1.5rem;
 }
 
 
