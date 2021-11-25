@@ -407,8 +407,8 @@ function updateComparisonStatData() {
     // Define an array of booleans as to if it is better to have a higher value or not.
     let statHigherBetterBooleanArray = [true, true, true, true, true, false, false, false, false, true, true, false, false];
     let higherBetterBoolean = ""; // Initially define the higherBetterBoolean to be blank.
-
-    console.log('%c' + '>> See here for latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+    // Define an array of decimal places to round the stat value to.
+    let numberDecimalPlacesArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1];
 
     if (player1NameValue === "Select Player 1" && player2NameValue === "Select Player 2") {
         // Do nothing as neither dropdown has had anything selected.
@@ -418,7 +418,7 @@ function updateComparisonStatData() {
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statArray.length; i++) {
             // higherBetterBoolean = statHigherBetterBooleanArray[i];
-            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean);
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean, numberDecimalPlacesArray[i]);
         }
     } else if (player1NameValue === "Select Player 1") {
         // Player 1 dropdown is blank so fill in details for player 2.
@@ -428,7 +428,7 @@ function updateComparisonStatData() {
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statArray.length; i++) {
             // higherBetterBoolean = statHigherBetterBooleanArray[i];
-            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean);
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean, numberDecimalPlacesArray[i]);
         }
     } else if (player2NameValue === "Select Player 2") {
         // Player 2 dropdown is blank so fill in details for player 1.
@@ -438,7 +438,7 @@ function updateComparisonStatData() {
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statArray.length; i++) {
             // higherBetterBoolean = statHigherBetterBooleanArray[i];
-            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean);
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, false, higherBetterBoolean, numberDecimalPlacesArray[i]);
         }
     } else if (player1NameValue === player2NameValue) {
         // Both dropdowns are the same.
@@ -448,7 +448,7 @@ function updateComparisonStatData() {
         // Loop through the stat array calling in the load stat data function and filling the bars.
         for (let i = 0; i < statArray.length; i++) {
             higherBetterBoolean = statHigherBetterBooleanArray[i];
-            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean);
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean, numberDecimalPlacesArray[i]);
         }
     } else {
         // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
@@ -457,15 +457,17 @@ function updateComparisonStatData() {
         // Loop through the stat array calling in the load stat data function and filling the bars.
         for (let i = 0; i < statArray.length; i++) {
             higherBetterBoolean = statHigherBetterBooleanArray[i];
-            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean);
+            loadInComparisonStatNumbers(statArray[i], player1NameValue, player2NameValue, true, higherBetterBoolean, numberDecimalPlacesArray[i]);
         }
     }
+
+    console.log('%c' + '>> See here for latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
 
 }
 
-function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean, higherBetterBoolean) {
+function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean, higherBetterBoolean, numberDecimalPlaces) {
 
     // Use the global variable "displayAllTimeStatsArrayOfObjects" and filter it down for the defined player name.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the received array of objects.
@@ -490,7 +492,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
 
         // Check if the player name in the array is blank and skip it if it is.
         if (playerArray[i] == "") {
-            
+
             // As the player name is blank (or still "Select Player 1/2") then fill in the stats as blank.
             var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
             TextElement.innerHTML = ''; // Add the text to the HTML element.
@@ -514,7 +516,9 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             // console.log("The stat being updated is " + statName + "."); // Log the stat being updated.
             var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
             var selectedStatValue = Number(filteredArrayOfObjects[0][statName]); // Use a dynamic [statArray[i]] key. Convert the stat to a number.
-            var displayText = Number(filteredArrayOfObjects[0][statName]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName],numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            // console.log("selectedStatValue = " + selectedStatValue); // Log the value that will be used for the stat.
+            // console.log("numberDecimalPlaces = " + numberDecimalPlaces); // Log the number of decimal places the stat is rounded to.
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
             TextElement.innerHTML = displayText; // Add the text to the HTML element.
 
@@ -614,22 +618,6 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
         ElementWidth = Math.floor((statValueArray[2] / totalStatValue) * 100);
         // console.log("ElementWidth (right): " + ElementWidth + "%");
         BarElement = document.getElementById("comparison-" + statName + "-player-2-bar-container").style.width = ElementWidth + '%';
-    }
-
-}
-
-function fillStatsBars(playerNumber) {
-
-    // Define an array of stats to update. Each stat corresponds to an HTML element.
-    let statArray = ["APP", "MOM", "G"];
-    // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    for (let i = 0; i < statArray.length; i++) {
-        // console.log(statArray[i]); // Log the stat being updated.
-        // console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
-        // Set the player stats bar.
-        var BarElement = document.getElementById("comparison-" + statArray[i] + "-player-" + playerNumber + "-bar"); // Get the Bar Element dynamically.
-        // BarElement.setAttribute('id', 'play-animation');
-        BarElement.classList.add("play-animation"); // Add the play-animation class from the selected element.
     }
 
 }
@@ -979,6 +967,14 @@ function toggleFullScreen(element) {
     }
 }
 
+
+// Math Function
+
+// Rounding Function (https://learnersbucket.com/examples/javascript/learn-how-to-round-to-2-decimal-places-in-javascript/).
+let roundOff = (num, places) => {
+    const x = Math.pow(10, places);
+    return Math.round(num * x) / x;
+}
 
 
 // Dorkinians Logo Rotation Functions

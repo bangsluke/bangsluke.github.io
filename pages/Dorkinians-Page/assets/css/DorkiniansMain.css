@@ -904,7 +904,7 @@ Section 4
 
 /* Add a class to style the overall holding container of all stats rows. */
 .comparison-stats-table {
-	background-color: purple;
+	/* background-color: purple; */
 	width: 100%;
 	grid-area: ComparisonStatsTable;
 	display: grid;
@@ -917,11 +917,11 @@ Section 4
 
 /* Add a class to style each row container of the comparison table. */
 .comparison-stats-table-row-container {
-	background-color: lightgreen;
+	/* background-color: lightgreen; */
 	display: grid;
 	/* flex-flow: column wrap; */
 	width: 100%;
-	grid-template-columns: 3fr minmax(5rem, 1fr) minmax(28px, 0.5fr) minmax(5rem, 1fr) 3fr; /* 5 columns of varying width. */
+	grid-template-columns: 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
 	grid-template-rows: 1.5rem; /* One row height. */
 	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
 }
@@ -934,21 +934,6 @@ div.cell {
   	align-content: center;
   	align-items: center;
 	text-align: center;
-}
-
-.icon-cell {
-	background:rgba(249, 237, 50, 0.60);
-}
-
-.number-cell {
-	background:red;
-	min-width: 3rem;
-	text-align: center;
-}
-
-.stat-bar-cell {
-	background:purple;
-	min-width: 5rem;
 }
 
 /* Below two classes, id and animation are copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech */
@@ -1084,6 +1069,9 @@ Section 5
 			/* --headerHeight: 2.8rem; Define the header height variable. */
 			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
+		.comparison-stats-table {
+			width: 100%;
+		}
 	}
 	
 	@media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1095,6 +1083,9 @@ Section 5
 		}
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
+		}
+		.comparison-stats-table {
+			width: 95%;
 		}
 	}
 	
@@ -1108,6 +1099,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
+		.comparison-stats-table {
+			width: 95%;
+		}
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -1119,6 +1113,9 @@ Section 5
 		}
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+		}
+		.comparison-stats-table {
+			width: 90%;
 		}
 	}
 	
@@ -1132,6 +1129,9 @@ Section 5
 		html {
 			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
 		}
+		.comparison-stats-table {
+			width: 90%;
+		}
 	}
 	
 	@media only screen and (min-width: 1824px) {
@@ -1143,6 +1143,9 @@ Section 5
 		}
 		html {
 			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
+		}
+		.comparison-stats-table {
+			width: 85%;
 		}
 	}
 	
