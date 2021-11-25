@@ -622,22 +622,6 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
 
 }
 
-function fillStatsBars(playerNumber) {
-
-    // Define an array of stats to update. Each stat corresponds to an HTML element.
-    let statArray = ["APP", "MOM", "G"];
-    // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    for (let i = 0; i < statArray.length; i++) {
-        // console.log(statArray[i]); // Log the stat being updated.
-        // console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
-        // Set the player stats bar.
-        var BarElement = document.getElementById("comparison-" + statArray[i] + "-player-" + playerNumber + "-bar"); // Get the Bar Element dynamically.
-        // BarElement.setAttribute('id', 'play-animation');
-        BarElement.classList.add("play-animation"); // Add the play-animation class from the selected element.
-    }
-
-}
-
 function resetStatsBars() {
 
     console.log("function resetStatsBars called.");
