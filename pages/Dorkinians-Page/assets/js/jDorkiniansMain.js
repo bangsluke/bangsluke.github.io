@@ -462,6 +462,7 @@ function updateComparisonStatData() {
     }
 
     console.log('%c' + '>> See here for end of latest changes.', 'background-color: red; color:black; padding: 0.5em 0em; font-weight: bold;');
+
 }
 
 function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean, higherBetterBoolean) {
@@ -489,7 +490,11 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
 
         // Check if the player name in the array is blank and skip it if it is.
         if (playerArray[i] == "") {
-            // Do nothing as the player name is blank.
+            
+            // As the player name is blank (or still "Select Player 1/2") then fill in the stats as blank.
+            var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
+            TextElement.innerHTML = ''; // Add the text to the HTML element.
+
         } else {
             // console.log("Filtering 'filteredArrayOfObjects' for player: " + playerArray[i]);
 
@@ -521,9 +526,15 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             if (fillBarsBoolean === true) {
                 // Fill the bars as the boolean is true.
                 // console.log("Filling the stats bars as fillBarsBoolean is true.");
-                var BarElement = document.getElementById("comparison-" + statName + "-player-" + i + "-bar"); // Get the Bar Element dynamically.
-                // BarElement.setAttribute('id', 'play-animation');
-                BarElement.classList.add("play-animation"); // Add the play-animation class from the selected element.
+
+                // Fill the bars using setTimeout to trigger the re-animation of the bars filling. https://stackoverflow.com/a/36676399/14290169.
+                setTimeout(function () {
+                    var BarElement = document.getElementById("comparison-" + statName + "-player-" + i + "-bar"); // Get the Bar Element dynamically.
+                    BarElement.style.animation = "progress-animation 3s forwards"; // Apply the animation (written in CSS file).
+                    // console.log("BarElement.style.animation:");
+                    // console.log(BarElement.style.animation);
+                }, 1)
+
             } else {
                 // Do nothing as fillBarsBoolean is false.
                 // console.log("Not filling the stats bars as fillBarsBoolean is false.");
@@ -591,7 +602,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
     // console.log("totalStatValue: ");
     // console.log(totalStatValue);
     // Catch if both stats are 0 and the element width can't be calculated.
-    if ((statValueArray[1] + statValueArray[2])===0) {
+    if ((statValueArray[1] + statValueArray[2]) === 0) {
         BarElement = document.getElementById("comparison-" + statName + "-player-1-bar-container").style.width = 0 + '%';
         BarElement = document.getElementById("comparison-" + statName + "-player-2-bar-container").style.width = 0 + '%';
     } else {
@@ -606,8 +617,6 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
     }
 
 }
-
-
 
 function fillStatsBars(playerNumber) {
 
@@ -627,22 +636,34 @@ function fillStatsBars(playerNumber) {
 
 function resetStatsBars() {
 
-    console.log("function resetStatsBars called.")
-    let statArray = ["APP", "MOM", "G"];
+    console.log("function resetStatsBars called.");
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
     // let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
     for (let i = 0; i < statArray.length; i++) {
-        // console.log(statArray[i]); // Log the stat being updated.
-        // console.log("comparison-" + statArray[i] + "-player-" + playerNumber + "-value");
-        // Reset the player stats bar by removing the animation.
+        // console.log("Stat being worked on: " + statArray[i]); // Log the stat being updated.
+
+        // Reset the player stat bars by removing the animation.
+
+        // Sort the player 1 side.
         var BarElement = document.getElementById("comparison-" + statArray[i] + "-player-1-bar"); // Get the Bar Element dynamically.
-        // BarElement.removeAttribute('id', 'play-animation');
-        BarElement.classList.remove("play-animation"); // Remove the play-animation class from the selected element.
+        BarElement.style.animation = ''; // Clear the animation as part of the reset ready for it to be re-applied.
+        // console.log("BarElement.style.animation:");
+        // console.log(BarElement.style.animation);
         BarElement.classList.remove("yellow"); // Remove the yellow class from the selected element.
+        BarElement = document.getElementById("comparison-" + statArray[i] + "-player-1-bar-container"); // Get the Container Element dynamically.
+        BarElement.style.width = "0";
+
+        // Sort the player 2 side.
         BarElement = document.getElementById("comparison-" + statArray[i] + "-player-2-bar"); // Get the Bar Element dynamically.
-        // BarElement.removeAttribute('id', 'play-animation');
-        BarElement.classList.remove("play-animation"); // Remove the play-animation class from the selected element.
+        BarElement.style.animation = ''; // Clear the animation as part of the reset ready for it to be re-applied.
+        // console.log("BarElement.style.animation:");
+        // console.log(BarElement.style.animation);
         BarElement.classList.remove("yellow"); // Remove the yellow class from the selected element.
+        BarElement = document.getElementById("comparison-" + statArray[i] + "-player-2-bar-container"); // Get the Container Element dynamically.
+        BarElement.style.width = '0';
     }
+
 }
 
 
@@ -856,6 +877,7 @@ function generateTable(table, data, toolTipBoolean) {
 
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
+
     //console.log("Function: generateTable finished.") // Log a final message to show the function is complete.
 }
 
