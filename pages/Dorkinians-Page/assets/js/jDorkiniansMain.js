@@ -37,6 +37,13 @@ console.time(); // Start the console timer.
 
 // Publically define a number of global constants and variables such as the location of the Google Sheets.
 
+// Ready Global Variable
+var tabReadyCount = 0;
+const numberTabs = 2;
+
+
+// Google Sheet Links
+
 // Fixtures List Tab
 const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
 // Match Details Tab
@@ -60,7 +67,12 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 // Add a load event listener - which completes after the init() function below - (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
 window.addEventListener('load', function () {
     console.log('%c' + '> Dorkinians page images and other resources all loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message. 
+
+    // console.log("End timer");
     console.timeEnd(); // End the console timer.
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount();
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     // stopRotateLogo();
@@ -75,8 +87,11 @@ function init() {
     // Step 0.
     // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
+    // Call the updateLoadingPage function to change the shown phrase.
+    updateLoadingPage();
+
     // Start the rotation of the Dorkinians logo to simulate loading.
-    rotateLogo();
+    rotateLogo("dorkinians-header-logo");
 
     // Step 1. 
     // Player Stats Tab.
@@ -143,10 +158,7 @@ function init() {
     displayInformation("tables-results-fixtures-information-bar", "Select a team to see their league table, results and fixtures");
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
-    stopRotateLogo();
-
-    // Call the function to hide the loading page.
-    hideLoadingPage();
+    stopRotateLogo("dorkinians-header-logo");
 }
 
 
@@ -164,12 +176,50 @@ function init() {
 
 // Loading Functions
 
-function hideLoadingPage() {
+function updateLoadingPage() {
+    // Update the phrase text on the page every few seconds.
     
+    var phrasesArray = ["Locating any number 8 tops in kit bags...", "Calculating the likeihood of Shano scoring an 'unmissable' chance...", "Test phrase 1", "Test phrase 2", "Test phrase 3", "Test phrase 4", "Test phrase 5", "Test phrase 6", "Test phrase 7"];
     
-    var loadingPageElement = document.getElementById("loading-page"); // Get the loading-page element on the page.
-    // loadingPageElement.classList.add("hidden"); // Add the hidden class to the loading-page element.
+    // Create a setInterval for every 3 seconds to change the shown phrase.
+    let loopPhrases = setInterval(function () {
+        let phrasesArrayLength = phrasesArray.length;
+        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength));
+        console.log("pickedPhraseNumber = " + pickedPhraseNumber);
+        let phraseText = phrasesArray[pickedPhraseNumber];
+        let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
+        console.log(phraseText);
+        // React if the tab ready count matches the number of tabs.
+        if (tabReadyCount === numberTabs) {
+            hideLoadingPage();
+            clearInterval(loopPhrases);
+        }
+    }, 3000);
 }
+
+// Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
+function randomNumber(min, max) { 
+    return Math.random() * (max - min) + min;
+} 
+
+function incrementTabReadyCount() {
+    // Increment the tab ready count until it matches with the numberTabs.
+    tabReadyCount = tabReadyCount + 1;
+    console.log("tabReadyCount = " + tabReadyCount + "/" + numberTabs);
+}
+
+function hideLoadingPage() {
+    // Hide the loading page as all tabs have returned as ready.
+    console.log("Loading Page hidden as all tabs are ready.")
+    let loadingPageElement = document.getElementById("loading-page"); // Get the loading-page element on the page.
+    loadingPageElement.classList.add("fadeout"); // Add the hidden class to the loading-page element.
+    // Allow for a second to pass (the same duration of the fadeout css animation) and then permanently add the hidden class to the loading page div so that the user can select things below it.
+    setInterval(function () {
+        loadingPageElement.classList.add("hidden"); // Add the hidden class to the loading-page element.
+    }, 1000);
+}
+
+
 
 
 
@@ -251,6 +301,9 @@ function getPlayerStatsTabInfo(results) {
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount();
 }
 
 // 2.2. Player Stats tab data "show-er" function.
@@ -541,7 +594,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             // console.log("The stat being updated is " + statName + "."); // Log the stat being updated.
             var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
             var selectedStatValue = Number(filteredArrayOfObjects[0][statName]); // Use a dynamic [statArray[i]] key. Convert the stat to a number.
-            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName],numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName], numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
             // console.log("selectedStatValue = " + selectedStatValue); // Log the value that will be used for the stat.
             // console.log("numberDecimalPlaces = " + numberDecimalPlaces); // Log the number of decimal places the stat is rounded to.
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
@@ -1008,22 +1061,24 @@ let roundOff = (num, places) => {
 // Dorkinians Logo Rotation Functions
 
 // Start Rotation
-function rotateLogo() {
+function rotateLogo(logoID) {
+    // Begin rotating the logo given the defined id of the logo to rotate.
     // console.log('%c' + '> rotateLogo() called. Dorkinians logo rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Add classes to the Dorkinians logo in the top left corner to simulate loading.
-    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    var dorkiniansLogo = document.getElementById(logoID); // Get the Dorkinians Logo.
     dorkiniansLogo.classList.add("rotate"); // Add the "rotate" class to the logo.
     dorkiniansLogo.classList.add("linear"); // Add the "linear" class to the logo.
     dorkiniansLogo.classList.add("infinite"); // Add the "infinite" class to the logo.
 }
 
 // Finish Rotation
-function stopRotateLogo() {
+function stopRotateLogo(logoID) {
+    // Finish rotating the logo given the defined id of the logo to rotate.
     // console.log('%c' + '> stopRotateLogo() called. Dorkinians logo stopped rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Remove classes from the Dorkinians logo in the top left corner to simulate loading being completed.
-    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    var dorkiniansLogo = document.getElementById(logoID); // Get the Dorkinians Logo.
     dorkiniansLogo.classList.remove("rotate"); // Remove the "rotate" class from the logo.
     dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
     dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
