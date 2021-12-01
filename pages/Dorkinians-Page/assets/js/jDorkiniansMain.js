@@ -144,12 +144,32 @@ function init() {
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo();
+
+    // Call the function to hide the loading page.
+    hideLoadingPage();
 }
 
 
 
 
 
+
+// Loading Page: 
+// Create a div with class “loading-page”. 
+// Within that, create a div class “loading-page-background” which is 100% height and width, fixed position, Dorkinians green, and most forward Z index.
+// Next to that div create another div with id “Dorkinians-logo-large”. 
+// Update the rotateLogo function to accept an id as a argument and then use it to rotate the main large logo as well as the little one.
+// Create a ready function for each tab that once the data has loaded, increments a global variable counter and when the global variable is 6/6 or whatever, make the loading-page div disappear by making it display none?
+// On the loading page, have text bits come up such as "Loading in data...", "Forgetting Oakley's 'assist'...", etc
+
+// Loading Functions
+
+function hideLoadingPage() {
+    
+    
+    var loadingPageElement = document.getElementById("loading-page"); // Get the loading-page element on the page.
+    // loadingPageElement.classList.add("hidden"); // Add the hidden class to the loading-page element.
+}
 
 
 
