@@ -640,6 +640,42 @@ Section 3
   }
 
 
+/* Loading Page */
+
+.loading-page {
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	background-size: cover;
+    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+    /* background-color: var(--main-dorkinians-green-colour, black); */
+    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
+	background-image: linear-gradient(67deg, #ce641d 5%, #490bf3 42%, var(--main-dorkinians-green-colour) 74%);
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1fr 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "Logo"
+	  "Text";
+}
+#loading-page-logo-container {
+	/* background: red; */
+	grid-area: Logo;
+}
+.large-logo {
+	padding-top: 3rem;
+	height: 20rem;
+	width: auto;
+}
+#loading-page-loading-text-container {
+	/* background: blue; */
+	grid-area: Text;
+}
+
 
 /* Footer Section */
 
