@@ -45,12 +45,17 @@ const numberTabs = 2;
 var phrasesArray = [
     "Locating any number 8 tops in kit bags...",
     "Calculating the likeihood of Shano scoring an 'unmissable' chance...",
-    "Forgetting Oakley's 'assist'...",
-    "Adding up all of Peck's goals...",
+    "Forgetting Oakley's 'assist' in the last game...",
+    "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Will's yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
     "Hitting on the bar staff after the game...",
+    "Waiting for Sam Smith to score from open play...",
     "Ignoring the 1's team's yellow cards...",
+    "Accepting bribes for stat fiddling...",
+    "Will be ready as soon as Rupert Cape uses his left foot...",
+    "Waiting for Morley to leave the changing room so we can kick off...",
+    "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
@@ -195,16 +200,6 @@ function init() {
 
 
 
-
-
-// Loading Page: 
-// Create a div with class “loading-page”. 
-// Within that, create a div class “loading-page-background” which is 100% height and width, fixed position, Dorkinians green, and most forward Z index.
-// Next to that div create another div with id “Dorkinians-logo-large”. 
-// Update the rotateLogo function to accept an id as a argument and then use it to rotate the main large logo as well as the little one.
-// Create a ready function for each tab that once the data has loaded, increments a global variable counter and when the global variable is 6/6 or whatever, make the loading-page div disappear by making it display none?
-// On the loading page, have text bits come up such as "Loading in data...", "Forgetting Oakley's 'assist'...", etc
-
 // Loading Functions
 
 function updateLoadingPage() {
@@ -217,9 +212,9 @@ function updateLoadingPage() {
             alert("Page timed out. Please refresh."); // Pass an alert to the user.
         }
         let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
-        console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
+        // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
         let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
-        console.log("phraseText = " + phraseText); // Log the selected phrase.
+        // console.log("phraseText = " + phraseText); // Log the selected phrase.
         
         // Reduce down the array removing the selected phrase so that it is not displayed again.
         delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
@@ -243,14 +238,14 @@ function updateLoadingPage() {
 
         // React if the tab ready count matches the number of tabs.
         if (tabReadyCount === numberTabs) {
-            // hideLoadingPage(); // Call the function to fade out the loading page.
-            // clearInterval(loopPhrases); // Cancel the setInterval and escape it.
+            hideLoadingPage(); // Call the function to fade out the loading page.
+            clearInterval(loopPhrases); // Cancel the setInterval and escape it.
         }
     }, 6000);
 }
 
-// Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
 function randomNumber(min, max) {
+    // Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
     return Math.random() * (max - min) + min;
 }
 
