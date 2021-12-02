@@ -326,7 +326,8 @@ function showHomepageTabInfo(results) {
     // Populate the team next fixtures information on the page.
 
     // Define an array of teams to update. Each stat corresponds to an HTML element.
-    let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
+    let teamArray = ["1stXI"];
+    // let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
     for (let i = 0; i < teamArray.length; i++) {
 
         var teamFixtureObject = dataArrayOfObjects[i];
