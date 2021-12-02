@@ -725,6 +725,16 @@ Section 4
 
 /* Everything below initially designed for mobile. */
 
+/* Homepage Tab */
+
+.homepage-weather-container {
+	/* background-color: yellow; */
+	grid-area: Weather;
+	padding: 0.3rem;
+}
+
+
+
 /* Club Stats Tab */
 
 .club-stats-area {
@@ -742,12 +752,6 @@ Section 4
 .club-stats-clubStats-container {
 	/* background-color: blue; */
 	grid-area: ClubStats;
-	padding: 0.3rem;
-}
-
-.club-stats-weather-container {
-	/* background-color: yellow; */
-	grid-area: Weather;
 	padding: 0.3rem;
 }
 
