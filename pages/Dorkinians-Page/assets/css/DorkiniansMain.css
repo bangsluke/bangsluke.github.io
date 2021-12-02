@@ -643,6 +643,10 @@ Section 3
 /* Loading Page */
 
 .loading-page {
+	
+	/* Change the below property on/off to hide/show the loading page. */
+	/* display: none !important; */
+
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
@@ -669,7 +673,6 @@ Section 3
 	align-items: center; /* Vertically align all child elements that sit within .loading-page-container */
 	justify-content: center; /* Horizontally align all child elements that sit within .loading-page-container */
 }
-
 #loading-page-logo-container {
 	/* background: red; */
 	grid-area: Logo;
@@ -684,7 +687,6 @@ Section 3
 	grid-area: Phrases;
 	color: white;
 }
-
 
 /* Add a fadeout animation that fades the opacity of the background out and then sets the display to be none. */
 .fadeout {
@@ -721,6 +723,20 @@ Section 4
 /* Everything below initially designed for mobile. */
 
 /* Homepage Tab */
+
+.homepage-next-fixtures-team-container {
+	/* background-color: #ce641d; */
+	display: grid; 
+	grid-template-columns: 1fr 1fr 0.5fr 2fr 2 fr; 
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 3px 3px; /* First value is between rows, second columns. */
+}
+
+.next-fixtures-grid-item {
+	/* background-color: aqua; */
+	display: inline-grid;
+}
+
 
 .homepage-weather-container {
 	/* background-color: yellow; */
