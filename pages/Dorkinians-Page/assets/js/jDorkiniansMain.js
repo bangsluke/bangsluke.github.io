@@ -39,7 +39,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var tabReadyCount = 0;
-const numberTabs = 2;
+const numberTabs = 3;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -61,6 +61,11 @@ var phrasesArray = [
 
 // Google Sheet Links
 
+// Homepage Tab
+const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
+var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+
 // Fixtures List Tab
 const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
 // Match Details Tab
@@ -73,8 +78,7 @@ const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1
 // Old published URL.
 // const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=246566173&single=true&output=csv';
 const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
-
-var displayAllTimeStatsArrayOfObjects = "";
+var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Ready Events
 
@@ -89,7 +93,7 @@ window.addEventListener('load', function () {
     console.timeEnd(); // End the console timer.
 
     // Increment the tab ready count by 1.
-    incrementTabReadyCount();
+    incrementTabReadyCount("All Resources Loaded");
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     // stopRotateLogo();
@@ -130,6 +134,19 @@ function init() {
     rotateLogo("dorkinians-header-logo");
 
     // Step 1. 
+    // Homepage Tab.
+    // Next Fixtures data.
+    console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    Papa.parse(nextFixturesSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getHomepageTabInfo, // The callback to execute when parsing is complete. Once done, call the getHomepageTabInfo function.
+    })
+
+
+
+    // Step 1. 
     // Player Stats Tab.
     // All Time Player Stats data.
     // console.log('%c' + '> 1. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -137,7 +154,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+        complete: getPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsTabInfo function.
     })
 
 
@@ -215,13 +232,13 @@ function updateLoadingPage() {
         // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
         let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
         // console.log("phraseText = " + phraseText); // Log the selected phrase.
-        
+
         // Reduce down the array removing the selected phrase so that it is not displayed again.
         delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
         phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
             return true
         });
-      
+
         // Clear the text element, define the initial required variables and then call the typeWriter function.
         // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
         document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
@@ -249,10 +266,10 @@ function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function incrementTabReadyCount() {
+function incrementTabReadyCount(tabName) {
     // Increment the tab ready count until it matches with the numberTabs.
     tabReadyCount = tabReadyCount + 1;
-    console.log("tabReadyCount = " + tabReadyCount + "/" + numberTabs);
+    console.log("tabReadyCount (" + tabName + ") = " + tabReadyCount + "/" + numberTabs);
 }
 
 function hideLoadingPage() {
@@ -272,9 +289,73 @@ function hideLoadingPage() {
 
 // Tab Functions
 
-// 1. Club/Team Stats Tab
+// 1. Homepage Tab
 
-// 1.1. Club/Team Stats tab data.
+// 1.1. Homepage tab data "getter" function.
+
+function getHomepageTabInfo(results){
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    showHomepageTabInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabInfo function.
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Homepage");
+}
+
+// 1.2. Homepage tab data "show-er" function.
+
+function showHomepageTabInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // console.log("dataArrayOfObjects[0]");
+    // console.log(dataArrayOfObjects[0]);
+
+    // Populate the team next fixtures information on the page.
+
+    // Define an array of teams to update. Each stat corresponds to an HTML element.
+    let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
+    for (let i = 0; i < teamArray.length; i++) {
+
+        var teamFixtureObject = dataArrayOfObjects[i];
+        // https://dmitripavlutin.com/access-object-keys-values-entries/
+
+        // console.log("teamFixtureObject");
+        // console.log(teamFixtureObject);
+        // console.log("teamFixtureObject['NEXTOPPO']");
+        // console.log(teamFixtureObject['NEXTOPPO']);
+        // console.log("Object.values(teamFixtureObject)")
+        // console.log(Object.values(teamFixtureObject));
+
+        // console.log(teamArray[i]); // Log the team being updated.
+        document.getElementById(teamArray[i] + "-Opposition").innerHTML = teamFixtureObject['NEXTOPPO']; // Get the Opposition text element and add the text to it.
+        document.getElementById(teamArray[i] + "-HomeAway").innerHTML = teamFixtureObject['HOMEAWAY']; // Get the HomeAway text element and add the text to it.
+        document.getElementById(teamArray[i] + "-Location").innerHTML = teamFixtureObject['LOCATION']; // Get the Location text element and add the text to it.
+        document.getElementById(teamArray[i] + "-LastResult").innerHTML = teamFixtureObject['LASTRESULT']; // Get the LastResult text element and add the text to it.
+        
+    }
+
+}
+
+
+
+
+
+// 2. Club/Team Stats Tab
+
+// 2.1. Club/Team Stats tab data.
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showResultsTabInfo(results) {
@@ -312,7 +393,7 @@ function showResultsTabInfo(results) {
     stopRotateLogo();
 }
 
-// 1.2. Club Stats Results tab data refresh.
+// 2.2. Club Stats Results tab data refresh.
 
 // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
 function showAllResultsTabUpdatedInfo() {
@@ -336,28 +417,29 @@ function showAllResultsTabUpdatedInfo() {
 
 
 
-// 2. Player Stats Tab
+// 3. Player Stats Tab
 
-// 2.1. Player Stats tab data "getter" function.
+// 3.1. Player Stats tab data "getter" function.
 
 function getPlayerStatsTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    // console.log('%c' + '>> getPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on.
+    // Process the original array of objects received.
+    displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
 
     // Increment the tab ready count by 1.
-    incrementTabReadyCount();
+    incrementTabReadyCount("Player Stats");
 }
 
-// 2.2. Player Stats tab data "show-er" function.
+// 3.2. Player Stats tab data "show-er" function.
 
 function showPlayerStatsTabInfo(results) {
     // Display the retrieved data onto the page.
-    // console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
+    console.log('%c' + '>> showPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
@@ -416,7 +498,7 @@ function showPlayerStatsTabInfo(results) {
 
 }
 
-// 2.3. Player Stats tab data "update-er" function.
+// 3.3. Player Stats tab data "update-er" function.
 
 function showPlayerStatsTabUpdatedInfo() {
     // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
@@ -436,9 +518,9 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 
-// 3. All Stats Tab
+// 4. All Stats Tab
 
-// 3.1. All Stats tab data.
+// 4.1. All Stats tab data.
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showAllStatsTabInfo(results) {
@@ -485,7 +567,7 @@ function showAllStatsTabInfo(results) {
     createFullTable(filteredArrayOfObjects, "#all-stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
-// 3.2. All Stats tab data refresh.
+// 4.2. All Stats tab data refresh.
 
 // Create a function that is called when the user changes a dropdown. This function is called from the HTML select elements.
 function showAllStatsTabUpdatedInfo() {
@@ -508,11 +590,11 @@ function showAllStatsTabUpdatedInfo() {
 
 
 
-// 4. Team of the Week Tab
+// 5. Team of the Week Tab
 
 
 
-// 5. Comparison Tab
+// 6. Comparison Tab
 
 function updateComparisonStatData() {
 
@@ -783,7 +865,7 @@ function resetStatsBars() {
 
 
 
-// 6. Tables, Results & Fixture Tab
+// 7. Tables, Results & Fixture Tab
 
 function updateTablesResultsandFixturesTab() {
     console.log("> Function: updateTablesResultsandFixturesTab() called.")
