@@ -656,12 +656,11 @@ Section 3
 
 	display: grid; 
 	grid-template-columns: 100%; 
-	grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+	grid-template-rows: 1fr 0.3fr 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "Logo"
-	  "Text"
-	  "Phrase";
+	  "Phrases";
 }
 
 .loading-page-container {
@@ -680,13 +679,9 @@ Section 3
 	height: 15rem;
 	width: auto;
 }
-#loading-page-loading-text-container {
-	/* background: blue; */
-	grid-area: Text;
-}
 #loading-page-loading-phrase-container {
 	/* background: green; */
-	grid-area: Phrase;
+	grid-area: Phrases;
 	color: white;
 }
 

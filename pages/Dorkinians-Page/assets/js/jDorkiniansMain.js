@@ -51,7 +51,7 @@ var phrasesArray = [
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
     "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
-    "Ignoring the 1's team's yellow cards...",
+    "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
     "Will be ready as soon as Rupert Cape uses his left foot...",
     "Waiting for Morley to leave the changing room so we can kick off...",
