@@ -41,6 +41,18 @@ console.time(); // Start the console timer.
 var tabReadyCount = 0;
 const numberTabs = 2;
 
+// Create an array of phrases to be displayed on the loading page.
+var phrasesArray = [
+    "Locating any number 8 tops in kit bags...",
+    "Calculating the likeihood of Shano scoring an 'unmissable' chance...",
+    "Forgetting Oakley's 'assist'...",
+    "Adding up all of Peck's goals...",
+    "Going into overdrive counting all of Alex Will's yellow cards...",
+    "Crafting the basis of the AFA's rep teams from Dorkinians players...",
+    "Hitting on the bar staff after the game...",
+    "Ignoring the 1's team's yellow cards...",
+    "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
+];
 
 // Google Sheet Links
 
@@ -82,10 +94,29 @@ window.addEventListener('load', function () {
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    console.log("init() called."); // Log that the init function has been called.
     console.log('%c' + '> Dorkinians page DOM content loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
 
     // Step 0.
     // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Reset the tabReadyCount.
+    tabReadyCount = 0;
+
+    // Initially show the loading text on the loading page using the typewriter effect.
+    // Clear the text element, define the initial required variables and then call the typeWriter function.
+    document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
+    let i = 0; // The integer counter.
+    let speed = 50; // The speed/duration of the effect in milliseconds.
+    let phraseText = "Loading data into site...";
+    typeWriter(); // Call the typeWriter function to update the HTML element with text.
+    function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
+        if (i < phraseText.length) {
+            document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
 
     // Call the updateLoadingPage function to change the shown phrase.
     updateLoadingPage();
@@ -178,29 +209,50 @@ function init() {
 
 function updateLoadingPage() {
     // Update the phrase text on the page every few seconds.
-    
-    var phrasesArray = ["Locating any number 8 tops in kit bags...", "Calculating the likeihood of Shano scoring an 'unmissable' chance...", "Test phrase 1", "Test phrase 2", "Test phrase 3", "Test phrase 4", "Test phrase 5", "Test phrase 6", "Test phrase 7"];
-    
-    // Create a setInterval for every 3 seconds to change the shown phrase.
+
+    // Create a setInterval for every 6 seconds to change the shown phrase.
     let loopPhrases = setInterval(function () {
-        let phrasesArrayLength = phrasesArray.length;
-        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength));
-        console.log("pickedPhraseNumber = " + pickedPhraseNumber);
-        let phraseText = phrasesArray[pickedPhraseNumber];
-        let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
-        console.log(phraseText);
+        let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
+        if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
+            alert("Page timed out. Please refresh."); // Pass an alert to the user.
+        }
+        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
+        console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
+        let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
+        console.log("phraseText = " + phraseText); // Log the selected phrase.
+        
+        // Reduce down the array removing the selected phrase so that it is not displayed again.
+        delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
+        phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
+            return true
+        });
+      
+        // Clear the text element, define the initial required variables and then call the typeWriter function.
+        // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
+        document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
+        let i = 0; // The integer counter.
+        let speed = 50; // The speed/duration of the effect in milliseconds.
+        typeWriter(); // Call the typeWriter function to update the HTML element with text.
+        function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
+            if (i < phraseText.length) {
+                document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
         // React if the tab ready count matches the number of tabs.
         if (tabReadyCount === numberTabs) {
-            hideLoadingPage();
-            clearInterval(loopPhrases);
+            // hideLoadingPage(); // Call the function to fade out the loading page.
+            // clearInterval(loopPhrases); // Cancel the setInterval and escape it.
         }
-    }, 3000);
+    }, 6000);
 }
 
 // Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
-function randomNumber(min, max) { 
+function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
-} 
+}
 
 function incrementTabReadyCount() {
     // Increment the tab ready count until it matches with the numberTabs.
