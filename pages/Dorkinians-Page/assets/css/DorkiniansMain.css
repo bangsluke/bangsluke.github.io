@@ -660,9 +660,10 @@ Section 3
 
 	display: grid; 
 	grid-template-columns: 100%; 
-	grid-template-rows: 1fr 0.3fr 1fr;
+	grid-template-rows: 0.3fr 1fr 0.3fr 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 	grid-template-areas: 
+	  "TopSpace"
 	  "Logo"
 	  "Phrases";
 }
