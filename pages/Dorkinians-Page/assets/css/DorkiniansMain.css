@@ -382,11 +382,11 @@ tr:last-child td:last-child {
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	background-color: var(--page-dark-grey-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	min-height: 2rem;
 	max-height: 30rem;
-	width: 15rem;
+	width: max-content;
 	min-width: 8rem;
 	/* min-width: 150%; */
 	/* overflow: visible; */
@@ -397,23 +397,27 @@ tr:last-child td:last-child {
 	z-index: 1;
  	top: 100%;
 	left: 0rem;
+
+	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
+    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
+	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .tooltip .tooltiptext::after {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: " ";
-    position: absolute;
-    bottom: 100%;  /* This will position the arrow at the top of the tooltip */
-    left: 10%;
-    margin-left: -0.3rem;
-    border-width: 0.2rem;
-    border-style: solid;
+	position: absolute;
+	bottom: 100%; /* At the bottom of the tooltip */
+	left: 8%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent var(--page-dark-grey-colour, grey) transparent;
 }
 
 p.tooltiptext {
@@ -422,6 +426,9 @@ p.tooltiptext {
 	text-transform: none;
 	text-align: left;
 }
+
+
+
 
 /* Other classes and styles. */
 
@@ -533,11 +540,15 @@ option {
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
+
+	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
+    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
   
 /* Show the stats tooltip text when you mouse over the stats tooltip container */
 .stats-tooltip:hover .stats-tooltip-text {
 	visibility: visible; /* Change the visibility to visible when hovered on. */
+	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
@@ -651,7 +662,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;

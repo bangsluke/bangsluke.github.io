@@ -68,9 +68,9 @@
         <div class="logo-container">
             <!-- Add Dorkinians logo. -->
             <!-- Link back to the main homepage. Delete later or minimise. -->
-            <a href="\Homepage.html"><img class="logo fadein center" id="dorkinians-header-logo"
-                    src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
-                    alt="Dorkinians Logo" width="30" height="30"></a>
+            <img class="logo fadein center" id="dorkinians-header-logo"
+                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
+                alt="Dorkinians Logo" width="30" height="30" onclick="init()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -326,21 +326,20 @@
 
                                 <!-- Let the user pick which season to filter for. -->
                                 <select name="SeasonSelection" class="selection-dropdown"
-                                    id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Season</option>
+                                    id="club-stats-season-selection-dropdown" onchange="updateClubStatsTabInfo()">
+                                    <option value="">All Seasons</option>
                                     <option value="2016/17">2016/17</option>
                                     <option value="2017/18">2017/18</option>
                                     <option value="2018/19">2018/19</option>
                                     <option value="2019/20">2019/20</option>
                                     <option value="2020/21">2020/21</option>
-                                    <option value="2021/22">2021/22</option>
+                                    <option value="2021/22" selected="selected">2021/22</option>
                                 </select>
 
                                 <!-- Let the user pick which team to filter for. -->
                                 <select name="TeamSelection" class="selection-dropdown"
-                                    id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Team</option>
-                                    <option value="WholeClub">Whole club</option>
+                                    id="club-stats-team-selection-dropdown" onchange="updateClubStatsTabInfo()">
+                                    <option value="WholeClub" selected="selected">Whole club</option>
                                     <option value="1st XI">1st XI</option>
                                     <option value="2nd XI">2nd XI</option>
                                     <option value="3rd XI">3rd XI</option>
