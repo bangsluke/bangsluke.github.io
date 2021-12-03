@@ -326,8 +326,7 @@ function showHomepageTabInfo(results) {
     // Populate the team next fixtures information on the page.
 
     // Define an array of teams to update. Each stat corresponds to an HTML element.
-    let teamArray = ["1stXI"];
-    // let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
+    let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
     for (let i = 0; i < teamArray.length; i++) {
 
         var teamFixtureObject = dataArrayOfObjects[i];
@@ -342,7 +341,6 @@ function showHomepageTabInfo(results) {
 
         // console.log(teamArray[i]); // Log the team being updated.
         document.getElementById(teamArray[i] + "-Opposition").innerHTML = teamFixtureObject['NEXTOPPO']; // Get the Opposition text element and add the text to it.
-        document.getElementById(teamArray[i] + "-HomeAway").innerHTML = teamFixtureObject['HOMEAWAY']; // Get the HomeAway text element and add the text to it.
         document.getElementById(teamArray[i] + "-Location").innerHTML = teamFixtureObject['LOCATION']; // Get the Location text element and add the text to it.
         document.getElementById(teamArray[i] + "-LastResult").innerHTML = teamFixtureObject['LASTRESULT']; // Get the LastResult text element and add the text to it.
         
