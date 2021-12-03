@@ -753,6 +753,7 @@ Section 4
 
 .homepage-next-fixtures-team-container h4 {
 	/* color: red; */
+	color: var(--main-dorkinians-yellow-colour, #F9ED32);
 	font-size: 0.8rem;
 }
 
