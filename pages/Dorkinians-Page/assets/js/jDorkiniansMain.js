@@ -420,8 +420,8 @@ function showClubStatsTabInfo(results) {
     // console.log("New Length = " + objectLength); // Log the original length.
 
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
-    clearTable("#results-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+    clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
+    createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
     // Increment the tab ready count by 1.
     incrementTabReadyCount("Club Stats");

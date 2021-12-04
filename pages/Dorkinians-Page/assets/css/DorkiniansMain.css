@@ -131,10 +131,8 @@ body {
 
 /* Sub pag sections - multiple sections per tab. */
 section {
-	padding-bottom: 2rem; /* Add some space between sections defiend on each tab. */
+	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
 }
-
-
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -793,18 +791,28 @@ Section 4
 	grid-template-rows: max-content max-content max-content;
 	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "ClubStats"
-	  "Weather"
+	  "TotalClubStats"
+	  "TeamSeasonResults"
 	  "AllClubResults";
 }
 
-.club-stats-clubStats-container {
+#club-stats-total-club-stats-container {
 	/* background-color: blue; */
-	grid-area: ClubStats;
+	grid-area: TotalClubStats;
 	padding: 0.3rem;
 }
 
-.club-stats-all-club-results-container {
+#club-stats-team-season-results-container {
+	/* background-color: blue; */
+	grid-area: TeamSeasonResults;
+	padding: 0.3rem;
+}
+
+#club-stats-team-season-results-selection {
+	margin-bottom: 1rem; /* Add some space below the selection containers. */
+}
+
+#club-stats-all-club-results-container {
 	/* background-color: red; */
 	grid-area: AllClubResults;
 	padding: 0.3rem;
