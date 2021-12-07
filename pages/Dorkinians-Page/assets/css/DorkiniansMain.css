@@ -229,6 +229,10 @@ a {
 	font-style: oblique !important;
 }
 
+/* Create a class for yellow text. */
+.yellowtext {
+	color: #F9ED32 !important;
+}
 
 
 /* 2. Table classes */
@@ -773,7 +777,6 @@ Section 4
 	align-self: flex-start; /* Align the content of the cells vertically to the top of the row. */
 }
 
-
 .homepage-weather-container {
 	/* background-color: yellow; */
 	grid-area: Weather;
@@ -800,6 +803,15 @@ Section 4
 	/* background-color: blue; */
 	grid-area: TotalClubStats;
 	padding: 0.3rem;
+
+}
+
+#club-stats-total-club-stats-container div p {
+	display: inline;
+}
+
+#club-stats-total-club-stats-container div h5 {
+	display: inline;
 }
 
 #club-stats-team-season-results-container {
@@ -817,6 +829,10 @@ Section 4
 	grid-area: AllClubResults;
 	padding: 0.3rem;
 }
+
+
+
+
 
 
 /* All Stats Tab */
@@ -1169,6 +1185,12 @@ div.cell {
 }
 
 /* Weather Tab */
+
+
+
+
+
+
 
 
 

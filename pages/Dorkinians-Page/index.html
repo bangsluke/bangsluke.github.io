@@ -323,12 +323,30 @@
 
                                     <h3 class="textleft">Total Club Stats</h3>
 
-                                    <details>All stats are collected each week by the Captains and reported to the club
-                                        for
-                                        reference here.</details>
+                                    <p class="italic">All stats are collected each week by the Captains and reported to the club for reference here.</p>
 
-                                    <p>- Show total club stats, total recorded goals scored etc.</p>
-                                    <p>- How many members</p>
+                                    <br>
+
+                                    <div>
+                                        <h5>Total number of recorded club players:</h5>
+                                        <p class="yellowtext" id="total-club-stats-numberPlayers"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of games played by the club:</h5>
+                                        <p class="yellowtext" id="total-club-stats-numberGamesPlayed"></p><p> games (</p><p class="yellowtext"  id="total-club-stats-numberLeagueGamesPlayed"></p><p> in the league, </p><p class="yellowtext" id="total-club-stats-numberCupGamesPlayed"></p> <p> in cups and </p> <p class="yellowtext" id="total-club-stats-numberFriendlyGamesPlayed"></p> <p> friendlies).</p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of goals scored by the club:</h5>
+                                        <p class="yellowtext" id="total-club-stats-numberGoalsScored"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of goals conceded by the club:</h5>
+                                        <p class="yellowtext" id="total-club-stats-numberGoalsConceded"></p>
+                                    </div>
+
 
                                 </section>
 
@@ -346,7 +364,7 @@
                                         <!-- Let the user pick which season to filter for. -->
                                         <select name="SeasonSelection" class="selection-dropdown"
                                             id="club-stats-season-selection-dropdown"
-                                            onchange="updateClubStatsTabInfo()">
+                                            onchange="updateTeamSeasonResultsInfo()">
                                             <option value="">All Seasons</option>
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
@@ -358,7 +376,8 @@
 
                                         <!-- Let the user pick which team to filter for. -->
                                         <select name="TeamSelection" class="selection-dropdown"
-                                            id="club-stats-team-selection-dropdown" onchange="updateClubStatsTabInfo()">
+                                            id="club-stats-team-selection-dropdown"
+                                            onchange="updateTeamSeasonResultsInfo()">
                                             <option value="WholeClub" selected="selected">Whole club</option>
                                             <option value="1st XI">1st XI</option>
                                             <option value="2nd XI">2nd XI</option>
