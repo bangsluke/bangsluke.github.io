@@ -39,7 +39,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var tabReadyCount = 0;
-const numberTabs = 4;
+const numberTabs = 5;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -66,8 +66,14 @@ const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Club Stats Tab
-const clubStatsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1269354033&single=true&output=csv';
-var displayClubStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+// Total Club Stats
+const totalClubStatsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1673925166&single=true&output=csv';
+var displayTotalClubStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+// Team Season Results
+const teamSeasonResultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1269354033&single=true&output=csv';
+var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 
 
@@ -140,8 +146,9 @@ function init() {
 
     // Step 1. 
     // Homepage Tab.
-    // Next Fixtures data.
     console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    
+    // Next Fixtures data.
     Papa.parse(nextFixturesSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -153,12 +160,29 @@ function init() {
     // Step 2. 
     // Club Stats Tab.
     console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    Papa.parse(clubStatsSheetURLCSV, {
+    
+    // Total Club Stats Info
+    Papa.parse(totalClubStatsSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getClubStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the getClubStatsTabInfo function.
+        complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete. Once done, call the getTotalClubStatsInfo function.
     })
+
+    // Team Season Results Info
+    Papa.parse(teamSeasonResultsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete. Once done, call the getTeamSeasonResultsInfo function.
+    })
+
+
+
+
+
+
+
 
 
 
@@ -272,7 +296,7 @@ function updateLoadingPage() {
         }
 
         // React if the tab ready count matches the number of tabs.
-        if (tabReadyCount === numberTabs || tabReadyCount >= tabReadyCount) {
+        if (tabReadyCount === numberTabs || tabReadyCount >= numberTabs) {
             hideLoadingPage(); // Call the function to fade out the loading page.
             clearInterval(loopPhrases); // Cancel the setInterval and escape it.
         }
@@ -365,25 +389,75 @@ function showHomepageTabInfo(results) {
 
 // 2. Club/Team Stats Tab
 
-// 2.1. Club/Team Stats tab data "getter" function.
+// 2.1 Total Club Stats
 
-function getClubStatsTabInfo(results){
+// 2.1.1. Total Club Stats Info data "getter" function.
+
+function getTotalClubStatsInfo(results){
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getClubStatsTabInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getTotalClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
-    displayClubStatsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    displayTotalClubStatsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
-    showClubStatsTabInfo(displayClubStatsArrayOfObjects); // Call the showHomepageTabInfo function.
+    showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
 
 
-// 2.2. Club/Team Stats tab data "show-er" function.
+// 2.1.2. Total Club Stats data "show-er" function.
 
-function showClubStatsTabInfo(results) {
+function showTotalClubStatsInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showClubStatsTabInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showTotalClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Get an object from the array by creating an object from the first array value.
+    let statObject = dataArrayOfObjects[0];
+
+    // Populate the team next fixtures information on the page.
+
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["numberPlayers", "numberGoalsScored", "numberGoalsConceded", "numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        document.getElementById("total-club-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+    }
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Club Stats - Total Club Stats");
+
+}
+
+
+
+// 2.2 Teams Season Results
+
+// 2.2.1. Team Season Results Info data "getter" function.
+
+function getTeamSeasonResultsInfo(results){
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
+}
+
+
+// 2.2.2. Team Season Results Info data "show-er" function.
+
+function showTeamSeasonResultsInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
@@ -424,26 +498,31 @@ function showClubStatsTabInfo(results) {
     createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
     // Increment the tab ready count by 1.
-    incrementTabReadyCount("Club Stats");
+    incrementTabReadyCount("Club Stats - Teams Season Results");
 
 }
 
-// 2.3. Club/Team Stats tab data "update-er" function.
+// 2.2.3. Team Season Results Info data "update-er" function.
 
 // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
-function updateClubStatsTabInfo() {
+function updateTeamSeasonResultsInfo() {
     // Display the refreshed data onto the page.
-    console.log('%c' + '>> updateClubStatsTabInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> updateTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
 
     // Re-call the main shower function to restart the process of showing data.
-    showClubStatsTabInfo(displayClubStatsArrayOfObjects); // Call the showHomepageTabInfo function.
+    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showHomepageTabInfo function.
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
 }
+
+// 2.3 All Club Results
+
+
+
 
 
 
@@ -1004,7 +1083,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
         let th = document.createElement("th"); // Create the th element.
         // If the toolTipBoolean is true, create the headers to also include the tool tips.
         if (toolTipBoolean == true) { // Define how to add the text depending on if toolTips are enabled for the table.
-            console.log("toolTipBoolean is true so adding tooltip.");
+            // console.log("toolTipBoolean is true so adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
             // Skip the first column.
@@ -1019,7 +1098,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
                 th.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
             }
         } else { // If toolTipBoolean is false, add text the normal way.
-            console.log("toolTipBoolean is false so not adding tooltip.");
+            // console.log("toolTipBoolean is false so not adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
         }
@@ -1040,7 +1119,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 // Create the rest of the table below head including all table rows.
 function generateTable(table, data, toolTipBoolean) {
     console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
-    console.log(data); // Log the passed array to the console.
+    // console.log(data); // Log the passed array to the console.
     var rowCounter = 1; // Define a counter for checking which row to work with.
     var columnCounter;
     var testedValue;
