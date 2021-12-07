@@ -420,6 +420,13 @@ function showTotalClubStatsInfo(results) {
 
     // Get an object from the array by creating an object from the first array value.
     let statObject = dataArrayOfObjects[0];
+    let statObject1stXI = dataArrayOfObjects[1];
+
+    // console.log("statObject");
+    // console.log(statObject);
+
+    // console.log("statObject1stXI");
+    // console.log(statObject1stXI);
 
     // Populate the team next fixtures information on the page.
 
@@ -428,6 +435,7 @@ function showTotalClubStatsInfo(results) {
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
         document.getElementById("total-club-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+        document.getElementById("1stXI-team-stats-" + statArray[i]).innerHTML = statObject1stXI[statArray[i]]; // Get the stat text element and add the text to it.
     }
 
     // Increment the tab ready count by 1.
