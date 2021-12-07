@@ -794,23 +794,24 @@ Section 4
 	grid-template-rows: max-content max-content max-content;
 	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "TotalClubStats"
+	  "TotalClubAndTeamStats"
 	  "TeamSeasonResults"
 	  "AllClubResults";
 }
 
-#club-stats-total-club-stats-container {
+#club-stats-total-club-and-team-stats-container {
 	/* background-color: blue; */
-	grid-area: TotalClubStats;
+	grid-area: TotalClubAndTeamStats;
 	padding: 0.3rem;
 
 }
 
-#club-stats-total-club-stats-container div p {
+#club-stats-total-club-and-team-stats-container div p {
 	display: inline;
+	font-weight: bold;
 }
 
-#club-stats-total-club-stats-container div h5 {
+#club-stats-total-club-and-team-stats-container div h5 {
 	display: inline;
 }
 
