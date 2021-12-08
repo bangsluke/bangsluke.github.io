@@ -147,7 +147,7 @@ function init() {
     // Step 1. 
     // Homepage Tab.
     console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    
+
     // Next Fixtures data.
     Papa.parse(nextFixturesSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -160,7 +160,7 @@ function init() {
     // Step 2. 
     // Club Stats Tab.
     console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-    
+
     // Total Club Stats Info
     Papa.parse(totalClubStatsSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -176,11 +176,6 @@ function init() {
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete. Once done, call the getTeamSeasonResultsInfo function.
     })
-
-
-
-
-
 
 
 
@@ -335,7 +330,7 @@ function hideLoadingPage() {
 
 // 1.1. Homepage tab data "getter" function.
 
-function getHomepageTabInfo(results){
+function getHomepageTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
@@ -393,7 +388,7 @@ function showHomepageTabInfo(results) {
 
 // 2.1.1. Total Club Stats Info data "getter" function.
 
-function getTotalClubStatsInfo(results){
+function getTotalClubStatsInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getTotalClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
@@ -414,28 +409,80 @@ function showTotalClubStatsInfo(results) {
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
 
-    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    console.log("seasonValue =");
+    console.log(seasonValue);
+
+
+    // Team selection.
+    var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
+    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Select the case of the dropdown. https://www.w3schools.com/js/js_switch.asp
+    var arrayNumberRef = 0;
+    var statsHeaderText = "Total Club Stats";
+    switch (teamValue) {
+        case "Whole Club":
+            arrayNumberRef = 0;
+            statsHeaderText = "Total Club Stats";
+            break;
+        case "1st XI":
+            arrayNumberRef = 1;
+            statsHeaderText = "1st XI Stats";
+            break;
+        case "2nd XI":
+            arrayNumberRef = 2;
+            statsHeaderText = "2nd XI Stats";
+            break;
+        case "3rd XI":
+            arrayNumberRef = 3;
+            statsHeaderText = "3rd XI Stats";
+            break;
+        case "4th XI":
+            arrayNumberRef = 4;
+            statsHeaderText = "4th XI Stats";
+            break;
+        case "5th XI":
+            arrayNumberRef = 5;
+            statsHeaderText = "5th XI Stats";
+            break;
+        case "6th XI":
+            arrayNumberRef = 6;
+            statsHeaderText = "6th XI Stats";
+            break;
+        case "7th XI":
+            arrayNumberRef = 7;
+            statsHeaderText = "7th XI Stats";
+            break;
+        case "8th XI":
+            arrayNumberRef = 8;
+            statsHeaderText = "8th XI Stats";
+            break;
+        default:
+            arrayNumberRef = 0;
+    }
 
     // Get an object from the array by creating an object from the first array value.
-    let statObject = dataArrayOfObjects[0];
-    let statObject1stXI = dataArrayOfObjects[1];
-
-    // console.log("statObject");
-    // console.log(statObject);
-
-    // console.log("statObject1stXI");
-    // console.log(statObject1stXI);
+    let statObject = dataArrayOfObjects[arrayNumberRef];
 
     // Populate the team next fixtures information on the page.
 
+    // Update the header text.
+    document.getElementById("club-team-stats-header-text").innerHTML = statsHeaderText; // Get the header text element and add the text to it.
+
     // Define an array of stats to update. Each stat corresponds to an HTML element.
-    let statArray = ["numberPlayers", "numberGoalsScored", "numberGoalsConceded", "numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed"];
+    let statArray = ["numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed", "numberPlayers", "numberGoalsScored", "goalsPerGame", "numberGoalsConceded", "goalsConcededPerGame", "numberGoalscorers", "topGoalscorer"];
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
-        document.getElementById("total-club-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
-        document.getElementById("1stXI-team-stats-" + statArray[i]).innerHTML = statObject1stXI[statArray[i]]; // Get the stat text element and add the text to it.
+        document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
     }
 
     // Increment the tab ready count by 1.
@@ -444,12 +491,17 @@ function showTotalClubStatsInfo(results) {
 }
 
 
+// 2.1.3. Total Club Stats data "update-er" function.
+
+// For updater function - see full tab updater below (section 2.4).
+
+
 
 // 2.2 Teams Season Results
 
 // 2.2.1. Team Season Results Info data "getter" function.
 
-function getTeamSeasonResultsInfo(results){
+function getTeamSeasonResultsInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
@@ -469,7 +521,7 @@ function showTeamSeasonResultsInfo(results) {
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
-    
+
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
@@ -510,25 +562,36 @@ function showTeamSeasonResultsInfo(results) {
 
 }
 
+
 // 2.2.3. Team Season Results Info data "update-er" function.
 
+// For updater function - see full tab updater below (section 2.4).
+
+
+// 2.3 All Club Results
+
+
+
+
+// 2.4. Full Club Stats data "update-er" function.
+
 // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
-function updateTeamSeasonResultsInfo() {
+function updateClubStatsInfo() {
     // Display the refreshed data onto the page.
-    console.log('%c' + '>> updateTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> updateClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
 
-    // Re-call the main shower function to restart the process of showing data.
-    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showHomepageTabInfo function.
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
+
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
 }
-
-// 2.3 All Club Results
-
 
 
 
@@ -1205,10 +1268,10 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // console.log('%c' + '>> Re-usable Function: multiFilterArrayOfObjects(ArrayOfObjects, keyNames , filterValues...) called. Passed variables: ArrayOfObjects = not shown, keyNameSeason = ' + keyNameSeason + ', filterValueSeason = ' + filterValueSeason, ', keyNamePlayer = ' + keyNamePlayer + ', filterValuePlayer = ' + filterValuePlayer, ', keyNameTeam = ' + keyNameTeam + ', filterValueTeam = ' + filterValueTeam, ', keyNameLocation = ' + keyNameLocation + ', filterValueLocation = ' + filterValueLocation, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // Initially define the variable that will be manipulated and produced.
     var filteredArrayOfObjects = ArrayOfObjects;
-    
+
     // Check if the original ArrayOfObjects includes a toolTip row or not.
     if (toolTipBoolean === true) {
-        
+
         // Remove the first element, store it and create the other filterable array for further work (without the first toolTip element).
         var filteredArrayOfObjectsFirstElement = [filteredArrayOfObjects.shift()]; // Remove the first element of the array and store it. https://bobbyhadz.com/blog/javascript-remove-first-element-from-array#remove-the-first-element-from-an-array.
         // console.log("filteredArrayOfObjectsFirstElement");
