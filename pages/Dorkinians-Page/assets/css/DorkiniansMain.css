@@ -634,7 +634,7 @@ Section 3
 }
 .optionsbutton {
     color: var(--accent-color-white, white);
-    filter: invert(1) hue-rotate(180deg);
+    /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
     left: 0rem;
     height: 2.7rem; /* Fallback if needed. */
@@ -646,7 +646,6 @@ Section 3
     margin: 0rem;
     padding: 0rem;
 }
-
 .optionsbutton:hover {
     color: var(--main-dorkinians-yellow-colour);
 }
@@ -677,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;

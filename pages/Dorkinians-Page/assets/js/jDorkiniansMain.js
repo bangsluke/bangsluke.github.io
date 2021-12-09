@@ -139,7 +139,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -304,7 +304,7 @@ function randomNumber(min, max) {
 function incrementTabReadyCount(tabName) {
     // Increment the tab ready count until it matches with the numberTabs.
     tabReadyCount = tabReadyCount + 1;
-    console.log("tabReadyCount (" + tabName + ") = " + tabReadyCount + "/" + numberTabs);
+    console.log('%c' + '> tabReadyCount (' + tabName + ') = ' + tabReadyCount + '/' + numberTabs, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 }
 
 function hideLoadingPage() {
@@ -1029,7 +1029,7 @@ function resetStatsBars() {
 // 7. Tables, Results & Fixture Tab
 
 function updateTablesResultsandFixturesTab() {
-    console.log("> Function: updateTablesResultsandFixturesTab() called.")
+    // console.log("> Function: updateTablesResultsandFixturesTab() called.")
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
@@ -1044,7 +1044,7 @@ function updateTablesResultsandFixturesTab() {
     // Define an array of teams to update. Each team corresponds to an HTML element.
     let teamArray = ["1s", "2s", "3s", "4s", "5s", "6s", "7s", "8s"];
     for (let i = 0; i < teamArray.length; i++) {
-        console.log("Processing " + teamArray[i]); // Log the team being updated.
+        // console.log("Processing " + teamArray[i]); // Log the team being updated.
 
         // Select the teamTableDiv and teamResultsAndFixturesDiv for the team.
         var teamTableDiv = document.getElementById("dorkinians" + teamArray[i] + "Table"); // Get the Teams table div dynamically.
@@ -1101,12 +1101,12 @@ function createFullTable(data, selector, toolTipBoolean, dataForm) {
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     // If the toolTipBoolean is true, define header data as from the array, instead of the keys of an object.
     if (dataForm == "array") { // Define the header data as from the array.
-        console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
+        // console.log("dataForm = " + dataForm + " therefore data is in array form, so pass through data as the first row of data of the array."); // Log if the toolTipBoolean is in play or not.
         var headerdata = data[0]; // Get the header data from the first element of the array.
         //console.log("headerdata printed below:");
         //console.log(headerdata);
     } else if (dataForm == "object") { // Define the header data as the keys of the object.
-        console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
+        // console.log("dataForm = " + dataForm + " therefore data is in object form, so pass through the header data as the first keys of the object."); // Log if the toolTipBoolean is in play or not.
         var headerdata = Object.keys(data[0]); // Create an array of the object headers from the array data received.
         // console.log("headerdata printed below:");
         // console.log(headerdata);
@@ -1276,7 +1276,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for the defined season.
     if (filterValueSeason === "Season") { // Don't filter if unpicked.
         // Do nothing as season hasn't been selected.
-        console.log(">>> Data not filtered for seasons as 'Season' still picked.")
+        // console.log(">>> Data not filtered for seasons as 'Season' still picked.")
     } else { // Filter the Array of Objects.
         filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameSeason].includes(filterValueSeason))); // Filter down the data into a new array of objects.
     }
@@ -1284,7 +1284,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for the selected player.
     if (filterValuePlayer === "Player") { // Don't filter if unpicked.
         // Do nothing as player hasn't been selected.
-        console.log(">>> Data not filtered for players as 'Player' still picked.")
+        // console.log(">>> Data not filtered for players as 'Player' still picked.")
     } else { // Filter the Array of Objects.
         filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNamePlayer].includes(filterValuePlayer))); // Filter down the data into a new array of objects.
     }
@@ -1292,7 +1292,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for the selected team.
     if (filterValueTeam === "Team") { // Don't filter if unpicked.
         // Do nothing as team hasn't been selected.
-        console.log(">>> Data not filtered for teams as 'Team' still picked.")
+        // console.log(">>> Data not filtered for teams as 'Team' still picked.")
     } else { // Filter the Array of Objects.
         filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameTeam].includes(filterValueTeam))); // Filter down the data into a new array of objects.
     }
@@ -1300,7 +1300,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for the selected location.
     if (filterValueLocation === "Location") { // Don't filter if unpicked.
         // Do nothing as location hasn't been selected.
-        console.log(">>> Data not filtered for locations as 'Location' still picked.")
+        // console.log(">>> Data not filtered for locations as 'Location' still picked.")
     } else { // Filter the Array of Objects.
         filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameLocation].includes(filterValueLocation))); // Filter down the data into a new array of objects.
     }
