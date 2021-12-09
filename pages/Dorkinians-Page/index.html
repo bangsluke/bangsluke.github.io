@@ -13,7 +13,8 @@
 
     <!-- Initial Meta Data -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define the width to teh device being used, the initial zoom level when the page loads and if the user can zoom. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Stats and information for the best club in the world." />
     <meta name="author" content="bangsluke" />
     <meta name="copyright" content="bangsluke" />
@@ -42,6 +43,24 @@
 
 <body>
 
+    <!-- Loading Page -->
+    <!-- Add a loading page div that sits in front of everything and holds the logo and text. -->
+    <div class="loading-page" id="loading-page">
+
+        <!-- Add a div to hold the large logo. -->
+        <div class="loading-page-container fadein" id="loading-page-logo-container">
+            <!-- Add a large Dorkinians logo. -->
+            <img class="large-logo" id="dorkinians-logo-large"
+                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                alt="Dorkinians Logo" width="400" height="400" onclick="init()">
+        </div>
+
+        <!-- Add a div to hold the random phrase text. -->
+        <div class="loading-page-container fadein" id="loading-page-loading-phrase-container">
+            <p id="loading-phrase"></p>
+        </div>
+    </div>
+
     <!-- Header -->
 
     <header class="header-area center">
@@ -49,9 +68,9 @@
         <div class="logo-container">
             <!-- Add Dorkinians logo. -->
             <!-- Link back to the main homepage. Delete later or minimise. -->
-            <a href="\Homepage.html"><img class="logo fadein center" id="dorkiniansLogo"
-                    src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
-                    alt="Dorkinians Logo" width="30" height="30"></a>
+            <img class="logo fadein center" id="dorkinians-header-logo"
+                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
+                alt="Dorkinians Logo" width="30" height="30" onclick="init()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -89,7 +108,208 @@
 
                 <section class="scroll-snap-x">
 
-                    <!-- 1. Club/Team Stats Tab -->
+                    <!-- 1. Home Tab -->
+                    <article class="nav-targets" id="home">
+
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
+
+                            <h2 class="textcenter">Homepage</h2>
+
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="homepage-information-bar"></div>
+
+                            <!-- Next Fixtures Section -->
+                            <section class="homepage-next-fixtures">
+
+                                <h3 class="textleft">Next Fixtures (02/12/2021)</h3>
+
+                                <div class="homepage-next-fixtures-team-container">
+
+                                    <!-- Initial define the headers of the created grid. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <h4>Team</h4>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <h4>Opposition</h4>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <h4>Location</h4>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <h4>Previous Result</h4>
+                                    </div>
+
+                                    <!-- Define the cells for the 1s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>1st XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="1stXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="1stXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="1stXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 2s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>2nd XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="2ndXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="2ndXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="2ndXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 3s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>3rd XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="3rdXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="3rdXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="3rdXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 4s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>4th XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="4thXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="4thXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="4thXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 5s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>5th XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="5thXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="5thXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="5thXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 6s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>6th XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="6thXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="6thXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="6thXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 7s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>7th XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="7thXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="7thXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="7thXI-LastResult"></p>
+                                    </div>
+
+                                    <!-- Define the cells for the 8s. -->
+                                    <div class="next-fixtures-grid-item">
+                                        <p>8th XI</p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="8thXI-Opposition"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="8thXI-Location"></p>
+                                    </div>
+
+                                    <div class="next-fixtures-grid-item">
+                                        <p id="8thXI-LastResult"></p>
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- Weather Widget Section -->
+                            <section class="homepage-weather-container">
+
+                                <h3 class="textleft">Weather Forecast</h3>
+
+                                <!-- https://weatherwidget.io/ -->
+                                <section class="weather">
+                                    <a class="weatherwidget-io" SameSite=None
+                                        href="https://forecast7.com/en/51d23n0d33/dorking/"
+                                        data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
+                                        data-icons="Climacons Animated" data-theme="original"
+                                        data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
+                                        data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
+                                        data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
+                                    <script>
+                                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                                    </script>
+                                </section>
+
+                            </section>
+
+                        </section>
+
+                    </article>
+
+                    <!-- 2. Club/Team Stats Tab -->
                     <article class="nav-targets" id="club-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -100,27 +320,26 @@
                             <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
                             <div class="information-bar" id="club-stats-information-bar"></div>
 
-                            <div class="selection-container">
+                            <div class="selection-container" id="club-stats-team-season-results-selection">
 
                                 <!-- Add a drop down select box for the user to change the statistic category. -->
 
                                 <!-- Let the user pick which season to filter for. -->
                                 <select name="SeasonSelection" class="selection-dropdown"
-                                    id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Season</option>
+                                    id="club-stats-season-selection-dropdown" onchange="updateClubStatsInfo()">
+                                    <option value="">All Seasons</option>
                                     <option value="2016/17">2016/17</option>
                                     <option value="2017/18">2017/18</option>
                                     <option value="2018/19">2018/19</option>
                                     <option value="2019/20">2019/20</option>
                                     <option value="2020/21">2020/21</option>
-                                    <option value="2021/22">2021/22</option>
+                                    <option value="2021/22" selected="selected">2021/22</option>
                                 </select>
 
                                 <!-- Let the user pick which team to filter for. -->
                                 <select name="TeamSelection" class="selection-dropdown"
-                                    id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Team</option>
-                                    <option value="WholeClub">Whole club</option>
+                                    id="club-stats-team-selection-dropdown" onchange="updateClubStatsInfo()">
+                                    <option value="WholeClub" selected="selected">Whole club</option>
                                     <option value="1st XI">1st XI</option>
                                     <option value="2nd XI">2nd XI</option>
                                     <option value="3rd XI">3rd XI</option>
@@ -135,41 +354,92 @@
 
                             <section class="club-stats-area">
 
-                                <!-- <section class="club-stats-clubStats-container">
+                                <div id="club-stats-total-club-and-team-stats-container">
 
-                                    <details>All stats are collected each week by the Captains and reported to the club
-                                        for
-                                        reference here.</details>
+                                    <div class="TBC">
 
-                                    <p>- Show total club stats, total recorded goals scored etc.</p>
-                                    <p>- How many members</p>
+                                        <h3 id="club-team-stats-header-text" class="textleft"> Stats</h3>
 
-                                </section> -->
+                                        <p class="italic">All stats are collected each week by the Captains and reported
+                                            to the club for reference here.</p>
 
-                                <!-- Weather Widget Section -->
-                                <section class="club-stats-weather-container">
+                                        <br>
 
-                                    <h3 class="textleft">Weather Forecast</h3>
+                                        <br>
+                                        <br>
 
-                                    <!-- https://weatherwidget.io/ -->
-                                    <section class="weather">
-                                        <a class="weatherwidget-io" SameSite=None
-                                            href="https://forecast7.com/en/51d23n0d33/dorking/"
-                                            data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
-                                            data-icons="Climacons Animated" data-theme="original"
-                                            data-basecolor="rgba(0, 0, 0, 0.05)" data-accent="rgba(0, 0, 0, 0.05)"
-                                            data-highcolor="#F9ED32" data-lowcolor="#99b998" data-suncolor="#F9ED32"
-                                            data-cloudfill="#1C8841" data-raincolor="#00ffff">PIXHAM LANE Weather</a>
-                                        <script>
-                                            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-                                        </script>
-                                    </section>
+                                        <div>
+                                            <h5>Total number of games played:</h5>
+                                            <p class="yellowtext" id="club-team-stats-numberGamesPlayed"></p>
+                                            <p> games (</p>
+                                            <p class="yellowtext" id="club-team-stats-numberLeagueGamesPlayed"></p>
+                                            <p> in the league, </p>
+                                            <p class="yellowtext" id="club-team-stats-numberCupGamesPlayed"></p>
+                                            <p> in cups and </p>
+                                            <p class="yellowtext" id="club-team-stats-numberFriendlyGamesPlayed"></p>
+                                            <p> friendlies).</p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Total number of recorded players:</h5>
+                                            <p class="yellowtext" id="club-team-stats-numberPlayers"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Total number of goals scored:</h5>
+                                            <p class="yellowtext" id="club-team-stats-numberGoalsScored"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Average number of goals scored per game:</h5>
+                                            <p class="yellowtext" id="club-team-stats-goalsPerGame"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Total number of goalscorers:</h5>
+                                            <p class="yellowtext" id="club-team-stats-numberGoalscorers"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Top goalscorer (and total):</h5>
+                                            <p class="yellowtext" id="club-team-stats-topGoalscorer"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Total number of goals conceded:</h5>
+                                            <p class="yellowtext" id="club-team-stats-numberGoalsConceded"></p>
+                                        </div>
+
+                                        <div>
+                                            <h5>Average number of goals conceded per game:</h5>
+                                            <p class="yellowtext" id="club-team-stats-goalsConcededPerGame"></p>
+                                        </div>
+
+                                        
+
+
+                                    </div>
+
+                                </div>
+
+                                <section id="club-stats-team-season-results-container">
+
+                                    <h3 class="textleft">Teams Season Results</h3>
+
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <div class="table-wrapper">
+                                        <table id="team-season-results-table" class="column-highlight">
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        </table>
+                                    </div>
 
                                 </section>
 
-                                <section class="club-stats-all-club-results-container">
+                                <section id="club-stats-all-club-results-container">
 
                                     <h3 class="textleft">All Club Results</h3>
+
+                                    <p>Add in a filterable table of all Dorkinians results.</p>
 
                                     <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                     <div class="table-wrapper">
@@ -186,7 +456,7 @@
 
                     </article>
 
-                    <!-- 2. Player Stats Tab -->
+                    <!-- 3. Player Stats Tab -->
                     <article class="nav-targets" id="player-stats">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -475,28 +745,28 @@
 
                     </article>
 
-                    <!-- 3. All Stats Tab -->
+                    <!-- 4. All Stats Tab -->
                     <!-- <article class="nav-targets" id="all-stats"> -->
 
-                        <!-- Add the main lighter coloured page section. -->
-                        <!-- <section class="page-section"> -->
+                    <!-- Add the main lighter coloured page section. -->
+                    <!-- <section class="page-section"> -->
 
-                            <!-- <h2 class="textcenter">All Stats</h2> -->
+                    <!-- <h2 class="textcenter">All Stats</h2> -->
 
-                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                            <!-- <div class="information-bar" id="all-stats-information-bar"></div> -->
+                    <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                    <!-- <div class="information-bar" id="all-stats-information-bar"></div> -->
 
-                            <!-- Add a top level holder section area. -->
-                            <!-- <section class="player-stats-area"> -->
+                    <!-- Add a top level holder section area. -->
+                    <!-- <section class="player-stats-area"> -->
 
-                                <!-- <section class="player-stats-selection-container"> -->
+                    <!-- <section class="player-stats-selection-container"> -->
 
-                                    <!-- <div class="selection-container"> -->
+                    <!-- <div class="selection-container"> -->
 
-                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                    <!-- Add a drop down select box for the user to change the statistic category. -->
 
-                                        <!-- Let the user pick which season to filter for. -->
-                                        <!-- <select name="SeasonSelection" class="selection-dropdown"
+                    <!-- Let the user pick which season to filter for. -->
+                    <!-- <select name="SeasonSelection" class="selection-dropdown"
                                             id="season-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
                                             <option value="">Season</option>
                                             <option value="2016/17">2016/17</option>
@@ -507,8 +777,8 @@
                                             <option value="2021/22" selected="selected">2021/22</option>
                                         </select> -->
 
-                                        <!-- Let the user pick which player to filter for. -->
-                                        <!-- <select name="PlayerSelection" class="selection-dropdown"
+                    <!-- Let the user pick which player to filter for. -->
+                    <!-- <select name="PlayerSelection" class="selection-dropdown"
                                             id="player-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
                                             <option value="" selected="selected">Player</option>
                                             <option value="lukebangs">Luke Bangs</option>
@@ -521,8 +791,8 @@
                                             <option>Oli Goddard</option>
                                         </select> -->
 
-                                        <!-- Let the user pick which team to filter for. -->
-                                        <!-- <select name="TeamSelection" class="selection-dropdown"
+                    <!-- Let the user pick which team to filter for. -->
+                    <!-- <select name="TeamSelection" class="selection-dropdown"
                                             id="team-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
                                             <option value="" selected="selected">Team</option>
                                             <option value="WholeClub">Whole club</option>
@@ -536,32 +806,32 @@
                                             <option value="8th XI">8th XI</option>
                                         </select> -->
 
-                                        <!-- Let the user pick which location to filter for. -->
-                                        <!-- <select name="LocationSelection" class="selection-dropdown"
+                    <!-- Let the user pick which location to filter for. -->
+                    <!-- <select name="LocationSelection" class="selection-dropdown"
                                             id="location-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
                                             <option value="" selected="selected">Location</option>
                                             <option value="Home">Home</option>
                                             <option value="Away">Away</option>
                                         </select> -->
 
-                                    <!-- </div> -->
+                    <!-- </div> -->
 
-                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                    <!-- <div class="table-wrapper"> -->
-                                        <!-- <table id="all-stats-table" class="column-highlight table-column-lines"> -->
-                                            <!-- Data loaded into here by jDorkiniansMain.js -->
-                                        <!-- </table> -->
-                                    <!-- </div> -->
+                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                    <!-- <div class="table-wrapper"> -->
+                    <!-- <table id="all-stats-table" class="column-highlight table-column-lines"> -->
+                    <!-- Data loaded into here by jDorkiniansMain.js -->
+                    <!-- </table> -->
+                    <!-- </div> -->
 
-                                <!-- </section> -->
+                    <!-- </section> -->
 
-                            <!-- </section> -->
+                    <!-- </section> -->
 
-                        <!-- </section> -->
+                    <!-- </section> -->
 
                     <!-- </article> -->
 
-                    <!-- 4. Team of the Week Tab -->
+                    <!-- 5. Team of the Week Tab -->
                     <!-- <article class="nav-targets" id="team-of-the-week"> -->
 
                     <!-- Add the main lighter coloured page section. -->
@@ -611,7 +881,7 @@
 
                     <!-- </article> -->
 
-                    <!-- 5. Comparison Tab -->
+                    <!-- 6. Comparison Tab -->
                     <article class="nav-targets" id="comparison">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -704,7 +974,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
-                                            alt="APP Icon" class="comparison-icon white center" height="25px" width="25px">
+                                            alt="APP Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-APP-player-2-value"> </div>
@@ -716,7 +987,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of appearances the player has made.</span>
+                                        <span class="stats-tooltip-text">The number of appearances the player has
+                                            made.</span>
 
                                     </div>
 
@@ -737,7 +1009,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
-                                            alt="Minutes Icon" class="comparison-icon white center" height="25px" width="25px">
+                                            alt="Minutes Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-M-player-2-value"> </div>
@@ -749,7 +1022,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of minutes played by the player.</span>
+                                        <span class="stats-tooltip-text">The number of minutes played by the
+                                            player.</span>
 
                                     </div>
 
@@ -768,7 +1042,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Icon.png"
-                                            alt="MoM Icon" class="comparison-icon white center" height="25px" width="25px">
+                                            alt="MoM Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MOM-player-2-value"> </div>
@@ -780,7 +1055,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of Man of the Match performances the player has made.</span>
+                                        <span class="stats-tooltip-text">The number of Man of the Match performances the
+                                            player has made.</span>
 
                                     </div>
 
@@ -799,7 +1075,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Goals Icon.png"
-                                            alt="Goals Icon" class="comparison-icon white center" height="25px" width="25px">
+                                            alt="Goals Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-G-player-2-value"> </div>
@@ -811,7 +1088,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals scored by the player.</span>
+                                        <span class="stats-tooltip-text">The number of goals scored by the
+                                            player.</span>
 
                                     </div>
 
@@ -829,8 +1107,9 @@
                                         <div class="cell center" id="comparison-A-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png" alt="Assist Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png"
+                                            alt="Assist Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-A-player-2-value"> </div>
@@ -842,7 +1121,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals assisted by the player. </span>
+                                        <span class="stats-tooltip-text">The number of goals assisted by the player.
+                                        </span>
 
                                     </div>
 
@@ -873,7 +1153,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of yellow cards obtained by the player.</span>
+                                        <span class="stats-tooltip-text">The number of yellow cards obtained by the
+                                            player.</span>
 
                                     </div>
 
@@ -904,7 +1185,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of red cards obtained by the player.</span>
+                                        <span class="stats-tooltip-text">The number of red cards obtained by the
+                                            player.</span>
 
                                     </div>
 
@@ -923,7 +1205,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
-                                                alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
+                                            alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-OG-player-2-value"> </div>
@@ -935,7 +1217,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of own goals scored by the player.</span>
+                                        <span class="stats-tooltip-text">The number of own goals scored by the
+                                            player.</span>
 
                                     </div>
 
@@ -953,8 +1236,9 @@
                                         <div class="cell center" id="comparison-C-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png" alt="Conceded Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png"
+                                            alt="Conceded Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-C-player-2-value"> </div>
@@ -966,7 +1250,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals conceded by the player.</span>
+                                        <span class="stats-tooltip-text">The number of goals conceded by the
+                                            player.</span>
 
                                     </div>
 
@@ -984,8 +1269,9 @@
                                         <div class="cell center" id="comparison-CLS-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png" alt="Clean Sheet Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png"
+                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CLS-player-2-value"> </div>
@@ -997,7 +1283,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of clean sheets achieved by the player.</span>
+                                        <span class="stats-tooltip-text">The number of clean sheets achieved by the
+                                            player.</span>
 
                                     </div>
 
@@ -1016,8 +1303,9 @@
                                         <div class="cell center" id="comparison-GperAPP-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png" alt="GperAPP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png"
+                                            alt="GperAPP Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-GperAPP-player-2-value"> </div>
@@ -1030,7 +1318,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of goals scored per appearance made.</span>
+                                        <span class="stats-tooltip-text">The average number of goals scored per
+                                            appearance made.</span>
 
                                     </div>
 
@@ -1049,8 +1338,9 @@
                                         <div class="cell center" id="comparison-CperAPP-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png" alt="CperAPP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png"
+                                            alt="CperAPP Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CperAPP-player-2-value"> </div>
@@ -1063,7 +1353,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of goals conceded per appearance.</span>
+                                        <span class="stats-tooltip-text">The average number of goals conceded per
+                                            appearance.</span>
 
                                     </div>
 
@@ -1082,8 +1373,9 @@
                                         <div class="cell center" id="comparison-MperG-player-1-value"> </div>
 
                                         <!-- Add the icon for the stat. -->
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png" alt="MperG Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png"
+                                            alt="MperG Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MperG-player-2-value"> </div>
@@ -1096,7 +1388,8 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of minutes required per goal scored by the player.</span>
+                                        <span class="stats-tooltip-text">The average number of minutes required per goal
+                                            scored by the player.</span>
 
                                     </div>
 
@@ -1108,7 +1401,7 @@
 
                     </article>
 
-                    <!-- 6. Tables, Results & Fixture Tab -->
+                    <!-- 7. Tables, Results & Fixture Tab -->
                     <article class="nav-targets" id="tables-results-fixtures">
 
                         <!-- Dorkinians Table Section -->
@@ -1420,7 +1713,8 @@
                 <snap-tabs-header class="scroll-snap-x">
 
                     <nav id="nav-bar">
-                        <a href="#club-stats" active>Club Stats</a>
+                        <a href="#home" active>Home</a>
+                        <a href="#club-stats">Club Stats</a>
                         <a href="#player-stats">Player Stats</a>
                         <!-- <a href="#all-stats">All Stats</a> -->
                         <!-- <a href="#team-of-the-week">Team of the Week</a> -->

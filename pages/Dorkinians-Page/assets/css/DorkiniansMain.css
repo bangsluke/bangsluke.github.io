@@ -107,6 +107,7 @@ body {
 /* Page section styling. Add a lighter opacity rounded edges container. */
 .page-section {
 	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
@@ -128,7 +129,10 @@ body {
 	-webkit-backdrop-filter: blur( 20px );
 }
 
-
+/* Sub pag sections - multiple sections per tab. */
+section {
+	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
+}
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -225,6 +229,10 @@ a {
 	font-style: oblique !important;
 }
 
+/* Create a class for yellow text. */
+.yellowtext {
+	color: #F9ED32 !important;
+}
 
 
 /* 2. Table classes */
@@ -376,11 +384,11 @@ tr:last-child td:last-child {
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	background-color: var(--page-dark-grey-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	min-height: 2rem;
 	max-height: 30rem;
-	width: 15rem;
+	width: max-content;
 	min-width: 8rem;
 	/* min-width: 150%; */
 	/* overflow: visible; */
@@ -391,23 +399,27 @@ tr:last-child td:last-child {
 	z-index: 1;
  	top: 100%;
 	left: 0rem;
+
+	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
+    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
+	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .tooltip .tooltiptext::after {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: " ";
-    position: absolute;
-    bottom: 100%;  /* This will position the arrow at the top of the tooltip */
-    left: 10%;
-    margin-left: -0.3rem;
-    border-width: 0.2rem;
-    border-style: solid;
+	position: absolute;
+	bottom: 100%; /* At the bottom of the tooltip */
+	left: 8%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent var(--page-dark-grey-colour, grey) transparent;
 }
 
 p.tooltiptext {
@@ -416,6 +428,9 @@ p.tooltiptext {
 	text-transform: none;
 	text-align: left;
 }
+
+
+
 
 /* Other classes and styles. */
 
@@ -527,11 +542,15 @@ option {
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
+
+	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
+    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
   
 /* Show the stats tooltip text when you mouse over the stats tooltip container */
 .stats-tooltip:hover .stats-tooltip-text {
 	visibility: visible; /* Change the visibility to visible when hovered on. */
+	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
@@ -623,21 +642,90 @@ Section 3
 /* Add a rotation set up for the Dorkinians logo in the top left. */
 .rotate {
 	animation: rotation 3s;
-  }
-  .linear {
+}
+.linear {
 	animation-timing-function: linear;
-  }
-  .infinite {
+}
+.infinite {
 	animation-iteration-count: infinite;
-  }
-  @keyframes rotation {
+}
+@keyframes rotation {
 	from {
-	  transform: rotate(0deg);
+	  	transform: rotate(0deg);
 	}
 	to {
-	  transform: rotate(359deg);
+	  	transform: rotate(359deg);
 	}
-  }
+}
+
+
+/* Loading Page */
+
+.loading-page {
+	
+	/* Change the below property on/off to hide/show the loading page. */
+	/* display: none !important; */
+
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	background-size: cover;
+    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+    /* background-color: var(--main-dorkinians-green-colour, black); */
+    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
+	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-dorkinians-green-colour) 75%);
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 0.3fr 1fr 0.3fr 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "TopSpace"
+	  "Logo"
+	  "Phrases";
+}
+
+.loading-page-container {
+	text-align: center;
+	display: flex; /* Set up the container to allow vertical and horizontal alignment. https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ */
+	align-items: center; /* Vertically align all child elements that sit within .loading-page-container */
+	justify-content: center; /* Horizontally align all child elements that sit within .loading-page-container */
+}
+#loading-page-logo-container {
+	/* background: red; */
+	grid-area: Logo;
+}
+.large-logo {
+	padding-top: 3rem;
+	height: 15rem;
+	width: auto;
+}
+#loading-page-loading-phrase-container {
+	/* background: green; */
+	grid-area: Phrases;
+	color: white;
+}
+
+/* Add a fadeout animation that fades the opacity of the background out and then sets the display to be none. */
+.fadeout {
+	opacity: 1;
+	animation: maketransparent 1s linear;
+}
+@keyframes maketransparent {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		display: none !important;
+	}
+}
+
+
+
+
 
 
 
@@ -654,6 +742,49 @@ Section 4
 
 /* Everything below initially designed for mobile. */
 
+/* Homepage Tab */
+
+.homepage-next-fixtures-team-container {
+	/* background-color: #ce641d; */
+	display: grid;
+	width: 100%;
+	grid-template-columns: max-content 3fr 1fr max-content; 
+	grid-template-rows: 1fr;
+	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
+	/* justify-items: stretch; */
+	justify-items: start; /* Align the cells in the grid horizontally to the left. */
+	/* align-items: stretch; */
+	align-items: center; /* Align the cells in the grid vertically central to the row. */
+	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
+	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+}
+
+.homepage-next-fixtures-team-container p {
+	/* color: red; */
+	font-size: 0.8rem;
+}
+
+.homepage-next-fixtures-team-container h4 {
+	/* color: red; */
+	color: var(--main-dorkinians-yellow-colour, #F9ED32);
+	font-size: 0.8rem;
+}
+
+.next-fixtures-grid-item {
+	/* background-color: aqua; */
+	/* display: inline-grid; */
+	justify-self: start; /* Align the content of the cells horizontally to the left. */
+	align-self: flex-start; /* Align the content of the cells vertically to the top of the row. */
+}
+
+.homepage-weather-container {
+	/* background-color: yellow; */
+	grid-area: Weather;
+	padding: 0.3rem;
+}
+
+
+
 /* Club Stats Tab */
 
 .club-stats-area {
@@ -663,28 +794,46 @@ Section 4
 	grid-template-rows: max-content max-content max-content;
 	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "ClubStats"
-	  "Weather"
+	  "TotalClubAndTeamStats"
+	  "TeamSeasonResults"
 	  "AllClubResults";
 }
 
-.club-stats-clubStats-container {
+#club-stats-total-club-and-team-stats-container {
 	/* background-color: blue; */
-	grid-area: ClubStats;
+	grid-area: TotalClubAndTeamStats;
+	padding: 0.3rem;
+
+}
+
+#club-stats-total-club-and-team-stats-container div p {
+	display: inline;
+	font-weight: bold;
+}
+
+#club-stats-total-club-and-team-stats-container div h5 {
+	display: inline;
+}
+
+#club-stats-team-season-results-container {
+	/* background-color: blue; */
+	grid-area: TeamSeasonResults;
 	padding: 0.3rem;
 }
 
-.club-stats-weather-container {
-	/* background-color: yellow; */
-	grid-area: Weather;
-	padding: 0.3rem;
+#club-stats-team-season-results-selection {
+	margin-bottom: 1rem; /* Add some space below the selection containers. */
 }
 
-.club-stats-all-club-results-container {
+#club-stats-all-club-results-container {
 	/* background-color: red; */
 	grid-area: AllClubResults;
 	padding: 0.3rem;
 }
+
+
+
+
 
 
 /* All Stats Tab */
@@ -1037,6 +1186,12 @@ div.cell {
 }
 
 /* Weather Tab */
+
+
+
+
+
+
 
 
 

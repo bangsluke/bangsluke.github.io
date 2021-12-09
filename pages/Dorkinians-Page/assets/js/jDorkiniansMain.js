@@ -37,6 +37,46 @@ console.time(); // Start the console timer.
 
 // Publically define a number of global constants and variables such as the location of the Google Sheets.
 
+// Ready Global Variable
+var tabReadyCount = 0;
+const numberTabs = 5;
+
+// Create an array of phrases to be displayed on the loading page.
+var phrasesArray = [
+    "Locating any number 8 tops in kit bags...",
+    "Calculating the likeihood of Shano scoring an 'unmissable' chance...",
+    "Forgetting Oakley's 'assist' in the last game...",
+    "Adding up the sheer quantity of Peck's goals...",
+    "Going into overdrive counting all of Alex Will's yellow cards...",
+    "Crafting the basis of the AFA's rep teams from Dorkinians players...",
+    "Hitting on the bar staff after the game...",
+    "Waiting for Sam Smith to score from open play...",
+    "Pretending the 1's team's yellow cards never happened...",
+    "Accepting bribes for stat fiddling...",
+    "Will be ready as soon as Rupert Cape uses his left foot...",
+    "Waiting for Morley to leave the changing room so we can kick off...",
+    "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
+    "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
+];
+
+// Google Sheet Links
+
+// Homepage Tab
+const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
+var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+// Club Stats Tab
+
+// Total Club Stats
+const totalClubStatsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1673925166&single=true&output=csv';
+var displayTotalClubStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+// Team Season Results
+const teamSeasonResultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1269354033&single=true&output=csv';
+var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+
+
 // Fixtures List Tab
 const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
 // Match Details Tab
@@ -49,8 +89,7 @@ const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1
 // Old published URL.
 // const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=246566173&single=true&output=csv';
 const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
-
-var displayAllTimeStatsArrayOfObjects = "";
+var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Ready Events
 
@@ -60,7 +99,12 @@ window.addEventListener('DOMContentLoaded', init) // Wait for the window to load
 // Add a load event listener - which completes after the init() function below - (https://eager.io/blog/how-to-decide-when-your-code-should-run/).
 window.addEventListener('load', function () {
     console.log('%c' + '> Dorkinians page images and other resources all loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message. 
+
+    // console.log("End timer");
     console.timeEnd(); // End the console timer.
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("All Resources Loaded");
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     // stopRotateLogo();
@@ -70,13 +114,73 @@ window.addEventListener('load', function () {
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {
+    console.log("init() called."); // Log that the init function has been called.
     console.log('%c' + '> Dorkinians page DOM content loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
 
     // Step 0.
     // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
+    // Reset the tabReadyCount.
+    tabReadyCount = 0;
+
+    // Initially show the loading text on the loading page using the typewriter effect.
+    // Clear the text element, define the initial required variables and then call the typeWriter function.
+    document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
+    let i = 0; // The integer counter.
+    let speed = 50; // The speed/duration of the effect in milliseconds.
+    let phraseText = "Loading data into site...";
+    typeWriter(); // Call the typeWriter function to update the HTML element with text.
+    function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
+        if (i < phraseText.length) {
+            document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    // Call the updateLoadingPage function to change the shown phrase.
+    updateLoadingPage();
+
     // Start the rotation of the Dorkinians logo to simulate loading.
-    rotateLogo();
+    rotateLogo("dorkinians-header-logo");
+
+    // Step 1. 
+    // Homepage Tab.
+    console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Next Fixtures data.
+    Papa.parse(nextFixturesSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getHomepageTabInfo, // The callback to execute when parsing is complete. Once done, call the getHomepageTabInfo function.
+    })
+
+
+    // Step 2. 
+    // Club Stats Tab.
+    console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Total Club Stats Info
+    Papa.parse(totalClubStatsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete. Once done, call the getTotalClubStatsInfo function.
+    })
+
+    // Team Season Results Info
+    Papa.parse(teamSeasonResultsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete. Once done, call the getTeamSeasonResultsInfo function.
+    })
+
+
+
+
+
 
     // Step 1. 
     // Player Stats Tab.
@@ -86,7 +190,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
+        complete: getPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsTabInfo function.
     })
 
 
@@ -143,11 +247,78 @@ function init() {
     displayInformation("tables-results-fixtures-information-bar", "Select a team to see their league table, results and fixtures");
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
-    stopRotateLogo();
+    stopRotateLogo("dorkinians-header-logo");
 }
 
 
 
+
+// Loading Functions
+
+function updateLoadingPage() {
+    // Update the phrase text on the page every few seconds.
+
+    // Create a setInterval for every 6 seconds to change the shown phrase.
+    let loopPhrases = setInterval(function () {
+        let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
+        if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
+            console.log("loopPhrases timed out.")
+            alert("Page timed out. Please refresh."); // Pass an alert to the user.
+        }
+        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
+        // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
+        let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
+        // console.log("phraseText = " + phraseText); // Log the selected phrase.
+
+        // Reduce down the array removing the selected phrase so that it is not displayed again.
+        delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
+        phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
+            return true
+        });
+
+        // Clear the text element, define the initial required variables and then call the typeWriter function.
+        // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
+        document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
+        let i = 0; // The integer counter.
+        let speed = 50; // The speed/duration of the effect in milliseconds.
+        typeWriter(); // Call the typeWriter function to update the HTML element with text.
+        function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
+            if (i < phraseText.length) {
+                document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // React if the tab ready count matches the number of tabs.
+        if (tabReadyCount === numberTabs || tabReadyCount >= numberTabs) {
+            hideLoadingPage(); // Call the function to fade out the loading page.
+            clearInterval(loopPhrases); // Cancel the setInterval and escape it.
+        }
+    }, 6000);
+}
+
+function randomNumber(min, max) {
+    // Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
+    return Math.random() * (max - min) + min;
+}
+
+function incrementTabReadyCount(tabName) {
+    // Increment the tab ready count until it matches with the numberTabs.
+    tabReadyCount = tabReadyCount + 1;
+    console.log("tabReadyCount (" + tabName + ") = " + tabReadyCount + "/" + numberTabs);
+}
+
+function hideLoadingPage() {
+    // Hide the loading page as all tabs have returned as ready.
+    console.log("Loading Page hidden as all tabs are ready.")
+    let loadingPageElement = document.getElementById("loading-page"); // Get the loading-page element on the page.
+    loadingPageElement.classList.add("fadeout"); // Add the hidden class to the loading-page element.
+    // Allow for a second to pass (the same duration of the fadeout css animation) and then permanently add the hidden class to the loading page div so that the user can select things below it.
+    setInterval(function () {
+        loadingPageElement.classList.add("hidden"); // Add the hidden class to the loading-page element.
+    }, 1000);
+}
 
 
 
@@ -155,89 +326,300 @@ function init() {
 
 // Tab Functions
 
-// 1. Club/Team Stats Tab
+// 1. Homepage Tab
 
-// 1.1. Club/Team Stats tab data.
+// 1.1. Homepage tab data "getter" function.
 
-// Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-function showResultsTabInfo(results) {
-    // console.log("> Function [Results Table]: showResultsTabInfo(results) called.")
+function getHomepageTabInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
-    var dataArrayOfObjects = results.data // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
-    //console.log(dataArrayOfObjects); // Log the received array of objects.
-    //var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    //console.log("Original Length = " + objectLength); // Log the original length.
+    displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    showHomepageTabInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabInfo function.
+
+}
+
+// 1.2. Homepage tab data "show-er" function.
+
+function showHomepageTabInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // console.log("dataArrayOfObjects[0]");
+    // console.log(dataArrayOfObjects[0]);
+
+    // Populate the team next fixtures information on the page.
+
+    // Define an array of teams to update. Each stat corresponds to an HTML element.
+    let teamArray = ["1stXI", "2ndXI", "3rdXI", "4thXI", "5thXI", "6thXI", "7thXI", "8thXI"];
+    for (let i = 0; i < teamArray.length; i++) {
+
+        var teamFixtureObject = dataArrayOfObjects[i];
+        // console.log(teamArray[i]); // Log the team being updated.
+        document.getElementById(teamArray[i] + "-Opposition").innerHTML = teamFixtureObject['NEXTOPPO']; // Get the Opposition text element and add the text to it.
+        document.getElementById(teamArray[i] + "-Location").innerHTML = teamFixtureObject['LOCATION']; // Get the Location text element and add the text to it.
+        document.getElementById(teamArray[i] + "-LastResult").innerHTML = teamFixtureObject['LASTRESULT']; // Get the LastResult text element and add the text to it.
+
+    }
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Homepage");
+
+}
+
+
+
+
+
+
+// 2. Club/Team Stats Tab
+
+// 2.1 Total Club Stats
+
+// 2.1.1. Total Club Stats Info data "getter" function.
+
+function getTotalClubStatsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getTotalClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayTotalClubStatsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
+}
+
+
+// 2.1.2. Total Club Stats data "show-er" function.
+
+function showTotalClubStatsInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTotalClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    console.log("seasonValue =");
+    console.log(seasonValue);
+
+
+    // Team selection.
+    var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
+    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Select the case of the dropdown. https://www.w3schools.com/js/js_switch.asp
+    var arrayNumberRef = 0;
+    var statsHeaderText = "Total Club Stats";
+    switch (teamValue) {
+        case "Whole Club":
+            arrayNumberRef = 0;
+            statsHeaderText = "Total Club Stats";
+            break;
+        case "1st XI":
+            arrayNumberRef = 1;
+            statsHeaderText = "1st XI Stats";
+            break;
+        case "2nd XI":
+            arrayNumberRef = 2;
+            statsHeaderText = "2nd XI Stats";
+            break;
+        case "3rd XI":
+            arrayNumberRef = 3;
+            statsHeaderText = "3rd XI Stats";
+            break;
+        case "4th XI":
+            arrayNumberRef = 4;
+            statsHeaderText = "4th XI Stats";
+            break;
+        case "5th XI":
+            arrayNumberRef = 5;
+            statsHeaderText = "5th XI Stats";
+            break;
+        case "6th XI":
+            arrayNumberRef = 6;
+            statsHeaderText = "6th XI Stats";
+            break;
+        case "7th XI":
+            arrayNumberRef = 7;
+            statsHeaderText = "7th XI Stats";
+            break;
+        case "8th XI":
+            arrayNumberRef = 8;
+            statsHeaderText = "8th XI Stats";
+            break;
+        default:
+            arrayNumberRef = 0;
+    }
+
+    // Get an object from the array by creating an object from the first array value.
+    let statObject = dataArrayOfObjects[arrayNumberRef];
+
+    // Populate the team next fixtures information on the page.
+
+    // Update the header text.
+    document.getElementById("club-team-stats-header-text").innerHTML = statsHeaderText; // Get the header text element and add the text to it.
+
+    // Define an array of stats to update. Each stat corresponds to an HTML element.
+    let statArray = ["numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed", "numberPlayers", "numberGoalsScored", "goalsPerGame", "numberGoalsConceded", "goalsConcededPerGame", "numberGoalscorers", "topGoalscorer"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+    }
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Club Stats - Total Club Stats");
+
+}
+
+
+// 2.1.3. Total Club Stats data "update-er" function.
+
+// For updater function - see full tab updater below (section 2.4).
+
+
+
+// 2.2 Teams Season Results
+
+// 2.2.1. Team Season Results Info data "getter" function.
+
+function getTeamSeasonResultsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
+}
+
+
+// 2.2.2. Team Season Results Info data "show-er" function.
+
+function showTeamSeasonResultsInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Season selection.
     var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
     var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-    //console.log("seasonValue = " + seasonValue);
+    // Catch if the season value isn't a filterable value.
+    if (seasonValue === "All Seasons") {
+        seasonValue = "";
+    }
+    // console.log("seasonValue = " + seasonValue);
+
     // Team selection.
     var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
     var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-    //console.log("teamValue = " + teamValue);
+    // Catch if the team value isn't a filterable value.
+    if (teamValue === "Whole club") {
+        teamValue = "";
+    }
+    // console.log("teamValue = " + teamValue);
 
     // Filter for all selections.
     // Re-use the re-usable function but don't pass all arguments.
-    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
+    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, true, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
 
-    //console.log(filteredArrayOfObjects); // Log the filtered array of objects.
-    //objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
-    //console.log("New Length = " + objectLength); // Log the original length.
+    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // console.log("New Length = " + objectLength); // Log the original length.
 
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
-    clearTable("#results-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#results-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
+    clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
+    createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
-    // End the rotation of the Dorkinians logo to simulate loading being completed.
-    stopRotateLogo();
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Club Stats - Teams Season Results");
+
 }
 
-// 1.2. Club Stats Results tab data refresh.
+
+// 2.2.3. Team Season Results Info data "update-er" function.
+
+// For updater function - see full tab updater below (section 2.4).
+
+
+// 2.3 All Club Results
+
+
+
+
+// 2.4. Full Club Stats data "update-er" function.
 
 // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
-function showAllResultsTabUpdatedInfo() {
-    // console.log("> Function [Stats Table]: showAllResultsTabUpdatedInfo(results) called.")
+function updateClubStatsInfo() {
+    // Display the refreshed data onto the page.
+    console.log('%c' + '>> updateClubStatsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Start the rotation of the Dorkinians logo to simulate loading.
-    rotateLogo();
+    rotateLogo("dorkinians-header-logo");
 
-    Papa.parse(resultsSheetURLCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: showResultsTabInfo, // The callback to execute when parsing is complete. Once done, call the showInfo function.
-    })
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
+
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
-    // stopRotateLogo();
+    stopRotateLogo("dorkinians-header-logo");
 }
 
 
 
 
 
-// 2. Player Stats Tab
 
-// 2.1. Player Stats tab data "getter" function.
+
+// 3. Player Stats Tab
+
+// 3.1. Player Stats tab data "getter" function.
 
 function getPlayerStatsTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    // console.log('%c' + '>> getPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on.
+    // Process the original array of objects received.
+    displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
+
 }
 
-// 2.2. Player Stats tab data "show-er" function.
+// 3.2. Player Stats tab data "show-er" function.
 
 function showPlayerStatsTabInfo(results) {
     // Display the retrieved data onto the page.
-    // console.log("> Function [Results Table]: showPlayerStatsTabInfo(results) called.")
+    console.log('%c' + '>> showPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
@@ -294,9 +676,12 @@ function showPlayerStatsTabInfo(results) {
         // HeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
     }
 
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Player Stats");
+
 }
 
-// 2.3. Player Stats tab data "update-er" function.
+// 3.3. Player Stats tab data "update-er" function.
 
 function showPlayerStatsTabUpdatedInfo() {
     // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
@@ -316,9 +701,9 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 
-// 3. All Stats Tab
+// 4. All Stats Tab
 
-// 3.1. All Stats tab data.
+// 4.1. All Stats tab data.
 
 // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
 function showAllStatsTabInfo(results) {
@@ -354,7 +739,7 @@ function showAllStatsTabInfo(results) {
     //console.log("locationValue = " + locationValue);
 
     // Filter for all selections.
-    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, "SEASON", seasonValue, "PLAYER NAME", playerValue, "TEAM", teamValue, "LOCATION", locationValue); // Call the created filterArrayOfObjects function.
+    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, true, "SEASON", seasonValue, "PLAYER NAME", playerValue, "TEAM", teamValue, "LOCATION", locationValue); // Call the created filterArrayOfObjects function.
 
     //console.log(filteredArrayOfObjects); // Log the filtered array of objects.
     //objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
@@ -362,10 +747,10 @@ function showAllStatsTabInfo(results) {
 
     // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
     clearTable("#all-stats-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#all-stats-table", "TRUE", "object"); // Call the createFullTable function, passing the data from PapaParse.
+    createFullTable(filteredArrayOfObjects, "#all-stats-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 }
 
-// 3.2. All Stats tab data refresh.
+// 4.2. All Stats tab data refresh.
 
 // Create a function that is called when the user changes a dropdown. This function is called from the HTML select elements.
 function showAllStatsTabUpdatedInfo() {
@@ -388,11 +773,11 @@ function showAllStatsTabUpdatedInfo() {
 
 
 
-// 4. Team of the Week Tab
+// 5. Team of the Week Tab
 
 
 
-// 5. Comparison Tab
+// 6. Comparison Tab
 
 function updateComparisonStatData() {
 
@@ -521,7 +906,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             // console.log("The stat being updated is " + statName + "."); // Log the stat being updated.
             var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
             var selectedStatValue = Number(filteredArrayOfObjects[0][statName]); // Use a dynamic [statArray[i]] key. Convert the stat to a number.
-            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName],numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName], numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
             // console.log("selectedStatValue = " + selectedStatValue); // Log the value that will be used for the stat.
             // console.log("numberDecimalPlaces = " + numberDecimalPlaces); // Log the number of decimal places the stat is rounded to.
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
@@ -663,7 +1048,7 @@ function resetStatsBars() {
 
 
 
-// 6. Tables, Results & Fixture Tab
+// 7. Tables, Results & Fixture Tab
 
 function updateTablesResultsandFixturesTab() {
     console.log("> Function: updateTablesResultsandFixturesTab() called.")
@@ -759,8 +1144,8 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 
     // console.log("Header data is an array:");
     // console.log(headerdata); // Log the passed headerdata to the console.
-    console.log("Array is an array of objects:");
-    console.log(array); // Log the passed array to the console.
+    // console.log("Array is an array of objects:");
+    // console.log(array); // Log the passed array to the console.
 
     let thead = table.createTHead(); // Create table headers.
     let row = thead.insertRow(); // Insert a row for the table headers.
@@ -769,7 +1154,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
         let th = document.createElement("th"); // Create the th element.
         // If the toolTipBoolean is true, create the headers to also include the tool tips.
         if (toolTipBoolean == true) { // Define how to add the text depending on if toolTips are enabled for the table.
-            console.log("toolTipBoolean is true so adding tooltip.");
+            // console.log("toolTipBoolean is true so adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
             // Skip the first column.
@@ -778,13 +1163,13 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
             } else { // For all other columns, add the tool tip.
                 th.classList.add("tooltip"); // Add the tooltip class to the th element (the container element).
                 var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
-                toolTip.innerHTML = array[1][counter]; // Add the text of the second row, counter column to the new paragraph element.
+                toolTip.innerHTML = array[0][key]; // Add the text of the first row, with the key as the column to the new paragraph element.
                 toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
                 toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
                 th.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
             }
         } else { // If toolTipBoolean is false, add text the normal way.
-            console.log("toolTipBoolean is false so not adding tooltip.");
+            // console.log("toolTipBoolean is false so not adding tooltip.");
             var text = document.createTextNode(key); // Create a text node from the header data key to be apended.
             th.appendChild(text); // Append the text to the table header.
         }
@@ -805,7 +1190,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 // Create the rest of the table below head including all table rows.
 function generateTable(table, data, toolTipBoolean) {
     console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
-    //console.log(data); // Log the passed array to the console.
+    // console.log(data); // Log the passed array to the console.
     var rowCounter = 1; // Define a counter for checking which row to work with.
     var columnCounter;
     var testedValue;
@@ -819,27 +1204,18 @@ function generateTable(table, data, toolTipBoolean) {
     for (let element of data) { // Loop through each row of the data.
         let row = tbody.insertRow(); // Insert a row for each bit of table data.
         columnCounter = 0; // Define a counter for checking which column to apply stick-col rule to.
-
         // console.log("-------------------------------------")
         // console.log("Row data = below")
         // console.log(element)
-
         if (rowCounter <= 1) { // Skip the first row regardless.
-
             // Do nothing.
             // console.log("Row count " + rowCounter + " skipped as this is the table headers.")
-
         } else {
-
-            if (toolTipBoolean == true && rowCounter == 2) {
-                //if (toolTipBoolean == true && rowCounter <= 1) { // Define how to add the text depending on if toolTips are enabled for the table.
-                // Skip doing the first two rows for tables that have tooltips.
+            if (toolTipBoolean == true && rowCounter == 1) {
+                // Skip doing the first row for tables that have tooltips.
                 // console.log("toolTipBoolean is true so skipping row = " + rowCounter + ".");
-
             } else {
-
                 // console.log("toolTipBoolean is false so not skipping row = " + rowCounter + ".");
-
                 for (key in element) { // Loop through each cell in each row.
                     let cell = row.insertCell(); // Create the cell.
                     let text = document.createTextNode(element[key]); // Add the cell text.
@@ -868,9 +1244,7 @@ function generateTable(table, data, toolTipBoolean) {
                     columnCounter = columnCounter + 1; // Increment the columnCounter.
                 }
             }
-
         }
-
         rowCounter = rowCounter + 1; // Increment the rowCounter.
     }
 
@@ -889,11 +1263,27 @@ function filterArrayOfObjects(ArrayOfObjects, keyName, filterValue) {
 }
 
 // Filter an Array of Objects based on multiple inputs and return another Array of Objects, filtered by the input values, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-function multiFilterArrayOfObjects(ArrayOfObjects, keyNameSeason, filterValueSeason, keyNamePlayer, filterValuePlayer, keyNameTeam, filterValueTeam, keyNameLocation, filterValueLocation) {
+function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason, filterValueSeason, keyNamePlayer, filterValuePlayer, keyNameTeam, filterValueTeam, keyNameLocation, filterValueLocation) {
     // Receive an Array of Objects, and multiple key names and filter values.
     // console.log('%c' + '>> Re-usable Function: multiFilterArrayOfObjects(ArrayOfObjects, keyNames , filterValues...) called. Passed variables: ArrayOfObjects = not shown, keyNameSeason = ' + keyNameSeason + ', filterValueSeason = ' + filterValueSeason, ', keyNamePlayer = ' + keyNamePlayer + ', filterValuePlayer = ' + filterValuePlayer, ', keyNameTeam = ' + keyNameTeam + ', filterValueTeam = ' + filterValueTeam, ', keyNameLocation = ' + keyNameLocation + ', filterValueLocation = ' + filterValueLocation, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // Initially define the variable that will be manipulated and produced.
     var filteredArrayOfObjects = ArrayOfObjects;
+
+    // Check if the original ArrayOfObjects includes a toolTip row or not.
+    if (toolTipBoolean === true) {
+
+        // Remove the first element, store it and create the other filterable array for further work (without the first toolTip element).
+        var filteredArrayOfObjectsFirstElement = [filteredArrayOfObjects.shift()]; // Remove the first element of the array and store it. https://bobbyhadz.com/blog/javascript-remove-first-element-from-array#remove-the-first-element-from-an-array.
+        // console.log("filteredArrayOfObjectsFirstElement");
+        // console.log(filteredArrayOfObjectsFirstElement);
+        var filteredArrayOfObjectsWithoutFirstElement = filteredArrayOfObjects.slice(1); // Return the full array without the first element. https://bobbyhadz.com/blog/javascript-remove-first-element-from-array#remove-the-first-element-from-an-array.
+        // console.log("filteredArrayOfObjectsWithoutFirstElement");
+        // console.log(filteredArrayOfObjectsWithoutFirstElement);
+
+        // Set the array to be worked on and filtered to be the one without the first element.
+        filteredArrayOfObjects = filteredArrayOfObjectsWithoutFirstElement;
+    }
+
     // Filter the Array of Objects for multiple criteria.
 
     // Filter the Array of Objects for the defined season.
@@ -926,6 +1316,17 @@ function multiFilterArrayOfObjects(ArrayOfObjects, keyNameSeason, filterValueSea
         console.log(">>> Data not filtered for locations as 'Location' still picked.")
     } else { // Filter the Array of Objects.
         filteredArrayOfObjects = filteredArrayOfObjects.filter(data => (data[keyNameLocation].includes(filterValueLocation))); // Filter down the data into a new array of objects.
+    }
+
+    // If the original ArrayOfObjects included a toolTip row, re-add it.
+    if (toolTipBoolean === true) {
+        // Re-combine the toolTip row element with the new filtered element.
+        // console.log("filteredArrayOfObjectsFirstElement");
+        // console.log(filteredArrayOfObjectsFirstElement);
+        // console.log("filteredArrayOfObjects");
+        // console.log(filteredArrayOfObjects);
+        var filteredArrayOfObjects = filteredArrayOfObjectsFirstElement.concat(filteredArrayOfObjects); // Re-merge the two arrays using concat. https://www.w3schools.com/jsref/jsref_concat_array.asp.
+
     }
 
     return filteredArrayOfObjects; // Return the new filtered array of objects.
@@ -988,22 +1389,24 @@ let roundOff = (num, places) => {
 // Dorkinians Logo Rotation Functions
 
 // Start Rotation
-function rotateLogo() {
+function rotateLogo(logoID) {
+    // Begin rotating the logo given the defined id of the logo to rotate.
     // console.log('%c' + '> rotateLogo() called. Dorkinians logo rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Add classes to the Dorkinians logo in the top left corner to simulate loading.
-    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    var dorkiniansLogo = document.getElementById(logoID); // Get the Dorkinians Logo.
     dorkiniansLogo.classList.add("rotate"); // Add the "rotate" class to the logo.
     dorkiniansLogo.classList.add("linear"); // Add the "linear" class to the logo.
     dorkiniansLogo.classList.add("infinite"); // Add the "infinite" class to the logo.
 }
 
 // Finish Rotation
-function stopRotateLogo() {
+function stopRotateLogo(logoID) {
+    // Finish rotating the logo given the defined id of the logo to rotate.
     // console.log('%c' + '> stopRotateLogo() called. Dorkinians logo stopped rotating.', 'background-color: #F9ED32; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Remove classes from the Dorkinians logo in the top left corner to simulate loading being completed.
-    var dorkiniansLogo = document.getElementById("dorkiniansLogo"); // Get the Dorkinians Logo.
+    var dorkiniansLogo = document.getElementById(logoID); // Get the Dorkinians Logo.
     dorkiniansLogo.classList.remove("rotate"); // Remove the "rotate" class from the logo.
     dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
     dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
