@@ -139,7 +139,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
@@ -381,7 +381,6 @@ function showHomepageTabInfo(results) {
 
 
 
-
 // 2. Club/Team Stats Tab
 
 // 2.1 Total Club Stats
@@ -409,65 +408,34 @@ function showTotalClubStatsInfo(results) {
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
 
-    console.log(dataArrayOfObjects); // Log the received array of objects.
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
+    // Get the drop down selection values to be used for displaying the correct information.
 
     // Season selection.
     var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
     var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
 
-    console.log("seasonValue =");
-    console.log(seasonValue);
-
-
     // Team selection.
     var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
     var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
 
-    // Select the case of the dropdown. https://www.w3schools.com/js/js_switch.asp
+    // Create an ID to lookup and match to in the passed data.
+    var lookUpID = seasonValue + " - " + teamValue;
+    // console.log("lookUpID =");
+    // console.log(lookUpID);
+
+    // Loop through the passed data and get the row of data to be displayed and used.
     var arrayNumberRef = 0;
-    var statsHeaderText = "Total Club Stats";
-    switch (teamValue) {
-        case "Whole Club":
-            arrayNumberRef = 0;
-            statsHeaderText = "Total Club Stats";
-            break;
-        case "1st XI":
-            arrayNumberRef = 1;
-            statsHeaderText = "1st XI Stats";
-            break;
-        case "2nd XI":
-            arrayNumberRef = 2;
-            statsHeaderText = "2nd XI Stats";
-            break;
-        case "3rd XI":
-            arrayNumberRef = 3;
-            statsHeaderText = "3rd XI Stats";
-            break;
-        case "4th XI":
-            arrayNumberRef = 4;
-            statsHeaderText = "4th XI Stats";
-            break;
-        case "5th XI":
-            arrayNumberRef = 5;
-            statsHeaderText = "5th XI Stats";
-            break;
-        case "6th XI":
-            arrayNumberRef = 6;
-            statsHeaderText = "6th XI Stats";
-            break;
-        case "7th XI":
-            arrayNumberRef = 7;
-            statsHeaderText = "7th XI Stats";
-            break;
-        case "8th XI":
-            arrayNumberRef = 8;
-            statsHeaderText = "8th XI Stats";
-            break;
-        default:
-            arrayNumberRef = 0;
+    for (let i = 0; i < objectLength; i++) {
+        // console.log(i); // Log the number being run through.
+        // console.log("dataArrayOfObjects[i]['ID']");
+        // console.log(dataArrayOfObjects[i]['ID']);
+        if (dataArrayOfObjects[i]["ID"] === lookUpID) {
+            arrayNumberRef = i;
+        }
     }
 
     // Get an object from the array by creating an object from the first array value.
@@ -475,8 +443,21 @@ function showTotalClubStatsInfo(results) {
 
     // Populate the team next fixtures information on the page.
 
+    // Update the main header text.
+    if (teamValue === "Whole club") {
+        document.getElementById("club-stats-main-header-text").innerHTML = "Club Stats"; // Get the main header text element and add the text to it.
+        document.getElementById("club-stats-tab-text").innerHTML = "Club Stats"; // Get the tab text element and add the text to it.
+        // Update the information bar.
+        displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
+    } else {
+        document.getElementById("club-stats-main-header-text").innerHTML = "Team Stats"; // Get the main header text element and add the text to it.
+        document.getElementById("club-stats-tab-text").innerHTML = "Team Stats"; // Get the tab text element and add the text to it.
+        // Update the information bar.
+        displayInformation("club-stats-information-bar", "You can select 'Whole club' to switch back to Club stats.");
+    }
+
     // Update the header text.
-    document.getElementById("club-team-stats-header-text").innerHTML = statsHeaderText; // Get the header text element and add the text to it.
+    document.getElementById("club-team-stats-header-text").innerHTML = teamValue + " Stats"; // Get the header text element and add the text to it.
 
     // Define an array of stats to update. Each stat corresponds to an HTML element.
     let statArray = ["numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed", "numberPlayers", "numberGoalsScored", "goalsPerGame", "numberGoalsConceded", "goalsConcededPerGame", "numberGoalscorers", "topGoalscorer"];
@@ -597,8 +578,6 @@ function updateClubStatsInfo() {
 
 
 
-
-
 // 3. Player Stats Tab
 
 // 3.1. Player Stats tab data "getter" function.
@@ -699,8 +678,6 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 
-
-
 // 4. All Stats Tab
 
 // 4.1. All Stats tab data.
@@ -773,7 +750,10 @@ function showAllStatsTabUpdatedInfo() {
 
 
 
+
 // 5. Team of the Week Tab
+
+
 
 
 
@@ -1252,6 +1232,9 @@ function generateTable(table, data, toolTipBoolean) {
 }
 
 
+
+
+
 // Filter Array Functions
 
 // Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
@@ -1334,6 +1317,8 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
 
 
 
+
+
 // Other Functions
 
 // Full Screen functions (https://stackoverflow.com/a/23971798/14290169).
@@ -1377,6 +1362,9 @@ function toggleFullScreen(element) {
 }
 
 
+
+
+
 // Math Function
 
 // Rounding Function (https://learnersbucket.com/examples/javascript/learn-how-to-round-to-2-decimal-places-in-javascript/).
@@ -1384,6 +1372,9 @@ let roundOff = (num, places) => {
     const x = Math.pow(10, places);
     return Math.round(num * x) / x;
 }
+
+
+
 
 
 // Dorkinians Logo Rotation Functions
@@ -1411,6 +1402,10 @@ function stopRotateLogo(logoID) {
     dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
     dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
 }
+
+
+
+
 
 // Information Bar Function
 

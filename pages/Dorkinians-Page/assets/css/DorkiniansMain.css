@@ -373,62 +373,6 @@ tr:last-child td:last-child {
 	border-top-left-radius: var(--border-radius, 0.2rem);
 }
 
-/* Tooltip Styling - used in tables. https://www.w3schools.com/css/css_tooltip.asp. */
-
-/* Tooltip container */
-.tooltip {
-	text-decoration: underline; /* Add dots under the hoverable text. */
-    text-decoration-color: white;
-    text-decoration-style: dotted;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-	background-color: var(--page-dark-grey-colour, grey);
-	visibility: hidden; /* Initially set the visibility as hidden. */
-	min-height: 2rem;
-	max-height: 30rem;
-	width: max-content;
-	min-width: 8rem;
-	/* min-width: 150%; */
-	/* overflow: visible; */
-	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
-	/* Position the tooltip text below the text its explaining. */
-	position: absolute;
-	z-index: 1;
- 	top: 100%;
-	left: 0rem;
-
-	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
-    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
-}
-  
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-	visibility: visible;
-	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
-}
-
-/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
-.tooltip .tooltiptext::after {
-	content: " ";
-	position: absolute;
-	bottom: 100%; /* At the bottom of the tooltip */
-	left: 8%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: transparent transparent var(--page-dark-grey-colour, grey) transparent;
-}
-
-p.tooltiptext {
-	font-size: 12.8px; /* Fallback value. */
-	font-size: 0.8rem; /* Relative to root (html) value. */
-	text-transform: none;
-	text-align: left;
-}
-
 
 
 
@@ -465,6 +409,77 @@ p.tooltiptext {
 		display: block;
 		opacity: 1;
 	}
+}
+
+
+
+/* Icon Styling. */
+
+/* Style the added Google Icons - https://fonts.google.com/icons. */
+.google-icons {
+	color: white;
+}
+
+/* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
+
+/* Icon Tooltip container */
+.icon-tooltip {
+	position: relative;
+	/* display: inline-block; */
+	float: right;
+	margin-left: 150px;
+}
+  
+/* Tooltip text */
+.icon-tooltip .icon-tooltip-text {
+	/* background-color: blue; */
+	background-color: var(--page-dark-grey-colour, grey);
+	visibility: hidden; /* Initially set the visibility as hidden. */
+	/* min-width: 20rem; */
+	width: max-content;
+	min-height: 1rem;
+	/* max-height: 30rem; */
+	/* min-width: 150%; */
+	/* overflow: visible; */
+	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	/* Position the tooltip text below the text its explaining. */
+	position: absolute;
+	z-index: 1;
+  	bottom: 110%; /* Position above the container div. */
+
+	right: 0%;
+	min-width: max-content;
+	left: -30rem;
+
+	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
+    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
+}
+
+/* Show the icon tooltip text when you mouse over the icon tooltip container */
+.icon-tooltip:hover .icon-tooltip-text {
+	visibility: visible; /* Change the visibility to visible when hovered on. */
+	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.icon-tooltip .icon-tooltip-text::after {
+	content: " ";
+	position: absolute;
+	top: 100%; /* At the bottom of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+}
+
+/* Style the text within the tooltip. */
+.icon-tooltip-text {
+	font-size: 12.8px; /* Fallback value. */
+	font-size: 0.7rem; /* Relative to root (html) value. */
+	text-transform: none;
+	text-align: right;
 }
 
 
@@ -565,6 +580,7 @@ option {
 	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
 }
 
+/* Style the text within the tooltip. */
 .stats-tooltip-text {
 	font-size: 12.8px; /* Fallback value. */
 	font-size: 0.7rem; /* Relative to root (html) value. */
@@ -664,7 +680,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -805,15 +821,24 @@ Section 4
 	padding: 0.3rem;
 
 }
-
 #club-stats-total-club-and-team-stats-container div p {
 	display: inline;
 	font-weight: bold;
 }
-
 #club-stats-total-club-and-team-stats-container div h5 {
 	display: inline;
 }
+
+/* Style the div holding the header and information icon. */
+#club-stats-total-club-and-team-stats-header-container {
+	/* background-color: purple; */
+	width: 100%;
+}
+#club-stats-total-club-and-team-stats-header-container div {
+	/* background-color: yellow; */
+	display: inline-block;
+}
+
 
 #club-stats-team-season-results-container {
 	/* background-color: blue; */
