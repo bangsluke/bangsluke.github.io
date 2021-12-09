@@ -139,7 +139,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");

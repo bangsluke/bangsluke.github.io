@@ -355,19 +355,16 @@ tr:last-child td:last-child {
 	white-space: nowrap;
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
-
 .sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
 	background-color: var(--main-dorkinians-green-colour,darkgreen);
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 1;
 }
-
 .first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
 	width: max-content;
 	left: 0rem;
 }
-
 .first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
 	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
 	border-top-left-radius: var(--border-radius, 0.2rem);
@@ -680,7 +677,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
