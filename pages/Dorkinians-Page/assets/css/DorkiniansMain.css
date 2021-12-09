@@ -865,6 +865,13 @@ Section 4
 
 /* Player Stats Tab */
 
+/* This Season Stats */
+
+#player-stats-table {
+	background-color: #490bf3;
+}
+
+
 /* Add a grid layout for the player-stats-area section to group it. */
 .player-stats-area {
 	/* background-color: violet; */
