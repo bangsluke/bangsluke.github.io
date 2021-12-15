@@ -870,12 +870,22 @@ Section 4
 #player-stats-this-season-container {
 	/* background-color: violet; */
 	display: grid; 
-	grid-template-columns: 80% 10% 10%; 
+	grid-template-columns: 50% 10% 40%; 
 	grid-template-rows: 1fr;
 	gap: 0.3rem 0.2rem; /* First value is between rows, second columns. */
 }
 
+#player-stats-this-season-container h5 {
+	text-align: right;
+}
 
+#player-stats-this-season-container img {
+	margin-left: 0.4rem;
+}
+
+#player-stats-this-season-container div {
+	margin-left: 0.4rem;
+}
 
 /* Past Season Stats */
 
