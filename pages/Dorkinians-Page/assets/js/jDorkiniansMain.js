@@ -667,7 +667,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     // Populate the stats information on the page.
 
     // Define an array of stats to update. Each stat corresponds to an HTML element in the This Seasons Grid.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "PSC", "PM", "PCO", "PSV", "FTP", "GperAPP", "CperAPP", "MperG", "CLSperAPP", "FTPperAPP", "DIST", "Games%Won", "HomeGames", "HomeGames%Won", "AwayGames", "AwayGames%Won"];
     for (let i = 0; i < statArray.length; i++) {
         console.log(statArray[i]); // Log the stat being updated.
         console.log("player-stats-this-season-" + statArray[i]); // Log the id of the text element being updated.
