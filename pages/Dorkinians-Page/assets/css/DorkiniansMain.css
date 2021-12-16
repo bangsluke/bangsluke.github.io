@@ -872,7 +872,7 @@ Section 4
 	display: grid; 
 	grid-template-columns: 50% 10% 40%; 
 	grid-template-rows: 1fr;
-	gap: 0.3rem 0.2rem; /* First value is between rows, second columns. */
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 }
 
 #player-stats-this-season-container h5 {

@@ -495,6 +495,25 @@
 
                                 <h3 class="textleft">This Season Stats</h3>
 
+                                <div class="player-stats-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                                        <select name="player-stats-this-season-stats-selection"
+                                            class="selection-dropdown" id="player-stats-this-season-stats-selection"
+                                            onchange="showPlayerStatsTabUpdatedInfo()">
+                                            <option selected="selected">All Stats</option>
+                                            <option>Appearance Stats</option>
+                                            <option>Creative Stats</option>
+                                            <option>Defensive Stats</option>
+                                            <option>Penalty Stats</option>
+                                            <option>Per App Stats</option>
+                                            <option>Results Stats</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
                                 <!-- Add a container to hold all of the this season stats. -->
                                 <div id="player-stats-this-season-container">
 
@@ -537,14 +556,137 @@
                                     <!-- Create the yellow card icon using CSS. -->
                                     <div id="yellow-card" class="comparison-icon center card-icon"></div>
 
+                                    <!-- Red Cards -->
+                                    <h5>Red cards received:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-R"></p>
+                                    <!-- Create the red card icon using CSS. -->
+                                    <div id="red-card" class="comparison-icon center card-icon"></div>
+
+                                    <!-- Own Goals -->
+                                    <h5>Own goals scored:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-OG"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
+                                        alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
+
+                                    <!-- Conceded -->
+                                    <h5>Goals conceded:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-C"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png"
+                                        alt="Conceded Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Clean Sheets -->
+                                    <h5>Clean sheets achieved:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-CLS"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png"
+                                        alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Penalties Scored -->
+                                    <h5>Penalties scored:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-PSC"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Penalties Scored Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Penalties Missed -->
+                                    <h5>Penalties missed:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-PM"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Penalties Missed Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Penalties Conceded -->
+                                    <h5>Penalties conceded:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-PCO"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Penalties Conceded Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Penalties Saved -->
+                                    <h5>Penalties saved:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-PSV"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalty Save Icon.png"
+                                        alt="Penalties Saved Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Fantasy Points -->
+                                    <h5>Fantasy points achieved:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-FTP"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Fantasy Points Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Goals Per App -->
+                                    <h5>Goals scored per appearance:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-GperAPP"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png"
+                                        alt="Goals Per App Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Conceded Per App -->
+                                    <h5>Goals conceded per appearance:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-CperAPP"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png"
+                                        alt="Conceded Per App Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Minutes Per Goal -->
+                                    <h5>Minutes taken per goal scored:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-MperG"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png"
+                                        alt="Minutes Per Goal Icon" class="comparison-icon white center" height="25px"
+                                        width="25px">
+
+                                    <!-- Clean Sheets Per App -->
+                                    <h5>Clean sheets per appearance:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-CLSperAPP"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                        alt="Clean Sheets Per App Icon" class="comparison-icon white center"
+                                        height="25px" width="25px">
+
+                                    <!-- Fantasy Points Per App -->
+                                    <h5>Fantasy points per appearance:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-FTPperAPP"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                        alt="Fantasy Points Per App Icon" class="comparison-icon white center"
+                                        height="25px" width="25px">
+
+                                    <!-- Distance Travelled -->
+                                    <h5>Distance travelled:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-DIST"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Distance Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Game % Won -->
+                                    <h5>Percentage of games won:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-Games%Won"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Game % Won Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Home Games -->
+                                    <h5>Home games:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-HomeGames"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Home Games Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Home Game % Won -->
+                                    <h5>Percentage of home games won:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-HomeGames%Won"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Home Game % Won Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Away Games -->
+                                    <h5>Away games:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-AwayGames"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Away Games Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
+                                    <!-- Away Game % Won -->
+                                    <h5>Percentage of away games won:</h5>
+                                    <p class="yellowtext textright" id="player-stats-this-season-AwayGames%Won"></p>
+                                    <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Away Game % Won Icon"
+                                        class="comparison-icon white center" height="25px" width="25px">
+
                                 </div>
 
-
                             </section>
-
-                            <br>
-
-                            <br>
 
                             <!-- Add a section for Past Seasons Stats. -->
                             <section>
@@ -608,6 +750,16 @@
 
                             </section>
 
+                            <!-- Add a section for All Time Stats. -->
+                            <section>
+
+                                <h3 class="textleft">All Time Stats</h3>
+
+                                <p>Unchangeable summary of all time stats from parsing "displayAllTimeStats" to be
+                                    added.</p>
+
+                            </section>
+
                             <!-- Add a section for All Stats. -->
                             <section>
 
@@ -660,7 +812,7 @@
 
                                 <br>
 
-                                <p>Fully filterable table of stats from parsing "displayAllStats" to be added.</p>
+                                <p>Fully filterable table of stats from parsing "importMatchDetailsTab" to be added.</p>
 
                             </section>
 
