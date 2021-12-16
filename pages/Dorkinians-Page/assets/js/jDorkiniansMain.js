@@ -59,6 +59,152 @@ var phrasesArray = [
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
+// Globally define an object containing stat objects that can be referenced in other functions.
+const statObject = {
+    APP: {
+        statName: 'Appearances',
+        statFormat: 'Integer',
+        description: 'The number of appearances made by the player.'
+    },
+    M: {
+        statName: 'Minutes',
+        statFormat: 'Integer',
+        description: 'The number of minutes played by the player.'
+    },
+    MOM: {
+        statName: 'Man of the Matches',
+        statFormat: 'Integer',
+        description: 'The number of man of the match performances achieved by the player.'
+    },
+    G: {
+        statName: 'Goals Scored',
+        statFormat: 'Integer',
+        description: 'The number of goals scored by the player, including penalties.'
+    },
+    A: {
+        statName: 'Assists',
+        statFormat: 'Integer',
+        description: 'The number of assists provided by the player.'
+    },
+    Y: {
+        statName: 'Yellow Cards',
+        statFormat: 'Integer',
+        description: 'The number of yellow cards received by the player.'
+    },
+    R: {
+        statName: 'Red Cards',
+        statFormat: 'Integer',
+        description: 'The number of red cards received by the player.'
+    },
+    OG: {
+        statName: 'Own Goals',
+        statFormat: 'Integer',
+        description: 'The number of own goals scored by the player.'
+    },
+    C: {
+        statName: 'Conceded',
+        statFormat: 'Integer',
+        description: 'The number of goals conceded whilst the player has been playing.'
+    },
+    CLS: {
+        statName: 'Clean Sheets',
+        statFormat: 'Integer',
+        description: 'The number of clean sheets achieved by the player.'
+    },
+    PSC: {
+        statName: 'Penalties Scored',
+        statFormat: 'Integer',
+        description: 'The number of penalties scored by the player.'
+    },
+    PM: {
+        statName: 'Penalties Missed',
+        statFormat: 'Integer',
+        description: 'The number of penalties missed by the player.'
+    },
+    PCO: {
+        statName: 'Penalties Conceded',
+        statFormat: 'Integer',
+        description: 'The number of penalties conceded by the player.'
+    },
+    PSV: {
+        statName: 'Penalties Saved',
+        statFormat: 'Integer',
+        description: 'The number of penalties saved by the player.'
+    },
+    FTP: {
+        statName: 'Fantasy Points',
+        statFormat: 'Integer',
+        description: 'The number of fantasy points achieved by the player.'
+    },
+    GperAPP: {
+        statName: 'Goals Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of goals scored per appearance by the player.'
+    },
+    CperAPP: {
+        statName: 'Conceded Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of goals conceded per appearance by the player.'
+    },
+    MperG: {
+        statName: 'Minutes Per Goal',
+        statFormat: 'Integer',
+        description: 'The average number of minutes needed by the player to score a goal.'
+    },
+    MperCLS: {
+        statName: 'Minutes Per Clean Sheet',
+        statFormat: 'Integer',
+        description: 'The average number of minutes needed by the player to achieve a clean sheet.'
+    },
+    FTPperAPP: {
+        statName: 'Fantasy Points Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of fantasy points scored per appearance by the player.'
+    },
+    DIST: {
+        statName: 'Distance Travelled',
+        statFormat: 'Decimal1',
+        description: 'The distance travelled by the player getting to away games.'
+    },
+    "Games%Won": {
+        statName: 'Percentage Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of games won by the player.'
+    },
+    HomeGames: {
+        statName: 'Home Games',
+        statFormat: 'Integer',
+        description: 'The number of home games played by the player.'
+    },
+    HomeWins: {
+        statName: 'Home Wins',
+        statFormat: 'Integer',
+        description: 'The number of home games won by the player.'
+    },
+    "HomeGames%Won": {
+        statName: 'Percentage Home Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of home games won by the player.'
+    },
+    AwayGames: {
+        statName: 'Away Games',
+        statFormat: 'Integer',
+        description: 'The number of away games played by the player.'
+    },
+    AwayWins: {
+        statName: 'Away Wins',
+        statFormat: 'Integer',
+        description: 'The number of away games won by the player.'
+    },
+    "AwayGames%Won": {
+        statName: 'Percentage Away Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of away games won by the player.'
+    }
+};
+// console.log(statObject.APP.statFormat);
+
+
 // Google Sheet Links
 
 // Homepage Tab
@@ -146,7 +292,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -606,7 +752,7 @@ function getPlayerStatsThisSeasonTabInfo(results) {
     displayThisSeasonStatsArrayOfObjects = results.data // Define the global variable "displayThisSeasonStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayThisSeasonStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
-    showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStats function.
+    showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStatsThisSeasonTabInfo function.
 
 }
 
@@ -666,21 +812,45 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Populate the stats information on the page.
 
-    // Define an array of stats to update. Each stat corresponds to an HTML element in the This Seasons Grid.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "PSC", "PM", "PCO", "PSV", "FTP", "GperAPP", "CperAPP", "MperG", "CLSperAPP", "FTPperAPP", "DIST", "Games%Won", "HomeGames", "HomeGames%Won", "AwayGames", "AwayGames%Won"];
-    for (let i = 0; i < statArray.length; i++) {
-        console.log(statArray[i]); // Log the stat being updated.
-        console.log("player-stats-this-season-" + statArray[i]); // Log the id of the text element being updated.
-        var TextElement = document.getElementById("player-stats-this-season-" + statArray[i]); // Get the Text Element dynamically.
-        var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-        TextElement.innerHTML = displayText; // Add the text to the HTML element.
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
 
+    // Loop through the created stat array. Each stat corresponds to an HTML element in the This Seasons Grid.
+    for (let i = 0; i < statsArray.length; i++) {
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
+        // Add a try catch arround dynamically updating HTML elements as not all stats object to be used. 
+        try {
+            // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
+            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
+            const toolTipSpanElement = document.createElement("span"); // Create a span element.
+            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
+            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
 
-        // console.log("displayText = " + displayText); // Log the text that will be displayed.
+            // Update the displayed stat value after correctly formatting the stat value.
+            var TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
+            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            if (StatFormat == "Integer") { // Convert the stat to an integer.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(2); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 2 decimal places by using the "toFixed" method.
+            } else if (StatFormat == "Decimal1") { // Convert the stat to 1 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(1); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 1 decimal places by using the "toFixed" method.
+            } else { // For all else, including percentages and strings, just display as passed.
+                var displayText = filteredArrayOfObjects[0][statsArray[i]]; // Do nothing to passed value.
+            }
+            TextElement.innerHTML = displayText; // Add the text to the HTML element.
+            // console.log("displayText = " + displayText); // Log the text that will be displayed.
 
+        }
+        catch (err) {
+            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+        }
     }
-
 
     // Increment the tab ready count by 1.
     incrementTabReadyCount("Player Stats - This Season Stats");

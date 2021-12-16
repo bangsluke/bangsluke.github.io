@@ -676,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -867,7 +867,16 @@ Section 4
 
 /* This Season Stats */
 
-#player-stats-this-season-container {
+#player-stats-this-season-top-container {
+	/* background-color: greenyellow; */
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1fr;
+	gap: 0rem 0rem; /* First value is between rows, second columns. */
+
+}
+
+.player-stats-this-season-stat-container {
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 50% 10% 40%; 
@@ -875,15 +884,16 @@ Section 4
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 }
 
-#player-stats-this-season-container h5 {
+.player-stats-this-season-stat-container h5 {
+	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
 	text-align: right;
 }
 
-#player-stats-this-season-container img {
+.player-stats-this-season-stat-container img {
 	margin-left: 0.4rem;
 }
 
-#player-stats-this-season-container div {
+.player-stats-this-season-stat-container div {
 	margin-left: 0.4rem;
 }
 
