@@ -676,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -867,147 +867,45 @@ Section 4
 
 /* This Season Stats */
 
-#player-stats-table {
+#player-stats-this-season-top-container {
+	/* background-color: greenyellow; */
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1fr;
+	gap: 0rem 0rem; /* First value is between rows, second columns. */
+
+}
+
+.player-stats-this-season-stat-container {
+	/* background-color: violet; */
+	display: grid; 
+	grid-template-columns: 50% 10% 40%; 
+	grid-template-rows: 1fr;
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+}
+
+.player-stats-this-season-stat-container h5 {
+	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
+	text-align: right;
+}
+
+.player-stats-this-season-stat-container img {
+	margin-left: 0.4rem;
+}
+
+.player-stats-this-season-stat-container div {
+	margin-left: 0.4rem;
+}
+
+/* Past Season Stats */
+
+#player-stats-past-seasons-table {
 	background-color: #490bf3;
 }
 
+/* All Time Stats */
 
-/* Add a grid layout for the player-stats-area section to group it. */
-.player-stats-area {
-	/* background-color: violet; */
-	display: grid; 
-	grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; /* Add 8 columns. */ 
-	grid-template-rows: 6.5rem 6.5rem 6.5rem; /* Add 3 rows. */ 
-	gap: 0 0; /* First value is between rows, second columns. */
-	grid-template-areas: 
-	  "Minutes Minutes Minutes Minutes Minutes Minutes Minutes Minutes"
-	  "MOM MOM Goals Goals Goals Goals Assists Assists"
-	  "Cards Cards Cards OG OG Conceded Conceded Conceded";
-}
 
-/* Add a generic class for all containers. */
-.player-stats-container {
-	padding: 0.5rem;
-	text-align: center;
-	vertical-align: middle;
-	height: 6rem; /* Match the height of the rows defined in the player-stats-area above. */
-}
-.player-stats-container p {
-    display: inline; /* Make sure the different text elements are inline and not on separate lines. */
-}
-.player-stats-container p,h4 {
-    display: inline; /* Make sure the different text elements are inline and not on separate lines. */
-}
-
-/* Make some custom font classes for styling the stats. */
-
-.font-huge-bold {
-	font-size: 2rem;
-}
-
-.font-big-bold {
-	font-size: 1.5rem;
-}
-
-.font-small {
-	font-size: 0.8rem;
-}
-
-/* Add individual id stylings for each specific container. */
-
-#player-stats-minutes-container {
-	background-color: #00550E;
-	/* background-color: blue; */
-	grid-area: Minutes;
-	padding-top: 1rem;
-	border-top-left-radius: 1rem; /* Add a border radius to the overall stats box. */
-	border-top-right-radius: 1rem; /* Add a border radius to the overall stats box. */
-}
-
-#player-stats-MOM-container {
-	background: rgba(249, 237, 50, 0.60);
-	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
-    backdrop-filter: blur( 20px );
-	/* background-color: red; */
-	grid-area: MOM;
-	padding-top: 1rem;
-}
-
-#player-stats-goals-container {
-	background-color:#4FBB74;
-	/* background-color: green; */
-	grid-area: Goals;
-	padding-top: 1rem;
-}
-
-#player-stats-assists-container {
-	background-color: #1C8841;
-	/* background-color: yellow; */
-	grid-area: Assists;
-	padding-top: 1.5rem;
-}
-
-#player-stats-cards-container {
-	background-color: #00550E;
-	/* background-color: Orange; */
-	grid-area: Cards;
-	/* Split this container into smaller sections for alignment. */
-	display: grid; 
-	grid-template-columns: 50% 50%; 
-	grid-template-rows: 30% 40% 30%;
-	gap: 0 0; /* First value is between rows, second columns. */
-	grid-template-areas: 
-	  "Discipline Discipline"
-	  "YellowCards RedCards"
-	  "YellowHeader RedHeader";
-	  border-bottom-left-radius: 1rem; /* Add a border radius to the overall stats box. */
-}
-#player-stats-cards-container-discipline {
-	/* background-color: #00550E; */
-	/* background-color: Orange; */
-	grid-area: Discipline;
-}
-#player-stats-cards-container-yellowheader {
-	/* background-color: #00550E; */
-	/* background-color: Orange; */
-	grid-area: YellowHeader;
-	color: #F9ED32;
-}
-#player-stats-cards-container-yellowcards {
-	/* background-color: #00550E; */
-	/* background-color: Orange; */
-	grid-area: YellowCards;
-	color: #F9ED32;
-}
-#player-stats-cards-container-redheader {
-	/* background-color: #00550E; */
-	/* background-color: Orange; */
-	grid-area: RedHeader;
-	color: Red;
-}
-#player-stats-cards-container-redcards {
-	/* background-color: #00550E; */
-	/* background-color: Orange; */
-	grid-area: RedCards;
-	color: Red;
-}
-
-#player-stats-OG-container {
-	background: rgba(249, 237, 50, 0.60);
-	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
-    backdrop-filter: blur( 20px );
-	/* background-color: purple; */
-	grid-area: OG;
-	padding-top: 1.5rem;
-}
-
-#player-stats-conceded-container {
-	background-color: #00550E;
-	/* background-color: brown; */
-	grid-area: Conceded;
-	padding-top: 1rem;
-	border-bottom-right-radius: 1rem; /* Add a border radius to the overall stats box. */
-}
 
 
 

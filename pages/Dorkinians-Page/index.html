@@ -495,24 +495,290 @@
 
                                 <h3 class="textleft">This Season Stats</h3>
 
-                                <!-- Add the icon for the appearance stat. -->
-                                <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
-                                alt="APP Icon" class="comparison-icon white" height="25px"
-                                width="25px"></th>
+                                <div class="player-stats-selection-container">
 
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                                        <select name="player-stats-this-season-stats-selection"
+                                            class="selection-dropdown" id="player-stats-this-season-stats-selection"
+                                            onchange="showPlayerStatsTabUpdatedInfo()">
+                                            <option selected="selected">All Stats</option>
+                                            <option>Appearance Stats</option>
+                                            <option>Creative Stats</option>
+                                            <option>Defensive Stats</option>
+                                            <option>Penalty Stats</option>
+                                            <option>Per App Stats</option>
+                                            <option>Results Stats</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <!-- Add a container to hold all of the this season stats. -->
+                                <div id="player-stats-this-season-top-container">
+
+                                    <!-- Appearances -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-APP-container">
+                                        <h5>Appearances:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-APP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                                            alt="APP Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Minutes -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-M-container">
+                                        <h5>Minutes played:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-M"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                                            alt="Minutes Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- MoMs -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MOM-container">
+                                        <h5>Man of the Matches:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MOM"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Icon.png"
+                                            alt="MoM Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Goals -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-G-container">
+                                        <h5>Goals scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-G"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Goals Icon.png"
+                                            alt="Goals Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Assists -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-A-container">
+                                        <h5>Assists provided:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-A"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png"
+                                            alt="Assist Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Yellow Cards -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-Y-container">
+                                        <h5>Yellow cards received:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-Y"></p>
+                                        <!-- Create the yellow card icon using CSS. -->
+                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+                                    </div>
+
+                                    <!-- Red Cards -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-R-container">
+                                        <h5>Red cards received:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-R"></p>
+                                        <!-- Create the red card icon using CSS. -->
+                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+                                    </div>
+
+                                    <!-- Own Goals -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-OG-container">
+                                        <h5>Own goals scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-OG"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
+                                            alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Conceded -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-C-container">
+                                        <h5>Goals conceded:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-C"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png"
+                                            alt="Conceded Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Clean Sheets -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-CLS-container">
+                                        <h5>Clean sheets achieved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-CLS"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png"
+                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Penalties Scored -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PSC-container">
+                                        <h5>Penalties scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PSC"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Penalties Scored Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Penalties Missed -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PM-container">
+                                        <h5>Penalties missed:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PM"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Penalties Missed Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Penalties Conceded -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PCO-container">
+                                        <h5>Penalties conceded:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PCO"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Penalties Conceded Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Penalties Saved -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PSV-container">
+                                        <h5>Penalties saved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PSV"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalty Save Icon.png"
+                                            alt="Penalties Saved Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Fantasy Points -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-FTP-container">
+                                        <h5>Fantasy points achieved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-FTP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Fantasy Points Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Goals Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-GperAPP-container">
+                                        <h5>Goals scored per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-GperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png"
+                                            alt="Goals Per App Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Conceded Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-CperAPP-container">
+                                        <h5>Goals conceded per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-CperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png"
+                                            alt="Conceded Per App Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Minutes Per Goal -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MperG-container">
+                                        <h5>Minutes taken per goal scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MperG"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png"
+                                            alt="Minutes Per Goal Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Minutes Per Clean Sheet -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MperCLS-container">
+                                        <h5>Minutes taken per clean sheet:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MperCLS"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Fantasy Points Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-FTPperAPP-container">
+                                        <h5>Fantasy points per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-FTPperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Fantasy Points Per App Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Distance Travelled -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-DIST-container">
+                                        <h5>Distance travelled:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-DIST"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Distance Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-Games%Won-container">
+                                        <h5>Percentage of games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-Games%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Game % Won Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Home Games -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-HomeGames-container">
+                                        <h5>Home games:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-HomeGames"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Home Games Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Home Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-HomeGames%Won-container">
+                                        <h5>Percentage of home games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-HomeGames%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Home Game % Won Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Away Games -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-AwayGames-container">
+                                        <h5>Away games:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-AwayGames"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/" alt="Away Games Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Away Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-AwayGames%Won-container">
+                                        <h5>Percentage of away games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-AwayGames%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/"
+                                            alt="Away Game % Won Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                </div>
 
                             </section>
-
-                            <br>
-
-                            <br>
 
                             <!-- Add a section for Past Seasons Stats. -->
                             <section>
 
                                 <h3 class="textleft">Past Season Stats</h3>
 
-                                <table id="player-stats-table">
+                                <table id="player-stats-past-seasons-table">
                                     <!-- Header Row -->
                                     <tr>
                                         <th>Season</th>
@@ -520,17 +786,22 @@
                                             <!-- Add the icon for the appearance stat. -->
                                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
                                                 alt="APP Icon" class="comparison-icon white center" height="25px"
-                                                width="25px"></th>
-                                        <th>Minutes <!-- Add the icon for the minutes stat. -->
+                                                width="25px">
+                                        </th>
+                                        <th>Minutes
+                                            <!-- Add the icon for the minutes stat. -->
                                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
                                                 alt="Minutes Icon" class="comparison-icon white center" height="25px"
-                                                width="25px"></th>
+                                                width="25px">
+                                        </th>
                                         <th>Goals</th>
                                         <th>Assists</th>
+                                        <th>Clean Sheets</th>
                                     </tr>
                                     <!-- 2016/17 Stats -->
                                     <tr>
                                         <td>2016/17</td>
+                                        <td id="player-stats-past-seasons-2016/17-APP"></td>
                                         <td>TBC</td>
                                         <td>TBC</td>
                                         <td>TBC</td>
@@ -539,6 +810,7 @@
                                     <!-- 2017/18 Stats -->
                                     <tr>
                                         <td>2017/18</td>
+                                        <td id="player-stats-past-seasons-2017/18-APP"></td>
                                         <td>TBC</td>
                                         <td>TBC</td>
                                         <td>TBC</td>
@@ -551,193 +823,27 @@
                                         <td>TBC</td>
                                         <td>TBC</td>
                                         <td>TBC</td>
+                                        <td>TBC</td>
                                     </tr>
                                 </table>
 
                                 <br>
 
-                                <br>
-
-                                <img class="fadein center" id="this-season-placeholder"
+                                <!-- <img class="fadein center" id="this-season-placeholder"
                                     src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png"
-                                    alt="Dorkinians Logo">
+                                    alt="Dorkinians Logo"> -->
 
                             </section>
 
-                            <br>
-
-                            <br>
-
-                            <!-- Add a section for All Time Player Stats. -->
+                            <!-- Add a section for All Time Stats. -->
                             <section>
 
-                                <h3 class="textleft">All Time Player Stats</h3>
+                                <h3 class="textleft">All Time Stats</h3>
 
-                                <!-- Add a top level holder section area. -->
-                                <section class="player-stats-area">
-
-                                    <div class="player-stats-container" id="player-stats-minutes-container">
-
-                                        <p id="player-stats-M" class="font-huge-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-M-header">minutes played</p>
-
-                                        <br>
-
-                                        <p id="player-stats-APP-header">across </p>
-                                        <p id="player-stats-APP" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-APP-header"> appearances</p>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-MOM-container">
-
-                                        <p id="player-stats-MOM" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-MOM-header" class="font-small"> man of the match
-                                            performances
-                                        </p>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-goals-container">
-
-                                        <p id="player-stats-G-header" class="font-big-bold">Goals scored</p>
-                                        <br>
-                                        <p id="player-stats-G" class="font-huge-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-assists-container">
-
-                                        <p id="player-stats-A" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p id="player-stats-A-header"> assists for goals</p>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-cards-container">
-
-                                        <!-- Add a top header section for the phrase "Discipline". -->
-                                        <div class="player-stats-container font-small"
-                                            id="player-stats-cards-container-discipline">
-                                            <h4 class="textleft">Discipline</h4>
-                                        </div>
-
-                                        <!-- Add a section to hold the text "Yellow Cards". -->
-                                        <div class="player-stats-container center"
-                                            id="player-stats-cards-container-yellowheader">
-                                            <h4 class="textleft" id="player-stats-Y-header">cards</h4>
-                                        </div>
-
-                                        <!-- Add a section to hold the text "Red Cards". -->
-                                        <div class="player-stats-container center"
-                                            id="player-stats-cards-container-redheader">
-                                            <h4 class="textleft" id="player-stats-R-header">cards</h4>
-                                        </div>
-
-                                        <!-- Add a section to hold the number of Yellow Cards. -->
-                                        <div class="player-stats-container center"
-                                            id="player-stats-cards-container-yellowcards">
-                                            <p id="player-stats-Y" class="font-big-bold">
-                                                <!-- Text loaded into here by jDorkiniansMain.js -->
-                                            </p>
-                                        </div>
-
-                                        <!-- Add a section to hold the number of Red Cards. -->
-                                        <div class="player-stats-container center"
-                                            id="player-stats-cards-container-redcards">
-                                            <p id="player-stats-R" class="font-big-bold">
-                                                <!-- Text loaded into here by jDorkiniansMain.js -->
-                                            </p>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-OG-container">
-
-                                        <p id="player-stats-OG" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                        <p class="textleft" id="player-stats-R-header">own goals</p>
-
-                                    </div>
-
-                                    <div class="player-stats-container" id="player-stats-conceded-container">
-
-                                        <p id="player-stats-C">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-
-                                        <h4 class="textleft font-small" id="player-stats-C-header">goals conceded and
-                                        </h4>
-
-                                        <p id="player-stats-CLS" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-
-                                        <h4 class="textleft font-small" id="player-stats-CLS-header"> clean sheets</h4>
-
-                                    </div>
-
-
-                                </section>
+                                <p>Unchangeable summary of all time stats from parsing "displayAllTimeStats" to be
+                                    added.</p>
 
                             </section>
-
-                            <!-- <section class="player-stats-this-season-container">
-
-                                <h3 class="textleft">Stats Inspiration</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/LayoutInspirationStats.png" alt="ThisSeason">
-
-                            </section> -->
-
-                            <br>
-
-                            <br>
-
-                            <!-- Add a section for Minute By Minute Stats. -->
-                            <section>
-
-                                <h3 class="textleft">Minute By Minute Stats</h3>
-
-                                <div class="player-stats-container" id="player-stats-minutes-by-minutes-container">
-
-                                    <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
-                                    <p id="player-stats-GperAPP">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                    <br>
-
-                                    <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:
-                                    </h4>
-                                    <p id="player-stats-CperAPP">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                    <br>
-
-                                    <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
-                                    <p id="player-stats-MperG">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                </div>
-
-                            </section>
-
-                            <br>
-
-                            <br>
 
                             <!-- Add a section for All Stats. -->
                             <section>
@@ -750,8 +856,8 @@
 
                                     <!-- Let the user pick which season to filter for. -->
                                     <select name="SeasonSelection" class="selection-dropdown"
-                                        id="club-stats-season-selection-dropdown"
-                                        onchange="showAllResultsTabUpdatedInfo()">
+                                        id="player-stats-season-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option value="" selected="selected">Season</option>
                                         <option value="2016/17">2016/17</option>
                                         <option value="2017/18">2017/18</option>
@@ -763,8 +869,8 @@
 
                                     <!-- Let the user pick which team to filter for. -->
                                     <select name="TeamSelection" class="selection-dropdown"
-                                        id="club-stats-team-selection-dropdown"
-                                        onchange="showAllResultsTabUpdatedInfo()">
+                                        id="player-stats-team-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option value="" selected="selected">Team</option>
                                         <option value="WholeClub">Whole club</option>
                                         <option value="1st XI">1st XI</option>
@@ -777,70 +883,25 @@
                                         <option value="8th XI">8th XI</option>
                                     </select>
 
+                                    <!-- Let the user pick which competition to filter for. -->
+                                    <select name="CompetitionSelection" class="selection-dropdown"
+                                        id="player-stats-competition-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
+                                        <option value="" selected="selected">Competition</option>
+                                        <option value="League">League</option>
+                                        <option value="Cup">Cup</option>
+                                        <option value="Friendly">Friendly</option>
+                                    </select>
+
                                 </div>
 
                                 <br>
 
-                                <p>To be added.</p>
+                                <p>Fully filterable table of stats from parsing "importMatchDetailsTab" to be added.</p>
 
                             </section>
 
                         </section>
-
-                        <!-- OLD -->
-
-                        <!-- Add a top level holder section area. -->
-                        <!-- <section class="player-stats-area-old">
-
-                            <section class="player-stats-profile-container">
-
-                                <h3 class="textleft">Profile</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.webp" width="410"
-                                    height="324" alt="Profile">
-
-                            </section>
-
-                            <section class="player-stats-this-season-container">
-
-                                <h3 class="textleft">This Season</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.webp"
-                                    width="847" height="574" alt="ThisSeason">
-
-                            </section>
-
-                            <section class="player-stats-minute-by-minute-container">
-
-                                <h3 class="textleft">Minute By Minute</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.webp"
-                                    width="841" height="510" alt="MinuteByMinute">
-
-                            </section>
-
-                            <section class="player-stats-all-time-container">
-
-                                <h3 class="textleft">All Time</h3>
-
-                            </section>
-
-                            <section class="player-stats-game-record-container">
-
-                                <h3 class="textleft">Game Record</h3>
-
-                            </section>
-
-                        </section> -->
-
-
-
-
-
-
-
-
-
 
                     </article>
 
@@ -1010,6 +1071,7 @@
                                             <option>Luke Bangs</option>
                                             <option>Oli Goddard</option>
                                             <option>Sam Slade</option>
+                                            <option>Matt Morley</option>
                                         </select>
                                     </div>
 

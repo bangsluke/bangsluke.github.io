@@ -59,6 +59,152 @@ var phrasesArray = [
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
+// Globally define an object containing stat objects that can be referenced in other functions.
+const statObject = {
+    APP: {
+        statName: 'Appearances',
+        statFormat: 'Integer',
+        description: 'The number of appearances made by the player.'
+    },
+    M: {
+        statName: 'Minutes',
+        statFormat: 'Integer',
+        description: 'The number of minutes played by the player.'
+    },
+    MOM: {
+        statName: 'Man of the Matches',
+        statFormat: 'Integer',
+        description: 'The number of man of the match performances achieved by the player.'
+    },
+    G: {
+        statName: 'Goals Scored',
+        statFormat: 'Integer',
+        description: 'The number of goals scored by the player, including penalties.'
+    },
+    A: {
+        statName: 'Assists',
+        statFormat: 'Integer',
+        description: 'The number of assists provided by the player.'
+    },
+    Y: {
+        statName: 'Yellow Cards',
+        statFormat: 'Integer',
+        description: 'The number of yellow cards received by the player.'
+    },
+    R: {
+        statName: 'Red Cards',
+        statFormat: 'Integer',
+        description: 'The number of red cards received by the player.'
+    },
+    OG: {
+        statName: 'Own Goals',
+        statFormat: 'Integer',
+        description: 'The number of own goals scored by the player.'
+    },
+    C: {
+        statName: 'Conceded',
+        statFormat: 'Integer',
+        description: 'The number of goals conceded whilst the player has been playing.'
+    },
+    CLS: {
+        statName: 'Clean Sheets',
+        statFormat: 'Integer',
+        description: 'The number of clean sheets achieved by the player.'
+    },
+    PSC: {
+        statName: 'Penalties Scored',
+        statFormat: 'Integer',
+        description: 'The number of penalties scored by the player.'
+    },
+    PM: {
+        statName: 'Penalties Missed',
+        statFormat: 'Integer',
+        description: 'The number of penalties missed by the player.'
+    },
+    PCO: {
+        statName: 'Penalties Conceded',
+        statFormat: 'Integer',
+        description: 'The number of penalties conceded by the player.'
+    },
+    PSV: {
+        statName: 'Penalties Saved',
+        statFormat: 'Integer',
+        description: 'The number of penalties saved by the player.'
+    },
+    FTP: {
+        statName: 'Fantasy Points',
+        statFormat: 'Integer',
+        description: 'The number of fantasy points achieved by the player.'
+    },
+    GperAPP: {
+        statName: 'Goals Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of goals scored per appearance by the player.'
+    },
+    CperAPP: {
+        statName: 'Conceded Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of goals conceded per appearance by the player.'
+    },
+    MperG: {
+        statName: 'Minutes Per Goal',
+        statFormat: 'Integer',
+        description: 'The average number of minutes needed by the player to score a goal.'
+    },
+    MperCLS: {
+        statName: 'Minutes Per Clean Sheet',
+        statFormat: 'Integer',
+        description: 'The average number of minutes needed by the player to achieve a clean sheet.'
+    },
+    FTPperAPP: {
+        statName: 'Fantasy Points Per Appearance',
+        statFormat: 'Decimal2',
+        description: 'The average number of fantasy points scored per appearance by the player.'
+    },
+    DIST: {
+        statName: 'Distance Travelled',
+        statFormat: 'Decimal1',
+        description: 'The distance travelled by the player getting to away games.'
+    },
+    "Games%Won": {
+        statName: 'Percentage Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of games won by the player.'
+    },
+    HomeGames: {
+        statName: 'Home Games',
+        statFormat: 'Integer',
+        description: 'The number of home games played by the player.'
+    },
+    HomeWins: {
+        statName: 'Home Wins',
+        statFormat: 'Integer',
+        description: 'The number of home games won by the player.'
+    },
+    "HomeGames%Won": {
+        statName: 'Percentage Home Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of home games won by the player.'
+    },
+    AwayGames: {
+        statName: 'Away Games',
+        statFormat: 'Integer',
+        description: 'The number of away games played by the player.'
+    },
+    AwayWins: {
+        statName: 'Away Wins',
+        statFormat: 'Integer',
+        description: 'The number of away games won by the player.'
+    },
+    "AwayGames%Won": {
+        statName: 'Percentage Away Games Won',
+        statFormat: 'Percentage',
+        description: 'The percentage of away games won by the player.'
+    }
+};
+// console.log(statObject.APP.statFormat);
+
+
 // Google Sheet Links
 
 // Homepage Tab
@@ -75,6 +221,19 @@ var displayTotalClubStatsArrayOfObjects = ""; // Define an initially blank array
 const teamSeasonResultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1269354033&single=true&output=csv';
 var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
+// Player Stats Tab
+
+// This Season Stats
+const displayThisSeasonStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1147882021&single=true&output=csv';
+var displayThisSeasonStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+// All Time Stats
+const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
+var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+
+
+
 
 
 // Fixtures List Tab
@@ -84,12 +243,6 @@ const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-
 // Display Details Tab
 const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
 
-// All Time Stats Tab
-
-// Old published URL.
-// const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=246566173&single=true&output=csv';
-const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
-var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Ready Events
 
@@ -139,7 +292,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -175,20 +328,29 @@ function init() {
     })
 
 
-
-
-
-
-    // Step 1. 
+    // Step 3. 
     // Player Stats Tab.
-    // All Time Player Stats data.
-    // console.log('%c' + '> 1. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    console.log('%c' + '> 3. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // This Season Stats Info
+    Papa.parse(displayThisSeasonStatsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsThisSeasonTabInfo function.
+    })
+
+    // All Time Stats Info
     Papa.parse(displayAllTimeStatsSheetCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerStatsTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsTabInfo function.
+        complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsAllTimeTabInfo function.
     })
+
+
+
+
 
 
     // Step 1. All Stats tab data.
@@ -578,25 +740,41 @@ function updateClubStatsInfo() {
 
 // 3. Player Stats Tab
 
-// 3.1. Player Stats tab data "getter" function.
+// Player Stats tab needs to process two data parses, "displayThisSeasonStats" and "displayAllTimeStats".
 
-function getPlayerStatsTabInfo(results) {
+// 3.1.a. Player Stats This Season stats tab data "getter" function.
+
+function getPlayerStatsThisSeasonTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayThisSeasonStatsArrayOfObjects = results.data // Define the global variable "displayThisSeasonStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayThisSeasonStatsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
+    showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStatsThisSeasonTabInfo function.
+
+}
+
+// 3.1.b. Player Stats All Time stats tab data "getter" function.
+
+function getPlayerStatsAllTimeTabInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
-    showPlayerStatsTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
+    showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
 
 }
 
-// 3.2. Player Stats tab data "show-er" function.
+// 3.2.a. Player Stats This Season tab data "show-er" function.
 
-function showPlayerStatsTabInfo(results) {
+function showPlayerStatsThisSeasonTabInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showPlayerStatsTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
@@ -629,32 +807,120 @@ function showPlayerStatsTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    // console.log("filteredArrayOfObjects[0] = ");
-    // console.log(filteredArrayOfObjects[0]);
+    console.log("filteredArrayOfObjects[0] = ");
+    console.log(filteredArrayOfObjects[0]);
 
     // Populate the stats information on the page.
 
-    // Define an array of stats to update. Each stat corresponds to an HTML element.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    for (let i = 0; i < statArray.length; i++) {
-        // console.log(statArray[i]); // Log the stat being updated.
-        var HeaderElement = document.getElementById("player-stats-" + statArray[i] + "-header"); // Get the HeaderElement dynamically.
-        var TextElement = document.getElementById("player-stats-" + statArray[i]); // Get the Text Element dynamically.
-        var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-        // console.log("displayText = " + displayText); // Log the text that will be displayed.
-        TextElement.innerHTML = displayText; // Add the text to the HTML element.
-        // console.log(statArray[i] + " done"); // Log that the stat has been done.
-        // Add a tooltip hover over.
-        // HeaderElement.classList.add("tooltip"); // Add the tooltip class to the element (the container element).
-        // var toolTip = document.createElement("p"); // Create a paragraph element to be appended.
-        // toolTip.innerHTML = "Test text"; // Add the text of the second row, counter column to the new paragraph element.
-        // toolTip.classList.add("tooltiptext"); // Add the tooltiptext class to the new paragraph element.
-        // toolTip.classList.add("wordwrap"); // Add the wordwrap class to the new paragraph element.
-        // HeaderElement.appendChild(toolTip); // Append the toolTip paragraph element as a child to the th element.
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
+
+    // Loop through the created stat array. Each stat corresponds to an HTML element in the This Seasons Grid.
+    for (let i = 0; i < statsArray.length; i++) {
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+
+        // Add a try catch arround dynamically updating HTML elements as not all stats object to be used. 
+        try {
+            // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
+            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
+            const toolTipSpanElement = document.createElement("span"); // Create a span element.
+            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
+            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
+
+            // Update the displayed stat value after correctly formatting the stat value.
+            var TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
+            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            if (StatFormat == "Integer") { // Convert the stat to an integer.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(2); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 2 decimal places by using the "toFixed" method.
+            } else if (StatFormat == "Decimal1") { // Convert the stat to 1 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(1); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 1 decimal places by using the "toFixed" method.
+            } else { // For all else, including percentages and strings, just display as passed.
+                var displayText = filteredArrayOfObjects[0][statsArray[i]]; // Do nothing to passed value.
+            }
+            TextElement.innerHTML = displayText; // Add the text to the HTML element.
+            // console.log("displayText = " + displayText); // Log the text that will be displayed.
+
+        }
+        catch (err) {
+            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+        }
     }
 
     // Increment the tab ready count by 1.
-    incrementTabReadyCount("Player Stats");
+    incrementTabReadyCount("Player Stats - This Season Stats");
+
+}
+
+
+// 3.2.b. Player Stats All Time tab data "show-er" function.
+
+function showPlayerStatsAllTimeTabInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    //const dataArrayOfObjects = results.data 
+    // console.log("dataArrayOfObjects = "); // Log the received array of objects.
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Filter down the entire array to find the players data.
+
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    // Player selection.
+    const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
+    const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // console.log("Selected player (playerValue) = " + playerValue);
+
+    // Filter for the selection.
+    // Re-use the re-usable function..
+    const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
+    // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
+    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // console.log("New Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    if (objectLength > 1) { // If the objectLength is greater than 1, flag an alert error.
+        alert("More than one record returned for player selected!");
+    }
+
+    // Log the data that will be displayed.
+    console.log("filteredArrayOfObjects[0] = ");
+    console.log(filteredArrayOfObjects[0]);
+
+    // Populate the stats information on the page.
+
+    // Define an array of stats and seasons to update. Each stat and season combine to correspond to an HTML element in the Past Seasons Table.
+    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
+    let seasonArray = ["2016/17", "2017/18", "2018/19"];
+    for (let i = 0; i < statArray.length; i++) {
+        // console.log(statArray[i]); // Log the stat being updated.
+        for (let j = 0; j < seasonArray.length; j++) {
+            // console.log(seasonArray[j]); // Log the season being updated.
+            // console.log("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Log the id of the text element being updated.
+            var TextElement = document.getElementById("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Get the Text Element dynamically.
+            var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            TextElement.innerHTML = displayText; // Add the text to the HTML element.
+        }
+
+        // player-stats-past-seasons-2016/17-appearances
+
+        // console.log("displayText = " + displayText); // Log the text that will be displayed.
+
+    }
+
+    // Increment the tab ready count by 1.
+    incrementTabReadyCount("Player Stats - All Time Stats");
 
 }
 
@@ -664,12 +930,16 @@ function showPlayerStatsTabUpdatedInfo() {
     // Create a function that is called when the user changes the team dropdown. This function is called from the HTML select elements.
 
     // Start the rotation of the Dorkinians logo to simulate loading.
-    rotateLogo();
+    rotateLogo("dorkinians-header-logo");
 
-    showPlayerStatsTabInfo(displayAllTimeStatsArrayOfObjects);
+    // Call the update to the This Season grid.
+    showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects);
+
+    // Call the update to all other All Time stats.
+    showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects);
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
-    stopRotateLogo();
+    stopRotateLogo("dorkinians-header-logo");
 }
 
 
