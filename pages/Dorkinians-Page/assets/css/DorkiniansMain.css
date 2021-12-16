@@ -676,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -879,7 +879,7 @@ Section 4
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
 	display: grid; 
-	grid-template-columns: 50% 10% 40%; 
+	grid-template-columns: 55% 10% 35%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 }
