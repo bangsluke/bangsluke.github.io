@@ -676,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -718,6 +718,7 @@ Section 3
 	/* background: green; */
 	grid-area: Phrases;
 	color: white;
+	align-items: top; /* Vertically align all child elements that sit within .loading-page-container */
 }
 
 /* Add a fadeout animation that fades the opacity of the background out and then sets the display to be none. */
