@@ -718,6 +718,7 @@ Section 3
 	/* background: green; */
 	grid-area: Phrases;
 	color: white;
+	align-items: top; /* Vertically align all child elements that sit within .loading-page-container */
 }
 
 /* Add a fadeout animation that fades the opacity of the background out and then sets the display to be none. */
@@ -754,7 +755,7 @@ Section 4
 
 /* Everything below initially designed for mobile. */
 
-/* Homepage Tab */
+/* 1. Homepage Tab */
 
 .homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
@@ -797,7 +798,7 @@ Section 4
 
 
 
-/* Club Stats Tab */
+/* 2. Club Stats Tab */
 
 .club-stats-area {
 	/* background-color: violet; */
@@ -856,14 +857,7 @@ Section 4
 
 
 
-
-/* All Stats Tab */
-
-
-
-
-
-/* Player Stats Tab */
+/* 3. Player Stats Tab */
 
 /* This Season Stats */
 
@@ -879,7 +873,7 @@ Section 4
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
 	display: grid; 
-	grid-template-columns: 50% 10% 40%; 
+	grid-template-columns: 55% 10% 35%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 }
@@ -909,7 +903,7 @@ Section 4
 
 
 
-/* Team of the Week Tab */
+/* 4. Team of the Week Tab */
 
 .team-of-the-week-area {
 	/* background-color: violet; */
@@ -942,7 +936,7 @@ Section 4
 }
 
 
-/* Comparison Tab */
+/* 5. Comparison Tab */
 
 .comparison-area {
 	/* background-color: violet; */
@@ -1087,7 +1081,13 @@ div.cell {
 }
 
 
-/* Tables, Results & Fixtures Tab */
+
+
+
+
+
+
+/* 6. Tables, Results & Fixtures Tab */
 
 .dorkiniansTable {
 	padding-top: 1rem;
@@ -1107,8 +1107,6 @@ div.cell {
 	padding-top: 0.5rem;
 	padding-bottom: 2rem;
 }
-
-/* Weather Tab */
 
 
 
