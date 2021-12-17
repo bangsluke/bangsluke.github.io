@@ -754,7 +754,7 @@ Section 4
 
 /* Everything below initially designed for mobile. */
 
-/* Homepage Tab */
+/* 1. Homepage Tab */
 
 .homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
@@ -797,7 +797,7 @@ Section 4
 
 
 
-/* Club Stats Tab */
+/* 2. Club Stats Tab */
 
 .club-stats-area {
 	/* background-color: violet; */
@@ -856,14 +856,7 @@ Section 4
 
 
 
-
-/* All Stats Tab */
-
-
-
-
-
-/* Player Stats Tab */
+/* 3. Player Stats Tab */
 
 /* This Season Stats */
 
@@ -909,7 +902,7 @@ Section 4
 
 
 
-/* Team of the Week Tab */
+/* 4. Team of the Week Tab */
 
 .team-of-the-week-area {
 	/* background-color: violet; */
@@ -942,7 +935,7 @@ Section 4
 }
 
 
-/* Comparison Tab */
+/* 5. Comparison Tab */
 
 .comparison-area {
 	/* background-color: violet; */
@@ -1087,7 +1080,13 @@ div.cell {
 }
 
 
-/* Tables, Results & Fixtures Tab */
+
+
+
+
+
+
+/* 6. Tables, Results & Fixtures Tab */
 
 .dorkiniansTable {
 	padding-top: 1rem;
@@ -1107,8 +1106,6 @@ div.cell {
 	padding-top: 0.5rem;
 	padding-bottom: 2rem;
 }
-
-/* Weather Tab */
 
 
 
