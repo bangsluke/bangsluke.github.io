@@ -320,7 +320,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -1002,12 +1002,12 @@ function updateComparisonStatData() {
         for (let i = 0; i < statsArray.length; i++) {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
-            // try {
+            try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false, numberDecimalPlacesArray[i]);
-            // }
-            // catch (err) {
-                // console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
-            // }
+            }
+            catch (err) {
+                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+            }
 
         }
 
@@ -1096,6 +1096,8 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
 
     // Define the higherBetterBoolean from the Global Stat Object.
     let higherBetterBoolean = statObject[statName].statHigherBetterBoolean; // Get the statHigherBetterBoolean from the global stat object. 
+    console.log("higherBetterBoolean"); // Log the retrieved higherBetterBoolean.
+    console.log(higherBetterBoolean); // Log the retrieved higherBetterBoolean.
 
     // Do below code for both player 1 and player 2.
     // Define an array of players to update. Each stat corresponds to an HTML element.
@@ -1109,7 +1111,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
         playerArray = ["", player1Name, player2Name]; // First value is blank (as this offsets the for loop below to align the loop with the HTML element references being 1 and 2).
     }
     let statValueArray = ["", "", ""]; // Define a blank array to populate with stat values.
-    // console.log(playerArray);
+    console.log(playerArray);
 
     for (let i = 1; i < playerArray.length; i++) {
 
@@ -1126,7 +1128,6 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             // Filter for the selection.
             // Filter down the entire array to find the players data. Re-use the re-usable function. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
             const filteredArrayOfObjects = filterArrayOfObjects(displayAllTimeStatsArrayOfObjects, "NAME", playerArray[i]); // Call the created filterArrayOfObjects function.
-
             // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
             // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
             objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
@@ -1138,21 +1139,9 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
             // Populate the stats information on the page.
             // console.log("The stat being updated is " + statName + "."); // Log the stat being updated.
             var TextElement = document.getElementById("comparison-" + statName + "-player-" + i + "-value"); // Get the Text Element dynamically.
-            var selectedStatValue = Number(filteredArrayOfObjects[0][statName]); // Use a dynamic [statArray[i]] key. Convert the stat to a number.
-            var displayText = Number(roundOff(filteredArrayOfObjects[0][statName], numberDecimalPlaces)).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Round the received value to a given number of places. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-
-
-            var displayText = formatValue(filteredArrayOfObjects[0][statName], statObject[filteredArrayOfObjects[0][statName]].statFormat)
-            console.warn(dispalyText);
-
-
-
-
-
-
-            // console.log("selectedStatValue = " + selectedStatValue); // Log the value that will be used for the stat.
-            // console.log("numberDecimalPlaces = " + numberDecimalPlaces); // Log the number of decimal places the stat is rounded to.
-            // console.log("displayText = " + displayText); // Log the text that will be displayed.
+            var selectedStatValue = filteredArrayOfObjects[0][statName]; // Initially save the value returned ready for later use in the comparison array.
+            var displayText = formatValue(filteredArrayOfObjects[0][statName], statObject[statName].statFormat); // Format the received value into the correctly defined stat format from the Global Stat Object.
+            console.warn(displayText);
             TextElement.innerHTML = displayText; // Add the text to the HTML element.
 
             // Populate the statValueArray with the recorded score for later comparison.
@@ -1614,11 +1603,11 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
 // Format a value based on a passed format type.
 function formatValue(valueToBeFormatted, statFormat) {
 
-    if (StatFormat == "Integer") { // Convert the stat to an integer.
+    if (statFormat == "Integer") { // Convert the stat to an integer.
         var displayText = Number(valueToBeFormatted).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-    } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
+    } else if (statFormat == "Decimal2") { // Convert the stat to 2 decimal places.
         var displayText = Number(valueToBeFormatted).toFixed(2); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 2 decimal places by using the "toFixed" method.
-    } else if (StatFormat == "Decimal1") { // Convert the stat to 1 decimal places.
+    } else if (statFormat == "Decimal1") { // Convert the stat to 1 decimal places.
         var displayText = Number(valueToBeFormatted).toFixed(1); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 1 decimal places by using the "toFixed" method.
     } else { // For all else, including percentages and strings, just display as passed.
         var displayText = valueToBeFormatted; // Do nothing to passed value.
