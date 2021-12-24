@@ -65,169 +65,197 @@ const statObject = {
         statName: 'Appearances',
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     M: {
         statName: 'Minutes',
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     MOM: {
         statName: 'Man of the Matches',
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     G: {
         statName: 'Goals Scored',
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     A: {
         statName: 'Assists',
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     Y: {
         statName: 'Yellow Cards',
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
-        statHigherBetterBooleanArray: false
+        statHigherBetterBooleanArray: false,
+        numberDecimalPlaces: 0
     },
     R: {
         statName: 'Red Cards',
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     OG: {
         statName: 'Own Goals',
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     C: {
         statName: 'Conceded',
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     CLS: {
         statName: 'Clean Sheets',
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     PSC: {
         statName: 'Penalties Scored',
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     PM: {
         statName: 'Penalties Missed',
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     PCO: {
         statName: 'Penalties Conceded',
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     PSV: {
         statName: 'Penalties Saved',
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     FTP: {
         statName: 'Fantasy Points',
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     GperAPP: {
         statName: 'Goals Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 1
     },
     CperAPP: {
         statName: 'Conceded Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 1
     },
     MperG: {
         statName: 'Minutes Per Goal',
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
-        statHigherBetterBoolean: false
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     },
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 1
     },
     DIST: {
         statName: 'Distance Travelled',
         statFormat: 'Decimal1',
         description: 'The distance travelled by the player getting to away games.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 1
     },
     "Games%Won": {
         statName: 'Percentage Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     HomeGames: {
         statName: 'Home Games',
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     HomeWins: {
         statName: 'Home Wins',
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     AwayGames: {
         statName: 'Away Games',
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     AwayWins: {
         statName: 'Away Wins',
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     },
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
-        statHigherBetterBoolean: true
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
     }
 };
 // console.log(statObject.APP.statFormat);
@@ -320,7 +348,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -395,6 +423,9 @@ function init() {
 
     // Step 5. 
     // Comparison Tab.
+
+    // Call the showComparisonStatData function to poplate the comparison tab with tooltips.
+    showComparisonStatData();
 
     // Update the information bar.
     displayInformation("comparison-information-bar", "Select a first player to view their stats");
@@ -959,7 +990,43 @@ function showPlayerStatsTabUpdatedInfo() {
 
 // 5.2. Comparison tab data "show-er" function.
 
-// There is no Comparison tab data "show-er" function.
+function showComparisonStatData() {
+    // Initially load in all stats tooltips to the stat containers.
+    console.log('%c' + '>> showComparisonStatData.', 'background-color: grey; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
+
+    // Group the next set of logs together to avoid cluttering the console.
+    console.groupCollapsed("showComparisonStatData Info Logs"); // Group further console logs. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+    // Loop through the stat array calling in the load stat data function but not filling up the bars.
+    for (let i = 0; i < statsArray.length; i++) {
+
+        // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
+        try {
+            // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
+            let containerElement = document.getElementById("comparison-" + statsArray[i] + "-container"); // Get the container element dynamically.               
+            const toolTipSpanElement = document.createElement("span"); // Create a span element.
+            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
+            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
+
+            console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
+        }
+        catch (err) {
+            console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
+        }
+
+    }
+
+    console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+}
+
 
 // 5.3. Comparison tab data "update-er" functions.
 function updateComparisonStatData() {
@@ -975,17 +1042,6 @@ function updateComparisonStatData() {
     let player2NameValue = player2NameDropdown.options[player2NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player 2 (player2NameValue) = " + player2NameValue);
 
-    // Define an array of stats to update. Each stat corresponds to an HTML element.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    // Define an array of booleans as to if it is better to have a higher value or not.
-    let statHigherBetterBooleanArray = [true, true, true, true, true, false, false, false, false, true, true, false, false];
-    // let higherBetterBoolean = ""; // Initially define the higherBetterBoolean to be blank.
-    // Define an array of decimal places to round the stat value to.
-    let numberDecimalPlacesArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1];
-
-
-
-
     // Define an array of stats from the Global statObject.
     const statsArray = Object.keys(statObject);
     // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
@@ -995,7 +1051,7 @@ function updateComparisonStatData() {
 
     if (player1NameValue === "Select Player 1" && player2NameValue === "Select Player 2") {
         // Do nothing as neither dropdown has had anything selected.
-        // console.log("Neither dropdown has a player selected.");
+        console.log("Neither dropdown has a player selected.");
         // Update the information bar.
         displayInformation("comparison-information-bar", "Select a first player to view their stats");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
@@ -1003,17 +1059,19 @@ function updateComparisonStatData() {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
-                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false, numberDecimalPlacesArray[i]);
+                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
+
+                console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
-                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
 
         }
 
     } else if (player1NameValue === "Select Player 1") {
         // Player 1 dropdown is blank so fill in details for player 2.
-        // console.log("Player 1 dropdown is blank so fill in details for player 2.");
+        console.log("Player 1 dropdown is blank so fill in details for player 2.");
         // Update the information bar.
         displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
@@ -1021,17 +1079,19 @@ function updateComparisonStatData() {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
-                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false, numberDecimalPlacesArray[i]);
+                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
+
+                console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
-                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
 
         }
 
     } else if (player2NameValue === "Select Player 2") {
         // Player 2 dropdown is blank so fill in details for player 1.
-        // console.log("Player 2 dropdown is blank so fill in details for player 1.");
+        console.log("Player 2 dropdown is blank so fill in details for player 1.");
         // Update the information bar.
         displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
@@ -1039,17 +1099,19 @@ function updateComparisonStatData() {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
-                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false, numberDecimalPlacesArray[i]);
+                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
+
+                console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
-                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
 
         }
 
     } else if (player1NameValue === player2NameValue) {
         // Both dropdowns are the same.
-        // console.log("Both dropdowns are the same.");
+        console.log("Both dropdowns are the same.");
         // Update the information bar.
         displayInformation("comparison-information-bar", "Why are you comparing the same player you weirdo?");
         // Loop through the stat array calling in the load stat data function and filling the bars.
@@ -1057,16 +1119,19 @@ function updateComparisonStatData() {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
-                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true, numberDecimalPlacesArray[i]);
+                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true);
+
+                console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
-                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
 
         }
 
     } else {
         // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
+        console.log("Both dropdowns are populated so complete all details.");
         // Update the information bar.
         displayInformation("comparison-information-bar", "Click on any stat row to see an explanation of the stat");
         // Loop through the stat array calling in the load stat data function and filling the bars.
@@ -1074,10 +1139,12 @@ function updateComparisonStatData() {
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
-                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true, numberDecimalPlacesArray[i]);
+                loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true);
+
+                console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
-                console.info("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
 
         }
@@ -1087,7 +1154,7 @@ function updateComparisonStatData() {
 
 }
 
-function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean, numberDecimalPlaces) {
+function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean) {
 
     // Use the global variable "displayAllTimeStatsArrayOfObjects" and filter it down for the defined player name.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the received array of objects.
@@ -1096,8 +1163,8 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
 
     // Define the higherBetterBoolean from the Global Stat Object.
     let higherBetterBoolean = statObject[statName].statHigherBetterBoolean; // Get the statHigherBetterBoolean from the global stat object. 
-    console.log("higherBetterBoolean"); // Log the retrieved higherBetterBoolean.
-    console.log(higherBetterBoolean); // Log the retrieved higherBetterBoolean.
+    // console.log("higherBetterBoolean"); // Log the retrieved higherBetterBoolean.
+    // console.log(higherBetterBoolean); // Log the retrieved higherBetterBoolean.
 
     // Do below code for both player 1 and player 2.
     // Define an array of players to update. Each stat corresponds to an HTML element.
@@ -1111,8 +1178,9 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
         playerArray = ["", player1Name, player2Name]; // First value is blank (as this offsets the for loop below to align the loop with the HTML element references being 1 and 2).
     }
     let statValueArray = ["", "", ""]; // Define a blank array to populate with stat values.
-    console.log(playerArray);
+    // console.log(playerArray);
 
+    // Loop through the created player array.
     for (let i = 1; i < playerArray.length; i++) {
 
         // Check if the player name in the array is blank and skip it if it is.
@@ -1362,7 +1430,7 @@ function updateTablesResultsandFixturesTab() {
 
 // Clear the table to make space for new data.
 function clearTable(selector) {
-    console.log('%c' + '>> Re-usable Function: clearTable() called. Passed variables: selector = ' + selector, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // console.log('%c' + '>> Re-usable Function: clearTable() called. Passed variables: selector = ' + selector, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // https://stackoverflow.com/a/3955238/14290169
     const myNode = document.querySelector(selector); // Select the parent from which to delete all child elements from. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
     while (myNode.firstChild) { // Loop through all child elements.
@@ -1373,7 +1441,7 @@ function clearTable(selector) {
 
 // Create the table by passing the data to the function.
 function createFullTable(data, selector, toolTipBoolean, dataForm) {
-    console.log('%c' + '>> Re-usable Function: createFullTable(data, selector, toolTipBoolean, dataForm) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean + ', dataForm = ' + dataForm, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // console.log('%c' + '>> Re-usable Function: createFullTable(data, selector, toolTipBoolean, dataForm) called. Passed variables: data = shown below, selector = ' + selector + ', toolTipBoolean = ' + toolTipBoolean + ', dataForm = ' + dataForm, ' background-color: lightgreen; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
 
     // console.log(data); // Log the passed data to the console.
     let table = document.querySelector(selector); // Select the parent element from which to build the table. Modified the selector to be dynamic and accept any type of selector. Previously, defining as "table" meant that it only works if the HTML page has only one table element.
@@ -1402,7 +1470,7 @@ function createFullTable(data, selector, toolTipBoolean, dataForm) {
 
 // Create the table head including the table headers.
 function generateTableHead(table, headerdata, array, toolTipBoolean) {
-    console.log('%c' + '>> Re-usable Function: generateTableHead(table, data) called. Passed variables: table = not shown, headerdata = shown below, array = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightyellow; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // console.log('%c' + '>> Re-usable Function: generateTableHead(table, data) called. Passed variables: table = not shown, headerdata = shown below, array = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightyellow; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
 
     // console.log("Header data is an array:");
     // console.log(headerdata); // Log the passed headerdata to the console.
@@ -1451,7 +1519,7 @@ function generateTableHead(table, headerdata, array, toolTipBoolean) {
 
 // Create the rest of the table below head including all table rows.
 function generateTable(table, data, toolTipBoolean) {
-    console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
+    // console.log('%c' + '>> Re-usable Function: generateTable(table, data, toolTipBoolean) called. Passed variables: table = not shown, data = shown below, toolTipBoolean = ' + toolTipBoolean, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // console.log(data); // Log the passed array to the console.
     var rowCounter = 1; // Define a counter for checking which row to work with.
     var columnCounter;
