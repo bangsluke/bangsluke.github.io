@@ -256,6 +256,34 @@ const statObject = {
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
         numberDecimalPlaces: 0
+    },
+    "MostPlayedForTeam": {
+        statName: 'Most Played for Team',
+        statFormat: 'String',
+        description: 'The Dorkinians team that the player has appeared for most.',
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
+    },
+    "NumberTeamsPlayedFor": {
+        statName: 'Number of Teams Played for',
+        statFormat: 'String',
+        description: 'The number of Dorkinians teams that the player has appeared for.',
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
+    },
+    "NumberSeasonsPlayedFor": {
+        statName: 'Number of Seasons Played for',
+        statFormat: 'String',
+        description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
+        statHigherBetterBoolean: true,
+        numberDecimalPlaces: 0
+    },
+    "MostScoredForTeam": {
+        statName: 'Most Scored for Team',
+        statFormat: 'String',
+        description: 'The Dorkinians team that the player has scored the most for.',
+        statHigherBetterBoolean: false,
+        numberDecimalPlaces: 0
     }
 };
 // console.log(statObject.APP.statFormat);
@@ -428,7 +456,7 @@ function init() {
     showComparisonStatData();
 
     // Update the information bar.
-    displayInformation("comparison-information-bar", "Select a first player to view their stats");
+    displayInformation("comparison-information-bar", "Select a first player to view their all time stats");
 
 
 
@@ -1026,7 +1054,6 @@ function showComparisonStatData() {
     console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
 }
-
 
 // 5.3. Comparison tab data "update-er" functions.
 function updateComparisonStatData() {
