@@ -376,7 +376,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.

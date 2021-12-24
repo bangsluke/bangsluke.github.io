@@ -676,7 +676,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1064,6 +1064,12 @@ div.cell {
 /* Create a class to turn the icons white. */
 .comparison-icon.white {
 	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+}
+
+/* Create a class to turn the icons red. */
+.comparison-icon.red {
+	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
 }
 
 /* Create two card shapes using CSS. */
