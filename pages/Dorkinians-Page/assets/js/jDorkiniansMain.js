@@ -44,7 +44,7 @@ const numberTabs = 5;
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
     "Locating any number 8 tops in kit bags...",
-    "Calculating the likeihood of Shano scoring an 'unmissable' chance...",
+    "Calculating the likelihood of Shano scoring an 'unmissable' chance...",
     "Forgetting Oakley's 'assist' in the last game...",
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Will's yellow cards...",
@@ -408,7 +408,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -830,7 +830,7 @@ function updateClubStatsInfo() {
 // 3.1.a. Player Stats This Season stats tab data "getter" function.
 function getPlayerStatsThisSeasonTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     displayThisSeasonStatsArrayOfObjects = results.data // Define the global variable "displayThisSeasonStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
@@ -843,7 +843,7 @@ function getPlayerStatsThisSeasonTabInfo(results) {
 // 3.1.b. Player Stats All Time stats tab data "getter" function.
 function getPlayerStatsAllTimeTabInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
@@ -857,7 +857,7 @@ function getPlayerStatsAllTimeTabInfo(results) {
 // 3.2.a. Player Stats This Season tab data "show-er" function.
 function showPlayerStatsThisSeasonTabInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showPlayerStatsThisSeasonTabInfo.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
@@ -896,7 +896,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     // Stat Category selection.
     const statCategoryValueDropdown = document.getElementById("player-stats-this-season-stats-category-selection"); // Get the stat category selected dropdown.
     const statCategoryValue = statCategoryValueDropdown.options[statCategoryValueDropdown.selectedIndex].value; // Get the stat category selected. (https://stackoverflow.com/a/8549358/14290169).
-    console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
+    // console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
 
     // Populate the stats information on the page.
 
@@ -966,7 +966,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 // 3.2.b. Player Stats All Time tab data "show-er" function.
 function showPlayerStatsAllTimeTabInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showPlayerStatsAllTimeTabInfo.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     //const dataArrayOfObjects = results.data 
@@ -1257,6 +1257,11 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
     let statValueArray = ["", "", ""]; // Define a blank array to populate with stat values.
     // console.log(playerArray);
 
+    // Stat Category selection.
+    const statCategoryValueDropdown = document.getElementById("comparison-category-selection"); // Get the stat category selected dropdown.
+    const statCategoryValue = statCategoryValueDropdown.options[statCategoryValueDropdown.selectedIndex].value; // Get the stat category selected. (https://stackoverflow.com/a/8549358/14290169).
+    console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
+
     // Loop through the created player array.
     for (let i = 1; i < playerArray.length; i++) {
 
@@ -1387,6 +1392,20 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
         BarElement = document.getElementById("comparison-" + statName + "-player-2-bar-container").style.width = ElementWidth + '%';
     }
 
+    // Hide the stats that should not be shown based on the users selection.
+    let containerElement = document.getElementById("comparison-" + statName + "-container"); // Get the container element dynamically.
+    console.log("containerElement = comparison-" + statName + "-container");
+    if (statCategoryValue == "All") {
+        // Remove the hidden class from this container element as it should be shown.
+        containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+    }
+    else if (statObject[statName].statCategory == statCategoryValue) {
+        // Remove the hidden class from this container element as it should be shown.
+        containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+    } else {
+        // Add the hidden class to this container element as it should not be shown.
+        containerElement.classList.add("hidden"); // Apply the hidden CSS class to the container element.
+    }
 }
 
 function resetStatsBars() {
