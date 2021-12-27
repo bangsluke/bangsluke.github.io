@@ -376,7 +376,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.
@@ -1292,7 +1292,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
                     BarElement = document.getElementById("comparison-" + statName + "-player-1-bar").classList.remove("yellow"); // Get the player 1 Bar Element dynamically and remove the yellow class from the selected element.
                 } else {
                     // Do nothing as should not get to this case.
-                    alert("Error in logic.")
+                    console.warn("Error in logic for stat " + statName + ".")
                 }
             } else {
                 // Colour the bars based on the lower value being better and therefore being better.
@@ -1311,7 +1311,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
                     BarElement = document.getElementById("comparison-" + statName + "-player-1-bar").classList.remove("yellow"); // Get the player 1 Bar Element dynamically and remove the yellow class from the selected element.
                 } else {
                     // Do nothing as should not get to this case.
-                    alert("Error in logic.")
+                    console.warn("Error in logic for stat " + statName + ".")
                 }
             }
         }
