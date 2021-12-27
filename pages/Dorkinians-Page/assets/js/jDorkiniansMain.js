@@ -66,224 +66,256 @@ const statObject = {
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     },
     M: {
         statName: 'Minutes',
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     },
     MOM: {
         statName: 'Man of the Matches',
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     G: {
         statName: 'Goals Scored',
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     A: {
         statName: 'Assists',
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     Y: {
         statName: 'Yellow Cards',
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
         statHigherBetterBooleanArray: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     R: {
         statName: 'Red Cards',
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     OG: {
         statName: 'Own Goals',
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     C: {
         statName: 'Conceded',
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     CLS: {
         statName: 'Clean Sheets',
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     PSC: {
         statName: 'Penalties Scored',
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Penalty Stat'
     },
     PM: {
         statName: 'Penalties Missed',
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Penalty Stat'
     },
     PCO: {
         statName: 'Penalties Conceded',
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Penalty Stat'
     },
     PSV: {
         statName: 'Penalties Saved',
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Penalty Stat'
     },
     FTP: {
         statName: 'Fantasy Points',
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Performance Stat'
     },
     GperAPP: {
         statName: 'Goals Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 1
+        numberDecimalPlaces: 1,
+        statCategory: 'Per App/Minute Stat'
     },
     CperAPP: {
         statName: 'Conceded Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 1
+        numberDecimalPlaces: 1,
+        statCategory: 'Per App/Minute Stat'
     },
     MperG: {
         statName: 'Minutes Per Goal',
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Per App/Minute Stat'
     },
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Per App/Minute Stat'
     },
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 1
+        numberDecimalPlaces: 1,
+        statCategory: 'Per App/Minute Stat'
     },
     DIST: {
         statName: 'Distance Travelled',
         statFormat: 'Decimal1',
-        description: 'The distance travelled by the player getting to away games.',
+        description: 'The distance travelled in miles by the player getting to away games.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 1
+        numberDecimalPlaces: 1,
+        statCategory: 'Appearance Stat'
     },
     "Games%Won": {
         statName: 'Percentage Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     HomeGames: {
         statName: 'Home Games',
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     HomeWins: {
         statName: 'Home Wins',
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     AwayGames: {
         statName: 'Away Games',
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     AwayWins: {
         statName: 'Away Wins',
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Results Stat'
     },
     "MostPlayedForTeam": {
         statName: 'Most Played for Team',
         statFormat: 'String',
         description: 'The Dorkinians team that the player has appeared for most.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     },
     "NumberTeamsPlayedFor": {
         statName: 'Number of Teams Played for',
         statFormat: 'String',
         description: 'The number of Dorkinians teams that the player has appeared for.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     },
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     },
     "MostScoredForTeam": {
         statName: 'Most Scored for Team',
         statFormat: 'String',
         description: 'The Dorkinians team that the player has scored the most for.',
         statHigherBetterBoolean: false,
-        numberDecimalPlaces: 0
+        numberDecimalPlaces: 0,
+        statCategory: 'Appearance Stat'
     }
 };
 // console.log(statObject.APP.statFormat);
@@ -861,6 +893,11 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     console.log("filteredArrayOfObjects[0] = ");
     console.log(filteredArrayOfObjects[0]);
 
+    // Stat Category selection.
+    const statCategoryValueDropdown = document.getElementById("player-stats-this-season-stats-category-selection"); // Get the stat category selected dropdown.
+    const statCategoryValue = statCategoryValueDropdown.options[statCategoryValueDropdown.selectedIndex].value; // Get the stat category selected. (https://stackoverflow.com/a/8549358/14290169).
+    console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
+
     // Populate the stats information on the page.
 
     // Define an array of stats from the Global statObject.
@@ -872,7 +909,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Loop through the created stat array. Each stat corresponds to an HTML element in the This Seasons Grid.
     for (let i = 0; i < statsArray.length; i++) {
-        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
@@ -899,6 +936,19 @@ function showPlayerStatsThisSeasonTabInfo(results) {
             }
             TextElement.innerHTML = displayText; // Add the text to the HTML element.
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
+
+            // Hide the stats that should not be shown based on the users selection.
+            if (statCategoryValue == "All") {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            }
+            else if (statObject[statsArray[i]].statCategory == statCategoryValue) {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            } else {
+                // Add the hidden class to this container element as it should not be shown.
+                containerElement.classList.add("hidden"); // Apply the hidden CSS class to the container element.
+            }
 
         }
         catch (err) {
