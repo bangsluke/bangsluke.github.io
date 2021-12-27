@@ -1103,18 +1103,28 @@
 
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-1-stats-container">
-
                                     <h4 class="center">Player 1 Stats</h4>
-
                                 </div>
 
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-2-stats-container">
-
                                     <h4 class="center">Player 2 Stats</h4>
-
                                 </div>
 
+                                <!-- Add a div to hold the stat category selection box. -->
+                                <div class="comparison-stat-category-selection-container selection-container">
+                                    <!-- Add a drop down select box for the user to change the statistic category. -->
+                                    <select name="player-stats-this-season-stats-category-selection"
+                                        class="selection-dropdown" id="comparison-category-selection"
+                                        onchange="updateComparisonStatData()">
+                                        <option value="All" selected="selected">All Stats</option>
+                                        <option value="Appearance Stat">Appearance Stats</option>
+                                        <option value="Performance Stat">Performance Stats</option>
+                                        <option value="Penalty Stat">Penalty Stats</option>
+                                        <option value="Per App/Minute Stat">Per App/Minutes Stats</option>
+                                        <option value="Results Stat">Results Stats</option>
+                                    </select>
+                                </div>
 
                                 <!-- Create a div containing a table of all the stats for the comparison. -->
                                 <div class="comparison-stats-table">
