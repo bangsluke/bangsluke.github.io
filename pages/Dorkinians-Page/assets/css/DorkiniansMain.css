@@ -941,12 +941,13 @@ Section 4
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
-	grid-template-columns: 45% 4% 45%; 
-	grid-template-rows: 2rem 2rem max-content; /* Repeat the same height row x number of times. */
+	grid-template-columns: 45% 5% 45%; 
+	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
 	gap: 1rem 3%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
 	  "Player1Stats Blank Player2Stats"
+	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
 
@@ -969,6 +970,11 @@ Section 4
 	/* background-color: red; */
 	grid-area: Player2Stats;
 	padding: 0.3rem;
+}
+.comparison-stat-category-selection-container {
+	/* background-color: blue; */
+	grid-area: StatCategorySelection;
+	/* padding: 0.3rem; */
 }
 
 /* Add a class to style the overall holding container of all stats rows. */
