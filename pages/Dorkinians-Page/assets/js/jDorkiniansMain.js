@@ -323,6 +323,10 @@ const statObject = {
 
 // Google Sheet Links
 
+// Site Details
+const siteDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1978614347&single=true&output=csv';
+var displaysiteDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
 // Homepage Tab
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
@@ -389,6 +393,9 @@ function init() {
     // Step 0.
     // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
+    // Close the side menu if open.
+    closeNav()
+
     // Reset the tabReadyCount.
     tabReadyCount = 0;
 
@@ -408,7 +415,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
     // Step 1. 
     // Homepage Tab.

@@ -39,6 +39,7 @@ Section 1
 	/* Colours */
 	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
+	--accent-color-white: #FFFFFF; /* White colour. */
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
 	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
 
@@ -676,7 +677,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
