@@ -39,6 +39,7 @@ Section 1
 	/* Colours */
 	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
     --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
+	--accent-color-white: #FFFFFF; /* White colour. */
 	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
 	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
 
