@@ -34,7 +34,7 @@ const newLocal = `
                 <!-- Add the Dorkinians logo. -->
                 <img class="logo fadein center" id="side-menu-dorkinians-logo"
                 src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
-                alt="Dorkinians Logo" width="90" height="90" onclick="init()">
+                alt="Dorkinians Logo" width="80" height="80" onclick="init()">
 
             </div>
 
@@ -46,43 +46,35 @@ const newLocal = `
 
                     <h3 class="side-menu-section-header">Site Details</h3>
 
-                    <div class="side-menu-item-container">
-                        <div>
-                            <h4>Version Number: </h4>
+                    <div id="side-menu-site-details-grid-section">
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Version Number: </p>
                         </div>
-                        <div>
+                        <div class="side-menu-site-details-grid-container">
                             <p id="side-menu-site-details-version-number-text"></p>
                         </div>
-                    </div>
 
-                    <div class="side-menu-item-container">
-                        <div>
-                            <h4>Current Season: </h4>
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Current Season: </p>
                         </div>
-                        <div>
+                        <div class="side-menu-site-details-grid-container">
                             <p id="side-menu-site-details-current-season-text"></p>
                         </div>
-                    </div>
 
-                    <div class="side-menu-item-container">
-                        <div>
-                            <h4>Last Updated Stats: </h4>
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Last Updated Stats: </p>
                         </div>
-                        <div>
+                        <div class="side-menu-site-details-grid-container">
                             <p id="side-menu-site-details-last-updated-stats-text"></p>
                         </div>
-                    </div>
 
-                    <div class="side-menu-item-container">
-                        <div>
-                            <h4>Page Details Last Refreshed: </h4>
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Page Details Last Refreshed: </p>
                         </div>
-                        <div>
+                        <div class="side-menu-site-details-grid-container">
                             <p id="side-menu-site-details-page-details-last-refereshed-text"></p>
                         </div>
-                    </div>
-
-                    
+                    </div>    
 
                 </section>
 

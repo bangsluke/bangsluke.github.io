@@ -1588,7 +1588,7 @@ function updateTablesResultsandFixturesTab() {
 
 // Open and display a message on the pop up box.
 function openPopUpBox(headerText, messageText) {
-    console.log("Pop Up Box opened."); // Log a message to the console.
+    // console.log("Pop Up Box opened."); // Log a message to the console.
 
     // Select the pop up box and show it.
     document.getElementById('pop-up-box').style.display = "inline"; // Show the pop up box.
@@ -1601,7 +1601,7 @@ function openPopUpBox(headerText, messageText) {
 
 // Close and hide the pop up box.
 function closePopUpBox() {
-    console.log("Pop Up Box closed."); // Log a message to the console.
+    // console.log("Pop Up Box closed."); // Log a message to the console.
 
     // Select the pop up box and hide it.
     document.getElementById('pop-up-box').style.display = "none"; // Hide the pop up box.
