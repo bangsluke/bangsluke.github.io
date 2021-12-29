@@ -38,8 +38,8 @@ console.time(); // Start the console timer.
 // Publically define a number of global constants and variables such as the location of the Google Sheets.
 
 // Ready Global Variable
-var tabReadyCount = 0;
-const numberTabs = 5;
+var readyComponentsCount = 0;
+const numberReadyComponents = 6;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -325,7 +325,7 @@ const statObject = {
 
 // Site Details
 const siteDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1978614347&single=true&output=csv';
-var displaysiteDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Homepage Tab
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
@@ -376,8 +376,8 @@ window.addEventListener('load', function () {
     // console.log("End timer");
     console.timeEnd(); // End the console timer.
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("All Resources Loaded");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("All Resources Loaded");
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     // stopRotateLogo();
@@ -394,10 +394,13 @@ function init() {
     // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Close the side menu if open.
-    closeNav()
+    closeNav();
 
-    // Reset the tabReadyCount.
-    tabReadyCount = 0;
+    // Close the pop up box if open.
+    closePopUpBox();
+
+    // Reset the readyComponentsCount.
+    readyComponentsCount = 0;
 
     // Initially show the loading text on the loading page using the typewriter effect.
     // Clear the text element, define the initial required variables and then call the typeWriter function.
@@ -417,6 +420,19 @@ function init() {
     // Call the updateLoadingPage function to change the shown phrase.
     updateLoadingPage();
 
+    // Step 0. 
+    // Side Menu.
+    console.log('%c' + '> 0. Side Menu data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Side Menu data.
+    Papa.parse(siteDetailsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getSideMenuInfo, // The callback to execute when parsing is complete.
+    })
+
+
     // Step 1. 
     // Homepage Tab.
     console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -426,7 +442,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getHomepageTabInfo, // The callback to execute when parsing is complete. Once done, call the getHomepageTabInfo function.
+        complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
     })
 
 
@@ -439,7 +455,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete. Once done, call the getTotalClubStatsInfo function.
+        complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete.
     })
 
     // Team Season Results Info
@@ -447,7 +463,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete. Once done, call the getTeamSeasonResultsInfo function.
+        complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
     })
 
     // Update the information bar.
@@ -464,7 +480,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsThisSeasonTabInfo function.
+        complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete.
     })
 
     // All Time Stats Info
@@ -472,7 +488,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete. Once done, call the getPlayerStatsAllTimeTabInfo function.
+        complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete.
     })
 
     // Update the information bar.
@@ -551,7 +567,7 @@ function updateLoadingPage() {
         }
 
         // React if the tab ready count matches the number of tabs.
-        if (tabReadyCount === numberTabs || tabReadyCount >= numberTabs) {
+        if (readyComponentsCount === numberReadyComponents || readyComponentsCount >= numberReadyComponents) {
             hideLoadingPage(); // Call the function to fade out the loading page.
             clearInterval(loopPhrases); // Cancel the setInterval and escape it.
         }
@@ -563,10 +579,10 @@ function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function incrementTabReadyCount(tabName) {
-    // Increment the tab ready count until it matches with the numberTabs.
-    tabReadyCount = tabReadyCount + 1;
-    console.log('%c' + '> tabReadyCount (' + tabName + ') = ' + tabReadyCount + '/' + numberTabs, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+function incrementComponentReadyCount(tabName) {
+    // Increment the component ready count until it matches with the numberReadyComponents.
+    readyComponentsCount = readyComponentsCount + 1;
+    console.log('%c' + '> readyComponentsCount (' + tabName + ') = ' + readyComponentsCount + '/' + numberReadyComponents, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 }
 
 function hideLoadingPage() {
@@ -581,6 +597,47 @@ function hideLoadingPage() {
 }
 
 
+// 0. Side Menu Functions
+
+// 0.1. Side Menu data "getter" function.
+function getSideMenuInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getSideMenuInfo.', 'background-color: yellow; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displaySiteDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displaySiteDetailsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displaySiteDetailsArrayOfObjects); // Log the global variable.
+    showSideMenuInfo(displaySiteDetailsArrayOfObjects); // Call the showSideMenuInfo function.
+}
+
+// 0.2. Side Menu data "show-er" function.
+function showSideMenuInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showSideMenuInfo.', 'background-color: yellow; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Populate the site details information into the side menu.
+
+    // var versionNumber = displaySiteDetailsArrayOfObjects[0]["Version Number"];
+    // console.log(versionNumber);
+
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for ids to populate.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-version-number-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Version Number"]; // Add the text to the side menu.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-current-season-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Current Season"]; // Add the text to the side menu.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-last-updated-stats-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Last Updated Stats"]; // Add the text to the side menu.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-page-details-last-refereshed-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Page Details Last Refreshed"]; // Add the text to the side menu.
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Side Menu");
+
+}
 
 
 
@@ -630,8 +687,8 @@ function showHomepageTabInfo(results) {
 
     }
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("Homepage");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Homepage");
 
 }
 
@@ -722,8 +779,8 @@ function showTotalClubStatsInfo(results) {
         document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
     }
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("Club Stats - Total Club Stats");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Club Stats - Total Club Stats");
 
 }
 
@@ -791,8 +848,8 @@ function showTeamSeasonResultsInfo(results) {
     clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
     createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("Club Stats - Teams Season Results");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Club Stats - Teams Season Results");
 
 }
 
@@ -859,7 +916,6 @@ function getPlayerStatsAllTimeTabInfo(results) {
     showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
 
 }
-
 
 // 3.2.a. Player Stats This Season tab data "show-er" function.
 function showPlayerStatsThisSeasonTabInfo(results) {
@@ -965,8 +1021,8 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("Player Stats - This Season Stats");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Player Stats - This Season Stats");
 
 }
 
@@ -1030,11 +1086,10 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     }
 
-    // Increment the tab ready count by 1.
-    incrementTabReadyCount("Player Stats - All Time Stats");
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Player Stats - All Time Stats");
 
 }
-
 
 // 3.3. Player Stats tab data "update-er" function.
 function showPlayerStatsTabUpdatedInfo() {
@@ -1523,6 +1578,33 @@ function updateTablesResultsandFixturesTab() {
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
+}
+
+
+
+
+
+// Pop Up Box Functions
+
+// Open and display a message on the pop up box.
+function openPopUpBox(headerText, messageText) {
+    console.log("Pop Up Box opened."); // Log a message to the console.
+
+    // Select the pop up box and show it.
+    document.getElementById('pop-up-box').style.display = "inline"; // Show the pop up box.
+    document.getElementById('pop-up-box').style.zIndex = 10;
+
+    // Populate the pop up box with the text passed to it.
+    document.getElementById("pop-up-box-header-text").innerHTML = headerText; // Add the header text to the HTML element.
+    document.getElementById("pop-up-box-message-text").innerHTML = messageText; // Add the header text to the HTML element.
+}
+
+// Close and hide the pop up box.
+function closePopUpBox() {
+    console.log("Pop Up Box closed."); // Log a message to the console.
+
+    // Select the pop up box and hide it.
+    document.getElementById('pop-up-box').style.display = "none"; // Hide the pop up box.
 }
 
 

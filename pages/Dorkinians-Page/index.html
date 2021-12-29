@@ -66,6 +66,7 @@
 
     <!-- Header -->
 
+    <!-- Add all of the header information to be displayed at the top of the page. -->
     <header class="header-area center">
 
         <div class="logo-container">
@@ -91,6 +92,32 @@
 
     </header>
 
+    <!-- Pop Up Box -->
+
+    <!-- Add a pop up box that can be modified and called for various reasons. -->
+    <div id="pop-up-box">
+
+        <!-- The x close button. -->
+        <a id="pop-up-box-close-button" href="javascript:void(0)" onclick="closePopUpBox()">×</a>
+
+        <!-- Add a div to hold the header and message. -->
+        <div id="pop-up-box-container">
+
+            <!-- Add a div to hold the header text. -->
+            <div id="pop-up-box-header-container">
+                <h3 id="pop-up-box-header-text">Testing</h3>
+            </div>
+
+            <!-- Add a div to hold the message text. -->
+            <div id="pop-up-box-message-container">
+                <p id="pop-up-box-message-text">Testing 1 2</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <!-- Side Menu -->
 
     <!-- Add the common website side menu using shadow DOMs. See /pages/Group-Page/assets/components/SideMenu/sideMenu.js for the side menu code. -->
@@ -99,7 +126,7 @@
     <!-- Main Page Content -->
 
     <!-- This is all the content between the header and footer. -->
-    <div class="main-content-area fadein" id="IndividualsPage-main-content-area">
+    <div class="fadein" id="main-content-area">
 
         <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
@@ -499,11 +526,12 @@
                                     <div class="selection-container">
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
                                         <select name="player-stats-this-season-stats-category-selection"
-                                            class="selection-dropdown" id="player-stats-this-season-stats-category-selection"
+                                            class="selection-dropdown"
+                                            id="player-stats-this-season-stats-category-selection"
                                             onchange="showPlayerStatsTabUpdatedInfo()">
                                             <option value="All">All Stats</option>
-                                            <option value="Appearance Stat" selected="selected">Appearance Stats</option>
-                                            <option value="Performance Stat">Performance Stats</option>
+                                            <option value="Appearance Stat">Appearance Stats</option>
+                                            <option value="Performance Stat" selected="selected">Performance Stats</option>
                                             <option value="Penalty Stat">Penalty Stats</option>
                                             <option value="Per App/Minute Stat">Per App/Minutes Stats</option>
                                             <option value="Results Stat">Results Stats</option>
