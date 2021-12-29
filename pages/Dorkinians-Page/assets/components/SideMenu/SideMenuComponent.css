@@ -12,7 +12,7 @@
 	height: 100%;
 	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
-	z-index: 3; /* Set the z index to be in front of other items. */
+	z-index: 20; /* Set the z index to be in front of other items. */
 	top: 0rem;
 	right: -0.1rem; /* Slightly position the side-menu off to the side to avoid seing the border. */
 	overflow-x: hidden;
@@ -57,8 +57,9 @@
     align-items: center; /* Vertically center the div's inside the container. */
     justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
 	height: max-content;
+	width: 90%;
 	overflow-y: scroll;
-	margin-bottom: 5rem; /* Add an offset below the main container so all side menu options are available. */
+	margin: 0rem auto 5rem auto; /* Add an offset below the main container so all side menu options are available. */
 	z-index: 1;
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);

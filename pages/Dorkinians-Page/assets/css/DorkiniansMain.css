@@ -130,9 +130,21 @@ body {
 	-webkit-backdrop-filter: blur( 20px );
 }
 
-/* Sub pag sections - multiple sections per tab. */
+/* Sub page sections - multiple sections per tab. */
 section {
 	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
+}
+
+/* Add a background overlay for closing other menus. */
+.background-overlay{
+    background: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+	z-index: 2;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -632,7 +644,7 @@ Section 3
 	grid-area: Options;
 	padding: 0.3rem;
 }
-.optionsbutton {
+#options-button {
     color: var(--accent-color-white, white);
     /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
@@ -646,7 +658,7 @@ Section 3
     margin: 0rem;
     padding: 0rem;
 }
-.optionsbutton:hover {
+#options-button:hover {
     color: var(--main-dorkinians-yellow-colour);
 }
 
@@ -676,7 +688,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -764,7 +776,7 @@ Section 3
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 4; /* Have the pop up in front of all other items on the page. */
+	z-index: 30; /* Have the pop up in front of all other items on the page. */
 
 	/* Control and set the size of the box based on the content. */
 	height: max-content;
@@ -1203,6 +1215,9 @@ div.cell {
 	padding-bottom: 2rem;
 }
 
+.tables-results-fixtures-text-replacement {
+	padding-bottom: 2rem;
+}
 
 
 
