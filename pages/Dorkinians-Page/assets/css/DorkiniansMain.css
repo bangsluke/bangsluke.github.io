@@ -488,7 +488,7 @@ tr:last-child td:last-child {
 /* Add a class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
-	padding-bottom: 0.3rem;
+	padding-bottom: 1rem;
 	text-align: center;
 }
 
