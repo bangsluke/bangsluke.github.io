@@ -39,7 +39,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 6;
+const numberReadyComponents = 7;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
