@@ -206,11 +206,15 @@ function openNav() {
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "15.6rem"; // Increase the width of the side-menu to make it visible.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
 
+    // Show the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "inline"; // Show the background overlay behind the side menu.
+    document.getElementById('background-overlay-side-menu').style.zIndex = 19; // Set the z-index of the background overlay to be right behind the side menu.
+
     // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
     var myEle = document.getElementsByTagName('header-component')[0];
     if (myEle) {
-        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'optionsbutton'.
-        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('optionsbutton').style.display = "none"; // Hide the options icon.
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "none"; // Hide the options icon.
     } else {
         //console.log("not doing anything");
     }
@@ -223,11 +227,14 @@ function closeNav() {
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
 
+    // Hide the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "none"; // Hide the background overlay behind the side menu.
+
     // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
     var myEle = document.getElementsByTagName('header-component')[0];
     if (myEle) {
-        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'optionsbutton'.
-        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('optionsbutton').style.display = "inline"; // Show the options icon.
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "inline"; // Show the options icon.
     } else {
         //console.log("not doing anything");
     }
