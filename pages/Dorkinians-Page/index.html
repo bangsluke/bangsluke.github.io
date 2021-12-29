@@ -89,13 +89,17 @@
         </div>
 
         <div class="options-container">
-            <span class="material-icons center fadein google-icons optionsbutton" id="optionsbutton"
+            <span class="material-icons center fadein google-icons" id="options-button"
                 alt="Options Button" width="54" height="54" onclick="openNav()">
                 menu
             </span>
         </div>
 
     </header>
+
+    <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
+    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
+    <div class="background-overlay" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
 
     <!-- Pop Up Box -->
 
