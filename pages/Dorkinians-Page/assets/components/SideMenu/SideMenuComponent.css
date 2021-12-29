@@ -49,9 +49,9 @@
 /* Container holds all of the smaller icon and text containers. */
 #side-menu-main-container {
 	/* background-color: lightpink; */
-	padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+	padding: 1rem 0.5rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
     position: relative;
-	top: 6.5rem; /* Offset the main container below the top container. */
+	top: 7.5rem; /* Offset the main container below the top container. */
 	display: flex; /* Add flex to the top level container. */
     flex-direction: column;
     align-items: center; /* Vertically center the div's inside the container. */
@@ -62,12 +62,48 @@
 	z-index: 1;
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);
+	line-height: 1;
 }
 
 /* Style all side menu sections. */
 .side-menu-section {
 	width: 100%;
-	padding: 1rem 0rem;
+	padding: 2rem 0rem 0rem 0rem; /* Add padding at the top of each section. */
+}
+
+/* Style the site details section. */
+#side-menu-site-details-section {
+	/* background-color: red; */
+	position: relative;
+	width: 100%;
+	height: max-content;
+	padding: 0rem;
+	margin: 0rem;
+}
+
+#side-menu-site-details-grid-section {
+	/* background-color: purple; */
+	display: grid;
+	grid-template-columns: 65% 33%; 
+	grid-template-rows: 1.5rem 1.5rem 2.5rem 2.5rem;
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+	justify-items: stretch;
+	align-items: stretch;
+	justify-content: stretch;
+	align-content: stretch;
+}
+
+.side-menu-site-details-grid-container {
+	height: 1.5rem;
+	justify-self: start;
+	align-self: start;
+}
+
+/* Style the actions section. */
+#side-menu-actions-section {
+	/* background-color: green; */
+	position: relative;
+	width: 100%;
 }
 
 /* Add a container to hold each menu item. */
@@ -97,6 +133,13 @@
 	justify-content: center;
 }
 
+/* Add styling for the icons in the side menu. */
+.side-menu-icon {
+	height: 2rem;
+	filter: brightness(0) invert(1);
+	margin-top: -0.1rem;
+}
+
 /* Add a container to hold each menu text. */
 .side-menu-item-container-text {
 	/* background-color: lightyellow; */
@@ -106,28 +149,32 @@
 }
 
 
-/* Style the actions section. */
-#side-menu-actions-section {
-	/* background-color: red; */
-}
-
 /* Style the quick links section. */
 #side-menu-quick-links-section {
 	/* background-color: orange; */
+	position: relative;
+	width: 100%;
 }
 
 
-/* Add styling for the icons in the side menu. */
-.side-menu-icon {
-	height: 2.5rem;
-	filter: brightness(0) invert(1);
-	margin-top: -0.1rem;
+/* Style the additional section. */
+#side-menu-additional-section {
+	/* background-color: yellow; */
+	position: relative;
+	width: 100%;
 }
+
+
+
 
 /* Style the text in the side menu. */
 
 #side-menu a, h3, h4, p {
 	color: var(--accent-color-white, white);
+}
+
+#side-menu p {
+	font-size: 0.8rem;
 }
 
 /* Style the header text in the side menu. */
@@ -136,6 +183,8 @@
 	text-decoration: none;
 	display: block;
 	transition: 0.3s;
+	height: max-content;
+	padding-bottom: 0.5rem;
 	text-transform: uppercase;
 	font-weight: 900;
 	font-family: 'Roboto', sans-serif;
@@ -154,7 +203,7 @@
 }
 
 #side-menu a:hover {
-	color: var(--main-dorkinians-yellow-colour, yellow);;
+	color: var(--main-dorkinians-yellow-colour, yellow);
 }
 
 /* Side menu media queries. */
