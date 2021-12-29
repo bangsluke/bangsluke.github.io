@@ -716,6 +716,7 @@ Section 3
 }
 #loading-page-title-container {
 	/* background: purple; */
+	padding-top: 1rem;
 	grid-area: Title;
 }
 #loading-page-title-container h2 {
