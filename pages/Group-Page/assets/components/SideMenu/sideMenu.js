@@ -4,7 +4,7 @@
 // This sideMenu.js file creates a Side Menu template which is then used by the majority of pages on the website.
 // All HTML for the side menu is controlled from within this file, whilst the CSS is dealt with in an external stylesheet.
 
-// THe functionality of the side menu is defined further down.
+// The functionality of the side menu is defined further down.
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
