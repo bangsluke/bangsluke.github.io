@@ -83,24 +83,24 @@ const newLocal = `
 
                     <h3 class="side-menu-section-header">Actions</h3>
 
-                    <!-- Add the text size change action item. -->
-                    <div class="side-menu-item-grid-container">
-                        <div class="side-menu-item-container-icon">
+                    <div id="side-menu-actions-section-grid">
+
+                        <!-- Add the text size change action item. -->
+                        <div class="side-menu-icon-container">
                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon">
                         </div>
-                        <div class="side-menu-item-container-text">
+                        <div class="side-menu-text-container">
                             <h4>Change Text Size</h4>
                         </div>
-                    </div>
 
-                    <!-- Add the change theme item. -->
-                    <div class="side-menu-item-grid-container">
-                        <div class="side-menu-item-container-icon">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Theme Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon">
+                        <!-- Add the change theme item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Theme Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
                         </div>
-                        <div class="side-menu-item-container-text">
-                            <h4>Change to Dark Theme</h4>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
                         </div>
+
                     </div>
 
                 </section>
@@ -110,32 +110,32 @@ const newLocal = `
 
                     <h3 class="side-menu-section-header">Quick Links</h3>
 
-                    <!-- Add a link to the Dorkinians homepage. -->
-                    <div class="side-menu-item-grid-container">
-                        <div class="side-menu-item-container-icon">
+                    <div id="side-menu-quick-links-section-grid">
+
+                        <!-- Add a link to the Dorkinians homepage. -->
+                        <div class="side-menu-icon-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
                                 <img src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.png" class="side-menu-icon" alt="Dorkinians Logo Icon">
                             </a>
                         </div>
-                        <div class="side-menu-item-container-text">
+                        <div class="side-menu-text-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
                                 <h4>dorkiniansfc.co.uk</h4>
                             </a>
                         </div>
-                    </div>
 
-                    <!-- Add a link to the FA homepage. -->
-                    <div class="side-menu-item-grid-container">
-                        <div class="side-menu-item-container-icon">
+                        <!-- Add a link to the FA homepage. -->
+                        <div class="side-menu-icon-container">
                             <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
                                 <img src="/pages/Dorkinians-Page/assets/images/Icons/The FA Logo Icon.png" class="side-menu-icon" alt="The FA Logo Icon">
                             </a>
                         </div>
-                        <div class="side-menu-item-container-text">
+                        <div class="side-menu-text-container">
                             <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
                                 <h4>FULL-TIME.TheFA.com</h4>
                             </a>
                         </div>
+                    
                     </div>
 
                 </section>
@@ -146,17 +146,17 @@ const newLocal = `
                     <h3 class="side-menu-section-header">Additional</h3>
 
                     <!-- Add a stat limitations clickable option. -->
-                    <div class="side-menu-item-container">
+                    <div class="side-menu-additional-section-item-container">
                         <a href="javascript:void(0)" onclick="openPopUpBox('Stat Limitations', displaySiteDetailsArrayOfObjects[0]['Stat Limitations'])">Stat Limitations</a>
                     </div>
 
                     <!-- Add a stat details clickable option. -->
-                    <div class="side-menu-item-container">
+                    <div class="side-menu-additional-section-item-container">
                         <a href="javascript:void(0)" onclick="openPopUpBox('Stat Details', displaySiteDetailsArrayOfObjects[0]['Stat Details'])">Stat Details</a>
                     </div>
 
                     <!-- Add a version release details clickable option. -->
-                    <div class="side-menu-item-container">
+                    <div class="side-menu-additional-section-item-container">
                         <a href="javascript:void(0)" onclick="openPopUpBox('Version Release Details', displaySiteDetailsArrayOfObjects[0]['Version Release Details'])">Version Release Details</a>
                     </div>
 
@@ -239,4 +239,46 @@ function closeNav() {
         //console.log("not doing anything");
     }
 
+}
+
+// Change the site theme style based on user selection.
+function changeSiteTheme() {
+    console.log("changeSiteTheme clicked."); // Log that the function has been called.
+
+    // Select the element holding the change site theme text.
+    let themeTextElement = document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-actions-change-theme-text');
+
+    // Check which site theme has been selected and then define the required colours for the CSS styling sheet.
+    if (themeTextElement.innerHTML == "Change to Dark Theme") {
+        // Change site theme to dark mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#222129');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#252432');
+        document.documentElement.style.setProperty('--third-background-colour', '#282735');
+        document.documentElement.style.setProperty('--main-accent-colour', '#FF3CAC');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '255, 60, 172');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF85');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Light Theme";
+
+    } else {
+        // Change site theme to light mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#1C8841');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#31a057');
+        document.documentElement.style.setProperty('--third-background-colour', '#236f38');
+        document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Dark Theme";
+
+    }
+
+    closeNav(); // Close the side navigation that the function was called from.
+    //console.log("Site theme changed."); // Log a final success message.
 }
