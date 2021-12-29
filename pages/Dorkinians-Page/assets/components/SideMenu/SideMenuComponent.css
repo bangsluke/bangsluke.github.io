@@ -6,24 +6,38 @@
 
 /* Side Menu is the full side menu that appears on click of the options icon. */
 
-.side-menu {
+#side-menu {
 	background: var(--main-dorkinians-green-colour, green);
 	/* background-color: lightblue; */
 	height: 100%;
 	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
 	position: fixed;
-	z-index: 3;
+	z-index: 3; /* Set the z index to be in front of other items. */
 	top: 0rem;
 	right: -0.1rem; /* Slightly position the side-menu off to the side to avoid seing the border. */
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 3.75rem;
+	/* padding-top: 3.75rem; */
 	border-left: solid 0.125rem var(--main-dorkinians-yellow-colour, white);
 	display: inline;
 }
 
+#side-menu-top-container {
+	/* background-color: lightgoldenrodyellow; */
+	background: var(--main-dorkinians-green-colour, green);
+	position: fixed; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
+	top: 0rem; /* Lock the container to the top of the side menu. */
+	height: 6rem;
+	padding-top: 1rem;
+	width: 15.6rem; /* Set the width to be the same as the width of the open side menu. */
+	display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+	z-index: 2;
+}
+
 /* The x close button. */
-.side-menu #closebtn {
+#side-menu-top-container #side-menu-close-button {
 	position: absolute;
 	top: 0.7rem; /* Offset the button from the top of the page. */
 	right: 1.5rem;
@@ -33,13 +47,21 @@
 }
 
 /* Container holds all of the smaller icon and text containers. */
-.side-menu-main-container {
+#side-menu-main-container {
 	/* background-color: lightpink; */
 	padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
-    display: flex; /* Add flex to the top level container. */
+    position: relative;
+	top: 6.5rem; /* Offset the main container below the top container. */
+	display: flex; /* Add flex to the top level container. */
     flex-direction: column;
     align-items: center; /* Vertically center the div's inside the container. */
     justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+	height: max-content;
+	overflow-y: scroll;
+	margin-bottom: 5rem; /* Add an offset below the main container so all side menu options are available. */
+	z-index: 1;
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+    background: rgba(255, 255, 255, 0.10);
 }
 
 /* Style all side menu sections. */
@@ -52,9 +74,16 @@
 .side-menu-item-container {
 	/* background-color: lightblue; */
 	width: 100%;
-	display: grid;
 	padding: 0rem;
 	margin: 0rem;
+}
+
+.side-menu-item-grid-container {
+	/* background-color: lightblue; */
+	width: 100%;
+	padding: 0rem;
+	margin: 0rem;
+	display: grid;
 	grid-template-columns: 20% 80%; 
 	grid-template-rows: 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
@@ -97,7 +126,7 @@
 
 /* Style the text in the side menu. */
 
-.side-menu a, h3, h4 {
+#side-menu a, h3, h4, p {
 	color: var(--accent-color-white, white);
 }
 
@@ -114,7 +143,7 @@
 }
 
 /* Style the hyperlinks. */
-.side-menu a {
+#side-menu a {
 	text-decoration: none;
 	display: block;
 	transition: 0.3s;
@@ -124,9 +153,8 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-.main-menu a:hover {
+#side-menu a:hover {
 	color: var(--main-dorkinians-yellow-colour, yellow);;
-	background: var(--accent-color-white, white);
 }
 
 /* Side menu media queries. */

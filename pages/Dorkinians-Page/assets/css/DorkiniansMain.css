@@ -97,7 +97,7 @@ body {
 }
 
 /* Main content styling. Houses all page content below the header. */
-.main-content-area {
+#main-content-area {
 	/* background-color: violet; */
 	top: 0rem;
 	left: 0rem;
@@ -134,7 +134,6 @@ body {
 section {
 	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
 }
-
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -689,7 +688,6 @@ Section 3
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 0.3fr 1fr 0.3fr 1fr;
@@ -739,9 +737,81 @@ Section 3
 
 
 
+/* Pop Up Box */
 
+#pop-up-box {
+	
+	/* Change the below property on/off to hide/show the pop up box. */
+	/* display: none !important; */
 
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	background: var(--main-dorkinians-green-colour, green);
+	
+	/* Set the position of the box to be bang in the center of the screen. */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4; /* Have the pop up in front of all other items on the page. */
 
+	/* Control and set the size of the box based on the content. */
+	height: max-content;
+	min-height: 20%; /* At minimum, have the height at 20%. */
+	max-height: 60%; /* At maximum, have the height at 60%. */
+	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
+	width: 95%;
+	
+	/* Style the pop up box. */
+	border: 0.125rem solid white;
+	border-radius: var(--border-radius, 2rem);
+	padding: 0.7rem; /* Add internal padding to the pop up box. */
+}
+
+/* The x close button. */
+#pop-up-box #pop-up-box-close-button {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+
+#pop-up-box-container {
+	/* background: #490bf3; */
+	height: 100%;
+	width: 100%;
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1.5rem 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+}
+
+#pop-up-box-header-container {
+	/* background: red; */
+	height: 1.5rem;
+}
+#pop-up-box-header-container h3 {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+#pop-up-box-message-container {
+	/* background: pink; */
+	height: max-content;
+	width: 100%;
+	overflow-y: scroll;
+}
+#pop-up-box-message-text {
+	max-inline-size: none; /* Remove some carry over p styling from the snap tabs to stop a weird word wrap. */
+}
+
+/* Style the text in the pop up box. */
+
+#pop-up-box a, h3, p {
+	color: var(--accent-color-white, white);
+}
 
 /* Footer Section */
 
