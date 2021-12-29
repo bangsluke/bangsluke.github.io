@@ -1070,21 +1070,21 @@ function showPlayerStatsAllTimeTabInfo(results) {
     // Define an array of stats and seasons to update. Each stat and season combine to correspond to an HTML element in the Past Seasons Table.
     let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
     let seasonArray = ["2016/17", "2017/18", "2018/19"];
-    for (let i = 0; i < statArray.length; i++) {
-        // console.log(statArray[i]); // Log the stat being updated.
-        for (let j = 0; j < seasonArray.length; j++) {
-            // console.log(seasonArray[j]); // Log the season being updated.
-            // console.log("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Log the id of the text element being updated.
-            var TextElement = document.getElementById("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Get the Text Element dynamically.
-            var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-            TextElement.innerHTML = displayText; // Add the text to the HTML element.
-        }
+    // for (let i = 0; i < statArray.length; i++) {
+    //     // console.log(statArray[i]); // Log the stat being updated.
+    //     for (let j = 0; j < seasonArray.length; j++) {
+    //         // console.log(seasonArray[j]); // Log the season being updated.
+    //         // console.log("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Log the id of the text element being updated.
+    //         var TextElement = document.getElementById("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Get the Text Element dynamically.
+    //         var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+    //         TextElement.innerHTML = displayText; // Add the text to the HTML element.
+    //     }
 
-        // player-stats-past-seasons-2016/17-appearances
+    //     // player-stats-past-seasons-2016/17-appearances
 
-        // console.log("displayText = " + displayText); // Log the text that will be displayed.
+    //     // console.log("displayText = " + displayText); // Log the text that will be displayed.
 
-    }
+    // }
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Player Stats - All Time Stats");
