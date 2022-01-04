@@ -87,10 +87,17 @@ const newLocal = `
 
                         <!-- Add the text size change action item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize()">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(1)">
                         </div>
                         <div class="side-menu-text-container">
-                            <h4 id="side-menu-actions-change-font-size-text" onclick="changeTextSize()">Change Text Size to Large</h4>
+                            <h4 onclick="changeTextSize(1)">Increase Text Size</h4>
+                        </div>
+
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 onclick="changeTextSize(-1)">Decrease Text Size</h4>
                         </div>
 
                         <!-- Add the change theme item. -->
@@ -200,10 +207,16 @@ customElements.define('side-menu-component', sideMenu);
 // Side bar scripts
 // https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
 
+// Publically define a number of global constants and variables.
+
+var sideMenuWidth = '25rem'; // Originally 15.6rem.
+var fontSizeMin = 8;
+var fontSizeMax = 18;
+
 function openNav() {
 
     // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "15.6rem"; // Increase the width of the side-menu to make it visible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = sideMenuWidth; // Increase the width of the side-menu to make it visible.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
 
     // Show the background overlay.
@@ -264,7 +277,7 @@ function changeSiteTheme() {
         themeTextElement.innerHTML = "Change to Light Theme";
 
         // Update the weather widget. See weatherWidget.js for details.
-        createWeatherWidgetHTML('#FF3CAC','#FFFFFF85','#222129');
+        createWeatherWidgetHTML('#FF3CAC', '#FFFFFF85', '#222129');
         buildWeatherWidget();
 
     } else {
@@ -282,7 +295,7 @@ function changeSiteTheme() {
         themeTextElement.innerHTML = "Change to Dark Theme";
 
         // Update the weather widget. See weatherWidget.js for details.
-        createWeatherWidgetHTML('#F9ED32','#FFFFFF','#1C8841');
+        createWeatherWidgetHTML('#F9ED32', '#FFFFFF', '#1C8841');
         buildWeatherWidget();
 
     }
@@ -292,30 +305,40 @@ function changeSiteTheme() {
 }
 
 // Change the site text size.
-function changeTextSize() {
-    console.log("changeTextSize clicked."); // Log that the function has been called.
+function changeTextSize(delta) {
+    console.log("changeTextSize clicked. Font size changed by " + delta + "."); // Log that the function has been called.
 
-    // Select the element holding the change site theme text.
-    let fontSizeTextElement = document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-actions-change-font-size-text');
+    let fontSize = getComputedStyle(document.documentElement).getPropertyValue('--main-font-size'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
+    fontSize = parseInt(fontSize.replace("px", "")); // Remove the pixels from the returned string.
 
-    // Check which font size has been selected and then react to the change.
-    if (fontSizeTextElement.innerHTML == "Change Text Size to Large") { // Current font is medium. Change to large.
-        // Change the text of the element holding the change font size text.
-        fontSizeTextElement.innerHTML = "Change Text Size to Small";
-        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
-        document.documentElement.style.setProperty('font-size', '20px');
-    } else if (fontSizeTextElement.innerHTML == "Change Text Size to Small") { // Current font is large. Change to small.
-        // Change the text of the element holding the change font size text.
-        fontSizeTextElement.innerHTML = "Change Text Size to Medium";
-        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
-        document.documentElement.style.setProperty('font-size', '12px');
-    } else { // Current font is small. Change to medium.
-        // Change the text of the element holding the change font size text.
-        fontSizeTextElement.innerHTML = "Change Text Size to Large";
-        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
-        document.documentElement.style.setProperty('font-size', '16px');
+    console.log('fontSize before is = ' + fontSize); // Log the font size value before the function has been run.
+
+    if (delta == 1) {
+        // Increment the font size to be larger.
+        if (fontSize < fontSizeMax) { // Only increment the font size if it is less than the max. 
+            fontSize += delta;
+        }
+    } else {
+        // Decrement the font size to be smaller.
+        if (fontSize > fontSizeMin) { // Only dedcrement the font size if it is larger than the min. 
+            fontSize += delta;
+        }
     }
+    console.log('fontSize after is = ' + fontSize); // Log the font size value after the function has been run.
 
-    closeNav(); // Close the side navigation that the function was called from.
-    console.log("Text size changed."); // Log a final success message.
+    // Append the pixels to the new value.
+    fontSize = fontSize + "px";
+
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', fontSize);
+    document.documentElement.style.setProperty('font-size', fontSize);
+
+}
+
+function increaseFontSize() {
+    changeTextSize(1);
+}
+
+function decreaseFontSize() {
+    changeTextSize(-1);
 }

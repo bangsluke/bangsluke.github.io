@@ -63,6 +63,9 @@ Section 1
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
+
+	/* Font Size */
+	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -79,7 +82,7 @@ html {
 	overflow-y: scroll;
 
 	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
-	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
+	font-size: var(--main-font-size, 16px); /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 
 	/* DELETE IF MAJOR ISSUES */
@@ -188,7 +191,7 @@ p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, but
 /* Define the sizes and other styles to each individual text style. */
 /* Used for top header text. */
 h1 {
-	font-size: 32px; /* Fallback value. */
+	/* font-size: 32px; Fallback value. */
   	font-size: 1.6rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
