@@ -151,7 +151,7 @@ snap-tabs>section>article {
 } */
 
 article {
-    color: white;
+    color: var(--secondary-accent-colour, white);
     box-sizing: border-box;
     font-size: 1rem;
     line-height: 1;
@@ -167,9 +167,9 @@ article {
 
 /* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
 snap-tabs>snap-tabs-header {
-    --text-active-color: var(--main-dorkinians-yellow-colour, yellow);
-    background-color: var(--main-dorkinians-green-colour, darkgreen);
-	border-top: 0.125rem solid var(--main-dorkinians-yellow-colour, yellow);
+    --text-active-color: var(--main-accent-colour, yellow);
+    background-color: var(--main-background-colour, green);
+	border-top: 0.125rem solid var(--main-accent-colour, yellow);
 
     position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
     top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
@@ -204,7 +204,7 @@ snap-tabs>snap-tabs-header>nav {
 } */
 
 snap-tabs>snap-tabs-header a {
-    --text-color: white; /* Need the variable --text-color as needed in the JavaScript. */
+    --text-color: var(--secondary-accent-colour, white); /* Need the variable --text-color as needed in the JavaScript. */
 	/*--text-color: var(--accent-color-2, white); /* Need the variable --text-color as needed in the JavaScript. */
 	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
 	color: var(--accent-color-2, white);
