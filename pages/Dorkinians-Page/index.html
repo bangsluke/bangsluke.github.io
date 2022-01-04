@@ -89,8 +89,8 @@
         </div>
 
         <div class="options-container">
-            <span class="material-icons center fadein google-icons" id="options-button"
-                alt="Options Button" width="54" height="54" onclick="openNav()">
+            <span class="material-icons center fadein google-icons" id="options-button" alt="Options Button" width="54"
+                height="54" onclick="openNav()">
                 menu
             </span>
         </div>
@@ -98,7 +98,8 @@
     </header>
 
     <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
-    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
+    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()">
+    </div>
     <div class="background-overlay" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
 
     <!-- Pop Up Box -->
@@ -555,6 +556,29 @@
                                         <option>Oli Goddard</option>
                                         <option>Jonny Sourris</option>
                                     </select>
+                                </div>
+
+                            </div>
+
+                            <div class="player-stats-selection-container">
+
+                                <!-- Add a selection container to hold all of the elements needed for the drop down. -->
+                                <div class="selection-container">
+                                    <button onclick="showDropdownList('player-stats-selection-dropdown')" class="selection-dropdown">Dropdown</button>
+                                    <div id="player-stats-selection-dropdown" class="selection-dropdown-content">
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Search Icon.png"
+                                            alt="Search Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                        <input type="text" placeholder="Search.." id="player-stats-selection-input"
+                                            onkeyup="filterDropdownList('player-stats-selection-dropdown', 'player-stats-selection-input')">
+                                        <!-- <option class="textleft">About</option>
+                                        <option class="textleft">Base</option>
+                                        <option class="textleft">Blog</option>
+                                        <option class="textleft">Contact</option>
+                                        <option class="textleft">Custom</option>
+                                        <option class="textleft">Support</option>
+                                        <option class="textleft">Tools</option> -->
+                                    </div>
                                 </div>
 
                             </div>
@@ -2337,7 +2361,8 @@
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Five South</h4>
 
-                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
+                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this
+                                    season and so there is no table data to show.</p>
 
                             </div>
 
@@ -2484,7 +2509,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 5s Results and
                                     Fixtures</h4>
 
-                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
+                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this
+                                    season and so there is no table data to show.</p>
 
                             </div>
 

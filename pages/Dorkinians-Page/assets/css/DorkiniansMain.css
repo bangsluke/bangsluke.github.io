@@ -480,6 +480,9 @@ tr:last-child td:last-child {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
+	position: relative;
+	display: inline-block;
+	margin: auto;
 }
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
@@ -488,7 +491,7 @@ tr:last-child td:last-child {
 	border: none;
 	text-align: center;
 	width: 20%;
-	min-width: 8rem;
+	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
 	font-size: 0.8rem; /* Relative to root (html) value. */
@@ -497,8 +500,57 @@ tr:last-child td:last-child {
 /* Style the dropdown menu that appears for the user to click on. */
 option {
 	color: black; /* The font colour of the text. */ 
-	background-color: var(--secondary-accent-colour, white); /* The background colour behind the text. */ 
+	background-color: var(--secondary-accent-colour, white); /* The background colour behind the text. */
+	background-color: red;
 }
+
+  
+  /* Dropdown button on hover & focus */
+  .selection-dropdown:hover, .selection-dropdown:focus {
+	background-color: #3e8e41;
+  }
+  
+  /* The search field */
+  #myInput {
+	box-sizing: border-box;
+	font-size: 16px;
+	padding: 14px 20px 12px 45px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  /* The container <div> - needed to position the dropdown content */
+  /* .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+   */
+  /* Dropdown Content (Hidden by Default) */
+  .selection-dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f6f6f6;
+	min-width: 230px;
+	border: 1px solid #ddd;
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show-dropdown-option {display:block;}
 
 
 
