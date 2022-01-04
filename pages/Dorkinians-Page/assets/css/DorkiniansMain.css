@@ -63,6 +63,9 @@ Section 1
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--border-radius: 0.5rem;
+
+	/* Font Size */
+	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -79,7 +82,7 @@ html {
 	overflow-y: scroll;
 
 	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
-	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
+	font-size: var(--main-font-size, 16px); /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 
 	/* DELETE IF MAJOR ISSUES */
@@ -188,7 +191,7 @@ p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, but
 /* Define the sizes and other styles to each individual text style. */
 /* Used for top header text. */
 h1 {
-	font-size: 32px; /* Fallback value. */
+	/* font-size: 32px; Fallback value. */
   	font-size: 1.6rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
@@ -659,7 +662,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -816,11 +819,11 @@ Section 4
 
 /* 1. Homepage Tab */
 
-.homepage-next-fixtures-team-container {
+#homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
 	display: grid;
 	width: 100%;
-	grid-template-columns: max-content 3fr 1fr max-content; 
+	grid-template-columns: max-content max-content max-content max-content max-content; 
 	grid-template-rows: 1fr;
 	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
 	/* justify-items: stretch; */
@@ -829,12 +832,13 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+	overflow-x: scroll;
 }
-.homepage-next-fixtures-team-container p {
+#homepage-next-fixtures-team-container p {
 	/* color: red; */
 	font-size: 0.8rem;
 }
-.homepage-next-fixtures-team-container h4 {
+#homepage-next-fixtures-team-container h4 {
 	/* color: red; */
 	color: var(--main-accent-colour, yellow);
 	font-size: 0.8rem;
