@@ -263,6 +263,10 @@ function changeSiteTheme() {
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Light Theme";
 
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#FF3CAC','#FFFFFF85','#222129');
+        buildWeatherWidget();
+
     } else {
         // Change site theme to light mode.
 
@@ -276,6 +280,10 @@ function changeSiteTheme() {
 
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Dark Theme";
+
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#F9ED32','#FFFFFF','#1C8841');
+        buildWeatherWidget();
 
     }
 
