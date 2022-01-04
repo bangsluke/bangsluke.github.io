@@ -819,11 +819,11 @@ Section 4
 
 /* 1. Homepage Tab */
 
-.homepage-next-fixtures-team-container {
+#homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
 	display: grid;
 	width: 100%;
-	grid-template-columns: max-content 3fr 1fr max-content; 
+	grid-template-columns: max-content max-content max-content max-content max-content; 
 	grid-template-rows: 1fr;
 	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
 	/* justify-items: stretch; */
@@ -832,12 +832,13 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+	overflow-x: scroll;
 }
-.homepage-next-fixtures-team-container p {
+#homepage-next-fixtures-team-container p {
 	/* color: red; */
 	font-size: 0.8rem;
 }
-.homepage-next-fixtures-team-container h4 {
+#homepage-next-fixtures-team-container h4 {
 	/* color: red; */
 	color: var(--main-accent-colour, yellow);
 	font-size: 0.8rem;
