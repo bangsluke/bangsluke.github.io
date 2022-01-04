@@ -337,6 +337,10 @@ var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank ar
 
 // Player Stats Tab
 
+// Player Selection
+const displayAllowedPlayersSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=0&single=true&output=csv';
+var displayAllowedPlayersArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
 // This Season Stats
 const displayThisSeasonStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1147882021&single=true&output=csv';
 var displayThisSeasonStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
@@ -423,6 +427,17 @@ function init() {
         complete: getSideMenuInfo, // The callback to execute when parsing is complete.
     })
 
+    // Drop Down Options.
+    console.log('%c' + '> 0. Drop down data being loaded in.', 'background-color: darkblue; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Drop Down Options Info
+    Papa.parse(displayAllowedPlayersSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getPlayerDropdownInfo, // The callback to execute when parsing is complete.
+    })
+
 
     // Step 1. 
     // Homepage Tab.
@@ -439,9 +454,9 @@ function init() {
     // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
 
     // Get the next Saturday date and display it.
-    let now = new Date(); 
+    let now = new Date();
     let nextSaturdayDate = nextDay(now, 6);
-    nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
+    nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday: "short", year: "numeric", month: "short", day: "numeric" }) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
     document.getElementById("homepage-next-fixtures-header-text").innerHTML = "Next Fixtures (" + nextSaturdayDate + ")"; // Get the header and update it.
 
 
@@ -586,7 +601,7 @@ function hideLoadingPage() {
 
 
 
-// 0. Side Menu Functions
+// 0. Side Menu and Other Functions
 
 // 0.1. Side Menu data "getter" function.
 function getSideMenuInfo(results) {
@@ -625,6 +640,18 @@ function showSideMenuInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Side Menu");
+}
+
+// 0.3. Player Dropdown data "getter" function.
+function getPlayerDropdownInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
+    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown'); // Call the addPlayerDropdownInfo function.
 }
 
 
@@ -1862,8 +1889,8 @@ function randomNumber(min, max) {
 // Date Function
 
 // Next Date Function - https://stackoverflow.com/a/27336600/14290169
-function nextDay(d, dow){
-    d.setDate(d.getDate() + (dow+(7-d.getDay())) % 7);
+function nextDay(d, dow) {
+    d.setDate(d.getDate() + (dow + (7 - d.getDay())) % 7);
     return d;
 }
 
@@ -1904,4 +1931,45 @@ function displayInformation(informationBarID, displayMessage) {
     // Update the identified information bar with a given message. 
     var informationBar = document.getElementById(informationBarID); // Get the Information Bar using the provided ID.
     informationBar.innerHTML = displayMessage; // Add the text to the HTML element.
+}
+
+
+
+// When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+function showDropdownList(dropdownID) {
+    document.getElementById(dropdownID).classList.toggle("show-dropdown-option");
+}
+
+function populateDropdownList(playerNameArray, dropdownID) {
+
+    console.log("playerNameArray:");
+    console.log(playerNameArray);
+
+    // Loop through the stat array calling in the load stat data function but not filling up the bars.
+    for (let i = 0; i < playerNameArray.length; i++) {
+        let newOption = document.createElement("option");
+        var text = document.createTextNode(playerNameArray[i]);
+        newOption.appendChild(text);
+        let parentElement = document.getElementById(dropdownID);
+        parentElement.appendChild(newOption);
+    }
+
+    
+}
+
+// Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+function filterDropdownList(dropdownID, inputID) {
+    var input, filter, ul, li, option, i;
+    input = document.getElementById(inputID);
+    filter = input.value.toUpperCase();
+    div = document.getElementById(dropdownID);
+    option = div.getElementsByTagName("option");
+    for (i = 0; i < option.length; i++) {
+        txtValue = option[i].textContent || option[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            option[i].style.display = "";
+        } else {
+            option[i].style.display = "none";
+        }
+    }
 }
