@@ -488,7 +488,7 @@ tr:last-child td:last-child {
 	border: none;
 	text-align: center;
 	width: 20%;
-	min-width: 10rem;
+	min-width: 8rem;
 	height: 1.5rem;
 	margin: auto;
 	font-size: 0.8rem; /* Relative to root (html) value. */
@@ -982,9 +982,9 @@ Section 4
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
-	grid-template-columns: 45% 5% 45%; 
+	grid-template-columns: 45% 6% 45%; 
 	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 3%; /* First value is between rows, second columns. */
+	gap: 1rem 2%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
 	  "Player1Stats Blank Player2Stats"
@@ -995,11 +995,13 @@ Section 4
 	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
+	width: 100%;
 }
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
+	width: 100%;
 }
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
