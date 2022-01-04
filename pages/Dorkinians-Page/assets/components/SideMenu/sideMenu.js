@@ -87,10 +87,10 @@ const newLocal = `
 
                         <!-- Add the text size change action item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize()">
                         </div>
                         <div class="side-menu-text-container">
-                            <h4>Change Text Size</h4>
+                            <h4 id="side-menu-actions-change-font-size-text" onclick="changeTextSize()">Change Text Size to Large</h4>
                         </div>
 
                         <!-- Add the change theme item. -->
@@ -241,7 +241,7 @@ function closeNav() {
 
 }
 
-// Change the site theme style based on user selection.
+// Change the site theme style.
 function changeSiteTheme() {
     console.log("changeSiteTheme clicked."); // Log that the function has been called.
 
@@ -263,6 +263,10 @@ function changeSiteTheme() {
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Light Theme";
 
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#FF3CAC','#FFFFFF85','#222129');
+        buildWeatherWidget();
+
     } else {
         // Change site theme to light mode.
 
@@ -277,8 +281,41 @@ function changeSiteTheme() {
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Dark Theme";
 
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#F9ED32','#FFFFFF','#1C8841');
+        buildWeatherWidget();
+
     }
 
     closeNav(); // Close the side navigation that the function was called from.
     //console.log("Site theme changed."); // Log a final success message.
+}
+
+// Change the site text size.
+function changeTextSize() {
+    console.log("changeTextSize clicked."); // Log that the function has been called.
+
+    // Select the element holding the change site theme text.
+    let fontSizeTextElement = document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-actions-change-font-size-text');
+
+    // Check which font size has been selected and then react to the change.
+    if (fontSizeTextElement.innerHTML == "Change Text Size to Large") { // Current font is medium. Change to large.
+        // Change the text of the element holding the change font size text.
+        fontSizeTextElement.innerHTML = "Change Text Size to Small";
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('font-size', '20px');
+    } else if (fontSizeTextElement.innerHTML == "Change Text Size to Small") { // Current font is large. Change to small.
+        // Change the text of the element holding the change font size text.
+        fontSizeTextElement.innerHTML = "Change Text Size to Medium";
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('font-size', '12px');
+    } else { // Current font is small. Change to medium.
+        // Change the text of the element holding the change font size text.
+        fontSizeTextElement.innerHTML = "Change Text Size to Large";
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('font-size', '16px');
+    }
+
+    closeNav(); // Close the side navigation that the function was called from.
+    console.log("Text size changed."); // Log a final success message.
 }
