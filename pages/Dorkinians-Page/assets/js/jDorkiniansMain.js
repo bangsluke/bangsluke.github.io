@@ -418,7 +418,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
     // Step 0. 
     // Side Menu.
@@ -1592,7 +1592,8 @@ function openPopUpBox(headerText, messageText) {
 
     // Select the pop up box and show it.
     document.getElementById('pop-up-box').style.display = "inline"; // Show the pop up box.
-    document.getElementById('pop-up-box').style.zIndex = 10;
+    document.getElementById('background-overlay-pop-up-box').style.display = "inline"; // Show the background overlay behind the pop up box.
+    document.getElementById('background-overlay-pop-up-box').style.zIndex = 29; // Set the z-index of the background overlay to be right behind the pop up box.
 
     // Populate the pop up box with the text passed to it.
     document.getElementById("pop-up-box-header-text").innerHTML = headerText; // Add the header text to the HTML element.
@@ -1605,6 +1606,7 @@ function closePopUpBox() {
 
     // Select the pop up box and hide it.
     document.getElementById('pop-up-box').style.display = "none"; // Hide the pop up box.
+    document.getElementById('background-overlay-pop-up-box').style.display = "none"; // Hide the background overlay behind the pop up box.
 }
 
 

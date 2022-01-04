@@ -36,12 +36,29 @@ Section 1
 	
 	/* CSS variables - Add variables below like the given example. */
 	
-	/* Colours */
-	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
-    --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
-	--accent-color-white: #FFFFFF; /* White colour. */
-	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
-	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
+	/* Colours - These are dynamically modified using JS */
+	--main-background-colour: #1C8841;
+	--secondary-background-colour: #31a057;
+	--third-background-colour: #236f38;
+	--main-accent-colour: #F9ED32;
+	--main-accent-colour-rgb: 249, 237, 50;
+	--secondary-accent-colour: #ffffff;
+
+	/* Light Theme Colours Used */
+	/* --main-background-colour: #1C8841; Main Dorkinians green.
+	--secondary-background-colour: #31a057;
+	--third-background-colour: #236f38;
+	--main-accent-colour: #F9ED32; Main Dorkinians yellow.
+	--main-accent-colour-rgb: 249, 237, 50;
+	--secondary-accent-colour: #ffffff; */
+
+	/* Dark Theme Colours Used */
+	/* --main-background-colour: #222129;
+	--secondary-background-colour: #252432;
+	--third-background-colour: #282735;
+	--main-accent-colour: #FF3CAC;
+	--main-accent-colour-rgb: 255, 60, 172;
+	--secondary-accent-colour: #ffffff85; */
 
 	/* Distances & Spacing */
 	--headerHeight: 4rem; /* Define the header height variable. */
@@ -55,8 +72,7 @@ html {
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-    /* background-color: var(--main-dorkinians-green-colour, black); */
-    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
+    background-image: linear-gradient(67deg, var(--third-background-colour) 5%, var(--secondary-background-colour) 42%, var(--main-background-colour) 74%);
 
 	height: max-content;
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
@@ -130,9 +146,21 @@ body {
 	-webkit-backdrop-filter: blur( 20px );
 }
 
-/* Sub pag sections - multiple sections per tab. */
+/* Sub page sections - multiple sections per tab. */
 section {
 	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
+}
+
+/* Add a background overlay for closing other menus. */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+	z-index: 2;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -168,7 +196,7 @@ h1 {
   	font-size: 1.6rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
 
 /* Used for tab header text. */
@@ -176,7 +204,7 @@ h2 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 1.4rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
-	color: var(--main-dorkinians-yellow-colour, yellow);
+	color: var(--main-accent-colour, yellow);
 	padding-bottom: 1rem;
 }
 
@@ -185,7 +213,7 @@ h3 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 1.2rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	padding-bottom: 1rem;
 }
 
@@ -231,7 +259,7 @@ a {
 
 /* Create a class for yellow text. */
 .yellowtext {
-	color: #F9ED32 !important;
+	color: var(--main-accent-colour, yellow) !important;
 }
 
 
@@ -239,8 +267,7 @@ a {
 
 table {
 	/* background-color: white; */
-	color: var(--main-dorkinians-green-colour, darkgreen);
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	width: 100%;
 	text-align: center;
 	border: none;
@@ -257,8 +284,8 @@ table {
 /* Used for table headers across the site. */
 th {
 	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--main-dorkinians-green-colour, darkgreen);
-	box-shadow: inset 0rem 0rem 0rem var(--main-dorkinians-yellow-colour, yellow), inset 0rem -0.25rem 0rem var(--main-dorkinians-yellow-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	background-color: var(--main-background-colour, green);
+	box-shadow: inset 0rem 0rem 0rem var(--main-accent-colour, yellow), inset 0rem -0.25rem 0rem var(--main-accent-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 	font-style: bold; /* Make the header text bold */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.8rem; /* Relative to root (html) value. */
@@ -274,7 +301,7 @@ th {
 tr {
 	/* font-size: 14px; /* Fallback value. */
 	/* font-size: 0.9rem; /* Relative to root (html) value. */
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
 
 /* Used for table cell text across the site. */
@@ -291,15 +318,15 @@ td {
 /* Cell highlighting. */
 td:hover {
 	font-weight: bold;
-	border: 0.1rem solid white;
+	border: 0.1rem solid var(--secondary-accent-colour, white);
 }
 
 /* Add row highlighting. */
 tr:hover {
 	font: bold;
-	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
-	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
-	color: white;
+	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: var(--secondary-accent-colour, white);
 }
 
 /* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */ 
@@ -310,9 +337,9 @@ td, th {
 
 /* Column highlighting. Only on tables with class "column-highlight". */
 .column-highlight td:hover::after, th:hover::after {
-	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
-	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
-	color: white;
+	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: var(--secondary-accent-colour, white);
 	content: "";
 	position: absolute;
 	left: 0;
@@ -326,7 +353,7 @@ td, th {
 
 /* Add table column lines. */
 .table-column-lines {
-	border-right-color: var(--main-dorkinians-yellow-colour,yellow);
+	border-right-color: var(--main-accent-colour,yellow);
 	border-right-style: solid;
 	border-width: 0.1rem;
 }
@@ -356,7 +383,7 @@ tr:last-child td:last-child {
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
 .sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
-	background-color: var(--main-dorkinians-green-colour,darkgreen);
+	background-color: var(--main-background-colour,green);
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 1;
@@ -414,7 +441,7 @@ tr:last-child td:last-child {
 
 /* Style the added Google Icons - https://fonts.google.com/icons. */
 .google-icons {
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
 
 /* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
@@ -495,7 +522,7 @@ tr:last-child td:last-child {
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
 	background-color: rgba(255, 255, 255, 0.10);
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	border: none;
 	text-align: center;
 	width: 20%;
@@ -509,7 +536,7 @@ tr:last-child td:last-child {
 /* Style the dropdown menu that appears for the user to click on. */
 option {
 	color: black; /* The font colour of the text. */ 
-	background-color: white; /* The background colour behind the text. */ 
+	background-color: var(--secondary-accent-colour, white); /* The background colour behind the text. */ 
 }
 
 
@@ -605,7 +632,7 @@ Section 3
 	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "Logo Title Options";
-	border-bottom: 0.125rem solid white;
+	border-bottom: 0.125rem solid var(--secondary-accent-colour, white);
 }
 
 /* Style the Dorkinians logo in the top left corner. */
@@ -632,8 +659,8 @@ Section 3
 	grid-area: Options;
 	padding: 0.3rem;
 }
-.optionsbutton {
-    color: var(--accent-color-white, white);
+#options-button {
+    color: var(--secondary-accent-colour, white);
     /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
     left: 0rem;
@@ -646,8 +673,8 @@ Section 3
     margin: 0rem;
     padding: 0rem;
 }
-.optionsbutton:hover {
-    color: var(--main-dorkinians-yellow-colour);
+#options-button:hover {
+    color: var(--main-accent-colour, yellow);
 }
 
 
@@ -676,14 +703,13 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-    /* background-color: var(--main-dorkinians-green-colour, black); */
-    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
-	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-dorkinians-green-colour) 75%);
+    /* background-color: var(--main-background-colour, black); */
+	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%);
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -720,12 +746,12 @@ Section 3
 	grid-area: Title;
 }
 #loading-page-title-container h2 {
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
 #loading-page-loading-phrase-container {
 	/* background: green; */
 	grid-area: Phrases;
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	margin-top: 0rem;
 	display: flex;
 	justify-content: center;
@@ -757,24 +783,23 @@ Section 3
 	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
-	background: var(--main-dorkinians-green-colour, green);
+	background: var(--main-background-colour, green);
 	
 	/* Set the position of the box to be bang in the center of the screen. */
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 4; /* Have the pop up in front of all other items on the page. */
+	z-index: 30; /* Have the pop up in front of all other items on the page. */
 
 	/* Control and set the size of the box based on the content. */
-	height: max-content;
-	min-height: 20%; /* At minimum, have the height at 20%. */
+	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
 	max-height: 60%; /* At maximum, have the height at 60%. */
 	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
 	width: 95%;
 	
 	/* Style the pop up box. */
-	border: 0.125rem solid white;
+	border: 0.125rem solid var(--secondary-accent-colour, white);
 	border-radius: var(--border-radius, 2rem);
 	padding: 0.7rem; /* Add internal padding to the pop up box. */
 }
@@ -822,7 +847,7 @@ Section 3
 /* Style the text in the pop up box. */
 
 #pop-up-box a, h3, p {
-	color: var(--accent-color-white, white);
+	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
 }
 
 /* Footer Section */
@@ -862,7 +887,7 @@ Section 4
 
 .homepage-next-fixtures-team-container h4 {
 	/* color: red; */
-	color: var(--main-dorkinians-yellow-colour, #F9ED32);
+	color: var(--main-accent-colour, yellow);
 	font-size: 0.8rem;
 }
 
@@ -1106,7 +1131,7 @@ div.cell {
 
 /* Create an initial styling for the comparison bars which start white. */
 .bar-container .comparison-stat-bar {
-	background-color: white;
+	background-color: var(--secondary-accent-colour, white);
 	/* background-color: green; */
 	position: absolute;
 	height: 80%;
@@ -1131,7 +1156,7 @@ div.cell {
 
 /* Create a class to be added to the bar that is greater/or less. */
 .yellow {
-	background-color: #F9ED32 !important;
+	background-color: var(--main-accent-colour, yellow) !important;
 }
 
 
@@ -1169,7 +1194,7 @@ div.cell {
 	transform: rotate(20deg);
 }
 .card-icon#yellow-card {
-	background-color: #F9ED32;
+	background-color: yellow;
 }
 .card-icon#red-card {
 	background-color: red;
