@@ -20,14 +20,9 @@
 // 3. A "show-er" function which is called from the "getter" function and displays the initial data on the page.
 // 4. A "update-er" function which is called from the "show-er" function and displays the updated data on the page.
 
-
-
-
 // First section loads in the Stats tab data.
 // Second section loads in the Results tab data.
 // Third section loads in the Fixtures tab data.
-
-
 
 
 
@@ -318,8 +313,6 @@ const statObject = {
         statCategory: 'Appearance Stat'
     }
 };
-// console.log(statObject.APP.statFormat);
-
 
 // Google Sheet Links
 
@@ -328,6 +321,7 @@ const siteDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1
 var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Homepage Tab
+
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
@@ -351,17 +345,13 @@ var displayThisSeasonStatsArrayOfObjects = ""; // Define an initially blank arra
 const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
 var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
-
-
-
-
-
 // Fixtures List Tab
 const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
 // Match Details Tab
 //var matchDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1016205165&single=true&output=csv';
 // Display Details Tab
 const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
+
 
 
 // Ready Events
@@ -419,6 +409,7 @@ function init() {
 
     // Call the updateLoadingPage function to change the shown phrase.
     // updateLoadingPage();
+
 
     // Step 0. 
     // Side Menu.
@@ -478,7 +469,6 @@ function init() {
     displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
 
 
-
     // Step 3. 
     // Player Stats Tab.
     console.log('%c' + '> 3. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -503,13 +493,11 @@ function init() {
     displayInformation("player-stats-information-bar", "Select a player to view their stats. Or just marvel at Slado's achievements...");
 
 
-
     // Step 4. 
     // Team Of The Week Tab.
 
     // Update the information bar.
     displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
-
 
 
     // Step 5. 
@@ -520,7 +508,6 @@ function init() {
 
     // Update the information bar.
     displayInformation("comparison-information-bar", "Select a first player to view their all time stats");
-
 
 
     // Step 6. 
@@ -536,12 +523,10 @@ function init() {
 
 
 
-
 // Loading Functions
 
+// Update the phrase text on the page every few seconds.
 function updateLoadingPage() {
-    // Update the phrase text on the page every few seconds.
-
     // Create a setInterval for every 6 seconds to change the shown phrase.
     let loopPhrases = setInterval(function () {
         let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
@@ -582,19 +567,14 @@ function updateLoadingPage() {
     }, 6000);
 }
 
-function randomNumber(min, max) {
-    // Function to generate random number. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
-    return Math.random() * (max - min) + min;
-}
-
+// Increment the component ready count until it matches with the numberReadyComponents.
 function incrementComponentReadyCount(tabName) {
-    // Increment the component ready count until it matches with the numberReadyComponents.
     readyComponentsCount = readyComponentsCount + 1;
     console.log('%c' + '> readyComponentsCount (' + tabName + ') = ' + readyComponentsCount + '/' + numberReadyComponents, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 }
 
+// Hide the loading page as all tabs have returned as ready.
 function hideLoadingPage() {
-    // Hide the loading page as all tabs have returned as ready.
     console.log("Loading Page hidden as all tabs are ready.")
     let loadingPageElement = document.getElementById("loading-page"); // Get the loading-page element on the page.
     loadingPageElement.classList.add("fadeout"); // Add the hidden class to the loading-page element.
@@ -603,6 +583,7 @@ function hideLoadingPage() {
         loadingPageElement.classList.add("hidden"); // Add the hidden class to the loading-page element.
     }, 1000);
 }
+
 
 
 // 0. Side Menu Functions
@@ -644,7 +625,6 @@ function showSideMenuInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Side Menu");
-
 }
 
 
@@ -663,7 +643,6 @@ function getHomepageTabInfo(results) {
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
     showHomepageTabInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabInfo function.
-
 }
 
 // 1.2. Homepage tab data "show-er" function.
@@ -697,10 +676,7 @@ function showHomepageTabInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Homepage");
-
 }
-
-
 
 
 
@@ -719,7 +695,6 @@ function getTotalClubStatsInfo(results) {
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
     showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
-
 
 // 2.1.2. Total Club Stats data "show-er" function.
 function showTotalClubStatsInfo(results) {
@@ -789,15 +764,11 @@ function showTotalClubStatsInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Club Stats - Total Club Stats");
-
 }
-
 
 // 2.1.3. Total Club Stats data "update-er" function.
 
 // For updater function - see full tab updater below (section 2.4).
-
-
 
 // 2.2 Teams Season Results
 
@@ -858,18 +829,13 @@ function showTeamSeasonResultsInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Club Stats - Teams Season Results");
-
 }
-
 
 // 2.2.3. Team Season Results Info data "update-er" function.
 
 // For updater function - see full tab updater below (section 2.4).
 
-
 // 2.3 All Club Results
-
-
 
 // 2.4. Full Club Stats data "update-er" function.
 function updateClubStatsInfo() {
@@ -893,8 +859,6 @@ function updateClubStatsInfo() {
 
 
 
-
-
 // 3. Player Stats Tab
 
 // Player Stats tab needs to process two data parses, "displayThisSeasonStats" and "displayAllTimeStats".
@@ -909,7 +873,6 @@ function getPlayerStatsThisSeasonTabInfo(results) {
     // console.log("Global variable 'displayThisSeasonStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStatsThisSeasonTabInfo function.
-
 }
 
 // 3.1.b. Player Stats All Time stats tab data "getter" function.
@@ -922,7 +885,6 @@ function getPlayerStatsAllTimeTabInfo(results) {
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
-
 }
 
 // 3.2.a. Player Stats This Season tab data "show-er" function.
@@ -1031,7 +993,6 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Player Stats - This Season Stats");
-
 }
 
 // 3.2.b. Player Stats All Time tab data "show-er" function.
@@ -1096,7 +1057,6 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Player Stats - All Time Stats");
-
 }
 
 // 3.3. Player Stats tab data "update-er" function.
@@ -1118,15 +1078,7 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 
-
-
-
-
-
-
 // 4. Team of the Week Tab
-
-
 
 
 
@@ -1137,7 +1089,6 @@ function showPlayerStatsTabUpdatedInfo() {
 // There is no Comparison tab data "getter" function.
 
 // 5.2. Comparison tab data "show-er" function.
-
 function showComparisonStatData() {
     // Initially load in all stats tooltips to the stat containers.
     console.log('%c' + '>> showComparisonStatData.', 'background-color: grey; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1172,12 +1123,10 @@ function showComparisonStatData() {
     }
 
     console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
-
 }
 
 // 5.3. Comparison tab data "update-er" functions.
 function updateComparisonStatData() {
-
     // Reset all stats bars on the Comparison tab.
     resetStatsBars();
 
@@ -1203,19 +1152,15 @@ function updateComparisonStatData() {
         displayInformation("comparison-information-bar", "Select a first player to view their stats");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
-
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
-
                 console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
                 console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
-
         }
-
     } else if (player1NameValue === "Select Player 1") {
         // Player 1 dropdown is blank so fill in details for player 2.
         console.log("Player 1 dropdown is blank so fill in details for player 2.");
@@ -1223,19 +1168,15 @@ function updateComparisonStatData() {
         displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
-
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
-
                 console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
                 console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
-
         }
-
     } else if (player2NameValue === "Select Player 2") {
         // Player 2 dropdown is blank so fill in details for player 1.
         console.log("Player 2 dropdown is blank so fill in details for player 1.");
@@ -1243,19 +1184,15 @@ function updateComparisonStatData() {
         displayInformation("comparison-information-bar", "Select a second player to compare to");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
-
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, false);
-
                 console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
                 console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
-
         }
-
     } else if (player1NameValue === player2NameValue) {
         // Both dropdowns are the same.
         console.log("Both dropdowns are the same.");
@@ -1263,19 +1200,15 @@ function updateComparisonStatData() {
         displayInformation("comparison-information-bar", "Why are you comparing the same player you weirdo?");
         // Loop through the stat array calling in the load stat data function and filling the bars.
         for (let i = 0; i < statsArray.length; i++) {
-
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true);
-
                 console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
                 console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
-
         }
-
     } else {
         // Both player 1 and player 2 dropdowns are populated so fill in details for both players and load stat bars.
         console.log("Both dropdowns are populated so complete all details.");
@@ -1283,26 +1216,22 @@ function updateComparisonStatData() {
         displayInformation("comparison-information-bar", "Click on any stat row to see an explanation of the stat");
         // Loop through the stat array calling in the load stat data function and filling the bars.
         for (let i = 0; i < statsArray.length; i++) {
-
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 loadInComparisonStatNumbers(statsArray[i], player1NameValue, player2NameValue, true);
-
                 console.log("Stat = " + statsArray[i] + " found on sheet so populating."); // Log the successful action.
             }
             catch (err) {
                 console.warn("Stat = " + statsArray[i] + " not found on sheet so skipping."); // Log the unsuccessful action as a warning.
             }
-
         }
     }
 
     console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
-
 }
 
+// Sub function to load in the correct stat numbers. Called from updateComparisonStatData above.
 function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBarsBoolean) {
-
     // Use the global variable "displayAllTimeStatsArrayOfObjects" and filter it down for the defined player name.
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the received array of objects.
     var objectLength = displayAllTimeStatsArrayOfObjects.length; // Get the original length of the array.
@@ -1478,6 +1407,7 @@ function loadInComparisonStatNumbers(statName, player1Name, player2Name, fillBar
     }
 }
 
+// Sub function to reset the bars. Called from updateComparisonStatData above.
 function resetStatsBars() {
     // Create a function to reset all stat bars whenever needed.
     console.log("function resetStatsBars called.");
@@ -1522,10 +1452,7 @@ function resetStatsBars() {
     }
 
     console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
-
 }
-
-
 
 
 
@@ -1590,8 +1517,6 @@ function updateTablesResultsandFixturesTab() {
 
 
 
-
-
 // Pop Up Box Functions
 
 // Open and display a message on the pop up box.
@@ -1616,8 +1541,6 @@ function closePopUpBox() {
     document.getElementById('pop-up-box').style.display = "none"; // Hide the pop up box.
     document.getElementById('background-overlay-pop-up-box').style.display = "none"; // Hide the background overlay behind the pop up box.
 }
-
-
 
 
 
@@ -1657,7 +1580,6 @@ function createFullTable(data, selector, toolTipBoolean, dataForm) {
     generateTableHead(table, headerdata, data, toolTipBoolean); // Call the generateTableHead function to create the table headers. Note that headerdata contains the headers only, array contains the full data.
     generateTable(table, data, toolTipBoolean); // Call the generateTable function to populate the rest of the table data.
     //console.log("Function: createFullTable finished.") // Log a final message to show the function is complete.
-
 }
 
 // Create a table of data from the received data.
@@ -1778,8 +1700,6 @@ function generateTable(table, data, toolTipBoolean) {
 
 
 
-
-
 // Filter Array Functions
 
 // Filter an Array of Objects and return another Array of Objects, filtered by the input value, against the defined objects key. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
@@ -1862,10 +1782,8 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
 
 
 
-
 // Format a value based on a passed format type.
 function formatValue(valueToBeFormatted, statFormat) {
-
     if (statFormat == "Integer") { // Convert the stat to an integer.
         var displayText = Number(valueToBeFormatted).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
     } else if (statFormat == "Decimal2") { // Convert the stat to 2 decimal places.
@@ -1925,14 +1843,18 @@ function toggleFullScreen(element) {
 
 
 
-
-
-// Math Function
+// Math Functions
 
 // Rounding Function (https://learnersbucket.com/examples/javascript/learn-how-to-round-to-2-decimal-places-in-javascript/).
 let roundOff = (num, places) => {
     const x = Math.pow(10, places);
     return Math.round(num * x) / x;
+}
+
+// Random Number Function. https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/.
+function randomNumber(min, max) {
+    // Function to generate random number between a defined min and max.
+    return Math.random() * (max - min) + min;
 }
 
 
@@ -1960,6 +1882,7 @@ function rotateLogo(logoID) {
     dorkiniansLogo.classList.add("linear"); // Add the "linear" class to the logo.
     dorkiniansLogo.classList.add("infinite"); // Add the "infinite" class to the logo.
 }
+
 // Finish Rotation
 function stopRotateLogo(logoID) {
     // Finish rotating the logo given the defined id of the logo to rotate.
