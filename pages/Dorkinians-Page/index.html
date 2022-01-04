@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 
 <!-- Declare the language of the Web Page. -->
-<html lang="en-uk">
+<html lang="en-uk" style="font-size:16px">
 
 <head>
 
@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
         rel="stylesheet">
+
+    <!-- Link to icons to be used on site. -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <!-- Main CSS styling -->
@@ -55,6 +58,11 @@
                 alt="Dorkinians Logo" width="400" height="400" onclick="init()">
         </div>
 
+        <!-- Add a div to hold the page title. -->
+        <div class="loading-page-container fadein" id="loading-page-title-container">
+            <h2 class="white">Stats Page</h2>
+        </div>
+
         <!-- Add a div to hold the random phrase text. -->
         <div class="loading-page-container fadein" id="loading-page-loading-phrase-container">
             <p id="loading-phrase"></p>
@@ -63,14 +71,15 @@
 
     <!-- Header -->
 
+    <!-- Add all of the header information to be displayed at the top of the page. -->
     <header class="header-area center">
 
         <div class="logo-container">
             <!-- Add Dorkinians logo. -->
             <!-- Link back to the main homepage. Delete later or minimise. -->
-            <a href="\Homepage.html"><img class="logo fadein center" id="dorkinians-header-logo"
-                    src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
-                    alt="Dorkinians Logo" width="30" height="30"></a>
+            <img class="logo fadein center" id="dorkinians-header-logo"
+                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
+                alt="Dorkinians Logo" width="30" height="30" onclick="init()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -80,13 +89,42 @@
         </div>
 
         <div class="options-container">
-            <!-- Add options burger menu button with JavaScript functionality. -->
-            <img class="center fadein optionsbutton" id="optionsbutton"
-                src="/pages/Dorkinians-Page/assets/images/Burger Menu Icon.png" alt="Options Button" width="54"
-                height="54" onclick="openNav()">
+            <span class="material-icons center fadein google-icons" id="options-button"
+                alt="Options Button" width="54" height="54" onclick="openNav()">
+                menu
+            </span>
         </div>
 
     </header>
+
+    <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
+    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
+    <div class="background-overlay" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
+
+    <!-- Pop Up Box -->
+
+    <!-- Add a pop up box that can be modified and called for various reasons. -->
+    <div id="pop-up-box" style="display: none">
+
+        <!-- The x close button. -->
+        <a id="pop-up-box-close-button" href="javascript:void(0)" onclick="closePopUpBox()">×</a>
+
+        <!-- Add a div to hold the header and message. -->
+        <div id="pop-up-box-container">
+
+            <!-- Add a div to hold the header text. -->
+            <div id="pop-up-box-header-container">
+                <h3 id="pop-up-box-header-text">Testing</h3>
+            </div>
+
+            <!-- Add a div to hold the message text. -->
+            <div id="pop-up-box-message-container">
+                <p id="pop-up-box-message-text">Testing 1 2</p>
+            </div>
+
+        </div>
+
+    </div>
 
     <!-- Side Menu -->
 
@@ -96,12 +134,11 @@
     <!-- Main Page Content -->
 
     <!-- This is all the content between the header and footer. -->
-    <div class="main-content-area fadein" id="IndividualsPage-main-content-area">
+    <div class="fadein" id="main-content-area">
 
         <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
         <!-- Add an initial div to hold the snap tabs. -->
-
         <div class="snap-tabs-container">
 
             <snap-tabs>
@@ -283,15 +320,14 @@
 
                             </section>
 
-
                             <!-- Weather Widget Section -->
                             <section class="homepage-weather-container">
 
                                 <h3 class="textleft">Weather Forecast</h3>
 
                                 <!-- https://weatherwidget.io/ -->
-                                <section class="weather">
-                                    <a class="weatherwidget-io" SameSite=None
+                                <section class="weather" id="weather-widget-container">
+                                    <a id="weather-widget" class="weatherwidget-io" SameSite=None
                                         href="https://forecast7.com/en/51d23n0d33/dorking/"
                                         data-label_1="PIXHAM LANE, DORKING" data-label_2="Weather"
                                         data-icons="Climacons Animated" data-theme="original"
@@ -315,32 +351,31 @@
                         <!-- Add the main lighter coloured page section. -->
                         <section class="page-section">
 
-                            <h2 class="textcenter">Club Stats</h2>
+                            <h2 class="textcenter" id="club-stats-main-header-text">Club Stats</h2>
 
                             <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
                             <div class="information-bar" id="club-stats-information-bar"></div>
 
-                            <div class="selection-container">
+                            <div class="selection-container" id="club-stats-team-season-results-selection">
 
                                 <!-- Add a drop down select box for the user to change the statistic category. -->
 
                                 <!-- Let the user pick which season to filter for. -->
                                 <select name="SeasonSelection" class="selection-dropdown"
-                                    id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Season</option>
+                                    id="club-stats-season-selection-dropdown" onchange="updateClubStatsInfo()">
+                                    <option value="">All Seasons</option>
                                     <option value="2016/17">2016/17</option>
                                     <option value="2017/18">2017/18</option>
                                     <option value="2018/19">2018/19</option>
                                     <option value="2019/20">2019/20</option>
                                     <option value="2020/21">2020/21</option>
-                                    <option value="2021/22">2021/22</option>
+                                    <option value="2021/22" selected="selected">2021/22</option>
                                 </select>
 
                                 <!-- Let the user pick which team to filter for. -->
                                 <select name="TeamSelection" class="selection-dropdown"
-                                    id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Team</option>
-                                    <option value="WholeClub">Whole club</option>
+                                    id="club-stats-team-selection-dropdown" onchange="updateClubStatsInfo()">
+                                    <option value="WholeClub" selected="selected">Whole club</option>
                                     <option value="1st XI">1st XI</option>
                                     <option value="2nd XI">2nd XI</option>
                                     <option value="3rd XI">3rd XI</option>
@@ -355,20 +390,91 @@
 
                             <section class="club-stats-area">
 
-                                <!-- <section class="club-stats-clubStats-container">
+                                <div id="club-stats-total-club-and-team-stats-container">
 
-                                    <details>All stats are collected each week by the Captains and reported to the club
-                                        for
-                                        reference here.</details>
+                                    <div id="club-stats-total-club-and-team-stats-header-container">
 
-                                    <p>- Show total club stats, total recorded goals scored etc.</p>
-                                    <p>- How many members</p>
+                                        <div>
+                                            <h3 id="club-team-stats-header-text" class="textleft"> Stats</h3>
+                                        </div>
 
-                                </section> -->
+                                        <!-- Add a hoverable information icon next to the top header. -->
+                                        <div class="material-icons icon-tooltip">
+                                            info
+                                            <span class="icon-tooltip-text">All stats are collected each week by the
+                                                Captains and reported
+                                                to the club for reference here.</span>
+                                        </div>
 
-                                <section class="club-stats-all-club-results-container">
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of games played:</h5>
+                                        <p class="yellowtext" id="club-team-stats-numberGamesPlayed"></p>
+                                        <p> games (</p>
+                                        <p class="yellowtext" id="club-team-stats-numberLeagueGamesPlayed"></p>
+                                        <p> in the league, </p>
+                                        <p class="yellowtext" id="club-team-stats-numberCupGamesPlayed"></p>
+                                        <p> in cups and </p>
+                                        <p class="yellowtext" id="club-team-stats-numberFriendlyGamesPlayed"></p>
+                                        <p> friendlies).</p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of recorded players:</h5>
+                                        <p class="yellowtext" id="club-team-stats-numberPlayers"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of goals scored:</h5>
+                                        <p class="yellowtext" id="club-team-stats-numberGoalsScored"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Average number of goals scored per game:</h5>
+                                        <p class="yellowtext" id="club-team-stats-goalsPerGame"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of goalscorers:</h5>
+                                        <p class="yellowtext" id="club-team-stats-numberGoalscorers"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Top goalscorer (and total):</h5>
+                                        <p class="yellowtext" id="club-team-stats-topGoalscorer"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Total number of goals conceded:</h5>
+                                        <p class="yellowtext" id="club-team-stats-numberGoalsConceded"></p>
+                                    </div>
+
+                                    <div>
+                                        <h5>Average number of goals conceded per game:</h5>
+                                        <p class="yellowtext" id="club-team-stats-goalsConcededPerGame"></p>
+                                    </div>
+
+                                </div>
+
+                                <section id="club-stats-team-season-results-container">
+
+                                    <h3 class="textleft">Teams Season Results</h3>
+
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <div class="table-wrapper">
+                                        <table id="team-season-results-table" class="column-highlight">
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        </table>
+                                    </div>
+
+                                </section>
+
+                                <section id="club-stats-all-club-results-container">
 
                                     <h3 class="textleft">All Club Results</h3>
+
+                                    <p>Add in a filterable table of all Dorkinians results.</p>
 
                                     <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
                                     <div class="table-wrapper">
@@ -396,7 +502,7 @@
                             <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
                             <div class="information-bar" id="player-stats-information-bar"></div>
 
-                            <section class="player-stats-selection-container">
+                            <div class="player-stats-selection-container">
 
                                 <div class="selection-container">
                                     <!-- Add a drop down select box for the user to change the statistic category. -->
@@ -404,6 +510,8 @@
                                         id="player-stats-player-selection" onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option>Luke Bangs</option>
                                         <option selected="selected">Sam Slade</option>
+                                        <option>James Whitmarsh</option>
+                                        <option>Charlie Woodman</option>
                                         <option>Kieran Mackrell</option>
                                         <option>Al Thom</option>
                                         <option>Ali Robins</option>
@@ -413,388 +521,549 @@
                                     </select>
                                 </div>
 
+                            </div>
+
+                            <!-- Add a section for This Season Stats. -->
+                            <section>
+
+                                <h3 class="textleft">This Season Stats</h3>
+
+                                <div class="player-stats-selection-container">
+
+                                    <div class="selection-container">
+                                        <!-- Add a drop down select box for the user to change the statistic category. -->
+                                        <select name="player-stats-this-season-stats-category-selection"
+                                            class="selection-dropdown"
+                                            id="player-stats-this-season-stats-category-selection"
+                                            onchange="showPlayerStatsTabUpdatedInfo()">
+                                            <option value="All">All Stats</option>
+                                            <option value="Appearance Stat">Appearance Stats</option>
+                                            <option value="Performance Stat" selected="selected">Performance Stats
+                                            </option>
+                                            <option value="Penalty Stat">Penalty Stats</option>
+                                            <option value="Per App/Minute Stat">Per App/Minutes Stats</option>
+                                            <option value="Results Stat">Results Stats</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <!-- Add a container to hold all of the this season stats. -->
+                                <div id="player-stats-this-season-top-container">
+
+                                    <!-- Appearances -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-APP-container">
+                                        <h5>Appearances:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-APP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                                            alt="APP Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Minutes -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-M-container">
+                                        <h5>Minutes played:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-M"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                                            alt="Minutes Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- MoMs -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MOM-container">
+                                        <h5>Man of the Matches:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MOM"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MoM Icon.png"
+                                            alt="MoM Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Goals -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-G-container">
+                                        <h5>Goals scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-G"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Goals Icon.png"
+                                            alt="Goals Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Assists -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-A-container">
+                                        <h5>Assists provided:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-A"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Assist Icon.png"
+                                            alt="Assist Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Yellow Cards -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-Y-container">
+                                        <h5>Yellow cards received:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-Y"></p>
+                                        <!-- Create the yellow card icon using CSS. -->
+                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+                                    </div>
+
+                                    <!-- Red Cards -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-R-container">
+                                        <h5>Red cards received:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-R"></p>
+                                        <!-- Create the red card icon using CSS. -->
+                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+                                    </div>
+
+                                    <!-- Own Goals -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-OG-container">
+                                        <h5>Own goals scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-OG"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Own Goal Icon.png"
+                                            alt="OG Icon" class="comparison-icon center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Conceded -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-C-container">
+                                        <h5>Goals conceded:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-C"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png"
+                                            alt="Conceded Icon" class="comparison-icon red center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Clean Sheets -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-CLS-container">
+                                        <h5>Clean sheets achieved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-CLS"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Clean Sheet Icon.png"
+                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Penalties Scored -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PSC-container">
+                                        <h5>Penalties scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PSC"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Scored Icon.png"
+                                            alt="Penalties Scored Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Penalties Missed -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PM-container">
+                                        <h5>Penalties missed:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PM"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Missed Icon.png"
+                                            alt="Penalties Missed Icon" class="comparison-icon red center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Penalties Conceded -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PCO-container">
+                                        <h5>Penalties conceded:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PCO"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Conceded Icon.png"
+                                            alt="Penalties Conceded Icon" class="comparison-icon red center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Penalties Saved -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-PSV-container">
+                                        <h5>Penalties saved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-PSV"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Saved Icon.png"
+                                            alt="Penalties Saved Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Fantasy Points -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-FTP-container">
+                                        <h5>Fantasy points achieved:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-FTP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Fantasy Points Icon.png"
+                                            alt="Fantasy Points Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Goals Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-GperAPP-container">
+                                        <h5>Goals scored per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-GperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/GperApp Icon.png"
+                                            alt="Goals Per App Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Conceded Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-CperAPP-container">
+                                        <h5>Goals conceded per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-CperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png"
+                                            alt="Conceded Per App Icon" class="comparison-icon red center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Minutes Per Goal -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MperG-container">
+                                        <h5>Minutes taken per goal scored:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MperG"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/MperG Icon.png"
+                                            alt="Minutes Per Goal Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Minutes Per Clean Sheet -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MperCLS-container">
+                                        <h5>Minutes taken per clean sheet:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MperCLS"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Per Clean Sheet Icon.png"
+                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Fantasy Points Per App -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-FTPperAPP-container">
+                                        <h5>Fantasy points per appearance:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-FTPperAPP"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Fantasy Points Per Appearance Icon.png"
+                                            alt="Fantasy Points Per Appearance Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Distance Travelled -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-DIST-container">
+                                        <h5>Distance travelled:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-DIST"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Distance Icon.png"
+                                            alt="Distance Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-Games%Won-container">
+                                        <h5>Percentage of games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-Games%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Game Percentage Won Icon.png"
+                                            alt="Game % Won Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Home Games -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-HomeGames-container">
+                                        <h5>Home games:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-HomeGames"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Icon.png"
+                                            alt="Home Games Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Home Wins -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-HomeWins-container">
+                                        <h5>Home wins:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-HomeWins"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Won Icon.png"
+                                            alt="Home Games Won Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Home Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-HomeGames%Won-container">
+                                        <h5>Percentage of home games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-HomeGames%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Percentage Icon.png"
+                                            alt="Home Game % Won Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Away Games -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-AwayGames-container">
+                                        <h5>Away games:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-AwayGames"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Icon.png"
+                                            alt="Away Games Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Away Wins -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-AwayWins-container">
+                                        <h5>Away wins:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-AwayWins"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Won Icon.png"
+                                            alt="Away Games Won Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+                                    </div>
+
+                                    <!-- Away Game % Won -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-AwayGames%Won-container">
+                                        <h5>Percentage of away games won:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-AwayGames%Won"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Percentage Icon.png"
+                                            alt="Away Game % Won Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                </div>
+
                             </section>
 
-                            <br>
+                            <!-- Add a section for Past Seasons Stats. -->
+                            <section>
 
-                            <h3 class="textleft">All Time Player Stats</h3>
+                                <h3 class="textleft">Past Season Stats</h3>
 
-                            <!-- Add a top level holder section area. -->
-                            <section class="player-stats-area">
-
-                                <div class="player-stats-container" id="player-stats-minutes-container">
-
-                                    <p id="player-stats-M" class="font-huge-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-                                    <p id="player-stats-M-header">minutes played</p>
-
-                                    <br>
-
-                                    <p id="player-stats-APP-header">across </p>
-                                    <p id="player-stats-APP" class="font-big-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-                                    <p id="player-stats-APP-header"> appearances</p>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-MOM-container">
-
-                                    <p id="player-stats-MOM" class="font-big-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-                                    <p id="player-stats-MOM-header" class="font-small"> man of the match performances
-                                    </p>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-goals-container">
-
-                                    <p id="player-stats-G-header" class="font-big-bold">Goals scored</p>
-                                    <br>
-                                    <p id="player-stats-G" class="font-huge-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-assists-container">
-
-                                    <p id="player-stats-A" class="font-big-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-                                    <p id="player-stats-A-header"> assists for goals</p>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-cards-container">
-
-                                    <!-- Add a top header section for the phrase "Discipline". -->
-                                    <div class="player-stats-container font-small"
-                                        id="player-stats-cards-container-discipline">
-                                        <h4 class="textleft">Discipline</h4>
-                                    </div>
-
-                                    <!-- Add a section to hold the text "Yellow Cards". -->
-                                    <div class="player-stats-container center"
-                                        id="player-stats-cards-container-yellowheader">
-                                        <h4 class="textleft" id="player-stats-Y-header">cards</h4>
-                                    </div>
-
-                                    <!-- Add a section to hold the text "Red Cards". -->
-                                    <div class="player-stats-container center"
-                                        id="player-stats-cards-container-redheader">
-                                        <h4 class="textleft" id="player-stats-R-header">cards</h4>
-                                    </div>
-
-                                    <!-- Add a section to hold the number of Yellow Cards. -->
-                                    <div class="player-stats-container center"
-                                        id="player-stats-cards-container-yellowcards">
-                                        <p id="player-stats-Y" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                    </div>
-
-                                    <!-- Add a section to hold the number of Red Cards. -->
-                                    <div class="player-stats-container center"
-                                        id="player-stats-cards-container-redcards">
-                                        <p id="player-stats-R" class="font-big-bold">
-                                            <!-- Text loaded into here by jDorkiniansMain.js -->
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-OG-container">
-
-                                    <p id="player-stats-OG" class="font-big-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-                                    <p class="textleft" id="player-stats-R-header">own goals</p>
-
-                                </div>
-
-                                <div class="player-stats-container" id="player-stats-conceded-container">
-
-                                    <p id="player-stats-C">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                    <h4 class="textleft font-small" id="player-stats-C-header">goals conceded and </h4>
-
-                                    <p id="player-stats-CLS" class="font-big-bold">
-                                        <!-- Text loaded into here by jDorkiniansMain.js -->
-                                    </p>
-
-                                    <h4 class="textleft font-small" id="player-stats-CLS-header"> clean sheets</h4>
-
-                                </div>
-
-
-                            </section>
-
-                            <!-- <section class="player-stats-this-season-container">
-
-                                <h3 class="textleft">Stats Inspiration</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/LayoutInspirationStats.png" alt="ThisSeason">
-
-                            </section> -->
-
-                            <br>
-
-                            <br>
-
-                            <h3 class="textleft">Minute By Minute Stats</h3>
-
-                            <div class="player-stats-container" id="player-stats-minutes-by-minutes-container">
-
-                                <h4 class="textleft" id="player-stats-GperAPP-header">Goals per Appearance:</h4>
-                                <p id="player-stats-GperAPP">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                <table id="player-stats-past-seasons-table">
+                                    <!-- Header Row -->
+                                    <tr>
+                                        <th>Season</th>
+                                        <th>Appearance
+                                            <!-- Add the icon for the appearance stat. -->
+                                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                                                alt="APP Icon" class="comparison-icon white center" height="25px"
+                                                width="25px">
+                                        </th>
+                                        <th>Minutes
+                                            <!-- Add the icon for the minutes stat. -->
+                                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                                                alt="Minutes Icon" class="comparison-icon white center" height="25px"
+                                                width="25px">
+                                        </th>
+                                        <th>Goals</th>
+                                        <th>Assists</th>
+                                        <th>Clean Sheets</th>
+                                    </tr>
+                                    <!-- 2016/17 Stats -->
+                                    <tr>
+                                        <td>2016/17</td>
+                                        <td id="player-stats-past-seasons-2016/17-APP"></td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                    </tr>
+                                    <!-- 2017/18 Stats -->
+                                    <tr>
+                                        <td>2017/18</td>
+                                        <td id="player-stats-past-seasons-2017/18-APP"></td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                    </tr>
+                                    <!-- 2018/19 Stats -->
+                                    <tr>
+                                        <td>2018/19</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                        <td>TBC</td>
+                                    </tr>
+                                </table>
 
                                 <br>
 
-                                <h4 class="textleft" id="player-stats-CperAPP-header">Goals Conceded per Appearance:
-                                </h4>
-                                <p id="player-stats-CperAPP">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                <!-- <img class="fadein center" id="this-season-placeholder"
+                                    src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png"
+                                    alt="Dorkinians Logo"> -->
+
+                            </section>
+
+                            <!-- Add a section for All Time Stats. -->
+                            <section>
+
+                                <h3 class="textleft">All Time Stats</h3>
+
+                                <p>Unchangeable summary of all time stats from parsing "displayAllTimeStats" to be
+                                    added.</p>
+
+                                <!-- Add a container to hold the all time stats. -->
+                                <div id="player-stats-all-time-top-container">
+
+                                    <!-- Most Played For Team -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MostPlayedForTeam-container">
+                                        <h5>Most played for team:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MostPlayedForTeam">
+                                        </p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Most Played For Team Icon.png"
+                                            alt="Most Played For Team Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Most Scored For Team -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-MostScoredForTeam-container">
+                                        <h5>Most scored for team:</h5>
+                                        <p class="yellowtext textright" id="player-stats-this-season-MostScoredForTeam">
+                                        </p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Most Scored For Team Icon.png"
+                                            alt="Most Scored For Team Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Number Teams Played For -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-NumberTeamsPlayedFor-container">
+                                        <h5>Number teams played for:</h5>
+                                        <p class="yellowtext textright"
+                                            id="player-stats-this-season-NumberTeamsPlayedFor"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Number Teams Played For Icon.png"
+                                            alt="Number Teams Played For Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                    <!-- Number Seasons Played For -->
+                                    <div class="player-stats-this-season-stat-container"
+                                        id="player-stats-this-season-NumberSeasonsPlayedFor-container">
+                                        <h5>Number seasons played for:</h5>
+                                        <p class="yellowtext textright"
+                                            id="player-stats-this-season-NumberSeasonsPlayedFor"></p>
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Number Seasons Played For Icon.png"
+                                            alt="Number Seasons Played For Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <!-- Add a section for All Stats. -->
+                            <section>
+
+                                <h3 class="textleft">All Stats</h3>
+
+                                <div class="selection-container">
+
+                                    <!-- Add a drop down select box for the user to change the statistic category. -->
+
+                                    <!-- Let the user pick which season to filter for. -->
+                                    <select name="SeasonSelection" class="selection-dropdown"
+                                        id="player-stats-season-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
+                                        <option value="" selected="selected">Season</option>
+                                        <option value="2016/17">2016/17</option>
+                                        <option value="2017/18">2017/18</option>
+                                        <option value="2018/19">2018/19</option>
+                                        <option value="2019/20">2019/20</option>
+                                        <option value="2020/21">2020/21</option>
+                                        <option value="2021/22">2021/22</option>
+                                    </select>
+
+                                    <!-- Let the user pick which team to filter for. -->
+                                    <select name="TeamSelection" class="selection-dropdown"
+                                        id="player-stats-team-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
+                                        <option value="" selected="selected">Team</option>
+                                        <option value="WholeClub">Whole club</option>
+                                        <option value="1st XI">1st XI</option>
+                                        <option value="2nd XI">2nd XI</option>
+                                        <option value="3rd XI">3rd XI</option>
+                                        <option value="4th XI">4th XI</option>
+                                        <option value="5th XI">5th XI</option>
+                                        <option value="6th XI">6th XI</option>
+                                        <option value="7th XI">7th XI</option>
+                                        <option value="8th XI">8th XI</option>
+                                    </select>
+
+                                    <!-- Let the user pick which competition to filter for. -->
+                                    <select name="CompetitionSelection" class="selection-dropdown"
+                                        id="player-stats-competition-selection-dropdown"
+                                        onchange="showPlayerStatsTabUpdatedInfo()">
+                                        <option value="" selected="selected">Competition</option>
+                                        <option value="League">League</option>
+                                        <option value="Cup">Cup</option>
+                                        <option value="Friendly">Friendly</option>
+                                    </select>
+
+                                </div>
 
                                 <br>
 
-                                <h4 class="textleft" id="player-stats-MperG-header">Minutes per Goal:</h4>
-                                <p id="player-stats-MperG">
-                                    <!-- Text loaded into here by jDorkiniansMain.js -->
-                                </p>
+                                <p>Fully filterable table of stats from parsing "importMatchDetailsTab" to be added.</p>
 
-                            </div>
-
-                            <br>
-
-                            <br>
-
-                            <h3 class="textleft">All Stats</h3>
-
-                            <div class="selection-container">
-
-                                <!-- Add a drop down select box for the user to change the statistic category. -->
-
-                                <!-- Let the user pick which season to filter for. -->
-                                <select name="SeasonSelection" class="selection-dropdown"
-                                    id="club-stats-season-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Season</option>
-                                    <option value="2016/17">2016/17</option>
-                                    <option value="2017/18">2017/18</option>
-                                    <option value="2018/19">2018/19</option>
-                                    <option value="2019/20">2019/20</option>
-                                    <option value="2020/21">2020/21</option>
-                                    <option value="2021/22">2021/22</option>
-                                </select>
-
-                                <!-- Let the user pick which team to filter for. -->
-                                <select name="TeamSelection" class="selection-dropdown"
-                                    id="club-stats-team-selection-dropdown" onchange="showAllResultsTabUpdatedInfo()">
-                                    <option value="" selected="selected">Team</option>
-                                    <option value="WholeClub">Whole club</option>
-                                    <option value="1st XI">1st XI</option>
-                                    <option value="2nd XI">2nd XI</option>
-                                    <option value="3rd XI">3rd XI</option>
-                                    <option value="4th XI">4th XI</option>
-                                    <option value="5th XI">5th XI</option>
-                                    <option value="6th XI">6th XI</option>
-                                    <option value="7th XI">7th XI</option>
-                                    <option value="8th XI">8th XI</option>
-                                </select>
-
-                            </div>
-
-                            <br>
-
-                            <p>To be added.</p>
+                            </section>
 
                         </section>
 
-                        <!-- OLD -->
-
-                        <!-- Add a top level holder section area. -->
-                        <!-- <section class="player-stats-area-old">
-
-                            <section class="player-stats-profile-container">
-
-                                <h3 class="textleft">Profile</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Profile.webp" width="410"
-                                    height="324" alt="Profile">
-
-                            </section>
-
-                            <section class="player-stats-this-season-container">
-
-                                <h3 class="textleft">This Season</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.webp"
-                                    width="847" height="574" alt="ThisSeason">
-
-                            </section>
-
-                            <section class="player-stats-minute-by-minute-container">
-
-                                <h3 class="textleft">Minute By Minute</h3>
-
-                                <img src="/pages/Dorkinians-Page/assets/images/Layout Images/MinuteByMinute.webp"
-                                    width="841" height="510" alt="MinuteByMinute">
-
-                            </section>
-
-                            <section class="player-stats-all-time-container">
-
-                                <h3 class="textleft">All Time</h3>
-
-                            </section>
-
-                            <section class="player-stats-game-record-container">
-
-                                <h3 class="textleft">Game Record</h3>
-
-                            </section>
-
-                        </section> -->
-
-
-
-
-
-
-
-
-
-
                     </article>
 
-                    <!-- 4. All Stats Tab -->
-                    <!-- <article class="nav-targets" id="all-stats"> -->
+                    <!-- 4. Team of the Week Tab -->
+                    <article class="nav-targets" id="team-of-the-week">
 
-                    <!-- Add the main lighter coloured page section. -->
-                    <!-- <section class="page-section"> -->
+                        <!-- Add the main lighter coloured page section. -->
+                        <section class="page-section">
 
-                    <!-- <h2 class="textcenter">All Stats</h2> -->
+                            <h2 class="textcenter">Team of the Week</h2>
 
-                    <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                    <!-- <div class="information-bar" id="all-stats-information-bar"></div> -->
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="team-of-the-week-information-bar"></div>
 
-                    <!-- Add a top level holder section area. -->
-                    <!-- <section class="player-stats-area"> -->
+                            <section class="team-of-the-week-area">
 
-                    <!-- <section class="player-stats-selection-container"> -->
+                                <section class="totw-week-selection-container">
 
-                    <!-- <div class="selection-container"> -->
+                                    <div class="selection-container">
 
-                    <!-- Add a drop down select box for the user to change the statistic category. -->
-
-                    <!-- Let the user pick which season to filter for. -->
-                    <!-- <select name="SeasonSelection" class="selection-dropdown"
-                                            id="season-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
-                                            <option value="">Season</option>
+                                        <!-- Let the user pick which season to filter for. -->
+                                        <select name="SeasonSelection" class="selection-dropdown"
+                                            id="player-stats-season-selection-dropdown"
+                                            onchange="showPlayerStatsTabUpdatedInfo()">
+                                            <option value="" selected="selected">Season</option>
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
                                             <option value="2018/19">2018/19</option>
                                             <option value="2019/20">2019/20</option>
                                             <option value="2020/21">2020/21</option>
-                                            <option value="2021/22" selected="selected">2021/22</option>
-                                        </select> -->
+                                            <option value="2021/22">2021/22</option>
+                                        </select>
 
-                    <!-- Let the user pick which player to filter for. -->
-                    <!-- <select name="PlayerSelection" class="selection-dropdown"
-                                            id="player-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
-                                            <option value="" selected="selected">Player</option>
-                                            <option value="lukebangs">Luke Bangs</option>
-                                            <option>Sam Slade</option>
-                                            <option>Al Thom</option>
-                                            <option>Andy Higgins</option>
-                                            <option>Ali Robins</option>
-                                            <option>Jonny Sourris</option>
-                                            <option>Kieran Mackrell</option>
-                                            <option>Oli Goddard</option>
-                                        </select> -->
-
-                    <!-- Let the user pick which team to filter for. -->
-                    <!-- <select name="TeamSelection" class="selection-dropdown"
-                                            id="team-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
-                                            <option value="" selected="selected">Team</option>
-                                            <option value="WholeClub">Whole club</option>
-                                            <option value="1st XI">1st XI</option>
-                                            <option value="2nd XI">2nd XI</option>
-                                            <option value="3rd XI">3rd XI</option>
-                                            <option value="4th XI">4th XI</option>
-                                            <option value="5th XI">5th XI</option>
-                                            <option value="6th XI">6th XI</option>
-                                            <option value="7th XI">7th XI</option>
-                                            <option value="8th XI">8th XI</option>
-                                        </select> -->
-
-                    <!-- Let the user pick which location to filter for. -->
-                    <!-- <select name="LocationSelection" class="selection-dropdown"
-                                            id="location-selection-dropdown" onchange="showAllStatsTabUpdatedInfo()">
-                                            <option value="" selected="selected">Location</option>
-                                            <option value="Home">Home</option>
-                                            <option value="Away">Away</option>
-                                        </select> -->
-
-                    <!-- </div> -->
-
-                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                    <!-- <div class="table-wrapper"> -->
-                    <!-- <table id="all-stats-table" class="column-highlight table-column-lines"> -->
-                    <!-- Data loaded into here by jDorkiniansMain.js -->
-                    <!-- </table> -->
-                    <!-- </div> -->
-
-                    <!-- </section> -->
-
-                    <!-- </section> -->
-
-                    <!-- </section> -->
-
-                    <!-- </article> -->
-
-                    <!-- 5. Team of the Week Tab -->
-                    <!-- <article class="nav-targets" id="team-of-the-week"> -->
-
-                    <!-- Add the main lighter coloured page section. -->
-                    <!-- <section class="page-section"> -->
-
-                    <!-- <h2 class="textcenter">Team of the Week</h2> -->
-
-                    <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                    <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
-
-                    <!-- <section class="team-of-the-week-area"> -->
-
-                    <!-- <section class="totw-week-selection-container"> -->
-
-                    <!-- <div class="selection-container"> -->
-                    <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                    <!-- <select name="WeekSelection" class="selection-dropdown" id="TOTW-week-selection-dropdown">
+                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                                        <select name="WeekSelection" class="selection-dropdown"
+                                            id="TOTW-week-selection-dropdown">
                                             <option value="" selected="selected">Select Week</option>
                                             <option value="week1">Week 1</option>
-                                        </select> -->
-                    <!-- </div> -->
+                                        </select>
 
-                    <!-- </section> -->
+                                    </div>
 
-                    <!-- <section class="totw-team-of-the-week-container">
+                                </section>
+
+                                <section class="totw-team-of-the-week-container">
 
                                     <h3 class="textleft">TOTW</h3>
 
                                     <img src="/pages/Dorkinians-Page/assets/images/Layout Images/Team Of The Week 2020-10-24.webp"
                                         width="943" height="1209" class="center" alt="Profile">
 
-                                </section> -->
+                                </section>
 
-                    <!-- <section class="totw-top-performers-container">
+                                <section class="totw-top-performers-container">
 
                                     <h3 class="textleft">Top TOTW Performers</h3>
 
@@ -802,15 +1071,15 @@
                                     <p>- Most likely to get in next week.</p>
                                     <p>- Hall of famers.</p>
 
-                                </section> -->
+                                </section>
 
-                    <!-- </section> -->
+                            </section>
 
-                    <!-- </section> -->
+                        </section>
 
-                    <!-- </article> -->
+                    </article>
 
-                    <!-- 6. Comparison Tab -->
+                    <!-- 5. Comparison Tab -->
                     <article class="nav-targets" id="comparison">
 
                         <!-- Add the main lighter coloured page section. -->
@@ -835,11 +1104,14 @@
                                             <option>Al Thom</option>
                                             <option>Ali Robins</option>
                                             <option>Andy Higgins</option>
+                                            <option>Charlie Woodman</option>
+                                            <option>James Whitmarsh</option>
                                             <option>Jonny Sourris</option>
                                             <option>Kieran Mackrell</option>
                                             <option>Luke Bangs</option>
                                             <option>Oli Goddard</option>
                                             <option>Sam Slade</option>
+                                            <option>Matt Morley</option>
                                         </select>
                                     </div>
 
@@ -856,6 +1128,8 @@
                                             <option>Al Thom</option>
                                             <option>Ali Robins</option>
                                             <option>Andy Higgins</option>
+                                            <option>Charlie Woodman</option>
+                                            <option>James Whitmarsh</option>
                                             <option>Jonny Sourris</option>
                                             <option>Kieran Mackrell</option>
                                             <option>Luke Bangs</option>
@@ -868,26 +1142,36 @@
 
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-1-stats-container">
-
                                     <h4 class="center">Player 1 Stats</h4>
-
                                 </div>
 
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-2-stats-container">
-
                                     <h4 class="center">Player 2 Stats</h4>
-
                                 </div>
 
+                                <!-- Add a div to hold the stat category selection box. -->
+                                <div class="comparison-stat-category-selection-container selection-container">
+                                    <!-- Add a drop down select box for the user to change the statistic category. -->
+                                    <select name="player-stats-this-season-stats-category-selection"
+                                        class="selection-dropdown" id="comparison-category-selection"
+                                        onchange="updateComparisonStatData()">
+                                        <option value="All" selected="selected">All Stats</option>
+                                        <option value="Appearance Stat">Appearance Stats</option>
+                                        <option value="Performance Stat">Performance Stats</option>
+                                        <option value="Penalty Stat">Penalty Stats</option>
+                                        <option value="Per App/Minute Stat">Per App/Minutes Stats</option>
+                                        <option value="Results Stat">Results Stats</option>
+                                    </select>
+                                </div>
 
                                 <!-- Create a div containing a table of all the stats for the comparison. -->
                                 <div class="comparison-stats-table">
 
                                     <!-- Create multiple divs to fill as either values or bars to show the stats. -->
 
-                                    <!-- APP stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Appearances -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-APP-container">
 
                                         <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
 
@@ -901,7 +1185,7 @@
                                         <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-APP-player-1-value"> </div>
 
-                                        <!-- Add the icon for the stat. -->
+                                        <!-- Add the icon for the appearance stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
                                             alt="APP Icon" class="comparison-icon white center" height="25px"
                                             width="25px">
@@ -916,13 +1200,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of appearances the player has
-                                            made.</span>
-
                                     </div>
 
-                                    <!-- M stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Minutes -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-M-container">
 
                                         <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
 
@@ -936,7 +1217,7 @@
                                         <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-M-player-1-value"> </div>
 
-                                        <!-- Add the icon for the stat. -->
+                                        <!-- Add the icon for the minutes stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
                                             alt="Minutes Icon" class="comparison-icon white center" height="25px"
                                             width="25px">
@@ -951,13 +1232,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of minutes played by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- MoM stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- MoMs -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-MOM-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -984,13 +1262,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of Man of the Match performances the
-                                            player has made.</span>
-
                                     </div>
 
-                                    <!-- G stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Goals -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-G-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1017,13 +1292,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals scored by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- A stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Assists -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-A-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1050,13 +1322,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals assisted by the player.
-                                        </span>
-
                                     </div>
 
-                                    <!-- Y stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Yellow Cards -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-Y-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1082,13 +1351,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of yellow cards obtained by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- R stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Red Cards -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-R-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1114,13 +1380,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of red cards obtained by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- OG stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Own Goals -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-OG-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1146,13 +1409,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of own goals scored by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- C stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Conceded -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-C-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1166,7 +1426,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/Conceded Icon.png"
-                                            alt="Conceded Icon" class="comparison-icon white center" height="25px"
+                                            alt="Conceded Icon" class="comparison-icon red center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -1179,13 +1439,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of goals conceded by the
-                                            player.</span>
-
                                     </div>
 
-                                    <!-- CLS stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Clean Sheets -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-CLS-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1212,13 +1469,160 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The number of clean sheets achieved by the
-                                            player.</span>
+                                    </div>
+
+                                    <!-- Penalties Scored -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-PSC-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-PSC-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-PSC-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PSC-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Scored Icon.png"
+                                            alt="Penalties Scored Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PSC-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-PSC-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-PSC-player-2-bar">
+                                            </div>
+                                        </div>
 
                                     </div>
 
-                                    <!-- GperAPP stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Penalties Missed -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-PM-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-PM-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-PM-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PM-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Missed Icon.png"
+                                            alt="Penalties Missed Icon" class="comparison-icon red center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PM-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-PM-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-PM-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Penalties Conceded -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-PCO-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-PCO-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-PCO-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PCO-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Conceded Icon.png"
+                                            alt="Penalties Conceded Icon" class="comparison-icon red center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PCO-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-PCO-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-PCO-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Penalties Saved -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-PSV-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-PSV-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-PSV-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PSV-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Penalties Saved Icon.png"
+                                            alt="Penalties Saved Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-PSV-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-PSV-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-PSV-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Fantasy Points -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-FTP-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-FTP-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-FTP-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-FTP-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Fantasy Points Icon.png"
+                                            alt="Fantasy Points Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-FTP-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-FTP-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right" id="comparison-FTP-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Goals Per App -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-GperAPP-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1247,13 +1651,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of goals scored per
-                                            appearance made.</span>
-
                                     </div>
 
-                                    <!-- CperAPP stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Conceded Per App -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-CperAPP-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1268,7 +1669,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/assets/images/Icons/CperApp Icon.png"
-                                            alt="CperAPP Icon" class="comparison-icon white center" height="25px"
+                                            alt="CperAPP Icon" class="comparison-icon red center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -1282,13 +1683,10 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of goals conceded per
-                                            appearance.</span>
-
                                     </div>
 
-                                    <!-- MperG stats -->
-                                    <div class="comparison-stats-table-row-container stats-tooltip">
+                                    <!-- Minutes Per Goal -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-MperG-container">
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1317,8 +1715,472 @@
                                             </div>
                                         </div>
 
-                                        <span class="stats-tooltip-text">The average number of minutes required per goal
-                                            scored by the player.</span>
+                                    </div>
+
+                                    <!-- Minutes Per Clean Sheet -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-MperCLS-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-MperCLS-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-MperCLS-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MperCLS-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Per Clean Sheet Icon.png"
+                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MperCLS-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-MperCLS-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-MperCLS-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Fantasy Points Per App stats -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-FTPperAPP-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-FTPperAPP-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-FTPperAPP-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-FTPperAPP-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Fantasy Points Per Appearance Icon.png"
+                                            alt="Fantasy Points Per Appearance Icon"
+                                            class="comparison-icon white center" height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-FTPperAPP-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-FTPperAPP-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-FTPperAPP-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Distance Travelled -->
+                                    <div class="comparison-stats-table-row-container" id="comparison-DIST-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-DIST-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left" id="comparison-DIST-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-DIST-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Distance Icon.png"
+                                            alt="Distance Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-DIST-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-DIST-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-DIST-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Game % Won -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-Games%Won-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-Games%Won-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-Games%Won-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-Games%Won-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Games Percentage Won Icon.png"
+                                            alt="Games % Won Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-Games%Won-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-Games%Won-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-Games%Won-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Home Games -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-HomeGames-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-HomeGames-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-HomeGames-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeGames-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Icon.png"
+                                            alt="Home Games Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeGames-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-HomeGames-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-HomeGames-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Home Wins -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-HomeWins-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-HomeWins-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-HomeWins-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeWins-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Won Icon.png"
+                                            alt="Home Wins Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeWins-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-HomeWins-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-HomeWins-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Home Game % Won -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-HomeGames%Won-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-HomeGames%Won-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-HomeGames%Won-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeGames%Won-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Home Games Percentage Icon.png"
+                                            alt="Home Games Win % Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-HomeGames%Won-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-HomeGames%Won-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-HomeGames%Won-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Away Games -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-AwayGames-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-AwayGames-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-AwayGames-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayGames-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Icon.png"
+                                            alt="Away Games Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayGames-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-AwayGames-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-AwayGames-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Away Wins -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-AwayWins-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-AwayWins-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-AwayWins-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayWins-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Won Icon.png"
+                                            alt="Away Wins Icon" class="comparison-icon white center" height="25px"
+                                            width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayWins-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-AwayWins-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-AwayWins-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Away Game % Won -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-AwayGames%Won-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-AwayGames%Won-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-AwayGames%Won-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayGames%Won-player-1-value"> </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Away Games Percentage Icon.png"
+                                            alt="Away Games Win % Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-AwayGames%Won-player-2-value"> </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-AwayGames%Won-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-AwayGames%Won-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Most Played For Team -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-MostPlayedForTeam-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-MostPlayedForTeam-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-MostPlayedForTeam-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MostPlayedForTeam-player-1-value">
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Most Played For Team Icon.png"
+                                            alt="Most Played For Team Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MostPlayedForTeam-player-2-value">
+                                        </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-MostPlayedForTeam-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-MostPlayedForTeam-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Most Scored For Team -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-MostScoredForTeam-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-MostScoredForTeam-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-MostScoredForTeam-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MostScoredForTeam-player-1-value">
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Most Scored For Team Icon.png"
+                                            alt="Most Scored For Team Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-MostScoredForTeam-player-2-value">
+                                        </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-MostScoredForTeam-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-MostScoredForTeam-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Number Teams Played For -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-NumberTeamsPlayedFor-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-NumberTeamsPlayedFor-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-NumberTeamsPlayedFor-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-NumberTeamsPlayedFor-player-1-value">
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Number Teams Played For Icon.png"
+                                            alt="Number Teams Played For Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-NumberTeamsPlayedFor-player-2-value">
+                                        </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-NumberTeamsPlayedFor-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-NumberTeamsPlayedFor-player-2-bar">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Number Seasons Played For -->
+                                    <div class="comparison-stats-table-row-container"
+                                        id="comparison-NumberSeasonsPlayedFor-container">
+
+                                        <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-left"
+                                            id="comparison-NumberSeasonsPlayedFor-player-1-bar-container">
+                                            <div class="comparison-stat-bar bar-left"
+                                                id="comparison-NumberSeasonsPlayedFor-player-1-bar">
+                                            </div>
+                                        </div>
+
+                                        <!-- Player 1 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-NumberSeasonsPlayedFor-player-1-value">
+                                        </div>
+
+                                        <!-- Add the icon for the stat. -->
+                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Number Seasons Played For Icon.png"
+                                            alt="Number Seasons Played For Icon" class="comparison-icon white center"
+                                            height="25px" width="25px">
+
+                                        <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
+                                        <div class="cell center" id="comparison-NumberSeasonsPlayedFor-player-2-value">
+                                        </div>
+
+                                        <!-- This div forms the stats bar for Player 2 which is modified by jDorkiniansMain.js -->
+                                        <div class="cell bar-container bar-right"
+                                            id="comparison-NumberSeasonsPlayedFor-player-2-bar-container">
+                                            <div class="comparison-stat-bar bar-right"
+                                                id="comparison-NumberSeasonsPlayedFor-player-2-bar">
+                                            </div>
+                                        </div>
 
                                     </div>
 
@@ -1330,7 +2192,7 @@
 
                     </article>
 
-                    <!-- 7. Tables, Results & Fixture Tab -->
+                    <!-- 6. Tables, Results & Fixture Tab -->
                     <article class="nav-targets" id="tables-results-fixtures">
 
                         <!-- Dorkinians Table Section -->
@@ -1368,12 +2230,12 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep118512309" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
-                                        here for Premier Division</a><br /><br /><a
+                                <div id="lrep747153979" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
+                                        here for Premier</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '118512309'
+                                    var lrcode = '747153979'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1383,15 +2245,15 @@
                             <!-- Add a div to hold the Dorkinians 2s code within. -->
                             <div class="dorkiniansTable" id="dorkinians2sTable" class="hidden">
 
-                                <h4 class="dorkiniansTableHeaderText">AFC Senior Two</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Senior Two South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep710535041" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
-                                        here for Senior Two South Division</a><br /><br /><a
+                                <div id="lrep241472326" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
+                                        here for Senior Two South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '710535041'
+                                    var lrcode = '241472326'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1404,12 +2266,12 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep57161422" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=841231919">click
-                                        here for One South Division</a><br /><br /><a
+                                <div id="lrep650285541" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
+                                        here for One South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '57161422'
+                                    var lrcode = '650285541'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1422,12 +2284,12 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep778268394" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
-                                        here for Four South Division</a><br /><br /><a
+                                <div id="lrep715891159" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
+                                        here for Four South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '778268394'
+                                    var lrcode = '715891159'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1439,7 +2301,7 @@
 
                                 <h4 class="dorkiniansTableHeaderText">AFC Five South</h4>
 
-                                <p>Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
+                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
 
                             </div>
 
@@ -1449,12 +2311,12 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep311599615" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=626187179">click
-                                        here for Six South Division</a><br /><br /><a
+                                <div id="lrep549908553" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
+                                        here for Six South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '311599615'
+                                    var lrcode = '549908553'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1464,15 +2326,15 @@
                             <!-- Add a div to hold the Dorkinians 7s code within. -->
                             <div class="dorkiniansTable" id="dorkinians7sTable" class="hidden">
 
-                                <h4 class="dorkiniansTableHeaderText">AFC Seven South</h4>
+                                <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep93079112" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
-                                        here for Seven South Division</a><br /><br /><a
+                                <div id="lrep768016187" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
+                                        here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '93079112'
+                                    var lrcode = '768016187'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1485,12 +2347,12 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep812886273" class="AFCTable">Data loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
-                                        here for Eight South Division</a><br /><br /><a
+                                <div id="lrep768016187" class="AFCTable">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
+                                        here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '812886273'
+                                    var lrcode = '768016187'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1501,9 +2363,12 @@
 
                         <section class="page-section">
 
-                            <h2 class="textcenter">Fixtures</h2>
+                            <h2 class="textcenter">Results & Fixtures</h2>
 
-                            <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
+                            <!-- Note: for the below tables the options selected from 'https://fulltime-admin.thefa.com/CreateCodeSnippet.do' were;
+                                - Type: Team - Fixtures / Results
+                                - Look And Feel: white and light grey
+                                - Hide Venue: Selected to hide -->
 
                             <!-- Add a div to hold the Dorkinians 1s code within. -->
                             <div id="dorkinians1sResultsAndFixtures">
@@ -1511,13 +2376,12 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep884356525" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565">click
+                                <div id="lrep381388329" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '884356525'
+                                    var lrcode = '381388329'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1530,13 +2394,12 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep678186881" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528">click
+                                <div id="lrep709797986" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '678186881'
+                                    var lrcode = '709797986'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1549,8 +2412,15 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 3s Results and
                                     Fixtures</h4>
 
-                                <p>Dorkinians III ended season early and so there is no table data to show, as the team
-                                    was removed from the league.</p>
+                                <div id="lrep266611945" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
+                                        here for One South</a><br /><br /><a
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                <script language="javascript" type="text/javascript">
+                                    var lrcode = '266611945'
+                                </script>
+                                <script language="Javascript" type="text/javascript"
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
@@ -1560,13 +2430,12 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep355450147" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189">click
+                                <div id="lrep897042508" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '355450147'
+                                    var lrcode = '897042508'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1579,7 +2448,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 5s Results and
                                     Fixtures</h4>
 
-                                <p>Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
+                                <p class="tables-results-fixtures-text-replacement">Dorkinians Vs were disbanded this season and so there is no table data to show.</p>
 
                             </div>
 
@@ -1589,8 +2458,15 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 6s Results and
                                     Fixtures</h4>
 
-                                <p>Dorkinians VI ended season early and so there is no table data to show, as the team
-                                    was removed from the league.</p>
+                                <div id="lrep201995739" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
+                                        here for Six South</a><br /><br /><a
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                <script language="javascript" type="text/javascript">
+                                    var lrcode = '201995739'
+                                </script>
+                                <script language="Javascript" type="text/javascript"
+                                    src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
 
                             </div>
 
@@ -1600,13 +2476,12 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep531227286" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351">click
-                                        here for Seven South</a><br /><br /><a
+                                <div id="lrep157121765" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
+                                        here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '531227286'
+                                    var lrcode = '157121765'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
@@ -1619,17 +2494,15 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep568890794" class="AFCResultsAndFixtures">Data
-                                    loading....<a
-                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744">click
+                                <div id="lrep506904509" class="AFCResultsAndFixtures">Data loading....<a
+                                        href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
                                 <script language="javascript" type="text/javascript">
-                                    var lrcode = '568890794'
+                                    var lrcode = '506904509'
                                 </script>
                                 <script language="Javascript" type="text/javascript"
                                     src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
-
                             </div>
 
                         </section>
@@ -1643,10 +2516,9 @@
 
                     <nav id="nav-bar">
                         <a href="#home" active>Home</a>
-                        <a href="#club-stats">Club Stats</a>
+                        <a href="#club-stats" id="club-stats-tab-text">Club Stats</a>
                         <a href="#player-stats">Player Stats</a>
-                        <!-- <a href="#all-stats">All Stats</a> -->
-                        <!-- <a href="#team-of-the-week">Team of the Week</a> -->
+                        <!-- <a href="#team-of-the-week">TOTW</a> -->
                         <a href="#comparison">Comparison</a>
                         <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
                     </nav>
@@ -1682,6 +2554,12 @@
 
     <!-- Get main page JS -->
     <script src="/pages/Dorkinians-Page/assets/js/jDorkiniansMain.js"></script>
+
+    <!-- Get side menu JS -->
+    <script src="/pages/Dorkinians-Page/assets/components/SideMenu/sideMenu.js"></script>
+
+    <!-- Get weather widget JS -->
+    <script src="/pages/Dorkinians-Page/assets/components/Weather Widget/weatherWidget.js"></script>
 
 </body>
 
