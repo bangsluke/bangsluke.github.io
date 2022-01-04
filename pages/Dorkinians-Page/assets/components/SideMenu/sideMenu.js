@@ -236,8 +236,8 @@ var fontSizeMax = 22; // Set a maximum font size in pixels.
 var pageHeightMin = 0; // Set a minimum page height in pixels.
 var pageHeightMax = 100; // Set a maximum page height in pixels.
 
+// Open the navigation side menu.
 function openNav() {
-
     // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = sideMenuWidth; // Increase the width of the side-menu to make it visible.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
@@ -254,11 +254,10 @@ function openNav() {
     } else {
         //console.log("not doing anything");
     }
-
 }
 
+// Close the navigation side menu.
 function closeNav() {
-
     // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
@@ -274,7 +273,6 @@ function closeNav() {
     } else {
         //console.log("not doing anything");
     }
-
 }
 
 // Change the site theme style.
@@ -355,7 +353,6 @@ function changeTextSize(delta) {
     // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
     document.documentElement.style.setProperty('--main-font-size', fontSize);
     document.documentElement.style.setProperty('font-size', fontSize);
-
 }
 function increaseFontSize() {
     changeTextSize(1);
@@ -391,7 +388,6 @@ function changePageHeight(delta) {
 
     // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
     document.documentElement.style.setProperty('--ChromeSafari-bottom-bar-height', pageHeight);
-
 }
 function increasePageHeight() {
     changePageHeight(-5);
