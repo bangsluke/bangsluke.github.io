@@ -87,7 +87,7 @@ const newLocal = `
 
                         <!-- Add the text size change action item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(1)">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon flip-image" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(1)">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 onclick="changeTextSize(1)">Increase Text Size</h4>

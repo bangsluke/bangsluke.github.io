@@ -197,6 +197,11 @@ a > h4 {
 	align-content: flex-start;
 	padding: 0.5rem 0rem;
 }
+/* Add a style to flip one of the icons. */
+.flip-image {
+	-webkit-transform: scaleX(-1);
+  	transform: scaleX(-1);
+}
 
 /* Side menu media queries. */
 
