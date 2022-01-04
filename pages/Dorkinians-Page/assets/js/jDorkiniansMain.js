@@ -445,11 +445,16 @@ function init() {
         complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
     })
 
-    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+
+    // Get the next Saturday date and display it.
+    let now = new Date(); 
+    let nextSaturdayDate = nextDay(now, 6);
+    nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
+    document.getElementById("homepage-next-fixtures-header-text").innerHTML = "Next Fixtures (" + nextSaturdayDate + ")"; // Get the header and update it.
 
 
-
-    // Step 2. 
+    // Step 2.
     // Club Stats Tab.
     console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
@@ -668,8 +673,7 @@ function showHomepageTabInfo(results) {
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
-
-    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
@@ -686,6 +690,7 @@ function showHomepageTabInfo(results) {
         // console.log(teamArray[i]); // Log the team being updated.
         document.getElementById(teamArray[i] + "-Opposition").innerHTML = teamFixtureObject['NEXTOPPO']; // Get the Opposition text element and add the text to it.
         document.getElementById(teamArray[i] + "-Location").innerHTML = teamFixtureObject['LOCATION']; // Get the Location text element and add the text to it.
+        document.getElementById(teamArray[i] + "-Competition").innerHTML = teamFixtureObject['COMPETITION']; // Get the Competition text element and add the text to it.
         document.getElementById(teamArray[i] + "-LastResult").innerHTML = teamFixtureObject['LASTRESULT']; // Get the LastResult text element and add the text to it.
 
     }
@@ -1932,6 +1937,14 @@ let roundOff = (num, places) => {
 
 
 
+// Date Function
+
+// Next Date Function - https://stackoverflow.com/a/27336600/14290169
+function nextDay(d, dow){
+    d.setDate(d.getDate() + (dow+(7-d.getDay())) % 7);
+    return d;
+}
+
 
 
 // Dorkinians Logo Rotation Functions
@@ -1947,7 +1960,6 @@ function rotateLogo(logoID) {
     dorkiniansLogo.classList.add("linear"); // Add the "linear" class to the logo.
     dorkiniansLogo.classList.add("infinite"); // Add the "infinite" class to the logo.
 }
-
 // Finish Rotation
 function stopRotateLogo(logoID) {
     // Finish rotating the logo given the defined id of the logo to rotate.
@@ -1959,8 +1971,6 @@ function stopRotateLogo(logoID) {
     dorkiniansLogo.classList.remove("linear"); // Remove the "linear" class from the logo.
     dorkiniansLogo.classList.remove("infinite"); // Remove the "infinite" class from the logo.
 }
-
-
 
 
 
