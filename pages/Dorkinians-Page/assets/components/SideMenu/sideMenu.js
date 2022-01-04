@@ -85,27 +85,48 @@ const newLocal = `
 
                     <div id="side-menu-actions-section-grid">
 
-                        <!-- Add the text size change action item. -->
-                        <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon flip-image" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(1)">
-                        </div>
-                        <div class="side-menu-text-container">
-                            <h4 onclick="changeTextSize(1)">Increase Text Size</h4>
-                        </div>
-
-                        <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
-                        </div>
-                        <div class="side-menu-text-container">
-                            <h4 onclick="changeTextSize(-1)">Decrease Text Size</h4>
-                        </div>
-
                         <!-- Add the change theme item. -->
                         <div class="side-menu-icon-container">
                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Theme Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
+                        </div>
+
+                        <!-- Add the text size change action item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
+                        </div>
+                        <div class="side-menu-text-container side-menu-action-button-container">
+                            <h4>Change Text Size</h4>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-increment" onclick="changeTextSize(1)">
+                                +
+                            </button>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-decrement" onclick="changeTextSize(-1)">
+                                -
+                            </button>
+                        </div>
+
+                        <!-- Add the change height item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Height Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Height Change Icon" onclick="changePageHeight()">
+                        </div>
+                        <div class="side-menu-text-container side-menu-action-button-container">
+                            <h4 id="side-menu-actions-change-height-text" onclick="changePageHeight()">Change Page Height</h4>
+                            <button class="side-menu-button" id="side-menu-button-change-height-increment" onclick="increasePageHeight(1)">
+                                +
+                            </button>
+                            <button class="side-menu-button" id="side-menu-button-change-height-decrement" onclick="decreasePageHeight(-1)">
+                                -
+                            </button>
+                        </div>
+
+                        <!-- Add the full reset item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Reset Page Icon.png" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-height-text" onclick="resetActionVariables()">Reset Page</h4>
                         </div>
 
                     </div>
@@ -209,9 +230,11 @@ customElements.define('side-menu-component', sideMenu);
 
 // Publically define a number of global constants and variables.
 
-var sideMenuWidth = '25rem'; // Originally 15.6rem.
-var fontSizeMin = 8;
-var fontSizeMax = 18;
+var sideMenuWidth = '80%'; // Originally 15.6rem.
+var fontSizeMin = 10; // Set a minimum font size in pixels.
+var fontSizeMax = 22; // Set a maximum font size in pixels.
+var pageHeightMin = 0; // Set a minimum page height in pixels.
+var pageHeightMax = 100; // Set a maximum page height in pixels.
 
 function openNav() {
 
@@ -334,11 +357,53 @@ function changeTextSize(delta) {
     document.documentElement.style.setProperty('font-size', fontSize);
 
 }
-
 function increaseFontSize() {
     changeTextSize(1);
 }
-
 function decreaseFontSize() {
     changeTextSize(-1);
+}
+
+// Change the height of the snap tabs bar to fit the screen.
+function changePageHeight(delta) {
+    console.log("changePageHeight clicked. Page height changed by " + delta + "px."); // Log that the function has been called.
+
+    let pageHeight = getComputedStyle(document.documentElement).getPropertyValue('--ChromeSafari-bottom-bar-height'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
+    pageHeight = parseInt(pageHeight.replace("px", "")); // Remove the pixels from the returned string.
+    
+    console.log('pageHeight before is = ' + pageHeight); // Log the page height value before the function has been run.
+
+    if (delta == 1) {
+        // Increment the page height  to be larger.
+        if (pageHeight < pageHeightMax) { // Only increment the page height if it is less than the max. 
+            pageHeight += delta;
+        }
+    } else {
+        // Decrement the page height to be smaller.
+        if (pageHeight > pageHeightMin) { // Only dedcrement the page height if it is larger than the min. 
+            pageHeight += delta;
+        }
+    }
+    console.log('pageHeight after is = ' + pageHeight); // Log the page height value after the function has been run.
+
+    // Append the pixels to the new value.
+    pageHeight = pageHeight + "px";
+
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--ChromeSafari-bottom-bar-height', pageHeight);
+
+}
+function increasePageHeight() {
+    changePageHeight(-5);
+}
+function decreasePageHeight() {
+    changePageHeight(5);
+}
+
+// Reset all prveiously modified variables.
+function resetActionVariables() {
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', '16px');
+    document.documentElement.style.setProperty('font-size', '16px');
+    document.documentElement.style.setProperty('--ChromeSafari-bottom-bar-height', '50px');
 }
