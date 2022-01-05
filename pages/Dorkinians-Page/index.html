@@ -98,9 +98,9 @@
     </header>
 
     <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
-    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()">
-    </div>
+    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
     <div class="background-overlay" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
+    <div class="background-overlay" id="background-overlay-selection-dropdown" style="display: none" onclick="closeDropdownList()"></div>
 
     <!-- Pop Up Box -->
 
@@ -563,21 +563,21 @@
                             <div class="player-stats-selection-container">
 
                                 <!-- Add a selection container to hold all of the elements needed for the drop down. -->
-                                <div class="selection-container">
-                                    <button onclick="showDropdownList('player-stats-selection-dropdown')" class="selection-dropdown">Dropdown</button>
+                                <div class="selection-container" id="player-stats-selection-dropdown-container">
+                                    <button onclick="showDropdownList('player-stats-selection-dropdown')"
+                                        class="selection-dropdown">Dropdown <img
+                                            src="/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png"
+                                            alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
+                                            width="25px"></button>
                                     <div id="player-stats-selection-dropdown" class="selection-dropdown-content">
-                                        <img src="/pages/Dorkinians-Page/assets/images/Icons/Search Icon.png"
-                                            alt="Search Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
-                                        <input type="text" placeholder="Search.." id="player-stats-selection-input"
+                                        <div class="selection-dropdown-content-header-section">
+                                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Search Icon.png"
+                                            alt="Search Icon" class="selection-dropdown-search-icon" height="25px"
+                                            width="25px">
+                                            <input type="text" placeholder="Search.." id="player-stats-selection-input"
                                             onkeyup="filterDropdownList('player-stats-selection-dropdown', 'player-stats-selection-input')">
-                                        <!-- <option class="textleft">About</option>
-                                        <option class="textleft">Base</option>
-                                        <option class="textleft">Blog</option>
-                                        <option class="textleft">Contact</option>
-                                        <option class="textleft">Custom</option>
-                                        <option class="textleft">Support</option>
-                                        <option class="textleft">Tools</option> -->
+                                        </div>
+                                        <!-- <option class="textleft">Options added dynamically using JS</option> -->
                                     </div>
                                 </div>
 
