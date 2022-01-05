@@ -62,7 +62,8 @@ Section 1
 	--headerHeight: 4rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
-	--border-radius: 0.5rem;
+	--section-border-radius: 0.5rem; /* Used for the border radii on the sections and large components. */
+	--component-border-radius: 0.2rem; /* Used for the border radii on the sections and large components. */
 
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
@@ -261,7 +262,7 @@ table {
 	text-align: center;
 	border: none;
 	border-collapse: collapse;
-	border-radius: var(--border-radius, 0.2rem);
+	border-radius: var(--component-border-radius, 0.2rem);
 	cursor: pointer; /* Turn the cusor into a pointer when over the table. */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.7rem; /* Relative to root (html) value. */
@@ -339,16 +340,16 @@ td, th {
 }
 /* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */
 tr:first-child th:first-child {
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:first-child th:last-child {
-	border-top-right-radius: var(--border-radius, 0.2rem);
+	border-top-right-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:first-child {
-	border-bottom-left-radius: var(--border-radius, 0.2rem);
+	border-bottom-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:last-child {
-	border-bottom-right-radius: var(--border-radius, 0.2rem);
+	border-bottom-right-radius: var(--component-border-radius, 0.2rem);
 }
 /* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
 .table-wrapper {
@@ -371,7 +372,7 @@ tr:last-child td:last-child {
 }
 .first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
 	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 
 
@@ -434,7 +435,7 @@ tr:last-child td:last-child {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
@@ -475,13 +476,16 @@ tr:last-child td:last-child {
 
 /* 3. Dropdown styling */
 
+option {
+	color: black; /* The font colour of the text. */ 
+}
 /* Add a class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
 	position: relative;
-	display: inline-block;
+	/* display: inline-block; */
 	margin: auto;
 }
 /* Add a class for all common selection dropdown styling. */
@@ -496,31 +500,92 @@ tr:last-child td:last-child {
 	margin: auto;
 	font-size: 0.8rem; /* Relative to root (html) value. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
+	border-radius: var(--component-border-radius, 0.2rem);
 }
-/* Style the dropdown menu that appears for the user to click on. */
-option {
-	color: black; /* The font colour of the text. */ 
-	background-color: var(--secondary-accent-colour, white); /* The background colour behind the text. */
-	background-color: red;
+/* Style the dropdown button. */
+/* Dropdown button on hover & focus */
+.selection-dropdown:hover, .selection-dropdown:focus {
+	background-color: rgba(255, 255, 255, 0.20);
+}
+/* Style the dropdown button downwards arrow. */
+button > .selection--dropdown-arrow-icon {
+	display: inline; /* Set the down arrow to be displayed alongside the text. */
+}
+/* Style the small white downwards arrow. */
+.selection-dropdown-arrow-icon {
+	height: 0.6rem;
+	width: 0.6rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.2rem;
+}
+/* Style the dropdown menu items that appears when the user has clicked. */
+.selection-dropdown-content > option {
+	color: white; /* The font colour of the text. */ 
+	/* background-color: red; */
+	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	margin: auto;
+	z-index: 20;
+	padding: 0.2rem;
+}
+/* Dropdown Content (Hidden by Default) */
+.selection-dropdown-content {
+	/* background-color: #490bf3; */
+	background-color: var(--main-background-colour, green);
+	display: none;
+	position: absolute;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	/*width: 40%; /* Need a specific value to work */
+	width: fit-content;
+	height: max-content;
+	max-width: 80%;
+	max-height: 15rem;
+	border: 1px solid #ddd;
+	z-index: 1;
+	border-radius: var(--component-border-radius, 0.2rem);
+	overflow-y: scroll;
+	z-index: 6;
+}
+/* Style the header section of the dropdown content which holds the search icon and input text. */
+.selection-dropdown-content-header-section {
+	/* background-color: blue; */
+	display: inline; /* Set the search icon to be displayed alongside the search bar. */
+	padding: 0.3rem;
+}
+/* Style the small white search icon. */
+.selection-dropdown-search-icon {
+	height: 0.8rem;
+	width: 0.9rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	margin-right: 0.2rem;
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show-dropdown-option {
+	display: block;
+}
+/* Style the hover over links. */
+.selection-dropdown-content option:hover {
+	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
 }
 
-  
-  /* Dropdown button on hover & focus */
-  .selection-dropdown:hover, .selection-dropdown:focus {
-	background-color: #3e8e41;
-  }
   
   /* The search field */
   #myInput {
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 1rem;
 	padding: 14px 20px 12px 45px;
 	border: none;
 	border-bottom: 1px solid #ddd;
   }
   
   /* The search field when it gets focus/clicked on */
-  #myInput:focus {outline: 3px solid #ddd;}
+  #myInput:focus {
+	  outline: 3px solid #ddd;
+	}
   
   /* The container <div> - needed to position the dropdown content */
   /* .dropdown {
@@ -528,29 +593,10 @@ option {
 	display: inline-block;
   }
    */
-  /* Dropdown Content (Hidden by Default) */
-  .selection-dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f6f6f6;
-	min-width: 230px;
-	border: 1px solid #ddd;
-	z-index: 1;
-  }
+
+
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-  }
   
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show-dropdown-option {display:block;}
 
 
 
@@ -588,7 +634,7 @@ option {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
@@ -791,7 +837,6 @@ Section 3
 	/* Change the below property on/off to hide/show the pop up box. */
 	/* display: none !important; */
 
-	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background: var(--main-background-colour, green);
 	
 	/* Set the position of the box to be bang in the center of the screen. */
@@ -809,7 +854,7 @@ Section 3
 	
 	/* Style the pop up box. */
 	border: 0.125rem solid var(--secondary-accent-colour, white);
-	border-radius: var(--border-radius, 2rem);
+	border-radius: var(--section-border-radius, 2rem);
 	padding: 0.7rem; /* Add internal padding to the pop up box. */
 }
 /* The x close button. */

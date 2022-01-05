@@ -1937,24 +1937,25 @@ function displayInformation(informationBarID, displayMessage) {
 
 // When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID) {
-    document.getElementById(dropdownID).classList.toggle("show-dropdown-option");
+    document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
+    document.getElementById('player-stats-selection-dropdown-container').style.zIndex = 6;  // Show the selection dropdown.
+    // document.getElementById('background-overlay-selection-dropdown').style.display = "inline"; // Show the background overlay behind the selection dropdown.
+    // document.getElementById('background-overlay-selection-dropdown').style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
 }
 
+// Populate the dropdown with Player names.
 function populateDropdownList(playerNameArray, dropdownID) {
-
     console.log("playerNameArray:");
     console.log(playerNameArray);
 
-    // Loop through the stat array calling in the load stat data function but not filling up the bars.
+    // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
-        let newOption = document.createElement("option");
-        var text = document.createTextNode(playerNameArray[i]);
-        newOption.appendChild(text);
-        let parentElement = document.getElementById(dropdownID);
-        parentElement.appendChild(newOption);
-    }
-
-    
+        let newOption = document.createElement("option"); // Create the new option element.
+        let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
+        newOption.appendChild(playerNameText); // Append the text node to the new element.
+        let parentElement = document.getElementById(dropdownID); // Get the parent dropdown element.
+        parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
+    }   
 }
 
 // Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
@@ -1972,4 +1973,9 @@ function filterDropdownList(dropdownID, inputID) {
             option[i].style.display = "none";
         }
     }
+}
+
+function closeDropdownList() {
+    document.getElementById('player-stats-selection-dropdown').style.display = "none"; // Hide the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown').style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }
