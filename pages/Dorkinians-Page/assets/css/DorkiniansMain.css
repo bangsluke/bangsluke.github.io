@@ -60,6 +60,7 @@ Section 1
 
 	/* Distances & Spacing */
 	--headerHeight: 4rem; /* Define the header height variable. */
+	--snap-tab-header-height: 3rem; /* Controls the height of the snap tab header section. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--section-border-radius: 0.5rem; /* Used for the border radii on the sections and large components. */
@@ -125,8 +126,9 @@ body {
 
 /* Page section styling. Add a lighter opacity rounded edges container. */
 .page-section {
-	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
-	margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	/*margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	/*margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
@@ -760,7 +762,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
