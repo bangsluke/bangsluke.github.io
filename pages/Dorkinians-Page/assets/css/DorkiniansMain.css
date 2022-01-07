@@ -23,30 +23,50 @@
 	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
 */
 
-
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Section 1
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
 	
 	/* CSS variables - Add variables below like the given example. */
 	
-	/* Colours */
-	--main-dorkinians-green-colour: #1C8841; /* Main Dorkinians green. */
-    --main-dorkinians-yellow-colour: #F9ED32; /* Main Dorkinians yellow. */
-	--dorkinians-yellow-colour-rgb: 249, 237, 50; /* Main Dorkinians yellow RGB. */
-	--page-dark-grey-colour: #323B35; /* Additional dark grey colour. */
+	/* Colours - These are dynamically modified using JS */
+	--main-background-colour: #1C8841;
+	--secondary-background-colour: #31a057;
+	--third-background-colour: #236f38;
+	--main-accent-colour: #F9ED32;
+	--main-accent-colour-rgb: 249, 237, 50;
+	--secondary-accent-colour: #ffffff;
+
+	/* Light Theme Colours Used */
+	/* --main-background-colour: #1C8841; Main Dorkinians green.
+	--secondary-background-colour: #31a057;
+	--third-background-colour: #236f38;
+	--main-accent-colour: #F9ED32; Main Dorkinians yellow.
+	--main-accent-colour-rgb: 249, 237, 50;
+	--secondary-accent-colour: #ffffff; */
+
+	/* Dark Theme Colours Used */
+	/* --main-background-colour: #222129;
+	--secondary-background-colour: #252432;
+	--third-background-colour: #282735;
+	--main-accent-colour: #FF3CAC;
+	--main-accent-colour-rgb: 255, 60, 172;
+	--secondary-accent-colour: #ffffff85; */
 
 	/* Distances & Spacing */
 	--headerHeight: 4rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
-	--border-radius: 0.5rem;
+	--section-border-radius: 0.5rem; /* Used for the border radii on the sections and large components. */
+	--component-border-radius: 0.2rem; /* Used for the border radii on the sections and large components. */
+
+	/* Font Size */
+	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -54,8 +74,7 @@ html {
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-    /* background-color: var(--main-dorkinians-green-colour, black); */
-    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
+    background-image: linear-gradient(67deg, var(--third-background-colour) 5%, var(--secondary-background-colour) 42%, var(--main-background-colour) 74%);
 
 	height: max-content;
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
@@ -64,7 +83,7 @@ html {
 	overflow-y: scroll;
 
 	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
-	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
+	font-size: var(--main-font-size, 16px); /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 
 	/* DELETE IF MAJOR ISSUES */
@@ -96,7 +115,7 @@ body {
 }
 
 /* Main content styling. Houses all page content below the header. */
-.main-content-area {
+#main-content-area {
 	/* background-color: violet; */
 	top: 0rem;
 	left: 0rem;
@@ -129,10 +148,23 @@ body {
 	-webkit-backdrop-filter: blur( 20px );
 }
 
-/* Sub pag sections - multiple sections per tab. */
+/* Sub page sections - multiple sections per tab. */
 section {
 	padding-bottom: 2rem; /* Add some space between sections defined on each tab. */
 }
+
+/* Add a background overlay for closing other menus. */
+.background-overlay {
+    background: rgba(0, 0, 0, 0.50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+	z-index: 2;
+}
+
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -143,58 +175,50 @@ Section 2
 
 /* 1. Text styling. */
 
+/* All Text */
 h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
-
 /* Font Families */
-
 /* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
 h1, h2, h3, h4, h5, h6, span {
 	font-family: 'Montserrat', sans-serif;
 }
-
 /* Apply the 'Roboto' body font style to all body elements. */
 p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, button {
 	font-family: 'Roboto', sans-serif;
 }
-
 /* Define the sizes and other styles to each individual text style. */
-
 /* Used for top header text. */
 h1 {
-	font-size: 32px; /* Fallback value. */
+	/* font-size: 32px; Fallback value. */
   	font-size: 1.6rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
-
 /* Used for tab header text. */
 h2 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 1.4rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
-	color: var(--main-dorkinians-yellow-colour, yellow);
+	color: var(--main-accent-colour, yellow);
 	padding-bottom: 1rem;
 }
-
 /* Used for sub section header text. */
 h3 {
 	font-size: 32px; /* Fallback value. */
   	font-size: 1.2rem; /* Relative to root (html) value. */
   	text-transform: uppercase;
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	padding-bottom: 1rem;
 }
-
 /* Used for text bulk on page. */
 p {
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.9rem; /* Relative to root (html) value. */
 }
-
 /* Used for hyperlinks across the site. */
 a {
 	font-size: 14px; /* Fallback value. */
@@ -202,50 +226,43 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 }
-
 /* Text Styles */
-
 .underline {
 	text-decoration: underline;
 }
-
 .textcenter {
 	text-align: center !important;
 }
-
 .textleft {
 	text-align: left !important;
 }
-
 .textright {
 	text-align: right !important;
 }
-
 .bold {
 	font-weight: bold !important;
 }
-
 .italic {
 	font-style: oblique !important;
 }
-
 /* Create a class for yellow text. */
 .yellowtext {
-	color: #F9ED32 !important;
+	color: var(--main-accent-colour, yellow) !important;
 }
+
 
 
 /* 2. Table classes */
 
+/* All tables */
 table {
 	/* background-color: white; */
-	color: var(--main-dorkinians-green-colour, darkgreen);
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	width: 100%;
 	text-align: center;
 	border: none;
 	border-collapse: collapse;
-	border-radius: var(--border-radius, 0.2rem);
+	border-radius: var(--component-border-radius, 0.2rem);
 	cursor: pointer; /* Turn the cusor into a pointer when over the table. */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.7rem; /* Relative to root (html) value. */
@@ -253,12 +270,11 @@ table {
 	/* For interior borders, look at the td class. */
 	/* overflow: scroll; */
 }
-
 /* Used for table headers across the site. */
 th {
 	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--main-dorkinians-green-colour, darkgreen);
-	box-shadow: inset 0rem 0rem 0rem var(--main-dorkinians-yellow-colour, yellow), inset 0rem -0.25rem 0rem var(--main-dorkinians-yellow-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	background-color: var(--main-background-colour, green);
+	box-shadow: inset 0rem 0rem 0rem var(--main-accent-colour, yellow), inset 0rem -0.25rem 0rem var(--main-accent-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 	font-style: bold; /* Make the header text bold */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.8rem; /* Relative to root (html) value. */
@@ -269,14 +285,12 @@ th {
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 	height: 2rem;
 }
-
 /* Used for table rows across the site. */
 tr {
 	/* font-size: 14px; /* Fallback value. */
 	/* font-size: 0.9rem; /* Relative to root (html) value. */
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
-
 /* Used for table cell text across the site. */
 td {
 	/* font-size: 14px; /* Fallback value. */
@@ -287,32 +301,27 @@ td {
 	-moz-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
 	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
 }
-
 /* Cell highlighting. */
 td:hover {
 	font-weight: bold;
-	border: 0.1rem solid white;
+	border: 0.1rem solid var(--secondary-accent-colour, white);
 }
-
 /* Add row highlighting. */
 tr:hover {
 	font: bold;
-	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
-	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
-	color: white;
+	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: var(--secondary-accent-colour, white);
 }
-
 /* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */ 
-
 td, th {
 	position: relative;
 }
-
 /* Column highlighting. Only on tables with class "column-highlight". */
 .column-highlight td:hover::after, th:hover::after {
-	background-color: var(--main-dorkinians-yellow-colour, yellow); /* Fallback colour - no opacity. */
-	background-color: rgba(var(--dorkinians-yellow-colour-rgb), 0.2); /* Same colour with opacity. */
-	color: white;
+	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
+	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
+	color: var(--secondary-accent-colour, white);
 	content: "";
 	position: absolute;
 	left: 0;
@@ -323,30 +332,26 @@ td, th {
 	width: 100%;
 	z-index: -1;
 }
-
 /* Add table column lines. */
 .table-column-lines {
-	border-right-color: var(--main-dorkinians-yellow-colour,yellow);
+	border-right-color: var(--main-accent-colour,yellow);
 	border-right-style: solid;
 	border-width: 0.1rem;
 }
-
 /* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */
 tr:first-child th:first-child {
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:first-child th:last-child {
-	border-top-right-radius: var(--border-radius, 0.2rem);
+	border-top-right-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:first-child {
-	border-bottom-left-radius: var(--border-radius, 0.2rem);
+	border-bottom-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:last-child {
-	border-bottom-right-radius: var(--border-radius, 0.2rem);
+	border-bottom-right-radius: var(--component-border-radius, 0.2rem);
 }
-
 /* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
-
 .table-wrapper {
 	position: relative;
 	overflow: auto;
@@ -356,7 +361,7 @@ tr:last-child td:last-child {
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
 .sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
-	background-color: var(--main-dorkinians-green-colour,darkgreen);
+	background-color: var(--main-background-colour,green);
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 1;
@@ -367,36 +372,30 @@ tr:last-child td:last-child {
 }
 .first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
 	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 
 
 
-
 /* Other classes and styles. */
-
 .center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
-
 /* Add a hidden class for hiding components that are not yet ready or shouldn't be shown. */
 .hidden {
 	display: none !important;
 }
-
 /* Add a class to stop scrolling in certain divs. */
 .noscroll {
 	overflow: hidden;
 }
-
 /* Add an id for fading in an item over two seconds. */
 .fadein {
 	animation: fadein 2s ease forwards;
 }
-
 @keyframes fadein {
 	from {
 		display: none;
@@ -410,15 +409,13 @@ tr:last-child td:last-child {
 
 
 
-/* Icon Styling. */
+/* Icon and Icon tooltip Styling. */
 
 /* Style the added Google Icons - https://fonts.google.com/icons. */
 .google-icons {
-	color: white;
+	color: var(--secondary-accent-colour, white);
 }
-
 /* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
-
 /* Icon Tooltip container */
 .icon-tooltip {
 	position: relative;
@@ -426,7 +423,6 @@ tr:last-child td:last-child {
 	float: right;
 	margin-left: 150px;
 }
-  
 /* Tooltip text */
 .icon-tooltip .icon-tooltip-text {
 	/* background-color: blue; */
@@ -439,7 +435,7 @@ tr:last-child td:last-child {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
@@ -452,13 +448,11 @@ tr:last-child td:last-child {
 	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
     transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
-
 /* Show the icon tooltip text when you mouse over the icon tooltip container */
 .icon-tooltip:hover .icon-tooltip-text {
 	visibility: visible; /* Change the visibility to visible when hovered on. */
 	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
-
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .icon-tooltip .icon-tooltip-text::after {
 	content: " ";
@@ -470,7 +464,6 @@ tr:last-child td:last-child {
 	border-style: solid;
 	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
 }
-
 /* Style the text within the tooltip. */
 .icon-tooltip-text {
 	font-size: 12.8px; /* Fallback value. */
@@ -481,36 +474,130 @@ tr:last-child td:last-child {
 
 
 
-
-
 /* 3. Dropdown styling */
 
+option {
+	color: black; /* The font colour of the text. */ 
+}
 /* Add a class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
-	padding-bottom: 0.3rem;
+	padding-bottom: 1rem;
 	text-align: center;
+	position: relative;
+	/* display: inline-block; */
+	margin: auto;
 }
-
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
 	background-color: rgba(255, 255, 255, 0.10);
-	color: white;
+	color: var(--secondary-accent-colour, white);
 	border: none;
 	text-align: center;
 	width: 20%;
-	min-width: 10rem;
+	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
 	font-size: 0.8rem; /* Relative to root (html) value. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
+	border-radius: var(--component-border-radius, 0.2rem);
+}
+/* Style the dropdown button. */
+/* Dropdown button on hover & focus */
+.selection-dropdown:hover, .selection-dropdown:focus {
+	background-color: rgba(255, 255, 255, 0.20);
+}
+/* Style the dropdown button downwards arrow. */
+button > .selection--dropdown-arrow-icon {
+	display: inline; /* Set the down arrow to be displayed alongside the text. */
+}
+/* Style the small white downwards arrow. */
+.selection-dropdown-arrow-icon {
+	height: 0.6rem;
+	width: 0.6rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.2rem;
+}
+/* Style the dropdown menu items that appears when the user has clicked. */
+.selection-dropdown-content > option {
+	color: white; /* The font colour of the text. */ 
+	/* background-color: red; */
+	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	margin: auto;
+	z-index: 20;
+	padding: 0.2rem;
+}
+/* Dropdown Content (Hidden by Default) */
+.selection-dropdown-content {
+	/* background-color: #490bf3; */
+	background-color: var(--main-background-colour, green);
+	display: none;
+	position: absolute;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	/*width: 40%; /* Need a specific value to work */
+	width: fit-content;
+	height: max-content;
+	max-width: 80%;
+	max-height: 15rem;
+	border: 1px solid #ddd;
+	z-index: 1;
+	border-radius: var(--component-border-radius, 0.2rem);
+	overflow-y: scroll;
+	z-index: 6;
+}
+/* Style the header section of the dropdown content which holds the search icon and input text. */
+.selection-dropdown-content-header-section {
+	/* background-color: blue; */
+	display: inline; /* Set the search icon to be displayed alongside the search bar. */
+	padding: 0.3rem;
+}
+/* Style the small white search icon. */
+.selection-dropdown-search-icon {
+	height: 0.8rem;
+	width: 0.9rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	margin-right: 0.2rem;
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show-dropdown-option {
+	display: block;
+}
+/* Style the hover over links. */
+.selection-dropdown-content option:hover {
+	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
 }
 
-/* Style the dropdown menu that appears for the user to click on. */
-option {
-	color: black; /* The font colour of the text. */ 
-	background-color: white; /* The background colour behind the text. */ 
-}
+  
+  /* The search field */
+  #myInput {
+	box-sizing: border-box;
+	font-size: 1rem;
+	padding: 14px 20px 12px 45px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  /* The search field when it gets focus/clicked on */
+  #myInput:focus {
+	  outline: 3px solid #ddd;
+	}
+  
+  /* The container <div> - needed to position the dropdown content */
+  /* .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+   */
+
+
+  
+  
+
 
 
 /* 4. Information bar styling */
@@ -524,17 +611,17 @@ option {
 	margin-bottom: 1rem;
 }
 
+
+
 /* 5. Stats ToolTip styling */
 
 /* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
-
 /* Stats Tooltip container */
 .stats-tooltip {
 	/* background-color: red; */
 	position: relative;
   	display: inline-block;	
 }
-
 /* Tooltip text */
 .stats-tooltip .stats-tooltip-text {
 	/* background-color: blue; */
@@ -547,7 +634,7 @@ option {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
@@ -558,13 +645,11 @@ option {
 	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
     transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
-  
 /* Show the stats tooltip text when you mouse over the stats tooltip container */
 .stats-tooltip:hover .stats-tooltip-text {
 	visibility: visible; /* Change the visibility to visible when hovered on. */
 	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
-
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .stats-tooltip .stats-tooltip-text::after {
 	content: " ";
@@ -576,7 +661,6 @@ option {
 	border-style: solid;
 	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
 }
-
 /* Style the text within the tooltip. */
 .stats-tooltip-text {
 	font-size: 12.8px; /* Fallback value. */
@@ -584,6 +668,7 @@ option {
 	text-transform: none;
 	text-align: left;
 }
+
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -595,7 +680,6 @@ Section 3
 /* Everything below initially designed for mobile. */
 
 /* Header Section */
-
 .header-area {
 	/* background-color: violet; */
 	display: grid; 
@@ -605,9 +689,8 @@ Section 3
 	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "Logo Title Options";
-	border-bottom: 0.125rem solid white;
+	border-bottom: 0.125rem solid var(--secondary-accent-colour, white);
 }
-
 /* Style the Dorkinians logo in the top left corner. */
 .logo-container {
 	/* background-color: purple; */
@@ -618,22 +701,20 @@ Section 3
 	height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
 	width: auto;
 }
-
 /* Style the central title section. */
 .title-container {
 	/* background-color: red; */
 	grid-area: Title;
 	padding-top: 0.8rem;
 }
-
 /* Style the menu options button in the top right corner. */
 .options-container {
 	/* background-color: blue; */
 	grid-area: Options;
 	padding: 0.3rem;
 }
-.optionsbutton {
-    color: var(--accent-color-white, white);
+#options-button {
+    color: var(--secondary-accent-colour, white);
     /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
     left: 0rem;
@@ -646,10 +727,12 @@ Section 3
     margin: 0rem;
     padding: 0rem;
 }
-.optionsbutton:hover {
-    color: var(--main-dorkinians-yellow-colour);
+#options-button:hover {
+    color: var(--main-accent-colour, yellow);
 }
 
+
+/* Top Left Dorkinians Logo */
 
 /* Add a rotation set up for the Dorkinians logo in the top left. */
 .rotate {
@@ -671,34 +754,33 @@ Section 3
 }
 
 
+
 /* Loading Page */
 
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-    /* background-color: var(--main-dorkinians-green-colour, black); */
-    background-image: linear-gradient(67deg, #236f38 5%, #31a057 42%, var(--main-dorkinians-green-colour) 74%);
-	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-dorkinians-green-colour) 75%);
+    /* background-color: var(--main-background-colour, black); */
+	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%);
 	position: fixed;
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-
 	display: grid; 
 	grid-template-columns: 100%; 
-	grid-template-rows: 0.3fr 1fr 0.3fr 1fr;
+	grid-template-rows: 0.3fr 1fr 0.2fr 0.4fr 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "TopSpace"
 	  "Logo"
+	  "Title"
 	  "Phrases";
 }
-
 .loading-page-container {
 	text-align: center;
 	display: flex; /* Set up the container to allow vertical and horizontal alignment. https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ */
@@ -714,12 +796,23 @@ Section 3
 	height: 15rem;
 	width: auto;
 }
+#loading-page-title-container {
+	/* background: purple; */
+	padding-top: 1rem;
+	grid-area: Title;
+}
+#loading-page-title-container h2 {
+	color: var(--secondary-accent-colour, white);
+}
 #loading-page-loading-phrase-container {
 	/* background: green; */
 	grid-area: Phrases;
-	color: white;
+	color: var(--secondary-accent-colour, white);
+	margin-top: 0rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
 }
-
 /* Add a fadeout animation that fades the opacity of the background out and then sets the display to be none. */
 .fadeout {
 	opacity: 1;
@@ -737,12 +830,77 @@ Section 3
 
 
 
+/* Pop Up Box */
 
+#pop-up-box {
+	
+	/* Change the below property on/off to hide/show the pop up box. */
+	/* display: none !important; */
+
+	background: var(--main-background-colour, green);
+	
+	/* Set the position of the box to be bang in the center of the screen. */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30; /* Have the pop up in front of all other items on the page. */
+
+	/* Control and set the size of the box based on the content. */
+	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
+	max-height: 60%; /* At maximum, have the height at 60%. */
+	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
+	width: 95%;
+	
+	/* Style the pop up box. */
+	border: 0.125rem solid var(--secondary-accent-colour, white);
+	border-radius: var(--section-border-radius, 2rem);
+	padding: 0.7rem; /* Add internal padding to the pop up box. */
+}
+/* The x close button. */
+#pop-up-box #pop-up-box-close-button {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+#pop-up-box-container {
+	/* background: #490bf3; */
+	height: 100%;
+	width: 100%;
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1.5rem 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+}
+#pop-up-box-header-container {
+	/* background: red; */
+	height: 1.5rem;
+}
+#pop-up-box-header-container h3 {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+#pop-up-box-message-container {
+	/* background: pink; */
+	height: max-content;
+	width: 100%;
+	overflow-y: scroll;
+}
+#pop-up-box-message-text {
+	max-inline-size: none; /* Remove some carry over p styling from the snap tabs to stop a weird word wrap. */
+}
+/* Style the text in the pop up box. */
+#pop-up-box a, h3, p {
+	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
+}
 
 
 
 /* Footer Section */
-
 
 
 
@@ -752,15 +910,17 @@ Section 4
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* Tabs Section */
+
 /* Everything below initially designed for mobile. */
 
 /* 1. Homepage Tab */
 
-.homepage-next-fixtures-team-container {
+#homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
 	display: grid;
 	width: 100%;
-	grid-template-columns: max-content 3fr 1fr max-content; 
+	grid-template-columns: max-content max-content max-content max-content max-content; 
 	grid-template-rows: 1fr;
 	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
 	/* justify-items: stretch; */
@@ -769,26 +929,23 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+	overflow-x: scroll;
 }
-
-.homepage-next-fixtures-team-container p {
+#homepage-next-fixtures-team-container p {
 	/* color: red; */
 	font-size: 0.8rem;
 }
-
-.homepage-next-fixtures-team-container h4 {
+#homepage-next-fixtures-team-container h4 {
 	/* color: red; */
-	color: var(--main-dorkinians-yellow-colour, #F9ED32);
+	color: var(--main-accent-colour, yellow);
 	font-size: 0.8rem;
 }
-
 .next-fixtures-grid-item {
 	/* background-color: aqua; */
 	/* display: inline-grid; */
 	justify-self: start; /* Align the content of the cells horizontally to the left. */
 	align-self: flex-start; /* Align the content of the cells vertically to the top of the row. */
 }
-
 .homepage-weather-container {
 	/* background-color: yellow; */
 	grid-area: Weather;
@@ -810,7 +967,6 @@ Section 4
 	  "TeamSeasonResults"
 	  "AllClubResults";
 }
-
 #club-stats-total-club-and-team-stats-container {
 	/* background-color: blue; */
 	grid-area: TotalClubAndTeamStats;
@@ -824,7 +980,6 @@ Section 4
 #club-stats-total-club-and-team-stats-container div h5 {
 	display: inline;
 }
-
 /* Style the div holding the header and information icon. */
 #club-stats-total-club-and-team-stats-header-container {
 	/* background-color: purple; */
@@ -834,18 +989,14 @@ Section 4
 	/* background-color: yellow; */
 	display: inline-block;
 }
-
-
 #club-stats-team-season-results-container {
 	/* background-color: blue; */
 	grid-area: TeamSeasonResults;
 	padding: 0.3rem;
 }
-
 #club-stats-team-season-results-selection {
 	margin-bottom: 1rem; /* Add some space below the selection containers. */
 }
-
 #club-stats-all-club-results-container {
 	/* background-color: red; */
 	grid-area: AllClubResults;
@@ -854,12 +1005,9 @@ Section 4
 
 
 
-
-
 /* 3. Player Stats Tab */
 
 /* This Season Stats */
-
 #player-stats-this-season-top-container {
 	/* background-color: greenyellow; */
 	display: grid; 
@@ -868,7 +1016,6 @@ Section 4
 	gap: 0rem 0rem; /* First value is between rows, second columns. */
 
 }
-
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
 	display: grid; 
@@ -876,29 +1023,23 @@ Section 4
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 }
-
 .player-stats-this-season-stat-container h5 {
 	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
 	text-align: right;
 }
-
 .player-stats-this-season-stat-container img {
 	margin-left: 0.4rem;
 }
-
 .player-stats-this-season-stat-container div {
 	margin-left: 0.4rem;
 }
 
 /* Past Season Stats */
-
 #player-stats-past-seasons-table {
 	background-color: #490bf3;
 }
 
 /* All Time Stats */
-
-
 
 
 
@@ -915,19 +1056,16 @@ Section 4
 	  "TeamOfTheWeek"
 	  "TopPerformers";
 }
-
 .totw-week-selection-container {
 	/* background-color: blue; */
 	grid-area: WeekSelection;
 	padding: 0.3rem;
 }
-
 .totw-team-of-the-week-container {
 	/* background-color: yellow; */
 	grid-area: TeamOfTheWeek;
 	padding: 0.3rem;
 }
-
 .totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
@@ -935,29 +1073,32 @@ Section 4
 }
 
 
+
 /* 5. Comparison Tab */
 
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
-	grid-template-columns: 45% 4% 45%; 
-	grid-template-rows: 2rem 2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 3%; /* First value is between rows, second columns. */
+	grid-template-columns: 45% 6% 45%; 
+	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
+	gap: 1rem 2%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
 	  "Player1Stats Blank Player2Stats"
+	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
-
 .comparison-player-1-selection-container {
 	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
+	width: 100%;
 }
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
+	width: 100%;
 }
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
@@ -969,7 +1110,11 @@ Section 4
 	grid-area: Player2Stats;
 	padding: 0.3rem;
 }
-
+.comparison-stat-category-selection-container {
+	/* background-color: blue; */
+	grid-area: StatCategorySelection;
+	/* padding: 0.3rem; */
+}
 /* Add a class to style the overall holding container of all stats rows. */
 .comparison-stats-table {
 	/* background-color: purple; */
@@ -982,7 +1127,6 @@ Section 4
 	gap: 0.2rem 0; /* First value is between rows, second columns. */
 	margin: 0 auto 0 auto;
 }
-
 /* Add a class to style each row container of the comparison table. */
 .comparison-stats-table-row-container {
 	/* background-color: lightgreen; */
@@ -993,7 +1137,6 @@ Section 4
 	grid-template-rows: 1.5rem; /* One row height. */
 	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
 }
-
 div.cell {
 	/* background: LightBlue; */
 	/* border: 1px solid Blue; */
@@ -1003,9 +1146,7 @@ div.cell {
   	align-items: center;
 	text-align: center;
 }
-
 /* Below two classes, id and animation are copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech */
-
 .bar-container {
 	/* background-color: red; */
 	position: relative;
@@ -1013,38 +1154,31 @@ div.cell {
 	/* border-radius: 1rem; */
 	/* width: 100%; */
 }
-
 /* Create an initial styling for the comparison bars which start white. */
 .bar-container .comparison-stat-bar {
-	background-color: white;
+	background-color: var(--secondary-accent-colour, white);
 	/* background-color: green; */
 	position: absolute;
 	height: 80%;
 	border-radius: 0.3rem;
 	width: 0%;
 }
-
 @keyframes progress-animation {
 	0% {width: 0%;}
 	100% {width: 100%;}
 }
-
 .bar-right {
 	left: 0rem !important; /* Lock the bar to the left side of its container. */
 	justify-self: start; /* Position the bar container to the left side of its container. */
 }
-
 .bar-left {
 	right: 0rem !important; /* Lock the bar to the right side of its container. */
 	justify-self: end; /* Position the bar container to the right side of its container. */
 }
-
 /* Create a class to be added to the bar that is greater/or less. */
 .yellow {
-	background-color: #F9ED32 !important;
+	background-color: var(--main-accent-colour, yellow) !important;
 }
-
-
 /* Create a container class to house the icons. */
 .comparison-icons-container {
 	background-color: orange;
@@ -1052,19 +1186,21 @@ div.cell {
 	padding: 3.5rem 0rem 0.3rem 0rem;
 	text-align: center;
 }
-
 /* Create an icon class to apply to all icons. */
 .comparison-icon {
 	height: 1.4rem;
 	width: auto;
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
 }
-
 /* Create a class to turn the icons white. */
 .comparison-icon.white {
 	filter: brightness(0) invert(1); /* Ensure the icon is white. */
 }
-
+/* Create a class to turn the icons red. */
+.comparison-icon.red {
+	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+}
 /* Create two card shapes using CSS. */
 .card-icon {
 	border-radius: 2px;
@@ -1073,16 +1209,11 @@ div.cell {
 	transform: rotate(20deg);
 }
 .card-icon#yellow-card {
-	background-color: #F9ED32;
+	background-color: yellow;
 }
 .card-icon#red-card {
 	background-color: red;
 }
-
-
-
-
-
 
 
 
@@ -1091,29 +1222,21 @@ div.cell {
 .dorkiniansTable {
 	padding-top: 1rem;
 }
-
 .dorkiniansTableHeaderText {
 	padding-bottom: 0.5rem;
 	text-align: center;
 }
-
 .AFCTable {
 	padding-top: 0.5rem;
 	padding-bottom: 1.5rem;
 }
-
 .AFCResultsAndFixtures {
 	padding-top: 0.5rem;
 	padding-bottom: 2rem;
 }
-
-
-
-
-
-
-
-
+.tables-results-fixtures-text-replacement {
+	padding-bottom: 2rem;
+}
 
 
 
