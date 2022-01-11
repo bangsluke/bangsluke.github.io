@@ -464,7 +464,7 @@ function init() {
     // Club Stats Tab.
     console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
-    // Total Club Stats Info
+    // Total Club/Team Stats Info
     Papa.parse(totalClubStatsSheetURLCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
@@ -473,12 +473,12 @@ function init() {
     })
 
     // Team Season Results Info
-    Papa.parse(teamSeasonResultsSheetURLCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
-    })
+    // Papa.parse(teamSeasonResultsSheetURLCSV, {
+    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+    //     complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
+    // })
 
     // Update the information bar.
     displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
@@ -512,7 +512,7 @@ function init() {
     // Team Of The Week Tab.
 
     // Update the information bar.
-    displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
+    // displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
 
 
     // Step 5. 
