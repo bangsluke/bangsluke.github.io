@@ -41,6 +41,7 @@ Section 1
 	--main-accent-colour: #F9ED32;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
+	--tooltip-background-colour: #236f38;
 
 	/* Light Theme Colours Used */
 	/* --main-background-colour: #1C8841; Main Dorkinians green.
@@ -437,7 +438,7 @@ tr:last-child td:last-child {
 /* Tooltip text */
 .icon-tooltip .icon-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: max-content;
@@ -473,7 +474,7 @@ tr:last-child td:last-child {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .icon-tooltip-text {
@@ -635,7 +636,7 @@ button > .selection--dropdown-arrow-icon {
 /* Tooltip text */
 .stats-tooltip .stats-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: 90%;
@@ -669,7 +670,7 @@ button > .selection--dropdown-arrow-icon {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .stats-tooltip-text {
@@ -893,6 +894,7 @@ snap-tabs {
 	top: var(--headerHeight, 3.2rem);
     height: var(--snap-tab-header-height, 2.5rem);
 	z-index: 5; /* snap-tabs-header-section. Position the snap tabs header right at the front of most items. */
+	overflow: hidden; /* Hide the scrollbars within this section. */
 }
 snap-tabs>section {
     block-size: 100%;
