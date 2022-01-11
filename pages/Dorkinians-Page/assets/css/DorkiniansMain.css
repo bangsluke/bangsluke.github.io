@@ -894,7 +894,15 @@ snap-tabs {
 	top: var(--headerHeight, 3.2rem);
     height: var(--snap-tab-header-height, 2.5rem);
 	z-index: 5; /* snap-tabs-header-section. Position the snap tabs header right at the front of most items. */
-	overflow: hidden; /* Hide the scrollbars within this section. */
+	
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-x: scroll; 	
+}
+#snap-tabs-header-section::-webkit-scrollbar {
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	display: none; /* for Chrome, Safari, and Opera */
 }
 snap-tabs>section {
     block-size: 100%;
