@@ -69,11 +69,11 @@ Section 1
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
 	
 	/* Snap Tabs */
-	--snap-tab-header-height: 3rem; /* Controls the height of the snap tab header section. */
+	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
 	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
     --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
-    --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
     --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
@@ -891,7 +891,7 @@ snap-tabs {
 }
 #snap-tabs-header-section {
 	top: var(--headerHeight, 3.2rem);
-    height: var(--snap-tab-header-height, 3rem);
+    height: var(--snap-tab-header-height, 2.5rem);
 	z-index: 5; /* snap-tabs-header-section. Position the snap tabs header right at the front of most items. */
 }
 snap-tabs>section {
@@ -916,6 +916,9 @@ snap-tabs>section {
     overscroll-behavior-x: contain;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
+}
+section.scroll-snap-x {
+	padding-bottom: 0rem; /* Remove normal section bottom padding for this one snap tab case. */
 }
 @media (prefers-reduced-motion:no-preference) {
     .scroll-snap-x {
