@@ -31,8 +31,6 @@
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <!-- Main CSS styling -->
     <link href="/pages/Dorkinians-Page/assets/css/DorkiniansMain.css" rel="stylesheet">
-    <!-- SnapTabs styling -->
-    <link href="/pages/Dorkinians-Page/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet">
 
     <!-- Consider Pre-Loading some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
     <!-- The Header styling -->
@@ -144,7 +142,23 @@
 
             <snap-tabs>
 
-                <section class="scroll-snap-x">
+                <!-- The horizontal scrollable section. -->
+                <snap-tabs-header class="scroll-snap-x" id="snap-tabs-header-section">
+
+                    <nav id="nav-bar">
+                        <a href="#home" active>Home</a>
+                        <a href="#club-stats" id="club-stats-tab-text">Club Stats</a>
+                        <a href="#player-stats">Player Stats</a>
+                        <!-- <a href="#team-of-the-week">TOTW</a> -->
+                        <a href="#comparison">Comparison</a>
+                        <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
+                    </nav>
+
+                    <span class="snap-indicator"></span>
+
+                </snap-tabs-header>
+
+                <section class="scroll-snap-x" id="snap-tabs-main-section">
 
                     <!-- 1. Home Tab -->
                     <article class="nav-targets" id="home">
@@ -2572,22 +2586,6 @@
                     </article>
 
                 </section>
-
-                <!-- The horizontal scrollable section. -->
-                <snap-tabs-header class="scroll-snap-x">
-
-                    <nav id="nav-bar">
-                        <a href="#home" active>Home</a>
-                        <a href="#club-stats" id="club-stats-tab-text">Club Stats</a>
-                        <a href="#player-stats">Player Stats</a>
-                        <!-- <a href="#team-of-the-week">TOTW</a> -->
-                        <a href="#comparison">Comparison</a>
-                        <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
-                    </nav>
-
-                    <span class="snap-indicator"></span>
-
-                </snap-tabs-header>
 
             </snap-tabs>
 
