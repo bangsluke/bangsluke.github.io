@@ -1118,19 +1118,24 @@ p+p {
 /* Works on Firefox */
 * {
 	scrollbar-width: thin;
-	scrollbar-color: white orange;
+	scrollbar-color: rgba(255, 255, 255, 0.50) rgba(255, 255, 255, 0.10);
+	/* scrollbar-color: blue orange; */
 }
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-	width: 10px;
+	width: 5px;
+	height: 5px;
 }
 *::-webkit-scrollbar-track {
-	background: orange;
+	background: rgba(255, 255, 255, 0.10);
+	/* background: orange; */
+	border-radius: 20px;
 }
 *::-webkit-scrollbar-thumb {
-	background-color: blue;
+	/* background-color: blue; */
+	background-color: rgba(255, 255, 255, 0.50);
 	border-radius: 20px;
-	border: 3px solid orange;
+	/* border: 3px solid orange; */
 }
 
 
