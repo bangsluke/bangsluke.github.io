@@ -1010,17 +1010,15 @@ snap-tabs>snap-tabs-header a:focus {
 	border-left: 0.125rem solid var(--main-accent-colour, yellow);
 	border-right: 0.125rem solid var(--main-accent-colour, yellow);
 }
+/* The snap-indicator is the underline of the header text that appears on mobile. */
 snap-tabs>snap-tabs-header>.snap-indicator {
-    background: hsl(var(--accent));
-
-	background: red;
-	background: var(--main-background-colour, green);
-
+    /* background: hsl(var(--accent)); */
+	background: var(--main-accent-colour, yellow);
     inline-size: 0rem;
     block-size: var(--indicator-size);
 	/* block-size: 3rem; */
     border-radius: var(--indicator-size);
-	z-index: 5;
+	/* z-index: 5; */
 }
 @media (prefers-reduced-motion:reduce) {
     snap-tabs .snap-indicator {
