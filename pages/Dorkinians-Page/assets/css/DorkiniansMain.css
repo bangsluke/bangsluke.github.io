@@ -967,7 +967,7 @@ snap-tabs>snap-tabs-header {
     background-color: var(--main-background-colour, green);
 	
     /* Add the below if positioning snap-tabs at the top of the page. */
-    /* border-bottom: 0.125rem solid var(--main-accent-colour, yellow); */
+    border-bottom: 0.125rem solid var(--main-accent-colour, yellow);
 
     /* Add the below if positioning snap-tabs at the bottom of the page. */
     /* top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
@@ -1007,21 +1007,24 @@ snap-tabs>snap-tabs-header a:hover {
 /* Format the hyperlinks on focus within the snap tabs header section. */
 snap-tabs>snap-tabs-header a:focus {
     outline-offset: -.5ch;
+	border-left: 0.125rem solid var(--main-accent-colour, yellow);
+	border-right: 0.125rem solid var(--main-accent-colour, yellow);
 }
 snap-tabs>snap-tabs-header>.snap-indicator {
     background: hsl(var(--accent));
 
 	background: red;
+	background: var(--main-background-colour, green);
 
     inline-size: 0rem;
     block-size: var(--indicator-size);
-	block-size: 3rem;
+	/* block-size: 3rem; */
     border-radius: var(--indicator-size);
 	z-index: 5;
 }
 @media (prefers-reduced-motion:reduce) {
     snap-tabs .snap-indicator {
-        /* visibility: hidden; */
+        visibility: hidden;
     }
 }
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
