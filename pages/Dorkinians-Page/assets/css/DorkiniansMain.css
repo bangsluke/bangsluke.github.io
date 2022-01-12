@@ -78,6 +78,8 @@ Section 1
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
     --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
+
+	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -858,16 +860,17 @@ header {
 .snap-tabs-container {
     /* background-color: green; */
 	position: fixed;
-    top: var(--headerHeight, 3.2rem); /* Offset the snap-tabs-container below the fixed header. */
     left: 0rem;
     padding-top: 0rem;
     width: 100%;
+	
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    top: var(--headerHeight, 3.2rem); /* Offset the snap-tabs-container below the fixed header. */
 	height: calc(100% - var(--headerHeight, 3.2rem)); /* Make the height of the snap-tabs-container the full screen height minus the fixed header. */
 
-    /* Add the below if positioning snap-tabs at the top of the page. */
-    
     /* Add the below if positioning snap-tabs at the bottom of the page. */
-    /*height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Calculate the height of the snap-tabs-container as the viewport height, minus the fixed header height and minus the Chrome/Safari browser bar height (estimated). */
+    /* top: 0rem; */
+	/*height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Calculate the height of the snap-tabs-container as the viewport height, minus the fixed header height and minus the Chrome/Safari browser bar height (estimated). */
     /*min-height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Same calculation as above. */
     
     /* Below is copied from body above. */
@@ -876,7 +879,7 @@ header {
     align-content: center;
     justify-content: center;
     place-content: center;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    /* font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; */
     z-index: 2; /* snap-tabs-container */
     overflow: hidden;
 }
@@ -950,7 +953,7 @@ snap-tabs>section>article {
     overflow-y: auto;
     overscroll-behavior-y: contain;
     /* padding: var(--vertical-space) var(--horizontal-space); */
-    padding: 0rem 0rem;
+    padding: 0rem 0rem; /* Control the padding around the anchor hyperlink text. */
 }
 article {
     color: var(--secondary-accent-colour, white);
@@ -988,8 +991,6 @@ snap-tabs>snap-tabs-header a {
     --text-color: var(--secondary-accent-colour, white); /* Need the variable --text-color as needed in the JavaScript. */
 	/*--text-color: var(--accent-color-2, white); /* Need the variable --text-color as needed in the JavaScript. */
 	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
-	color: var(--accent-color-2, white);
-
     scroll-snap-align: start;
     display: inline-flex;
     align-items: center;
@@ -1009,6 +1010,9 @@ snap-tabs>snap-tabs-header a:focus {
 }
 snap-tabs>snap-tabs-header>.snap-indicator {
     background: hsl(var(--accent));
+
+	background: orange;
+
     inline-size: 0rem;
     block-size: var(--indicator-size);
     border-radius: var(--indicator-size);
@@ -1020,7 +1024,10 @@ snap-tabs>snap-tabs-header>.snap-indicator {
 }
 snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
     /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    /* outline-color: hsl(var(--accent)); */
+    outline-color: hsl(var(--accent));
+
+	outline-color: blue;
+
     outline-offset: -0.3rem;
 }
 h2 {
@@ -1114,6 +1121,32 @@ p+p {
 
 
 
+/* Scroll Bar Styling - https://www.digitalocean.com/community/tutorials/css-scrollbars */
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.50) rgba(255, 255, 255, 0.10);
+	/* scrollbar-color: blue orange; */
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.10);
+	/* background: orange; */
+	border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+	/* background-color: blue; */
+	background-color: rgba(255, 255, 255, 0.50);
+	border-radius: 20px;
+	/* border: 3px solid orange; */
+}
+
+
+
 /* Footer Section */
 
 
@@ -1143,7 +1176,7 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
-	overflow-x: scroll;
+	overflow-x: scroll; /* Always show the x scroll bar. */
 }
 #homepage-next-fixtures-team-container p {
 	/* color: red; */
