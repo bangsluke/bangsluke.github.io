@@ -938,8 +938,10 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
     
-    let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
+    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
 
     console.log("Selected player (playerValue) = " + playerValue);
 
@@ -1050,8 +1052,10 @@ function showPlayerStatsAllTimeTabInfo(results) {
     //const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     //const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
     
-    let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
+    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
 
     console.log("Selected player (playerValue) = " + playerValue);
 
@@ -1963,7 +1967,7 @@ function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dro
         let newOption = document.createElement("option"); // Create the new option element.
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
         newOption.onclick = function() { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
-            document.getElementById(dropdownButtonID).text = playerNameArray[i]; // Update the button element to have the property text with the players name.
+            document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
             document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(); // Close the dropdown list.
