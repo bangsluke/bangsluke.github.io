@@ -96,9 +96,8 @@
     </header>
 
     <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
-    <div class="background-overlay" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
-    <div class="background-overlay" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
-    <div class="background-overlay" id="background-overlay-selection-dropdown" style="display: none" onclick="closeDropdownList()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
 
     <!-- Pop Up Box -->
 
@@ -557,11 +556,11 @@
                             <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
                             <div class="information-bar" id="player-stats-information-bar"></div>
 
-                            <div class="player-stats-selection-container">
+                            <!-- <div class="player-stats-selection-container"> -->
 
-                                <div class="selection-container">
+                                <!-- <div class="selection-container"> -->
                                     <!-- Add a drop down select box for the user to change the statistic category. -->
-                                    <select name="player-stats-player-selection" class="selection-dropdown"
+                                    <!-- <select name="player-stats-player-selection" class="selection-dropdown"
                                         id="player-stats-player-selection" onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option>Luke Bangs</option>
                                         <option selected="selected">Sam Slade</option>
@@ -573,29 +572,34 @@
                                         <option>Andy Higgins</option>
                                         <option>Oli Goddard</option>
                                         <option>Jonny Sourris</option>
-                                    </select>
-                                </div>
+                                    </select> -->
+                                <!-- </div> -->
 
-                            </div>
+                            <!-- </div> -->
 
                             <div class="player-stats-selection-container">
+
+                                <!-- Add a clear transparent background overlays that are called and used in conjunction with other pop up menus. -->
+                                <div class="background-overlay background-overlay-clear" id="background-overlay-player-stats-selection-dropdown" style="display: none" onclick="closeDropdownList()"></div>
 
                                 <!-- Add a selection container to hold all of the elements needed for the drop down. -->
                                 <div class="selection-container" id="player-stats-selection-dropdown-container">
                                     <button onclick="showDropdownList('player-stats-selection-dropdown')"
-                                        class="selection-dropdown">Dropdown <img
+                                        class="selection-dropdown-button" id="player-stats-selection-dropdown-button">Dropdown<img
                                             src="/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png"
                                             alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
                                             width="25px"></button>
-                                    <div id="player-stats-selection-dropdown" class="selection-dropdown-content">
+                                    <div class="selection-dropdown-content" id="player-stats-selection-dropdown">
                                         <div class="selection-dropdown-content-header-section">
                                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Search Icon.png"
                                             alt="Search Icon" class="selection-dropdown-search-icon" height="25px"
                                             width="25px">
-                                            <input type="text" placeholder="Search.." id="player-stats-selection-input"
+                                            <input class="selection-dropdown-search-bar" type="text" placeholder="Search.." id="player-stats-selection-input"
                                             onkeyup="filterDropdownList('player-stats-selection-dropdown', 'player-stats-selection-input')">
                                         </div>
-                                        <!-- <option class="textleft">Options added dynamically using JS</option> -->
+                                        <div class="selection-dropdown-content-option-section" id="player-stats-selection-dropdown-option-container">
+                                            <!-- <option class="textleft">Options added dynamically using JS</option> -->
+                                        </div>
                                     </div>
                                 </div>
 

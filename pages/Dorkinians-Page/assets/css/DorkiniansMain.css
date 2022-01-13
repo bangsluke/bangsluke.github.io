@@ -169,14 +169,25 @@ section {
 
 /* Add a background overlay for closing other menus. */
 .background-overlay {
-    background: rgba(0, 0, 0, 0.50);
-    position: fixed;
+    /* background: rgba(0, 0, 0, 0.50); */
+    position: fixed; /* The position has to be set for zindex to work. */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: block;
-	z-index: 2; /* background-overlay */
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 5; /* background-overlay */
+}
+
+.background-overlay-clear {
+	background: rgba(0, 0, 0, 0.0);
+}
+
+.background-overlay-dark {
+	background: rgba(0, 0, 0, 0.50);
 }
 
 
@@ -490,18 +501,24 @@ tr:last-child td:last-child {
 
 /* 3. Dropdown styling */
 
+/* Common styling for new and old dropdown components. */
 option {
 	color: black; /* The font colour of the text. */ 
 }
-/* Add a class for all common selection container styling. */
+/* Add a top holder class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
-	position: relative;
+	position: relative; /* The position has to be set for zindex to work. */
 	/* display: inline-block; */
 	margin: auto;
+	z-index: 3; /* selection-container */
 }
+
+
+/* Old Dropdown - using the built in dropdown component. */
+
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
 	background-color: rgba(255, 255, 255, 0.10);
@@ -516,13 +533,31 @@ option {
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 	border-radius: var(--component-border-radius, 0.2rem);
 }
+
+
+/* New Dropdown - using the custom built dropdown component. */
+
+/* Add a class for the button for all common selection dropdown styling. */
+.selection-dropdown-button {
+	background-color: rgba(255, 255, 255, 0.10);
+	color: var(--secondary-accent-colour, white);
+	border: none;
+	text-align: center;
+	width: 20%;
+	min-width: 9rem;
+	height: 1.5rem;
+	margin: auto;
+	font-size: 0.8rem; /* Relative to root (html) value. */
+	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
+	border-radius: var(--component-border-radius, 0.2rem);
+}
 /* Style the dropdown button. */
 /* Dropdown button on hover & focus */
-.selection-dropdown:hover, .selection-dropdown:focus {
+.selection-dropdown-button:hover, .selection-dropdown-button:focus {
 	background-color: rgba(255, 255, 255, 0.20);
 }
 /* Style the dropdown button downwards arrow. */
-button > .selection--dropdown-arrow-icon {
+button > .selection-dropdown-arrow-icon {
 	display: inline; /* Set the down arrow to be displayed alongside the text. */
 }
 /* Style the small white downwards arrow. */
@@ -534,15 +569,8 @@ button > .selection--dropdown-arrow-icon {
 	margin-right: 0.3rem;
 	margin-top: 0.2rem;
 }
-/* Style the dropdown menu items that appears when the user has clicked. */
-.selection-dropdown-content > option {
-	color: white; /* The font colour of the text. */ 
-	/* background-color: red; */
-	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	margin: auto;
-	z-index: 20; /* selection-dropdown-content > option */
-	padding: 0.2rem;
-}
+
+/* Style the content once the button is clicked. */
 /* Dropdown Content (Hidden by Default) */
 .selection-dropdown-content {
 	/* background-color: #490bf3; */
@@ -555,26 +583,13 @@ button > .selection--dropdown-arrow-icon {
   	margin-right: auto; 
   	/*width: 40%; /* Need a specific value to work */
 	width: fit-content;
+	width: 14rem;
 	height: max-content;
 	max-width: 80%;
 	max-height: 15rem;
 	border: 1px solid #ddd;
 	border-radius: var(--component-border-radius, 0.2rem);
 	overflow-y: scroll;
-	z-index: 6; /* selection-dropdown-content */
-}
-/* Style the header section of the dropdown content which holds the search icon and input text. */
-.selection-dropdown-content-header-section {
-	/* background-color: blue; */
-	display: inline; /* Set the search icon to be displayed alongside the search bar. */
-	padding: 0.3rem;
-}
-/* Style the small white search icon. */
-.selection-dropdown-search-icon {
-	height: 0.8rem;
-	width: 0.9rem;
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
-	margin-right: 0.2rem;
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show-dropdown-option {
@@ -584,28 +599,50 @@ button > .selection--dropdown-arrow-icon {
 .selection-dropdown-content option:hover {
 	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
 }
+/* Style the header section of the dropdown content which holds the search icon and input text. */
+.selection-dropdown-content-header-section {
+	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	/* background-color: blue; */
+	position: fixed;
+	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
+	padding: 0.5rem; /* Add padding within the search header section for spacing. */
+	border-bottom: 0.1rem solid var(--secondary-accent-colour, white);
+	/* width: 50%; */
+	/* width: fit-content; */
+	width: 13.5rem;
+	height: 2.2rem;
+}
+/* Style the small white search icon. */
+.selection-dropdown-search-icon {
+	height: 0.8rem;
+	width: 0.9rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	margin-right: 0.2rem;
+}
+/* The search field */
+.selection-dropdown-search-bar {
+	width: 80%;
+}
+/* The search field when it gets focus/clicked on */
+.selection-dropdown-search-bar:focus {
+	outline: 3px solid var(--main-accent-colour, yellow);
+}
 
-  
-  /* The search field */
-  #myInput {
-	box-sizing: border-box;
-	font-size: 1rem;
-	padding: 14px 20px 12px 45px;
-	border: none;
-	border-bottom: 1px solid #ddd;
-  }
-  
-  /* The search field when it gets focus/clicked on */
-  #myInput:focus {
-	  outline: 3px solid #ddd;
-	}
-  
-  /* The container <div> - needed to position the dropdown content */
-  /* .dropdown {
+/* Style the options section of the dropdown content which holds all of the loaded in options. */
+.selection-dropdown-content-option-section {
 	position: relative;
-	display: inline-block;
-  }
-   */
+	width: 50%;
+	top: 2.2rem; /* Offset the options below the header section. */
+}
+/* Style the dropdown menu items that appears when the user has clicked. */
+.selection-dropdown-content-option-section > option {
+	color: white; /* The font colour of the text. */ 
+	/* background-color: red; */
+	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	margin: auto;
+	padding: 0.5rem;
+	width: 100%;
+}
 
 
   
@@ -782,7 +819,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
