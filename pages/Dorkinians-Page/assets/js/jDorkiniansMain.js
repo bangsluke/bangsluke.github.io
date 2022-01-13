@@ -412,7 +412,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -651,7 +651,7 @@ function getPlayerDropdownInfo(results) {
     displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown'); // Call the addPlayerDropdownInfo function.
+    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the addPlayerDropdownInfo function.
 }
 
 
@@ -934,9 +934,14 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-    const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    // console.log("Selected player (playerValue) = " + playerValue);
+    
+    //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
+    //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    
+    let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
+    let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
@@ -1042,9 +1047,13 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-    const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    // console.log("Selected player (playerValue) = " + playerValue);
+    //const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
+    //const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    
+    let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
+    let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
@@ -1937,30 +1946,39 @@ function displayInformation(informationBarID, displayMessage) {
 
 // When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID) {
+    console.log("showDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown has been clicked.
     document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
     document.getElementById('player-stats-selection-dropdown-container').style.zIndex = 6;  // Show the selection dropdown.
-    // document.getElementById('background-overlay-selection-dropdown').style.display = "inline"; // Show the background overlay behind the selection dropdown.
-    // document.getElementById('background-overlay-selection-dropdown').style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
+    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "inline"; // Show the background overlay behind the selection dropdown.
+    document.getElementById('background-overlay-player-stats-selection-dropdown').style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
 }
 
 // Populate the dropdown with Player names.
-function populateDropdownList(playerNameArray, dropdownID) {
+function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
     console.log("playerNameArray:");
     console.log(playerNameArray);
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
         let newOption = document.createElement("option"); // Create the new option element.
+        newOption.classList.add("textleft"); // Add the textleft class to the new element.
+        newOption.onclick = function() { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
+            document.getElementById(dropdownButtonID).text = playerNameArray[i]; // Update the button element to have the property text with the players name.
+            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
+            // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
+            closeDropdownList(); // Close the dropdown list.
+            showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+        };
         let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
         newOption.appendChild(playerNameText); // Append the text node to the new element.
-        let parentElement = document.getElementById(dropdownID); // Get the parent dropdown element.
+        let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
         parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
     }   
 }
 
 // Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function filterDropdownList(dropdownID, inputID) {
-    var input, filter, ul, li, option, i;
+    var input, filter, option, i;
     input = document.getElementById(inputID);
     filter = input.value.toUpperCase();
     div = document.getElementById(dropdownID);
@@ -1976,6 +1994,7 @@ function filterDropdownList(dropdownID, inputID) {
 }
 
 function closeDropdownList() {
+    console.log("closeDropdownList clicked"); // Log that the dropdown has been closed.
     document.getElementById('player-stats-selection-dropdown').style.display = "none"; // Hide the selection dropdown.
-    document.getElementById('background-overlay-selection-dropdown').style.display = "none"; // Hide the background overlay behind the selection dropdown.
+    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }
