@@ -611,6 +611,7 @@ button > .selection-dropdown-arrow-icon {
 	/* width: fit-content; */
 	width: 13.5rem;
 	height: 2.2rem;
+	z-index: 2; /* selection-dropdown-content-header-section */
 }
 /* Style the small white search icon. */
 .selection-dropdown-search-icon {
