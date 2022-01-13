@@ -412,7 +412,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -934,10 +934,10 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-    
+
     //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    
+
     // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
     // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
 
@@ -1051,7 +1051,7 @@ function showPlayerStatsAllTimeTabInfo(results) {
     // Player selection.
     //const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
     //const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-    
+
     // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
     // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
 
@@ -1966,9 +1966,9 @@ function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dro
     for (let i = 0; i < playerNameArray.length; i++) {
         let newOption = document.createElement("option"); // Create the new option element.
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
-        newOption.onclick = function() { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
+        newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
-            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
+            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(); // Close the dropdown list.
             showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
@@ -1977,7 +1977,7 @@ function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dro
         newOption.appendChild(playerNameText); // Append the text node to the new element.
         let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
         parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
-    }   
+    }
 }
 
 // Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
