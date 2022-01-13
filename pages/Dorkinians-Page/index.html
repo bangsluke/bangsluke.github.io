@@ -96,8 +96,10 @@
     </header>
 
     <!-- Add some dark transparent background overlays that are called and used in conjunction with other pop up menus. -->
-    <div class="background-overlay background-overlay-dark" id="background-overlay-pop-up-box" style="display: none" onclick="closePopUpBox()"></div>
-    <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none" onclick="closeNav()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-pop-up-box" style="display: none"
+        onclick="closePopUpBox()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none"
+        onclick="closeNav()"></div>
 
     <!-- Pop Up Box -->
 
@@ -512,30 +514,30 @@
                                 <!-- Add a section for the Team Season Results. -->
                                 <!-- <section id="club-stats-team-season-results-container"> -->
 
-                                    <!-- <h3 class="textleft">Teams Season Results</h3> -->
+                                <!-- <h3 class="textleft">Teams Season Results</h3> -->
 
-                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                    <!-- <div class="table-wrapper"> -->
-                                        <!-- <table id="team-season-results-table" class="column-highlight"> -->
-                                            <!-- Data loaded into here by jDorkiniansMain.js -->
-                                        <!-- </table> -->
-                                    <!-- </div> -->
+                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                <!-- <div class="table-wrapper"> -->
+                                <!-- <table id="team-season-results-table" class="column-highlight"> -->
+                                <!-- Data loaded into here by jDorkiniansMain.js -->
+                                <!-- </table> -->
+                                <!-- </div> -->
 
                                 <!-- </section> -->
 
                                 <!-- Add a section for the All Club Results. -->
                                 <!-- <section id="club-stats-all-club-results-container"> -->
 
-                                    <!-- <h3 class="textleft">All Club Results</h3> -->
+                                <!-- <h3 class="textleft">All Club Results</h3> -->
 
-                                    <!-- <p>Add in a filterable table of all Dorkinians results.</p> -->
+                                <!-- <p>Add in a filterable table of all Dorkinians results.</p> -->
 
-                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                    <!-- <div class="table-wrapper"> -->
-                                        <!-- <table id="results-table" class="column-highlight"> -->
-                                            <!-- Data loaded into here by jDorkiniansMain.js -->
-                                        <!-- </table> -->
-                                    <!-- </div> -->
+                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                <!-- <div class="table-wrapper"> -->
+                                <!-- <table id="results-table" class="column-highlight"> -->
+                                <!-- Data loaded into here by jDorkiniansMain.js -->
+                                <!-- </table> -->
+                                <!-- </div> -->
 
                                 <!-- </section> -->
 
@@ -558,9 +560,9 @@
 
                             <!-- <div class="player-stats-selection-container"> -->
 
-                                <!-- <div class="selection-container"> -->
-                                    <!-- Add a drop down select box for the user to change the statistic category. -->
-                                    <!-- <select name="player-stats-player-selection" class="selection-dropdown"
+                            <!-- <div class="selection-container"> -->
+                            <!-- Add a drop down select box for the user to change the statistic category. -->
+                            <!-- <select name="player-stats-player-selection" class="selection-dropdown"
                                         id="player-stats-player-selection" onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option>Luke Bangs</option>
                                         <option selected="selected">Sam Slade</option>
@@ -573,31 +575,36 @@
                                         <option>Oli Goddard</option>
                                         <option>Jonny Sourris</option>
                                     </select> -->
-                                <!-- </div> -->
+                            <!-- </div> -->
 
                             <!-- </div> -->
 
                             <div class="player-stats-selection-container">
 
                                 <!-- Add a clear transparent background overlays that are called and used in conjunction with other pop up menus. -->
-                                <div class="background-overlay background-overlay-clear" id="background-overlay-player-stats-selection-dropdown" style="display: none" onclick="closeDropdownList()"></div>
+                                <div class="background-overlay background-overlay-clear"
+                                    id="background-overlay-player-stats-selection-dropdown" style="display: none"
+                                    onclick="closeDropdownList()"></div>
 
                                 <!-- Add a selection container to hold all of the elements needed for the drop down. -->
                                 <div class="selection-container" id="player-stats-selection-dropdown-container">
                                     <button onclick="showDropdownList('player-stats-selection-dropdown')"
-                                        class="selection-dropdown-button" id="player-stats-selection-dropdown-button">Dropdown<img
+                                        class="selection-dropdown-button"
+                                        id="player-stats-selection-dropdown-button" value="Sam Slade">Sam Slade<img
                                             src="/pages/Dorkinians-Page/assets/images/Icons/Down Arrow Icon.png"
                                             alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
                                             width="25px"></button>
                                     <div class="selection-dropdown-content" id="player-stats-selection-dropdown">
                                         <div class="selection-dropdown-content-header-section">
                                             <img src="/pages/Dorkinians-Page/assets/images/Icons/Search Icon.png"
-                                            alt="Search Icon" class="selection-dropdown-search-icon" height="25px"
-                                            width="25px">
-                                            <input class="selection-dropdown-search-bar" type="text" placeholder="Search.." id="player-stats-selection-input"
-                                            onkeyup="filterDropdownList('player-stats-selection-dropdown', 'player-stats-selection-input')">
+                                                alt="Search Icon" class="selection-dropdown-search-icon" height="25px"
+                                                width="25px">
+                                            <input class="selection-dropdown-search-bar" type="text"
+                                                placeholder="Search.." id="player-stats-selection-input"
+                                                onkeyup="filterDropdownList('player-stats-selection-dropdown', 'player-stats-selection-input')">
                                         </div>
-                                        <div class="selection-dropdown-content-option-section" id="player-stats-selection-dropdown-option-container">
+                                        <div class="selection-dropdown-content-option-section"
+                                            id="player-stats-selection-dropdown-option-container">
                                             <!-- <option class="textleft">Options added dynamically using JS</option> -->
                                         </div>
                                     </div>
@@ -917,30 +924,30 @@
                             <!-- Add a section for Past Seasons Stats. -->
                             <!-- <section> -->
 
-                                <!-- <h3 class="textleft">Past Season Stats</h3> -->
+                            <!-- <h3 class="textleft">Past Season Stats</h3> -->
 
-                                <!-- <table id="player-stats-past-seasons-table"> -->
-                                    <!-- Header Row -->
-                                    <!-- <tr> -->
-                                        <!-- <th>Season</th> -->
-                                        <!-- <th>Appearance -->
-                                            <!-- Add the icon for the appearance stat. -->
-                                            <!-- <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
+                            <!-- <table id="player-stats-past-seasons-table"> -->
+                            <!-- Header Row -->
+                            <!-- <tr> -->
+                            <!-- <th>Season</th> -->
+                            <!-- <th>Appearance -->
+                            <!-- Add the icon for the appearance stat. -->
+                            <!-- <img src="/pages/Dorkinians-Page/assets/images/Icons/Appearance Icon.png"
                                                 alt="APP Icon" class="comparison-icon white center" height="25px"
                                                 width="25px"> -->
-                                        <!-- </th> -->
-                                        <!-- <th>Minutes -->
-                                            <!-- Add the icon for the minutes stat. -->
-                                            <!-- <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
+                            <!-- </th> -->
+                            <!-- <th>Minutes -->
+                            <!-- Add the icon for the minutes stat. -->
+                            <!-- <img src="/pages/Dorkinians-Page/assets/images/Icons/Minutes Icon.png"
                                                 alt="Minutes Icon" class="comparison-icon white center" height="25px"
                                                 width="25px"> -->
-                                        <!-- </th> -->
-                                        <!-- <th>Goals</th>
+                            <!-- </th> -->
+                            <!-- <th>Goals</th>
                                         <th>Assists</th>
                                         <th>Clean Sheets</th> -->
-                                    <!-- </tr> -->
-                                    <!-- 2016/17 Stats -->
-                                    <!-- <tr>
+                            <!-- </tr> -->
+                            <!-- 2016/17 Stats -->
+                            <!-- <tr>
                                         <td>2016/17</td>
                                         <td id="player-stats-past-seasons-2016/17-APP"></td>
                                         <td>TBC</td>
@@ -948,8 +955,8 @@
                                         <td>TBC</td>
                                         <td>TBC</td>
                                     </tr> -->
-                                    <!-- 2017/18 Stats -->
-                                    <!-- <tr>
+                            <!-- 2017/18 Stats -->
+                            <!-- <tr>
                                         <td>2017/18</td>
                                         <td id="player-stats-past-seasons-2017/18-APP"></td>
                                         <td>TBC</td>
@@ -957,8 +964,8 @@
                                         <td>TBC</td>
                                         <td>TBC</td>
                                     </tr> -->
-                                    <!-- 2018/19 Stats -->
-                                    <!-- <tr>
+                            <!-- 2018/19 Stats -->
+                            <!-- <tr>
                                         <td>2018/19</td>
                                         <td>TBC</td>
                                         <td>TBC</td>
@@ -966,11 +973,11 @@
                                         <td>TBC</td>
                                         <td>TBC</td>
                                     </tr> -->
-                                <!-- </table> -->
+                            <!-- </table> -->
 
-                                <!-- <br> -->
+                            <!-- <br> -->
 
-                                <!-- <img class="fadein center" id="this-season-placeholder"
+                            <!-- <img class="fadein center" id="this-season-placeholder"
                                     src="/pages/Dorkinians-Page/assets/images/Layout Images/ThisSeason.png"
                                     alt="Dorkinians Logo"> -->
 
@@ -1038,14 +1045,14 @@
                             <!-- Add a section for All Stats. -->
                             <!-- <section> -->
 
-                                <!-- <h3 class="textleft">All Stats</h3> -->
+                            <!-- <h3 class="textleft">All Stats</h3> -->
 
-                                <!-- <div class="selection-container"> -->
+                            <!-- <div class="selection-container"> -->
 
-                                    <!-- Add a drop down select box for the user to change the statistic category. -->
+                            <!-- Add a drop down select box for the user to change the statistic category. -->
 
-                                    <!-- Let the user pick which season to filter for. -->
-                                    <!-- <select name="SeasonSelection" class="selection-dropdown"
+                            <!-- Let the user pick which season to filter for. -->
+                            <!-- <select name="SeasonSelection" class="selection-dropdown"
                                         id="player-stats-season-selection-dropdown"
                                         onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option value="" selected="selected">Season</option>
@@ -1057,8 +1064,8 @@
                                         <option value="2021/22">2021/22</option>
                                     </select> -->
 
-                                    <!-- Let the user pick which team to filter for. -->
-                                    <!-- <select name="TeamSelection" class="selection-dropdown"
+                            <!-- Let the user pick which team to filter for. -->
+                            <!-- <select name="TeamSelection" class="selection-dropdown"
                                         id="player-stats-team-selection-dropdown"
                                         onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option value="" selected="selected">Team</option>
@@ -1073,8 +1080,8 @@
                                         <option value="8th XI">8th XI</option>
                                     </select> -->
 
-                                    <!-- Let the user pick which competition to filter for. -->
-                                    <!-- <select name="CompetitionSelection" class="selection-dropdown"
+                            <!-- Let the user pick which competition to filter for. -->
+                            <!-- <select name="CompetitionSelection" class="selection-dropdown"
                                         id="player-stats-competition-selection-dropdown"
                                         onchange="showPlayerStatsTabUpdatedInfo()">
                                         <option value="" selected="selected">Competition</option>
@@ -1083,11 +1090,11 @@
                                         <option value="Friendly">Friendly</option>
                                     </select> -->
 
-                                <!-- </div> -->
+                            <!-- </div> -->
 
-                                <!-- <br> -->
+                            <!-- <br> -->
 
-                                <!-- <p>Fully filterable table of stats from parsing "importMatchDetailsTab" to be added.</p> -->
+                            <!-- <p>Fully filterable table of stats from parsing "importMatchDetailsTab" to be added.</p> -->
 
                             <!-- </section> -->
 
@@ -1098,22 +1105,22 @@
                     <!-- 4. Team of the Week Tab -->
                     <!-- <article class="nav-targets" id="team-of-the-week"> -->
 
-                        <!-- Add the main lighter coloured page section. -->
-                        <!-- <section class="page-section"> -->
+                    <!-- Add the main lighter coloured page section. -->
+                    <!-- <section class="page-section"> -->
 
-                            <!-- <h2 class="textcenter">Team of the Week</h2> -->
+                    <!-- <h2 class="textcenter">Team of the Week</h2> -->
 
-                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                            <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
+                    <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                    <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
 
-                            <!-- <section class="team-of-the-week-area"> -->
+                    <!-- <section class="team-of-the-week-area"> -->
 
-                                <!-- <section class="totw-week-selection-container"> -->
+                    <!-- <section class="totw-week-selection-container"> -->
 
-                                    <!-- <div class="selection-container"> -->
+                    <!-- <div class="selection-container"> -->
 
-                                        <!-- Let the user pick which season to filter for. -->
-                                        <!-- <select name="SeasonSelection" class="selection-dropdown"
+                    <!-- Let the user pick which season to filter for. -->
+                    <!-- <select name="SeasonSelection" class="selection-dropdown"
                                             id="player-stats-season-selection-dropdown"
                                             onchange="showPlayerStatsTabUpdatedInfo()">
                                             <option value="" selected="selected">Season</option>
@@ -1125,18 +1132,18 @@
                                             <option value="2021/22">2021/22</option>
                                         </select> -->
 
-                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                                        <!-- <select name="WeekSelection" class="selection-dropdown"
+                    <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                    <!-- <select name="WeekSelection" class="selection-dropdown"
                                             id="TOTW-week-selection-dropdown">
                                             <option value="" selected="selected">Select Week</option>
                                             <option value="week1">Week 1</option>
                                         </select> -->
 
-                                    <!-- </div> -->
+                    <!-- </div> -->
 
-                                <!-- </section> -->
+                    <!-- </section> -->
 
-                                <!-- <section class="totw-team-of-the-week-container">
+                    <!-- <section class="totw-team-of-the-week-container">
 
                                     <h3 class="textleft">TOTW</h3>
 
@@ -1155,9 +1162,9 @@
 
                                 </section> -->
 
-                            <!-- </section> -->
+                    <!-- </section> -->
 
-                        <!-- </section> -->
+                    <!-- </section> -->
 
                     <!-- </article> -->
 
