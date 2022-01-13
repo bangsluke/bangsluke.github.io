@@ -41,6 +41,7 @@ Section 1
 	--main-accent-colour: #F9ED32;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
+	--tooltip-background-colour: #236f38;
 
 	/* Light Theme Colours Used */
 	/* --main-background-colour: #1C8841; Main Dorkinians green.
@@ -59,7 +60,7 @@ Section 1
 	--secondary-accent-colour: #ffffff85; */
 
 	/* Distances & Spacing */
-	--headerHeight: 4rem; /* Define the header height variable. */
+	--headerHeight: 3.2rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
 	--section-border-radius: 0.5rem; /* Used for the border radii on the sections and large components. */
@@ -67,6 +68,18 @@ Section 1
 
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
+	
+	/* Snap Tabs */
+	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
+	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
+    --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
+    --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
+    /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
+    --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
+
+	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -125,8 +138,9 @@ body {
 
 /* Page section styling. Add a lighter opacity rounded edges container. */
 .page-section {
-	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
-	margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	/*margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	/*margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
@@ -162,7 +176,7 @@ section {
     right: 0;
     bottom: 0;
     display: block;
-	z-index: 2;
+	z-index: 2; /* background-overlay */
 }
 
 
@@ -330,7 +344,7 @@ td, th {
 	height: 10000px;
 	/* height: 100%; */
 	width: 100%;
-	z-index: -1;
+	z-index: -1; /* column-highlight */
 }
 /* Add table column lines. */
 .table-column-lines {
@@ -364,14 +378,14 @@ tr:last-child td:last-child {
 	background-color: var(--main-background-colour,green);
 	position: -webkit-sticky;
 	position: sticky;
-	z-index: 1;
+	z-index: 1;  /* sticky-col */
 }
 .first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
 	width: max-content;
 	left: 0rem;
 }
 .first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
-	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
+	z-index: 2; /* first-cell. Keep the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
 	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 
@@ -426,7 +440,7 @@ tr:last-child td:last-child {
 /* Tooltip text */
 .icon-tooltip .icon-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: max-content;
@@ -438,7 +452,7 @@ tr:last-child td:last-child {
 	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
-	z-index: 1;
+	z-index: 1; /* icon-tooltip */
   	bottom: 110%; /* Position above the container div. */
 
 	right: 0%;
@@ -462,7 +476,7 @@ tr:last-child td:last-child {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .icon-tooltip-text {
@@ -526,7 +540,7 @@ button > .selection--dropdown-arrow-icon {
 	/* background-color: red; */
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	margin: auto;
-	z-index: 20;
+	z-index: 20; /* selection-dropdown-content > option */
 	padding: 0.2rem;
 }
 /* Dropdown Content (Hidden by Default) */
@@ -545,10 +559,9 @@ button > .selection--dropdown-arrow-icon {
 	max-width: 80%;
 	max-height: 15rem;
 	border: 1px solid #ddd;
-	z-index: 1;
 	border-radius: var(--component-border-radius, 0.2rem);
 	overflow-y: scroll;
-	z-index: 6;
+	z-index: 6; /* selection-dropdown-content */
 }
 /* Style the header section of the dropdown content which holds the search icon and input text. */
 .selection-dropdown-content-header-section {
@@ -625,7 +638,7 @@ button > .selection--dropdown-arrow-icon {
 /* Tooltip text */
 .stats-tooltip .stats-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: 90%;
@@ -637,7 +650,7 @@ button > .selection--dropdown-arrow-icon {
 	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
-	z-index: 1;
+	z-index: 1; /* stats-tooltip */
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
@@ -659,7 +672,7 @@ button > .selection--dropdown-arrow-icon {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .stats-tooltip-text {
@@ -679,13 +692,21 @@ Section 3
 
 /* Everything below initially designed for mobile. */
 
+header {
+	background-color: var(--main-background-colour, green);
+	height: var(--headerHeight);
+	position: fixed;
+	z-index: 5; /* Header. Position the header right at the front of most items. */
+}
 /* Header Section */
 .header-area {
 	/* background-color: violet; */
+	position: fixed;
+	width: 100%;
 	display: grid; 
 	grid-template-columns: 4rem 1fr 4rem; 
 	grid-template-rows: var(--headerHeight, 2.5rem); /* Fallback if needed. */
-	grid-template-rows: calc(var(--headerHeight) - 0.9rem); /* Make the header a decent height. */
+	grid-template-rows: var(--headerHeight); /* Make the header a decent height. */
 	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "Logo Title Options";
@@ -698,7 +719,8 @@ Section 3
 	padding: 0.3rem;
 }
 .logo {
-	height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
+	height: 2.5rem; /* Fallback if needed. */
+	height: calc(var(--headerHeight) - 0.7rem); /* Make the burger icon just smaller than the header height. */
 	width: auto;
 }
 /* Style the central title section. */
@@ -718,8 +740,8 @@ Section 3
     /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
     left: 0rem;
-    height: 2.7rem; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
+    height: 2.5rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.7rem); /* Make the burger icon just smaller than the header height. */
     width: auto;
     display: block;
     font-size: 2.5rem;
@@ -770,7 +792,7 @@ Section 3
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	z-index: 1;
+	z-index: 100; /* loading-page */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 0.3fr 1fr 0.2fr 0.4fr 1fr;
@@ -830,6 +852,205 @@ Section 3
 
 
 
+
+
+/* Snap tabs styling */
+/* The css styling used for SnapTabs. https://web.dev/building-a-tabs-component/. */
+
+.snap-tabs-container {
+    /* background-color: green; */
+	position: fixed;
+    left: 0rem;
+    padding-top: 0rem;
+    width: 100%;
+	
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    top: var(--headerHeight, 3.2rem); /* Offset the snap-tabs-container below the fixed header. */
+	height: calc(100% - var(--headerHeight, 3.2rem)); /* Make the height of the snap-tabs-container the full screen height minus the fixed header. */
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+    /* top: 0rem; */
+	/*height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Calculate the height of the snap-tabs-container as the viewport height, minus the fixed header height and minus the Chrome/Safari browser bar height (estimated). */
+    /*min-height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Same calculation as above. */
+    
+    /* Below is copied from body above. */
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    /* font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; */
+    z-index: 2; /* snap-tabs-container */
+    overflow: hidden;
+}
+/* Original (but modified) Snap Tabs CSS Styling. */
+/* Specific snap-tabs styling with elements not used elsewhere on site. */
+snap-tabs {
+    --accent: var(--snap-tabs-hue) 100% 54%;
+    --accent-reduced: var(--snap-tabs-hue) 90% 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+#snap-tabs-header-section {
+	top: var(--headerHeight, 3.2rem);
+    height: var(--snap-tab-header-height, 2.5rem);
+	z-index: 5; /* snap-tabs-header-section. Position the snap tabs header right at the front of most items. */
+	
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-x: scroll; 	
+}
+#snap-tabs-header-section::-webkit-scrollbar {
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	display: none; /* for Chrome, Safari, and Opera */
+}
+snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+#snap-tabs-main-section {
+    position: relative;
+
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    padding-top: var(--snap-tab-header-height, 3rem); /* Position the main content of the snap tabs below the snap tabs header. */
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+}
+/* Add a section with class .scroll-snap-x. */
+.scroll-snap-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+section.scroll-snap-x {
+	padding-bottom: 0rem; /* Remove normal section bottom padding for this one snap tab case. */
+}
+@media (prefers-reduced-motion:no-preference) {
+    .scroll-snap-x {
+        scroll-behavior: smooth;
+    }
+}
+@media (hover:none) {
+    .scroll-snap-x {
+        scrollbar-width: none;
+    }
+    .scroll-snap-x::-webkit-scrollbar {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+snap-tabs>section>article {
+    /* background-color: blue; */
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    /* padding: var(--vertical-space) var(--horizontal-space); */
+    padding: 0rem 0rem; /* Control the padding around the anchor hyperlink text. */
+}
+article {
+    color: var(--secondary-accent-colour, white);
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+/* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
+snap-tabs>snap-tabs-header {
+    --text-active-color: var(--main-accent-colour, yellow);
+    background-color: var(--main-background-colour, green);
+	
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    border-bottom: 0.125rem solid var(--main-accent-colour, yellow);
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+    /* top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
+    /* border-top: 0.125rem solid var(--main-accent-colour, yellow); */
+
+    position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
+    left: 0rem; /* Force the header section to the left. */
+    width: 100vw; /* Set the width to be the full viewport width. */
+    flex-shrink: 0;
+    min-block-size: -webkit-fit-content;
+    min-block-size: -moz-fit-content;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+snap-tabs>snap-tabs-header>nav {
+    display: flex;
+}
+/* Format the hyperlinks within the snap tabs header section. */
+snap-tabs>snap-tabs-header a {
+    --text-color: var(--secondary-accent-colour, white); /* Need the variable --text-color as needed in the JavaScript. */
+	/*--text-color: var(--accent-color-2, white); /* Need the variable --text-color as needed in the JavaScript. */
+	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1rem; /* Make the snap-tabs-header hyperlinks larger than normal hyperlinks. */
+    text-decoration: none;
+    padding: var(--vertical-space) var(--horizontal-space);
+}
+/* Format the hyperlinks on hover within the snap tabs header section. */
+snap-tabs>snap-tabs-header a:hover {
+    background: hsl(var(--accent)/10%);
+    font-size: inherit;
+}
+/* Format the hyperlinks on focus within the snap tabs header section. */
+snap-tabs>snap-tabs-header a:focus {
+    outline-offset: -.5ch;
+	border-left: 0.125rem solid var(--main-accent-colour, yellow);
+	border-right: 0.125rem solid var(--main-accent-colour, yellow);
+}
+/* The snap-indicator is the underline of the header text that appears on mobile. */
+snap-tabs>snap-tabs-header>.snap-indicator {
+    /* background: hsl(var(--accent)); */
+	background: var(--main-accent-colour, yellow);
+    inline-size: 0rem;
+    block-size: var(--indicator-size);
+	/* block-size: 3rem; */
+    border-radius: var(--indicator-size);
+	/* z-index: 5; */
+}
+@media (prefers-reduced-motion:reduce) {
+    snap-tabs .snap-indicator {
+        visibility: hidden;
+    }
+}
+snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    outline-color: hsl(var(--accent));
+    outline-offset: -0.3rem;
+}
+h2 {
+    /* font-size: 1.5rem; */
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1;
+}
+h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+}
+p {
+    max-inline-size: 35ch;
+    margin-block: .5ch;
+}
+p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem;
+}
+
+
+
 /* Pop Up Box */
 
 #pop-up-box {
@@ -844,7 +1065,7 @@ Section 3
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 30; /* Have the pop up in front of all other items on the page. */
+	z-index: 30; /* pop-up-box. Have the pop up in front of all other items on the page. */
 
 	/* Control and set the size of the box based on the content. */
 	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
@@ -900,6 +1121,32 @@ Section 3
 
 
 
+/* Scroll Bar Styling - https://www.digitalocean.com/community/tutorials/css-scrollbars */
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.50) rgba(255, 255, 255, 0.10);
+	/* scrollbar-color: blue orange; */
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.10);
+	/* background: orange; */
+	border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+	/* background-color: blue; */
+	background-color: rgba(255, 255, 255, 0.50);
+	border-radius: 20px;
+	/* border: 3px solid orange; */
+}
+
+
+
 /* Footer Section */
 
 
@@ -929,7 +1176,7 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
-	overflow-x: scroll;
+	overflow-x: scroll; /* Always show the x scroll bar. */
 }
 #homepage-next-fixtures-team-container p {
 	/* color: red; */
