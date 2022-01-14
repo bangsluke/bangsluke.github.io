@@ -39,6 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
+	--main-accent-colour: #b43c27;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -513,6 +514,7 @@ option {
 	position: relative; /* The position has to be set for zindex to work. */
 	/* display: inline-block; */
 	margin: auto;
+	height: max-content;
 	z-index: 3; /* selection-container */
 }
 
@@ -585,9 +587,12 @@ button > .selection-dropdown-arrow-icon {
 	width: fit-content;
 	width: 14rem;
 	height: max-content;
+	height: 10rem;
 	max-width: 80%;
+	min-height: 10rem;
 	max-height: 15rem;
 	border: 1px solid #ddd;
+	border: 1px solid #FF0000;
 	border-radius: var(--component-border-radius, 0.2rem);
 	overflow-y: scroll;
 }
@@ -1299,25 +1304,35 @@ Section 4
 	grid-template-columns: 100%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0rem; /* First value is between rows, second columns. */
-
+	
 }
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
-	display: grid; 
-	grid-template-columns: 55% 10% 35%; 
+	position: relative;
+	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
+	display: grid;
+	grid-template-columns: 70% 15% 15%; /* First value is the text, second the stat value, last the image. */
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+	margin: 0 auto;
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-this-season-stat-container div {
+	margin-left: 0.6rem;
 }
 .player-stats-this-season-stat-container h5 {
+	/* background-color: red; */
 	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
 	text-align: right;
+	white-space: nowrap;
 }
 .player-stats-this-season-stat-container img {
+	/* background-color: blue; */
 	margin-left: 0.4rem;
 }
-.player-stats-this-season-stat-container div {
-	margin-left: 0.4rem;
-}
+
+
+
 
 /* Past Season Stats */
 #player-stats-past-seasons-table {
