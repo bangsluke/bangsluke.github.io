@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #ee0ea3;
+	--main-accent-colour: #eea00e;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -638,19 +638,22 @@ button > .selection-dropdown-arrow-icon {
 .selection-dropdown-content-option-section {
 	background-color: #ce641d;
 	position: relative;
-	width: 50%;
+	/* width: 50%; */
+	width: 90%;
 	top: 2.2rem; /* Offset the options below the header section. */
 	min-height: 4rem;
-	z-index: 7; /* selection-dropdown-content-header-section */
+	z-index: 9; /* selection-dropdown-content-header-section */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
 .selection-dropdown-content-option-section > option {
 	color: white; /* The font colour of the text. */ 
 	background-color: red;
-	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	margin: auto;
 	padding: 0.5rem;
 	width: 100%;
+	position: relative;
+	z-index: 10; /* selection-dropdown-content-header-section > option */
 }
 
 
