@@ -1961,7 +1961,7 @@ function showDropdownList(dropdownID, tabName) {
     document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
     document.getElementById(dropdownID + '-container').style.zIndex = 6;  // Move the entire container to the front of the page.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "inline"; // Show the background overlay behind the selection dropdown.
-    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 8; // Set the z-index of the background overlay to be right behind the selection dropdown.
 
     // Dynamically assign the correct onClick action to the background overlay.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
