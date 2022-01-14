@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #b43c27;
+	--main-accent-colour: #274db4;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -508,7 +508,7 @@ option {
 }
 /* Add a top holder class for all common selection container styling. */
 .selection-container {
-	/* background-color: yellowgreen; */
+	background-color: yellowgreen;
 	padding-bottom: 1rem;
 	text-align: center;
 	position: relative; /* The position has to be set for zindex to work. */
@@ -575,8 +575,8 @@ button > .selection-dropdown-arrow-icon {
 /* Style the content once the button is clicked. */
 /* Dropdown Content (Hidden by Default) */
 .selection-dropdown-content {
-	/* background-color: #490bf3; */
 	background-color: var(--main-background-colour, green);
+	background-color: #490bf3;
 	display: none;
 	position: absolute;
 	left: 0; 
@@ -588,7 +588,7 @@ button > .selection-dropdown-arrow-icon {
 	width: 14rem;
 	height: max-content;
 	height: 10rem;
-	max-width: 80%;
+	/* max-width: 80%; */
 	min-height: 10rem;
 	max-height: 15rem;
 	border: 1px solid #ddd;
@@ -597,9 +597,9 @@ button > .selection-dropdown-arrow-icon {
 	overflow-y: scroll;
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show-dropdown-option {
+/* .show-dropdown-option {
 	display: block;
-}
+} */
 /* Style the hover over links. */
 .selection-dropdown-content option:hover {
 	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
@@ -607,7 +607,7 @@ button > .selection-dropdown-arrow-icon {
 /* Style the header section of the dropdown content which holds the search icon and input text. */
 .selection-dropdown-content-header-section {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	/* background-color: blue; */
+	background-color: violet;
 	position: fixed;
 	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
@@ -636,14 +636,16 @@ button > .selection-dropdown-arrow-icon {
 
 /* Style the options section of the dropdown content which holds all of the loaded in options. */
 .selection-dropdown-content-option-section {
+	background-color: #ce641d;
 	position: relative;
 	width: 50%;
 	top: 2.2rem; /* Offset the options below the header section. */
+	min-height: 4rem;
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
 .selection-dropdown-content-option-section > option {
 	color: white; /* The font colour of the text. */ 
-	/* background-color: red; */
+	background-color: red;
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	margin: auto;
 	padding: 0.5rem;
