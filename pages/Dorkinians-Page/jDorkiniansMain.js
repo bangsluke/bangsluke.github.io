@@ -51,6 +51,7 @@ var phrasesArray = [
     "Will be ready as soon as Rupert Cape uses his left foot...",
     "Waiting for Morley to leave the changing room so we can kick off...",
     "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
+    "Delaying pitch inspections to the last minute...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
@@ -401,7 +402,7 @@ function init() {
     document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
     let i = 0; // The integer counter.
     let speed = 50; // The speed/duration of the effect in milliseconds.
-    let phraseText = "Loading data into site...";
+    let phraseText = "Loading data into the site...";
     typeWriter(); // Call the typeWriter function to update the HTML element with text.
     function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
         if (i < phraseText.length) {
@@ -412,7 +413,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -651,7 +652,13 @@ function getPlayerDropdownInfo(results) {
     displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the addPlayerDropdownInfo function.
+    
+    // Populate the various dropdown components with player names.
+    // Player Stats tab
+    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    // Comparison Tab
+    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
 }
 
 
@@ -1949,18 +1956,25 @@ function displayInformation(informationBarID, displayMessage) {
 
 
 // When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
-function showDropdownList(dropdownID) {
-    console.log("showDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown has been clicked.
+function showDropdownList(dropdownID, tabName) {
+    console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
     document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
-    document.getElementById('player-stats-selection-dropdown-container').style.zIndex = 6;  // Show the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "inline"; // Show the background overlay behind the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
+    document.getElementById(dropdownID + '-container').style.zIndex = 6;  // Move the entire container to the front of the page.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "inline"; // Show the background overlay behind the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
+
+    // Dynamically assign the correct onClick action to the background overlay.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
+        closeDropdownList(dropdownID, tabName);
+    } 
 }
 
 // Populate the dropdown with Player names.
 function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
-    console.log("playerNameArray:");
-    console.log(playerNameArray);
+    console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
+    
+    // console.log("playerNameArray:");
+    // console.log(playerNameArray);
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
@@ -1997,8 +2011,8 @@ function filterDropdownList(dropdownID, inputID) {
     }
 }
 
-function closeDropdownList() {
-    console.log("closeDropdownList clicked"); // Log that the dropdown has been closed.
-    document.getElementById('player-stats-selection-dropdown').style.display = "none"; // Hide the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "none"; // Hide the background overlay behind the selection dropdown.
+function closeDropdownList(dropdownID, tabName) {
+    console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
+    document.getElementById(dropdownID).style.display = "none"; // Hide the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }

@@ -551,7 +551,7 @@
                     <article class="nav-targets" id="player-stats">
 
                         <!-- Add the main lighter coloured page section. -->
-                        <section class="page-section">
+                        <section class="page-section" id="player-stats-section">
 
                             <h2 class="textcenter">Player Stats</h2>
 
@@ -583,12 +583,12 @@
 
                                 <!-- Add a clear transparent background overlays that are called and used in conjunction with other pop up menus. -->
                                 <div class="background-overlay background-overlay-clear"
-                                    id="background-overlay-player-stats-selection-dropdown" style="display: none"
+                                    id="background-overlay-selection-dropdown-player-stats" style="display: none"
                                     onclick="closeDropdownList()"></div>
 
                                 <!-- Add a selection container to hold all of the elements needed for the drop down. -->
                                 <div class="selection-container" id="player-stats-selection-dropdown-container">
-                                    <button onclick="showDropdownList('player-stats-selection-dropdown')"
+                                    <button onclick="showDropdownList('player-stats-selection-dropdown', 'player-stats')"
                                         class="selection-dropdown-button" id="player-stats-selection-dropdown-button"
                                         value="Sam Slade">Sam Slade<img
                                             src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
@@ -612,7 +612,7 @@
                             </div>
 
                             <!-- Add a section for This Season Stats. -->
-                            <section>
+                            <section id="player-stats-this-season-stats">
 
                                 <h3 class="textleft">This Season Stats</h3>
 
@@ -914,7 +914,7 @@
                             </section>
 
                             <!-- Add a section for Past Seasons Stats. -->
-                            <!-- <section> -->
+                            <!-- <section id="player-stats-past-seasons-stats"> -->
 
                             <!-- <h3 class="textleft">Past Season Stats</h3> -->
 
@@ -976,7 +976,7 @@
                             <!-- </section> -->
 
                             <!-- Add a section for All Time Stats. -->
-                            <section>
+                            <section id="player-stats-all-time-stats">
 
                                 <h3 class="textleft">All Time Stats</h3>
 
@@ -1164,7 +1164,7 @@
                     <article class="nav-targets" id="comparison">
 
                         <!-- Add the main lighter coloured page section. -->
-                        <section class="page-section">
+                        <section class="page-section" id="comparison-section">
 
                             <h2 class="textcenter">Comparison</h2>
 
@@ -1174,12 +1174,17 @@
                             <!-- Add a div to hold the full comparison area.  -->
                             <div class="comparison-area">
 
+                                <!-- Add a clear transparent background overlays that are called and used in conjunction with other pop up menus. -->
+                                <div class="background-overlay background-overlay-clear"
+                                id="background-overlay-selection-dropdown-comparison" style="display: none"
+                                onclick="closeDropdownList()"></div>
+
                                 <!-- Add a div to hold the player dropdown. -->
                                 <div class="comparison-player-1-selection-container">
 
-                                    <div class="selection-container">
+                                    <!-- <div class="selection-container"> -->
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player1Selection" class="selection-dropdown"
+                                        <!-- <select name="Player1Selection" class="selection-dropdown"
                                             id="comparison-player-1-dropdown" onchange="updateComparisonStatData()">
                                             <option selected="selected">Select Player 1</option>
                                             <option>Al Thom</option>
@@ -1194,6 +1199,29 @@
                                             <option>Sam Slade</option>
                                             <option>Matt Morley</option>
                                         </select>
+                                    </div> -->
+
+                                    <!-- Add a selection container to hold all of the elements needed for the drop down. -->
+                                    <div class="selection-container" id="comparison-player-1-selection-dropdown-container">
+                                        <button onclick="showDropdownList('comparison-player-1-selection-dropdown', 'comparison')"
+                                            class="selection-dropdown-button" id="comparison-player-1-selection-dropdown-button"
+                                            value="Sam Slade">Select Player 1<img
+                                                src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
+                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
+                                                width="25px"></button>
+                                        <div class="selection-dropdown-content" id="comparison-player-1-selection-dropdown">
+                                            <div class="selection-dropdown-content-header-section">
+                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png" alt="Search Icon"
+                                                    class="selection-dropdown-search-icon" height="25px" width="25px">
+                                                <input class="selection-dropdown-search-bar" type="text"
+                                                    placeholder="Search.." id="comparison-player-1-selection-input"
+                                                    onkeyup="filterDropdownList('comparison-player-1-selection-dropdown', 'comparison-player-1-selection-input')">
+                                            </div>
+                                            <div class="selection-dropdown-content-option-section"
+                                                id="comparison-player-1-selection-dropdown-option-container">
+                                                <!-- <option class="textleft">Options added dynamically using JS</option> -->
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -1201,9 +1229,9 @@
                                 <!-- Add a div to hold the player dropdown. -->
                                 <div class="comparison-player-2-selection-container">
 
-                                    <div class="selection-container">
+                                    <!-- <div class="selection-container"> -->
                                         <!-- Add a drop down select box for the user to change the selected player. -->
-                                        <select name="Player2Selection" class="selection-dropdown"
+                                        <!-- <select name="Player2Selection" class="selection-dropdown"
                                             id="comparison-player-2-dropdown" onchange="updateComparisonStatData()">
                                             <option selected="selected">Select Player 2</option>
                                             <option>Al Thom</option>
@@ -1217,6 +1245,29 @@
                                             <option>Oli Goddard</option>
                                             <option>Sam Slade</option>
                                         </select>
+                                    </div> -->
+
+                                    <!-- Add a selection container to hold all of the elements needed for the drop down. -->
+                                    <div class="selection-container" id="comparison-player-2-selection-dropdown-container">
+                                        <button onclick="showDropdownList('comparison-player-2-selection-dropdown', 'comparison')"
+                                            class="selection-dropdown-button" id="comparison-player-2-selection-dropdown-button"
+                                            value="Sam Slade">Select Player 2<img
+                                                src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
+                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
+                                                width="25px"></button>
+                                        <div class="selection-dropdown-content" id="comparison-player-2-selection-dropdown">
+                                            <div class="selection-dropdown-content-header-section">
+                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png" alt="Search Icon"
+                                                    class="selection-dropdown-search-icon" height="25px" width="25px">
+                                                <input class="selection-dropdown-search-bar" type="text"
+                                                    placeholder="Search.." id="comparison-player-2-selection-input"
+                                                    onkeyup="filterDropdownList('comparison-player-2-selection-dropdown', 'comparison-player-2-selection-input')">
+                                            </div>
+                                            <div class="selection-dropdown-content-option-section"
+                                                id="comparison-player-2-selection-dropdown-option-container">
+                                                <!-- <option class="textleft">Options added dynamically using JS</option> -->
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>

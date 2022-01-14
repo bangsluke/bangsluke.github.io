@@ -144,7 +144,7 @@ body {
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-    margin: 1rem auto 2rem auto; /* Add a margin above and below each section. */
+	margin: 0.5rem auto; /* Add a small margin above and below each section and horizontally center the section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -181,11 +181,11 @@ section {
 	margin: 0;
 	z-index: 5; /* background-overlay */
 }
-
+/* Add a clear background class overlay. */
 .background-overlay-clear {
 	background: rgba(0, 0, 0, 0.0);
 }
-
+/* Add a dark background class overlay. */
 .background-overlay-dark {
 	background: rgba(0, 0, 0, 0.50);
 }
@@ -820,7 +820,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1557,9 +1557,9 @@ Section 5
 			/* --headerHeight: 2.8rem; Define the header height variable. */
 			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 100%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1572,9 +1572,9 @@ Section 5
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1587,9 +1587,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -1602,9 +1602,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1224px) {
@@ -1617,9 +1617,9 @@ Section 5
 		html {
 			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1824px) {
@@ -1632,9 +1632,9 @@ Section 5
 		html {
 			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 85%;
-		}
+		} */
 	}
 	
 	/* Add a set up for media devices with preference for dark mode. */
