@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #0eee19;
+	/* --main-accent-colour: #0eee19; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -145,7 +145,7 @@ body {
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-	margin: 0.5rem auto; /* Add a small margin above and below each section and horizontally center the section. */
+	margin: 1rem auto; /* Add a small margin above and below each section and horizontally center the section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
