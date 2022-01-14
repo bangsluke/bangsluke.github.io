@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #eea00e;
+	--main-accent-colour: #0eee19;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -159,8 +159,9 @@ body {
     border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);
 	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
-    backdrop-filter: blur( 20px );
-	-webkit-backdrop-filter: blur( 20px );
+    
+	/* backdrop-filter: blur( 20px ); */
+	/* -webkit-backdrop-filter: blur( 20px ); */
 }
 
 /* Sub page sections - multiple sections per tab. */
@@ -616,7 +617,7 @@ button > .selection-dropdown-arrow-icon {
 	/* width: fit-content; */
 	width: 13.5rem;
 	height: 2.2rem;
-	z-index: 7; /* selection-dropdown-content-header-section */
+	/*z-index: 11; /* selection-dropdown-content-header-section */
 }
 /* Style the small white search icon. */
 .selection-dropdown-search-icon {
@@ -624,10 +625,14 @@ button > .selection-dropdown-arrow-icon {
 	width: 0.9rem;
 	filter: brightness(0) invert(1); /* Ensure the icon is white. */
 	margin-right: 0.2rem;
+	position: relative;
+	z-index: 9; /* selection-dropdown-search-icon */
 }
 /* The search field */
 .selection-dropdown-search-bar {
 	width: 80%;
+	position: relative;
+	/*z-index: 9; /* selection-dropdown-search-bar */
 }
 /* The search field when it gets focus/clicked on */
 .selection-dropdown-search-bar:focus {
@@ -642,7 +647,7 @@ button > .selection-dropdown-arrow-icon {
 	width: 90%;
 	top: 2.2rem; /* Offset the options below the header section. */
 	min-height: 4rem;
-	z-index: 9; /* selection-dropdown-content-header-section */
+	/*z-index: 9; /* selection-dropdown-content-option-section */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
 .selection-dropdown-content-option-section > option {
@@ -652,8 +657,8 @@ button > .selection-dropdown-arrow-icon {
 	margin: auto;
 	padding: 0.5rem;
 	width: 100%;
-	position: relative;
-	z-index: 10; /* selection-dropdown-content-header-section > option */
+	/* position: relative; */
+	/*z-index: 10; /* selection-dropdown-content-header-section > option */
 }
 
 
