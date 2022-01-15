@@ -1958,10 +1958,14 @@ function displayInformation(informationBarID, displayMessage) {
 // When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID, tabName) {
     console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
-    document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
-    document.getElementById(dropdownID + '-container').style.zIndex = 6;  // Move the entire container to the front of the page.
+    
+    // Make the selection dropdown content visible.
+    document.getElementById(dropdownID + '-contents').style.display = "block"; // Show the selection dropdown contents.
+    document.getElementById(dropdownID + '-contents').style.zIndex = 10;  // Move the contents to the front of the page.
+    
+    // Set up the background overlay behind the contents so when a user clicks off the content, it closes.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "inline"; // Show the background overlay behind the selection dropdown.
-    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 8; // Set the z-index of the background overlay to be right behind the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 9; // Set the z-index of the background overlay to be right behind the selection dropdown.
 
     // Dynamically assign the correct onClick action to the background overlay.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
@@ -2013,6 +2017,6 @@ function filterDropdownList(dropdownID, inputID) {
 
 function closeDropdownList(dropdownID, tabName) {
     console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
-    document.getElementById(dropdownID).style.display = "none"; // Hide the selection dropdown.
+    document.getElementById(dropdownID + '-contents').style.display = "none"; // Hide the selection dropdown content.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }
