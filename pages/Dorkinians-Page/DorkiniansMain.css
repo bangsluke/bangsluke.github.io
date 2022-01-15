@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	/* --main-accent-colour: #0eee19; */
+	--main-accent-colour: #0eee19;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -516,7 +516,7 @@ option {
 	/* display: inline-block; */
 	margin: auto;
 	height: max-content;
-	z-index: 5; /* selection-container */
+	/* z-index: 5; /* selection-container */
 }
 
 
@@ -590,12 +590,13 @@ button > .selection-dropdown-arrow-icon {
 	height: max-content;
 	height: 10rem;
 	/* max-width: 80%; */
-	min-height: 10rem;
-	max-height: 15rem;
+	min-height: 15rem;
+	max-height: 20rem;
 	border: 1px solid #ddd;
 	border: 1px solid #FF0000;
 	border-radius: var(--component-border-radius, 0.2rem);
 	overflow-y: scroll;
+	/*z-index: 10 /* selection-dropdown-content */
 }
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 /* .show-dropdown-option {
@@ -610,14 +611,18 @@ button > .selection-dropdown-arrow-icon {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	background-color: violet;
 	position: fixed;
+	position: relative;
 	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
 	border-bottom: 0.1rem solid var(--secondary-accent-colour, white);
 	/* width: 50%; */
 	/* width: fit-content; */
+	top: 0;
+	left: 0;
 	width: 13.5rem;
 	height: 2.2rem;
-	/*z-index: 11; /* selection-dropdown-content-header-section */
+	min-height: 2rem;
+	/* z-index: inherit; /* selection-dropdown-content-header-section */
 }
 /* Style the small white search icon. */
 .selection-dropdown-search-icon {
@@ -626,13 +631,13 @@ button > .selection-dropdown-arrow-icon {
 	filter: brightness(0) invert(1); /* Ensure the icon is white. */
 	margin-right: 0.2rem;
 	position: relative;
-	z-index: 9; /* selection-dropdown-search-icon */
+	z-index: inherit; /* selection-dropdown-search-icon */
 }
 /* The search field */
 .selection-dropdown-search-bar {
 	width: 80%;
 	position: relative;
-	/*z-index: 9; /* selection-dropdown-search-bar */
+	z-index: inherit; /* selection-dropdown-search-bar */
 }
 /* The search field when it gets focus/clicked on */
 .selection-dropdown-search-bar:focus {
@@ -647,7 +652,7 @@ button > .selection-dropdown-arrow-icon {
 	width: 90%;
 	top: 2.2rem; /* Offset the options below the header section. */
 	min-height: 4rem;
-	/*z-index: 9; /* selection-dropdown-content-option-section */
+	z-index: inherit; /* selection-dropdown-content-option-section */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
 .selection-dropdown-content-option-section > option {
@@ -658,7 +663,7 @@ button > .selection-dropdown-arrow-icon {
 	padding: 0.5rem;
 	width: 100%;
 	/* position: relative; */
-	/*z-index: 10; /* selection-dropdown-content-header-section > option */
+	z-index: inherit; /* selection-dropdown-content-header-section > option */
 }
 
 
