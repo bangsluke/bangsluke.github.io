@@ -51,6 +51,7 @@ var phrasesArray = [
     "Will be ready as soon as Rupert Cape uses his left foot...",
     "Waiting for Morley to leave the changing room so we can kick off...",
     "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
+    "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
