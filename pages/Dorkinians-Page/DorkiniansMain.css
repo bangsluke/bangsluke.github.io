@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #ee850e;
+	--main-accent-colour: #0eee2c;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -1312,16 +1312,15 @@ Section 4
 
 /* 3. Player Stats Tab */
 
-/* This Season Stats */
-#player-stats-this-season-top-container {
+/* Common Tab Styling */
+.player-stats-top-container {
 	/* background-color: greenyellow; */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0rem; /* First value is between rows, second columns. */
-	
 }
-.player-stats-this-season-stat-container {
+.player-stats-stat-container {
 	/* background-color: violet; */
 	position: relative;
 	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
@@ -1332,21 +1331,37 @@ Section 4
 	margin: 0 auto;
 }
 /* Add a class just for the divs that hold the yellow and red cards. */
-.player-stats-this-season-stat-container div {
+.player-stats-stat-container div {
 	margin-left: 0.6rem;
 }
-.player-stats-this-season-stat-container h5 {
+.player-stats-stat-container h5 {
 	/* background-color: red; */
 	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
 	text-align: right;
 	white-space: nowrap;
 }
-.player-stats-this-season-stat-container img {
+.player-stats-stat-container img {
 	/* background-color: blue; */
 	margin-left: 0.4rem;
 }
 
-
+/* This Season Stats */
+#player-stats-this-season-top-container {
+	/* background-color: greenyellow;	 */
+}
+.player-stats-this-season-stat-container {
+	/* background-color: violet; */
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-this-season-stat-container div {
+	/* background-color: rgb(132, 130, 238); */
+}
+.player-stats-this-season-stat-container h5 {
+	/* background-color: red; */
+}
+.player-stats-this-season-stat-container img {
+	/* background-color: blue; */
+}
 
 
 /* Past Season Stats */
@@ -1355,7 +1370,9 @@ Section 4
 }
 
 /* All Time Stats */
-
+#player-stats-all-time-top-container {
+	/* background-color: lightblue; */
+}
 
 
 /* 4. Team of the Week Tab */
