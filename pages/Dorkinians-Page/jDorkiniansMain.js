@@ -656,10 +656,10 @@ function getPlayerDropdownInfo(results) {
     
     // Populate the various dropdown components with player names.
     // Player Stats tab
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
     // Comparison Tab
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
 }
 
 
@@ -2001,7 +2001,34 @@ function displayInformation(informationBarID, displayMessage) {
 
 
 
-// When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+// Dropdown Component Functions
+
+// 1. Populate the dropdown with Player names.
+function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
+    console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
+    
+    // console.log("playerNameArray:");
+    // console.log(playerNameArray);
+
+    // Loop through the player name array and add the names as options below the dropdown selector.
+    for (let i = 0; i < playerNameArray.length; i++) {
+        let newOption = document.createElement("option"); // Create the new option element.
+        newOption.classList.add("textleft"); // Add the textleft class to the new element.
+        newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
+            document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
+            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
+            // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
+            closeDropdownList(dropdownID, tabName); // Close the dropdown list.
+            showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+        };
+        let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
+        newOption.appendChild(playerNameText); // Append the text node to the new element.
+        let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
+        parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
+    }
+}
+
+// 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID, tabName) {
     console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
     
@@ -2019,38 +2046,12 @@ function showDropdownList(dropdownID, tabName) {
     } 
 }
 
-// Populate the dropdown with Player names.
-function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
-    console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
-    
-    // console.log("playerNameArray:");
-    // console.log(playerNameArray);
-
-    // Loop through the player name array and add the names as options below the dropdown selector.
-    for (let i = 0; i < playerNameArray.length; i++) {
-        let newOption = document.createElement("option"); // Create the new option element.
-        newOption.classList.add("textleft"); // Add the textleft class to the new element.
-        newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
-            document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
-            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
-            // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
-            closeDropdownList(); // Close the dropdown list.
-            showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
-        };
-        let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
-        newOption.appendChild(playerNameText); // Append the text node to the new element.
-        let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
-        parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
-    }
-}
-
-// Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+// 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function filterDropdownList(dropdownID, inputID) {
-    var input, filter, option, i;
-    input = document.getElementById(inputID);
-    filter = input.value.toUpperCase();
-    div = document.getElementById(dropdownID);
-    option = div.getElementsByTagName("option");
+    let input = document.getElementById(inputID);
+    let filter = input.value.toUpperCase();
+    let div = document.getElementById(dropdownID);
+    let option = div.getElementsByTagName("option");
     for (i = 0; i < option.length; i++) {
         txtValue = option[i].textContent || option[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -2061,6 +2062,7 @@ function filterDropdownList(dropdownID, inputID) {
     }
 }
 
+// 4. Close the dropdown list and the background overlay associated with it.
 function closeDropdownList(dropdownID, tabName) {
     console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
     document.getElementById(dropdownID + '-contents').style.display = "none"; // Hide the selection dropdown content.
