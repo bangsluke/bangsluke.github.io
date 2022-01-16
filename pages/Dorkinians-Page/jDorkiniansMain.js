@@ -53,6 +53,7 @@ var phrasesArray = [
     "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
+    "Considering Dom Devlin's MoM...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
@@ -60,6 +61,7 @@ var phrasesArray = [
 const statObject = {
     APP: {
         statName: 'Appearances',
+        displayText: 'Appearances:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
         statHigherBetterBoolean: true,
@@ -68,6 +70,7 @@ const statObject = {
     },
     M: {
         statName: 'Minutes',
+        displayText: 'Minutes played:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
         statHigherBetterBoolean: true,
@@ -76,6 +79,7 @@ const statObject = {
     },
     MOM: {
         statName: 'Man of the Matches',
+        displayText: 'Man of the Matches:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
         statHigherBetterBoolean: true,
@@ -84,6 +88,7 @@ const statObject = {
     },
     G: {
         statName: 'Goals Scored',
+        displayText: 'Goals scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
         statHigherBetterBoolean: true,
@@ -92,6 +97,7 @@ const statObject = {
     },
     A: {
         statName: 'Assists',
+        displayText: 'Assists provided:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
         statHigherBetterBoolean: true,
@@ -100,6 +106,7 @@ const statObject = {
     },
     Y: {
         statName: 'Yellow Cards',
+        displayText: 'Yellow cards received:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
         statHigherBetterBooleanArray: false,
@@ -108,6 +115,7 @@ const statObject = {
     },
     R: {
         statName: 'Red Cards',
+        displayText: 'Red cards received:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
         statHigherBetterBoolean: false,
@@ -116,6 +124,7 @@ const statObject = {
     },
     OG: {
         statName: 'Own Goals',
+        displayText: 'Own goals scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
         statHigherBetterBoolean: false,
@@ -124,6 +133,7 @@ const statObject = {
     },
     C: {
         statName: 'Conceded',
+        displayText: 'Goals conceded:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
         statHigherBetterBoolean: false,
@@ -132,6 +142,7 @@ const statObject = {
     },
     CLS: {
         statName: 'Clean Sheets',
+        displayText: 'Clean sheets achieved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
         statHigherBetterBoolean: true,
@@ -140,6 +151,7 @@ const statObject = {
     },
     PSC: {
         statName: 'Penalties Scored',
+        displayText: 'Penalties scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
         statHigherBetterBoolean: true,
@@ -148,6 +160,7 @@ const statObject = {
     },
     PM: {
         statName: 'Penalties Missed',
+        displayText: 'Penalties missed:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
         statHigherBetterBoolean: false,
@@ -156,6 +169,7 @@ const statObject = {
     },
     PCO: {
         statName: 'Penalties Conceded',
+        displayText: 'Penalties conceded:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
         statHigherBetterBoolean: false,
@@ -164,6 +178,7 @@ const statObject = {
     },
     PSV: {
         statName: 'Penalties Saved',
+        displayText: 'Penalties saved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
         statHigherBetterBoolean: true,
@@ -172,6 +187,7 @@ const statObject = {
     },
     FTP: {
         statName: 'Fantasy Points',
+        displayText: 'Fantasy points achieved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
         statHigherBetterBoolean: true,
@@ -180,6 +196,7 @@ const statObject = {
     },
     GperAPP: {
         statName: 'Goals Per Appearance',
+        displayText: 'Goals per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -188,6 +205,7 @@ const statObject = {
     },
     CperAPP: {
         statName: 'Conceded Per Appearance',
+        displayText: 'Goals conceded per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
         statHigherBetterBoolean: false,
@@ -196,6 +214,7 @@ const statObject = {
     },
     MperG: {
         statName: 'Minutes Per Goal',
+        displayText: 'Minutes per goal scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
         statHigherBetterBoolean: false,
@@ -204,6 +223,7 @@ const statObject = {
     },
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
+        displayText: 'Minutes per clean sheet:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
         statHigherBetterBoolean: false,
@@ -212,6 +232,7 @@ const statObject = {
     },
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
+        displayText: 'Fantasy points per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -220,6 +241,7 @@ const statObject = {
     },
     DIST: {
         statName: 'Distance Travelled',
+        displayText: 'Distance travelled:', // The text displayed at all times on the page.
         statFormat: 'Decimal1',
         description: 'The distance travelled in miles by the player getting to away games.',
         statHigherBetterBoolean: true,
@@ -228,6 +250,7 @@ const statObject = {
     },
     "Games%Won": {
         statName: 'Percentage Games Won',
+        displayText: '% games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
         statHigherBetterBoolean: true,
@@ -236,6 +259,7 @@ const statObject = {
     },
     HomeGames: {
         statName: 'Home Games',
+        displayText: 'Home games:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
         statHigherBetterBoolean: true,
@@ -244,6 +268,7 @@ const statObject = {
     },
     HomeWins: {
         statName: 'Home Wins',
+        displayText: 'Home wins:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -252,6 +277,7 @@ const statObject = {
     },
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
+        displayText: '% home games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -260,6 +286,7 @@ const statObject = {
     },
     AwayGames: {
         statName: 'Away Games',
+        displayText: 'Away games:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
         statHigherBetterBoolean: true,
@@ -268,6 +295,7 @@ const statObject = {
     },
     AwayWins: {
         statName: 'Away Wins',
+        displayText: 'Away wins:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -276,6 +304,7 @@ const statObject = {
     },
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
+        displayText: '% away games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -284,6 +313,7 @@ const statObject = {
     },
     "MostPlayedForTeam": {
         statName: 'Most Played for Team',
+        displayText: 'Most played for team:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has appeared for most.',
         statHigherBetterBoolean: false,
@@ -292,6 +322,7 @@ const statObject = {
     },
     "NumberTeamsPlayedFor": {
         statName: 'Number of Teams Played for',
+        displayText: 'Number teams played for:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The number of Dorkinians teams that the player has appeared for.',
         statHigherBetterBoolean: true,
@@ -300,6 +331,7 @@ const statObject = {
     },
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
+        displayText: 'Number seasons played for:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
@@ -308,6 +340,7 @@ const statObject = {
     },
     "MostScoredForTeam": {
         statName: 'Most Scored for Team',
+        displayText: 'Most scored for team:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has scored the most for.',
         statHigherBetterBoolean: false,
@@ -489,6 +522,9 @@ function init() {
     // Step 3. 
     // Player Stats Tab.
     console.log('%c' + '> 3. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Populate the Player Stats tab with details such as stat text and tooltips.
+    prefillPlayerStatsTab();
 
     // This Season Stats Info
     Papa.parse(displayThisSeasonStatsSheetCSV, {
@@ -896,6 +932,59 @@ function updateClubStatsInfo() {
 
 // 3. Player Stats Tab
 
+// 3.0 Prefill the base detail onto the Player Stats tab such as stat names and tooltips.
+function prefillPlayerStatsTab() {
+    console.log('%c' + '>> prefillPlayerStatsTab.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
+
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
+
+    // Group the next set of logs together to avoid cluttering the console.
+    console.groupCollapsed("PrefillPlayerStatsTab Info Logs"); // Group further console logs. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+    // Create an array of the player stats sections that need to be updated.
+    const playerStatsSectionArray = ["this-season", "all-time"];
+
+    // Loop through all required sections of the player stats page.
+    for (let i = 0; i < playerStatsSectionArray.length; i++) {
+        console.log("Section being updated = " + playerStatsSectionArray[i]); // Log the section being updated.
+
+        // Loop through the created stat array. Each stat corresponds to an HTML element on the Player Stats tab.
+        for (let j = 0; j < statsArray.length; j++) {
+            console.log("Stat = " + statsArray[j] + ", format = " + statObject[statsArray[j]].statFormat); // Log the stat being updated and it's format.
+
+            // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
+            try {
+                // Dynamically add the stat text and a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
+                
+                // Stat Text
+                console.log("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]);
+                document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]).innerHTML = statObject[statsArray[j]].displayText; // Update the stat text element dynamically.
+
+                // Tool Tip
+                let containerElement = document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-" + statsArray[j] + "-container"); // Get the container element dynamically.
+                const toolTipSpanElement = document.createElement("span"); // Create a span element.
+                toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+                var toolTipText = document.createTextNode(statObject[statsArray[j]].description);
+                toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+                containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+                containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
+
+            }
+            catch (err) {
+                console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+            }
+        }
+    }
+
+    console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Player Stats - This Season Stats");
+
+}
+
 // Player Stats tab needs to process two data parses, "displayThisSeasonStats" and "displayAllTimeStats".
 
 // 3.1.a. Player Stats This Season stats tab data "getter" function.
@@ -988,15 +1077,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
-            // Dynamically add a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
-            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
-            const toolTipSpanElement = document.createElement("span"); // Create a span element.
-            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
-            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
-            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
-            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
-            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
-
+            
             // Update the displayed stat value after correctly formatting the stat value.
             var TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
             var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
@@ -1103,14 +1184,6 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
-            // Dynamically add a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
-            let containerElement = document.getElementById("player-stats-all-time-" + statsArray[i] + "-container"); // Get the container element dynamically.
-            const toolTipSpanElement = document.createElement("span"); // Create a span element.
-            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
-            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
-            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
-            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
-            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
 
             // Update the displayed stat value after correctly formatting the stat value.
             var TextElement = document.getElementById("player-stats-all-time-" + statsArray[i]); // Get the Text Element dynamically.
