@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #ee850e;
+	--main-accent-colour: #0eee2c;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -1362,8 +1362,6 @@ Section 4
 .player-stats-this-season-stat-container img {
 	/* background-color: blue; */
 }
-
-
 
 
 /* Past Season Stats */

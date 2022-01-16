@@ -988,7 +988,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
-            // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
+            // Dynamically add a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
             let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
             const toolTipSpanElement = document.createElement("span"); // Create a span element.
             toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
@@ -1057,8 +1057,9 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-    //const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    //const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
+    //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
 
     // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
     // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
@@ -1082,26 +1083,70 @@ function showPlayerStatsAllTimeTabInfo(results) {
     console.log("filteredArrayOfObjects[0] = ");
     console.log(filteredArrayOfObjects[0]);
 
+    // Stat Category selection.
+    const statCategoryValueDropdown = document.getElementById("player-stats-all-time-stats-category-selection"); // Get the stat category selected dropdown.
+    const statCategoryValue = statCategoryValueDropdown.options[statCategoryValueDropdown.selectedIndex].value; // Get the stat category selected. (https://stackoverflow.com/a/8549358/14290169).
+    // console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
+
     // Populate the stats information on the page.
 
-    // Define an array of stats and seasons to update. Each stat and season combine to correspond to an HTML element in the Past Seasons Table.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    let seasonArray = ["2016/17", "2017/18", "2018/19"];
-    // for (let i = 0; i < statArray.length; i++) {
-    //     // console.log(statArray[i]); // Log the stat being updated.
-    //     for (let j = 0; j < seasonArray.length; j++) {
-    //         // console.log(seasonArray[j]); // Log the season being updated.
-    //         // console.log("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Log the id of the text element being updated.
-    //         var TextElement = document.getElementById("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Get the Text Element dynamically.
-    //         var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-    //         TextElement.innerHTML = displayText; // Add the text to the HTML element.
-    //     }
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
 
-    //     // player-stats-past-seasons-2016/17-appearances
+    // Group the next set of logs together to avoid cluttering the console.
+    console.groupCollapsed("ShowPlayerStatsAllTimeTabInfo Info Logs"); // Group further console logs. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
-    //     // console.log("displayText = " + displayText); // Log the text that will be displayed.
+    // Loop through the created stat array. Each stat corresponds to an HTML element in the All Time Grid.
+    for (let i = 0; i < statsArray.length; i++) {
+        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
-    // }
+        // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
+        try {
+            // Dynamically add a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
+            let containerElement = document.getElementById("player-stats-all-time-" + statsArray[i] + "-container"); // Get the container element dynamically.
+            const toolTipSpanElement = document.createElement("span"); // Create a span element.
+            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
+            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
+
+            // Update the displayed stat value after correctly formatting the stat value.
+            var TextElement = document.getElementById("player-stats-all-time-" + statsArray[i]); // Get the Text Element dynamically.
+            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            if (StatFormat == "Integer") { // Convert the stat to an integer.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(2); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 2 decimal places by using the "toFixed" method.
+            } else if (StatFormat == "Decimal1") { // Convert the stat to 1 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(1); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 1 decimal places by using the "toFixed" method.
+            } else { // For all else, including percentages and strings, just display as passed.
+                var displayText = filteredArrayOfObjects[0][statsArray[i]]; // Do nothing to passed value.
+            }
+            TextElement.innerHTML = displayText; // Add the text to the HTML element.
+            // console.log("displayText = " + displayText); // Log the text that will be displayed.
+
+            // Hide the stats that should not be shown based on the users selection.
+            if (statCategoryValue == "All") {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            }
+            else if (statObject[statsArray[i]].statCategory == statCategoryValue) {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            } else {
+                // Add the hidden class to this container element as it should not be shown.
+                containerElement.classList.add("hidden"); // Apply the hidden CSS class to the container element.
+            }
+
+        }
+        catch (err) {
+            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+        }
+    }
+
+    console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Player Stats - All Time Stats");
