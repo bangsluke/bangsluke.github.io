@@ -683,6 +683,8 @@ function showSideMenuInfo(results) {
 
 // 0.3. Player Dropdown data "getter" function.
 function getPlayerDropdownInfo(results) {
+    alert("getPlayerDropdownInfo complete");
+    
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
