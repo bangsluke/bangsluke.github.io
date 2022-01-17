@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	/* --main-accent-colour: #eeba0e; */
+	--main-accent-colour: #eeba0e;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -661,15 +661,15 @@ button > .selection-dropdown-arrow-icon {
 	background-color: red;
 	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	position: relative;
-	margin: auto;
-	padding: 0.5rem;
+	/* margin: auto; */
+	/* padding: 0.5rem; */
 	width: fit-content;
 	width: 14rem;
 	/* max-width: 80%; */
 	height: 1.8rem;
 	min-height: 1rem;
 	max-height: 1.8rem;
-	z-index: 11; /* selection-dropdown-content-header-section > option */
+	z-index: inherit; /* selection-dropdown-content-header-section > option */
 }
 
 
