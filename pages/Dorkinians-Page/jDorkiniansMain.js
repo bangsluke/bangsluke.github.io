@@ -2100,6 +2100,8 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
         let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
         parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
     }
+
+    alert(dropdownID + " fully populated.");
 }
 
 // 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
@@ -2117,7 +2119,9 @@ function showDropdownList(dropdownID, tabName) {
     // Dynamically assign the correct onClick action to the background overlay.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
         closeDropdownList(dropdownID, tabName);
-    } 
+    }
+
+    alert(dropdownID + " opened.");
 }
 
 // 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.

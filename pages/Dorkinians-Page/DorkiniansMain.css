@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #0e42ee;
+	--main-accent-colour: #ee0e0e;
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -645,7 +645,7 @@ button > .selection-dropdown-arrow-icon {
 
 /* Style the options section of the dropdown content which holds all of the loaded in options. */
 .selection-dropdown-content-option-section {
-	background-color: #ce641d;
+	/* background-color: #ce641d; */
 	position: relative;
 	width: fit-content;
 	width: 14rem;
@@ -660,9 +660,9 @@ button > .selection-dropdown-arrow-icon {
 	color: white; /* The font colour of the text. */ 
 	background-color: red;
 	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	position: relative;
-	/* margin: auto; */
-	/* padding: 0.5rem; */
+	position: static;
+	margin: auto;
+	padding: 0.5rem;
 	width: fit-content;
 	width: 14rem;
 	/* max-width: 80%; */
