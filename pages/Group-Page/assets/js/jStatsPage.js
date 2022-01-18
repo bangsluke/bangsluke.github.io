@@ -129,6 +129,7 @@ var statsObject = {
     },
     "Sport": {
         "Boxing": ["n/a"],
+        "Chess": ["n/a"],
         "Cricket": ["n/a"],
         "Darts": ["n/a"],
         "Golf": ["n/a"],
