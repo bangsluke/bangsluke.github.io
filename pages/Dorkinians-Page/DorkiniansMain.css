@@ -1446,6 +1446,7 @@ Section 4
 
 /* 5. Comparison Tab */
 
+/* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
@@ -1458,17 +1459,35 @@ Section 4
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
+/* Style the player 1 selection container. */ 
 .comparison-player-1-selection-container {
 	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 	width: 100%;
 }
+/* Add some unique styling to the player 1 selection dropdown component. */ 
+#comparison-player-1-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	left: 0;
+}
+/* Style the player 2 selection container. */ 
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
 	width: 100%;
+}
+/* Add some unique styling to the player 2 selection dropdown component. */ 
+#comparison-player-2-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	float: right;
 }
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
