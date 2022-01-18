@@ -2109,7 +2109,7 @@ function showDropdownList(dropdownID, tabName) {
 
 // 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function filterDropdownList(dropdownID, inputID) {
-    // console.log("filterDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown is being filtered.
+    console.log("filterDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown is being filtered.
     let input = document.getElementById(inputID); // Get the input field.
     let filter = input.value.toUpperCase(); // Get the input value.
     let containerDiv = document.getElementById(dropdownID); // Get the container div holding the options.
