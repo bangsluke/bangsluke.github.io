@@ -83,8 +83,9 @@ Section 1
 	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
 
 	/* Dropdown Component */
-	--dropdown-component-background: #CBECD5; /* Background of dropdown matches iOS inbuilt dropdown component. */
-	--dropdown-component-border-radius: 20px; /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	--dropdown-component-background: #CBECD5; /* Background of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-accent: #9DCAAB; /* Accent of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-border-radius: 14px; /* Corner radius of dropdown matches IOS inbuilt dropdown component. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -208,8 +209,7 @@ Section 2
 
 /* All Text */
 h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	font-family: inherit;
+	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
 }
 /* Font Families */
 /* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
@@ -633,26 +633,28 @@ button > .selection-dropdown-arrow-icon {
 	position: relative;
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
 	border-bottom: 0.1rem solid var(--secondary-accent-colour, white); /* Add a border along the bottom. */
-	border-bottom: 0.1rem solid black; /* Add a border along the bottom. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
 	top: 0;
 	left: 0;
 	width: 13.5rem;
 	height: 2.2rem;
-	min-height: 2rem;
+	min-height: 2.5rem;
 }
-/* Style the small white search icon. */
+/* Style the small search icon. */
 .selection-dropdown-search-icon {
-	height: 0.8rem;
-	width: 0.8rem;
+	height: 1rem;
+	width: auto;
 	/*filter: brightness(0) invert(1); /* Ensure the icon is white. */
-	margin-right: 0.2rem;
 	position: relative;
+	margin-right: 0.2rem; /* Add a small margin to the right to push the icon away from the text field. */
+	top: 0.2rem; /* Offset the height of the icon slightly to vertically align it with the text field. */
 }
 /* The search field */
 .selection-dropdown-search-bar {
 	width: 80%;
 	position: relative;
 	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	padding: 0.2rem; /* Add some padding inside the search text field to make space. */
 }
 /* The search field when it gets focus/clicked on */
 .selection-dropdown-search-bar:focus {
@@ -684,6 +686,7 @@ button > .selection-dropdown-arrow-icon {
 	min-height: 1rem;
 	max-height: 1.8rem;
 	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
 }
 
 
