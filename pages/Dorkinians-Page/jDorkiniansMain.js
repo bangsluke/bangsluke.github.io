@@ -951,18 +951,18 @@ function prefillPlayerStatsTab() {
 
     // Loop through all required sections of the player stats page.
     for (let i = 0; i < playerStatsSectionArray.length; i++) {
-        console.log("Section being updated = " + playerStatsSectionArray[i]); // Log the section being updated.
+        // console.log("Section being updated = " + playerStatsSectionArray[i]); // Log the section being updated.
 
         // Loop through the created stat array. Each stat corresponds to an HTML element on the Player Stats tab.
         for (let j = 0; j < statsArray.length; j++) {
-            console.log("Stat = " + statsArray[j] + ", format = " + statObject[statsArray[j]].statFormat); // Log the stat being updated and it's format.
+            // console.log("Stat = " + statsArray[j] + ", format = " + statObject[statsArray[j]].statFormat); // Log the stat being updated and it's format.
 
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 // Dynamically add the stat text and a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
                 
                 // Stat Text
-                console.log("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]);
+                // console.log("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]);
                 document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]).innerHTML = statObject[statsArray[j]].displayText; // Update the stat text element dynamically.
 
                 // Tool Tip
