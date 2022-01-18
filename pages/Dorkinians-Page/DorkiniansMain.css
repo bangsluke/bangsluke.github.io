@@ -688,10 +688,6 @@ button > .selection-dropdown-arrow-icon {
 }
 
 
-  
-  
-
-
 
 /* 4. Information bar styling */
 
@@ -760,6 +756,26 @@ button > .selection-dropdown-arrow-icon {
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
+}
+
+
+
+/* 6. Icon Styling */
+
+/* Create an icon class to apply to all icons across the site. */
+.stat-icon {
+	height: 1.4rem;
+	width: auto;
+	padding-bottom: 0.2rem; /* Add space to the next icon below. */
+}
+/* Create a class to turn the icons white. */
+.stat-icon.white {
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+}
+/* Create a class to turn the icons red. */
+.stat-icon.red {
+	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
 }
 
 
@@ -1539,21 +1555,6 @@ div.cell {
 	/* grid-area: Icons; */
 	padding: 3.5rem 0rem 0.3rem 0rem;
 	text-align: center;
-}
-/* Create an icon class to apply to all icons. */
-.comparison-icon {
-	height: 1.4rem;
-	width: auto;
-	padding-bottom: 0.2rem; /* Add space to the next icon below. */
-}
-/* Create a class to turn the icons white. */
-.comparison-icon.white {
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
-}
-/* Create a class to turn the icons red. */
-.comparison-icon.red {
-	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
-	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
 }
 /* Create two card shapes using CSS. */
 .card-icon {
