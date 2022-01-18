@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 6;
+const numberReadyComponents = 8;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -51,6 +51,9 @@ var phrasesArray = [
     "Will be ready as soon as Rupert Cape uses his left foot...",
     "Waiting for Morley to leave the changing room so we can kick off...",
     "Check out the new Higgins range of clothes in Asda's George whilst you wait...",
+    "Processing opposition complaints that our teams are too strong...",
+    "Delaying pitch inspections to the last minute...",
+    "Considering Dom Devlin's MoM...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
@@ -58,6 +61,7 @@ var phrasesArray = [
 const statObject = {
     APP: {
         statName: 'Appearances',
+        displayText: 'Appearances:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
         statHigherBetterBoolean: true,
@@ -66,6 +70,7 @@ const statObject = {
     },
     M: {
         statName: 'Minutes',
+        displayText: 'Minutes played:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
         statHigherBetterBoolean: true,
@@ -74,6 +79,7 @@ const statObject = {
     },
     MOM: {
         statName: 'Man of the Matches',
+        displayText: 'Man of the Matches:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
         statHigherBetterBoolean: true,
@@ -82,6 +88,7 @@ const statObject = {
     },
     G: {
         statName: 'Goals Scored',
+        displayText: 'Goals scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
         statHigherBetterBoolean: true,
@@ -90,6 +97,7 @@ const statObject = {
     },
     A: {
         statName: 'Assists',
+        displayText: 'Assists provided:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
         statHigherBetterBoolean: true,
@@ -98,6 +106,7 @@ const statObject = {
     },
     Y: {
         statName: 'Yellow Cards',
+        displayText: 'Yellow cards received:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
         statHigherBetterBooleanArray: false,
@@ -106,6 +115,7 @@ const statObject = {
     },
     R: {
         statName: 'Red Cards',
+        displayText: 'Red cards received:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
         statHigherBetterBoolean: false,
@@ -114,6 +124,7 @@ const statObject = {
     },
     OG: {
         statName: 'Own Goals',
+        displayText: 'Own goals scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
         statHigherBetterBoolean: false,
@@ -122,6 +133,7 @@ const statObject = {
     },
     C: {
         statName: 'Conceded',
+        displayText: 'Goals conceded:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
         statHigherBetterBoolean: false,
@@ -130,6 +142,7 @@ const statObject = {
     },
     CLS: {
         statName: 'Clean Sheets',
+        displayText: 'Clean sheets achieved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
         statHigherBetterBoolean: true,
@@ -138,6 +151,7 @@ const statObject = {
     },
     PSC: {
         statName: 'Penalties Scored',
+        displayText: 'Penalties scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
         statHigherBetterBoolean: true,
@@ -146,6 +160,7 @@ const statObject = {
     },
     PM: {
         statName: 'Penalties Missed',
+        displayText: 'Penalties missed:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
         statHigherBetterBoolean: false,
@@ -154,6 +169,7 @@ const statObject = {
     },
     PCO: {
         statName: 'Penalties Conceded',
+        displayText: 'Penalties conceded:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
         statHigherBetterBoolean: false,
@@ -162,6 +178,7 @@ const statObject = {
     },
     PSV: {
         statName: 'Penalties Saved',
+        displayText: 'Penalties saved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
         statHigherBetterBoolean: true,
@@ -170,6 +187,7 @@ const statObject = {
     },
     FTP: {
         statName: 'Fantasy Points',
+        displayText: 'Fantasy points achieved:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
         statHigherBetterBoolean: true,
@@ -178,6 +196,7 @@ const statObject = {
     },
     GperAPP: {
         statName: 'Goals Per Appearance',
+        displayText: 'Goals per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -186,6 +205,7 @@ const statObject = {
     },
     CperAPP: {
         statName: 'Conceded Per Appearance',
+        displayText: 'Goals conceded per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
         statHigherBetterBoolean: false,
@@ -194,6 +214,7 @@ const statObject = {
     },
     MperG: {
         statName: 'Minutes Per Goal',
+        displayText: 'Minutes per goal scored:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
         statHigherBetterBoolean: false,
@@ -202,6 +223,7 @@ const statObject = {
     },
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
+        displayText: 'Minutes per clean sheet:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
         statHigherBetterBoolean: false,
@@ -210,6 +232,7 @@ const statObject = {
     },
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
+        displayText: 'Fantasy points per app:', // The text displayed at all times on the page.
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -218,6 +241,7 @@ const statObject = {
     },
     DIST: {
         statName: 'Distance Travelled',
+        displayText: 'Distance travelled:', // The text displayed at all times on the page.
         statFormat: 'Decimal1',
         description: 'The distance travelled in miles by the player getting to away games.',
         statHigherBetterBoolean: true,
@@ -226,6 +250,7 @@ const statObject = {
     },
     "Games%Won": {
         statName: 'Percentage Games Won',
+        displayText: '% games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
         statHigherBetterBoolean: true,
@@ -234,6 +259,7 @@ const statObject = {
     },
     HomeGames: {
         statName: 'Home Games',
+        displayText: 'Home games:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
         statHigherBetterBoolean: true,
@@ -242,6 +268,7 @@ const statObject = {
     },
     HomeWins: {
         statName: 'Home Wins',
+        displayText: 'Home wins:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -250,6 +277,7 @@ const statObject = {
     },
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
+        displayText: '% home games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -258,6 +286,7 @@ const statObject = {
     },
     AwayGames: {
         statName: 'Away Games',
+        displayText: 'Away games:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
         statHigherBetterBoolean: true,
@@ -266,6 +295,7 @@ const statObject = {
     },
     AwayWins: {
         statName: 'Away Wins',
+        displayText: 'Away wins:', // The text displayed at all times on the page.
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -274,6 +304,7 @@ const statObject = {
     },
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
+        displayText: '% away games won:', // The text displayed at all times on the page.
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -282,6 +313,7 @@ const statObject = {
     },
     "MostPlayedForTeam": {
         statName: 'Most Played for Team',
+        displayText: 'Most played for team:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has appeared for most.',
         statHigherBetterBoolean: false,
@@ -290,6 +322,7 @@ const statObject = {
     },
     "NumberTeamsPlayedFor": {
         statName: 'Number of Teams Played for',
+        displayText: 'Number teams played for:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The number of Dorkinians teams that the player has appeared for.',
         statHigherBetterBoolean: true,
@@ -298,6 +331,7 @@ const statObject = {
     },
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
+        displayText: 'Number seasons played for:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
@@ -306,6 +340,7 @@ const statObject = {
     },
     "MostScoredForTeam": {
         statName: 'Most Scored for Team',
+        displayText: 'Most scored for team:', // The text displayed at all times on the page.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has scored the most for.',
         statHigherBetterBoolean: false,
@@ -385,7 +420,7 @@ function init() {
     console.log('%c' + '> Dorkinians page DOM content loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
 
     // Step 0.
-    // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Close the side menu if open.
     closeNav();
@@ -401,7 +436,7 @@ function init() {
     document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
     let i = 0; // The integer counter.
     let speed = 50; // The speed/duration of the effect in milliseconds.
-    let phraseText = "Loading data into site...";
+    let phraseText = "Loading data into the site...";
     typeWriter(); // Call the typeWriter function to update the HTML element with text.
     function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
         if (i < phraseText.length) {
@@ -487,6 +522,9 @@ function init() {
     // Step 3. 
     // Player Stats Tab.
     console.log('%c' + '> 3. Player Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // Populate the Player Stats tab with details such as stat text and tooltips.
+    prefillPlayerStatsTab();
 
     // This Season Stats Info
     Papa.parse(displayThisSeasonStatsSheetCSV, {
@@ -651,7 +689,16 @@ function getPlayerDropdownInfo(results) {
     displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
-    populateDropdownList(displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the addPlayerDropdownInfo function.
+
+    // Populate the various dropdown components with player names.
+    // Player Stats tab
+    populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    // Comparison Tab
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Dropdowns populated");
 }
 
 
@@ -888,6 +935,59 @@ function updateClubStatsInfo() {
 
 // 3. Player Stats Tab
 
+// 3.0 Prefill the base detail onto the Player Stats tab such as stat names and tooltips.
+function prefillPlayerStatsTab() {
+    console.log('%c' + '>> prefillPlayerStatsTab.', 'background-color: blue; color:white; padding: 0.5em 0em; font-weight: bold;');
+
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
+
+    // Group the next set of logs together to avoid cluttering the console.
+    console.groupCollapsed("PrefillPlayerStatsTab Info Logs"); // Group further console logs. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+    // Create an array of the player stats sections that need to be updated.
+    const playerStatsSectionArray = ["this-season", "all-time"];
+
+    // Loop through all required sections of the player stats page.
+    for (let i = 0; i < playerStatsSectionArray.length; i++) {
+        // console.log("Section being updated = " + playerStatsSectionArray[i]); // Log the section being updated.
+
+        // Loop through the created stat array. Each stat corresponds to an HTML element on the Player Stats tab.
+        for (let j = 0; j < statsArray.length; j++) {
+            // console.log("Stat = " + statsArray[j] + ", format = " + statObject[statsArray[j]].statFormat); // Log the stat being updated and it's format.
+
+            // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
+            try {
+                // Dynamically add the stat text and a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
+
+                // Stat Text
+                // console.log("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]);
+                document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]).innerHTML = statObject[statsArray[j]].displayText; // Update the stat text element dynamically.
+
+                // Tool Tip
+                let containerElement = document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-" + statsArray[j] + "-container"); // Get the container element dynamically.
+                const toolTipSpanElement = document.createElement("span"); // Create a span element.
+                toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
+                var toolTipText = document.createTextNode(statObject[statsArray[j]].description);
+                toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
+                containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
+                containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
+
+            }
+            catch (err) {
+                console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+            }
+        }
+    }
+
+    console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Player Stats - This Season Stats");
+
+}
+
 // Player Stats tab needs to process two data parses, "displayThisSeasonStats" and "displayAllTimeStats".
 
 // 3.1.a. Player Stats This Season stats tab data "getter" function.
@@ -930,23 +1030,13 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter down the entire array to find the players data.
-
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-
-    //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    console.log("Selected player (playerValue) = " + playerValue);
+    // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
-    // Re-use the re-usable function..
+    // Filter down the entire array to find the players data. Re-use the re-usable function...
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
     // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
     // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
@@ -957,8 +1047,8 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    console.log("filteredArrayOfObjects[0] = ");
-    console.log(filteredArrayOfObjects[0]);
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
 
     // Stat Category selection.
     const statCategoryValueDropdown = document.getElementById("player-stats-this-season-stats-category-selection"); // Get the stat category selected dropdown.
@@ -980,18 +1070,10 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
-            // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
-            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
-            const toolTipSpanElement = document.createElement("span"); // Create a span element.
-            toolTipSpanElement.className = "stats-tooltip-text" // Apply the correct CSS class to the span element.
-            var toolTipText = document.createTextNode(statObject[statsArray[i]].description);
-            toolTipSpanElement.appendChild(toolTipText); // Append the new tool tip text to the new span element.
-            containerElement.appendChild(toolTipSpanElement); // Apppend the span element to the container element.
-            containerElement.classList.add("stats-tooltip"); // Apply the correct CSS class to the container element.
 
             // Update the displayed stat value after correctly formatting the stat value.
-            var TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
-            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            let TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
+            let StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object.
             if (StatFormat == "Integer") { // Convert the stat to an integer.
                 var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
             } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
@@ -1005,6 +1087,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
 
             // Hide the stats that should not be shown based on the users selection.
+            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
             if (statCategoryValue == "All") {
                 // Remove the hidden class from this container element as it should be shown.
                 containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
@@ -1045,22 +1128,13 @@ function showPlayerStatsAllTimeTabInfo(results) {
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter down the entire array to find the players data.
-
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-    //const playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    //const playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    console.log("Selected player (playerValue) = " + playerValue);
+    // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
-    // Re-use the re-usable function..
+    // Filter down the entire array to find the players data. Re-use the re-usable function...
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
     // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
     // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
@@ -1071,29 +1145,65 @@ function showPlayerStatsAllTimeTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    console.log("filteredArrayOfObjects[0] = ");
-    console.log(filteredArrayOfObjects[0]);
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
+
+    // Stat Category selection.
+    const statCategoryValueDropdown = document.getElementById("player-stats-all-time-stats-category-selection"); // Get the stat category selected dropdown.
+    const statCategoryValue = statCategoryValueDropdown.options[statCategoryValueDropdown.selectedIndex].value; // Get the stat category selected. (https://stackoverflow.com/a/8549358/14290169).
+    // console.log("Selected stat category (statCategoryValue) = " + statCategoryValue);
 
     // Populate the stats information on the page.
 
-    // Define an array of stats and seasons to update. Each stat and season combine to correspond to an HTML element in the Past Seasons Table.
-    let statArray = ["APP", "M", "MOM", "G", "A", "Y", "R", "OG", "C", "CLS", "GperAPP", "CperAPP", "MperG"];
-    let seasonArray = ["2016/17", "2017/18", "2018/19"];
-    // for (let i = 0; i < statArray.length; i++) {
-    //     // console.log(statArray[i]); // Log the stat being updated.
-    //     for (let j = 0; j < seasonArray.length; j++) {
-    //         // console.log(seasonArray[j]); // Log the season being updated.
-    //         // console.log("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Log the id of the text element being updated.
-    //         var TextElement = document.getElementById("player-stats-past-seasons-" + seasonArray[j] + "-" + statArray[i]); // Get the Text Element dynamically.
-    //         var displayText = Number(filteredArrayOfObjects[0][statArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
-    //         TextElement.innerHTML = displayText; // Add the text to the HTML element.
-    //     }
+    // Define an array of stats from the Global statObject.
+    const statsArray = Object.keys(statObject);
+    // console.log(statsArray); // Log the created array to see all of the stats to be looped through.
 
-    //     // player-stats-past-seasons-2016/17-appearances
+    // Group the next set of logs together to avoid cluttering the console.
+    console.groupCollapsed("ShowPlayerStatsAllTimeTabInfo Info Logs"); // Group further console logs. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
-    //     // console.log("displayText = " + displayText); // Log the text that will be displayed.
+    // Loop through the created stat array. Each stat corresponds to an HTML element in the All Time Grid.
+    for (let i = 0; i < statsArray.length; i++) {
+        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
-    // }
+        // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
+        try {
+
+            // Update the displayed stat value after correctly formatting the stat value.
+            var TextElement = document.getElementById("player-stats-all-time-" + statsArray[i]); // Get the Text Element dynamically.
+            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            if (StatFormat == "Integer") { // Convert the stat to an integer.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
+            } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(2); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 2 decimal places by using the "toFixed" method.
+            } else if (StatFormat == "Decimal1") { // Convert the stat to 1 decimal places.
+                var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toFixed(1); // Use a dynamic [statArray[i]] key. Convert the stat to a number to 1 decimal places by using the "toFixed" method.
+            } else { // For all else, including percentages and strings, just display as passed.
+                var displayText = filteredArrayOfObjects[0][statsArray[i]]; // Do nothing to passed value.
+            }
+            TextElement.innerHTML = displayText; // Add the text to the HTML element.
+            // console.log("displayText = " + displayText); // Log the text that will be displayed.
+
+            // Hide the stats that should not be shown based on the users selection.
+            if (statCategoryValue == "All") {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            }
+            else if (statObject[statsArray[i]].statCategory == statCategoryValue) {
+                // Remove the hidden class from this container element as it should be shown.
+                containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
+            } else {
+                // Add the hidden class to this container element as it should not be shown.
+                containerElement.classList.add("hidden"); // Apply the hidden CSS class to the container element.
+            }
+
+        }
+        catch (err) {
+            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+        }
+    }
+
+    console.groupEnd(); // End the log grouping. https://www.freecodecamp.org/news/javascript-console-log-example-how-to-print-to-the-console-in-js/
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Player Stats - All Time Stats");
@@ -1170,12 +1280,10 @@ function updateComparisonStatData() {
     // Reset all stats bars on the Comparison tab.
     resetStatsBars();
 
-    let player1NameDropdown = document.getElementById("comparison-player-1-dropdown"); // Get the player 1 dropdown.
-    let player1NameValue = player1NameDropdown.options[player1NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // Player selection.
+    let player1NameValue = document.getElementById("comparison-player-1-selection-dropdown-button").value; // Get the player 1 selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player 1 (player1NameValue) = " + player1NameValue);
-
-    let player2NameDropdown = document.getElementById("comparison-player-2-dropdown"); // Get the player 2 dropdown.
-    let player2NameValue = player2NameDropdown.options[player2NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    let player2NameValue = document.getElementById("comparison-player-2-selection-dropdown-button").value; // Get the player 2 selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player 2 (player2NameValue) = " + player2NameValue);
 
     // Define an array of stats from the Global statObject.
@@ -1948,30 +2056,31 @@ function displayInformation(informationBarID, displayMessage) {
 
 
 
-// When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
-function showDropdownList(dropdownID) {
-    console.log("showDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown has been clicked.
-    document.getElementById(dropdownID).style.display = "block"; // Show the selection dropdown.
-    document.getElementById('player-stats-selection-dropdown-container').style.zIndex = 6;  // Show the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "inline"; // Show the background overlay behind the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.zIndex = 5; // Set the z-index of the background overlay to be right behind the selection dropdown.
-}
+// Dropdown Component Functions
 
-// Populate the dropdown with Player names.
-function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
-    console.log("playerNameArray:");
-    console.log(playerNameArray);
+// 1. Populate the dropdown with Player names.
+function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
+    // console.log("Function populateDropdownList called with dropdownID: " + dropdownID + ", from tab: " + tabName); // Log that the function has been called.
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
-        let newOption = document.createElement("option"); // Create the new option element.
+        let newOption = document.createElement("div"); // Create the new option element (but as a div as option doesn't work on mobile).
+        newOption.classList.add("selection-dropdown-option"); // Add the selection-dropdown-option class to the new element.
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
+        // Function used for onclick of all dropdown options.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
             document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
-            closeDropdownList(); // Close the dropdown list.
-            showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+            closeDropdownList(dropdownID, tabName); // Close the dropdown list.
+            // Call the next function on the basis of what tab the dropdown is from.
+            if (tabName == "player-stats"){
+                showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+            } else if (tabName == "comparison"){
+                updateComparisonStatData(); // Update the Comparison Tab.
+            } else {
+                alert(dropdownID + " dropdown called from an unknown tab location?"); // Add a catch.
+            }
         };
         let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
         newOption.appendChild(playerNameText); // Append the text node to the new element.
@@ -1980,25 +2089,44 @@ function populateDropdownList(playerNameArray, dropdownID, dropdownButtonID, dro
     }
 }
 
-// Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+// 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
+function showDropdownList(dropdownID, tabName) {
+    //console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
+
+    // Make the selection dropdown content visible.
+    document.getElementById(dropdownID + '-contents').style.display = "block"; // Show the selection dropdown contents.
+    document.getElementById(dropdownID + '-contents').style.zIndex = 10;  // Move the contents to the front of the page.
+
+    // Set up the background overlay behind the contents so when a user clicks off the content, it closes.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "inline"; // Show the background overlay behind the selection dropdown.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 9; // Set the z-index of the background overlay to be right behind the selection dropdown.
+
+    // Dynamically assign the correct onClick action to the background overlay.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
+        closeDropdownList(dropdownID, tabName);
+    }
+}
+
+// 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function filterDropdownList(dropdownID, inputID) {
-    var input, filter, option, i;
-    input = document.getElementById(inputID);
-    filter = input.value.toUpperCase();
-    div = document.getElementById(dropdownID);
-    option = div.getElementsByTagName("option");
-    for (i = 0; i < option.length; i++) {
+    console.log("filterDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown is being filtered.
+    let input = document.getElementById(inputID); // Get the input field.
+    let filter = input.value.toUpperCase(); // Get the input value.
+    let containerDiv = document.getElementById(dropdownID); // Get the container div holding the options.
+    let option = containerDiv.getElementsByClassName("selection-dropdown-option"); // Get the options by looking for elements with the selection-dropdown-option class. 
+    for (i = 0; i < option.length; i++) { // Loop through the array of options.
         txtValue = option[i].textContent || option[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            option[i].style.display = "";
+            option[i].style.display = ""; // Display options that do match the input.
         } else {
-            option[i].style.display = "none";
+            option[i].style.display = "none"; // Don't display options that don't match the input.
         }
     }
 }
 
-function closeDropdownList() {
-    console.log("closeDropdownList clicked"); // Log that the dropdown has been closed.
-    document.getElementById('player-stats-selection-dropdown').style.display = "none"; // Hide the selection dropdown.
-    document.getElementById('background-overlay-player-stats-selection-dropdown').style.display = "none"; // Hide the background overlay behind the selection dropdown.
+// 4. Close the dropdown list and the background overlay associated with it.
+function closeDropdownList(dropdownID, tabName) {
+    //console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
+    document.getElementById(dropdownID + '-contents').style.display = "none"; // Hide the selection dropdown content.
+    document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }

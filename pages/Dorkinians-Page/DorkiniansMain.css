@@ -39,6 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
+	/* --main-accent-colour: #3bee0e; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -68,6 +69,7 @@ Section 1
 
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
+	--component-font-size: 12px; /* Define the font size used in components. */
 	
 	/* Snap Tabs */
 	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
@@ -78,8 +80,13 @@ Section 1
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
     --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
-
 	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
+
+	/* Dropdown Component */
+	--dropdown-component-background: #CBECD5; /* Background of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-accent: #9DCAAB; /* Accent of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-border-radius: 14px; /* Corner radius of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-header-height: 2.5rem; /* The height of the header section of the custom built dropdown component. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -144,7 +151,7 @@ body {
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-    margin: 1rem auto 2rem auto; /* Add a margin above and below each section. */
+	margin: 1rem auto; /* Add a small margin above and below each section and horizontally center the section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -158,8 +165,9 @@ body {
     border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);
 	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
-    backdrop-filter: blur( 20px );
-	-webkit-backdrop-filter: blur( 20px );
+    
+	/* backdrop-filter: blur( 20px ); */
+	/* -webkit-backdrop-filter: blur( 20px ); */
 }
 
 /* Sub page sections - multiple sections per tab. */
@@ -181,11 +189,11 @@ section {
 	margin: 0;
 	z-index: 5; /* background-overlay */
 }
-
+/* Add a clear background class overlay. */
 .background-overlay-clear {
 	background: rgba(0, 0, 0, 0.0);
 }
-
+/* Add a dark background class overlay. */
 .background-overlay-dark {
 	background: rgba(0, 0, 0, 0.50);
 }
@@ -202,8 +210,7 @@ Section 2
 
 /* All Text */
 h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	font-family: inherit;
+	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
 }
 /* Font Families */
 /* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
@@ -501,23 +508,38 @@ tr:last-child td:last-child {
 
 /* 3. Dropdown styling */
 
-/* Common styling for new and old dropdown components. */
-option {
-	color: black; /* The font colour of the text. */ 
-}
 /* Add a top holder class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
 	position: relative; /* The position has to be set for zindex to work. */
-	/* display: inline-block; */
 	margin: auto;
-	z-index: 3; /* selection-container */
+	height: max-content;
+}
+
+/* Common styling for new and old dropdown components. */
+select {
+	background-color: rgba(255, 255, 255, 0.10);
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+/* Note that option is only used for old dropdown component and isn't compatible with the new dropdown component on mobile. */
+option {
+	color: black; /* The font colour of the text. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+.selection-container option {
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: red; */
+	color: black;
+}
+select > option:hover, select > option:focus {
+	background-color: orange; /* Background of dropdown matches iOS inbuilt dropdown component. */
 }
 
 
-/* Old Dropdown - using the built in dropdown component. */
+/* Old Dropdown Components - using the built in dropdown component. */
 
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
@@ -529,15 +551,19 @@ option {
 	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
-	font-size: 0.8rem; /* Relative to root (html) value. */
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 	border-radius: var(--component-border-radius, 0.2rem);
 }
+.selection-dropdown:hover, .selection-dropdown:focus {
+	border: 2px solid var(--main-accent-colour, yellow);
+}
 
-
-/* New Dropdown - using the custom built dropdown component. */
+/* New Dropdown Component - using the custom built dropdown component. */
 
 /* Add a class for the button for all common selection dropdown styling. */
+/* Style the dropdown button. */
 .selection-dropdown-button {
 	background-color: rgba(255, 255, 255, 0.10);
 	color: var(--secondary-accent-colour, white);
@@ -547,14 +573,15 @@ option {
 	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
-	font-size: 0.8rem; /* Relative to root (html) value. */
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 	border-radius: var(--component-border-radius, 0.2rem);
 }
-/* Style the dropdown button. */
 /* Dropdown button on hover & focus */
 .selection-dropdown-button:hover, .selection-dropdown-button:focus {
 	background-color: rgba(255, 255, 255, 0.20);
+	border: 2px solid var(--main-accent-colour, yellow);
 }
 /* Style the dropdown button downwards arrow. */
 button > .selection-dropdown-arrow-icon {
@@ -573,27 +600,24 @@ button > .selection-dropdown-arrow-icon {
 /* Style the content once the button is clicked. */
 /* Dropdown Content (Hidden by Default) */
 .selection-dropdown-content {
-	/* background-color: #490bf3; */
 	background-color: var(--main-background-colour, green);
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: #490bf3; */
 	display: none;
 	position: absolute;
 	left: 0; 
   	right: 0; 
   	margin-left: auto; 
   	margin-right: auto; 
-  	/*width: 40%; /* Need a specific value to work */
 	width: fit-content;
-	width: 14rem;
-	height: max-content;
-	max-width: 80%;
-	max-height: 15rem;
-	border: 1px solid #ddd;
+	width: 14rem; /* Need a specific value to work */
+	height: 15rem;
+	min-height: 4rem;
+	max-height: 20rem;
+	border: none;
 	border-radius: var(--component-border-radius, 0.2rem);
-	overflow-y: scroll;
-}
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show-dropdown-option {
-	display: block;
+	border-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	overflow-y: none; /* Disable vertical scroll in the main container. */
 }
 /* Style the hover over links. */
 .selection-dropdown-content option:hover {
@@ -602,27 +626,35 @@ button > .selection-dropdown-arrow-icon {
 /* Style the header section of the dropdown content which holds the search icon and input text. */
 .selection-dropdown-content-header-section {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	/* background-color: blue; */
-	position: fixed;
-	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: violet; */
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
-	border-bottom: 0.1rem solid var(--secondary-accent-colour, white);
-	/* width: 50%; */
-	/* width: fit-content; */
+	border-bottom: 0.1rem solid var(--secondary-accent-colour, white); /* Add a border along the bottom. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
+	position: sticky; /* Sticky acts as static and becomes fixed when the top becomes 0. https://blog.webdevsimplified.com/2022-01/css-position/?fromNewsletter=true */ 
+	top: 0;
+	left: 0;
 	width: 13.5rem;
-	height: 2.2rem;
-	z-index: 2; /* selection-dropdown-content-header-section */
+	height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	min-height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	border-top-left-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	border-top-right-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
 }
-/* Style the small white search icon. */
+/* Style the small search icon. */
 .selection-dropdown-search-icon {
-	height: 0.8rem;
-	width: 0.9rem;
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
-	margin-right: 0.2rem;
+	height: 1rem;
+	width: auto;
+	/*filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	position: relative;
+	margin-right: 0.2rem; /* Add a small margin to the right to push the icon away from the text field. */
+	top: 0.2rem; /* Offset the height of the icon slightly to vertically align it with the text field. */
 }
 /* The search field */
 .selection-dropdown-search-bar {
 	width: 80%;
+	position: relative;
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	padding: 0.2rem; /* Add some padding inside the search text field to make space. */
 }
 /* The search field when it gets focus/clicked on */
 .selection-dropdown-search-bar:focus {
@@ -631,23 +663,29 @@ button > .selection-dropdown-arrow-icon {
 
 /* Style the options section of the dropdown content which holds all of the loaded in options. */
 .selection-dropdown-content-option-section {
+	/* background-color: #ce641d; */
 	position: relative;
-	width: 50%;
-	top: 2.2rem; /* Offset the options below the header section. */
+	width: fit-content;
+	width: 14rem;
+	height: calc(100% - var(--dropdown-component-header-height, 2.5rem) - 5%); /* Make the height of the content to be the full height of the component minus the header height and a small offset to stop the lines overlapping the border radii. */;
+	overflow-y: scroll; /* Enable vertical scroll in the options container. */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
-.selection-dropdown-content-option-section > option {
-	color: white; /* The font colour of the text. */ 
-	/* background-color: red; */
-	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+/* .selection-dropdown-content-option-section > .selection-dropdown-option { */
+.selection-dropdown-option {
+	/*color: white; /* The font colour of the text. */
+	color: black; /* The font colour of the text. */
+	position: static;
 	margin: auto;
 	padding: 0.5rem;
-	width: 100%;
+	width: fit-content;
+	width: 14rem;
+	height: 1.8rem;
+	min-height: 1rem;
+	max-height: 1.8rem;
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
 }
-
-
-  
-  
 
 
 
@@ -718,6 +756,26 @@ button > .selection-dropdown-arrow-icon {
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
+}
+
+
+
+/* 6. Icon Styling */
+
+/* Create an icon class to apply to all icons across the site. */
+.stat-icon {
+	height: 1.4rem;
+	width: auto;
+	padding-bottom: 0.2rem; /* Add space to the next icon below. */
+}
+/* Create a class to turn the icons white. */
+.stat-icon.white {
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+}
+/* Create a class to turn the icons red. */
+.stat-icon.red {
+	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
 }
 
 
@@ -1292,32 +1350,57 @@ Section 4
 
 /* 3. Player Stats Tab */
 
-/* This Season Stats */
-#player-stats-this-season-top-container {
+/* Common Tab Styling */
+.player-stats-top-container {
 	/* background-color: greenyellow; */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0rem; /* First value is between rows, second columns. */
+}
+.player-stats-stat-container {
+	/* background-color: violet; */
+	position: relative;
+	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
+	display: grid;
+	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
+	grid-template-rows: 1fr;
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+	margin: 0 auto;
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-stat-container div {
+	margin-left: 0.6rem;
+}
+.player-stats-stat-container h5 {
+	/* background-color: red; */
+	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
+	text-align: right;
+	white-space: nowrap;
+}
+.player-stats-stat-container img {
+	/* background-color: blue; */
+	margin-left: 0.4rem;
+}
 
+/* This Season Stats */
+#player-stats-this-season-top-container {
+	/* background-color: greenyellow;	 */
 }
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
-	display: grid; 
-	grid-template-columns: 55% 10% 35%; 
-	grid-template-rows: 1fr;
-	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-this-season-stat-container div {
+	/* background-color: rgb(132, 130, 238); */
 }
 .player-stats-this-season-stat-container h5 {
-	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
-	text-align: right;
+	/* background-color: red; */
 }
 .player-stats-this-season-stat-container img {
-	margin-left: 0.4rem;
+	/* background-color: blue; */
 }
-.player-stats-this-season-stat-container div {
-	margin-left: 0.4rem;
-}
+
 
 /* Past Season Stats */
 #player-stats-past-seasons-table {
@@ -1325,7 +1408,9 @@ Section 4
 }
 
 /* All Time Stats */
-
+#player-stats-all-time-top-container {
+	/* background-color: lightblue; */
+}
 
 
 /* 4. Team of the Week Tab */
@@ -1361,6 +1446,7 @@ Section 4
 
 /* 5. Comparison Tab */
 
+/* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
@@ -1373,17 +1459,35 @@ Section 4
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
+/* Style the player 1 selection container. */ 
 .comparison-player-1-selection-container {
 	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 	width: 100%;
 }
+/* Add some unique styling to the player 1 selection dropdown component. */ 
+#comparison-player-1-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	left: 0;
+}
+/* Style the player 2 selection container. */ 
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
 	width: 100%;
+}
+/* Add some unique styling to the player 2 selection dropdown component. */ 
+#comparison-player-2-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	float: right;
 }
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
@@ -1471,21 +1575,6 @@ div.cell {
 	padding: 3.5rem 0rem 0.3rem 0rem;
 	text-align: center;
 }
-/* Create an icon class to apply to all icons. */
-.comparison-icon {
-	height: 1.4rem;
-	width: auto;
-	padding-bottom: 0.2rem; /* Add space to the next icon below. */
-}
-/* Create a class to turn the icons white. */
-.comparison-icon.white {
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
-}
-/* Create a class to turn the icons red. */
-.comparison-icon.red {
-	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
-	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
-}
 /* Create two card shapes using CSS. */
 .card-icon {
 	border-radius: 2px;
@@ -1557,9 +1646,9 @@ Section 5
 			/* --headerHeight: 2.8rem; Define the header height variable. */
 			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 100%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1572,9 +1661,9 @@ Section 5
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1587,9 +1676,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -1602,9 +1691,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1224px) {
@@ -1617,9 +1706,9 @@ Section 5
 		html {
 			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1824px) {
@@ -1632,9 +1721,9 @@ Section 5
 		html {
 			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 85%;
-		}
+		} */
 	}
 	
 	/* Add a set up for media devices with preference for dark mode. */
