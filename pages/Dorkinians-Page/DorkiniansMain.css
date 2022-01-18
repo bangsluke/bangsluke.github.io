@@ -764,6 +764,7 @@ button > .selection-dropdown-arrow-icon {
 
 /* Create an icon class to apply to all icons across the site. */
 .stat-icon {
+	height: 20px; /* Fallback value. */
 	height: 1.4rem;
 	width: auto;
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
@@ -878,7 +879,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
