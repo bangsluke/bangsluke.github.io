@@ -697,8 +697,8 @@ function getPlayerDropdownInfo(results) {
     // Player Stats tab
     populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
     // Comparison Tab
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    //populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    //populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
 }
 
 
@@ -2088,7 +2088,11 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
-        let newOption = document.createElement("option"); // Create the new option element.
+        //let newOption = document.createElement("option"); // Create the new option element.
+
+        let newOption = document.createElement("div"); // Create the new option element.
+        newOption.classList.add("selection-dropdown-option"); // Add the textleft class to the new element.
+
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
