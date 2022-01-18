@@ -566,13 +566,15 @@
 
                                 <!-- Add a selection container to hold all of the elements needed for the drop down. -->
                                 <div class="selection-container" id="player-stats-selection-dropdown-container">
-                                    <button onclick="showDropdownList('player-stats-selection-dropdown', 'player-stats')"
+                                    <button
+                                        onclick="showDropdownList('player-stats-selection-dropdown', 'player-stats')"
                                         class="selection-dropdown-button" id="player-stats-selection-dropdown-button"
                                         value="Sam Slade">Sam Slade<img
                                             src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
                                             alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
                                             width="25px"></button>
-                                    <div class="selection-dropdown-content" id="player-stats-selection-dropdown-contents">
+                                    <div class="selection-dropdown-content"
+                                        id="player-stats-selection-dropdown-contents">
                                         <div class="selection-dropdown-content-header-section">
                                             <img src="/pages/Dorkinians-Page/images/Search Icon.png" alt="Search Icon"
                                                 class="selection-dropdown-search-icon" height="25px" width="25px">
@@ -596,7 +598,8 @@
 
                                 <div class="player-stats-selection-container">
 
-                                    <div class="selection-container" id="player-stats-this-season-stats-category-selection-container">
+                                    <div class="selection-container"
+                                        id="player-stats-this-season-stats-category-selection-container">
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
                                         <select name="player-stats-this-season-stats-category-selection"
                                             class="selection-dropdown"
@@ -623,16 +626,15 @@
                                         <h5 id="player-stats-this-season-stat-text-APP">App:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-APP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Appearance Icon.png" alt="APP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Minutes -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-M-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-M-container">
                                         <h5 id="player-stats-this-season-stat-text-M">M:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-M"></p>
                                         <img src="/pages/Dorkinians-Page/images/Minutes Icon.png" alt="Minutes Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- MoMs -->
@@ -641,61 +643,55 @@
                                         <h5 id="player-stats-this-season-stat-text-MOM">MOM:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-MOM"></p>
                                         <img src="/pages/Dorkinians-Page/images/MoM Icon.png" alt="MoM Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Goals -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-G-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-G-container">
                                         <h5 id="player-stats-this-season-stat-text-G">G:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-G"></p>
                                         <img src="/pages/Dorkinians-Page/images/Goals Icon.png" alt="Goals Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Assists -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-A-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-A-container">
                                         <h5 id="player-stats-this-season-stat-text-A">A:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-A"></p>
                                         <img src="/pages/Dorkinians-Page/images/Assist Icon.png" alt="Assist Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Yellow Cards -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-Y-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-Y-container">
                                         <h5 id="player-stats-this-season-stat-text-Y">Y:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-Y"></p>
                                         <!-- Create the yellow card icon using CSS. -->
-                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+                                        <div id="yellow-card" class="stat-icon center card-icon"></div>
                                     </div>
 
                                     <!-- Red Cards -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-R-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-R-container">
                                         <h5 id="player-stats-this-season-stat-text-R">R:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-R"></p>
                                         <!-- Create the red card icon using CSS. -->
-                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+                                        <div id="red-card" class="stat-icon center card-icon"></div>
                                     </div>
 
                                     <!-- Own Goals -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-OG-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-OG-container">
                                         <h5 id="player-stats-this-season-stat-text-OG">OG:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-OG"></p>
                                         <img src="/pages/Dorkinians-Page/images/Own Goal Icon.png" alt="OG Icon"
-                                            class="comparison-icon center" height="25px" width="25px">
+                                            class="stat-icon center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Conceded -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-C-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-C-container">
                                         <h5 id="player-stats-this-season-stat-text-C">C:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-C"></p>
                                         <img src="/pages/Dorkinians-Page/images/Conceded Icon.png" alt="Conceded Icon"
-                                            class="comparison-icon red center" height="25px" width="25px">
+                                            class="stat-icon red center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Clean Sheets -->
@@ -704,7 +700,7 @@
                                         <h5 id="player-stats-this-season-stat-text-CLS">CLS:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-CLS"></p>
                                         <img src="/pages/Dorkinians-Page/images/Clean Sheet Icon.png"
-                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            alt="Clean Sheet Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -714,17 +710,16 @@
                                         <h5 id="player-stats-this-season-stat-text-PSC">PSC:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-PSC"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Scored Icon.png"
-                                            alt="Penalties Scored Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Scored Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Penalties Missed -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-this-season-PM-container">
+                                    <div class="player-stats-stat-container" id="player-stats-this-season-PM-container">
                                         <h5 id="player-stats-this-season-stat-text-PM">PM:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-PM"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Missed Icon.png"
-                                            alt="Penalties Missed Icon" class="comparison-icon red center" height="25px"
+                                            alt="Penalties Missed Icon" class="stat-icon red center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -734,8 +729,8 @@
                                         <h5 id="player-stats-this-season-stat-text-PCO">PCO:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-PCO"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Conceded Icon.png"
-                                            alt="Penalties Conceded Icon" class="comparison-icon red center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Conceded Icon" class="stat-icon red center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Penalties Saved -->
@@ -744,8 +739,8 @@
                                         <h5 id="player-stats-this-season-stat-text-PSV">PSV:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-PSV"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Saved Icon.png"
-                                            alt="Penalties Saved Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Saved Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Fantasy Points -->
@@ -754,7 +749,7 @@
                                         <h5 id="player-stats-this-season-stat-text-FTP">FTP:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-FTP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Icon.png"
-                                            alt="Fantasy Points Icon" class="comparison-icon white center" height="25px"
+                                            alt="Fantasy Points Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -764,7 +759,7 @@
                                         <h5 id="player-stats-this-season-stat-text-GperAPP">GperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-GperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/GperApp Icon.png"
-                                            alt="Goals Per App Icon" class="comparison-icon white center" height="25px"
+                                            alt="Goals Per App Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -774,7 +769,7 @@
                                         <h5 id="player-stats-this-season-stat-text-CperAPP">CperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-CperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/CperApp Icon.png"
-                                            alt="Conceded Per App Icon" class="comparison-icon red center" height="25px"
+                                            alt="Conceded Per App Icon" class="stat-icon red center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -784,8 +779,8 @@
                                         <h5 id="player-stats-this-season-stat-text-MperG">MperG:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-MperG"></p>
                                         <img src="/pages/Dorkinians-Page/images/MperG Icon.png"
-                                            alt="Minutes Per Goal Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Minutes Per Goal Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Minutes Per Clean Sheet -->
@@ -794,7 +789,7 @@
                                         <h5 id="player-stats-this-season-stat-text-MperCLS">MperCLS:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-MperCLS"></p>
                                         <img src="/pages/Dorkinians-Page/images/Minutes Per Clean Sheet Icon.png"
-                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            alt="Minutes Per Clean Sheet Icon" class="stat-icon white center"
                                             height="25px" width="25px">
                                     </div>
 
@@ -804,8 +799,8 @@
                                         <h5 id="player-stats-this-season-stat-text-FTPperAPP">FTPperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-FTPperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Per Appearance Icon.png"
-                                            alt="Fantasy Points Per Appearance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            alt="Fantasy Points Per Appearance Icon" class="stat-icon white center"
+                                            height="25px" width="25px">
                                     </div>
 
                                     <!-- Distance Travelled -->
@@ -814,7 +809,7 @@
                                         <h5 id="player-stats-this-season-stat-text-DIST">DIST:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-DIST"></p>
                                         <img src="/pages/Dorkinians-Page/images/Distance Icon.png" alt="Distance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Game % Won -->
@@ -823,7 +818,7 @@
                                         <h5 id="player-stats-this-season-stat-text-Games%Won">Games%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-Games%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Game Percentage Won Icon.png"
-                                            alt="Game % Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Game % Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -833,7 +828,7 @@
                                         <h5 id="player-stats-this-season-stat-text-HomeGames">HomeGames:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-HomeGames"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Icon.png"
-                                            alt="Home Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -843,7 +838,7 @@
                                         <h5 id="player-stats-this-season-stat-text-HomeWins">HomeWins:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-HomeWins"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Won Icon.png"
-                                            alt="Home Games Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Games Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -853,8 +848,8 @@
                                         <h5 id="player-stats-this-season-stat-text-HomeGames%Won">HomeGames%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-HomeGames%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Percentage Icon.png"
-                                            alt="Home Game % Won Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Home Game % Won Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Away Games -->
@@ -863,7 +858,7 @@
                                         <h5 id="player-stats-this-season-stat-text-AwayGames">AwayGames:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-AwayGames"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Icon.png"
-                                            alt="Away Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -873,7 +868,7 @@
                                         <h5 id="player-stats-this-season-stat-text-AwayWins">AwayWins:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-AwayWins"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Won Icon.png"
-                                            alt="Away Games Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Games Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -883,8 +878,8 @@
                                         <h5 id="player-stats-this-season-stat-text-AwayGames%Won">AwayGames%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-this-season-AwayGames%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Percentage Icon.png"
-                                            alt="Away Game % Won Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Away Game % Won Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                 </div>
@@ -903,13 +898,13 @@
                             <!-- <th>Appearance -->
                             <!-- Add the icon for the appearance stat. -->
                             <!-- <img src="/pages/Dorkinians-Page/images/Appearance Icon.png"
-                                                alt="APP Icon" class="comparison-icon white center" height="25px"
+                                                alt="APP Icon" class="stat-icon white center" height="25px"
                                                 width="25px"> -->
                             <!-- </th> -->
                             <!-- <th>Minutes -->
                             <!-- Add the icon for the minutes stat. -->
                             <!-- <img src="/pages/Dorkinians-Page/images/Minutes Icon.png"
-                                                alt="Minutes Icon" class="comparison-icon white center" height="25px"
+                                                alt="Minutes Icon" class="stat-icon white center" height="25px"
                                                 width="25px"> -->
                             <!-- </th> -->
                             <!-- <th>Goals</th>
@@ -960,7 +955,8 @@
 
                                 <div class="player-stats-selection-container">
 
-                                    <div class="selection-container" id="player-stats-all-time-stats-category-selection-container">
+                                    <div class="selection-container"
+                                        id="player-stats-all-time-stats-category-selection-container">
                                         <!-- Add a drop down select box for the user to change the statistic category. -->
                                         <select name="player-stats-all-time-stats-category-selection"
                                             class="selection-dropdown"
@@ -975,150 +971,135 @@
                                             <option value="Results Stat">Results Stats</option>
                                         </select>
                                     </div>
-    
+
                                 </div>
 
                                 <!-- Add a container to hold the all time stats. -->
                                 <div class="player-stats-top-container" id="player-stats-all-time-top-container">
 
                                     <!-- Appearances -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-APP-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-APP-container">
                                         <h5 id="player-stats-all-time-stat-text-APP">App:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-APP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Appearance Icon.png" alt="APP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Minutes -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-M-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-M-container">
                                         <h5 id="player-stats-all-time-stat-text-M">M:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-M"></p>
                                         <img src="/pages/Dorkinians-Page/images/Minutes Icon.png" alt="Minutes Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- MoMs -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-MOM-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-MOM-container">
                                         <h5 id="player-stats-all-time-stat-text-MOM">MOM:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-MOM"></p>
                                         <img src="/pages/Dorkinians-Page/images/MoM Icon.png" alt="MoM Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Goals -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-G-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-G-container">
                                         <h5 id="player-stats-all-time-stat-text-G">G:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-G"></p>
                                         <img src="/pages/Dorkinians-Page/images/Goals Icon.png" alt="Goals Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Assists -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-A-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-A-container">
                                         <h5 id="player-stats-all-time-stat-text-A">A:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-A"></p>
                                         <img src="/pages/Dorkinians-Page/images/Assist Icon.png" alt="Assist Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Yellow Cards -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-Y-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-Y-container">
                                         <h5 id="player-stats-all-time-stat-text-Y">Y:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-Y"></p>
                                         <!-- Create the yellow card icon using CSS. -->
-                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+                                        <div id="yellow-card" class="stat-icon center card-icon"></div>
                                     </div>
 
                                     <!-- Red Cards -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-R-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-R-container">
                                         <h5 id="player-stats-all-time-stat-text-R">R:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-R"></p>
                                         <!-- Create the red card icon using CSS. -->
-                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+                                        <div id="red-card" class="stat-icon center card-icon"></div>
                                     </div>
 
                                     <!-- Own Goals -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-OG-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-OG-container">
                                         <h5 id="player-stats-all-time-stat-text-OG">OG:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-OG"></p>
                                         <img src="/pages/Dorkinians-Page/images/Own Goal Icon.png" alt="OG Icon"
-                                            class="comparison-icon center" height="25px" width="25px">
+                                            class="stat-icon center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Conceded -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-C-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-C-container">
                                         <h5 id="player-stats-all-time-stat-text-C">C:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-C"></p>
                                         <img src="/pages/Dorkinians-Page/images/Conceded Icon.png" alt="Conceded Icon"
-                                            class="comparison-icon red center" height="25px" width="25px">
+                                            class="stat-icon red center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Clean Sheets -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-CLS-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-CLS-container">
                                         <h5 id="player-stats-all-time-stat-text-CLS">CLS:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-CLS"></p>
                                         <img src="/pages/Dorkinians-Page/images/Clean Sheet Icon.png"
-                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            alt="Clean Sheet Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
                                     <!-- Penalties Scored -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-PSC-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-PSC-container">
                                         <h5 id="player-stats-all-time-stat-text-PSC">PSC:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-PSC"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Scored Icon.png"
-                                            alt="Penalties Scored Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Scored Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Penalties Missed -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-PM-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-PM-container">
                                         <h5 id="player-stats-all-time-stat-text-PM">PM:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-PM"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Missed Icon.png"
-                                            alt="Penalties Missed Icon" class="comparison-icon red center" height="25px"
+                                            alt="Penalties Missed Icon" class="stat-icon red center" height="25px"
                                             width="25px">
                                     </div>
 
                                     <!-- Penalties Conceded -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-PCO-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-PCO-container">
                                         <h5 id="player-stats-all-time-stat-text-PCO">PCO:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-PCO"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Conceded Icon.png"
-                                            alt="Penalties Conceded Icon" class="comparison-icon red center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Conceded Icon" class="stat-icon red center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Penalties Saved -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-PSV-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-PSV-container">
                                         <h5 id="player-stats-all-time-stat-text-PSV">PSV:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-PSV"></p>
                                         <img src="/pages/Dorkinians-Page/images/Penalties Saved Icon.png"
-                                            alt="Penalties Saved Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Saved Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Fantasy Points -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-FTP-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-FTP-container">
                                         <h5 id="player-stats-all-time-stat-text-FTP">FTP:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-FTP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Icon.png"
-                                            alt="Fantasy Points Icon" class="comparison-icon white center" height="25px"
+                                            alt="Fantasy Points Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1128,7 +1109,7 @@
                                         <h5 id="player-stats-all-time-stat-text-GperAPP">GperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-GperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/GperApp Icon.png"
-                                            alt="Goals Per App Icon" class="comparison-icon white center" height="25px"
+                                            alt="Goals Per App Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1138,18 +1119,17 @@
                                         <h5 id="player-stats-all-time-stat-text-CperAPP">CperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-CperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/CperApp Icon.png"
-                                            alt="Conceded Per App Icon" class="comparison-icon red center" height="25px"
+                                            alt="Conceded Per App Icon" class="stat-icon red center" height="25px"
                                             width="25px">
                                     </div>
 
                                     <!-- Minutes Per Goal -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-MperG-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-MperG-container">
                                         <h5 id="player-stats-all-time-stat-text-MperG">MperG:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-MperG"></p>
                                         <img src="/pages/Dorkinians-Page/images/MperG Icon.png"
-                                            alt="Minutes Per Goal Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Minutes Per Goal Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Minutes Per Clean Sheet -->
@@ -1158,7 +1138,7 @@
                                         <h5 id="player-stats-all-time-stat-text-MperCLS">MperCLS:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-MperCLS"></p>
                                         <img src="/pages/Dorkinians-Page/images/Minutes Per Clean Sheet Icon.png"
-                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            alt="Minutes Per Clean Sheet Icon" class="stat-icon white center"
                                             height="25px" width="25px">
                                     </div>
 
@@ -1168,17 +1148,16 @@
                                         <h5 id="player-stats-all-time-stat-text-FTPperAPP">FTPperAPP:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-FTPperAPP"></p>
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Per Appearance Icon.png"
-                                            alt="Fantasy Points Per Appearance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            alt="Fantasy Points Per Appearance Icon" class="stat-icon white center"
+                                            height="25px" width="25px">
                                     </div>
 
                                     <!-- Distance Travelled -->
-                                    <div class="player-stats-stat-container"
-                                        id="player-stats-all-time-DIST-container">
+                                    <div class="player-stats-stat-container" id="player-stats-all-time-DIST-container">
                                         <h5 id="player-stats-all-time-stat-text-DIST">DIST:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-DIST"></p>
                                         <img src="/pages/Dorkinians-Page/images/Distance Icon.png" alt="Distance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
                                     </div>
 
                                     <!-- Game % Won -->
@@ -1187,7 +1166,7 @@
                                         <h5 id="player-stats-all-time-stat-text-Games%Won">Games%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-Games%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Game Percentage Won Icon.png"
-                                            alt="Game % Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Game % Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1197,7 +1176,7 @@
                                         <h5 id="player-stats-all-time-stat-text-HomeGames">HomeGames:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-HomeGames"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Icon.png"
-                                            alt="Home Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1207,7 +1186,7 @@
                                         <h5 id="player-stats-all-time-stat-text-HomeWins">HomeWins:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-HomeWins"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Won Icon.png"
-                                            alt="Home Games Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Games Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1217,8 +1196,8 @@
                                         <h5 id="player-stats-all-time-stat-text-HomeGames%Won">HomeGames%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-HomeGames%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Home Games Percentage Icon.png"
-                                            alt="Home Game % Won Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Home Game % Won Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Away Games -->
@@ -1227,7 +1206,7 @@
                                         <h5 id="player-stats-all-time-stat-text-AwayGames">AwayGames:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-AwayGames"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Icon.png"
-                                            alt="Away Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1237,7 +1216,7 @@
                                         <h5 id="player-stats-all-time-stat-text-AwayWins">AwayWins:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-AwayWins"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Won Icon.png"
-                                            alt="Away Games Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Games Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
                                     </div>
 
@@ -1247,51 +1226,55 @@
                                         <h5 id="player-stats-all-time-stat-text-AwayGames%Won">AwayGames%Won:</h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-AwayGames%Won"></p>
                                         <img src="/pages/Dorkinians-Page/images/Away Games Percentage Icon.png"
-                                            alt="Away Game % Won Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Away Game % Won Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Most Played For Team -->
                                     <div class="player-stats-stat-container"
                                         id="player-stats-all-time-MostPlayedForTeam-container">
-                                        <h5 id="player-stats-all-time-stat-text-MostPlayedForTeam">MostPlayedForTeam:</h5>
+                                        <h5 id="player-stats-all-time-stat-text-MostPlayedForTeam">MostPlayedForTeam:
+                                        </h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-MostPlayedForTeam">
                                         </p>
                                         <img src="/pages/Dorkinians-Page/images/Most Played For Team Icon.png"
-                                            alt="Most Played For Team Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Most Played For Team Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Most Scored For Team -->
                                     <div class="player-stats-stat-container"
                                         id="player-stats-all-time-MostScoredForTeam-container">
-                                        <h5 id="player-stats-all-time-stat-text-MostScoredForTeam">MostScoredForTeam:</h5>
+                                        <h5 id="player-stats-all-time-stat-text-MostScoredForTeam">MostScoredForTeam:
+                                        </h5>
                                         <p class="yellowtext textright" id="player-stats-all-time-MostScoredForTeam">
                                         </p>
                                         <img src="/pages/Dorkinians-Page/images/Most Scored For Team Icon.png"
-                                            alt="Most Scored For Team Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Most Scored For Team Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
                                     </div>
 
                                     <!-- Number Teams Played For -->
                                     <div class="player-stats-stat-container"
                                         id="player-stats-all-time-NumberTeamsPlayedFor-container">
-                                        <h5 id="player-stats-all-time-stat-text-NumberTeamsPlayedFor">NumberTeamsPlayedFor:</h5>
-                                        <p class="yellowtext textright"
-                                            id="player-stats-all-time-NumberTeamsPlayedFor"></p>
+                                        <h5 id="player-stats-all-time-stat-text-NumberTeamsPlayedFor">
+                                            NumberTeamsPlayedFor:</h5>
+                                        <p class="yellowtext textright" id="player-stats-all-time-NumberTeamsPlayedFor">
+                                        </p>
                                         <img src="/pages/Dorkinians-Page/images/Number Teams Played For Icon.png"
-                                            alt="Number Teams Played For Icon" class="comparison-icon white center"
+                                            alt="Number Teams Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
                                     </div>
 
                                     <!-- Number Seasons Played For -->
                                     <div class="player-stats-stat-container"
                                         id="player-stats-all-time-NumberSeasonsPlayedFor-container">
-                                        <h5 id="player-stats-all-time-stat-text-NumberSeasonsPlayedFor">NumberSeasonsPlayedFor:</h5>
+                                        <h5 id="player-stats-all-time-stat-text-NumberSeasonsPlayedFor">
+                                            NumberSeasonsPlayedFor:</h5>
                                         <p class="yellowtext textright"
                                             id="player-stats-all-time-NumberSeasonsPlayedFor"></p>
                                         <img src="/pages/Dorkinians-Page/images/Number Seasons Played For Icon.png"
-                                            alt="Number Seasons Played For Icon" class="comparison-icon white center"
+                                            alt="Number Seasons Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
                                     </div>
 
@@ -1441,24 +1424,28 @@
 
                                 <!-- Add a clear transparent background overlays that are called and used in conjunction with other pop up menus. -->
                                 <div class="background-overlay background-overlay-clear"
-                                id="background-overlay-selection-dropdown-comparison" style="display: none"
-                                onclick="closeDropdownList()"></div>
+                                    id="background-overlay-selection-dropdown-comparison" style="display: none"
+                                    onclick="closeDropdownList()"></div>
 
                                 <!-- Add a div to hold the player dropdown. -->
                                 <div class="comparison-player-1-selection-container">
 
                                     <!-- Add a selection container to hold all of the elements needed for the drop down. -->
-                                    <div class="selection-container" id="comparison-player-1-selection-dropdown-container">
-                                        <button onclick="showDropdownList('comparison-player-1-selection-dropdown', 'comparison')"
-                                            class="selection-dropdown-button" id="comparison-player-1-selection-dropdown-button"
-                                            value="Sam Slade">Select Player 1<img
-                                                src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
-                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
-                                                width="25px"></button>
-                                        <div class="selection-dropdown-content" id="comparison-player-1-selection-dropdown-contents">
+                                    <div class="selection-container"
+                                        id="comparison-player-1-selection-dropdown-container">
+                                        <button
+                                            onclick="showDropdownList('comparison-player-1-selection-dropdown', 'comparison')"
+                                            class="selection-dropdown-button"
+                                            id="comparison-player-1-selection-dropdown-button" value="Sam Slade">Select
+                                            Player 1<img src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
+                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon"
+                                                height="25px" width="25px"></button>
+                                        <div class="selection-dropdown-content"
+                                            id="comparison-player-1-selection-dropdown-contents">
                                             <div class="selection-dropdown-content-header-section">
-                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png" alt="Search Icon"
-                                                    class="selection-dropdown-search-icon" height="25px" width="25px">
+                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png"
+                                                    alt="Search Icon" class="selection-dropdown-search-icon"
+                                                    height="25px" width="25px">
                                                 <input class="selection-dropdown-search-bar" type="text"
                                                     placeholder="Search.." id="comparison-player-1-selection-input"
                                                     onkeyup="filterDropdownList('comparison-player-1-selection-dropdown', 'comparison-player-1-selection-input')">
@@ -1476,17 +1463,21 @@
                                 <div class="comparison-player-2-selection-container">
 
                                     <!-- Add a selection container to hold all of the elements needed for the drop down. -->
-                                    <div class="selection-container" id="comparison-player-2-selection-dropdown-container">
-                                        <button onclick="showDropdownList('comparison-player-2-selection-dropdown', 'comparison')"
-                                            class="selection-dropdown-button" id="comparison-player-2-selection-dropdown-button"
-                                            value="Sam Slade">Select Player 2<img
-                                                src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
-                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon" height="25px"
-                                                width="25px"></button>
-                                        <div class="selection-dropdown-content" id="comparison-player-2-selection-dropdown-contents">
+                                    <div class="selection-container"
+                                        id="comparison-player-2-selection-dropdown-container">
+                                        <button
+                                            onclick="showDropdownList('comparison-player-2-selection-dropdown', 'comparison')"
+                                            class="selection-dropdown-button"
+                                            id="comparison-player-2-selection-dropdown-button" value="Sam Slade">Select
+                                            Player 2<img src="/pages/Dorkinians-Page/images/Down Arrow Icon.png"
+                                                alt="Down Arrow Icon" class="selection-dropdown-arrow-icon"
+                                                height="25px" width="25px"></button>
+                                        <div class="selection-dropdown-content"
+                                            id="comparison-player-2-selection-dropdown-contents">
                                             <div class="selection-dropdown-content-header-section">
-                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png" alt="Search Icon"
-                                                    class="selection-dropdown-search-icon" height="25px" width="25px">
+                                                <img src="/pages/Dorkinians-Page/images/Search Icon.png"
+                                                    alt="Search Icon" class="selection-dropdown-search-icon"
+                                                    height="25px" width="25px">
                                                 <input class="selection-dropdown-search-bar" type="text"
                                                     placeholder="Search.." id="comparison-player-2-selection-input"
                                                     onkeyup="filterDropdownList('comparison-player-2-selection-dropdown', 'comparison-player-2-selection-input')">
@@ -1547,7 +1538,7 @@
 
                                         <!-- Add the icon for the appearance stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Appearance Icon.png" alt="APP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-APP-player-2-value"> </div>
@@ -1578,7 +1569,7 @@
 
                                         <!-- Add the icon for the minutes stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Minutes Icon.png" alt="Minutes Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-M-player-2-value"> </div>
@@ -1607,7 +1598,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/MoM Icon.png" alt="MoM Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MOM-player-2-value"> </div>
@@ -1636,7 +1627,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Goals Icon.png" alt="Goals Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-G-player-2-value"> </div>
@@ -1665,7 +1656,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Assist Icon.png" alt="Assist Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-A-player-2-value"> </div>
@@ -1694,7 +1685,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <!-- Create the yellow card icon using CSS. -->
-                                        <div id="yellow-card" class="comparison-icon center card-icon"></div>
+                                        <div id="yellow-card" class="stat-icon center card-icon"></div>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-Y-player-2-value"> </div>
@@ -1723,7 +1714,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <!-- Create the red card icon using CSS. -->
-                                        <div id="red-card" class="comparison-icon center card-icon"></div>
+                                        <div id="red-card" class="stat-icon center card-icon"></div>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-R-player-2-value"> </div>
@@ -1752,7 +1743,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Own Goal Icon.png" alt="OG Icon"
-                                            class="comparison-icon center" height="25px" width="25px">
+                                            class="stat-icon center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-OG-player-2-value"> </div>
@@ -1781,7 +1772,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Conceded Icon.png" alt="Conceded Icon"
-                                            class="comparison-icon red center" height="25px" width="25px">
+                                            class="stat-icon red center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-C-player-2-value"> </div>
@@ -1810,7 +1801,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Clean Sheet Icon.png"
-                                            alt="Clean Sheet Icon" class="comparison-icon white center" height="25px"
+                                            alt="Clean Sheet Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -1840,8 +1831,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Penalties Scored Icon.png"
-                                            alt="Penalties Scored Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Scored Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PSC-player-2-value"> </div>
@@ -1870,7 +1861,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Penalties Missed Icon.png"
-                                            alt="Penalties Missed Icon" class="comparison-icon red center" height="25px"
+                                            alt="Penalties Missed Icon" class="stat-icon red center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -1900,8 +1891,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Penalties Conceded Icon.png"
-                                            alt="Penalties Conceded Icon" class="comparison-icon red center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Conceded Icon" class="stat-icon red center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PCO-player-2-value"> </div>
@@ -1930,8 +1921,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Penalties Saved Icon.png"
-                                            alt="Penalties Saved Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Penalties Saved Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PSV-player-2-value"> </div>
@@ -1960,7 +1951,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Icon.png"
-                                            alt="Fantasy Points Icon" class="comparison-icon white center" height="25px"
+                                            alt="Fantasy Points Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -1991,7 +1982,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/GperApp Icon.png" alt="GperAPP Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-GperAPP-player-2-value"> </div>
@@ -2022,7 +2013,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/CperApp Icon.png" alt="CperAPP Icon"
-                                            class="comparison-icon red center" height="25px" width="25px">
+                                            class="stat-icon red center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CperAPP-player-2-value"> </div>
@@ -2053,7 +2044,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/MperG Icon.png" alt="MperG Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MperG-player-2-value"> </div>
@@ -2084,7 +2075,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Minutes Per Clean Sheet Icon.png"
-                                            alt="Minutes Per Clean Sheet Icon" class="comparison-icon white center"
+                                            alt="Minutes Per Clean Sheet Icon" class="stat-icon white center"
                                             height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2117,8 +2108,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Fantasy Points Per Appearance Icon.png"
-                                            alt="Fantasy Points Per Appearance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            alt="Fantasy Points Per Appearance Icon" class="stat-icon white center"
+                                            height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-FTPperAPP-player-2-value"> </div>
@@ -2148,7 +2139,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Distance Icon.png" alt="Distance Icon"
-                                            class="comparison-icon white center" height="25px" width="25px">
+                                            class="stat-icon white center" height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-DIST-player-2-value"> </div>
@@ -2180,7 +2171,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Games Percentage Won Icon.png"
-                                            alt="Games % Won Icon" class="comparison-icon white center" height="25px"
+                                            alt="Games % Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2213,7 +2204,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Home Games Icon.png"
-                                            alt="Home Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2246,7 +2237,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Home Games Won Icon.png"
-                                            alt="Home Wins Icon" class="comparison-icon white center" height="25px"
+                                            alt="Home Wins Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2279,8 +2270,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Home Games Percentage Icon.png"
-                                            alt="Home Games Win % Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Home Games Win % Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-HomeGames%Won-player-2-value"> </div>
@@ -2312,7 +2303,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Away Games Icon.png"
-                                            alt="Away Games Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2345,7 +2336,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Away Games Won Icon.png"
-                                            alt="Away Wins Icon" class="comparison-icon white center" height="25px"
+                                            alt="Away Wins Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2378,8 +2369,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Away Games Percentage Icon.png"
-                                            alt="Away Games Win % Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Away Games Win % Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-AwayGames%Won-player-2-value"> </div>
@@ -2412,8 +2403,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Most Played For Team Icon.png"
-                                            alt="Most Played For Team Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Most Played For Team Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MostPlayedForTeam-player-2-value">
@@ -2447,8 +2438,8 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Most Scored For Team Icon.png"
-                                            alt="Most Scored For Team Icon" class="comparison-icon white center"
-                                            height="25px" width="25px">
+                                            alt="Most Scored For Team Icon" class="stat-icon white center" height="25px"
+                                            width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MostScoredForTeam-player-2-value">
@@ -2482,7 +2473,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Number Teams Played For Icon.png"
-                                            alt="Number Teams Played For Icon" class="comparison-icon white center"
+                                            alt="Number Teams Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
@@ -2517,7 +2508,7 @@
 
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Number Seasons Played For Icon.png"
-                                            alt="Number Seasons Played For Icon" class="comparison-icon white center"
+                                            alt="Number Seasons Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
