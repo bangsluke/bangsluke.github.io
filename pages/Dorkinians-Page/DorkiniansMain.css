@@ -1274,6 +1274,9 @@ Section 4
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
 	overflow-x: scroll; /* Always show the x scroll bar. */
 }
+#homepage-next-fixtures-team-container::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
 #homepage-next-fixtures-team-container p {
 	/* color: red; */
 	font-size: 0.8rem;
