@@ -86,6 +86,7 @@ Section 1
 	--dropdown-component-background: #CBECD5; /* Background of dropdown matches IOS inbuilt dropdown component. */
 	--dropdown-component-accent: #9DCAAB; /* Accent of dropdown matches IOS inbuilt dropdown component. */
 	--dropdown-component-border-radius: 14px; /* Corner radius of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-header-height: 2.5rem; /* The height of the header section of the custom built dropdown component. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -608,17 +609,15 @@ button > .selection-dropdown-arrow-icon {
   	right: 0; 
   	margin-left: auto; 
   	margin-right: auto; 
-  	/*width: 40%; /* Need a specific value to work */
 	width: fit-content;
-	width: 14rem;
-	/* max-width: 80%; */
+	width: 14rem; /* Need a specific value to work */
 	height: 15rem;
 	min-height: 4rem;
 	max-height: 20rem;
 	border: none;
 	border-radius: var(--component-border-radius, 0.2rem);
 	border-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
-	overflow-y: scroll;
+	overflow-y: none; /* Disable vertical scroll in the main container. */
 }
 /* Style the hover over links. */
 .selection-dropdown-content option:hover {
@@ -629,16 +628,17 @@ button > .selection-dropdown-arrow-icon {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
 	/* background-color: violet; */
-	position: fixed;
-	position: relative;
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
 	border-bottom: 0.1rem solid var(--secondary-accent-colour, white); /* Add a border along the bottom. */
 	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
+	position: sticky; /* Sticky acts as static and becomes fixed when the top becomes 0. https://blog.webdevsimplified.com/2022-01/css-position/?fromNewsletter=true */ 
 	top: 0;
 	left: 0;
 	width: 13.5rem;
-	height: 2.2rem;
-	min-height: 2.5rem;
+	height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	min-height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	border-top-left-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	border-top-right-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
 }
 /* Style the small search icon. */
 .selection-dropdown-search-icon {
@@ -667,10 +667,8 @@ button > .selection-dropdown-arrow-icon {
 	position: relative;
 	width: fit-content;
 	width: 14rem;
-	height: 15rem;
-	min-height: 4rem;
-	max-height: 20rem;
-	z-index: inherit; /* selection-dropdown-content-option-section */
+	height: calc(100% - var(--dropdown-component-header-height, 2.5rem) - 5%); /* Make the height of the content to be the full height of the component minus the header height and a small offset to stop the lines overlapping the border radii. */;
+	overflow-y: scroll; /* Enable vertical scroll in the options container. */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
 /* .selection-dropdown-content-option-section > .selection-dropdown-option { */
@@ -1349,7 +1347,7 @@ Section 4
 	position: relative;
 	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
 	display: grid;
-	grid-template-columns: 70% 15% 15%; /* First value is the text, second the stat value, last the image. */
+	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 	margin: 0 auto;
