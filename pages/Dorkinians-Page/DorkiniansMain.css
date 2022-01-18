@@ -764,6 +764,7 @@ button > .selection-dropdown-arrow-icon {
 
 /* Create an icon class to apply to all icons across the site. */
 .stat-icon {
+	height: 20px; /* Fallback value. */
 	height: 1.4rem;
 	width: auto;
 	padding-bottom: 0.2rem; /* Add space to the next icon below. */
@@ -878,7 +879,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1273,6 +1274,9 @@ Section 4
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
 	overflow-x: scroll; /* Always show the x scroll bar. */
+}
+#homepage-next-fixtures-team-container::-webkit-scrollbar:horizontal {
+    height: 5px;
 }
 #homepage-next-fixtures-team-container p {
 	/* color: red; */
