@@ -33,7 +33,7 @@ const newLocal = `
 
                 <!-- Add the Dorkinians logo. -->
                 <img class="logo fadein center" id="side-menu-dorkinians-logo"
-                src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Yellow Logo - No Background.png"
                 alt="Dorkinians Logo" width="80" height="80" onclick="init()">
 
             </div>
@@ -87,7 +87,7 @@ const newLocal = `
 
                         <!-- Add the change theme item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Theme Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
+                            <img src="/pages/Dorkinians-Page/images/Theme Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
@@ -95,7 +95,7 @@ const newLocal = `
 
                         <!-- Add the text size change action item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
+                            <img src="/pages/Dorkinians-Page/images/Text Size Icon.png" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
                         </div>
                         <div class="side-menu-text-container side-menu-action-button-container">
                             <h4>Change Text Size</h4>
@@ -108,8 +108,8 @@ const newLocal = `
                         </div>
 
                         <!-- Add the change height item. -->
-                        <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Height Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Height Change Icon" onclick="changePageHeight()">
+                        <!--<div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Height Change Icon.png" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Height Change Icon" onclick="changePageHeight()">
                         </div>
                         <div class="side-menu-text-container side-menu-action-button-container">
                             <h4 id="side-menu-actions-change-height-text" onclick="changePageHeight()">Change Page Height</h4>
@@ -119,11 +119,11 @@ const newLocal = `
                             <button class="side-menu-button" id="side-menu-button-change-height-decrement" onclick="decreasePageHeight(-1)">
                                 -
                             </button>
-                        </div>
+                        </div> -->
 
                         <!-- Add the full reset item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/assets/images/Icons/Reset Page Icon.png" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
+                            <img src="/pages/Dorkinians-Page/images/Reset Page Icon.png" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 id="side-menu-actions-change-height-text" onclick="resetActionVariables()">Reset Page</h4>
@@ -143,7 +143,7 @@ const newLocal = `
                         <!-- Add a link to the Dorkinians homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
-                                <img src="/pages/Dorkinians-Page/assets/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.png" class="side-menu-icon" alt="Dorkinians Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.png" class="side-menu-icon" alt="Dorkinians Logo Icon">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
@@ -155,7 +155,7 @@ const newLocal = `
                         <!-- Add a link to the FA homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
-                                <img src="/pages/Dorkinians-Page/assets/images/Icons/The FA Logo Icon.png" class="side-menu-icon" alt="The FA Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.png" class="side-menu-icon" alt="The FA Logo Icon">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
@@ -213,7 +213,7 @@ class sideMenu extends HTMLElement {
         // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');
         styleSheet.setAttribute('rel', 'stylesheet');
-        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/assets/components/SideMenu/SideMenuComponent.css');
+        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/SideMenuComponent.css');
         shadowRoot.appendChild(styleSheet);
 
         // Attach the created elements to the shadow DOM
@@ -293,6 +293,7 @@ function changeSiteTheme() {
         document.documentElement.style.setProperty('--main-accent-colour', '#FF3CAC');
         document.documentElement.style.setProperty('--main-accent-colour-rgb', '255, 60, 172');
         document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF85');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#222129');
 
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Light Theme";
@@ -311,6 +312,7 @@ function changeSiteTheme() {
         document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
         document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
         document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#236f38');
 
         // Change the text of the element holding the change site theme text.
         themeTextElement.innerHTML = "Change to Dark Theme";
@@ -362,39 +364,39 @@ function decreaseFontSize() {
 }
 
 // Change the height of the snap tabs bar to fit the screen.
-function changePageHeight(delta) {
-    console.log("changePageHeight clicked. Page height changed by " + delta + "px."); // Log that the function has been called.
+// function changePageHeight(delta) {
+//     console.log("changePageHeight clicked. Page height changed by " + delta + "px."); // Log that the function has been called.
 
-    let pageHeight = getComputedStyle(document.documentElement).getPropertyValue('--ChromeSafari-bottom-bar-height'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
-    pageHeight = parseInt(pageHeight.replace("px", "")); // Remove the pixels from the returned string.
-    
-    console.log('pageHeight before is = ' + pageHeight); // Log the page height value before the function has been run.
+//     let pageHeight = getComputedStyle(document.documentElement).getPropertyValue('--ChromeSafari-bottom-bar-height'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
+//     pageHeight = parseInt(pageHeight.replace("px", "")); // Remove the pixels from the returned string.
 
-    if (delta == 1) {
-        // Increment the page height  to be larger.
-        if (pageHeight < pageHeightMax) { // Only increment the page height if it is less than the max. 
-            pageHeight += delta;
-        }
-    } else {
-        // Decrement the page height to be smaller.
-        if (pageHeight > pageHeightMin) { // Only dedcrement the page height if it is larger than the min. 
-            pageHeight += delta;
-        }
-    }
-    console.log('pageHeight after is = ' + pageHeight); // Log the page height value after the function has been run.
+//     console.log('pageHeight before is = ' + pageHeight); // Log the page height value before the function has been run.
 
-    // Append the pixels to the new value.
-    pageHeight = pageHeight + "px";
+//     if (delta == 1) {
+//         // Increment the page height  to be larger.
+//         if (pageHeight < pageHeightMax) { // Only increment the page height if it is less than the max. 
+//             pageHeight += delta;
+//         }
+//     } else {
+//         // Decrement the page height to be smaller.
+//         if (pageHeight > pageHeightMin) { // Only dedcrement the page height if it is larger than the min. 
+//             pageHeight += delta;
+//         }
+//     }
+//     console.log('pageHeight after is = ' + pageHeight); // Log the page height value after the function has been run.
 
-    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
-    document.documentElement.style.setProperty('--ChromeSafari-bottom-bar-height', pageHeight);
-}
-function increasePageHeight() {
-    changePageHeight(-5);
-}
-function decreasePageHeight() {
-    changePageHeight(5);
-}
+//     // Append the pixels to the new value.
+//     pageHeight = pageHeight + "px";
+
+//     // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+//     document.documentElement.style.setProperty('--ChromeSafari-bottom-bar-height', pageHeight);
+// }
+// function increasePageHeight() {
+//     changePageHeight(-5);
+// }
+// function decreasePageHeight() {
+//     changePageHeight(5);
+// }
 
 // Reset all prveiously modified variables.
 function resetActionVariables() {

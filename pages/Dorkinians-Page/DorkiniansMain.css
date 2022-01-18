@@ -39,8 +39,10 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
+	/* --main-accent-colour: #3bee0e; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
+	--tooltip-background-colour: #236f38;
 
 	/* Light Theme Colours Used */
 	/* --main-background-colour: #1C8841; Main Dorkinians green.
@@ -59,13 +61,32 @@ Section 1
 	--secondary-accent-colour: #ffffff85; */
 
 	/* Distances & Spacing */
-	--headerHeight: 4rem; /* Define the header height variable. */
+	--headerHeight: 3.2rem; /* Define the header height variable. */
 	--footerHeight: 3.75rem; /* Define the footer height variable. */
 	--pagewidth: 95%; /* Used for controlling the width of items on each page */
-	--border-radius: 0.5rem;
+	--section-border-radius: 0.5rem; /* Used for the border radii on the sections and large components. */
+	--component-border-radius: 0.2rem; /* Used for the border radii on the sections and large components. */
 
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
+	--component-font-size: 12px; /* Define the font size used in components. */
+	
+	/* Snap Tabs */
+	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
+	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
+    --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
+    --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
+    /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
+    --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
+	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
+
+	/* Dropdown Component */
+	--dropdown-component-background: #CBECD5; /* Background of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-accent: #9DCAAB; /* Accent of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-border-radius: 14px; /* Corner radius of dropdown matches IOS inbuilt dropdown component. */
+	--dropdown-component-header-height: 2.5rem; /* The height of the header section of the custom built dropdown component. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -124,12 +145,13 @@ body {
 
 /* Page section styling. Add a lighter opacity rounded edges container. */
 .page-section {
-	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
-	margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	/*margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	/*margin-bottom: 3rem; /* Add an offset below each page section to sit it above the snap tabs selection bar. */
+	
 	top: 0rem;
 	left: 0rem;
 	width: var(--pagewidth, 98%);
-    margin: 1rem auto 2rem auto; /* Add a margin above and below each section. */
+	margin: 1rem auto; /* Add a small margin above and below each section and horizontally center the section. */
 	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
 	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
@@ -143,8 +165,9 @@ body {
     border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);
 	/* background-color: rgba(var(--page-section-color-rgba), 0.9); */
-    backdrop-filter: blur( 20px );
-	-webkit-backdrop-filter: blur( 20px );
+    
+	/* backdrop-filter: blur( 20px ); */
+	/* -webkit-backdrop-filter: blur( 20px ); */
 }
 
 /* Sub page sections - multiple sections per tab. */
@@ -154,14 +177,25 @@ section {
 
 /* Add a background overlay for closing other menus. */
 .background-overlay {
-    background: rgba(0, 0, 0, 0.50);
-    position: fixed;
+    /* background: rgba(0, 0, 0, 0.50); */
+    position: fixed; /* The position has to be set for zindex to work. */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: block;
-	z-index: 2;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 5; /* background-overlay */
+}
+/* Add a clear background class overlay. */
+.background-overlay-clear {
+	background: rgba(0, 0, 0, 0.0);
+}
+/* Add a dark background class overlay. */
+.background-overlay-dark {
+	background: rgba(0, 0, 0, 0.50);
 }
 
 
@@ -176,8 +210,7 @@ Section 2
 
 /* All Text */
 h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
-	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	font-family: inherit;
+	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
 }
 /* Font Families */
 /* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
@@ -261,7 +294,7 @@ table {
 	text-align: center;
 	border: none;
 	border-collapse: collapse;
-	border-radius: var(--border-radius, 0.2rem);
+	border-radius: var(--component-border-radius, 0.2rem);
 	cursor: pointer; /* Turn the cusor into a pointer when over the table. */
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.7rem; /* Relative to root (html) value. */
@@ -329,7 +362,7 @@ td, th {
 	height: 10000px;
 	/* height: 100%; */
 	width: 100%;
-	z-index: -1;
+	z-index: -1; /* column-highlight */
 }
 /* Add table column lines. */
 .table-column-lines {
@@ -339,16 +372,16 @@ td, th {
 }
 /* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */
 tr:first-child th:first-child {
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:first-child th:last-child {
-	border-top-right-radius: var(--border-radius, 0.2rem);
+	border-top-right-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:first-child {
-	border-bottom-left-radius: var(--border-radius, 0.2rem);
+	border-bottom-left-radius: var(--component-border-radius, 0.2rem);
 }
 tr:last-child td:last-child {
-	border-bottom-right-radius: var(--border-radius, 0.2rem);
+	border-bottom-right-radius: var(--component-border-radius, 0.2rem);
 }
 /* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
 .table-wrapper {
@@ -363,15 +396,15 @@ tr:last-child td:last-child {
 	background-color: var(--main-background-colour,green);
 	position: -webkit-sticky;
 	position: sticky;
-	z-index: 1;
+	z-index: 1;  /* sticky-col */
 }
 .first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
 	width: max-content;
 	left: 0rem;
 }
 .first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
-	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
-	border-top-left-radius: var(--border-radius, 0.2rem);
+	z-index: 2; /* first-cell. Keep the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
+	border-top-left-radius: var(--component-border-radius, 0.2rem);
 }
 
 
@@ -425,7 +458,7 @@ tr:last-child td:last-child {
 /* Tooltip text */
 .icon-tooltip .icon-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: max-content;
@@ -434,10 +467,10 @@ tr:last-child td:last-child {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
-	z-index: 1;
+	z-index: 1; /* icon-tooltip */
   	bottom: 110%; /* Position above the container div. */
 
 	right: 0%;
@@ -461,7 +494,7 @@ tr:last-child td:last-child {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .icon-tooltip-text {
@@ -475,12 +508,39 @@ tr:last-child td:last-child {
 
 /* 3. Dropdown styling */
 
-/* Add a class for all common selection container styling. */
+/* Add a top holder class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
+	position: relative; /* The position has to be set for zindex to work. */
+	margin: auto;
+	height: max-content;
 }
+
+/* Common styling for new and old dropdown components. */
+select {
+	background-color: rgba(255, 255, 255, 0.10);
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+/* Note that option is only used for old dropdown component and isn't compatible with the new dropdown component on mobile. */
+option {
+	color: black; /* The font colour of the text. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+.selection-container option {
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: red; */
+	color: black;
+}
+select > option:hover, select > option:focus {
+	background-color: orange; /* Background of dropdown matches iOS inbuilt dropdown component. */
+}
+
+
+/* Old Dropdown Components - using the built in dropdown component. */
+
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
 	background-color: rgba(255, 255, 255, 0.10);
@@ -488,16 +548,143 @@ tr:last-child td:last-child {
 	border: none;
 	text-align: center;
 	width: 20%;
-	min-width: 8rem;
+	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
-	font-size: 0.8rem; /* Relative to root (html) value. */
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
+	border-radius: var(--component-border-radius, 0.2rem);
 }
-/* Style the dropdown menu that appears for the user to click on. */
-option {
-	color: black; /* The font colour of the text. */ 
-	background-color: var(--secondary-accent-colour, white); /* The background colour behind the text. */ 
+.selection-dropdown:hover, .selection-dropdown:focus {
+	border: 2px solid var(--main-accent-colour, yellow);
+}
+
+/* New Dropdown Component - using the custom built dropdown component. */
+
+/* Add a class for the button for all common selection dropdown styling. */
+/* Style the dropdown button. */
+.selection-dropdown-button {
+	background-color: rgba(255, 255, 255, 0.10);
+	color: var(--secondary-accent-colour, white);
+	border: none;
+	text-align: center;
+	width: 20%;
+	min-width: 9rem;
+	height: 1.5rem;
+	margin: auto;
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
+	border-radius: var(--component-border-radius, 0.2rem);
+}
+/* Dropdown button on hover & focus */
+.selection-dropdown-button:hover, .selection-dropdown-button:focus {
+	background-color: rgba(255, 255, 255, 0.20);
+	border: 2px solid var(--main-accent-colour, yellow);
+}
+/* Style the dropdown button downwards arrow. */
+button > .selection-dropdown-arrow-icon {
+	display: inline; /* Set the down arrow to be displayed alongside the text. */
+}
+/* Style the small white downwards arrow. */
+.selection-dropdown-arrow-icon {
+	height: 0.6rem;
+	width: 0.6rem;
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.2rem;
+}
+
+/* Style the content once the button is clicked. */
+/* Dropdown Content (Hidden by Default) */
+.selection-dropdown-content {
+	background-color: var(--main-background-colour, green);
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: #490bf3; */
+	display: none;
+	position: absolute;
+	left: 0; 
+  	right: 0; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+	width: fit-content;
+	width: 14rem; /* Need a specific value to work */
+	height: 15rem;
+	min-height: 4rem;
+	max-height: 20rem;
+	border: none;
+	border-radius: var(--component-border-radius, 0.2rem);
+	border-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	overflow-y: none; /* Disable vertical scroll in the main container. */
+}
+/* Style the hover over links. */
+.selection-dropdown-content option:hover {
+	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
+}
+/* Style the header section of the dropdown content which holds the search icon and input text. */
+.selection-dropdown-content-header-section {
+	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: violet; */
+	padding: 0.5rem; /* Add padding within the search header section for spacing. */
+	border-bottom: 0.1rem solid var(--secondary-accent-colour, white); /* Add a border along the bottom. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
+	position: sticky; /* Sticky acts as static and becomes fixed when the top becomes 0. https://blog.webdevsimplified.com/2022-01/css-position/?fromNewsletter=true */ 
+	top: 0;
+	left: 0;
+	width: 13.5rem;
+	height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	min-height: var(--dropdown-component-header-height, 2.5rem); /* Set the height to be equal to the global variable. */
+	border-top-left-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+	border-top-right-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
+}
+/* Style the small search icon. */
+.selection-dropdown-search-icon {
+	height: 1rem;
+	width: auto;
+	/*filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	position: relative;
+	margin-right: 0.2rem; /* Add a small margin to the right to push the icon away from the text field. */
+	top: 0.2rem; /* Offset the height of the icon slightly to vertically align it with the text field. */
+}
+/* The search field */
+.selection-dropdown-search-bar {
+	width: 80%;
+	position: relative;
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	padding: 0.2rem; /* Add some padding inside the search text field to make space. */
+}
+/* The search field when it gets focus/clicked on */
+.selection-dropdown-search-bar:focus {
+	outline: 3px solid var(--main-accent-colour, yellow);
+}
+
+/* Style the options section of the dropdown content which holds all of the loaded in options. */
+.selection-dropdown-content-option-section {
+	/* background-color: #ce641d; */
+	position: relative;
+	width: fit-content;
+	width: 14rem;
+	height: calc(100% - var(--dropdown-component-header-height, 2.5rem) - 5%); /* Make the height of the content to be the full height of the component minus the header height and a small offset to stop the lines overlapping the border radii. */;
+	overflow-y: scroll; /* Enable vertical scroll in the options container. */
+}
+/* Style the dropdown menu items that appears when the user has clicked. */
+/* .selection-dropdown-content-option-section > .selection-dropdown-option { */
+.selection-dropdown-option {
+	/*color: white; /* The font colour of the text. */
+	color: black; /* The font colour of the text. */
+	position: static;
+	margin: auto;
+	padding: 0.5rem;
+	width: fit-content;
+	width: 14rem;
+	height: 1.8rem;
+	min-height: 1rem;
+	max-height: 1.8rem;
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+	border-bottom: 1px solid var(--dropdown-component-accent, black); /* Add a border along the bottom. */
 }
 
 
@@ -527,7 +714,7 @@ option {
 /* Tooltip text */
 .stats-tooltip .stats-tooltip-text {
 	/* background-color: blue; */
-	background-color: var(--page-dark-grey-colour, grey);
+	background-color: var(--tooltip-background-colour, grey);
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: 90%;
@@ -536,10 +723,10 @@ option {
 	/* min-width: 150%; */
 	/* overflow: visible; */
 	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
-	z-index: 1;
+	z-index: 1; /* stats-tooltip */
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
@@ -561,7 +748,7 @@ option {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: var(--page-dark-grey-colour, grey) transparent transparent transparent;
+	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
 }
 /* Style the text within the tooltip. */
 .stats-tooltip-text {
@@ -569,6 +756,26 @@ option {
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
+}
+
+
+
+/* 6. Icon Styling */
+
+/* Create an icon class to apply to all icons across the site. */
+.stat-icon {
+	height: 1.4rem;
+	width: auto;
+	padding-bottom: 0.2rem; /* Add space to the next icon below. */
+}
+/* Create a class to turn the icons white. */
+.stat-icon.white {
+	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+}
+/* Create a class to turn the icons red. */
+.stat-icon.red {
+	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
+	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
 }
 
 
@@ -581,13 +788,21 @@ Section 3
 
 /* Everything below initially designed for mobile. */
 
+header {
+	background-color: var(--main-background-colour, green);
+	height: var(--headerHeight);
+	position: fixed;
+	z-index: 5; /* Header. Position the header right at the front of most items. */
+}
 /* Header Section */
 .header-area {
 	/* background-color: violet; */
+	position: fixed;
+	width: 100%;
 	display: grid; 
 	grid-template-columns: 4rem 1fr 4rem; 
 	grid-template-rows: var(--headerHeight, 2.5rem); /* Fallback if needed. */
-	grid-template-rows: calc(var(--headerHeight) - 0.9rem); /* Make the header a decent height. */
+	grid-template-rows: var(--headerHeight); /* Make the header a decent height. */
 	gap: 0 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "Logo Title Options";
@@ -600,7 +815,8 @@ Section 3
 	padding: 0.3rem;
 }
 .logo {
-	height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
+	height: 2.5rem; /* Fallback if needed. */
+	height: calc(var(--headerHeight) - 0.7rem); /* Make the burger icon just smaller than the header height. */
 	width: auto;
 }
 /* Style the central title section. */
@@ -620,8 +836,8 @@ Section 3
     /* filter: invert(1) hue-rotate(180deg); */
     top: 0rem;
     left: 0rem;
-    height: 2.7rem; /* Fallback if needed. */
-    height: calc(var(--headerHeight) - 1.5rem); /* Make the burger icon just smaller than the header height. */
+    height: 2.5rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.7rem); /* Make the burger icon just smaller than the header height. */
     width: auto;
     display: block;
     font-size: 2.5rem;
@@ -662,7 +878,7 @@ Section 3
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -672,7 +888,7 @@ Section 3
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	z-index: 1;
+	z-index: 100; /* loading-page */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 0.3fr 1fr 0.2fr 0.4fr 1fr;
@@ -732,6 +948,205 @@ Section 3
 
 
 
+
+
+/* Snap tabs styling */
+/* The css styling used for SnapTabs. https://web.dev/building-a-tabs-component/. */
+
+.snap-tabs-container {
+    /* background-color: green; */
+	position: fixed;
+    left: 0rem;
+    padding-top: 0rem;
+    width: 100%;
+	
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    top: var(--headerHeight, 3.2rem); /* Offset the snap-tabs-container below the fixed header. */
+	height: calc(100% - var(--headerHeight, 3.2rem)); /* Make the height of the snap-tabs-container the full screen height minus the fixed header. */
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+    /* top: 0rem; */
+	/*height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Calculate the height of the snap-tabs-container as the viewport height, minus the fixed header height and minus the Chrome/Safari browser bar height (estimated). */
+    /*min-height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Same calculation as above. */
+    
+    /* Below is copied from body above. */
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    /* font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; */
+    z-index: 2; /* snap-tabs-container */
+    overflow: hidden;
+}
+/* Original (but modified) Snap Tabs CSS Styling. */
+/* Specific snap-tabs styling with elements not used elsewhere on site. */
+snap-tabs {
+    --accent: var(--snap-tabs-hue) 100% 54%;
+    --accent-reduced: var(--snap-tabs-hue) 90% 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+#snap-tabs-header-section {
+	top: var(--headerHeight, 3.2rem);
+    height: var(--snap-tab-header-height, 2.5rem);
+	z-index: 5; /* snap-tabs-header-section. Position the snap tabs header right at the front of most items. */
+	
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-x: scroll; 	
+}
+#snap-tabs-header-section::-webkit-scrollbar {
+	/* Hide the scrollbars within this section. https://blog.hubspot.com/website/hide-scrollbar-css */
+	display: none; /* for Chrome, Safari, and Opera */
+}
+snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+#snap-tabs-main-section {
+    position: relative;
+
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    padding-top: var(--snap-tab-header-height, 3rem); /* Position the main content of the snap tabs below the snap tabs header. */
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+}
+/* Add a section with class .scroll-snap-x. */
+.scroll-snap-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+section.scroll-snap-x {
+	padding-bottom: 0rem; /* Remove normal section bottom padding for this one snap tab case. */
+}
+@media (prefers-reduced-motion:no-preference) {
+    .scroll-snap-x {
+        scroll-behavior: smooth;
+    }
+}
+@media (hover:none) {
+    .scroll-snap-x {
+        scrollbar-width: none;
+    }
+    .scroll-snap-x::-webkit-scrollbar {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+snap-tabs>section>article {
+    /* background-color: blue; */
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    /* padding: var(--vertical-space) var(--horizontal-space); */
+    padding: 0rem 0rem; /* Control the padding around the anchor hyperlink text. */
+}
+article {
+    color: var(--secondary-accent-colour, white);
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+/* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
+snap-tabs>snap-tabs-header {
+    --text-active-color: var(--main-accent-colour, yellow);
+    background-color: var(--main-background-colour, green);
+	
+    /* Add the below if positioning snap-tabs at the top of the page. */
+    border-bottom: 0.125rem solid var(--main-accent-colour, yellow);
+
+    /* Add the below if positioning snap-tabs at the bottom of the page. */
+    /* top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
+    /* border-top: 0.125rem solid var(--main-accent-colour, yellow); */
+
+    position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
+    left: 0rem; /* Force the header section to the left. */
+    width: 100vw; /* Set the width to be the full viewport width. */
+    flex-shrink: 0;
+    min-block-size: -webkit-fit-content;
+    min-block-size: -moz-fit-content;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+snap-tabs>snap-tabs-header>nav {
+    display: flex;
+}
+/* Format the hyperlinks within the snap tabs header section. */
+snap-tabs>snap-tabs-header a {
+    --text-color: var(--secondary-accent-colour, white); /* Need the variable --text-color as needed in the JavaScript. */
+	/*--text-color: var(--accent-color-2, white); /* Need the variable --text-color as needed in the JavaScript. */
+	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1rem; /* Make the snap-tabs-header hyperlinks larger than normal hyperlinks. */
+    text-decoration: none;
+    padding: var(--vertical-space) var(--horizontal-space);
+}
+/* Format the hyperlinks on hover within the snap tabs header section. */
+snap-tabs>snap-tabs-header a:hover {
+    background: hsl(var(--accent)/10%);
+    font-size: inherit;
+}
+/* Format the hyperlinks on focus within the snap tabs header section. */
+snap-tabs>snap-tabs-header a:focus {
+    outline-offset: -.5ch;
+	border-left: 0.125rem solid var(--main-accent-colour, yellow);
+	border-right: 0.125rem solid var(--main-accent-colour, yellow);
+}
+/* The snap-indicator is the underline of the header text that appears on mobile. */
+snap-tabs>snap-tabs-header>.snap-indicator {
+    /* background: hsl(var(--accent)); */
+	background: var(--main-accent-colour, yellow);
+    inline-size: 0rem;
+    block-size: var(--indicator-size);
+	/* block-size: 3rem; */
+    border-radius: var(--indicator-size);
+	/* z-index: 5; */
+}
+@media (prefers-reduced-motion:reduce) {
+    snap-tabs .snap-indicator {
+        visibility: hidden;
+    }
+}
+snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    outline-color: hsl(var(--accent));
+    outline-offset: -0.3rem;
+}
+h2 {
+    /* font-size: 1.5rem; */
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1;
+}
+h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+}
+p {
+    max-inline-size: 35ch;
+    margin-block: .5ch;
+}
+p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem;
+}
+
+
+
 /* Pop Up Box */
 
 #pop-up-box {
@@ -739,7 +1154,6 @@ Section 3
 	/* Change the below property on/off to hide/show the pop up box. */
 	/* display: none !important; */
 
-	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background: var(--main-background-colour, green);
 	
 	/* Set the position of the box to be bang in the center of the screen. */
@@ -747,7 +1161,7 @@ Section 3
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 30; /* Have the pop up in front of all other items on the page. */
+	z-index: 30; /* pop-up-box. Have the pop up in front of all other items on the page. */
 
 	/* Control and set the size of the box based on the content. */
 	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
@@ -757,7 +1171,7 @@ Section 3
 	
 	/* Style the pop up box. */
 	border: 0.125rem solid var(--secondary-accent-colour, white);
-	border-radius: var(--border-radius, 2rem);
+	border-radius: var(--section-border-radius, 2rem);
 	padding: 0.7rem; /* Add internal padding to the pop up box. */
 }
 /* The x close button. */
@@ -803,6 +1217,32 @@ Section 3
 
 
 
+/* Scroll Bar Styling - https://www.digitalocean.com/community/tutorials/css-scrollbars */
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.50) rgba(255, 255, 255, 0.10);
+	/* scrollbar-color: blue orange; */
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.10);
+	/* background: orange; */
+	border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+	/* background-color: blue; */
+	background-color: rgba(255, 255, 255, 0.50);
+	border-radius: 20px;
+	/* border: 3px solid orange; */
+}
+
+
+
 /* Footer Section */
 
 
@@ -832,7 +1272,7 @@ Section 4
 	align-items: center; /* Align the cells in the grid vertically central to the row. */
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
-	overflow-x: scroll;
+	overflow-x: scroll; /* Always show the x scroll bar. */
 }
 #homepage-next-fixtures-team-container p {
 	/* color: red; */
@@ -910,32 +1350,57 @@ Section 4
 
 /* 3. Player Stats Tab */
 
-/* This Season Stats */
-#player-stats-this-season-top-container {
+/* Common Tab Styling */
+.player-stats-top-container {
 	/* background-color: greenyellow; */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: 1fr;
 	gap: 0rem 0rem; /* First value is between rows, second columns. */
+}
+.player-stats-stat-container {
+	/* background-color: violet; */
+	position: relative;
+	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
+	display: grid;
+	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
+	grid-template-rows: 1fr;
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+	margin: 0 auto;
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-stat-container div {
+	margin-left: 0.6rem;
+}
+.player-stats-stat-container h5 {
+	/* background-color: red; */
+	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
+	text-align: right;
+	white-space: nowrap;
+}
+.player-stats-stat-container img {
+	/* background-color: blue; */
+	margin-left: 0.4rem;
+}
 
+/* This Season Stats */
+#player-stats-this-season-top-container {
+	/* background-color: greenyellow;	 */
 }
 .player-stats-this-season-stat-container {
 	/* background-color: violet; */
-	display: grid; 
-	grid-template-columns: 55% 10% 35%; 
-	grid-template-rows: 1fr;
-	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+}
+/* Add a class just for the divs that hold the yellow and red cards. */
+.player-stats-this-season-stat-container div {
+	/* background-color: rgb(132, 130, 238); */
 }
 .player-stats-this-season-stat-container h5 {
-	margin-top: 0.2rem; /* Force a vertical alignment of the h5 text. */
-	text-align: right;
+	/* background-color: red; */
 }
 .player-stats-this-season-stat-container img {
-	margin-left: 0.4rem;
+	/* background-color: blue; */
 }
-.player-stats-this-season-stat-container div {
-	margin-left: 0.4rem;
-}
+
 
 /* Past Season Stats */
 #player-stats-past-seasons-table {
@@ -943,7 +1408,9 @@ Section 4
 }
 
 /* All Time Stats */
-
+#player-stats-all-time-top-container {
+	/* background-color: lightblue; */
+}
 
 
 /* 4. Team of the Week Tab */
@@ -979,6 +1446,7 @@ Section 4
 
 /* 5. Comparison Tab */
 
+/* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
 	display: grid;
@@ -991,17 +1459,35 @@ Section 4
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
 }
+/* Style the player 1 selection container. */ 
 .comparison-player-1-selection-container {
 	/* background-color: blue; */
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 	width: 100%;
 }
+/* Add some unique styling to the player 1 selection dropdown component. */ 
+#comparison-player-1-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	left: 0;
+}
+/* Style the player 2 selection container. */ 
 .comparison-player-2-selection-container {
 	/* background-color: green; */
 	grid-area: PlayerSelection2;
 	padding: 0.3rem;
 	width: 100%;
+}
+/* Add some unique styling to the player 2 selection dropdown component. */ 
+#comparison-player-2-selection-dropdown-contents {
+	/* background-color: red; */
+	/* width: 14rem; */
+	position: relative;
+	min-width: 13rem !important;
+	float: right;
 }
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
@@ -1089,21 +1575,6 @@ div.cell {
 	padding: 3.5rem 0rem 0.3rem 0rem;
 	text-align: center;
 }
-/* Create an icon class to apply to all icons. */
-.comparison-icon {
-	height: 1.4rem;
-	width: auto;
-	padding-bottom: 0.2rem; /* Add space to the next icon below. */
-}
-/* Create a class to turn the icons white. */
-.comparison-icon.white {
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
-}
-/* Create a class to turn the icons red. */
-.comparison-icon.red {
-	filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
-	-webkit-filter: invert(19%) sepia(94%) saturate(7013%) hue-rotate(358deg) brightness(97%) contrast(113%); /* Ensure the icon is red. https://stackoverflow.com/a/50942954/14290169. */
-}
 /* Create two card shapes using CSS. */
 .card-icon {
 	border-radius: 2px;
@@ -1175,9 +1646,9 @@ Section 5
 			/* --headerHeight: 2.8rem; Define the header height variable. */
 			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 100%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1190,9 +1661,9 @@ Section 5
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1205,9 +1676,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 95%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -1220,9 +1691,9 @@ Section 5
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1224px) {
@@ -1235,9 +1706,9 @@ Section 5
 		html {
 			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 90%;
-		}
+		} */
 	}
 	
 	@media only screen and (min-width: 1824px) {
@@ -1250,9 +1721,9 @@ Section 5
 		html {
 			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		.comparison-stats-table {
+		/* .comparison-stats-table {
 			width: 85%;
-		}
+		} */
 	}
 	
 	/* Add a set up for media devices with preference for dark mode. */
