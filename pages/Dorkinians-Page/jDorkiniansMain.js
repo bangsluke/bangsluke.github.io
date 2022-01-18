@@ -2088,10 +2088,10 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
-        //let newOption = document.createElement("option"); // Create the new option element.
+        let newOption = document.createElement("option"); // Create the new option element.
 
-        let newOption = document.createElement("div"); // Create the new option element.
-        newOption.classList.add("selection-dropdown-option"); // Add the textleft class to the new element.
+        // let newOption = document.createElement("div"); // Create the new option element.
+        // newOption.classList.add("selection-dropdown-option"); // Add the textleft class to the new element.
 
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
