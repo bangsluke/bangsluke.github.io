@@ -42,7 +42,7 @@ var phrasesArray = [
     "Calculating the likelihood of Shano scoring an 'unmissable' chance...",
     "Forgetting Oakley's 'assist' in the last game...",
     "Adding up the sheer quantity of Peck's goals...",
-    "Going into overdrive counting all of Alex Will's yellow cards...",
+    "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
     "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
