@@ -34,8 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 1;
-// const numberReadyComponents = 7;
+const numberReadyComponents = 8;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -421,7 +420,7 @@ function init() {
     console.log('%c' + '> Dorkinians page DOM content loaded.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Provide an initial load message.
 
     // Step 0.
-    // console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+    console.log('%c' + '> 0. init() called. Code started for each of the three sub processes.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Close the side menu if open.
     closeNav();
@@ -456,12 +455,12 @@ function init() {
     console.log('%c' + '> 0. Side Menu data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Side Menu data.
-    // Papa.parse(siteDetailsSheetURLCSV, {
-    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: getSideMenuInfo, // The callback to execute when parsing is complete.
-    // })
+    Papa.parse(siteDetailsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getSideMenuInfo, // The callback to execute when parsing is complete.
+    })
 
     // Drop Down Options.
     console.log('%c' + '> 0. Drop down data being loaded in.', 'background-color: darkblue; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -480,12 +479,12 @@ function init() {
     console.log('%c' + '> 1. Hompage tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Next Fixtures data.
-    // Papa.parse(nextFixturesSheetURLCSV, {
-    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
-    // })
+    Papa.parse(nextFixturesSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
+    })
 
     // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
 
@@ -501,20 +500,20 @@ function init() {
     console.log('%c' + '> 2. Club Stats tab data being loaded in.', 'background-color: #1C8841; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
     // Total Club/Team Stats Info
-    // Papa.parse(totalClubStatsSheetURLCSV, {
+    Papa.parse(totalClubStatsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete.
+    })
+
+    // Team Season Results Info
+    // Papa.parse(teamSeasonResultsSheetURLCSV, {
     //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
     //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
     //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete.
+    //     complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
     // })
-
-    // Team Season Results Info
-    //// Papa.parse(teamSeasonResultsSheetURLCSV, {
-    ////     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    ////     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    ////     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    ////     complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
-    //// })
 
     // Update the information bar.
     displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
@@ -528,20 +527,20 @@ function init() {
     prefillPlayerStatsTab();
 
     // This Season Stats Info
-    // Papa.parse(displayThisSeasonStatsSheetCSV, {
-    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete.
-    // })
+    Papa.parse(displayThisSeasonStatsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete.
+    })
 
     // All Time Stats Info
-    // Papa.parse(displayAllTimeStatsSheetCSV, {
-    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-    //     complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete.
-    // })
+    Papa.parse(displayAllTimeStatsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete.
+    })
 
     // Update the information bar.
     displayInformation("player-stats-information-bar", "Select a player to view their stats. Or just marvel at Slado's achievements...");
@@ -683,8 +682,6 @@ function showSideMenuInfo(results) {
 
 // 0.3. Player Dropdown data "getter" function.
 function getPlayerDropdownInfo(results) {
-    alert("getPlayerDropdownInfo complete");
-    
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
@@ -697,8 +694,11 @@ function getPlayerDropdownInfo(results) {
     // Player Stats tab
     populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
     // Comparison Tab
-    //populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
-    //populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Dropdowns populated");
 }
 
 
@@ -2081,18 +2081,12 @@ function displayInformation(informationBarID, displayMessage) {
 
 // 1. Populate the dropdown with Player names.
 function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
-    console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
-    
-    // console.log("playerNameArray:");
-    // console.log(playerNameArray);
+    //console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
-        let newOption = document.createElement("option"); // Create the new option element.
-
-        // let newOption = document.createElement("div"); // Create the new option element.
-        // newOption.classList.add("selection-dropdown-option"); // Add the textleft class to the new element.
-
+        let newOption = document.createElement("div"); // Create the new option element (but as a div as option doesn't work on mobile).
+        newOption.classList.add("selection-dropdown-option"); // Add the selection-dropdown-option class to the new element.
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
@@ -2106,8 +2100,6 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
         let parentElement = document.getElementById(dropdownOptionContainerParentID); // Get the parent dropdown element.
         parentElement.appendChild(newOption); // Append the new element to the parent dropdown element.
     }
-
-    alert(dropdownID + " fully populated.");
 }
 
 // 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
@@ -2126,8 +2118,6 @@ function showDropdownList(dropdownID, tabName) {
     document.getElementById('background-overlay-selection-dropdown-' + tabName).onclick = function () {
         closeDropdownList(dropdownID, tabName);
     }
-
-    alert(dropdownID + " opened.");
 }
 
 // 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
@@ -2148,7 +2138,7 @@ function filterDropdownList(dropdownID, inputID) {
 
 // 4. Close the dropdown list and the background overlay associated with it.
 function closeDropdownList(dropdownID, tabName) {
-    console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
+    //console.log("closeDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been closed.
     document.getElementById(dropdownID + '-contents').style.display = "none"; // Hide the selection dropdown content.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }
