@@ -69,6 +69,7 @@ Section 1
 
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
+	--component-font-size: 12px; /* Define the font size used in components. */
 	
 	/* Snap Tabs */
 	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
@@ -79,8 +80,11 @@ Section 1
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
     /* --snap-tabs-hue: 328deg; */ /* Previously pink colour for Group Page. */
     --snap-tabs-hue: 70deg; /* Changed to be yellow for bottom nav bar underlining. */
-
 	--snap-tabs-hue: 20deg; /* Changed to be yellow for bottom nav bar underlining. */
+
+	/* Dropdown Component */
+	--dropdown-component-background: #CBECD5; /* Background of dropdown matches iOS inbuilt dropdown component. */
+	--dropdown-component-border-radius: 20px; /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
 }
 
 /* HTML updates to cover the full webpage. */
@@ -503,21 +507,34 @@ tr:last-child td:last-child {
 
 /* 3. Dropdown styling */
 
-/* Common styling for new and old dropdown components. */
-/* Note that option is only used for old dropdown component and isn't compatible with the new dropdown component on mobile. */
-option {
-	color: black; /* The font colour of the text. */ 
-}
 /* Add a top holder class for all common selection container styling. */
 .selection-container {
 	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
 	position: relative; /* The position has to be set for zindex to work. */
-	/* display: inline-block; */
 	margin: auto;
 	height: max-content;
-	/* z-index: 5; /* selection-container */
+}
+
+/* Common styling for new and old dropdown components. */
+select {
+	background-color: rgba(255, 255, 255, 0.10);
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+/* Note that option is only used for old dropdown component and isn't compatible with the new dropdown component on mobile. */
+option {
+	color: black; /* The font colour of the text. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
+}
+.selection-container option {
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
+	/* background-color: red; */
+	color: black;
+}
+select > option:hover, select > option:focus {
+	background-color: orange; /* Background of dropdown matches iOS inbuilt dropdown component. */
 }
 
 
@@ -533,15 +550,19 @@ option {
 	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
-	font-size: 0.8rem; /* Relative to root (html) value. */
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 	border-radius: var(--component-border-radius, 0.2rem);
 }
-
+.selection-dropdown:hover, .selection-dropdown:focus {
+	border: 2px solid var(--main-accent-colour, yellow);
+}
 
 /* New Dropdown Component - using the custom built dropdown component. */
 
 /* Add a class for the button for all common selection dropdown styling. */
+/* Style the dropdown button. */
 .selection-dropdown-button {
 	background-color: rgba(255, 255, 255, 0.10);
 	color: var(--secondary-accent-colour, white);
@@ -551,14 +572,15 @@ option {
 	min-width: 9rem;
 	height: 1.5rem;
 	margin: auto;
-	font-size: 0.8rem; /* Relative to root (html) value. */
+	/* font-size: 0.8rem; /* Relative to root (html) value. */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 	cursor: pointer; /* Turn the cusor into a pointer when over the dropdown. */
 	border-radius: var(--component-border-radius, 0.2rem);
 }
-/* Style the dropdown button. */
 /* Dropdown button on hover & focus */
 .selection-dropdown-button:hover, .selection-dropdown-button:focus {
 	background-color: rgba(255, 255, 255, 0.20);
+	border: 2px solid var(--main-accent-colour, yellow);
 }
 /* Style the dropdown button downwards arrow. */
 button > .selection-dropdown-arrow-icon {
@@ -578,6 +600,7 @@ button > .selection-dropdown-arrow-icon {
 /* Dropdown Content (Hidden by Default) */
 .selection-dropdown-content {
 	background-color: var(--main-background-colour, green);
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
 	/* background-color: #490bf3; */
 	display: none;
 	position: absolute;
@@ -592,16 +615,11 @@ button > .selection-dropdown-arrow-icon {
 	height: 15rem;
 	min-height: 4rem;
 	max-height: 20rem;
-	border: 1px solid #ddd;
-	/* border: 1px solid #FF0000; */
+	border: none;
 	border-radius: var(--component-border-radius, 0.2rem);
+	border-radius: var(--dropdown-component-border-radius, 0.2rem); /* Corner radius of dropdown matches iOS inbuilt dropdown component. */
 	overflow-y: scroll;
-	/*z-index: 10 /* selection-dropdown-content */
 }
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-/* .show-dropdown-option {
-	display: block;
-} */
 /* Style the hover over links. */
 .selection-dropdown-content option:hover {
 	background-color: rgba(255, 255, 255, 0.10); /* Change color of dropdown links on hover. */
@@ -609,36 +627,32 @@ button > .selection-dropdown-arrow-icon {
 /* Style the header section of the dropdown content which holds the search icon and input text. */
 .selection-dropdown-content-header-section {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	background-color: var(--dropdown-component-background, green); /* Background of dropdown matches iOS inbuilt dropdown component. */
 	/* background-color: violet; */
 	position: fixed;
 	position: relative;
-	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
 	padding: 0.5rem; /* Add padding within the search header section for spacing. */
-	border-bottom: 0.1rem solid var(--secondary-accent-colour, white);
-	/* width: 50%; */
-	/* width: fit-content; */
+	border-bottom: 0.1rem solid var(--secondary-accent-colour, white); /* Add a border along the bottom. */
+	border-bottom: 0.1rem solid black; /* Add a border along the bottom. */
 	top: 0;
 	left: 0;
 	width: 13.5rem;
 	height: 2.2rem;
 	min-height: 2rem;
-	/* z-index: inherit; /* selection-dropdown-content-header-section */
 }
 /* Style the small white search icon. */
 .selection-dropdown-search-icon {
 	height: 0.8rem;
-	width: 0.9rem;
-	filter: brightness(0) invert(1); /* Ensure the icon is white. */
+	width: 0.8rem;
+	/*filter: brightness(0) invert(1); /* Ensure the icon is white. */
 	margin-right: 0.2rem;
 	position: relative;
-	z-index: inherit; /* selection-dropdown-search-icon */
 }
 /* The search field */
 .selection-dropdown-search-bar {
 	width: 80%;
 	position: relative;
-	/* position: fixed; */
-	z-index: inherit; /* selection-dropdown-search-bar */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 }
 /* The search field when it gets focus/clicked on */
 .selection-dropdown-search-bar:focus {
@@ -651,7 +665,6 @@ button > .selection-dropdown-arrow-icon {
 	position: relative;
 	width: fit-content;
 	width: 14rem;
-	/* max-width: 80%; */
 	height: 15rem;
 	min-height: 4rem;
 	max-height: 20rem;
@@ -660,19 +673,17 @@ button > .selection-dropdown-arrow-icon {
 /* Style the dropdown menu items that appears when the user has clicked. */
 /* .selection-dropdown-content-option-section > .selection-dropdown-option { */
 .selection-dropdown-option {
-	color: white; /* The font colour of the text. */ 
-	/* background-color: red; */
-	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
+	/*color: white; /* The font colour of the text. */
+	color: black; /* The font colour of the text. */
 	position: static;
 	margin: auto;
 	padding: 0.5rem;
 	width: fit-content;
 	width: 14rem;
-	/* max-width: 80%; */
 	height: 1.8rem;
 	min-height: 1rem;
 	max-height: 1.8rem;
-	z-index: inherit; /* selection-dropdown-content-header-section > option */
+	font-size: var(--component-font-size, 12px); /* Set the font size to be consistent for all components. */
 }
 
 
@@ -850,7 +861,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;

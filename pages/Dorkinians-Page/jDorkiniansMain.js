@@ -447,7 +447,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -2104,7 +2104,7 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
 
 // 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID, tabName) {
-    console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
+    //console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
     
     // Make the selection dropdown content visible.
     document.getElementById(dropdownID + '-contents').style.display = "block"; // Show the selection dropdown contents.
@@ -2122,16 +2122,17 @@ function showDropdownList(dropdownID, tabName) {
 
 // 3. Filter the results if the user types. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function filterDropdownList(dropdownID, inputID) {
-    let input = document.getElementById(inputID);
-    let filter = input.value.toUpperCase();
-    let div = document.getElementById(dropdownID);
-    let option = div.getElementsByTagName("option");
-    for (i = 0; i < option.length; i++) {
+    // console.log("filterDropdownList clicked for dropdownID: " + dropdownID); // Log that the dropdown is being filtered.
+    let input = document.getElementById(inputID); // Get the input field.
+    let filter = input.value.toUpperCase(); // Get the input value.
+    let containerDiv = document.getElementById(dropdownID); // Get the container div holding the options.
+    let option = containerDiv.getElementsByClassName("selection-dropdown-option"); // Get the options by looking for elements with the selection-dropdown-option class. 
+    for (i = 0; i < option.length; i++) { // Loop through the array of options.
         txtValue = option[i].textContent || option[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            option[i].style.display = "";
+            option[i].style.display = ""; // Display options that do match the input.
         } else {
-            option[i].style.display = "none";
+            option[i].style.display = "none"; // Don't display options that don't match the input.
         }
     }
 }
