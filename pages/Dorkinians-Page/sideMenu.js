@@ -213,7 +213,7 @@ class sideMenu extends HTMLElement {
         // Apply external styles to the shadow DOM
         const styleSheet = document.createElement('link');
         styleSheet.setAttribute('rel', 'stylesheet');
-        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/SideMenuComponent.css');
+        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/SideMenuComponent.min.css');
         shadowRoot.appendChild(styleSheet);
 
         // Attach the created elements to the shadow DOM
