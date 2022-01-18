@@ -1030,15 +1030,13 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter down the entire array to find the players data.
-
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
-    // Re-use the re-usable function..
+    // Filter down the entire array to find the players data. Re-use the re-usable function...
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
     // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
     // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
@@ -1130,15 +1128,13 @@ function showPlayerStatsAllTimeTabInfo(results) {
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter down the entire array to find the players data.
-
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
-    // Re-use the re-usable function..
+    // Filter down the entire array to find the players data. Re-use the re-usable function...
+    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     const filteredArrayOfObjects = filterArrayOfObjects(dataArrayOfObjects, "NAME", playerValue); // Call the created filterArrayOfObjects function.
     // console.log("filteredArrayOfObjects = "); // Log the filtered array of objects.
     // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
@@ -1149,8 +1145,8 @@ function showPlayerStatsAllTimeTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    console.log("filteredArrayOfObjects[0] = ");
-    console.log(filteredArrayOfObjects[0]);
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
 
     // Stat Category selection.
     const statCategoryValueDropdown = document.getElementById("player-stats-all-time-stats-category-selection"); // Get the stat category selected dropdown.
@@ -1284,12 +1280,10 @@ function updateComparisonStatData() {
     // Reset all stats bars on the Comparison tab.
     resetStatsBars();
 
-    let player1NameDropdown = document.getElementById("comparison-player-1-dropdown"); // Get the player 1 dropdown.
-    let player1NameValue = player1NameDropdown.options[player1NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    // Player selection.
+    let player1NameValue = document.getElementById("comparison-player-1-selection-dropdown-button").value; // Get the player 1 selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player 1 (player1NameValue) = " + player1NameValue);
-
-    let player2NameDropdown = document.getElementById("comparison-player-2-dropdown"); // Get the player 2 dropdown.
-    let player2NameValue = player2NameDropdown.options[player2NameDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
+    let player2NameValue = document.getElementById("comparison-player-2-selection-dropdown-button").value; // Get the player 2 selected. (https://stackoverflow.com/a/8549358/14290169).
     // console.log("Selected player 2 (player2NameValue) = " + player2NameValue);
 
     // Define an array of stats from the Global statObject.
@@ -2066,19 +2060,27 @@ function displayInformation(informationBarID, displayMessage) {
 
 // 1. Populate the dropdown with Player names.
 function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
-    //console.log("Function populateDropdownList called with dropdownID: " + dropdownID); // Log that the function has been called.
+    // console.log("Function populateDropdownList called with dropdownID: " + dropdownID + ", from tab: " + tabName); // Log that the function has been called.
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
         let newOption = document.createElement("div"); // Create the new option element (but as a div as option doesn't work on mobile).
         newOption.classList.add("selection-dropdown-option"); // Add the selection-dropdown-option class to the new element.
         newOption.classList.add("textleft"); // Add the textleft class to the new element.
+        // Function used for onclick of all dropdown options.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
             document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(dropdownID, tabName); // Close the dropdown list.
-            showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+            // Call the next function on the basis of what tab the dropdown is from.
+            if (tabName == "player-stats"){
+                showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
+            } else if (tabName == "comparison"){
+                updateComparisonStatData(); // Update the Comparison Tab.
+            } else {
+                alert(dropdownID + " dropdown called from an unknown tab location?"); // Add a catch.
+            }
         };
         let playerNameText = document.createTextNode(playerNameArray[i]); // Create a text node of the players name.
         newOption.appendChild(playerNameText); // Append the text node to the new element.
