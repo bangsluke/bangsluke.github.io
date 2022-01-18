@@ -39,7 +39,7 @@ Section 1
 	--secondary-background-colour: #31a057;
 	--third-background-colour: #236f38;
 	--main-accent-colour: #F9ED32;
-	--main-accent-colour: #3bee0e;
+	/* --main-accent-colour: #3bee0e; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
 	--tooltip-background-colour: #236f38;
@@ -504,12 +504,13 @@ tr:last-child td:last-child {
 /* 3. Dropdown styling */
 
 /* Common styling for new and old dropdown components. */
+/* Note that option is only used for old dropdown component and isn't compatible with the new dropdown component on mobile. */
 option {
 	color: black; /* The font colour of the text. */ 
 }
 /* Add a top holder class for all common selection container styling. */
 .selection-container {
-	background-color: yellowgreen;
+	/* background-color: yellowgreen; */
 	padding-bottom: 1rem;
 	text-align: center;
 	position: relative; /* The position has to be set for zindex to work. */
@@ -520,7 +521,7 @@ option {
 }
 
 
-/* Old Dropdown - using the built in dropdown component. */
+/* Old Dropdown Components - using the built in dropdown component. */
 
 /* Add a class for all common selection dropdown styling. */
 .selection-dropdown {
@@ -538,7 +539,7 @@ option {
 }
 
 
-/* New Dropdown - using the custom built dropdown component. */
+/* New Dropdown Component - using the custom built dropdown component. */
 
 /* Add a class for the button for all common selection dropdown styling. */
 .selection-dropdown-button {
@@ -577,7 +578,7 @@ button > .selection-dropdown-arrow-icon {
 /* Dropdown Content (Hidden by Default) */
 .selection-dropdown-content {
 	background-color: var(--main-background-colour, green);
-	background-color: #490bf3;
+	/* background-color: #490bf3; */
 	display: none;
 	position: absolute;
 	left: 0; 
@@ -608,7 +609,7 @@ button > .selection-dropdown-arrow-icon {
 /* Style the header section of the dropdown content which holds the search icon and input text. */
 .selection-dropdown-content-header-section {
 	background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	background-color: violet;
+	/* background-color: violet; */
 	position: fixed;
 	position: relative;
 	/*display: inline; /* Set the search icon to be displayed alongside the search bar. */
@@ -636,6 +637,7 @@ button > .selection-dropdown-arrow-icon {
 .selection-dropdown-search-bar {
 	width: 80%;
 	position: relative;
+	/* position: fixed; */
 	z-index: inherit; /* selection-dropdown-search-bar */
 }
 /* The search field when it gets focus/clicked on */
@@ -656,25 +658,10 @@ button > .selection-dropdown-arrow-icon {
 	z-index: inherit; /* selection-dropdown-content-option-section */
 }
 /* Style the dropdown menu items that appears when the user has clicked. */
-.selection-dropdown-content-option-section > option {
+/* .selection-dropdown-content-option-section > .selection-dropdown-option { */
+.selection-dropdown-option {
 	color: white; /* The font colour of the text. */ 
-	background-color: red;
-	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
-	position: static;
-	margin: auto;
-	padding: 0.5rem;
-	width: fit-content;
-	width: 14rem;
-	/* max-width: 80%; */
-	height: 1.8rem;
-	min-height: 1rem;
-	max-height: 1.8rem;
-	z-index: inherit; /* selection-dropdown-content-header-section > option */
-}
-/* Style the dropdown menu items that appears when the user has clicked. */
-.selection-dropdown-content-option-section > .selection-dropdown-option {
-	color: white; /* The font colour of the text. */ 
-	background-color: red;
+	/* background-color: red; */
 	/*background-color: var(--main-background-colour, green); /* The background colour behind the text. */
 	position: static;
 	margin: auto;
