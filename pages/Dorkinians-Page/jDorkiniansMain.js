@@ -689,7 +689,7 @@ function getPlayerDropdownInfo(results) {
     displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
-    
+
     // Populate the various dropdown components with player names.
     // Player Stats tab
     populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
@@ -960,7 +960,7 @@ function prefillPlayerStatsTab() {
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
             try {
                 // Dynamically add the stat text and a tool tip to every stat container div, assigning the stat description from the Global Stat Object.
-                
+
                 // Stat Text
                 // console.log("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]);
                 document.getElementById("player-stats-" + playerStatsSectionArray[i] + "-stat-text-" + statsArray[j]).innerHTML = statObject[statsArray[j]].displayText; // Update the stat text element dynamically.
@@ -1034,16 +1034,8 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-
-    //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    console.log("Selected player (playerValue) = " + playerValue);
+    // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
@@ -1057,8 +1049,8 @@ function showPlayerStatsThisSeasonTabInfo(results) {
     }
 
     // Log the data that will be displayed.
-    console.log("filteredArrayOfObjects[0] = ");
-    console.log(filteredArrayOfObjects[0]);
+    // console.log("filteredArrayOfObjects[0] = ");
+    // console.log(filteredArrayOfObjects[0]);
 
     // Stat Category selection.
     const statCategoryValueDropdown = document.getElementById("player-stats-this-season-stats-category-selection"); // Get the stat category selected dropdown.
@@ -1080,10 +1072,10 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
-            
+
             // Update the displayed stat value after correctly formatting the stat value.
-            var TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
-            var StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object. 
+            let TextElement = document.getElementById("player-stats-this-season-" + statsArray[i]); // Get the Text Element dynamically.
+            let StatFormat = statObject[statsArray[i]].statFormat; // Get the stat format from the global stat object.
             if (StatFormat == "Integer") { // Convert the stat to an integer.
                 var displayText = Number(filteredArrayOfObjects[0][statsArray[i]]).toLocaleString("en-UK"); // Use a dynamic [statArray[i]] key. Convert the stat to a number and then add a comma by using the "toLocaleString" method.
             } else if (StatFormat == "Decimal2") { // Convert the stat to 2 decimal places.
@@ -1097,6 +1089,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
             // console.log("displayText = " + displayText); // Log the text that will be displayed.
 
             // Hide the stats that should not be shown based on the users selection.
+            let containerElement = document.getElementById("player-stats-this-season-" + statsArray[i] + "-container"); // Get the container element dynamically.
             if (statCategoryValue == "All") {
                 // Remove the hidden class from this container element as it should be shown.
                 containerElement.classList.remove("hidden"); // Remove the hidden CSS class from the container element.
@@ -1141,16 +1134,8 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
     // Player selection.
-
-    //var playerValueDropdown = document.getElementById("player-stats-player-selection"); // Get the player selected dropdown.
-    //var playerValue = playerValueDropdown.options[playerValueDropdown.selectedIndex].text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    // let playerValueDropdown = document.getElementById("player-stats-selection-dropdown-button"); // Get the player selected dropdown.
-    // let playerValue = playerValueDropdown.text; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
     let playerValue = document.getElementById("player-stats-selection-dropdown-button").value; // Get the player selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    console.log("Selected player (playerValue) = " + playerValue);
+    // console.log("Selected player (playerValue) = " + playerValue);
 
     // Filter for the selection.
     // Re-use the re-usable function..
@@ -2105,11 +2090,11 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
 // 2. When the user clicks on the button,toggle between hiding and showing the dropdown content. https://www.w3schools.com/howto/howto_js_filter_dropdown.asp.
 function showDropdownList(dropdownID, tabName) {
     //console.log("showDropdownList clicked for dropdownID: " + dropdownID + " from tab: " + tabName); // Log that the dropdown has been clicked.
-    
+
     // Make the selection dropdown content visible.
     document.getElementById(dropdownID + '-contents').style.display = "block"; // Show the selection dropdown contents.
     document.getElementById(dropdownID + '-contents').style.zIndex = 10;  // Move the contents to the front of the page.
-    
+
     // Set up the background overlay behind the contents so when a user clicks off the content, it closes.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "inline"; // Show the background overlay behind the selection dropdown.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.zIndex = 9; // Set the z-index of the background overlay to be right behind the selection dropdown.
