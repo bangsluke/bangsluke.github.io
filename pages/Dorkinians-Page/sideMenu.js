@@ -33,7 +33,7 @@ const newLocal = `
 
                 <!-- Add the Dorkinians logo. -->
                 <img class="logo fadein center" id="side-menu-dorkinians-logo"
-                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.png"
                 alt="Dorkinians Logo" width="80" height="80" onclick="init()">
 
             </div>

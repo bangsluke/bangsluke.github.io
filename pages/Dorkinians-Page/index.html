@@ -1,6 +1,3 @@
-<!-- Index.html -->
-<!-- The new Dorkinians Stats page. -->
-
 <!DOCTYPE html>
 
 <!-- Declare the language of the Web Page. -->
@@ -30,11 +27,7 @@
 
     <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
     <!-- Main CSS styling -->
-    <link href="/pages/Dorkinians-Page/DorkiniansMain.css" rel="stylesheet">
-
-    <!-- Consider Pre-Loading some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-    <!-- The Header styling -->
-    <!-- <link rel="preload" href="/pages/Group-Page/components/Header/HeaderComponent.css" rel="stylesheet" as="style"> -->
+    <link href="/pages/Dorkinians-Page/DorkiniansMain.min.css" rel="stylesheet">
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon"
@@ -44,15 +37,14 @@
 
 <body>
 
-    <!-- Loading Page -->
-    <!-- Add a loading page div that sits in front of everything and holds the logo and text. -->
+    <!-- Loading Page. Add a loading page div that sits in front of everything and holds the logo and text. -->
     <div class="loading-page" id="loading-page">
 
         <!-- Add a div to hold the large logo. -->
         <div class="loading-page-container fadein" id="loading-page-logo-container">
             <!-- Add a large Dorkinians logo. -->
             <img class="large-logo" id="dorkinians-logo-large"
-                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Yellow Logo - No Background.png"
+                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.png"
                 alt="Dorkinians Logo" width="400" height="400" onclick="init()">
         </div>
 
@@ -67,25 +59,22 @@
         </div>
     </div>
 
-    <!-- Header -->
-
-    <!-- Add all of the header information to be displayed at the top of the page. -->
+    <!-- Header. Add all of the header information to be displayed at the top of the page. -->
     <header class="header-area center">
 
+        <!-- Add Dorkinians logo. Resets the whole page onclick. -->
         <div class="logo-container">
-            <!-- Add Dorkinians logo. -->
-            <!-- Link back to the main homepage. Delete later or minimise. -->
             <img class="logo fadein center" id="dorkinians-header-logo"
-                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Yellow Logo - No Background - Reduced.webp"
-                alt="Dorkinians Logo" width="30" height="30" onclick="init()">
+                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header.png"
+                alt="Dorkinians Logo" width="40" height="40" onclick="init()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
         <div class="title-container">
-            <!-- Add some heading text. -->
             <h1>Stats Page</h1>
         </div>
 
+        <!-- Add the options menu in the top right corner. -->
         <div class="options-container">
             <span class="material-icons center fadein google-icons" id="options-button" alt="Options Button" width="54"
                 height="54" onclick="openNav()">
@@ -101,9 +90,7 @@
     <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none"
         onclick="closeNav()"></div>
 
-    <!-- Pop Up Box -->
-
-    <!-- Add a pop up box that can be modified and called for various reasons. -->
+    <!-- Pop Up Box. Add a pop up box that can be modified and called for various reasons. -->
     <div id="pop-up-box" style="display: none">
 
         <!-- The x close button. -->
@@ -126,19 +113,13 @@
 
     </div>
 
-    <!-- Side Menu -->
-
-    <!-- Add the common website side menu using shadow DOMs. See /pages/Group-Page/sideMenu.js for the side menu code. -->
+    <!-- Side Menu. Add the common website side menu using shadow DOMs. See /pages/Group-Page/sideMenu.js for the side menu code. -->
     <side-menu-component></side-menu-component>
 
-    <!-- Main Page Content -->
-
-    <!-- This is all the content between the header and footer. -->
+    <!-- Main Page Content. This is all the content between the header and footer. -->
     <div class="fadein" id="main-content-area">
 
-        <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
-
-        <!-- Add an initial div to hold the snap tabs. -->
+        <!-- Add a tabs component. Add an initial div to hold the snap tabs. https://web.dev/building-a-tabs-component/ -->
         <div class="snap-tabs-container">
 
             <snap-tabs>
@@ -2571,7 +2552,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Premier</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep747153979" class="AFCTable">Data loading....<a
+                                <div id="lrep747153979" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2589,7 +2570,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Senior Two South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep241472326" class="AFCTable">Data loading....<a
+                                <div id="lrep241472326" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2607,7 +2588,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC One South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep650285541" class="AFCTable">Data loading....<a
+                                <div id="lrep650285541" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2625,7 +2606,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Four South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep715891159" class="AFCTable">Data loading....<a
+                                <div id="lrep715891159" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2653,7 +2634,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Six South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep549908553" class="AFCTable">Data loading....<a
+                                <div id="lrep549908553" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2671,7 +2652,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep768016187" class="AFCTable">Data loading....<a
+                                <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2689,7 +2670,7 @@
                                 <h4 class="dorkiniansTableHeaderText">AFC Eight South</h4>
 
                                 <!-- Add inner HTML into here. -->
-                                <div id="lrep768016187" class="AFCTable">Data loading....<a
+                                <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2718,7 +2699,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep381388329" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep381388329" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2736,7 +2717,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep709797986" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep709797986" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2754,7 +2735,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 3s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep266611945" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep266611945" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2772,7 +2753,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep897042508" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep897042508" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2801,7 +2782,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 6s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep201995739" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep201995739" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2819,7 +2800,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep157121765" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep157121765" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2837,7 +2818,7 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep506904509" class="AFCResultsAndFixtures">Data loading....<a
+                                <div id="lrep506904509" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2880,13 +2861,13 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
     <!-- Get main page JS -->
-    <script src="/pages/Dorkinians-Page/jDorkiniansMain.js"></script>
+    <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
 
     <!-- Get side menu JS -->
-    <script src="/pages/Dorkinians-Page/sideMenu.js"></script>
+    <script src="/pages/Dorkinians-Page/sideMenu.min.js"></script>
 
     <!-- Get weather widget JS -->
-    <script src="/pages/Dorkinians-Page/weatherWidget.js"></script>
+    <script src="/pages/Dorkinians-Page/weatherWidget.min.js"></script>
 
 </body>
 
