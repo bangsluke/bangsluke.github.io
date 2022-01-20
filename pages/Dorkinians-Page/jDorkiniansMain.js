@@ -447,7 +447,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -622,7 +622,8 @@ function updateLoadingPage() {
 
 // Increment the component ready count until it matches with the numberReadyComponents.
 function incrementComponentReadyCount(tabName) {
-    readyComponentsCount = readyComponentsCount + 1;
+    readyComponentsCount = readyComponentsCount + 1; // Increment the count.
+    document.getElementById("loading-counter").innerHTML = "Sections loaded = " + readyComponentsCount + "/" + numberReadyComponents; // Get the loading-counter element on the page and update it.
     console.log('%c' + '> readyComponentsCount (' + tabName + ') = ' + readyComponentsCount + '/' + numberReadyComponents, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 }
 
