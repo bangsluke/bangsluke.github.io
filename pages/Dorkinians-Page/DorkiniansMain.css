@@ -879,7 +879,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -892,15 +892,17 @@ header {
 	z-index: 100; /* loading-page */
 	display: grid; 
 	grid-template-columns: 100%; 
-	grid-template-rows: 0.3fr 1fr 0.2fr 0.4fr 1fr;
+	grid-template-rows: 0.3fr 1fr 0.2fr 0.3fr 0.2fr 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "TopSpace"
 	  "Logo"
 	  "Title"
-	  "Phrases";
+	  "Phrases"
+	  "Count";
 }
 .loading-page-container {
+	/* background-color: lightgreen; */
 	text-align: center;
 	display: flex; /* Set up the container to allow vertical and horizontal alignment. https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ */
 	align-items: center; /* Vertically align all child elements that sit within .loading-page-container */
@@ -910,22 +912,29 @@ header {
 	/* background: red; */
 	grid-area: Logo;
 }
-.large-logo {
+#dorkinians-logo-large {
 	padding-top: 3rem;
 	height: 15rem;
 	width: auto;
 }
 #loading-page-title-container {
 	/* background: purple; */
-	padding-top: 1rem;
+	padding-top: 1.5rem;
 	grid-area: Title;
-}
-#loading-page-title-container h2 {
-	color: var(--secondary-accent-colour, white);
+	color: var(--secondary-accent-colour, white); /* Colour of the text. */
 }
 #loading-page-loading-phrase-container {
 	/* background: green; */
 	grid-area: Phrases;
+	color: var(--secondary-accent-colour, white);
+	margin-top: 0rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
+}
+#loading-page-loading-counter-container {
+	/* background: yellow; */
+	grid-area: Count;
 	color: var(--secondary-accent-colour, white);
 	margin-top: 0rem;
 	display: flex;
