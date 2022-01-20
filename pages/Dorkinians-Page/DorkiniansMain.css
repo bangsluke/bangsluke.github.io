@@ -1303,10 +1303,10 @@ Section 4
 }
 .club-stats-grid-item {
 	/* background-color: red; */
-	height: 2rem;
+	height: 2.4rem;
 	margin: 0;
 	padding: 0.4rem 0 0.4rem 0;
-	border-top: 1px solid #dfdfdf;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 #club-stats-total-club-and-team-stats-stats-grid-container h5 {
 	font-size: 0.9rem;
@@ -1405,6 +1405,11 @@ Section 4
 
 
 /* 4. Team of the Week Tab */
+
+#team-of-the-week {
+	visibility: hidden; /* Remove when ready to show on the page. */
+	display: none; /* Remove when ready to show on the page. */
+}
 
 .team-of-the-week-area {
 	/* background-color: violet; */
