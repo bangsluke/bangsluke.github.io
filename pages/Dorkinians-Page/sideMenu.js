@@ -128,7 +128,7 @@ const newLocal = `
                         <!-- Add a link to the Dorkinians homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
-                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon" width="40" height="40">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
