@@ -32,7 +32,7 @@ const newLocal = `
                 <a id="side-menu-close-button" href="javascript:void(0)" onclick="closeNav()">×</a>
 
                 <!-- Add the Dorkinians logo. -->
-                <img class="logo fadein center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.avif"
+                <img class="logo fadein center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.webp"
                 alt="Dorkinians Logo" width="80" height="80" onclick="init()">
 
             </div>
@@ -86,7 +86,7 @@ const newLocal = `
 
                         <!-- Add the change theme item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/images/Theme Change Icon.avif" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
+                            <img src="/pages/Dorkinians-Page/images/Theme Change Icon.webp" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
@@ -94,7 +94,7 @@ const newLocal = `
 
                         <!-- Add the text size change action item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/images/Text Size Icon.avif" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
+                            <img src="/pages/Dorkinians-Page/images/Text Size Icon.webp" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon" onclick="changeTextSize(-1)">
                         </div>
                         <div class="side-menu-text-container side-menu-action-button-container">
                             <h4>Change Text Size</h4>
@@ -108,7 +108,7 @@ const newLocal = `
 
                         <!-- Add the full reset item. -->
                         <div class="side-menu-icon-container">
-                            <img src="/pages/Dorkinians-Page/images/Reset Page Icon.avif" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
+                            <img src="/pages/Dorkinians-Page/images/Reset Page Icon.webp" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
                         </div>
                         <div class="side-menu-text-container">
                             <h4 id="side-menu-actions-change-height-text" onclick="resetActionVariables()">Reset Page</h4>
@@ -128,7 +128,7 @@ const newLocal = `
                         <!-- Add a link to the Dorkinians homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
-                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.avif" class="side-menu-icon" alt="Dorkinians Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
@@ -140,7 +140,7 @@ const newLocal = `
                         <!-- Add a link to the FA homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
-                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.avif" class="side-menu-icon" alt="The FA Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.webp" class="side-menu-icon" alt="The FA Logo Icon">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
