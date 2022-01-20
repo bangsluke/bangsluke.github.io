@@ -447,7 +447,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -2075,9 +2075,9 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(dropdownID, tabName); // Close the dropdown list.
             // Call the next function on the basis of what tab the dropdown is from.
-            if (tabName == "player-stats"){
+            if (tabName == "player-stats") {
                 showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
-            } else if (tabName == "comparison"){
+            } else if (tabName == "comparison") {
                 updateComparisonStatData(); // Update the Comparison Tab.
             } else {
                 alert(dropdownID + " dropdown called from an unknown tab location?"); // Add a catch.
