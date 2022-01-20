@@ -30,8 +30,7 @@
     <link href="/pages/Dorkinians-Page/DorkiniansMain.min.css" rel="stylesheet">
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link rel="shortcut icon" type="image/x-icon"
-        href="/pages/Dorkinians-Page/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/pages/Dorkinians-Page/images/favicon.ico" />
 
 </head>
 
@@ -43,8 +42,7 @@
         <!-- Add a div to hold the large logo. -->
         <div class="loading-page-container fadein" id="loading-page-logo-container">
             <!-- Add a large Dorkinians logo. -->
-            <img id="dorkinians-logo-large"
-                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.avif"
+            <img id="dorkinians-logo-large" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.avif"
                 alt="Dorkinians Logo" width="400" height="400" onclick="init()">
         </div>
 
@@ -70,8 +68,8 @@
         <!-- Add Dorkinians logo. Resets the whole page onclick. -->
         <div class="logo-container">
             <img class="logo fadein center" id="dorkinians-header-logo"
-                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header.avif"
-                alt="Dorkinians Logo" width="40" height="40" onclick="init()">
+                src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header.avif" alt="Dorkinians Logo" width="40"
+                height="40" onclick="init()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -427,105 +425,81 @@
                             </div>
 
                             <!-- Add a top level section to hold all sub sections. -->
-                            <section class="club-stats-area">
+                            <section id="club-stats-area">
 
                                 <!-- Add a section for the Total Club/Team Stats. -->
                                 <section id="club-stats-total-club-and-team-stats-container">
 
                                     <div id="club-stats-total-club-and-team-stats-header-container">
-
-                                        <div>
-                                            <h3 id="club-team-stats-header-text" class="textleft"> Stats</h3>
-                                        </div>
-
-                                        <!-- Add a hoverable information icon next to the top header. -->
-                                        <div class="material-icons icon-tooltip">
-                                            info
-                                            <span class="icon-tooltip-text">All stats are collected each week by the
-                                                Captains and reported
-                                                to the club for reference here.</span>
-                                        </div>
-
+                                        <h3 id="club-team-stats-header-text" class="textleft"> Stats</h3>
+                                        <span>All stats are collected each week by the Captains and reported to the club
+                                            for reference here.</span>
                                     </div>
 
-                                    <div>
-                                        <h5>Total number of games played:</h5>
-                                        <p class="yellowtext" id="club-team-stats-numberGamesPlayed"></p>
-                                        <p> games (</p>
-                                        <p class="yellowtext" id="club-team-stats-numberLeagueGamesPlayed"></p>
-                                        <p> in the league, </p>
-                                        <p class="yellowtext" id="club-team-stats-numberCupGamesPlayed"></p>
-                                        <p> in cups and </p>
-                                        <p class="yellowtext" id="club-team-stats-numberFriendlyGamesPlayed"></p>
-                                        <p> friendlies).</p>
-                                    </div>
+                                    <div id="club-stats-total-club-and-team-stats-stats-grid-container">
 
-                                    <div>
-                                        <h5>Total number of recorded players:</h5>
-                                        <p class="yellowtext" id="club-team-stats-numberPlayers"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Number of games played:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberGamesPlayed"></p>
+                                        <h5 class="club-stats-grid-item">Number of league games played:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberLeagueGamesPlayed"></p>
+                                        <h5 class="club-stats-grid-item">Number of cup games played:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberCupGamesPlayed"></p>
+                                        <h5 class="club-stats-grid-item">Number of friendly games played:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberFriendlyGamesPlayed"></p>
 
-                                    <div>
-                                        <h5>Total number of goals scored:</h5>
-                                        <p class="yellowtext" id="club-team-stats-numberGoalsScored"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Number of recorded players:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberPlayers"></p>
 
-                                    <div>
-                                        <h5>Average number of goals scored per game:</h5>
-                                        <p class="yellowtext" id="club-team-stats-goalsPerGame"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Number of goals scored:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberGoalsScored"></p>
 
-                                    <div>
-                                        <h5>Total number of goalscorers:</h5>
-                                        <p class="yellowtext" id="club-team-stats-numberGoalscorers"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Average number of goals scored per game:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-goalsPerGame"></p>
 
-                                    <div>
-                                        <h5>Top goalscorer (and total):</h5>
-                                        <p class="yellowtext" id="club-team-stats-topGoalscorer"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Number of goalscorers:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberGoalscorers"></p>
 
-                                    <div>
-                                        <h5>Total number of goals conceded:</h5>
-                                        <p class="yellowtext" id="club-team-stats-numberGoalsConceded"></p>
-                                    </div>
+                                        <h5 class="club-stats-grid-item">Top goalscorer (and total):</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-topGoalscorer"></p>
 
-                                    <div>
-                                        <h5>Average number of goals conceded per game:</h5>
-                                        <p class="yellowtext" id="club-team-stats-goalsConcededPerGame"></p>
+                                        <h5 class="club-stats-grid-item">Number of goals conceded:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberGoalsConceded"></p>
+
+                                        <h5 class="club-stats-grid-item">Average number of goals conceded per game:</h5>
+                                        <p class="yellowtext club-stats-grid-item" id="club-team-stats-goalsConcededPerGame"></p>
                                     </div>
 
                                 </section>
 
                                 <!-- Add a section for the Team Season Results. -->
-                                <!-- <section id="club-stats-team-season-results-container"> -->
+                                <section id="club-stats-team-season-results-container">
 
-                                <!-- <h3 class="textleft">Teams Season Results</h3> -->
+                                    <!-- <h3 class="textleft">Teams Season Results</h3> -->
 
-                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                <!-- <div class="table-wrapper"> -->
-                                <!-- <table id="team-season-results-table" class="column-highlight"> -->
-                                <!-- Data loaded into here by jDorkiniansMain.js -->
-                                <!-- </table> -->
-                                <!-- </div> -->
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <!-- <div class="table-wrapper"> -->
+                                        <!-- <table id="team-season-results-table" class="column-highlight"> -->
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        <!-- </table> -->
+                                    <!-- </div> -->
 
-                                <!-- </section> -->
+                                </section>
 
                                 <!-- Add a section for the All Club Results. -->
-                                <!-- <section id="club-stats-all-club-results-container"> -->
+                                <section id="club-stats-all-club-results-container">
 
-                                <!-- <h3 class="textleft">All Club Results</h3> -->
+                                    <!-- <h3 class="textleft">All Club Results</h3> -->
 
-                                <!-- <p>Add in a filterable table of all Dorkinians results.</p> -->
+                                    <!-- <p>Add in a filterable table of all Dorkinians results.</p> -->
 
-                                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                                <!-- <div class="table-wrapper"> -->
-                                <!-- <table id="results-table" class="column-highlight"> -->
-                                <!-- Data loaded into here by jDorkiniansMain.js -->
-                                <!-- </table> -->
-                                <!-- </div> -->
+                                    <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+                                    <!-- <div class="table-wrapper"> -->
+                                        <!-- <table id="results-table" class="column-highlight"> -->
+                                            <!-- Data loaded into here by jDorkiniansMain.js -->
+                                        <!-- </table> -->
+                                    <!-- </div> -->
 
-                                <!-- </section> -->
+                                </section>
 
                             </section>
 
@@ -1422,7 +1396,8 @@
                                         <button
                                             onclick="showDropdownList('comparison-player-1-selection-dropdown', 'comparison')"
                                             class="selection-dropdown-button"
-                                            id="comparison-player-1-selection-dropdown-button" value="Select Player 1">Select
+                                            id="comparison-player-1-selection-dropdown-button"
+                                            value="Select Player 1">Select
                                             Player 1<img src="/pages/Dorkinians-Page/images/Down Arrow Icon.avif"
                                                 alt="Down Arrow Icon" class="selection-dropdown-arrow-icon"
                                                 height="25px" width="25px"></button>
@@ -1454,7 +1429,8 @@
                                         <button
                                             onclick="showDropdownList('comparison-player-2-selection-dropdown', 'comparison')"
                                             class="selection-dropdown-button"
-                                            id="comparison-player-2-selection-dropdown-button" value="Select Player 2">Select
+                                            id="comparison-player-2-selection-dropdown-button"
+                                            value="Select Player 2">Select
                                             Player 2<img src="/pages/Dorkinians-Page/images/Down Arrow Icon.avif"
                                                 alt="Down Arrow Icon" class="selection-dropdown-arrow-icon"
                                                 height="25px" width="25px"></button>
@@ -2704,7 +2680,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 1s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep381388329" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep381388329" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2722,7 +2699,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 2s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep709797986" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep709797986" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2740,7 +2718,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 3s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep266611945" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep266611945" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2758,7 +2737,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 4s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep897042508" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep897042508" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2787,7 +2767,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 6s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep201995739" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep201995739" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2805,7 +2786,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 7s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep157121765" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep157121765" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
@@ -2823,7 +2805,8 @@
                                 <h4 class="dorkiniansTableHeaderText theme-colour-text">Dorkinians 8s Results and
                                     Fixtures</h4>
 
-                                <div id="lrep506904509" class="AFCResultsAndFixtures">Data loading....<a rel="preconnect"
+                                <div id="lrep506904509" class="AFCResultsAndFixtures">Data loading....<a
+                                        rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
                                         href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
