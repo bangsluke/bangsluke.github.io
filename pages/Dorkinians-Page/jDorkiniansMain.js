@@ -44,7 +44,7 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Hitting on the bar staff after the game...",
+    // "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
@@ -54,6 +54,14 @@ var phrasesArray = [
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Considering Dom Devlin's MoM...",
+    // "Waiting for Ellenger to make his 1s debut...",
+    "Expecting goalkeeper hissy fit any moment now...",
+    "Dave Coleman is typing...",
+    "Probably should get out of 1st gear for the second half...",
+    "Searching for a replacement to cover Harry Lynn's late dropdout...",
+    "Crying out for Al Thom to finally score a goal...",
+    "Sliding Shaun Patterson into TOTW because of a bet...",
+    "Adjusting teams on Saturday morning following dropouts...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
 
