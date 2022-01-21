@@ -42,7 +42,8 @@ Section 1
 	/* --main-accent-colour: #3bee0e; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
-	--tooltip-background-colour: #236f38;
+	/* --tooltip-background-colour: #236f38; */
+	--tooltip-background-colour: #CBECD5; /* Background of tooltip matches IOS inbuilt components. */
 
 	/* Light Theme Colours Used */
 	/* --main-background-colour: #1C8841; Main Dorkinians green.
@@ -70,11 +71,12 @@ Section 1
 	/* Font Size */
 	--main-font-size: 16px; /* Define the html font size used for re-sizing. */
 	--component-font-size: 12px; /* Define the font size used in components. */
+	--information-bar-text-size: 0.7rem; /* Used for the information bar at the top of each page. */
 	
 	/* Snap Tabs */
 	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
 	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
-    --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    /*--ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
@@ -441,70 +443,6 @@ tr:last-child td:last-child {
 
 
 
-/* Icon and Icon tooltip Styling. */
-
-/* Style the added Google Icons - https://fonts.google.com/icons. */
-.google-icons {
-	color: var(--secondary-accent-colour, white);
-}
-/* For all of the below - see https://www.w3schools.com/css/css_tooltip.asp */
-/* Icon Tooltip container */
-.icon-tooltip {
-	position: relative;
-	/* display: inline-block; */
-	float: right;
-	margin-left: 150px;
-}
-/* Tooltip text */
-.icon-tooltip .icon-tooltip-text {
-	/* background-color: blue; */
-	background-color: var(--tooltip-background-colour, grey);
-	visibility: hidden; /* Initially set the visibility as hidden. */
-	/* min-width: 20rem; */
-	width: max-content;
-	min-height: 1rem;
-	/* max-height: 30rem; */
-	/* min-width: 150%; */
-	/* overflow: visible; */
-	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
-	border-radius: var(--component-border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
-	/* Position the tooltip text below the text its explaining. */
-	position: absolute;
-	z-index: 1; /* icon-tooltip */
-  	bottom: 110%; /* Position above the container div. */
-
-	right: 0%;
-	min-width: max-content;
-	left: -30rem;
-
-	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
-    transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
-}
-/* Show the icon tooltip text when you mouse over the icon tooltip container */
-.icon-tooltip:hover .icon-tooltip-text {
-	visibility: visible; /* Change the visibility to visible when hovered on. */
-	opacity: 1; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
-}
-/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
-.icon-tooltip .icon-tooltip-text::after {
-	content: " ";
-	position: absolute;
-	top: 100%; /* At the bottom of the tooltip */
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: var(--tooltip-background-colour, grey) transparent transparent transparent;
-}
-/* Style the text within the tooltip. */
-.icon-tooltip-text {
-	font-size: 12.8px; /* Fallback value. */
-	font-size: 0.7rem; /* Relative to root (html) value. */
-	text-transform: none;
-	text-align: right;
-}
-
-
 
 /* 3. Dropdown styling */
 
@@ -695,7 +633,7 @@ button > .selection-dropdown-arrow-icon {
 	/* background-color: aqua; */
 	width: 100%;
 	text-align: center;
-	font-size: 0.7rem;
+	font-size: var(--information-bar-text-size, 0.7rem);
 	font-style: italic;
 	margin-bottom: 1rem;
 }
@@ -730,7 +668,6 @@ button > .selection-dropdown-arrow-icon {
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
-
 	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
     transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
@@ -756,6 +693,7 @@ button > .selection-dropdown-arrow-icon {
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
+	color: black;
 }
 
 
@@ -879,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -892,15 +830,17 @@ header {
 	z-index: 100; /* loading-page */
 	display: grid; 
 	grid-template-columns: 100%; 
-	grid-template-rows: 0.3fr 1fr 0.2fr 0.4fr 1fr;
+	grid-template-rows: 0.3fr 1fr 0.2fr 0.3fr 0.2fr 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "TopSpace"
 	  "Logo"
 	  "Title"
-	  "Phrases";
+	  "Phrases"
+	  "Count";
 }
 .loading-page-container {
+	/* background-color: lightgreen; */
 	text-align: center;
 	display: flex; /* Set up the container to allow vertical and horizontal alignment. https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ */
 	align-items: center; /* Vertically align all child elements that sit within .loading-page-container */
@@ -910,22 +850,30 @@ header {
 	/* background: red; */
 	grid-area: Logo;
 }
-.large-logo {
+#dorkinians-logo-large {
 	padding-top: 3rem;
 	height: 15rem;
 	width: auto;
 }
 #loading-page-title-container {
 	/* background: purple; */
-	padding-top: 1rem;
+	padding-top: 1.5rem;
 	grid-area: Title;
-}
-#loading-page-title-container h2 {
-	color: var(--secondary-accent-colour, white);
+	color: var(--secondary-accent-colour, white); /* Colour of the text. */
 }
 #loading-page-loading-phrase-container {
 	/* background: green; */
 	grid-area: Phrases;
+	color: var(--secondary-accent-colour, white);
+	margin-top: 0rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
+	height: 4rem;
+}
+#loading-page-loading-counter-container {
+	/* background: yellow; */
+	grid-area: Count;
 	color: var(--secondary-accent-colour, white);
 	margin-top: 0rem;
 	display: flex;
@@ -1260,6 +1208,13 @@ Section 4
 
 /* 1. Homepage Tab */
 
+#homepage-next-fixtures-header-text {
+	padding-bottom: 0.5rem;
+}
+#homepage-next-fixtures-sub-header-text {
+	padding-bottom: 1rem;
+	font-style: italic;
+}
 #homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
 	display: grid;
@@ -1303,7 +1258,7 @@ Section 4
 
 /* 2. Club Stats Tab */
 
-.club-stats-area {
+#club-stats-area {
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 100%; 
@@ -1314,38 +1269,79 @@ Section 4
 	  "TeamSeasonResults"
 	  "AllClubResults";
 }
+
+/* Style the selection section at the top of the page. */
+#club-stats-team-season-results-selection {
+	/* background-color: pink; */
+}
+
+/* Whole Club Stats Section */
 #club-stats-total-club-and-team-stats-container {
 	/* background-color: blue; */
 	grid-area: TotalClubAndTeamStats;
 	padding: 0.3rem;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: max-content max-content;
+	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "HeaderSection"
+	  "StatsSection";
+}
 
-}
-#club-stats-total-club-and-team-stats-container div p {
-	display: inline;
-	font-weight: bold;
-}
-#club-stats-total-club-and-team-stats-container div h5 {
-	display: inline;
-}
-/* Style the div holding the header and information icon. */
+/* Style the div holding the header and info text. */
 #club-stats-total-club-and-team-stats-header-container {
 	/* background-color: purple; */
 	width: 100%;
+	padding-bottom: 1rem;
+	grid-area: HeaderSection;
 }
-#club-stats-total-club-and-team-stats-header-container div {
+#club-stats-total-club-and-team-stats-header-container span {
 	/* background-color: yellow; */
-	display: inline-block;
+	font-size: var(--information-bar-text-size, 0.7rem);
+	font-style: italic;
+	font-weight: normal;
 }
+#club-stats-total-club-and-team-stats-stats-grid-container {
+	/* background-color: orange; */
+	grid-area: StatsSection;
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-template-rows: repeat(11, max-content);
+	gap: 0.5rem 0rem; /* First value is between rows, second columns. */
+}
+.club-stats-grid-item {
+	/* background-color: red; */
+	height: 2.4rem;
+	margin: 0;
+	padding: 0.4rem 0 0.4rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#club-stats-total-club-and-team-stats-stats-grid-container h5 {
+	font-size: 0.9rem;
+	font-weight: normal;	
+}
+#club-stats-total-club-and-team-stats-stats-grid-container p {
+	font-size: 0.9rem;
+	font-weight: normal;
+	text-align: right;
+}
+#club-stats-total-club-and-team-stats-stats-grid-container h5:first-child, #club-stats-total-club-and-team-stats-stats-grid-container p:nth-child(2) {
+	border-top: none; /* Remove the interior border from the first two items. */
+}
+
+/* Team Season Results Section */
 #club-stats-team-season-results-container {
-	/* background-color: blue; */
+	visibility: hidden; /* Remove when ready to show on the page. */
+	background-color: green;
 	grid-area: TeamSeasonResults;
 	padding: 0.3rem;
 }
-#club-stats-team-season-results-selection {
-	margin-bottom: 1rem; /* Add some space below the selection containers. */
-}
+
+/* All Club Results Section */
 #club-stats-all-club-results-container {
-	/* background-color: red; */
+	visibility: hidden; /* Remove when ready to show on the page. */
+	background-color: red;
 	grid-area: AllClubResults;
 	padding: 0.3rem;
 }
@@ -1367,7 +1363,7 @@ Section 4
 	position: relative;
 	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
 	display: grid;
-	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
+	grid-template-columns: 70% 20% 10%; /* First value is the text, second the stat value, last the image. */
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 	margin: 0 auto;
@@ -1419,6 +1415,16 @@ Section 4
 
 /* 4. Team of the Week Tab */
 
+#team-of-the-week-placement-holder-div { /* Remove when ready to show on the page. */
+	visibility: hidden; /* Remove when ready to show on the page. */
+	display: none; /* Remove when ready to show on the page. */
+}
+
+#team-of-the-week {
+	visibility: hidden; /* Remove when ready to show on the page. */
+	display: none; /* Remove when ready to show on the page. */
+}
+
 .team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
@@ -1459,6 +1465,7 @@ Section 4
 	gap: 1rem 2%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
+	  /* "Explanation Explanation Explanation" */
 	  "Player1Stats Blank Player2Stats"
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
@@ -1493,6 +1500,13 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
+/* Style the explanation section. */
+/* .comparison-explanation-section {
+	background-color: orange;
+	grid-area: Explanation;
+	padding: 0.3rem;
+	width: 100%;
+} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
