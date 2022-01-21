@@ -576,6 +576,13 @@ function init() {
 
 
 
+// Reset the whole page by clicking on the logo in the top left.
+function resetFullPage() {
+    window.location.reload(false); // Reset the full page. https://www.w3docs.com/snippets/javascript/how-to-reload-a-page-using-javascript.html.
+}
+
+
+
 // Loading Functions
 
 // Update the phrase text on the page every few seconds.

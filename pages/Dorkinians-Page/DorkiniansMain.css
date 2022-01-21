@@ -76,7 +76,7 @@ Section 1
 	/* Snap Tabs */
 	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
 	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
-    --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    /*--ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
@@ -653,8 +653,6 @@ button > .selection-dropdown-arrow-icon {
 .stats-tooltip .stats-tooltip-text {
 	/* background-color: blue; */
 	background-color: var(--tooltip-background-colour, grey);
-	
-	
 	visibility: hidden; /* Initially set the visibility as hidden. */
 	/* min-width: 20rem; */
 	width: 90%;
