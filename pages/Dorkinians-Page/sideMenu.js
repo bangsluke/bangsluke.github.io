@@ -128,7 +128,7 @@ const newLocal = `
                         <!-- Add a link to the Dorkinians homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://www.dorkiniansfc.co.uk/">
-                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon" width="40" height="40">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon" height="25px">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
@@ -140,7 +140,7 @@ const newLocal = `
                         <!-- Add a link to the FA homepage. -->
                         <div class="side-menu-icon-container">
                             <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
-                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.webp" class="side-menu-icon" alt="The FA Logo Icon">
+                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.webp" class="side-menu-icon" alt="The FA Logo Icon" height="25px">
                             </a>
                         </div>
                         <div class="side-menu-text-container">
