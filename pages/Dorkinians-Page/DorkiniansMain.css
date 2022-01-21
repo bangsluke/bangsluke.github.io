@@ -870,6 +870,7 @@ header {
 	justify-content: center;
 	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
 	height: 4rem;
+	opacity: 1;
 }
 #loading-page-loading-counter-container {
 	/* background: yellow; */
