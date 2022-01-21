@@ -34,7 +34,8 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 8;
+// const numberReadyComponents = 8;
+const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -44,7 +45,6 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
@@ -54,8 +54,20 @@ var phrasesArray = [
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Considering Dom Devlin's MoM...",
+    "Expecting goalkeeper hissy fit any moment now...",
+    "Dave Coleman is typing...",
+    "Probably should get out of 1st gear for the second half...",
+    "Waiting to see if Harry Lynn will turn up for the game...",
+    "Crying out for Al Thom to finally score a goal...",
+    "Sliding Shaun Patterson into TOTW because of a bet...",
+    "Counting out Will Westcott's late fines...",
+    "Adjusting teams on Saturday morning following late dropouts...",
+    "Waiting for Slado's speeches to finish...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
+// Deleted phrases.
+// "Hitting on the bar staff after the game...",
+// "Waiting for Ellenger to make his 1s debut...",
 
 // Globally define an object containing stat objects that can be referenced in other functions.
 const statObject = {
@@ -431,21 +443,6 @@ function init() {
     // Reset the readyComponentsCount.
     readyComponentsCount = 0;
 
-    // Initially show the loading text on the loading page using the typewriter effect.
-    // Clear the text element, define the initial required variables and then call the typeWriter function.
-    document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-    let i = 0; // The integer counter.
-    let speed = 50; // The speed/duration of the effect in milliseconds.
-    let phraseText = "Loading data into the site...";
-    typeWriter(); // Call the typeWriter function to update the HTML element with text.
-    function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-        if (i < phraseText.length) {
-            document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
     // Call the updateLoadingPage function to change the shown phrase.
     updateLoadingPage();
 
@@ -587,37 +584,42 @@ function resetFullPage() {
 
 // Update the phrase text on the page every few seconds.
 function updateLoadingPage() {
+    // console.log("updateLoadingPage called");
+
     // Create a setInterval for every 6 seconds to change the shown phrase.
     let loopPhrases = setInterval(function () {
-        let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
-        if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
-            console.log("loopPhrases timed out.")
-            alert("Page timed out. Please refresh."); // Pass an alert to the user.
-        }
-        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
-        // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
-        let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
-        // console.log("phraseText = " + phraseText); // Log the selected phrase.
+        // console.log("loopPhrases started");
 
-        // Reduce down the array removing the selected phrase so that it is not displayed again.
-        delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
-        phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
-            return true
-        });
+        // Initially set the opacity of the text container to be 0 (transparent).
+        document.getElementById("loading-page-loading-phrase-container").style.opacity = 0;
 
-        // Clear the text element, define the initial required variables and then call the typeWriter function.
-        // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
-        document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-        let i = 0; // The integer counter.
-        let speed = 50; // The speed/duration of the effect in milliseconds.
-        typeWriter(); // Call the typeWriter function to update the HTML element with text.
-        function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-            if (i < phraseText.length) {
-                document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-                i++;
-                setTimeout(typeWriter, speed);
+        // Then wait a second with no text (1000 milliseconds), update the text and fade it back up.
+        setTimeout(function () {
+            // console.log("Change text and fade back in started");
+
+            // Get the next phrase to display.
+            let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
+            if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
+                console.alert("loopPhrases timed out.") // Log the error.
+                alert("Page timed out. Please refresh."); // Pass an alert to the user.
             }
-        }
+            let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
+            let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
+            // console.log("pickedPhraseNumber = " + pickedPhraseNumber + ", and phraseText = " + phraseText); // Log the selected number and selected phrase.
+
+            // Reduce down the array removing the selected phrase so that it is not displayed again.
+            delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
+            phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
+                return true
+            });
+
+            // Add the text to the phrase id.
+            document.getElementById("loading-phrase").innerHTML = phraseText;
+
+            // Make the text visible again.
+            document.getElementById("loading-page-loading-phrase-container").style.opacity = 1
+
+        }, 1000)
 
         // React if the tab ready count matches the number of tabs.
         if (readyComponentsCount === numberReadyComponents || readyComponentsCount >= numberReadyComponents) {
