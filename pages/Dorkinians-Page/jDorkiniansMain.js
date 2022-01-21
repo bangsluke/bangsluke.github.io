@@ -622,7 +622,8 @@ function updateLoadingPage() {
 
 // Increment the component ready count until it matches with the numberReadyComponents.
 function incrementComponentReadyCount(tabName) {
-    readyComponentsCount = readyComponentsCount + 1;
+    readyComponentsCount = readyComponentsCount + 1; // Increment the count.
+    document.getElementById("loading-counter").innerHTML = "Sections loaded = " + readyComponentsCount + "/" + numberReadyComponents; // Get the loading-counter element on the page and update it.
     console.log('%c' + '> readyComponentsCount (' + tabName + ') = ' + readyComponentsCount + '/' + numberReadyComponents, 'background-color: red; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 }
 
@@ -2070,13 +2071,13 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
         // Function used for onclick of all dropdown options.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
-            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.png' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
+            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.webp' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(dropdownID, tabName); // Close the dropdown list.
             // Call the next function on the basis of what tab the dropdown is from.
-            if (tabName == "player-stats"){
+            if (tabName == "player-stats") {
                 showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
-            } else if (tabName == "comparison"){
+            } else if (tabName == "comparison") {
                 updateComparisonStatData(); // Update the Comparison Tab.
             } else {
                 alert(dropdownID + " dropdown called from an unknown tab location?"); // Add a catch.
