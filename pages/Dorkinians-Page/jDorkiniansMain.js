@@ -841,7 +841,11 @@ function showTotalClubStatsInfo(results) {
     let statArray = ["numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed", "numberPlayers", "numberGoalsScored", "goalsPerGame", "numberGoalsConceded", "goalsConcededPerGame", "numberGoalscorers", "topGoalscorer"];
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
-        document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+        if (statObject[statArray[i]] == "") { // Check if the returned value is blank or not.
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a";
+        } else {
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+        }
     }
 
     // Increment the component ready count by 1.
@@ -856,61 +860,61 @@ function showTotalClubStatsInfo(results) {
 
 // 2.2.1. Team Season Results Info data "getter" function.
 function getTeamSeasonResultsInfo(results) {
-    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    // // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    // console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    // Process the original array of objects received.
-    displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
-    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
-    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
+    // // Process the original array of objects received.
+    // displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    // showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
 }
 
 // 2.2.2. Team Season Results Info data "show-er" function.
 function showTeamSeasonResultsInfo(results) {
-    // Display the retrieved data onto the page.
-    console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    // // Display the retrieved data onto the page.
+    // console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    // Set the dataArrayOfObjects.
-    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // // Set the dataArrayOfObjects.
+    // const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
 
-    // console.log(dataArrayOfObjects); // Log the received array of objects.
-    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    // // console.log(dataArrayOfObjects); // Log the received array of objects.
+    // var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-    // Season selection.
-    var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
-    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-    // Catch if the season value isn't a filterable value.
-    if (seasonValue === "All Seasons") {
-        seasonValue = "";
-    }
-    // console.log("seasonValue = " + seasonValue);
+    // // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    // // Season selection.
+    // var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
+    // var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+    // // Catch if the season value isn't a filterable value.
+    // if (seasonValue === "All Seasons") {
+    //     seasonValue = "";
+    // }
+    // // console.log("seasonValue = " + seasonValue);
 
-    // Team selection.
-    var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
-    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-    // Catch if the team value isn't a filterable value.
-    if (teamValue === "Whole club") {
-        teamValue = "";
-    }
-    // console.log("teamValue = " + teamValue);
+    // // Team selection.
+    // var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
+    // var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+    // // Catch if the team value isn't a filterable value.
+    // if (teamValue === "Whole club") {
+    //     teamValue = "";
+    // }
+    // // console.log("teamValue = " + teamValue);
 
-    // Filter for all selections.
-    // Re-use the re-usable function but don't pass all arguments.
-    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, true, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
+    // // Filter for all selections.
+    // // Re-use the re-usable function but don't pass all arguments.
+    // const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, false, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
 
-    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
-    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
-    // console.log("New Length = " + objectLength); // Log the original length.
+    // // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    // objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // // console.log("New Length = " + objectLength); // Log the original length.
 
-    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
-    clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+    // // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
+    // clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
+    // createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
-    // Increment the component ready count by 1.
-    incrementComponentReadyCount("Club Stats - Teams Season Results");
+    // // Increment the component ready count by 1.
+    // incrementComponentReadyCount("Club Stats - Teams Season Results");
 }
 
 // 2.2.3. Team Season Results Info data "update-er" function.
@@ -1872,6 +1876,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // console.log('%c' + '>> Re-usable Function: multiFilterArrayOfObjects(ArrayOfObjects, keyNames , filterValues...) called. Passed variables: ArrayOfObjects = not shown, keyNameSeason = ' + keyNameSeason + ', filterValueSeason = ' + filterValueSeason, ', keyNamePlayer = ' + keyNamePlayer + ', filterValuePlayer = ' + filterValuePlayer, ', keyNameTeam = ' + keyNameTeam + ', filterValueTeam = ' + filterValueTeam, ', keyNameLocation = ' + keyNameLocation + ', filterValueLocation = ' + filterValueLocation, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // Initially define the variable that will be manipulated and produced.
     var filteredArrayOfObjects = ArrayOfObjects;
+    console.log(ArrayOfObjects);
 
     // Check if the original ArrayOfObjects includes a toolTip row or not.
     if (toolTipBoolean === true) {
@@ -1891,7 +1896,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for multiple criteria.
 
     // Filter the Array of Objects for the defined season.
-    if (filterValueSeason === "Season") { // Don't filter if unpicked.
+    if (filterValueSeason === "Season" || filterValueSeason === "All Seasons") { // Don't filter if unpicked.
         // Do nothing as season hasn't been selected.
         // console.log(">>> Data not filtered for seasons as 'Season' still picked.")
     } else { // Filter the Array of Objects.
