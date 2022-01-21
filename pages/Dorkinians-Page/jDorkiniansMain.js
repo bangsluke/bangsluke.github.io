@@ -447,7 +447,7 @@ function init() {
     }
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -492,7 +492,7 @@ function init() {
     let now = new Date();
     let nextSaturdayDate = nextDay(now, 6);
     nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday: "short", year: "numeric", month: "short", day: "numeric" }) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
-    document.getElementById("homepage-next-fixtures-header-text").innerHTML = "Next Fixtures (" + nextSaturdayDate + ")"; // Get the header and update it.
+    document.getElementById("homepage-next-fixtures-sub-header-text").innerHTML = nextSaturdayDate; // Get the header and update it.
 
 
     // Step 2.
