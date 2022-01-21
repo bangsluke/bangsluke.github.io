@@ -1363,7 +1363,7 @@ Section 4
 	position: relative;
 	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
 	display: grid;
-	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
+	grid-template-columns: 70% 20% 10%; /* First value is the text, second the stat value, last the image. */
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 	margin: 0 auto;
