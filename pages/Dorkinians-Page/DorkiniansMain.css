@@ -1467,6 +1467,7 @@ Section 4
 	gap: 1rem 2%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
+	  /* "Explanation Explanation Explanation" */
 	  "Player1Stats Blank Player2Stats"
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
@@ -1501,6 +1502,13 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
+/* Style the explanation section. */
+/* .comparison-explanation-section {
+	background-color: orange;
+	grid-area: Explanation;
+	padding: 0.3rem;
+	width: 100%;
+} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
