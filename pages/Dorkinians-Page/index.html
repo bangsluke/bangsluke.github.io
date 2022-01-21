@@ -69,7 +69,7 @@
         <div class="logo-container">
             <img class="logo fadein center" id="dorkinians-header-logo"
                 src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" alt="Dorkinians Logo"
-                width="40" height="40" onclick="init()">
+                width="40" height="40" onclick="resetFullPage()">
         </div>
 
         <!-- Add some heading text. Add it within a container. -->
@@ -1315,7 +1315,9 @@
                     </article>
 
                     <!-- 4. Team of the Week Tab -->
-                    <article class="nav-targets" id="team-of-the-week">
+                    <div id="team-of-the-week-placement-holder-div">
+                        <!-- Delete when done. -->
+                        <!-- <article class="nav-targets" id="team-of-the-week"> -->
 
                         <!-- Add the main lighter coloured page section. -->
                         <!-- <section class="page-section"> -->
@@ -1378,7 +1380,8 @@
 
                         <!-- </section> -->
 
-                    </article>
+                        <!-- </article> -->
+                    </div>
 
                     <!-- 5. Comparison Tab -->
                     <article class="nav-targets" id="comparison">
@@ -1464,6 +1467,11 @@
                                     </div>
 
                                 </div>
+
+                                <!-- Add a div to hold the comparison explanation. -->
+                                <!-- <div class="comparison-explanation-section">
+                                    <span>The stats shown below are all time stats.</span>
+                                </div> -->
 
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-1-stats-container">
