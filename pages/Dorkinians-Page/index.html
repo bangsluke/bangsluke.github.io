@@ -378,6 +378,54 @@
 
                             </section>
 
+                            <!-- Awards Section -->
+                            <section class="homepage-club-awards-container">
+
+                                <h3 class="textleft">Club Awards</h3>
+
+                                <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                                <div class="information-bar" id="homepage-information-bar"></div>
+
+                                <div class="selection-container" id="homepage-club-awards-selection">
+
+                                    <!-- Add a drop down select box for the user to change the awards shown. -->
+
+                                    <!-- Let the user pick which season to filter for. -->
+                                    <select name="SeasonSelection" class="selection-dropdown"
+                                        id="homepage-awards-season-selection-dropdown" onchange="updateHomepageInfo()">
+                                        <option value="2016/17">2016/17</option>
+                                        <option value="2017/18" selected="selected">2017/18</option>
+                                        <option value="2018/19">2018/19</option>
+                                        <option value="2019/20">2019/20</option>
+                                        <option value="2020/21">2020/21</option>
+                                        <option value="2021/22">2021/22</option>
+                                    </select>
+
+                                    <!-- Let the user pick which team to filter for. -->
+                                    <select name="TeamSelection" class="selection-dropdown"
+                                        id="homepage-awards-team-selection-dropdown" onchange="updateHomepageInfo()">
+                                        <option value="WholeClub" selected="selected">Whole club</option>
+                                        <option value="1st XI">1st XI</option>
+                                        <option value="2nd XI">2nd XI</option>
+                                        <option value="3rd XI">3rd XI</option>
+                                        <option value="4th XI">4th XI</option>
+                                        <option value="5th XI">5th XI</option>
+                                        <option value="6th XI">6th XI</option>
+                                        <option value="7th XI">7th XI</option>
+                                        <option value="8th XI">8th XI</option>
+                                    </select>
+
+                                </div>
+
+                                <div id="homepage-club-awards-grid-container">
+
+
+
+
+                                </div>
+
+                            </section>
+
                         </section>
 
                     </article>
