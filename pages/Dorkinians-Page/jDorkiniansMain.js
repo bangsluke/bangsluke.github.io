@@ -35,6 +35,7 @@ console.time(); // Start the console timer.
 // Ready Global Variable
 var readyComponentsCount = 0;
 const numberReadyComponents = 8;
+// const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -44,7 +45,6 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
@@ -54,8 +54,20 @@ var phrasesArray = [
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Considering Dom Devlin's MoM...",
+    "Expecting goalkeeper hissy fit any moment now...",
+    "Dave Coleman is typing...",
+    "Probably should get out of 1st gear for the second half...",
+    "Waiting to see if Harry Lynn will turn up for the game...",
+    "Crying out for Al Thom to finally score a goal...",
+    "Sliding Shaun Patterson into TOTW because of a bet...",
+    "Counting out Will Westcott's late fines...",
+    "Adjusting teams on Saturday morning following late dropouts...",
+    "Waiting for Slado's speeches to finish...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
+// Deleted phrases.
+// "Hitting on the bar staff after the game...",
+// "Waiting for Ellenger to make his 1s debut...",
 
 // Globally define an object containing stat objects that can be referenced in other functions.
 const statObject = {
@@ -431,23 +443,8 @@ function init() {
     // Reset the readyComponentsCount.
     readyComponentsCount = 0;
 
-    // Initially show the loading text on the loading page using the typewriter effect.
-    // Clear the text element, define the initial required variables and then call the typeWriter function.
-    document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-    let i = 0; // The integer counter.
-    let speed = 50; // The speed/duration of the effect in milliseconds.
-    let phraseText = "Loading data into the site...";
-    typeWriter(); // Call the typeWriter function to update the HTML element with text.
-    function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-        if (i < phraseText.length) {
-            document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -492,7 +489,7 @@ function init() {
     let now = new Date();
     let nextSaturdayDate = nextDay(now, 6);
     nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday: "short", year: "numeric", month: "short", day: "numeric" }) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
-    document.getElementById("homepage-next-fixtures-header-text").innerHTML = "Next Fixtures (" + nextSaturdayDate + ")"; // Get the header and update it.
+    document.getElementById("homepage-next-fixtures-sub-header-text").innerHTML = nextSaturdayDate; // Get the header and update it.
 
 
     // Step 2.
@@ -576,41 +573,53 @@ function init() {
 
 
 
+// Reset the whole page by clicking on the logo in the top left.
+function resetFullPage() {
+    window.location.reload(false); // Reset the full page. https://www.w3docs.com/snippets/javascript/how-to-reload-a-page-using-javascript.html.
+}
+
+
+
 // Loading Functions
 
 // Update the phrase text on the page every few seconds.
 function updateLoadingPage() {
+    // console.log("updateLoadingPage called");
+
     // Create a setInterval for every 6 seconds to change the shown phrase.
     let loopPhrases = setInterval(function () {
-        let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
-        if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
-            console.log("loopPhrases timed out.")
-            alert("Page timed out. Please refresh."); // Pass an alert to the user.
-        }
-        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
-        // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
-        let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
-        // console.log("phraseText = " + phraseText); // Log the selected phrase.
+        // console.log("loopPhrases started");
 
-        // Reduce down the array removing the selected phrase so that it is not displayed again.
-        delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
-        phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
-            return true
-        });
+        // Initially set the opacity of the text container to be 0 (transparent).
+        document.getElementById("loading-page-loading-phrase-container").style.opacity = 0;
 
-        // Clear the text element, define the initial required variables and then call the typeWriter function.
-        // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
-        document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-        let i = 0; // The integer counter.
-        let speed = 50; // The speed/duration of the effect in milliseconds.
-        typeWriter(); // Call the typeWriter function to update the HTML element with text.
-        function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-            if (i < phraseText.length) {
-                document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-                i++;
-                setTimeout(typeWriter, speed);
+        // Then wait a second with no text (1000 milliseconds), update the text and fade it back up.
+        setTimeout(function () {
+            // console.log("Change text and fade back in started");
+
+            // Get the next phrase to display.
+            let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
+            if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
+                console.alert("loopPhrases timed out.") // Log the error.
+                alert("Page timed out. Please refresh."); // Pass an alert to the user.
             }
-        }
+            let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
+            let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
+            // console.log("pickedPhraseNumber = " + pickedPhraseNumber + ", and phraseText = " + phraseText); // Log the selected number and selected phrase.
+
+            // Reduce down the array removing the selected phrase so that it is not displayed again.
+            delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
+            phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
+                return true
+            });
+
+            // Add the text to the phrase id.
+            document.getElementById("loading-phrase").innerHTML = phraseText;
+
+            // Make the text visible again.
+            document.getElementById("loading-page-loading-phrase-container").style.opacity = 1
+
+        }, 1000)
 
         // React if the tab ready count matches the number of tabs.
         if (readyComponentsCount === numberReadyComponents || readyComponentsCount >= numberReadyComponents) {
@@ -834,7 +843,11 @@ function showTotalClubStatsInfo(results) {
     let statArray = ["numberGamesPlayed", "numberLeagueGamesPlayed", "numberCupGamesPlayed", "numberFriendlyGamesPlayed", "numberPlayers", "numberGoalsScored", "goalsPerGame", "numberGoalsConceded", "goalsConcededPerGame", "numberGoalscorers", "topGoalscorer"];
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
-        document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+        if (statObject[statArray[i]] == "") { // Check if the returned value is blank or not.
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a";
+        } else {
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+        }
     }
 
     // Increment the component ready count by 1.
@@ -849,61 +862,61 @@ function showTotalClubStatsInfo(results) {
 
 // 2.2.1. Team Season Results Info data "getter" function.
 function getTeamSeasonResultsInfo(results) {
-    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    // // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    // console.log('%c' + '>> getTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    // Process the original array of objects received.
-    displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
-    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
-    showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
+    // // Process the original array of objects received.
+    // displayTeamSeasonResultsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    // showTeamSeasonResultsInfo(displayTeamSeasonResultsArrayOfObjects); // Call the showTeamSeasonResultsInfo function.
 }
 
 // 2.2.2. Team Season Results Info data "show-er" function.
 function showTeamSeasonResultsInfo(results) {
-    // Display the retrieved data onto the page.
-    console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+    // // Display the retrieved data onto the page.
+    // console.log('%c' + '>> showTeamSeasonResultsInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
 
-    // Set the dataArrayOfObjects.
-    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // // Set the dataArrayOfObjects.
+    // const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
 
-    // console.log(dataArrayOfObjects); // Log the received array of objects.
-    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    // // console.log(dataArrayOfObjects); // Log the received array of objects.
+    // var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
-    // Season selection.
-    var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
-    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-    // Catch if the season value isn't a filterable value.
-    if (seasonValue === "All Seasons") {
-        seasonValue = "";
-    }
-    // console.log("seasonValue = " + seasonValue);
+    // // Filter the array of objects down. https://medium.com/@melaniecp/filtering-an-arrays-objects-based-on-a-value-in-a-key-value-array-using-filter-and-includes-27268968308f
+    // // Season selection.
+    // var seasonValueDropdown = document.getElementById("club-stats-season-selection-dropdown"); // Get the season selected dropdown.
+    // var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+    // // Catch if the season value isn't a filterable value.
+    // if (seasonValue === "All Seasons") {
+    //     seasonValue = "";
+    // }
+    // // console.log("seasonValue = " + seasonValue);
 
-    // Team selection.
-    var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
-    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-    // Catch if the team value isn't a filterable value.
-    if (teamValue === "Whole club") {
-        teamValue = "";
-    }
-    // console.log("teamValue = " + teamValue);
+    // // Team selection.
+    // var teamValueDropdown = document.getElementById("club-stats-team-selection-dropdown"); // Get the team selected dropdown.
+    // var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+    // // Catch if the team value isn't a filterable value.
+    // if (teamValue === "Whole club") {
+    //     teamValue = "";
+    // }
+    // // console.log("teamValue = " + teamValue);
 
-    // Filter for all selections.
-    // Re-use the re-usable function but don't pass all arguments.
-    const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, true, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
+    // // Filter for all selections.
+    // // Re-use the re-usable function but don't pass all arguments.
+    // const filteredArrayOfObjects = multiFilterArrayOfObjects(dataArrayOfObjects, false, "SEASON", seasonValue, "PLAYER NAME", "Player", "TEAM", teamValue, "LOCATION", "Location"); // Call the created filterArrayOfObjects function.
 
-    // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
-    objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
-    // console.log("New Length = " + objectLength); // Log the original length.
+    // // console.log(filteredArrayOfObjects); // Log the filtered array of objects.
+    // objectLength = filteredArrayOfObjects.length; // Get the new length of the array.
+    // // console.log("New Length = " + objectLength); // Log the original length.
 
-    // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
-    clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
-    createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
+    // // Call the clearTable and createFullTable functions, passing the table selector on which element to act on.
+    // clearTable("#team-season-results-table"); // Call the clearTable function to empty the table.
+    // createFullTable(filteredArrayOfObjects, "#team-season-results-table", true, "object"); // Call the createFullTable function, passing the data from PapaParse.
 
-    // Increment the component ready count by 1.
-    incrementComponentReadyCount("Club Stats - Teams Season Results");
+    // // Increment the component ready count by 1.
+    // incrementComponentReadyCount("Club Stats - Teams Season Results");
 }
 
 // 2.2.3. Team Season Results Info data "update-er" function.
@@ -1865,6 +1878,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // console.log('%c' + '>> Re-usable Function: multiFilterArrayOfObjects(ArrayOfObjects, keyNames , filterValues...) called. Passed variables: ArrayOfObjects = not shown, keyNameSeason = ' + keyNameSeason + ', filterValueSeason = ' + filterValueSeason, ', keyNamePlayer = ' + keyNamePlayer + ', filterValuePlayer = ' + filterValuePlayer, ', keyNameTeam = ' + keyNameTeam + ', filterValueTeam = ' + filterValueTeam, ', keyNameLocation = ' + keyNameLocation + ', filterValueLocation = ' + filterValueLocation, ' background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;'); // Log the selected site name and href.
     // Initially define the variable that will be manipulated and produced.
     var filteredArrayOfObjects = ArrayOfObjects;
+    console.log(ArrayOfObjects);
 
     // Check if the original ArrayOfObjects includes a toolTip row or not.
     if (toolTipBoolean === true) {
@@ -1884,7 +1898,7 @@ function multiFilterArrayOfObjects(ArrayOfObjects, toolTipBoolean, keyNameSeason
     // Filter the Array of Objects for multiple criteria.
 
     // Filter the Array of Objects for the defined season.
-    if (filterValueSeason === "Season") { // Don't filter if unpicked.
+    if (filterValueSeason === "Season" || filterValueSeason === "All Seasons") { // Don't filter if unpicked.
         // Do nothing as season hasn't been selected.
         // console.log(">>> Data not filtered for seasons as 'Season' still picked.")
     } else { // Filter the Array of Objects.
@@ -2071,13 +2085,13 @@ function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButt
         // Function used for onclick of all dropdown options.
         newOption.onclick = function () { // Add an onClick event to the added element. https://stackoverflow.com/a/3316223/14290169.
             document.getElementById(dropdownButtonID).value = playerNameArray[i]; // Update the button element to have the property value with the players name.
-            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.avif' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
+            document.getElementById(dropdownButtonID).innerHTML = playerNameArray[i] + "<img src='/pages/Dorkinians-Page/images/Down Arrow Icon.webp' alt='Down Arrow Icon' class='selection-dropdown-arrow-icon' height='25px' width='25px'>"; // Update the button text to show the player name.
             // alert("Hello from " + dropdownID + ", passed playerName: " + playerNameArray[i]);
             closeDropdownList(dropdownID, tabName); // Close the dropdown list.
             // Call the next function on the basis of what tab the dropdown is from.
-            if (tabName == "player-stats"){
+            if (tabName == "player-stats") {
                 showPlayerStatsTabUpdatedInfo(); // Update the Player Stats Tab.
-            } else if (tabName == "comparison"){
+            } else if (tabName == "comparison") {
                 updateComparisonStatData(); // Update the Comparison Tab.
             } else {
                 alert(dropdownID + " dropdown called from an unknown tab location?"); // Add a catch.

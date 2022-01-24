@@ -42,7 +42,8 @@ Section 1
 	/* --main-accent-colour: #3bee0e; */
 	--main-accent-colour-rgb: 249, 237, 50;
 	--secondary-accent-colour: #ffffff;
-	--tooltip-background-colour: #236f38;
+	/* --tooltip-background-colour: #236f38; */
+	--tooltip-background-colour: #CBECD5; /* Background of tooltip matches IOS inbuilt components. */
 
 	/* Light Theme Colours Used */
 	/* --main-background-colour: #1C8841; Main Dorkinians green.
@@ -75,7 +76,7 @@ Section 1
 	/* Snap Tabs */
 	--snap-tab-header-height: 2.5rem; /* Controls the height of the snap tab header section. */
 	/* --ChromeSafari-bottom-bar-height: 4.0rem; /* Previous estimate. */
-    --ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    /*--ChromeSafari-bottom-bar-height: 64px; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
     --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
     --vertical-space: 0.6rem; /* Controls the vertical space around the anchor text and for the article text. */
     --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
@@ -667,7 +668,6 @@ button > .selection-dropdown-arrow-icon {
   	bottom: 110%; /* Position above the container div. */
   	left: 50%; /* Center align the tooltip across the page. */
   	margin-left: -45%; /* Use half of the width, to center the tooltip */
-
 	opacity: 0; /* This will make the tooltip text invisible when it's not being hovered on */
     transition: opacity 1s; /* Fade the tool in when hovered over. https://www.bitdegree.org/learn/css-tooltip */
 }
@@ -693,6 +693,7 @@ button > .selection-dropdown-arrow-icon {
 	font-size: 0.7rem; /* Relative to root (html) value. */
 	text-transform: none;
 	text-align: left;
+	color: black;
 }
 
 
@@ -816,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -868,6 +869,8 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
+	height: 4rem;
+	opacity: 1;
 }
 #loading-page-loading-counter-container {
 	/* background: yellow; */
@@ -1206,6 +1209,13 @@ Section 4
 
 /* 1. Homepage Tab */
 
+#homepage-next-fixtures-header-text {
+	padding-bottom: 0.5rem;
+}
+#homepage-next-fixtures-sub-header-text {
+	padding-bottom: 1rem;
+	font-style: italic;
+}
 #homepage-next-fixtures-team-container {
 	/* background-color: #ce641d; */
 	display: grid;
@@ -1303,10 +1313,10 @@ Section 4
 }
 .club-stats-grid-item {
 	/* background-color: red; */
-	height: 2rem;
+	height: 2.4rem;
 	margin: 0;
 	padding: 0.4rem 0 0.4rem 0;
-	border-top: 1px solid #dfdfdf;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 #club-stats-total-club-and-team-stats-stats-grid-container h5 {
 	font-size: 0.9rem;
@@ -1354,7 +1364,7 @@ Section 4
 	position: relative;
 	width: calc(var(--pagewidth, 85%) - 10%); /* Set the width of each row container based on page width. */
 	display: grid;
-	grid-template-columns: 60% 20% 20%; /* First value is the text, second the stat value, last the image. */
+	grid-template-columns: 70% 20% 10%; /* First value is the text, second the stat value, last the image. */
 	grid-template-rows: 1fr;
 	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
 	margin: 0 auto;
@@ -1406,6 +1416,16 @@ Section 4
 
 /* 4. Team of the Week Tab */
 
+#team-of-the-week-placement-holder-div { /* Remove when ready to show on the page. */
+	visibility: hidden; /* Remove when ready to show on the page. */
+	display: none; /* Remove when ready to show on the page. */
+}
+
+#team-of-the-week {
+	visibility: hidden; /* Remove when ready to show on the page. */
+	display: none; /* Remove when ready to show on the page. */
+}
+
 .team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
@@ -1446,6 +1466,7 @@ Section 4
 	gap: 1rem 2%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
+	  /* "Explanation Explanation Explanation" */
 	  "Player1Stats Blank Player2Stats"
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
@@ -1480,6 +1501,13 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
+/* Style the explanation section. */
+/* .comparison-explanation-section {
+	background-color: orange;
+	grid-area: Explanation;
+	padding: 0.3rem;
+	width: 100%;
+} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
