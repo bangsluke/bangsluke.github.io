@@ -1255,6 +1255,21 @@ Section 4
 	padding: 0.3rem;
 }
 
+#homepage-club-captains-and-awards-grid-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 50% 50%; 
+	grid-template-rows: 1fr;
+	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
+	/* justify-items: stretch; */
+	justify-items: start; /* Align the cells in the grid horizontally to the left. */
+	/* align-items: stretch; */
+	align-items: center; /* Align the cells in the grid vertically central to the row. */
+	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
+	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+}
+
+
 
 
 /* 2. Club Stats Tab */

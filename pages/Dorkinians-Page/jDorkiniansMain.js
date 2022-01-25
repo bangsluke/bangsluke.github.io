@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 8;
+const numberReadyComponents = 9;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -372,6 +372,9 @@ var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
+const captainsAndAwardsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1483872425&single=true&output=csv';
+var displayCaptainsAndAwardsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
 // Club Stats Tab
 
 // Total Club Stats
@@ -480,7 +483,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
+        complete: getHomepageTabNextFixturesInfo, // The callback to execute when parsing is complete.
     })
 
     // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
@@ -490,6 +493,14 @@ function init() {
     let nextSaturdayDate = nextDay(now, 6);
     nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday: "short", year: "numeric", month: "short", day: "numeric" }) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
     document.getElementById("homepage-next-fixtures-sub-header-text").innerHTML = nextSaturdayDate; // Get the header and update it.
+
+    // Captains and Awards data.
+    Papa.parse(captainsAndAwardsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
+    })
 
 
     // Step 2.
@@ -717,22 +728,22 @@ function getPlayerDropdownInfo(results) {
 
 // 1. Homepage Tab
 
-// 1.1. Homepage tab data "getter" function.
-function getHomepageTabInfo(results) {
+// 1.1. Homepage tab next fixtures data "getter" function.
+function getHomepageTabNextFixturesInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getHomepageTabNextFixturesInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
-    showHomepageTabInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabInfo function.
+    showHomepageTabNextFixturesInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabNextFixturesInfo function.
 }
 
-// 1.2. Homepage tab data "show-er" function.
-function showHomepageTabInfo(results) {
+// 1.2. Homepage tab next fixtures data "show-er" function.
+function showHomepageTabNextFixturesInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showHomepageTabNextFixturesInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
@@ -759,8 +770,85 @@ function showHomepageTabInfo(results) {
     }
 
     // Increment the component ready count by 1.
-    incrementComponentReadyCount("Homepage");
+    incrementComponentReadyCount("Homepage Next Fixtures");
 }
+
+// 1.3. Homepage tab captains and awards data "getter" function.
+function getHomepageTabCaptainsAndAwardsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getHomepageTabCaptainsAndAwardsInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayCaptainsAndAwardsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayCaptainsAndAwardsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayCaptainsAndAwardsArrayOfObjects); // Log the global variable.
+    showHomepageTabCaptainsAndAwardsInfo(displayCaptainsAndAwardsArrayOfObjects); // Call the showHomepageTabCaptainsAndAwardsInfo function.
+}
+
+// 1.4. Homepage tab captains and awards data "show-er" function.
+function showHomepageTabCaptainsAndAwardsInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showHomepageTabCaptainsAndAwardsInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    //console.log("dataArrayOfObjects[0]");
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects);
+
+    // Get the drop down selection values to be used for displaying the correct information.
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("homepage-captains-and-awards-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Team selection.
+    var teamValueDropdown = document.getElementById("homepage-captains-and-awards-team-selection-dropdown"); // Get the team selected dropdown.
+    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
+
+
+
+    
+    // Populate the captains and awards details on the page.  
+    for (let i = 0; i < objectLength; i++) {
+
+        let HTMLID = dataArrayOfObjects[i]["HTML ID"]; // Define the HTML ID to be updated that is received from the data array of objects.
+        let foundValue = dataArrayOfObjects[i][seasonValue]; // Define the person to be added to the page that is recieved from the data array of objects.
+        document.getElementById("homepage-" + HTMLID).innerHTML = foundValue; // Add the found player name(s) to the page.
+        // console.log("Element homepage-" + HTMLID + " populated"); // Log that the element has been populated.
+
+    }
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Homepage Captains and Awards");
+}
+
+// 1.5. Homepage data "update-er" function.
+function updateHomepageInfo() {
+    // Create a function that is called when the user changes a dropdown on the Homepage tab. This function is called from the HTML select elements.
+
+    // Display the refreshed data onto the page.
+    console.log('%c' + '>> updateHomepageInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showHomepageTabCaptainsAndAwardsInfo(displayCaptainsAndAwardsArrayOfObjects); // Call the showHomepageTabCaptainsAndAwardsInfo function.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+
+
+
+
+
 
 
 
