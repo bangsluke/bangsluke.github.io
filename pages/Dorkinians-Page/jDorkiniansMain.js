@@ -444,7 +444,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -787,6 +787,8 @@ function showTotalClubStatsInfo(results) {
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects); // Log the returned data.
 
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
@@ -1966,43 +1968,43 @@ function formatValue(valueToBeFormatted, statFormat) {
 
 // Full Screen functions (https://stackoverflow.com/a/23971798/14290169).
 
-function isFullScreen() {
-    return (document.fullScreenElement && document.fullScreenElement !== null)
-        || document.mozFullScreen
-        || document.webkitIsFullScreen;
-}
+// function isFullScreen() {
+//     return (document.fullScreenElement && document.fullScreenElement !== null)
+//         || document.mozFullScreen
+//         || document.webkitIsFullScreen;
+// }
 
-function requestFullScreen(element) {
-    if (element.requestFullscreen)
-        element.requestFullscreen();
-    else if (element.msRequestFullscreen)
-        element.msRequestFullscreen();
-    else if (element.mozRequestFullScreen)
-        element.mozRequestFullScreen();
-    else if (element.webkitRequestFullscreen)
-        element.webkitRequestFullscreen();
-}
+// function requestFullScreen(element) {
+//     if (element.requestFullscreen)
+//         element.requestFullscreen();
+//     else if (element.msRequestFullscreen)
+//         element.msRequestFullscreen();
+//     else if (element.mozRequestFullScreen)
+//         element.mozRequestFullScreen();
+//     else if (element.webkitRequestFullscreen)
+//         element.webkitRequestFullscreen();
+// }
 
-function exitFullScreen() {
-    if (document.exitFullscreen)
-        document.exitFullscreen();
-    else if (document.msExitFullscreen)
-        document.msExitFullscreen();
-    else if (document.mozCancelFullScreen)
-        document.mozCancelFullScreen();
-    else if (document.webkitExitFullscreen)
-        document.webkitExitFullscreen();
-}
+// function exitFullScreen() {
+//     if (document.exitFullscreen)
+//         document.exitFullscreen();
+//     else if (document.msExitFullscreen)
+//         document.msExitFullscreen();
+//     else if (document.mozCancelFullScreen)
+//         document.mozCancelFullScreen();
+//     else if (document.webkitExitFullscreen)
+//         document.webkitExitFullscreen();
+// }
 
-function toggleFullScreen(element) {
-    if (isFullScreen()) {
-        console.log("Exiting full screen mode.");
-        exitFullScreen();
-    } else {
-        console.log("Entering full screen mode.");
-        requestFullScreen(element || document.documentElement);
-    }
-}
+// function toggleFullScreen(element) {
+//     if (isFullScreen()) {
+//         console.log("Exiting full screen mode.");
+//         exitFullScreen();
+//     } else {
+//         console.log("Entering full screen mode.");
+//         requestFullScreen(element || document.documentElement);
+//     }
+// }
 
 
 
