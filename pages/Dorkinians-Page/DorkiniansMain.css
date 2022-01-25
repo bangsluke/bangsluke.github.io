@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1307,7 +1307,7 @@ Section 4
 	/* background-color: orange; */
 	grid-area: StatsSection;
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 60% 40%;
 	grid-template-rows: repeat(11, max-content);
 	gap: 0.5rem 0rem; /* First value is between rows, second columns. */
 }
