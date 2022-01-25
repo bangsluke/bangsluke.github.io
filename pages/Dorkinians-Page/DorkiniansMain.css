@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
