@@ -26,7 +26,8 @@
 	/* background-color: lightgoldenrodyellow; */
 	position: fixed; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
 	top: 0rem; /* Lock the container to the top of the side menu. */
-	height: 6rem;
+	/* height: 6rem; */
+	height: 100px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
 	padding-top: 1rem;
 	width: 80%; /* Set the width to be the same as the width of the open side menu. */
 	display: flex; /* Add flex to the top level container. */
