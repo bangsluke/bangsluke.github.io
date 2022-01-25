@@ -787,12 +787,12 @@ function showTotalClubStatsInfo(results) {
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
-    console.log("dataArrayOfObjects");
-    console.log(dataArrayOfObjects); // Log the returned data.
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects); // Log the returned data.
 
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
-    console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
     // Get the drop down selection values to be used for displaying the correct information.
 
@@ -806,8 +806,8 @@ function showTotalClubStatsInfo(results) {
 
     // Create an ID to lookup and match to in the passed data.
     var lookUpID = seasonValue + " - " + teamValue;
-    console.log("lookUpID =");
-    console.log(lookUpID);
+    // console.log("lookUpID =");
+    // console.log(lookUpID);
 
     // Loop through the passed data and get the row of data to be displayed and used.
     var arrayNumberRef = 0;
