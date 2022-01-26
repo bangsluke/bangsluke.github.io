@@ -74,6 +74,7 @@ const statObject = {
     APP: {
         statName: 'Appearances',
         displayText: 'Appearances:', // The text displayed at all times on the page.
+        shortText: 'Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
         statHigherBetterBoolean: true,
@@ -83,6 +84,7 @@ const statObject = {
     M: {
         statName: 'Minutes',
         displayText: 'Minutes played:', // The text displayed at all times on the page.
+        shortText: 'Mins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
         statHigherBetterBoolean: true,
@@ -92,6 +94,7 @@ const statObject = {
     MOM: {
         statName: 'Man of the Matches',
         displayText: 'Man of the Matches:', // The text displayed at all times on the page.
+        shortText: 'MoMs', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
         statHigherBetterBoolean: true,
@@ -101,6 +104,7 @@ const statObject = {
     G: {
         statName: 'Goals Scored',
         displayText: 'Goals scored:', // The text displayed at all times on the page.
+        shortText: 'Goals', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
         statHigherBetterBoolean: true,
@@ -110,6 +114,7 @@ const statObject = {
     A: {
         statName: 'Assists',
         displayText: 'Assists provided:', // The text displayed at all times on the page.
+        shortText: 'Assists', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
         statHigherBetterBoolean: true,
@@ -119,6 +124,7 @@ const statObject = {
     Y: {
         statName: 'Yellow Cards',
         displayText: 'Yellow cards received:', // The text displayed at all times on the page.
+        shortText: 'Yel', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
         statHigherBetterBooleanArray: false,
@@ -128,6 +134,7 @@ const statObject = {
     R: {
         statName: 'Red Cards',
         displayText: 'Red cards received:', // The text displayed at all times on the page.
+        shortText: 'Red', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
         statHigherBetterBoolean: false,
@@ -137,6 +144,7 @@ const statObject = {
     OG: {
         statName: 'Own Goals',
         displayText: 'Own goals scored:', // The text displayed at all times on the page.
+        shortText: 'OGs', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
         statHigherBetterBoolean: false,
@@ -146,6 +154,7 @@ const statObject = {
     C: {
         statName: 'Conceded',
         displayText: 'Goals conceded:', // The text displayed at all times on the page.
+        shortText: 'Con', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
         statHigherBetterBoolean: false,
@@ -155,6 +164,7 @@ const statObject = {
     CLS: {
         statName: 'Clean Sheets',
         displayText: 'Clean sheets achieved:', // The text displayed at all times on the page.
+        shortText: 'CLS', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
         statHigherBetterBoolean: true,
@@ -164,6 +174,7 @@ const statObject = {
     PSC: {
         statName: 'Penalties Scored',
         displayText: 'Penalties scored:', // The text displayed at all times on the page.
+        shortText: 'Pens', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
         statHigherBetterBoolean: true,
@@ -173,6 +184,7 @@ const statObject = {
     PM: {
         statName: 'Penalties Missed',
         displayText: 'Penalties missed:', // The text displayed at all times on the page.
+        shortText: 'Pens Mis', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
         statHigherBetterBoolean: false,
@@ -182,6 +194,7 @@ const statObject = {
     PCO: {
         statName: 'Penalties Conceded',
         displayText: 'Penalties conceded:', // The text displayed at all times on the page.
+        shortText: 'Pens Con', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
         statHigherBetterBoolean: false,
@@ -191,6 +204,7 @@ const statObject = {
     PSV: {
         statName: 'Penalties Saved',
         displayText: 'Penalties saved:', // The text displayed at all times on the page.
+        shortText: 'Pens Save', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
         statHigherBetterBoolean: true,
@@ -200,6 +214,7 @@ const statObject = {
     FTP: {
         statName: 'Fantasy Points',
         displayText: 'Fantasy points achieved:', // The text displayed at all times on the page.
+        shortText: 'FTP', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
         statHigherBetterBoolean: true,
@@ -209,6 +224,7 @@ const statObject = {
     GperAPP: {
         statName: 'Goals Per Appearance',
         displayText: 'Goals per app:', // The text displayed at all times on the page.
+        shortText: 'GperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -218,6 +234,7 @@ const statObject = {
     CperAPP: {
         statName: 'Conceded Per Appearance',
         displayText: 'Goals conceded per app:', // The text displayed at all times on the page.
+        shortText: 'CperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
         statHigherBetterBoolean: false,
@@ -227,6 +244,7 @@ const statObject = {
     MperG: {
         statName: 'Minutes Per Goal',
         displayText: 'Minutes per goal scored:', // The text displayed at all times on the page.
+        shortText: 'MperG', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
         statHigherBetterBoolean: false,
@@ -236,6 +254,7 @@ const statObject = {
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
         displayText: 'Minutes per clean sheet:', // The text displayed at all times on the page.
+        shortText: 'MperCLS', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
         statHigherBetterBoolean: false,
@@ -245,6 +264,7 @@ const statObject = {
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
         displayText: 'Fantasy points per app:', // The text displayed at all times on the page.
+        shortText: 'FTPperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -254,6 +274,7 @@ const statObject = {
     DIST: {
         statName: 'Distance Travelled',
         displayText: 'Distance travelled:', // The text displayed at all times on the page.
+        shortText: 'Dist', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal1',
         description: 'The distance travelled in miles by the player getting to away games.',
         statHigherBetterBoolean: true,
@@ -263,6 +284,7 @@ const statObject = {
     "Games%Won": {
         statName: 'Percentage Games Won',
         displayText: '% games won:', // The text displayed at all times on the page.
+        shortText: '% Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
         statHigherBetterBoolean: true,
@@ -272,6 +294,7 @@ const statObject = {
     HomeGames: {
         statName: 'Home Games',
         displayText: 'Home games:', // The text displayed at all times on the page.
+        shortText: 'H Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
         statHigherBetterBoolean: true,
@@ -281,6 +304,7 @@ const statObject = {
     HomeWins: {
         statName: 'Home Wins',
         displayText: 'Home wins:', // The text displayed at all times on the page.
+        shortText: 'H Wins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -290,6 +314,7 @@ const statObject = {
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
         displayText: '% home games won:', // The text displayed at all times on the page.
+        shortText: '% H Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -299,6 +324,7 @@ const statObject = {
     AwayGames: {
         statName: 'Away Games',
         displayText: 'Away games:', // The text displayed at all times on the page.
+        shortText: 'A Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
         statHigherBetterBoolean: true,
@@ -308,6 +334,7 @@ const statObject = {
     AwayWins: {
         statName: 'Away Wins',
         displayText: 'Away wins:', // The text displayed at all times on the page.
+        shortText: 'A Wins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -317,6 +344,7 @@ const statObject = {
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
         displayText: '% away games won:', // The text displayed at all times on the page.
+        shortText: '% A Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -326,6 +354,7 @@ const statObject = {
     "MostPlayedForTeam": {
         statName: 'Most Played for Team',
         displayText: 'Most played for team:', // The text displayed at all times on the page.
+        shortText: 'Most Play', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has appeared for most.',
         statHigherBetterBoolean: false,
@@ -335,6 +364,7 @@ const statObject = {
     "NumberTeamsPlayedFor": {
         statName: 'Number of Teams Played for',
         displayText: 'Number teams played for:', // The text displayed at all times on the page.
+        shortText: '# Teams', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The number of Dorkinians teams that the player has appeared for.',
         statHigherBetterBoolean: true,
@@ -344,6 +374,7 @@ const statObject = {
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
         displayText: 'Number seasons played for:', // The text displayed at all times on the page.
+        shortText: '# Season', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
@@ -353,6 +384,7 @@ const statObject = {
     "MostScoredForTeam": {
         statName: 'Most Scored for Team',
         displayText: 'Most scored for team:', // The text displayed at all times on the page.
+        shortText: 'Most G', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has scored the most for.',
         statHigherBetterBoolean: false,
@@ -1367,6 +1399,10 @@ function showComparisonStatData() {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
+            // Dynamically add a short bit of text to the row to explain what it is.
+            console.log("comparison-" + statsArray[i] + "-short-text");
+            document.getElementById("comparison-" + statsArray[i] + "-short-text").innerHTML = statObject[statsArray[i]].shortText; // Populate the short text element dynamically. 
+
             // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
             let containerElement = document.getElementById("comparison-" + statsArray[i] + "-container"); // Get the container element dynamically.               
             const toolTipSpanElement = document.createElement("span"); // Create a span element.
