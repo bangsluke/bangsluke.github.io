@@ -1260,7 +1260,7 @@ Section 4
 	width: 100%;
 	grid-template-columns: 50% 50%; 
 	grid-template-rows: 1fr;
-	gap: 0.3rem 1rem; /* First value is between rows, second columns. */
+	gap: 0.3rem 0rem; /* First value is between rows, second columns. */
 	/* justify-items: stretch; */
 	justify-items: start; /* Align the cells in the grid horizontally to the left. */
 	/* align-items: stretch; */
@@ -1268,11 +1268,19 @@ Section 4
 	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
 	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
 }
+.homepage-grid-item {
+	/* background-color: red; */
+	height: 2.4rem;
+	width: 100%;
+	margin: 0;
+	padding: 0.4rem 0 0.4rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 #homepage-club-captains-and-awards-grid-container h4 {
 	font-size: 0.8rem;
 	color: var(--main-accent-colour, yellow);
+	padding-right: 0.2rem; /* Add a slight amount of padding to the right of the heading text to leave a gap to the players names. */
 }
-
 
 
 

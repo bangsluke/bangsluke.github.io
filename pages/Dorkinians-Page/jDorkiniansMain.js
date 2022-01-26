@@ -796,31 +796,39 @@ function showHomepageTabCaptainsAndAwardsInfo(results) {
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
-    //console.log("dataArrayOfObjects[0]");
     // console.log("dataArrayOfObjects");
     // console.log(dataArrayOfObjects);
 
     // Get the drop down selection values to be used for displaying the correct information.
 
+    // Display selection. Letting user choose what to display (captains, club awards or team awards).
+    var displayValueDropdown = document.getElementById("homepage-captains-and-awards-display-selection-dropdown"); // Get the display selected dropdown.
+    var displayValue = displayValueDropdown.options[displayValueDropdown.selectedIndex].value; // Get the display selected. (https://stackoverflow.com/a/8549358/14290169).
+
     // Season selection.
     var seasonValueDropdown = document.getElementById("homepage-captains-and-awards-season-selection-dropdown"); // Get the season selected dropdown.
     var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
 
-    // Team selection.
-    var teamValueDropdown = document.getElementById("homepage-captains-and-awards-team-selection-dropdown"); // Get the team selected dropdown.
-    var teamValue = teamValueDropdown.options[teamValueDropdown.selectedIndex].text; // Get the team selected. (https://stackoverflow.com/a/8549358/14290169).
-
-
-
-    
     // Populate the captains and awards details on the page.  
     for (let i = 0; i < objectLength; i++) {
-
         let HTMLID = dataArrayOfObjects[i]["HTML ID"]; // Define the HTML ID to be updated that is received from the data array of objects.
         let foundValue = dataArrayOfObjects[i][seasonValue]; // Define the person to be added to the page that is recieved from the data array of objects.
         document.getElementById("homepage-" + HTMLID).innerHTML = foundValue; // Add the found player name(s) to the page.
-        // console.log("Element homepage-" + HTMLID + " populated"); // Log that the element has been populated.
+    }
 
+    // Loop through all child elements of the container and hide based on if their class matches the user selection. https://www.tutorialkart.com/javascript/how-to-iterate-over-children-of-html-element-in-javascript/
+    let parentElement = document.getElementById('homepage-club-captains-and-awards-grid-container'); // Define the parent container element.
+    let childrenElements = parentElement.children; // Define an array of child elements. 
+    for (var i = 0; i < childrenElements.length; i++) {
+        
+        let childElement = childrenElements[i]; // Define the child element to change.
+        if (childElement.classList.contains(displayValue)) { // Check if the element has a class with name "displayValue". https://stackoverflow.com/a/5898748/14290169
+            // Show the elements as the selection matches the value.
+            childElement.classList.remove("hidden"); // Apply the correct CSS class to the container element.
+        } else {
+            // Hide the elements as the selection does not match the value.
+            childElement.classList.add("hidden"); // Apply the correct CSS class to the container element.
+        }
     }
 
     // Increment the component ready count by 1.
