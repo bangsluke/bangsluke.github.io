@@ -1487,16 +1487,21 @@ Section 4
 /* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
+	width: 100%;
 	display: grid;
-	grid-template-columns: 45% 6% 45%; 
+	grid-template-columns: 15% 38% 6% 38%; 
 	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 2%; /* First value is between rows, second columns. */
+	gap: 1rem 1%; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "PlayerSelection1 Blank PlayerSelection2"
-	  /* "Explanation Explanation Explanation" */
-	  "Player1Stats Blank Player2Stats"
-	  "StatCategorySelection StatCategorySelection StatCategorySelection"
-	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
+	  "Space PlayerSelection1 Blank PlayerSelection2"
+	  "Space Player1Stats Blank Player2Stats"
+	  "Space StatCategorySelection StatCategorySelection StatCategorySelection"
+	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
+}
+.comparison-space-container {
+	/* background-color: blue; */
+	grid-area: Space;
+	width: 100%;
 }
 /* Style the player 1 selection container. */ 
 .comparison-player-1-selection-container {
@@ -1504,6 +1509,10 @@ Section 4
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 	width: 100%;
+}
+#comparison-player-1-selection-dropdown-button, #comparison-player-2-selection-dropdown-button {
+	width: 20%;
+	min-width: 7.5rem !important; /* Set the width of the two specific buttons. */
 }
 /* Add some unique styling to the player 1 selection dropdown component. */ 
 #comparison-player-1-selection-dropdown-contents {
@@ -1528,13 +1537,6 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
-/* Style the explanation section. */
-/* .comparison-explanation-section {
-	background-color: orange;
-	grid-area: Explanation;
-	padding: 0.3rem;
-	width: 100%;
-} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
@@ -1568,9 +1570,14 @@ Section 4
 	display: grid;
 	/* flex-flow: column wrap; */
 	width: 100%;
-	grid-template-columns: 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
+	grid-template-columns: 15% 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
 	grid-template-rows: 1.5rem; /* One row height. */
 	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+}
+/* Style the explanation font on the left of the comparison tab. */
+.comparison-stats-table-row-container p {
+	font-size: 0.6rem;
+	align-self: center; /* Vertically align the text to the center point of the row container. */
 }
 div.cell {
 	/* background: LightBlue; */
