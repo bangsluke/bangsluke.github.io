@@ -1298,11 +1298,6 @@ Section 4
 	  "AllClubResults";
 }
 
-/* Style the selection section at the top of the page. */
-#club-stats-team-season-results-selection {
-	/* background-color: pink; */
-}
-
 /* Whole Club Stats Section */
 #club-stats-total-club-and-team-stats-container {
 	/* background-color: blue; */
@@ -1412,22 +1407,22 @@ Section 4
 }
 
 /* This Season Stats */
-#player-stats-this-season-top-container {
-	/* background-color: greenyellow;	 */
-}
-.player-stats-this-season-stat-container {
-	/* background-color: violet; */
-}
+/* #player-stats-this-season-top-container {
+	background-color: greenyellow;	
+} */
+/* .player-stats-this-season-stat-container {
+	background-color: violet;
+} */
 /* Add a class just for the divs that hold the yellow and red cards. */
-.player-stats-this-season-stat-container div {
-	/* background-color: rgb(132, 130, 238); */
-}
-.player-stats-this-season-stat-container h5 {
-	/* background-color: red; */
-}
-.player-stats-this-season-stat-container img {
-	/* background-color: blue; */
-}
+/* .player-stats-this-season-stat-container div {
+	background-color: rgb(132, 130, 238);
+} */
+/* .player-stats-this-season-stat-container h5 {
+	background-color: red;
+} */
+/* .player-stats-this-season-stat-container img {
+	background-color: blue;
+} */
 
 
 /* Past Season Stats */
@@ -1436,9 +1431,9 @@ Section 4
 }
 
 /* All Time Stats */
-#player-stats-all-time-top-container {
-	/* background-color: lightblue; */
-}
+/* #player-stats-all-time-top-container {
+	background-color: lightblue;
+} */
 
 
 /* 4. Team of the Week Tab */
