@@ -374,7 +374,7 @@ const statObject = {
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
         displayText: 'Number seasons played for:', // The text displayed at all times on the page.
-        shortText: '# Season', // Used for short displays such as on the Comparison tab.
+        shortText: '# Seasons', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
@@ -852,7 +852,7 @@ function showHomepageTabCaptainsAndAwardsInfo(results) {
     let parentElement = document.getElementById('homepage-club-captains-and-awards-grid-container'); // Define the parent container element.
     let childrenElements = parentElement.children; // Define an array of child elements. 
     for (var i = 0; i < childrenElements.length; i++) {
-        
+
         let childElement = childrenElements[i]; // Define the child element to change.
         if (childElement.classList.contains(displayValue)) { // Check if the element has a class with name "displayValue". https://stackoverflow.com/a/5898748/14290169
             // Show the elements as the selection matches the value.
@@ -1445,7 +1445,7 @@ function updateComparisonStatData() {
         // Do nothing as neither dropdown has had anything selected.
         console.log("Neither dropdown has a player selected.");
         // Update the information bar.
-        displayInformation("comparison-information-bar", "Select a first player to view their stats");
+        displayInformation("comparison-information-bar", "Select a first player to view their stats...");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
@@ -1461,7 +1461,7 @@ function updateComparisonStatData() {
         // Player 1 dropdown is blank so fill in details for player 2.
         console.log("Player 1 dropdown is blank so fill in details for player 2.");
         // Update the information bar.
-        displayInformation("comparison-information-bar", "Select a second player to compare to");
+        displayInformation("comparison-information-bar", "Select a second player to compare to...");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
@@ -1477,7 +1477,7 @@ function updateComparisonStatData() {
         // Player 2 dropdown is blank so fill in details for player 1.
         console.log("Player 2 dropdown is blank so fill in details for player 1.");
         // Update the information bar.
-        displayInformation("comparison-information-bar", "Select a second player to compare to");
+        displayInformation("comparison-information-bar", "Select a second player to compare to...");
         // Loop through the stat array calling in the load stat data function but not filling up the bars.
         for (let i = 0; i < statsArray.length; i++) {
             // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
