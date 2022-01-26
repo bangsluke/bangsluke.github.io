@@ -52,8 +52,8 @@
         </div>
 
         <!-- Add a div to hold the random phrase text. -->
-        <div class="loading-page-container fadein" id="loading-page-loading-phrase-container">
-            <p id="loading-phrase"></p>
+        <div class="loading-page-container" id="loading-page-loading-phrase-container" style="transition: opacity 1s">
+            <p class="fadein" id="loading-phrase">Loading data into the site...</p>
         </div>
 
         <!-- Add a div to hold the loading counter text. -->
@@ -378,6 +378,125 @@
 
                             </section>
 
+                            <!-- Awards Section -->
+                            <section class="homepage-club-captains-and-awards-container">
+
+                                <h3 class="textleft">Club Captains and Awards</h3>
+
+                                <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                                <div class="information-bar" id="homepage-information-bar"></div>
+
+                                <div class="selection-container" id="homepage-club-captains-and-awards-selection">
+
+                                    <!-- Add a drop down select box for the user to change the awards shown. -->
+
+                                    <!-- Let the user pick if to show captains or awards. -->
+                                    <select name="DisplaySelection" class="selection-dropdown"
+                                        id="homepage-captains-and-awards-display-selection-dropdown"
+                                        onchange="updateHomepageInfo()">
+                                        <option value="ClubAwards" selected="selected">Club Awards</option>
+                                        <option value="TeamAwards">Team Awards</option>
+                                        <option value="Captains">Captains</option>
+                                    </select>
+
+                                    <!-- Let the user pick which season to filter for. -->
+                                    <select name="SeasonSelection" class="selection-dropdown"
+                                        id="homepage-captains-and-awards-season-selection-dropdown"
+                                        onchange="updateHomepageInfo()">
+                                        <option value="2016/17">2016/17</option>
+                                        <option value="2017/18" selected="selected">2017/18</option>
+                                        <option value="2018/19">2018/19</option>
+                                        <option value="2019/20">2019/20</option>
+                                        <option value="2020/21">2020/21</option>
+                                        <option value="2021/22">2021/22</option>
+                                    </select>
+
+                                </div>
+
+                                <div id="homepage-club-captains-and-awards-grid-container">
+
+                                    <h4 class="homepage-grid-item Captains">Club Captain</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-club-captain"></p>
+
+                                    <h4 class="homepage-grid-item Captains">1st XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-1st-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">2nd XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-2nd-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">3rd XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-3rd-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">4th XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-4th-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">5th XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-5th-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">6th XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-6th-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">7th XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-7th-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">8th XI Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-8th-xi-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item Captains">Vets Captain(s)</h4>
+                                    <p class="homepage-grid-item Captains" id="homepage-vets-captain(s)"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Player of the Season Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Young Player of the Season Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-young-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Most Improved Player of the Season Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-most-improved-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Newcomer of the Year Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-newcomer-of-the-year-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Alan Lambert Sportsmanship Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-alan-lambert-sportsmanship-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Chairman's Cup</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-chairman's-cup"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Peter Mills Volunteers Award</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-peter-mills-volunteers-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">1st XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-1st-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">2nd XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-2nd-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">3rd XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-3rd-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">4th XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-4th-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">5th XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-5th-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">6th XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-6th-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">7th XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-7th-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">8th XI Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-8th-xi-squad-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item TeamAwards">Vets Squad Player of the Season Award</h4>
+                                    <p class="homepage-grid-item TeamAwards" id="homepage-vets-squad-player-of-the-season-award"></p>
+
+                                </div>
+
+                            </section>
+
                         </section>
 
                     </article>
@@ -412,7 +531,7 @@
                                 <!-- Let the user pick which team to filter for. -->
                                 <select name="TeamSelection" class="selection-dropdown"
                                     id="club-stats-team-selection-dropdown" onchange="updateClubStatsInfo()">
-                                    <option value="WholeClub" selected="selected">Whole club</option>
+                                    <option value="WholeClub" selected="selected">Whole Club</option>
                                     <option value="1st XI">1st XI</option>
                                     <option value="2nd XI">2nd XI</option>
                                     <option value="3rd XI">3rd XI</option>
@@ -1402,6 +1521,9 @@
                                     id="background-overlay-selection-dropdown-comparison" style="display: none"
                                     onclick="closeDropdownList()"></div>
 
+                                <!-- Add a blank div to facilitate the spacing of the comparison tab. -->
+                                <div class="comparison-space-container"></div>
+
                                 <!-- Add a div to hold the player dropdown. -->
                                 <div class="comparison-player-1-selection-container">
 
@@ -1468,11 +1590,6 @@
 
                                 </div>
 
-                                <!-- Add a div to hold the comparison explanation. -->
-                                <!-- <div class="comparison-explanation-section">
-                                    <span>The stats shown below are all time stats.</span>
-                                </div> -->
-
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-1-stats-container">
                                     <h4 class="center">Player 1 Stats</h4>
@@ -1506,6 +1623,8 @@
                                     <!-- Appearances -->
                                     <div class="comparison-stats-table-row-container" id="comparison-APP-container">
 
+                                        <p id="comparison-APP-short-text"></p>
+
                                         <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
 
                                         <!-- This div forms the stats bar which is modified by jDorkiniansMain.js -->
@@ -1536,6 +1655,8 @@
 
                                     <!-- Minutes -->
                                     <div class="comparison-stats-table-row-container" id="comparison-M-container">
+
+                                        <p id="comparison-M-short-text"></p>
 
                                         <!-- Below two divs copies from online YouTube progress bar tutorial: https://www.youtube.com/watch?v=4LBRMSk6PLY&ab_channel=PedroTech -->
 
@@ -1568,6 +1689,8 @@
                                     <!-- MoMs -->
                                     <div class="comparison-stats-table-row-container" id="comparison-MOM-container">
 
+                                        <p id="comparison-MOM-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-MOM-player-1-bar-container">
@@ -1596,6 +1719,8 @@
 
                                     <!-- Goals -->
                                     <div class="comparison-stats-table-row-container" id="comparison-G-container">
+
+                                        <p id="comparison-G-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1626,6 +1751,8 @@
                                     <!-- Assists -->
                                     <div class="comparison-stats-table-row-container" id="comparison-A-container">
 
+                                        <p id="comparison-A-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-A-player-1-bar-container">
@@ -1654,6 +1781,8 @@
 
                                     <!-- Yellow Cards -->
                                     <div class="comparison-stats-table-row-container" id="comparison-Y-container">
+
+                                        <p id="comparison-Y-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1684,6 +1813,8 @@
                                     <!-- Red Cards -->
                                     <div class="comparison-stats-table-row-container" id="comparison-R-container">
 
+                                        <p id="comparison-R-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-R-player-1-bar-container">
@@ -1712,6 +1843,8 @@
 
                                     <!-- Own Goals -->
                                     <div class="comparison-stats-table-row-container" id="comparison-OG-container">
+
+                                        <p id="comparison-OG-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1742,6 +1875,8 @@
                                     <!-- Conceded -->
                                     <div class="comparison-stats-table-row-container" id="comparison-C-container">
 
+                                        <p id="comparison-C-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-C-player-1-bar-container">
@@ -1770,6 +1905,8 @@
 
                                     <!-- Clean Sheets -->
                                     <div class="comparison-stats-table-row-container" id="comparison-CLS-container">
+
+                                        <p id="comparison-CLS-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1801,6 +1938,8 @@
                                     <!-- Penalties Scored -->
                                     <div class="comparison-stats-table-row-container" id="comparison-PSC-container">
 
+                                        <p id="comparison-PSC-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-PSC-player-1-bar-container">
@@ -1830,6 +1969,8 @@
 
                                     <!-- Penalties Missed -->
                                     <div class="comparison-stats-table-row-container" id="comparison-PM-container">
+
+                                        <p id="comparison-PM-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1861,6 +2002,8 @@
                                     <!-- Penalties Conceded -->
                                     <div class="comparison-stats-table-row-container" id="comparison-PCO-container">
 
+                                        <p id="comparison-PCO-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-PCO-player-1-bar-container">
@@ -1890,6 +2033,8 @@
 
                                     <!-- Penalties Saved -->
                                     <div class="comparison-stats-table-row-container" id="comparison-PSV-container">
+
+                                        <p id="comparison-PSV-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1921,6 +2066,8 @@
                                     <!-- Fantasy Points -->
                                     <div class="comparison-stats-table-row-container" id="comparison-FTP-container">
 
+                                        <p id="comparison-FTP-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-FTP-player-1-bar-container">
@@ -1950,6 +2097,8 @@
 
                                     <!-- Goals Per App -->
                                     <div class="comparison-stats-table-row-container" id="comparison-GperAPP-container">
+
+                                        <p id="comparison-GperAPP-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -1982,6 +2131,8 @@
                                     <!-- Conceded Per App -->
                                     <div class="comparison-stats-table-row-container" id="comparison-CperAPP-container">
 
+                                        <p id="comparison-CperAPP-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-CperAPP-player-1-bar-container">
@@ -2013,6 +2164,8 @@
                                     <!-- Minutes Per Goal -->
                                     <div class="comparison-stats-table-row-container" id="comparison-MperG-container">
 
+                                        <p id="comparison-MperG-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-MperG-player-1-bar-container">
@@ -2043,6 +2196,8 @@
 
                                     <!-- Minutes Per Clean Sheet -->
                                     <div class="comparison-stats-table-row-container" id="comparison-MperCLS-container">
+
+                                        <p id="comparison-MperCLS-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2077,6 +2232,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-FTPperAPP-container">
 
+                                        <p id="comparison-FTPperAPP-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-FTPperAPP-player-1-bar-container">
@@ -2109,6 +2266,8 @@
                                     <!-- Distance Travelled -->
                                     <div class="comparison-stats-table-row-container" id="comparison-DIST-container">
 
+                                        <p id="comparison-DIST-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-DIST-player-1-bar-container">
@@ -2139,6 +2298,8 @@
                                     <!-- Game % Won -->
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-Games%Won-container">
+
+                                        <p id="comparison-Games%Won-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2173,6 +2334,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-HomeGames-container">
 
+                                        <p id="comparison-HomeGames-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-HomeGames-player-1-bar-container">
@@ -2205,6 +2368,8 @@
                                     <!-- Home Wins -->
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-HomeWins-container">
+
+                                        <p id="comparison-HomeWins-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2239,6 +2404,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-HomeGames%Won-container">
 
+                                        <p id="comparison-HomeGames%Won-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-HomeGames%Won-player-1-bar-container">
@@ -2271,6 +2438,8 @@
                                     <!-- Away Games -->
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-AwayGames-container">
+
+                                        <p id="comparison-AwayGames-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2305,6 +2474,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-AwayWins-container">
 
+                                        <p id="comparison-AwayWins-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-AwayWins-player-1-bar-container">
@@ -2338,6 +2509,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-AwayGames%Won-container">
 
+                                        <p id="comparison-AwayGames%Won-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-AwayGames%Won-player-1-bar-container">
@@ -2370,6 +2543,8 @@
                                     <!-- Most Played For Team -->
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-MostPlayedForTeam-container">
+
+                                        <p id="comparison-MostPlayedForTeam-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2406,6 +2581,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-MostScoredForTeam-container">
 
+                                        <p id="comparison-MostScoredForTeam-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-MostScoredForTeam-player-1-bar-container">
@@ -2441,6 +2618,8 @@
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-NumberTeamsPlayedFor-container">
 
+                                        <p id="comparison-NumberTeamsPlayedFor-short-text"></p>
+
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
                                             id="comparison-NumberTeamsPlayedFor-player-1-bar-container">
@@ -2475,6 +2654,8 @@
                                     <!-- Number Seasons Played For -->
                                     <div class="comparison-stats-table-row-container"
                                         id="comparison-NumberSeasonsPlayedFor-container">
+
+                                        <p id="comparison-NumberSeasonsPlayedFor-short-text"></p>
 
                                         <!-- This div forms the stats bar for Player 1 which is modified by jDorkiniansMain.js -->
                                         <div class="cell bar-container bar-left"
@@ -2869,7 +3050,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
     <!-- Get main page JS -->
-    <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
+    <script src="/pages/Dorkinians-Page/jDorkiniansMain.js"></script>
 
     <!-- Get side menu JS -->
     <script src="/pages/Dorkinians-Page/sideMenu.min.js"></script>

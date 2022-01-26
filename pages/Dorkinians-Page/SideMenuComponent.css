@@ -23,16 +23,17 @@
 }
 #side-menu-top-container {
 	background: var(--main-background-colour, green);
-	/* background-color: lightgoldenrodyellow; */
+	background-color: darkcyan;
 	position: fixed; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
 	top: 0rem; /* Lock the container to the top of the side menu. */
-	height: 6rem;
+	/* height: 6rem; */
+	height: 100px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
 	padding-top: 1rem;
 	width: 80%; /* Set the width to be the same as the width of the open side menu. */
 	display: flex; /* Add flex to the top level container. */
     flex-direction: column;
     align-items: center; /* Vertically center the div's inside the container. */
-	z-index: 2;
+	z-index: 25; /* side-menu-top-container */
 }
 /* The x close button. */
 #side-menu-top-container #side-menu-close-button {
@@ -45,6 +46,11 @@
 }
 #side-menu-close-button {
 	text-decoration: none;
+	z-index: 26; /* side-menu-close-button */
+}
+/* The side menu Dorkinians logo. */
+#side-menu-dorkinians-logo {
+	z-index: 26; /* side-menu-dorkinians-logo */
 }
 /* Container holds all of the smaller icon and text containers. */
 #side-menu-main-container {
@@ -60,7 +66,7 @@
 	width: 90%;
 	overflow-y: scroll;
 	margin: 0rem auto 5rem auto; /* Add an offset below the main container so all side menu options are available. */
-	z-index: 1;
+	z-index: 1; /* side-menu-main-container */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
     background: rgba(255, 255, 255, 0.10);
 	line-height: 1;

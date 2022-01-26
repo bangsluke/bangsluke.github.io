@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -870,6 +870,7 @@ header {
 	justify-content: center;
 	align-items: flex-start; /* Vertically align all child elements that sit within .loading-page-container */
 	height: 4rem;
+	opacity: 1;
 }
 #loading-page-loading-counter-container {
 	/* background: yellow; */
@@ -1254,6 +1255,33 @@ Section 4
 	padding: 0.3rem;
 }
 
+#homepage-club-captains-and-awards-grid-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 50% 50%; 
+	grid-template-rows: 1fr;
+	gap: 0.3rem 0rem; /* First value is between rows, second columns. */
+	/* justify-items: stretch; */
+	justify-items: start; /* Align the cells in the grid horizontally to the left. */
+	/* align-items: stretch; */
+	align-items: center; /* Align the cells in the grid vertically central to the row. */
+	justify-content: stretch; /* Stretch the width of the grid to the full width of the container. */
+	align-content: stretch; /* Stretch the width of the grid to the full height of the container. */
+}
+.homepage-grid-item {
+	/* background-color: red; */
+	height: 2.4rem;
+	width: 100%;
+	margin: 0;
+	padding: 0.4rem 0 0.4rem 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#homepage-club-captains-and-awards-grid-container h4 {
+	font-size: 0.8rem;
+	color: var(--main-accent-colour, yellow);
+	padding-right: 0.2rem; /* Add a slight amount of padding to the right of the heading text to leave a gap to the players names. */
+}
+
 
 
 /* 2. Club Stats Tab */
@@ -1306,7 +1334,7 @@ Section 4
 	/* background-color: orange; */
 	grid-area: StatsSection;
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 60% 40%;
 	grid-template-rows: repeat(11, max-content);
 	gap: 0.5rem 0rem; /* First value is between rows, second columns. */
 }
@@ -1459,16 +1487,21 @@ Section 4
 /* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
+	width: 100%;
 	display: grid;
-	grid-template-columns: 45% 6% 45%; 
+	grid-template-columns: 15% 38% 6% 38%; 
 	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 2%; /* First value is between rows, second columns. */
+	gap: 1rem 1%; /* First value is between rows, second columns. */
 	grid-template-areas: 
-	  "PlayerSelection1 Blank PlayerSelection2"
-	  /* "Explanation Explanation Explanation" */
-	  "Player1Stats Blank Player2Stats"
-	  "StatCategorySelection StatCategorySelection StatCategorySelection"
-	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
+	  "Space PlayerSelection1 Blank PlayerSelection2"
+	  "Space Player1Stats Blank Player2Stats"
+	  "Space StatCategorySelection StatCategorySelection StatCategorySelection"
+	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
+}
+.comparison-space-container {
+	/* background-color: blue; */
+	grid-area: Space;
+	width: 100%;
 }
 /* Style the player 1 selection container. */ 
 .comparison-player-1-selection-container {
@@ -1476,6 +1509,10 @@ Section 4
 	grid-area: PlayerSelection1;
 	padding: 0.3rem;
 	width: 100%;
+}
+#comparison-player-1-selection-dropdown-button, #comparison-player-2-selection-dropdown-button {
+	width: 20%;
+	min-width: 7.5rem !important; /* Set the width of the two specific buttons. */
 }
 /* Add some unique styling to the player 1 selection dropdown component. */ 
 #comparison-player-1-selection-dropdown-contents {
@@ -1500,13 +1537,6 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
-/* Style the explanation section. */
-/* .comparison-explanation-section {
-	background-color: orange;
-	grid-area: Explanation;
-	padding: 0.3rem;
-	width: 100%;
-} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
@@ -1540,9 +1570,14 @@ Section 4
 	display: grid;
 	/* flex-flow: column wrap; */
 	width: 100%;
-	grid-template-columns: 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
+	grid-template-columns: 15% 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
 	grid-template-rows: 1.5rem; /* One row height. */
 	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+}
+/* Style the explanation font on the left of the comparison tab. */
+.comparison-stats-table-row-container p {
+	font-size: 0.6rem;
+	align-self: center; /* Vertically align the text to the center point of the row container. */
 }
 div.cell {
 	/* background: LightBlue; */

@@ -34,7 +34,8 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 8;
+const numberReadyComponents = 9;
+// const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
 var phrasesArray = [
@@ -44,7 +45,6 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Hitting on the bar staff after the game...",
     "Waiting for Sam Smith to score from open play...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
@@ -54,14 +54,27 @@ var phrasesArray = [
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Considering Dom Devlin's MoM...",
+    "Expecting goalkeeper hissy fit any moment now...",
+    "Dave Coleman is typing...",
+    "Probably should get out of 1st gear for the second half...",
+    "Waiting to see if Harry Lynn will turn up for the game...",
+    "Crying out for Al Thom to finally score a goal...",
+    "Sliding Shaun Patterson into TOTW because of a bet...",
+    "Counting out Will Westcott's late fines...",
+    "Adjusting teams on Saturday morning following late dropouts...",
+    "Waiting for Slado's speeches to finish...",
     "Ignoring Rich's match fee and membership messages..." // Don't need to leave the last array value empty.
 ];
+// Deleted phrases.
+// "Hitting on the bar staff after the game...",
+// "Waiting for Ellenger to make his 1s debut...",
 
 // Globally define an object containing stat objects that can be referenced in other functions.
 const statObject = {
     APP: {
         statName: 'Appearances',
         displayText: 'Appearances:', // The text displayed at all times on the page.
+        shortText: 'Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of appearances made by the player.',
         statHigherBetterBoolean: true,
@@ -71,6 +84,7 @@ const statObject = {
     M: {
         statName: 'Minutes',
         displayText: 'Minutes played:', // The text displayed at all times on the page.
+        shortText: 'Mins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of minutes played by the player.',
         statHigherBetterBoolean: true,
@@ -80,6 +94,7 @@ const statObject = {
     MOM: {
         statName: 'Man of the Matches',
         displayText: 'Man of the Matches:', // The text displayed at all times on the page.
+        shortText: 'MoMs', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of man of the match performances achieved by the player.',
         statHigherBetterBoolean: true,
@@ -89,6 +104,7 @@ const statObject = {
     G: {
         statName: 'Goals Scored',
         displayText: 'Goals scored:', // The text displayed at all times on the page.
+        shortText: 'Goals', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of goals scored by the player, including penalties.',
         statHigherBetterBoolean: true,
@@ -98,6 +114,7 @@ const statObject = {
     A: {
         statName: 'Assists',
         displayText: 'Assists provided:', // The text displayed at all times on the page.
+        shortText: 'Assists', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of assists provided by the player.',
         statHigherBetterBoolean: true,
@@ -107,6 +124,7 @@ const statObject = {
     Y: {
         statName: 'Yellow Cards',
         displayText: 'Yellow cards received:', // The text displayed at all times on the page.
+        shortText: 'Yel', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of yellow cards received by the player.',
         statHigherBetterBooleanArray: false,
@@ -116,6 +134,7 @@ const statObject = {
     R: {
         statName: 'Red Cards',
         displayText: 'Red cards received:', // The text displayed at all times on the page.
+        shortText: 'Red', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of red cards received by the player.',
         statHigherBetterBoolean: false,
@@ -125,6 +144,7 @@ const statObject = {
     OG: {
         statName: 'Own Goals',
         displayText: 'Own goals scored:', // The text displayed at all times on the page.
+        shortText: 'OGs', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of own goals scored by the player.',
         statHigherBetterBoolean: false,
@@ -134,6 +154,7 @@ const statObject = {
     C: {
         statName: 'Conceded',
         displayText: 'Goals conceded:', // The text displayed at all times on the page.
+        shortText: 'Con', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of goals conceded whilst the player has been playing.',
         statHigherBetterBoolean: false,
@@ -143,6 +164,7 @@ const statObject = {
     CLS: {
         statName: 'Clean Sheets',
         displayText: 'Clean sheets achieved:', // The text displayed at all times on the page.
+        shortText: 'CLS', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of clean sheets achieved by the player.',
         statHigherBetterBoolean: true,
@@ -152,6 +174,7 @@ const statObject = {
     PSC: {
         statName: 'Penalties Scored',
         displayText: 'Penalties scored:', // The text displayed at all times on the page.
+        shortText: 'Pens', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties scored by the player.',
         statHigherBetterBoolean: true,
@@ -161,6 +184,7 @@ const statObject = {
     PM: {
         statName: 'Penalties Missed',
         displayText: 'Penalties missed:', // The text displayed at all times on the page.
+        shortText: 'Pens Mis', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties missed by the player.',
         statHigherBetterBoolean: false,
@@ -170,6 +194,7 @@ const statObject = {
     PCO: {
         statName: 'Penalties Conceded',
         displayText: 'Penalties conceded:', // The text displayed at all times on the page.
+        shortText: 'Pens Con', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties conceded by the player.',
         statHigherBetterBoolean: false,
@@ -179,6 +204,7 @@ const statObject = {
     PSV: {
         statName: 'Penalties Saved',
         displayText: 'Penalties saved:', // The text displayed at all times on the page.
+        shortText: 'Pens Save', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of penalties saved by the player.',
         statHigherBetterBoolean: true,
@@ -188,6 +214,7 @@ const statObject = {
     FTP: {
         statName: 'Fantasy Points',
         displayText: 'Fantasy points achieved:', // The text displayed at all times on the page.
+        shortText: 'FTP', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of fantasy points achieved by the player.',
         statHigherBetterBoolean: true,
@@ -197,6 +224,7 @@ const statObject = {
     GperAPP: {
         statName: 'Goals Per Appearance',
         displayText: 'Goals per app:', // The text displayed at all times on the page.
+        shortText: 'GperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of goals scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -206,6 +234,7 @@ const statObject = {
     CperAPP: {
         statName: 'Conceded Per Appearance',
         displayText: 'Goals conceded per app:', // The text displayed at all times on the page.
+        shortText: 'CperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of goals conceded per appearance by the player.',
         statHigherBetterBoolean: false,
@@ -215,6 +244,7 @@ const statObject = {
     MperG: {
         statName: 'Minutes Per Goal',
         displayText: 'Minutes per goal scored:', // The text displayed at all times on the page.
+        shortText: 'MperG', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to score a goal.',
         statHigherBetterBoolean: false,
@@ -224,6 +254,7 @@ const statObject = {
     MperCLS: {
         statName: 'Minutes Per Clean Sheet',
         displayText: 'Minutes per clean sheet:', // The text displayed at all times on the page.
+        shortText: 'MperCLS', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The average number of minutes needed by the player to achieve a clean sheet.',
         statHigherBetterBoolean: false,
@@ -233,6 +264,7 @@ const statObject = {
     FTPperAPP: {
         statName: 'Fantasy Points Per Appearance',
         displayText: 'Fantasy points per app:', // The text displayed at all times on the page.
+        shortText: 'FTPperApp', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal2',
         description: 'The average number of fantasy points scored per appearance by the player.',
         statHigherBetterBoolean: true,
@@ -242,6 +274,7 @@ const statObject = {
     DIST: {
         statName: 'Distance Travelled',
         displayText: 'Distance travelled:', // The text displayed at all times on the page.
+        shortText: 'Dist', // Used for short displays such as on the Comparison tab.
         statFormat: 'Decimal1',
         description: 'The distance travelled in miles by the player getting to away games.',
         statHigherBetterBoolean: true,
@@ -251,6 +284,7 @@ const statObject = {
     "Games%Won": {
         statName: 'Percentage Games Won',
         displayText: '% games won:', // The text displayed at all times on the page.
+        shortText: '% Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of games won by the player.',
         statHigherBetterBoolean: true,
@@ -260,6 +294,7 @@ const statObject = {
     HomeGames: {
         statName: 'Home Games',
         displayText: 'Home games:', // The text displayed at all times on the page.
+        shortText: 'H Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of home games played by the player.',
         statHigherBetterBoolean: true,
@@ -269,6 +304,7 @@ const statObject = {
     HomeWins: {
         statName: 'Home Wins',
         displayText: 'Home wins:', // The text displayed at all times on the page.
+        shortText: 'H Wins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -278,6 +314,7 @@ const statObject = {
     "HomeGames%Won": {
         statName: 'Percentage Home Games Won',
         displayText: '% home games won:', // The text displayed at all times on the page.
+        shortText: '% H Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of home games won by the player.',
         statHigherBetterBoolean: true,
@@ -287,6 +324,7 @@ const statObject = {
     AwayGames: {
         statName: 'Away Games',
         displayText: 'Away games:', // The text displayed at all times on the page.
+        shortText: 'A Apps', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of away games played by the player.',
         statHigherBetterBoolean: true,
@@ -296,6 +334,7 @@ const statObject = {
     AwayWins: {
         statName: 'Away Wins',
         displayText: 'Away wins:', // The text displayed at all times on the page.
+        shortText: 'A Wins', // Used for short displays such as on the Comparison tab.
         statFormat: 'Integer',
         description: 'The number of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -305,6 +344,7 @@ const statObject = {
     "AwayGames%Won": {
         statName: 'Percentage Away Games Won',
         displayText: '% away games won:', // The text displayed at all times on the page.
+        shortText: '% A Won', // Used for short displays such as on the Comparison tab.
         statFormat: 'Percentage',
         description: 'The percentage of away games won by the player.',
         statHigherBetterBoolean: true,
@@ -314,6 +354,7 @@ const statObject = {
     "MostPlayedForTeam": {
         statName: 'Most Played for Team',
         displayText: 'Most played for team:', // The text displayed at all times on the page.
+        shortText: 'Most Play', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has appeared for most.',
         statHigherBetterBoolean: false,
@@ -323,6 +364,7 @@ const statObject = {
     "NumberTeamsPlayedFor": {
         statName: 'Number of Teams Played for',
         displayText: 'Number teams played for:', // The text displayed at all times on the page.
+        shortText: '# Teams', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The number of Dorkinians teams that the player has appeared for.',
         statHigherBetterBoolean: true,
@@ -332,6 +374,7 @@ const statObject = {
     "NumberSeasonsPlayedFor": {
         statName: 'Number of Seasons Played for',
         displayText: 'Number seasons played for:', // The text displayed at all times on the page.
+        shortText: '# Season', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The number of seasons that the player has played for Dorkinians since stats records began.',
         statHigherBetterBoolean: true,
@@ -341,6 +384,7 @@ const statObject = {
     "MostScoredForTeam": {
         statName: 'Most Scored for Team',
         displayText: 'Most scored for team:', // The text displayed at all times on the page.
+        shortText: 'Most G', // Used for short displays such as on the Comparison tab.
         statFormat: 'String',
         description: 'The Dorkinians team that the player has scored the most for.',
         statHigherBetterBoolean: false,
@@ -359,6 +403,9 @@ var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to
 
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
+
+const captainsAndAwardsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1483872425&single=true&output=csv';
+var displayCaptainsAndAwardsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Club Stats Tab
 
@@ -431,23 +478,8 @@ function init() {
     // Reset the readyComponentsCount.
     readyComponentsCount = 0;
 
-    // Initially show the loading text on the loading page using the typewriter effect.
-    // Clear the text element, define the initial required variables and then call the typeWriter function.
-    document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-    let i = 0; // The integer counter.
-    let speed = 50; // The speed/duration of the effect in milliseconds.
-    let phraseText = "Loading data into the site...";
-    typeWriter(); // Call the typeWriter function to update the HTML element with text.
-    function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-        if (i < phraseText.length) {
-            document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -483,7 +515,7 @@ function init() {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getHomepageTabInfo, // The callback to execute when parsing is complete.
+        complete: getHomepageTabNextFixturesInfo, // The callback to execute when parsing is complete.
     })
 
     // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
@@ -493,6 +525,14 @@ function init() {
     let nextSaturdayDate = nextDay(now, 6);
     nextSaturdayDate = new Date(nextSaturdayDate).toLocaleDateString('en-uk', { weekday: "short", year: "numeric", month: "short", day: "numeric" }) // Convert the date. https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/.
     document.getElementById("homepage-next-fixtures-sub-header-text").innerHTML = nextSaturdayDate; // Get the header and update it.
+
+    // Captains and Awards data.
+    Papa.parse(captainsAndAwardsSheetURLCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
+    })
 
 
     // Step 2.
@@ -587,37 +627,42 @@ function resetFullPage() {
 
 // Update the phrase text on the page every few seconds.
 function updateLoadingPage() {
+    // console.log("updateLoadingPage called");
+
     // Create a setInterval for every 6 seconds to change the shown phrase.
     let loopPhrases = setInterval(function () {
-        let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
-        if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
-            console.log("loopPhrases timed out.")
-            alert("Page timed out. Please refresh."); // Pass an alert to the user.
-        }
-        let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
-        // console.log("pickedPhraseNumber = " + pickedPhraseNumber); // Log the selected number.
-        let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
-        // console.log("phraseText = " + phraseText); // Log the selected phrase.
+        // console.log("loopPhrases started");
 
-        // Reduce down the array removing the selected phrase so that it is not displayed again.
-        delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
-        phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
-            return true
-        });
+        // Initially set the opacity of the text container to be 0 (transparent).
+        document.getElementById("loading-page-loading-phrase-container").style.opacity = 0;
 
-        // Clear the text element, define the initial required variables and then call the typeWriter function.
-        // let loadingPhraseElement = document.getElementById("loading-phrase").innerHTML = phraseText; // Get the loading-phrase element on the page and add text to it.
-        document.getElementById("loading-phrase").innerHTML = ""; // Initially clear the HTML text.
-        let i = 0; // The integer counter.
-        let speed = 50; // The speed/duration of the effect in milliseconds.
-        typeWriter(); // Call the typeWriter function to update the HTML element with text.
-        function typeWriter() { // Typewriter Text Effect. Load the text in in a typewriter effect. https://www.w3schools.com/howto/howto_js_typewriter.asp
-            if (i < phraseText.length) {
-                document.getElementById("loading-phrase").innerHTML += phraseText.charAt(i); // Get the provided element on the page and add text to it.
-                i++;
-                setTimeout(typeWriter, speed);
+        // Then wait a second with no text (1000 milliseconds), update the text and fade it back up.
+        setTimeout(function () {
+            // console.log("Change text and fade back in started");
+
+            // Get the next phrase to display.
+            let phrasesArrayLength = phrasesArray.length; // Get the length of the phrases array.
+            if (phrasesArrayLength === 0) { // Deal with if the array becomes empty.
+                console.alert("loopPhrases timed out.") // Log the error.
+                alert("Page timed out. Please refresh."); // Pass an alert to the user.
             }
-        }
+            let pickedPhraseNumber = Math.floor(randomNumber(0, phrasesArrayLength)); // Pick a random number between 0 and the length of the array. Round the number down to an integer.
+            let phraseText = phrasesArray[pickedPhraseNumber]; // Get the phrase text from the array.
+            // console.log("pickedPhraseNumber = " + pickedPhraseNumber + ", and phraseText = " + phraseText); // Log the selected number and selected phrase.
+
+            // Reduce down the array removing the selected phrase so that it is not displayed again.
+            delete phrasesArray[pickedPhraseNumber]; // Delete the picked element from the array. The delete function only clears the string, leaving an empty element. w3docs.com/snippets/javascript/how-to-remove-an-element-from-an-array-in-javascript.html
+            phrasesArray = phrasesArray.filter(function () { // Filter the array to remove the empty elements. https://www.w3docs.com/snippets/javascript/how-to-remove-empty-elements-from-an-array-in-javascript.html
+                return true
+            });
+
+            // Add the text to the phrase id.
+            document.getElementById("loading-phrase").innerHTML = phraseText;
+
+            // Make the text visible again.
+            document.getElementById("loading-page-loading-phrase-container").style.opacity = 1
+
+        }, 1000)
 
         // React if the tab ready count matches the number of tabs.
         if (readyComponentsCount === numberReadyComponents || readyComponentsCount >= numberReadyComponents) {
@@ -715,22 +760,22 @@ function getPlayerDropdownInfo(results) {
 
 // 1. Homepage Tab
 
-// 1.1. Homepage tab data "getter" function.
-function getHomepageTabInfo(results) {
+// 1.1. Homepage tab next fixtures data "getter" function.
+function getHomepageTabNextFixturesInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> getHomepageTabNextFixturesInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Process the original array of objects received.
     displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
-    showHomepageTabInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabInfo function.
+    showHomepageTabNextFixturesInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabNextFixturesInfo function.
 }
 
-// 1.2. Homepage tab data "show-er" function.
-function showHomepageTabInfo(results) {
+// 1.2. Homepage tab next fixtures data "show-er" function.
+function showHomepageTabNextFixturesInfo(results) {
     // Display the retrieved data onto the page.
-    console.log('%c' + '>> showHomepageTabInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+    console.log('%c' + '>> showHomepageTabNextFixturesInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
@@ -757,8 +802,93 @@ function showHomepageTabInfo(results) {
     }
 
     // Increment the component ready count by 1.
-    incrementComponentReadyCount("Homepage");
+    incrementComponentReadyCount("Homepage Next Fixtures");
 }
+
+// 1.3. Homepage tab captains and awards data "getter" function.
+function getHomepageTabCaptainsAndAwardsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getHomepageTabCaptainsAndAwardsInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayCaptainsAndAwardsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayCaptainsAndAwardsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayCaptainsAndAwardsArrayOfObjects); // Log the global variable.
+    showHomepageTabCaptainsAndAwardsInfo(displayCaptainsAndAwardsArrayOfObjects); // Call the showHomepageTabCaptainsAndAwardsInfo function.
+}
+
+// 1.4. Homepage tab captains and awards data "show-er" function.
+function showHomepageTabCaptainsAndAwardsInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showHomepageTabCaptainsAndAwardsInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects);
+
+    // Get the drop down selection values to be used for displaying the correct information.
+
+    // Display selection. Letting user choose what to display (captains, club awards or team awards).
+    var displayValueDropdown = document.getElementById("homepage-captains-and-awards-display-selection-dropdown"); // Get the display selected dropdown.
+    var displayValue = displayValueDropdown.options[displayValueDropdown.selectedIndex].value; // Get the display selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("homepage-captains-and-awards-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Populate the captains and awards details on the page.  
+    for (let i = 0; i < objectLength; i++) {
+        let HTMLID = dataArrayOfObjects[i]["HTML ID"]; // Define the HTML ID to be updated that is received from the data array of objects.
+        let foundValue = dataArrayOfObjects[i][seasonValue]; // Define the person to be added to the page that is recieved from the data array of objects.
+        document.getElementById("homepage-" + HTMLID).innerHTML = foundValue; // Add the found player name(s) to the page.
+    }
+
+    // Loop through all child elements of the container and hide based on if their class matches the user selection. https://www.tutorialkart.com/javascript/how-to-iterate-over-children-of-html-element-in-javascript/
+    let parentElement = document.getElementById('homepage-club-captains-and-awards-grid-container'); // Define the parent container element.
+    let childrenElements = parentElement.children; // Define an array of child elements. 
+    for (var i = 0; i < childrenElements.length; i++) {
+        
+        let childElement = childrenElements[i]; // Define the child element to change.
+        if (childElement.classList.contains(displayValue)) { // Check if the element has a class with name "displayValue". https://stackoverflow.com/a/5898748/14290169
+            // Show the elements as the selection matches the value.
+            childElement.classList.remove("hidden"); // Apply the correct CSS class to the container element.
+        } else {
+            // Hide the elements as the selection does not match the value.
+            childElement.classList.add("hidden"); // Apply the correct CSS class to the container element.
+        }
+    }
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Homepage Captains and Awards");
+}
+
+// 1.5. Homepage data "update-er" function.
+function updateHomepageInfo() {
+    // Create a function that is called when the user changes a dropdown on the Homepage tab. This function is called from the HTML select elements.
+
+    // Display the refreshed data onto the page.
+    console.log('%c' + '>> updateHomepageInfo.', 'background-color: orange; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Re-call the Team Season shower function to restart the process of showing data.
+    showHomepageTabCaptainsAndAwardsInfo(displayCaptainsAndAwardsArrayOfObjects); // Call the showHomepageTabCaptainsAndAwardsInfo function.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+
+
+
+
+
 
 
 
@@ -785,6 +915,8 @@ function showTotalClubStatsInfo(results) {
 
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects); // Log the returned data.
 
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
@@ -822,7 +954,7 @@ function showTotalClubStatsInfo(results) {
     // Populate the team next fixtures information on the page.
 
     // Update the main header text.
-    if (teamValue === "Whole club") {
+    if (teamValue === "Whole Club") {
         document.getElementById("club-stats-main-header-text").innerHTML = "Club Stats"; // Get the main header text element and add the text to it.
         document.getElementById("club-stats-tab-text").innerHTML = "Club Stats"; // Get the tab text element and add the text to it.
         // Update the information bar.
@@ -1267,6 +1399,10 @@ function showComparisonStatData() {
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
+            // Dynamically add a short bit of text to the row to explain what it is.
+            console.log("comparison-" + statsArray[i] + "-short-text");
+            document.getElementById("comparison-" + statsArray[i] + "-short-text").innerHTML = statObject[statsArray[i]].shortText; // Populate the short text element dynamically. 
+
             // Dynamically add a tool tip to every stat container div, assigning the stst description from the Global Stat Object.
             let containerElement = document.getElementById("comparison-" + statsArray[i] + "-container"); // Get the container element dynamically.               
             const toolTipSpanElement = document.createElement("span"); // Create a span element.
@@ -1964,43 +2100,43 @@ function formatValue(valueToBeFormatted, statFormat) {
 
 // Full Screen functions (https://stackoverflow.com/a/23971798/14290169).
 
-function isFullScreen() {
-    return (document.fullScreenElement && document.fullScreenElement !== null)
-        || document.mozFullScreen
-        || document.webkitIsFullScreen;
-}
+// function isFullScreen() {
+//     return (document.fullScreenElement && document.fullScreenElement !== null)
+//         || document.mozFullScreen
+//         || document.webkitIsFullScreen;
+// }
 
-function requestFullScreen(element) {
-    if (element.requestFullscreen)
-        element.requestFullscreen();
-    else if (element.msRequestFullscreen)
-        element.msRequestFullscreen();
-    else if (element.mozRequestFullScreen)
-        element.mozRequestFullScreen();
-    else if (element.webkitRequestFullscreen)
-        element.webkitRequestFullscreen();
-}
+// function requestFullScreen(element) {
+//     if (element.requestFullscreen)
+//         element.requestFullscreen();
+//     else if (element.msRequestFullscreen)
+//         element.msRequestFullscreen();
+//     else if (element.mozRequestFullScreen)
+//         element.mozRequestFullScreen();
+//     else if (element.webkitRequestFullscreen)
+//         element.webkitRequestFullscreen();
+// }
 
-function exitFullScreen() {
-    if (document.exitFullscreen)
-        document.exitFullscreen();
-    else if (document.msExitFullscreen)
-        document.msExitFullscreen();
-    else if (document.mozCancelFullScreen)
-        document.mozCancelFullScreen();
-    else if (document.webkitExitFullscreen)
-        document.webkitExitFullscreen();
-}
+// function exitFullScreen() {
+//     if (document.exitFullscreen)
+//         document.exitFullscreen();
+//     else if (document.msExitFullscreen)
+//         document.msExitFullscreen();
+//     else if (document.mozCancelFullScreen)
+//         document.mozCancelFullScreen();
+//     else if (document.webkitExitFullscreen)
+//         document.webkitExitFullscreen();
+// }
 
-function toggleFullScreen(element) {
-    if (isFullScreen()) {
-        console.log("Exiting full screen mode.");
-        exitFullScreen();
-    } else {
-        console.log("Entering full screen mode.");
-        requestFullScreen(element || document.documentElement);
-    }
-}
+// function toggleFullScreen(element) {
+//     if (isFullScreen()) {
+//         console.log("Exiting full screen mode.");
+//         exitFullScreen();
+//     } else {
+//         console.log("Entering full screen mode.");
+//         requestFullScreen(element || document.documentElement);
+//     }
+// }
 
 
 
