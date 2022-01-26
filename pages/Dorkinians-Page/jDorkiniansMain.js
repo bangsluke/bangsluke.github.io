@@ -922,7 +922,7 @@ function showTotalClubStatsInfo(results) {
     // Populate the team next fixtures information on the page.
 
     // Update the main header text.
-    if (teamValue === "Whole club") {
+    if (teamValue === "Whole Club") {
         document.getElementById("club-stats-main-header-text").innerHTML = "Club Stats"; // Get the main header text element and add the text to it.
         document.getElementById("club-stats-tab-text").innerHTML = "Club Stats"; // Get the tab text element and add the text to it.
         // Update the information bar.
