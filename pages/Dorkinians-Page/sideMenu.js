@@ -33,7 +33,7 @@ const newLocal = `
 
                 <!-- Add the Dorkinians logo. -->
                 <img class="logo fadein center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp"
-                alt="Dorkinians Logo" width="80" height="80" onclick="init()">
+                alt="Dorkinians Logo" width="80" height="80">
 
             </div>
 
@@ -158,19 +158,24 @@ const newLocal = `
 
                     <h3 class="side-menu-section-header">Additional</h3>
 
-                    <!-- Add a stat limitations clickable option. -->
-                    <div class="side-menu-additional-section-item-container">
-                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Limitations', displaySiteDetailsArrayOfObjects[0]['Stat Limitations'])">Stat Limitations</a>
-                    </div>
-
-                    <!-- Add a stat details clickable option. -->
+                    <!-- Add a "Stat Details" clickable option. -->
                     <div class="side-menu-additional-section-item-container">
                         <a href="javascript:void(0)" onclick="openPopUpBox('Stat Details', displaySiteDetailsArrayOfObjects[0]['Stat Details'])">Stat Details</a>
                     </div>
 
-                    <!-- Add a version release details clickable option. -->
+                    <!-- Add a "Version Release Details" clickable option. -->
                     <div class="side-menu-additional-section-item-container">
                         <a href="javascript:void(0)" onclick="openPopUpBox('Version Release Details', displaySiteDetailsArrayOfObjects[0]['Version Release Details'])">Version Release Details</a>
+                    </div>
+
+                    <!-- Add an "Updates To Come" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Updates To Come', displaySiteDetailsArrayOfObjects[0]['Updates To Come'])">Updates To Come</a>
+                    </div>
+
+                    <!-- Add a "Stat Limitations" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Limitations', displaySiteDetailsArrayOfObjects[0]['Stat Limitations'])">Stat Limitations</a>
                     </div>
 
                 </section>
