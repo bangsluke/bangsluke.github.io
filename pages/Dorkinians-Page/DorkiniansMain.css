@@ -825,9 +825,9 @@ header {
     background-color: var(--main-background-colour, black);
 	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
 	/* background-image: linear-gradient(100deg, #f44b13 10%, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%, #236f38 95%); */
-	background-image: linear-gradient(100deg, #236f38 10%, var(--main-background-colour)35%, #490bf3 50%, #ce641d 65%, #f44b13 90%);
-	background-size: 400% 400%;
-	animation: gradient 20s ease infinite; /* https://1stwebdesigner.com/15-css-background-effects/ */
+	background-image: linear-gradient(120deg, #236f38 10%, var(--main-background-colour)35%, #490bf3 50%, #ce641d 65%, #f44b13 90%);
+	background-size: 250% 250%;
+	animation: gradient 30s ease infinite; /* https://1stwebdesigner.com/15-css-background-effects/ */
 	position: fixed;
 	min-height: 100%;
 	height: 100%;
