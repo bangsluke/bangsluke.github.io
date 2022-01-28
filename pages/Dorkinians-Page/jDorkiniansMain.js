@@ -479,7 +479,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -974,9 +974,13 @@ function showTotalClubStatsInfo(results) {
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
         if (statObject[statArray[i]] == "") { // Check if the returned value is blank or not.
-            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a";
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a"; // Populate the value with an "n/a".
+            document.getElementById("club-team-stats-" + statArray[i]).classList.add("hidden"); // Add the hidden CSS class to hide it.
+            document.getElementById("club-team-stats-header-" + statArray[i]).classList.add("hidden"); // Add the hidden CSS class to hide it.
         } else {
             document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+            document.getElementById("club-team-stats-" + statArray[i]).classList.remove("hidden"); // Remove the hidden CSS class to show it.
+            document.getElementById("club-team-stats-header-" + statArray[i]).classList.remove("hidden"); // Remove the hidden CSS class to show it.
         }
     }
 
