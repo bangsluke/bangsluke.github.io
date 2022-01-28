@@ -817,14 +817,14 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
     /*background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
     background-color: var(--main-background-colour, black);
 	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-	background-image: linear-gradient(100deg, #f44b13 10%, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%, #6af514 95%);
+	background-image: linear-gradient(100deg, #f44b13 10%, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%, #236f38 95%);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite; /* https://1stwebdesigner.com/15-css-background-effects/ */
 	position: fixed;
@@ -845,13 +845,13 @@ header {
 }
 @keyframes gradient { /* https://1stwebdesigner.com/15-css-background-effects/ */
 	0% {
-		background-position: 100% 50%;
-	}
-	50% {
 		background-position: 0% 50%;
 	}
-	100% {
+	50% {
 		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
 .loading-page-container {

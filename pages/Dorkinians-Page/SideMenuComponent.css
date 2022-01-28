@@ -20,15 +20,26 @@
 	/* padding-top: 3.75rem; */
 	border-left: solid 0.125rem var(--main-accent-colour, yellow);
 	display: inline;
+
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: max-content max-content;
+	gap: 0 0; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "TopContainer"
+	  "MainContainer";
+
 }
 #side-menu-top-container {
 	background: var(--main-background-colour, green);
 	/* background-color: darkcyan; */
+	grid-area: TopContainer;
 	position: fixed; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
 	top: 0rem; /* Lock the container to the top of the side menu. */
 	/* height: 6rem; */
 	height: 100px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
-	padding-top: 1rem;
+	/* padding-top: 1rem; */
+	padding-top: 12px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
 	width: 80%; /* Set the width to be the same as the width of the open side menu. */
 	display: flex; /* Add flex to the top level container. */
     flex-direction: column;
@@ -39,6 +50,7 @@
 #side-menu-top-container #side-menu-close-button {
 	position: absolute;
 	top: 0.7rem; /* Offset the button from the top of the page. */
+	top: 8px;  /* Try adding height in fixed pixels instead of REM to keep header always visible. */
 	right: 1.5rem;
 	font-size: 2.25rem;
 	margin-left: 3.125rem;
@@ -54,8 +66,10 @@
 }
 /* Container holds all of the smaller icon and text containers. */
 #side-menu-main-container {
+	background: rgba(255, 255, 255, 0.10);
 	/* background-color: lightpink; */
 	padding: 1rem 0.5rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+	grid-area: MainContainer;
     position: relative;
 	top: 7.5rem; /* Offset the main container below the top container. */
 	display: flex; /* Add flex to the top level container. */
@@ -68,7 +82,6 @@
 	margin: 0rem auto 5rem auto; /* Add an offset below the main container so all side menu options are available. */
 	z-index: 1; /* side-menu-main-container */
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
-    background: rgba(255, 255, 255, 0.10);
 	line-height: 1;
 }
 /* Style the text in the side menu. */
