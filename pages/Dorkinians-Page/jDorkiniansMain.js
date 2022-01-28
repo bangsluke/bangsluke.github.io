@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 9;
+const numberReadyComponents = 8;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -479,7 +479,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -527,12 +527,12 @@ function init() {
     document.getElementById("homepage-next-fixtures-sub-header-text").innerHTML = nextSaturdayDate; // Get the header and update it.
 
     // Captains and Awards data.
-    Papa.parse(captainsAndAwardsSheetURLCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
-    })
+    // Papa.parse(captainsAndAwardsSheetURLCSV, {
+    //     download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+    //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+    //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+    //     complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
+    // })
 
 
     // Step 2.
@@ -974,9 +974,13 @@ function showTotalClubStatsInfo(results) {
     for (let i = 0; i < statArray.length; i++) {
         // console.log(statArray[i]); // Log the stat being updated.
         if (statObject[statArray[i]] == "") { // Check if the returned value is blank or not.
-            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a";
+            document.getElementById("club-team-stats-" + statArray[i]).innerHTML = "n/a"; // Populate the value with an "n/a".
+            document.getElementById("club-team-stats-" + statArray[i]).classList.add("hidden"); // Add the hidden CSS class to hide it.
+            document.getElementById("club-team-stats-header-" + statArray[i]).classList.add("hidden"); // Add the hidden CSS class to hide it.
         } else {
             document.getElementById("club-team-stats-" + statArray[i]).innerHTML = statObject[statArray[i]]; // Get the stat text element and add the text to it.
+            document.getElementById("club-team-stats-" + statArray[i]).classList.remove("hidden"); // Remove the hidden CSS class to show it.
+            document.getElementById("club-team-stats-header-" + statArray[i]).classList.remove("hidden"); // Remove the hidden CSS class to show it.
         }
     }
 
