@@ -32,7 +32,7 @@ const newLocal = `
                 <a id="side-menu-close-button" href="javascript:void(0)" onclick="closeNav()">×</a>
 
                 <!-- Add the Dorkinians logo. -->
-                <img class="logo fadein center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp"
+                <img class="logo center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp"
                 alt="Dorkinians Logo" width="80" height="80">
 
             </div>
