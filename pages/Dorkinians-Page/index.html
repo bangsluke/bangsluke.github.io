@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 
-<!-- Declare the language of the Web Page. -->
+<!-- Declare the language of the Web Page and the default font size. -->
 <html lang="en-uk" style="font-size:16px">
 
 <head>
 
     <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
     <title>Dorkinians FC Stats</title>
+    <meta name="description" content="Stats and information for the best club in the world." />
 
     <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <!-- Define the width to the device being used, the initial zoom level when the page loads and if the user can zoom. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Stats and information for the best club in the world." />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="bangsluke" />
     <meta name="copyright" content="bangsluke" />
     <meta name="robots" content="nofollow" />
+
+    <!-- Add Open Graph Meta Elements for Social Cards - https://www.sitepoint.com/a-basic-html5-template/ -->
+    <meta property="og:title" content="Dorkinians FC Stats">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dorkiniansfcstats.co.uk/">
+    <meta property="og:description" content="Stats and information for the best club in the world.">
+    <meta property="og:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
 
     <!-- Link to fonts to be used on site. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,6 +39,7 @@
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Dorkinians-Page/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp"> <!-- For iOS users who link the site to their homepage. -->
 
 </head>
 
@@ -381,26 +390,26 @@
                             <!-- Awards Section -->
                             <section class="homepage-club-captains-and-awards-container">
 
-                                <h3 class="textleft">Club Captains and Awards</h3>
+                                <!-- <h3 class="textleft">Club Captains and Awards</h3> -->
 
                                 <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                                <div class="information-bar" id="homepage-information-bar"></div>
+                                <!-- <div class="information-bar" id="homepage-information-bar"></div> -->
 
-                                <div class="selection-container" id="homepage-club-captains-and-awards-selection">
+                                <!-- <div class="selection-container" id="homepage-club-captains-and-awards-selection"> -->
 
                                     <!-- Add a drop down select box for the user to change the awards shown. -->
 
                                     <!-- Let the user pick if to show captains or awards. -->
-                                    <select name="DisplaySelection" class="selection-dropdown"
+                                    <!-- <select name="DisplaySelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-display-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="ClubAwards" selected="selected">Club Awards</option>
                                         <option value="TeamAwards">Team Awards</option>
                                         <option value="Captains">Captains</option>
-                                    </select>
+                                    </select> -->
 
                                     <!-- Let the user pick which season to filter for. -->
-                                    <select name="SeasonSelection" class="selection-dropdown"
+                                    <!-- <select name="SeasonSelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-season-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="2016/17">2016/17</option>
@@ -409,11 +418,11 @@
                                         <option value="2019/20">2019/20</option>
                                         <option value="2020/21">2020/21</option>
                                         <option value="2021/22">2021/22</option>
-                                    </select>
+                                    </select> -->
 
-                                </div>
+                                <!-- </div> -->
 
-                                <div id="homepage-club-captains-and-awards-grid-container">
+                                <!-- <div id="homepage-club-captains-and-awards-grid-container">
 
                                     <h4 class="homepage-grid-item Captains">Club Captain</h4>
                                     <p class="homepage-grid-item Captains" id="homepage-club-captain"></p>
@@ -517,7 +526,7 @@
                                     <p class="homepage-grid-item TeamAwards"
                                         id="homepage-vets-squad-player-of-the-season-award"></p>
 
-                                </div>
+                                </div> -->
 
                             </section>
 
@@ -582,44 +591,47 @@
 
                                     <div id="club-stats-total-club-and-team-stats-stats-grid-container">
 
-                                        <h5 class="club-stats-grid-item">Number of games played:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGamesPlayed">Number of games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of league games played:</h5>
+
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberLeagueGamesPlayed">Number of league games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberLeagueGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of cup games played:</h5>
+
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberCupGamesPlayed">Number of cup games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberCupGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of friendly games played:</h5>
+
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberFriendlyGamesPlayed">Number of friendly games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberFriendlyGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item">Number of recorded players:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberPlayers">Number of recorded players:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberPlayers">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goals scored:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsScored">Number of goals scored:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsScored"></p>
 
-                                        <h5 class="club-stats-grid-item">Average number of goals scored per game:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsPerGame">Average number of goals scored per game:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-goalsPerGame">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goalscorers:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalscorers">Number of goalscorers:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalscorers"></p>
 
-                                        <h5 class="club-stats-grid-item">Top goalscorer (and total):</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-topGoalscorer">Top goalscorer (and total):</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-topGoalscorer">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goals conceded:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsConceded">Number of goals conceded:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsConceded"></p>
 
-                                        <h5 class="club-stats-grid-item">Average number of goals conceded per game:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsConcededPerGame">Average number of goals conceded per game:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-goalsConcededPerGame"></p>
                                     </div>

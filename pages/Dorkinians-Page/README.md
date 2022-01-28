@@ -14,3 +14,11 @@ Accessibility - 74
 Best Practices - 73
 SEO - 92
 Progressive Web App - n/a
+
+## 26/01/2022 v2
+
+Performance - 38
+Accessibility - 74
+Best Practices - 93
+SEO - 92
+Progressive Web App - n/a

@@ -1,0 +1,11 @@
+AddType image/x-icon .ico
+
+ExpiresActive On
+ExpiresByType image/gif A29030400
+ExpiresByType image/png A29030400
+ExpiresByType image/jpeg A29030400
+ExpiresByType image/x-icon A29030400
+ExpiresByType application/pdf A29030400
+ExpiresByType application/x-javascript A604800
+ExpiresByType text/plain A86400
+ExpiresByType text/css A604800
