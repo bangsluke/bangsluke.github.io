@@ -23,7 +23,7 @@
 }
 #side-menu-top-container {
 	background: var(--main-background-colour, green);
-	background-color: darkcyan;
+	/* background-color: darkcyan; */
 	position: fixed; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
 	top: 0rem; /* Lock the container to the top of the side menu. */
 	/* height: 6rem; */
