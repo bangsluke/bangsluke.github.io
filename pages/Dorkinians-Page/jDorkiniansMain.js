@@ -54,8 +54,7 @@ var phrasesArray = [
     "Processing opposition complaints that our teams are too strong...",
     "Delaying pitch inspections to the last minute...",
     "Considering Dom Devlin's MoM...",
-    "Expecting goalkeeper hissy fit any moment now...",
-    "Dave Coleman is typing...",
+    "Expecting a goalkeeper hissy fit any moment now...",
     "Probably should get out of 1st gear for the second half...",
     "Waiting to see if Harry Lynn will turn up for the game...",
     "Crying out for Al Thom to finally score a goal...",
@@ -68,6 +67,7 @@ var phrasesArray = [
 // Deleted phrases.
 // "Hitting on the bar staff after the game...",
 // "Waiting for Ellenger to make his 1s debut...",
+// "Dave Coleman is typing...",
 
 // Globally define an object containing stat objects that can be referenced in other functions.
 const statObject = {
