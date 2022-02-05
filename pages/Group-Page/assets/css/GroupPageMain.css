@@ -233,7 +233,7 @@ tr {
 /* Used for table cell text across the site. */
 td {
 	font-size: 14px; /* Fallback value. */
-	font-size: 0.9rem; /* Relative to root value. */
+	font-size: 0.8rem; /* Relative to root value. */
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
 	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
