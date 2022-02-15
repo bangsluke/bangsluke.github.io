@@ -1,0 +1,70 @@
+/* Reset all settings. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Format the body. */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: black;
+}
+
+h1 {
+    /* font-size: larger; */
+    margin-top: 1rem;
+}
+
+h2 {
+    margin-top: 3rem;
+}
+
+.carList {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .carList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.car {
+    background-color: aqua;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+.car h3 {
+    margin-top: 0.5rem;;
+}
+
+img {
+    height: 10rem;
+    width: auto;
+}
+
+.refactoredCarList {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .refactoredCarList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.refactoredCar {
+    background-color: lightcoral;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
