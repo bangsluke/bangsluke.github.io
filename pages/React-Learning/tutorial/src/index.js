@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+// CSS
 import './index.css';
+
+// Import components
+// import { CarListArrayImport } from './data/CarListArrayImport'; // Example shows how to import from other folder directories.
+// import { CarComponentImport } from './CarComponentImport'; // Don't need to have the .js file extension. This is only for JS.
+import ImportedCarList from './ImportedCarList'; // Note - because the export is default from ImportedCarList.js, you don't need the curly brackets.
+
+// Introduction 00:00:00
 
 // Stateless functional component
 // Always return JSX
@@ -210,10 +218,14 @@ function RefactoredCarList() {
       <h2>Refactored Mini Car Project</h2>
       <section className="refactoredCarList">
         {CarListArray.map((car) => { // Use map to iterate through all of the objects in the above array. Map returns objects from the array.
-          console.log(car); // Logs the object to the console.
+          //console.log(car); // Logs the object to the console.
           // const { ImageURL, Model, Manufacturer } = car; // Don't need this.
           return <CarComponent key={car.id} car={car} />; // Call the CarComponent component passing the new object. Pass the Key prop which is a unique value.
         })}
+        {/* Alternatively can do as below. */}
+        {/* {CarListArray.map((car) => {
+          return <CarComponent key={car.id} {...car} />; // Pass as a spread operator {...car}.
+        })} */}
       </section>
       <div id="end3"></div>
     </React.Fragment>
@@ -223,6 +235,7 @@ function RefactoredCarList() {
 // Define another component that refers to the array of objects.
 const CarComponent = (props) => {
   const { ImageURL, Model, Manufacturer } = props.car; // See the updated .car value here.
+  // const { ImageURL, Model, Manufacturer } = props; // If using the alternative code above, wouldn't need the .car. 
   return (
     <article className="refactoredCar">
       <img src={ImageURL} alt=""></img>
@@ -233,3 +246,88 @@ const CarComponent = (props) => {
 };
 
 ReactDom.render(<RefactoredCarList />, document.getElementById('end2'));
+
+// Re-Factored Mini Book Project with Events (and State) 3:00:00
+
+// To see more possible Events in React - Google "Synthetic Events".
+// https://reactjs.org/docs/events.html
+
+// Still using the CarListArray from above.
+
+function RefactoredCarListWithEvents() {
+  return (
+    <React.Fragment>
+      <h2>Refactored Mini Car Project With Events (State)</h2>
+      <section className="refactoredCarListWithEvents">
+        {CarListArray.map((car) => { // Use map to iterate through all of the objects in the above array. Map returns objects from the array.
+          console.log(car); // Logs the object to the console.
+          return <CarComponentWithEvents key={car.id} {...car} />; // Call the CarComponent component passing the new object. Pass the Key prop which is a unique value.
+        })}
+      </section>
+      <div id="end4"></div>
+    </React.Fragment>
+  );
+};
+
+// Define another component that refers to the array of objects.
+const CarComponentWithEvents = ({ ImageURL, Model, Manufacturer }) => {
+  // attribute, eventHandler
+  // onClick, onMouseOver - camelCase in React
+
+  // Simple event.
+  const clickHandler = () => { // Set up the eventHandler as a reference. Can also do as inline.
+    alert("Hello");
+  }
+
+  // The below set up allows us to pass a variable to the handler event.
+  const clickHandlerComplexExample = (Manufacturer) => { // Set up the eventHandler as a reference.
+    alert("Hello");
+  }
+
+  // The below returns details of where the click was made from, by passing e the event object.
+  const clickHandlerWhere = (e) => {
+    console.log(e.target);
+  }
+
+  // Add an onMouseOver event to log all hovered over components.
+  const logCarComponent = () => {
+    console.log(Manufacturer + " " + Model);
+  }
+
+  return (
+    <article className="refactoredCarWithEvents" onMouseOver={logCarComponent}>
+      <img src={ImageURL} alt=""></img>
+      <h3>{Model}</h3>
+      <h4>{Manufacturer}</h4 >
+      <button type="button" onClick={clickHandler}>Get Hello</button> {/* Example here calls the reference function above. */}
+      <button type="button" onClick={() => alert(Model)}>Get Model</button> {/* Example here uses an inline function. */}
+      <button type="button" onClick={() => clickHandlerComplexExample(Manufacturer)}>Get Manufacturer</button> {/* Example here calls a more complex reference function above, showing how to pass an argument combining an arrow function with a reference function. */}
+      <button type="button" onClick={clickHandlerWhere}>Where?</button> {/* Example here calls the reference function above. */}
+    </article>
+  )
+};
+
+ReactDom.render(<RefactoredCarListWithEvents />, document.getElementById('end3'));
+
+// Importing and Exporting Mini Book Project Components 3:13:00
+
+// See file CarComponentImport.js and CarListImport.js
+
+// function ImportedCarList() {
+//   return (
+//     <React.Fragment>
+//       <h2>Imported Mini Car Project</h2>
+//       <section className="importedCarList">
+//         {CarListArrayImport.map((car) => { // Use map to iterate through all of the objects in the above array. Map returns objects from the array.
+//           console.log(car); // Logs the object to the console.
+//           return <CarComponentImport key={car.id} {...car} />; // Call the CarComponent component passing the new object. Pass the Key prop which is a unique value.
+//         })}
+//       </section>
+//       <div id="end5"></div>
+//     </React.Fragment>
+//   );
+// };
+
+
+
+ReactDom.render(<ImportedCarList />, document.getElementById('end4'));

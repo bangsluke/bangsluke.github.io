@@ -1,3 +1,5 @@
+/* Introduction 00:00:00 */
+
 /* Reset all settings. */
 *{
     margin: 0;
@@ -20,6 +22,8 @@ h1 {
 h2 {
     margin-top: 3rem;
 }
+
+/* Mini Book Project 1:36:00 */
 
 .carList {
     width: 90vw;
@@ -49,6 +53,8 @@ img {
     width: auto;
 }
 
+/* Re-Factored Mini Book Project 2:39:00 */
+
 .refactoredCarList {
     width: 90vw;
     max-width: 1170px;
@@ -65,6 +71,50 @@ img {
 
 .refactoredCar {
     background-color: lightcoral;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+/* Re-Factored Mini Book Project with Events (and State) 3:00:00 */
+
+.refactoredCarListWithEvents {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .refactoredCarListWithEvents {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.refactoredCarWithEvents {
+    background-color: lightgreen;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+/* Importing and Exporting Mini Book Project Components 3:13:00 */
+
+.importedCarList {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .importedCarList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.importedCar {
+    background-color: orange;
     border-radius: 1rem;
     padding: 1rem 2rem;
 }
