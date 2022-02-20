@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1454,16 +1454,6 @@ Section 4
 
 /* 4. Team of the Week Tab */
 
-#team-of-the-week-placement-holder-div { /* Remove when ready to show on the page. */
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
-#team-of-the-week {
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
 .team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
@@ -1485,6 +1475,18 @@ Section 4
 	grid-area: TeamOfTheWeek;
 	padding: 0.3rem;
 }
+
+#team-of-the-week-pitch-area {
+	min-height: 524px;
+	min-width: 820px;
+    background-size: 820px 524px;
+	background-image: url('https://fantasy.premierleague.com/static/media/pitch-bud.50582128.svg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+
+
 .totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
