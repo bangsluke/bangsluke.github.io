@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 8;
+const numberReadyComponents = 9;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -438,6 +438,11 @@ const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-
 // Display Details Tab
 const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
 
+// TOTW Tab
+
+// TOTW Players
+const displayTOTWSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=2004273327&single=true&output=csv';
+var displayTOTWArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 
 // Ready Events
@@ -479,7 +484,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -588,9 +593,18 @@ function init() {
 
     // Step 4. 
     // Team Of The Week Tab.
+    console.log('%c' + '> 4. Team Of The Week tab data being loaded in.', 'background-color: lightblue; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // This Season Stats Info
+    Papa.parse(displayTOTWSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
+    })
 
     // Update the information bar.
-    // displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
+    displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
 
 
     // Step 5. 
@@ -883,12 +897,6 @@ function updateHomepageInfo() {
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
 }
-
-
-
-
-
-
 
 
 
@@ -1377,6 +1385,99 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 // 4. Team of the Week Tab
+
+// 4.1. Team of the Week Players Info data "getter" function.
+function getTeamOfTheWeekPlayersInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getTeamOfTheWeekPlayersInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayTOTWArrayOfObjects); // Log the global variable.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+}
+
+// 4.2. Team of the Week Players Info data "show-er" function.
+function showTeamOfTheWeekPlayersInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTeamOfTheWeekPlayersInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects); // Log the returned data.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Get the drop down selection values to be used for displaying the correct information.
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("TOTW-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // ! UPDATE HERE
+    // Add code to dynamically update the available week numbers after the user has picked a season.
+
+    // Week selection.
+    var weekValueDropdown = document.getElementById("TOTW-week-selection-dropdown"); // Get the week selected dropdown.
+    var weekValue = weekValueDropdown.options[weekValueDropdown.selectedIndex].value; // Get the week selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Create an ID to lookup and match to in the passed data.
+    var lookUpID = seasonValue + "-" + weekValue;
+    // console.log("lookUpID =");
+    // console.log(lookUpID);
+
+    // Loop through the passed data and get the row of data to be displayed and used.
+    var arrayNumberRef = 0;
+    for (let i = 0; i < objectLength; i++) {
+        // console.log(i); // Log the number being run through.
+        // console.log("dataArrayOfObjects[i]['SEASON WEEK NUM REF']");
+        // console.log(dataArrayOfObjects[i]['SEASON WEEK NUM REF']);
+        if (dataArrayOfObjects[i]["SEASON WEEK NUM REF"] === lookUpID) {
+            arrayNumberRef = i;
+        }
+    }
+
+    // Get an object from the array by creating an object from the first array value.
+    let statObject = dataArrayOfObjects[arrayNumberRef];
+    console.log("statObject =");
+    console.log(statObject);
+
+    // Populate the total number of points for the team.
+    document.getElementById("TOTW-Total-Points").innerHTML = statObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+
+    // Loop through the statObject to add the player details. Each stat corresponds to an HTML element.
+    for (let i = 1; i < 11; i++) {
+        // console.log(i);
+        // console.log(statObject["POS " + i + " PLAYER"]);
+        document.getElementById("TOTW-Player-Pos-" + i + "-Name").innerHTML = statObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
+        document.getElementById("TOTW-Player-Pos-" + i + "-Points").innerHTML = statObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
+    }
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("TOTW - All TOTW Players");
+}
+
+// 4.3. Team of the Week Players Info data "update-er" functions.
+function updateTeamOfTheWeekPlayersInfo() {
+    // Create a function that is called when the user changes the season or week dropdowns. This function is called from the HTML select elements.
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Call the update to the This Season grid.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects);
+    // showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects);
+
+    // Call the update to all other All Time stats.
+    // showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects);
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
 
 
 
