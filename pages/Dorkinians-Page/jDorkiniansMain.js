@@ -1398,6 +1398,81 @@ function getTeamOfTheWeekPlayersInfo(results) {
     showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
 
+// Define the y positions of each Classification.
+let GKy = 5;
+let DEFy = 150;
+let MIDy = 300;
+let FWDy = 450;
+// Define the x positions of each Classification.
+let Centerx = 200;
+let LeftOf3x = 100;
+let RightOf3x = 300;
+let LeftOf4x = 10;
+let LeftCenterOf4x = 100;
+let RightCenterOf4x = 250;
+let RightOf4x = 350;
+
+const formationCoordinateObject = {
+    '3-4-3': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf3x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: Centerx,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightOf3x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'MID1',
+            x: LeftOf4x,
+            y: MIDy
+        },
+        Pos6: {
+            Classification: 'MID2',
+            x: LeftCenterOf4x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID3',
+            x: RightCenterOf4x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID4',
+            x: RightOf4x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'FWD1',
+            x: LeftOf3x,
+            y: FWDy
+        },
+        Pos10: {
+            Classification: 'FWD2',
+            x: Centerx,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD3',
+            x: RightOf3x,
+            y: FWDy
+        }
+    },
+}
+
+
 // 4.2. Team of the Week Players Info data "show-er" function.
 function showTeamOfTheWeekPlayersInfo(results) {
     // Display the retrieved data onto the page.
@@ -1446,15 +1521,31 @@ function showTeamOfTheWeekPlayersInfo(results) {
     console.log("statObject =");
     console.log(statObject);
 
+    // Define the formation to display.
+    let formation = statObject["BEST FORMATION"];
+    console.log("Formation = " + formation);
+
     // Populate the total number of points for the team.
-    document.getElementById("TOTW-Total-Points").innerHTML = statObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-total-points").innerHTML = "TOTW Total Points: " + statObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
 
     // Loop through the statObject to add the player details. Each stat corresponds to an HTML element.
-    for (let i = 1; i < 11; i++) {
+    for (let i = 1; i <= 11; i++) {
         // console.log(i);
         // console.log(statObject["POS " + i + " PLAYER"]);
-        document.getElementById("TOTW-Player-Pos-" + i + "-Name").innerHTML = statObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
-        document.getElementById("TOTW-Player-Pos-" + i + "-Points").innerHTML = statObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
+        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = statObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
+        document.getElementById("totw-player-pos-" + i + "-points").innerHTML = statObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
+
+        // Position the overall player div.
+        var x = parseInt(0); // The left of the pitch.
+        var y = parseInt(0); // The top of the pitch.
+        let playerDiv = document.getElementById("totw-player-pos-" + i);
+        // playerDiv.style.position = "absolute";
+        console.log("Player Name: " + statObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
+        let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
+        let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
+        playerDiv.style.left = leftPosition + 'px';
+        playerDiv.style.top = topPosition + 'px';
+        console.log("Player Name: " + statObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
     }
 
     // Increment the component ready count by 1.

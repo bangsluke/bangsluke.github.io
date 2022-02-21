@@ -1477,13 +1477,79 @@ Section 4
 }
 
 #team-of-the-week-pitch-area {
-	min-height: 524px;
-	min-width: 820px;
-    background-size: 820px 524px;
+	position: relative;
+	width: 100%;
+	height: 520px;
+
+	/* min-height: 524px; */
+	/* min-width: 820px; */
+    background-size: 820px 100%;
+	/* background-size: 500px 100%; */
 	background-image: url('https://fantasy.premierleague.com/static/media/pitch-bud.50582128.svg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-position: center;
+}
+
+.totw-player-div {
+	/* background-color: #ce641d; */
+	height: 100px;
+	width: 180px;
+	/* padding: 0px auto; */
+	position: absolute;
+	top: 0px;
+
+	/* width: 600px; */
+	/* background-size: 820px 100%; */
+	/* background-image: url('/pages/Dorkinians-Page/images/TeamKit.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+}
+
+/* Format the Dorkinians Kit image. */
+.totw-dorkinians-kit {
+	position: relative;
+	top: 0;
+	left: 14px;
+	height: 100px;
+	margin: 0 auto;
+	/* width: auto; */
+}
+/* Format the Rebecca Cannon logo. */
+.totw-rebecca-cannon-logo {
+	height: 30px;
+	position: relative;
+	top: -70%;
+	left: 9%;
+  	/* left: -70px; */
+}
+
+.totw-player-box {
+	position: relative;
+	top: -28%;
+	/* left: 4%; */
+	height: max-content;
+	min-height: 20px;
+	width: max-content;
+	min-width: 100px;
+	padding: 4px;
+	color: white;
+	text-align: center;
+}
+
+.totw-player-name-box {
+	background-color: #00753A;
+	font-size: 14px;
+	
+}
+
+.totw-player-points-box {
+	background-color: #00FF87;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 12px;
 }
 
 
