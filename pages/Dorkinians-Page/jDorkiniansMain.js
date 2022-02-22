@@ -487,7 +487,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
