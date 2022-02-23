@@ -1919,12 +1919,25 @@ function showTeamOfTheWeekPlayersInfo(results) {
     // console.log(weekPlayerCount);
     document.getElementById("totw-week-number-players").innerHTML = "Number players: " + weekPlayerCount; // Populate the found HTML element with the players name.
 
+    // Define some variables for use within the loop.
+    var maxPoints = 0;
+    var starManID;
+
     // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
     for (let i = 1; i <= 11; i++) {
         // console.log(i);
         // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
+
+        // Populate the HTML elements.
         document.getElementById("totw-player-pos-" + i + "-name").innerHTML = TOTWStatObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
         document.getElementById("totw-player-pos-" + i + "-points").innerHTML = TOTWStatObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
+
+        // Get the star man details.
+        if (parseInt(TOTWStatObject["POS " + i + " POINTS"]) > maxPoints) {
+            // console.log("i = " + i + ", points = " + TOTWStatObject["POS " + i + " POINTS"] + ", maxPoints = " + maxPoints);
+            maxPoints = parseInt(TOTWStatObject["POS " + i + " POINTS"]);
+            starManID = i;
+        }
 
         // Position the overall player div.
         var x = parseInt(0); // The left of the pitch.
@@ -1938,6 +1951,10 @@ function showTeamOfTheWeekPlayersInfo(results) {
         playerDiv.style.top = topPosition + 'px';
         console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
     }
+
+    // Populate the star man details.
+    document.getElementById("totw-player-pos-StarMan-name").innerHTML = TOTWStatObject["POS " + starManID + " PLAYER"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-player-pos-StarMan-points").innerHTML = TOTWStatObject["POS " + starManID + " POINTS"]; // Populate the found HTML element with the players points.
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("TOTW - All TOTW Players");
