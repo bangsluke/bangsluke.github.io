@@ -1473,10 +1473,39 @@ Section 4
 .totw-team-of-the-week-container {
 	/* background-color: yellow; */
 	grid-area: TeamOfTheWeek;
-	padding: 0.3rem;
+	/* padding: 0.3rem; */
+
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: max-content max-content;
+	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "HeaderSummary"
+	  "Pitch";
+}
+
+#team-of-the-week-header-summary {
+	/* background-color: blue; */
+	grid-area: HeaderSummary;
+
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 100%;
+	gap: 0rem 0rem; /* First value is between rows, second columns. */
+}
+
+#team-of-the-week-header-summary-text {
+	/* background-color: green; */
+	text-align: center;
+}
+
+#team-of-the-week-header-summary-StarMan {
+	/* background-color: greenyellow; */
+	text-align: center;
 }
 
 #team-of-the-week-pitch-area {
+	grid-area: Pitch;
 	position: relative;
 	width: 100%;
 	height: 520px;
@@ -1493,8 +1522,8 @@ Section 4
 
 .totw-player-div {
 	/* background-color: #ce641d; */
-	height: 100px;
-	width: 180px;
+	height: 80px;
+	width: 60px;
 	/* padding: 0px auto; */
 	position: absolute;
 	top: 0px;
@@ -1505,37 +1534,51 @@ Section 4
     /* background-repeat: no-repeat; */
     /* background-attachment: fixed; */
     /* background-position: center; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
+#totw-player-StarMan-div {
+	/* background-color: #ce641d; */
+	height: 80px;
+	width: 60px;
+	/* padding: 0px auto; */
+	position: relative;
+	top: 0px;
+
+	/* width: 600px; */
+	/* background-size: 820px 100%; */
+	/* background-image: url('/pages/Dorkinians-Page/images/TeamKit.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Format the kit and logos together in a combined div. */
+.totw-player-kit-div {
+	/* background-color: #F9ED32; */
+	position: absolute;
+}
 /* Format the Dorkinians Kit image. */
 .totw-dorkinians-kit {
 	position: relative;
 	top: 0;
-	left: 14px;
 	height: 100px;
-	margin: 0 auto;
+	margin: 0 auto 4px auto;
 	/* width: auto; */
-}
-/* Format the Dorkinians logo. */
-.totw-dorkinians-logo {
-	height: 15px;
-	position: relative;
-	top: -98%;
-	left: 28%;
-  	/* left: -70px; */
-}
-/* Format the Rebecca Cannon logo. */
-.totw-rebecca-cannon-logo {
-	height: 30px;
-	position: relative;
-	top: -70%;
-	left: 2%;
-  	/* left: -70px; */
 }
 /* Format the boxes below the kit. */
 .totw-player-box {
 	position: relative;
-	top: -28%;
+	/* top: -28%; */
 	/* left: 4%; */
 	height: max-content;
 	min-height: 20px;
@@ -1614,15 +1657,6 @@ Section 4
 	display: inline-block;
 	line-height: normal;
 	vertical-align: middle;
-}
-#totw-player-info-box-message-container {
-	/* background: pink; */
-	height: max-content;
-	width: 100%;
-	overflow-y: scroll;
-}
-#totw-player-info-box-message-text {
-	max-inline-size: none; /* Remove some carry over p styling from the snap tabs to stop a weird word wrap. */
 }
 /* Style the text in the totw-player-info box. */
 #totw-player-info-box a, h3, p {
