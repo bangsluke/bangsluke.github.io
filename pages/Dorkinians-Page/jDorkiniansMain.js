@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 9;
+const numberReadyComponents = 10;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -598,14 +598,6 @@ function init() {
     // Team Of The Week Tab.
     console.log('%c' + '> 4. Team Of The Week tab data being loaded in.', 'background-color: lightblue; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
-    // This Season Stats Info
-    Papa.parse(displayTOTWSheetCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
-    });
-
     // Match Details Info
     Papa.parse(displayMatchDetailsSheetCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -613,6 +605,9 @@ function init() {
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getMatchDetailsInfo, // The callback to execute when parsing is complete.
     });
+
+    // This Season Stats Info
+    // Called later on.
 
     // Update the information bar.
     displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
@@ -1397,7 +1392,27 @@ function showPlayerStatsTabUpdatedInfo() {
 
 // 4. Team of the Week Tab
 
-// 4.1. Team of the Week Players Info data "getter" function.
+// 4.1. Team of the Week - Match Details Info data "getter" function.
+function getMatchDetailsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getMatchDetailsInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Match Details information fetched");
+
+    // This Season Stats Info
+    Papa.parse(displayTOTWSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
+    });
+}
+
+// 4.2. Team of the Week Players Info data "getter" function.
 function getTeamOfTheWeekPlayersInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getTeamOfTheWeekPlayersInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1412,6 +1427,8 @@ function getTeamOfTheWeekPlayersInfo(results) {
     displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayTOTWArrayOfObjects); // Log the global variable.
+
+    // Populate the TOTW tab.
     showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
 
@@ -1838,7 +1855,7 @@ const formationCoordinateObject = {
     }
 }
 
-// 4.2. Team of the Week Players Info data "show-er" function.
+// 4.3. Team of the Week Players Info data "show-er" function.
 function showTeamOfTheWeekPlayersInfo(results) {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> showTeamOfTheWeekPlayersInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1891,7 +1908,16 @@ function showTeamOfTheWeekPlayersInfo(results) {
     console.log("Formation = " + formation);
 
     // Populate the total number of points for the team.
-    document.getElementById("totw-total-points").innerHTML = "TOTW Total Points: " + TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-total-points").innerHTML = TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+
+    // Filter the full match details array down to the same season fixture id to get the number of players who played. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    // console.log(TOTWStatObject)
+    let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
+    // console.log(seasonWeekNumRef);
+    const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
+    let weekPlayerCount = matchDetailsWeekData.length; // Get the number of players who played that week from the new length of the array.
+    // console.log(weekPlayerCount);
+    document.getElementById("totw-week-number-players").innerHTML = "Number players: " + weekPlayerCount; // Populate the found HTML element with the players name.
 
     // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
     for (let i = 1; i <= 11; i++) {
@@ -1902,10 +1928,10 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
         // Position the overall player div.
         var x = parseInt(0); // The left of the pitch.
-        var y = parseInt(0); // The top of the pitch.
+        var y = parseInt(20); // The top of the pitch.
         let playerDiv = document.getElementById("totw-player-pos-" + i);
         // playerDiv.style.position = "absolute";
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
+        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
         let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
         let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
         playerDiv.style.left = leftPosition + 'px';
@@ -1917,7 +1943,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
     incrementComponentReadyCount("TOTW - All TOTW Players");
 }
 
-// 4.3. Team of the Week Players Info data "update-er" functions.
+// 4.4. Team of the Week Players Info data "update-er" functions.
 function updateTeamOfTheWeekPlayersInfo() {
     // Create a function that is called when the user changes the season or week dropdowns. This function is called from the HTML select elements.
 
@@ -1929,15 +1955,6 @@ function updateTeamOfTheWeekPlayersInfo() {
 
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
-}
-
-// 4.4. Team of the Week - Match Details Info data "getter" function.
-function getMatchDetailsInfo(results) {
-    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getMatchDetailsInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
-
-    // Process the original array of objects received.
-    displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
 }
 
 // 4.5. Team of the Week Player Pop Up Info function.
@@ -1964,7 +1981,7 @@ const showTOTWPlayerInfo = function () {
 
     // Begin working with the Match Details data.
     var objectLength = displayMatchDetailsArrayOfObjects.length; // Get the original length of the array.
-    console.log(objectLength);
+    // console.log(objectLength);
     // console.log(displayMatchDetailsArrayOfObjects);
 
     // Filter the full match details array down to the same season fixture id. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
@@ -1980,8 +1997,13 @@ const showTOTWPlayerInfo = function () {
 
     // Populate the player pop up info box.
     document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
-    document.getElementById('totw-player-info-box-APP').innerHTML = "Minutes played " + playerMatchDetailsData[0].APP;
-    document.getElementById('totw-player-info-box-G').innerHTML = "Goals scored " + playerMatchDetailsData[0].G;
+
+    document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
+
+    document.getElementById('totw-player-info-box-APP').innerHTML = playerMatchDetailsData[0].APP;
+    document.getElementById('totw-player-info-box-APP-points').innerHTML = playerMatchDetailsData[0].APP * 2;
+    document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
+    document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
 
     // Show the background overlay.
     document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
