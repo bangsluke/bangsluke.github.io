@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 8;
+const numberReadyComponents = 9;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -438,6 +438,14 @@ const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-
 // Display Details Tab
 const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
 
+// TOTW Tab
+
+// TOTW Players
+const displayTOTWSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=2004273327&single=true&output=csv';
+var displayTOTWArrayOfObjects = ""; // Define an initially blank array to be populated later.
+const displayMatchDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=162734061&single=true&output=csv';
+var displayMatchDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
+var TOTWStatObject = ""; // Define an initially blank object to be populated later.
 
 
 // Ready Events
@@ -492,7 +500,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getSideMenuInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
     // Drop Down Options.
     console.log('%c' + '> 0. Drop down data being loaded in.', 'background-color: darkblue; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
@@ -503,7 +511,7 @@ function init() {
         header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getPlayerDropdownInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
 
     // Step 1. 
@@ -516,7 +524,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getHomepageTabNextFixturesInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
     // !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
 
@@ -532,7 +540,7 @@ function init() {
     //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
     //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
     //     complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
-    // })
+    // });
 
 
     // Step 2.
@@ -545,7 +553,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getTotalClubStatsInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
     // Team Season Results Info
     // Papa.parse(teamSeasonResultsSheetURLCSV, {
@@ -553,7 +561,7 @@ function init() {
     //     header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
     //     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
     //     complete: getTeamSeasonResultsInfo, // The callback to execute when parsing is complete.
-    // })
+    // });
 
     // Update the information bar.
     displayInformation("club-stats-information-bar", "Select a filter to begin reviewing further detailed club stats");
@@ -572,7 +580,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getPlayerStatsThisSeasonTabInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
     // All Time Stats Info
     Papa.parse(displayAllTimeStatsSheetCSV, {
@@ -580,7 +588,7 @@ function init() {
         header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getPlayerStatsAllTimeTabInfo, // The callback to execute when parsing is complete.
-    })
+    });
 
     // Update the information bar.
     displayInformation("player-stats-information-bar", "Select a player to view their stats. Or just marvel at Slado's achievements...");
@@ -588,9 +596,26 @@ function init() {
 
     // Step 4. 
     // Team Of The Week Tab.
+    console.log('%c' + '> 4. Team Of The Week tab data being loaded in.', 'background-color: lightblue; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
+
+    // This Season Stats Info
+    Papa.parse(displayTOTWSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
+    });
+
+    // Match Details Info
+    Papa.parse(displayMatchDetailsSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getMatchDetailsInfo, // The callback to execute when parsing is complete.
+    });
 
     // Update the information bar.
-    // displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
+    displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
 
 
     // Step 5. 
@@ -883,12 +908,6 @@ function updateHomepageInfo() {
     // End the rotation of the Dorkinians logo to simulate loading being completed.
     stopRotateLogo("dorkinians-header-logo");
 }
-
-
-
-
-
-
 
 
 
@@ -1377,6 +1396,618 @@ function showPlayerStatsTabUpdatedInfo() {
 
 
 // 4. Team of the Week Tab
+
+// 4.1. Team of the Week Players Info data "getter" function.
+function getTeamOfTheWeekPlayersInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getTeamOfTheWeekPlayersInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Add an onclick function to the HTML elements.
+    for (let i = 1; i <= 11; i++) {
+        // console.log(i); // Log the number being run through.
+        document.getElementById('totw-player-pos-' + i).onclick = showTOTWPlayerInfo; // Add the onclick function to the HTML element.
+    }
+
+    // Process the original array of objects received.
+    displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
+    // console.log(displayTOTWArrayOfObjects); // Log the global variable.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+}
+
+// Define the y positions of each Classification.
+let GKy = 5;
+let DEFy = 150;
+let MIDy = 300;
+let FWDy = 450;
+// Define the x positions of each Classification.
+let Centerx = 200;
+let LeftOf2x = 150;
+let RightOf2x = 250;
+let LeftOf3x = 100;
+let RightOf3x = 300;
+let LeftOf4x = 10;
+let LeftCenterOf4x = 100;
+let RightCenterOf4x = 250;
+let RightOf4x = 350;
+let LeftOf5x = 5;
+let LeftCenterOf5x = 80;
+let RightCenterOf5x = 270;
+let RightOf5x = 355;
+
+// Define an object of formations to define the various positions of players.
+const formationCoordinateObject = {
+    '4-4-2': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf4x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: LeftCenterOf4x,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightCenterOf4x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'DEF4',
+            x: RightOf4x,
+            y: DEFy
+        },
+        Pos6: {
+            Classification: 'MID1',
+            x: LeftOf4x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID2',
+            x: LeftCenterOf4x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID3',
+            x: RightCenterOf4x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'MID4',
+            x: RightOf4x,
+            y: MIDy
+        },
+        Pos10: {
+            Classification: 'FWD1',
+            x: LeftOf2x,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD2',
+            x: RightOf2x,
+            y: FWDy
+        }
+    },
+    '4-3-3': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf4x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: LeftCenterOf4x,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightCenterOf4x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'DEF4',
+            x: RightOf4x,
+            y: DEFy
+        },
+        Pos6: {
+            Classification: 'MID1',
+            x: LeftOf3x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID2',
+            x: Centerx,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID3',
+            x: RightOf3x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'FWD1',
+            x: LeftOf3x,
+            y: FWDy
+        },
+        Pos10: {
+            Classification: 'FWD2',
+            x: Centerx,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD3',
+            x: RightOf3x,
+            y: FWDy
+        }
+    },
+    '4-5-1': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf4x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: LeftCenterOf4x,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightCenterOf4x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'DEF4',
+            x: RightOf4x,
+            y: DEFy
+        },
+        Pos6: {
+            Classification: 'MID1',
+            x: LeftOf5x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID2',
+            x: LeftCenterOf5x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID3',
+            x: Centerx,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'MID4',
+            x: RightCenterOf5x,
+            y: MIDy
+        },
+        Pos10: {
+            Classification: 'MID5',
+            x: RightOf5x,
+            y: MIDy
+        },
+        Pos11: {
+            Classification: 'FWD1',
+            x: Centerx,
+            y: FWDy
+        }
+    },
+    '3-5-2': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf3x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: Centerx,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightOf3x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'MID1',
+            x: LeftOf5x,
+            y: MIDy
+        },
+        Pos6: {
+            Classification: 'MID2',
+            x: LeftCenterOf5x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID3',
+            x: Centerx,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID4',
+            x: RightCenterOf5x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'MID5',
+            x: RightOf5x,
+            y: MIDy
+        },
+        Pos10: {
+            Classification: 'FWD1',
+            x: LeftOf2x,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD2',
+            x: RightOf2x,
+            y: FWDy
+        }
+    },
+    '3-4-3': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf3x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: Centerx,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: RightOf3x,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'MID1',
+            x: LeftOf4x,
+            y: MIDy
+        },
+        Pos6: {
+            Classification: 'MID2',
+            x: LeftCenterOf4x,
+            y: MIDy
+        },
+        Pos7: {
+            Classification: 'MID3',
+            x: RightCenterOf4x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID4',
+            x: RightOf4x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'FWD1',
+            x: LeftOf3x,
+            y: FWDy
+        },
+        Pos10: {
+            Classification: 'FWD2',
+            x: Centerx,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD3',
+            x: RightOf3x,
+            y: FWDy
+        }
+    },
+    '5-3-2': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf5x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: LeftCenterOf5x,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: Centerx,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'DEF4',
+            x: RightCenterOf5x,
+            y: DEFy
+        },
+        Pos6: {
+            Classification: 'DEF5',
+            x: RightOf5x,
+            y: DEFy
+        },
+        Pos7: {
+            Classification: 'MID1',
+            x: LeftOf3x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID2',
+            x: Centerx,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'MID3',
+            x: RightOf3x,
+            y: MIDy
+        },
+        Pos10: {
+            Classification: 'FWD1',
+            x: LeftOf2x,
+            y: FWDy
+        },
+        Pos11: {
+            Classification: 'FWD2',
+            x: RightOf2x,
+            y: FWDy
+        }
+    },
+    '5-4-1': {
+        Pos1: {
+            Classification: 'GK',
+            x: Centerx,
+            y: GKy
+        },
+        Pos2: {
+            Classification: 'DEF1',
+            x: LeftOf5x,
+            y: DEFy
+        },
+        Pos3: {
+            Classification: 'DEF2',
+            x: LeftCenterOf5x,
+            y: DEFy
+        },
+        Pos4: {
+            Classification: 'DEF3',
+            x: Centerx,
+            y: DEFy
+        },
+        Pos5: {
+            Classification: 'DEF4',
+            x: RightCenterOf5x,
+            y: DEFy
+        },
+        Pos6: {
+            Classification: 'DEF5',
+            x: RightOf5x,
+            y: DEFy
+        },
+        Pos7: {
+            Classification: 'MID1',
+            x: LeftOf4x,
+            y: MIDy
+        },
+        Pos8: {
+            Classification: 'MID2',
+            x: LeftCenterOf4x,
+            y: MIDy
+        },
+        Pos9: {
+            Classification: 'MID3',
+            x: RightCenterOf4x,
+            y: MIDy
+        },
+        Pos10: {
+            Classification: 'MID4',
+            x: RightOf4x,
+            y: MIDy
+        },
+        Pos11: {
+            Classification: 'FWD1',
+            x: Centerx,
+            y: FWDy
+        }
+    }
+}
+
+// 4.2. Team of the Week Players Info data "show-er" function.
+function showTeamOfTheWeekPlayersInfo(results) {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTeamOfTheWeekPlayersInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Set the dataArrayOfObjects.
+    const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
+    // console.log("dataArrayOfObjects");
+    // console.log(dataArrayOfObjects); // Log the returned data.
+
+    // console.log(dataArrayOfObjects); // Log the received array of objects.
+    var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
+    // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
+
+    // Get the drop down selection values to be used for displaying the correct information.
+
+    // Season selection.
+    var seasonValueDropdown = document.getElementById("TOTW-season-selection-dropdown"); // Get the season selected dropdown.
+    var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // ! UPDATE HERE
+    // Add code to dynamically update the available week numbers after the user has picked a season.
+
+    // Week selection.
+    var weekValueDropdown = document.getElementById("TOTW-week-selection-dropdown"); // Get the week selected dropdown.
+    var weekValue = weekValueDropdown.options[weekValueDropdown.selectedIndex].value; // Get the week selected. (https://stackoverflow.com/a/8549358/14290169).
+
+    // Create an ID to lookup and match to in the passed data.
+    var lookUpID = seasonValue + "-" + weekValue;
+    // console.log("lookUpID =");
+    // console.log(lookUpID);
+
+    // Loop through the passed data and get the row of data to be displayed and used.
+    var arrayNumberRef = 0;
+    for (let i = 0; i < objectLength; i++) {
+        // console.log(i); // Log the number being run through.
+        // console.log("dataArrayOfObjects[i]['SEASON WEEK NUM REF']");
+        // console.log(dataArrayOfObjects[i]['SEASON WEEK NUM REF']);
+        if (dataArrayOfObjects[i]["SEASON WEEK NUM REF"] === lookUpID) {
+            arrayNumberRef = i;
+        }
+    }
+
+    // Get an object from the array by creating an object from the first array value.
+    TOTWStatObject = dataArrayOfObjects[arrayNumberRef];
+    console.log("statObject =");
+    console.log(TOTWStatObject);
+
+    // Define the formation to display.
+    let formation = TOTWStatObject["BEST FORMATION"];
+    console.log("Formation = " + formation);
+
+    // Populate the total number of points for the team.
+    document.getElementById("totw-total-points").innerHTML = "TOTW Total Points: " + TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+
+    // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
+    for (let i = 1; i <= 11; i++) {
+        // console.log(i);
+        // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
+        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = TOTWStatObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
+        document.getElementById("totw-player-pos-" + i + "-points").innerHTML = TOTWStatObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
+
+        // Position the overall player div.
+        var x = parseInt(0); // The left of the pitch.
+        var y = parseInt(0); // The top of the pitch.
+        let playerDiv = document.getElementById("totw-player-pos-" + i);
+        // playerDiv.style.position = "absolute";
+        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
+        let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
+        let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
+        playerDiv.style.left = leftPosition + 'px';
+        playerDiv.style.top = topPosition + 'px';
+        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
+    }
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("TOTW - All TOTW Players");
+}
+
+// 4.3. Team of the Week Players Info data "update-er" functions.
+function updateTeamOfTheWeekPlayersInfo() {
+    // Create a function that is called when the user changes the season or week dropdowns. This function is called from the HTML select elements.
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Call the update to the This Season grid.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects);
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+// 4.4. Team of the Week - Match Details Info data "getter" function.
+function getMatchDetailsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getMatchDetailsInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+}
+
+// 4.5. Team of the Week Player Pop Up Info function.
+const showTOTWPlayerInfo = function () {
+    // Create a function that is called when the user clicks on a player in TOTW. This function is called from the HTML elements.
+    // https://thewebdev.info/2021/03/20/how-to-get-the-id-of-the-clicked-element-in-the-javascript-click-handler/
+
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> showTOTWPlayerInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Return the clicked element and manipulate it to get the position number clicked on.
+    let clickedHTMLElementID = this.id;
+    let playerIDNumber = clickedHTMLElementID.substring(16, 18);
+    console.log(clickedHTMLElementID + ", number: " + playerIDNumber);
+
+    // Get the required information from the saved TOTWStatObject.
+    let playerName = TOTWStatObject["POS " + playerIDNumber + " PLAYER"];
+    let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
+    console.log("playerName = " + playerName);
+    console.log("seasonWeekNumRef = " + seasonWeekNumRef);
+
+    // Begin working with the Match Details data.
+    var objectLength = displayMatchDetailsArrayOfObjects.length; // Get the original length of the array.
+    console.log(objectLength);
+    // console.log(displayMatchDetailsArrayOfObjects);
+
+    // Filter the full match details array down to the same season fixture id. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
+    objectLength = matchDetailsWeekData.length; // Get the new length of the array.
+    console.log(objectLength);
+    console.log(matchDetailsWeekData);
+
+    // Filter the reduced array down to just the player.
+    const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
+    console.log(playerMatchDetailsData);
+
+
+    // Populate the player pop up info box.
+    document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
+    document.getElementById('totw-player-info-box-APP').innerHTML = "Minutes played " + playerMatchDetailsData[0].APP;
+    document.getElementById('totw-player-info-box-G').innerHTML = "Goals scored " + playerMatchDetailsData[0].G;
+
+    // Show the background overlay.
+    document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
+    document.getElementById('background-overlay-totw-player-info').style.zIndex = 19; // Set the z-index of the background overlay to be right behind the player pop up info box.
+
+    // Show the player pop up info box.
+    document.getElementById('totw-player-info-box').style.display = "inline"; // Show the player pop up info box.
+    document.getElementById('totw-player-info-box').style.zIndex = 20; // Set the z-index of the player pop up info box.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+// 4.5.1. Team of the Week Player Pop Up Info Close function.
+function closeTOTWPlayerInfo() {
+    // Display the retrieved data onto the page.
+    console.log('%c' + '>> closeTOTWPlayerInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Hide the background overlay.
+    document.getElementById('background-overlay-totw-player-info').style.display = "none"; // Hide the background overlay behind the player pop up info box.
+
+    // Hide the player pop up info box.
+    document.getElementById('totw-player-info-box').style.display = "none"; // Hide the player pop up info box.
+}
+
+
 
 
 

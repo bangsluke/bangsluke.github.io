@@ -39,7 +39,8 @@
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Dorkinians-Page/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp"> <!-- For iOS users who link the site to their homepage. -->
+    <link rel="apple-touch-icon" href="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+    <!-- For iOS users who link the site to their homepage. -->
 
 </head>
 
@@ -101,6 +102,8 @@
         onclick="closePopUpBox()"></div>
     <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none"
         onclick="closeNav()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-totw-player-info"
+        style="display: none" onclick="closeTOTWPlayerInfo()"></div>
 
     <!-- Pop Up Box. Add a pop up box that can be modified and called for various reasons. -->
     <div id="pop-up-box" style="display: none">
@@ -125,6 +128,31 @@
 
     </div>
 
+    <!-- TOTW Player Info Pop Up Box. -->
+    <div id="totw-player-info-box" style="display: none">
+
+        <!-- The x close button. -->
+        <a id="totw-player-info-box-close-button" href="javascript:void(0)" onclick="closeTOTWPlayerInfo()">×</a>
+
+        <!-- Add a div to hold the header and message. -->
+        <div id="totw-player-info-box-container">
+
+            <!-- Add a div to hold the player name text. -->
+            <div id="totw-player-info-box-header-container">
+                <h3 id="totw-player-info-box-header-text">Testing</h3>
+            </div>
+
+            <!-- Add a div to hold the message text. -->
+            <div id="totw-player-info-box-message-container">
+                <h4>Statistics</h4>
+                <p id="totw-player-info-box-APP">Minutes played </p>
+                <p id="totw-player-info-box-G">Goals scored </p>
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- Side Menu. Add the common website side menu using shadow DOMs. See /pages/Group-Page/sideMenu.js for the side menu code. -->
     <side-menu-component></side-menu-component>
 
@@ -143,7 +171,7 @@
                         <a href="#home" active>Home</a>
                         <a href="#club-stats" id="club-stats-tab-text">Club Stats</a>
                         <a href="#player-stats">Player Stats</a>
-                        <!-- <a href="#team-of-the-week">TOTW</a> -->
+                        <a href="#team-of-the-week">TOTW</a>
                         <a href="#comparison">Comparison</a>
                         <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
                     </nav>
@@ -397,10 +425,10 @@
 
                                 <!-- <div class="selection-container" id="homepage-club-captains-and-awards-selection"> -->
 
-                                    <!-- Add a drop down select box for the user to change the awards shown. -->
+                                <!-- Add a drop down select box for the user to change the awards shown. -->
 
-                                    <!-- Let the user pick if to show captains or awards. -->
-                                    <!-- <select name="DisplaySelection" class="selection-dropdown"
+                                <!-- Let the user pick if to show captains or awards. -->
+                                <!-- <select name="DisplaySelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-display-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="ClubAwards" selected="selected">Club Awards</option>
@@ -408,8 +436,8 @@
                                         <option value="Captains">Captains</option>
                                     </select> -->
 
-                                    <!-- Let the user pick which season to filter for. -->
-                                    <!-- <select name="SeasonSelection" class="selection-dropdown"
+                                <!-- Let the user pick which season to filter for. -->
+                                <!-- <select name="SeasonSelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-season-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="2016/17">2016/17</option>
@@ -591,47 +619,63 @@
 
                                     <div id="club-stats-total-club-and-team-stats-stats-grid-container">
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGamesPlayed">Number of games played:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGamesPlayed">
+                                            Number of games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberLeagueGamesPlayed">Number of league games played:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberLeagueGamesPlayed">Number of league games
+                                            played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberLeagueGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberCupGamesPlayed">Number of cup games played:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberCupGamesPlayed">Number of cup games played:
+                                        </h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberCupGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberFriendlyGamesPlayed">Number of friendly games played:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberFriendlyGamesPlayed">Number of friendly
+                                            games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberFriendlyGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberPlayers">Number of recorded players:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberPlayers">
+                                            Number of recorded players:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberPlayers">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsScored">Number of goals scored:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsScored">
+                                            Number of goals scored:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsScored"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsPerGame">Average number of goals scored per game:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsPerGame">
+                                            Average number of goals scored per game:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-goalsPerGame">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalscorers">Number of goalscorers:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalscorers">
+                                            Number of goalscorers:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalscorers"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-topGoalscorer">Top goalscorer (and total):</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-topGoalscorer">Top
+                                            goalscorer (and total):</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-topGoalscorer">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsConceded">Number of goals conceded:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberGoalsConceded">Number of goals conceded:
+                                        </h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsConceded"></p>
 
-                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsConcededPerGame">Average number of goals conceded per game:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-goalsConcededPerGame">Average number of goals
+                                            conceded per game:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-goalsConcededPerGame"></p>
                                     </div>
@@ -1470,54 +1514,207 @@
                     </article>
 
                     <!-- 4. Team of the Week Tab -->
-                    <div id="team-of-the-week-placement-holder-div">
-                        <!-- Delete when done. -->
-                        <!-- <article class="nav-targets" id="team-of-the-week"> -->
+                    <article class="nav-targets" id="team-of-the-week">
 
                         <!-- Add the main lighter coloured page section. -->
-                        <!-- <section class="page-section"> -->
+                        <section class="page-section">
 
-                        <!-- <h2 class="textcenter">Team of the Week</h2> -->
+                            <h2 class="textcenter">Team of the Week</h2>
 
-                        <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                        <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="team-of-the-week-information-bar"></div>
 
-                        <!-- <section class="team-of-the-week-area"> -->
+                            <section class="team-of-the-week-area">
 
-                        <!-- <section class="totw-week-selection-container"> -->
+                                <section class="totw-week-selection-container">
 
-                        <!-- <div class="selection-container"> -->
+                                    <div class="selection-container">
 
-                        <!-- Let the user pick which season to filter for. -->
-                        <!-- <select name="SeasonSelection" class="selection-dropdown"
-                                            id="player-stats-season-selection-dropdown"
-                                            onchange="showPlayerStatsTabUpdatedInfo()">
-                                            <option value="" selected="selected">Season</option>
+                                        <!-- Let the user pick which season to filter for. -->
+                                        <select name="SeasonSelection" class="selection-dropdown"
+                                            id="TOTW-season-selection-dropdown"
+                                            onchange="updateTeamOfTheWeekPlayersInfo()">
+                                            <option value="">Season</option>
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
                                             <option value="2018/19">2018/19</option>
                                             <option value="2019/20">2019/20</option>
                                             <option value="2020/21">2020/21</option>
-                                            <option value="2021/22">2021/22</option>
-                                        </select> -->
+                                            <option value="2021/22" selected="selected">2021/22</option>
+                                        </select>
 
-                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                        <!-- <select name="WeekSelection" class="selection-dropdown"
-                                            id="TOTW-week-selection-dropdown">
-                                            <option value="" selected="selected">Select Week</option>
-                                            <option value="week1">Week 1</option>
-                                        </select> -->
+                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                                        <select name="WeekSelection" class="selection-dropdown"
+                                            id="TOTW-week-selection-dropdown"
+                                            onchange="updateTeamOfTheWeekPlayersInfo()">
+                                            <option value="">Select Week</option>
+                                            <option value="2">Week 2</option>
+                                            <option value="3">Week 3</option>
+                                            <option value="4">Week 4</option>
+                                            <option value="5">Week 5</option>
+                                            <option value="6">Week 6</option>
+                                            <option value="7" selected="selected">Week 7</option>
+                                            <option value="15">Week 15</option>
+                                            <option value="38">Week 38</option>
+                                        </select>
 
-                        <!-- </div> -->
+                                    </div>
 
-                        <!-- </section> -->
+                                </section>
 
-                        <!-- <section class="totw-team-of-the-week-container">
+                                <section class="totw-team-of-the-week-container">
 
-                                    <h3 class="textleft">TOTW</h3>
+                                    <h3 class="textcenter" id="totw-total-points">TOTW Total Points: </h3>
 
-                                    <img src="/pages/Dorkinians-Page/images/Layout Images/Team Of The Week 2020-10-24.webp"
-                                        width="943" height="1209" class="center" alt="Profile">
+                                    <!-- Add a div to hold the pitch and all players. -->
+                                    <div id="team-of-the-week-pitch-area">
+
+                                        <!-- Add the divs that hold the players. The onclick event is added using JavaScript. -->
+                                        <div class="totw-player-div" id="totw-player-pos-1">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKitKeeper.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - White.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-1-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-1-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-2">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-2-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-2-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-3">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-3-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-3-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-4">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-4-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-4-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-5">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-5-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-5-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-6">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-6-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-6-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-7">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-7-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-7-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-8">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-8-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-8-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-9">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-9-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-9-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-10">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-10-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-10-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div" id="totw-player-pos-11">
+                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
+                                                class="totw-dorkinians-kit">
+                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
+                                                class="totw-dorkinians-logo">
+                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
+                                                class="totw-rebecca-cannon-logo">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-11-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-11-points"></div>
+                                        </div>
+
+
+                                    </div>
 
                                 </section>
 
@@ -1529,14 +1726,13 @@
                                     <p>- Most likely to get in next week.</p>
                                     <p>- Hall of famers.</p>
 
-                                </section> -->
+                                </section>
 
-                        <!-- </section> -->
+                            </section>
 
-                        <!-- </section> -->
+                        </section>
 
-                        <!-- </article> -->
-                    </div>
+                    </article>
 
                     <!-- 5. Comparison Tab -->
                     <article class="nav-targets" id="comparison">
@@ -2770,7 +2966,8 @@
                                 <div id="lrep747153979" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+                                </div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '747153979'
                                 </script>
@@ -2788,7 +2985,8 @@
                                 <div id="lrep241472326" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '241472326'
                                 </script>
@@ -2806,7 +3004,8 @@
                                 <div id="lrep650285541" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '650285541'
                                 </script>
@@ -2824,7 +3023,8 @@
                                 <div id="lrep715891159" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '715891159'
                                 </script>
@@ -2852,7 +3052,8 @@
                                 <div id="lrep549908553" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '549908553'
                                 </script>
@@ -2870,7 +3071,8 @@
                                 <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '768016187'
                                 </script>
@@ -2888,7 +3090,8 @@
                                 <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '768016187'
                                 </script>
@@ -2918,7 +3121,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+                                </div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '381388329'
                                 </script>
@@ -2937,7 +3141,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '709797986'
                                 </script>
@@ -2956,7 +3161,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '266611945'
                                 </script>
@@ -2975,7 +3181,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '897042508'
                                 </script>
@@ -3005,7 +3212,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '201995739'
                                 </script>
@@ -3024,7 +3232,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '157121765'
                                 </script>
@@ -3043,7 +3252,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '506904509'
                                 </script>

@@ -1454,16 +1454,6 @@ Section 4
 
 /* 4. Team of the Week Tab */
 
-#team-of-the-week-placement-holder-div { /* Remove when ready to show on the page. */
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
-#team-of-the-week {
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
 .team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
@@ -1485,6 +1475,162 @@ Section 4
 	grid-area: TeamOfTheWeek;
 	padding: 0.3rem;
 }
+
+#team-of-the-week-pitch-area {
+	position: relative;
+	width: 100%;
+	height: 520px;
+
+	/* min-height: 524px; */
+	/* min-width: 820px; */
+    background-size: 820px 100%;
+	/* background-size: 500px 100%; */
+	background-image: url('https://fantasy.premierleague.com/static/media/pitch-bud.50582128.svg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+
+.totw-player-div {
+	/* background-color: #ce641d; */
+	height: 100px;
+	width: 180px;
+	/* padding: 0px auto; */
+	position: absolute;
+	top: 0px;
+
+	/* width: 600px; */
+	/* background-size: 820px 100%; */
+	/* background-image: url('/pages/Dorkinians-Page/images/TeamKit.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: center; */
+}
+
+/* Format the Dorkinians Kit image. */
+.totw-dorkinians-kit {
+	position: relative;
+	top: 0;
+	left: 14px;
+	height: 100px;
+	margin: 0 auto;
+	/* width: auto; */
+}
+/* Format the Dorkinians logo. */
+.totw-dorkinians-logo {
+	height: 15px;
+	position: relative;
+	top: -98%;
+	left: 28%;
+  	/* left: -70px; */
+}
+/* Format the Rebecca Cannon logo. */
+.totw-rebecca-cannon-logo {
+	height: 30px;
+	position: relative;
+	top: -70%;
+	left: 2%;
+  	/* left: -70px; */
+}
+/* Format the boxes below the kit. */
+.totw-player-box {
+	position: relative;
+	top: -28%;
+	/* left: 4%; */
+	height: max-content;
+	min-height: 20px;
+	width: max-content;
+	min-width: 100px;
+	padding: 4px;
+	color: white;
+	text-align: center;
+}
+/* Format the players name box below the kit. */
+.totw-player-name-box {
+	background-color: #00753A;
+	font-size: 14px;
+	
+}
+/* Format the players name box below the kit. */
+.totw-player-points-box {
+	background-color: #00FF87;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 12px;
+}
+
+
+/* TOTW Player Info Pop Up Box */
+
+#totw-player-info-box {
+	
+	/* Change the below property on/off to hide/show the totw-player-info box. */
+	/* display: none !important; */
+
+	background: var(--main-background-colour, green);
+	
+	/* Set the position of the box to be bang in the center of the screen. */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30; /* pop-up-box. Have the totw-player-info in front of all other items on the page. */
+
+	/* Control and set the size of the box based on the content. */
+	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
+	max-height: 60%; /* At maximum, have the height at 60%. */
+	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
+	width: 95%;
+	
+	/* Style the totw-player-info box. */
+	border: 0.125rem solid var(--secondary-accent-colour, white);
+	border-radius: var(--section-border-radius, 2rem);
+	padding: 0.7rem; /* Add internal padding to the totw-player-info box. */
+}
+/* The x close button. */
+#totw-player-info-box #totw-player-info-box-close-button {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+#totw-player-info-box-container {
+	/* background: #490bf3; */
+	height: 100%;
+	width: 100%;
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1.5rem 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+}
+#totw-player-info-box-header-container {
+	/* background: red; */
+	height: 1.5rem;
+}
+#totw-player-info-box-header-container h3 {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+#totw-player-info-box-message-container {
+	/* background: pink; */
+	height: max-content;
+	width: 100%;
+	overflow-y: scroll;
+}
+#totw-player-info-box-message-text {
+	max-inline-size: none; /* Remove some carry over p styling from the snap tabs to stop a weird word wrap. */
+}
+/* Style the text in the totw-player-info box. */
+#totw-player-info-box a, h3, p {
+	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
+}
+
+
+
 .totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
