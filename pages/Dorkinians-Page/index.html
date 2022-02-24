@@ -1557,7 +1557,7 @@
                                         <!-- Let the user pick which season to filter for. -->
                                         <select name="SeasonSelection" class="selection-dropdown"
                                             id="TOTW-season-selection-dropdown"
-                                            onchange="updateTeamOfTheWeekPlayersInfo()">
+                                            onchange="updateTeamOfTheWeekWeekNumberInfo()">
                                             <option value="">Season</option>
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
@@ -1572,14 +1572,6 @@
                                             id="TOTW-week-selection-dropdown"
                                             onchange="updateTeamOfTheWeekPlayersInfo()">
                                             <option value="">Select Week</option>
-                                            <option value="2">Week 2</option>
-                                            <option value="3">Week 3</option>
-                                            <option value="4">Week 4</option>
-                                            <option value="5">Week 5</option>
-                                            <option value="6">Week 6</option>
-                                            <option value="7" selected="selected">Week 7</option>
-                                            <option value="15">Week 15</option>
-                                            <option value="38">Week 38</option>
                                         </select>
 
                                     </div>
@@ -1593,21 +1585,23 @@
 
                                         <!-- Group the summary text on the left hand side. -->
                                         <div id="team-of-the-week-header-summary-text">
-                                            <h3 class="textcenter">TOTW Total Points:</h3>
-                                            <h3 class="textcenter" id="totw-total-points">TBC</h3>
-                                            <p class="textcenter" id="totw-week-number-players">Number Players: </p>
+                                            <h3 class="textcenter">TOTW Total Points:</h4>
+                                                <h3 class="textcenter" id="totw-total-points">TBC</h3>
+                                                <p class="textcenter" id="totw-week-number-players">Number Players
+                                                    Played:
+                                                </p>
                                         </div>
 
                                         <!-- Display the star man on the right side. -->
-                                        <div id="team-of-the-week-header-summary-StarMan">
+                                        <div id="team-of-the-week-header-summary-star-man">
                                             <h3 class="textcenter">Star Man</h3>
-                                            <div id="totw-player-StarMan-div">
+                                            <div class="totw-player-div totw-player-div-star-man">
                                                 <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                    class="totw-dorkinians-kit">
+                                                    class="totw-dorkinians-kit totw-dorkinians-kit-star-man">
                                                 <div class="totw-player-box totw-player-name-box"
-                                                    id="totw-player-pos-StarMan-name"></div>
+                                                    id="totw-player-pos-star-man-name"></div>
                                                 <div class="totw-player-box totw-player-points-box"
-                                                    id="totw-player-pos-StarMan-points"></div>
+                                                    id="totw-player-pos-star-man-points"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1616,99 +1610,99 @@
                                     <div id="team-of-the-week-pitch-area">
 
                                         <!-- Add the divs that hold the players. The onclick event is added using JavaScript. -->
-                                        <div class="totw-player-div" id="totw-player-pos-1">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-1">
                                             <img src="/pages/Dorkinians-Page/images/KeeperKit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-1-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-1-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-2">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-2">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-2-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-2-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-3">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-3">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-3-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-3-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-4">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-4">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-4-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-4-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-5">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-5">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-5-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-5-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-6">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-6">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-6-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-6-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-7">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-7">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-7-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-7-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-8">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-8">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-8-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-8-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-9">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-9">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-9-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-9-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-10">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-10">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-10-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-10-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-11">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-11">
                                             <img src="/pages/Dorkinians-Page/images/Kit.svg"
-                                                class="totw-dorkinians-kit">
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-11-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
