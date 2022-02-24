@@ -401,9 +401,11 @@ var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to
 
 // Homepage Tab
 
+// Next Fixtures
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
+// Captains and Awards
 const captainsAndAwardsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1483872425&single=true&output=csv';
 var displayCaptainsAndAwardsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
@@ -1412,7 +1414,7 @@ function getMatchDetailsInfo(results) {
     });
 }
 
-// 4.2. Team of the Week Players Info data "getter" function.
+// 4.2. Team of the Week - Players Info data "getter" function.
 function getTeamOfTheWeekPlayersInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getTeamOfTheWeekPlayersInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1428,29 +1430,98 @@ function getTeamOfTheWeekPlayersInfo(results) {
     // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayTOTWArrayOfObjects); // Log the global variable.
 
-    // Populate the TOTW tab.
-    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+    // Initially populate the week number dropdown.
+    updateTeamOfTheWeekWeekNumberInfo();
 }
 
+// 4.3. Team of the Week - Week Number data "update-er" function.
+function updateTeamOfTheWeekWeekNumberInfo() {
+    // Create a function that is called when the user changes the season dropdown. This function is called from the HTML select elements.
+    console.log('%c' + '>> updateTeamOfTheWeekWeekNumberInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Get the selected season and the week dropdown element.
+    let selectedSeason = document.getElementById('TOTW-season-selection-dropdown').value; // Get the selected season text.
+    let weekDropdown = document.getElementById('TOTW-week-selection-dropdown'); // Define the week dropdown.
+    weekDropdown.options.length = 0; // Clear all options from the dropdown.
+
+    // Get the TOTW object.
+    // console.log("displayTOTWArrayOfObjects: ");
+    // console.log(displayTOTWArrayOfObjects);
+
+    // Filter the TOTW details array down to the selected season to get the list of week numbers for that season. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    const selectedSeasonWeekData = displayTOTWArrayOfObjects.filter(seasonData => seasonData.SEASON === selectedSeason);
+    // console.log("selectedSeasonWeekData: ");
+    // console.log(selectedSeasonWeekData);
+    let selectedSeasonWeekCount = selectedSeasonWeekData.length; // Get the number of weeks from that season.
+    // console.log("selectedSeasonWeekCount: ");
+    // console.log(selectedSeasonWeekCount);
+
+    // Populate the weeks dropdown list with options. https://betterprogramming.pub/how-to-dynamically-populate-a-year-dropdown-with-javascript-bcf4f849bc4f
+
+    // Loop through the passed data and get the row of data to be displayed and used.
+    for (let i = 0; i < selectedSeasonWeekCount; i++) {
+        // console.log(i); // Log the number being run through.
+        let weekOption = document.createElement('option');
+        // console.log("Week selectedSeasonWeekData[i].WEEK");
+        // console.log("Week " + selectedSeasonWeekData[i].WEEK);
+        weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK;
+        weekOption.value = selectedSeasonWeekData[i].WEEK;
+        weekDropdown.add(weekOption);
+    }
+
+    // Mark the last option in the list as selected. https://stackoverflow.com/a/8140900/14290169
+    document.getElementById("TOTW-week-selection-dropdown").selectedIndex = selectedSeasonWeekCount - 1;
+
+    // Populate the TOTW tab.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+// // Define the y positions of each Classification.
+// let GKy = 5;
+// let DEFy = 150;
+// let MIDy = 300;
+// let FWDy = 450;
+// // Define the x positions of each Classification.
+// let Centerx = 200;
+// let LeftOf2x = 150;
+// let RightOf2x = 250;
+// let LeftOf3x = 100;
+// let RightOf3x = 300;
+// let LeftOf4x = 10;
+// let LeftCenterOf4x = 100;
+// let RightCenterOf4x = 250;
+// let RightOf4x = 350;
+// let LeftOf5x = 5;
+// let LeftCenterOf5x = 80;
+// let RightCenterOf5x = 270;
+// let RightOf5x = 355;
+
 // Define the y positions of each Classification.
-let GKy = 5;
-let DEFy = 150;
-let MIDy = 300;
-let FWDy = 450;
+let GKy = 8;
+let DEFy = 24;
+let MIDy = 51;
+let FWDy = 78;
 // Define the x positions of each Classification.
-let Centerx = 200;
-let LeftOf2x = 150;
-let RightOf2x = 250;
-let LeftOf3x = 100;
-let RightOf3x = 300;
-let LeftOf4x = 10;
-let LeftCenterOf4x = 100;
-let RightCenterOf4x = 250;
-let RightOf4x = 350;
-let LeftOf5x = 5;
-let LeftCenterOf5x = 80;
-let RightCenterOf5x = 270;
-let RightOf5x = 355;
+let PlayerWidth = 20;
+let Centerx = 50 - (PlayerWidth / 2);
+let LeftOf2x = 30 - (PlayerWidth / 2);
+let RightOf2x = 70 - (PlayerWidth / 2);
+let LeftOf3x = 25 - (PlayerWidth / 2);
+let RightOf3x = 75 - (PlayerWidth / 2);
+let LeftOf4x = 15 - (PlayerWidth / 2);
+let LeftCenterOf4x = 35 - (PlayerWidth / 2);
+let RightCenterOf4x = 65 - (PlayerWidth / 2);
+let RightOf4x = 85 - (PlayerWidth / 2);
+let LeftOf5x = 10 - (PlayerWidth / 2);
+let LeftCenterOf5x = 35 - (PlayerWidth / 2);
+let RightCenterOf5x = 65 - (PlayerWidth / 2);
+let RightOf5x = 90 - (PlayerWidth / 2);
 
 // Define an object of formations to define the various positions of players.
 const formationCoordinateObject = {
@@ -1855,7 +1926,7 @@ const formationCoordinateObject = {
     }
 }
 
-// 4.3. Team of the Week Players Info data "show-er" function.
+// 4.4. Team of the Week - Players Info data "show-er" function.
 function showTeamOfTheWeekPlayersInfo(results) {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> showTeamOfTheWeekPlayersInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1900,7 +1971,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Get an object from the array by creating an object from the first array value.
     TOTWStatObject = dataArrayOfObjects[arrayNumberRef];
-    console.log("statObject =");
+    console.log("TOTWStatObject =");
     console.log(TOTWStatObject);
 
     // Define the formation to display.
@@ -1917,7 +1988,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
     const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
     let weekPlayerCount = matchDetailsWeekData.length; // Get the number of players who played that week from the new length of the array.
     // console.log(weekPlayerCount);
-    document.getElementById("totw-week-number-players").innerHTML = "Number players: " + weekPlayerCount; // Populate the found HTML element with the players name.
+    document.getElementById("totw-week-number-players").innerHTML = "Number Players Played: " + weekPlayerCount; // Populate the found HTML element with the players name.
 
     // Define some variables for use within the loop.
     var maxPoints = 0;
@@ -1940,29 +2011,35 @@ function showTeamOfTheWeekPlayersInfo(results) {
         }
 
         // Position the overall player div.
-        var x = parseInt(0); // The left of the pitch.
-        var y = parseInt(20); // The top of the pitch.
+        // var x = parseInt(0); // The left of the pitch.
+        // var y = parseInt(20); // The top of the pitch.
         let playerDiv = document.getElementById("totw-player-pos-" + i);
         // playerDiv.style.position = "absolute";
         // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
-        let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
-        let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
-        playerDiv.style.left = leftPosition + 'px';
-        playerDiv.style.top = topPosition + 'px';
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
+        // let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
+        // let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
+        let leftPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
+        let topPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
+        // playerDiv.style.left = leftPosition + 'px';
+        // playerDiv.style.top = topPosition + 'px';
+        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
+
+        playerDiv.style.left = leftPosition + '%';
+        playerDiv.style.top = topPosition + '%';
+        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
     }
 
     // Populate the star man details.
-    document.getElementById("totw-player-pos-StarMan-name").innerHTML = TOTWStatObject["POS " + starManID + " PLAYER"]; // Populate the found HTML element with the players name.
-    document.getElementById("totw-player-pos-StarMan-points").innerHTML = TOTWStatObject["POS " + starManID + " POINTS"]; // Populate the found HTML element with the players points.
+    document.getElementById("totw-player-pos-star-man-name").innerHTML = TOTWStatObject["POS " + starManID + " PLAYER"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-player-pos-star-man-points").innerHTML = TOTWStatObject["POS " + starManID + " POINTS"]; // Populate the found HTML element with the players points.
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("TOTW - All TOTW Players");
 }
 
-// 4.4. Team of the Week Players Info data "update-er" functions.
+// 4.5. Team of the Week - Players Info data "update-er" functions.
 function updateTeamOfTheWeekPlayersInfo() {
-    // Create a function that is called when the user changes the season or week dropdowns. This function is called from the HTML select elements.
+    // Create a function that is called when the user changes the week dropdown. This function is called from the HTML select elements.
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
@@ -1974,7 +2051,7 @@ function updateTeamOfTheWeekPlayersInfo() {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// 4.5. Team of the Week Player Pop Up Info function.
+// 4.6. Team of the Week - Player Pop Up Info function.
 const showTOTWPlayerInfo = function () {
     // Create a function that is called when the user clicks on a player in TOTW. This function is called from the HTML elements.
     // https://thewebdev.info/2021/03/20/how-to-get-the-id-of-the-clicked-element-in-the-javascript-click-handler/
@@ -2034,7 +2111,7 @@ const showTOTWPlayerInfo = function () {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// 4.5.1. Team of the Week Player Pop Up Info Close function.
+// 4.6.1. Team of the Week - Player Pop Up Info Close function.
 function closeTOTWPlayerInfo() {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> closeTOTWPlayerInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
