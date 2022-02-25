@@ -1946,9 +1946,6 @@ function showTeamOfTheWeekPlayersInfo(results) {
     var seasonValueDropdown = document.getElementById("TOTW-season-selection-dropdown"); // Get the season selected dropdown.
     var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
 
-    // ! UPDATE HERE
-    // Add code to dynamically update the available week numbers after the user has picked a season.
-
     // Week selection.
     var weekValueDropdown = document.getElementById("TOTW-week-selection-dropdown"); // Get the week selected dropdown.
     var weekValue = weekValueDropdown.options[weekValueDropdown.selectedIndex].value; // Get the week selected. (https://stackoverflow.com/a/8549358/14290169).
@@ -2011,19 +2008,9 @@ function showTeamOfTheWeekPlayersInfo(results) {
         }
 
         // Position the overall player div.
-        // var x = parseInt(0); // The left of the pitch.
-        // var y = parseInt(20); // The top of the pitch.
         let playerDiv = document.getElementById("totw-player-pos-" + i);
-        // playerDiv.style.position = "absolute";
-        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
-        // let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
-        // let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
         let leftPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
         let topPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
-        // playerDiv.style.left = leftPosition + 'px';
-        // playerDiv.style.top = topPosition + 'px';
-        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
-
         playerDiv.style.left = leftPosition + '%';
         playerDiv.style.top = topPosition + '%';
         console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
@@ -2088,16 +2075,27 @@ const showTOTWPlayerInfo = function () {
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
     console.log(playerMatchDetailsData);
 
-
     // Populate the player pop up info box.
+    // Populate the top information.
     document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
-
     document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
+    // Loop through the stats table and fill in the details.
+    let statArray = ["APP", "MOM", "G", "A", "CLS", "C", "Y", "R", "OG", "PM", "PCO", "PSV"];
+    console.log(statArray)
+    for (let i = 0; i < statArray.length; i++) {
+        console.log("i = " + i + ", which is " + statArray[i]);
+        console.log('totw-player-info-box-' + statArray[i]);
+        console.log("playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
+        document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
+        document.getElementById('totw-player-info-box-' + statArray[i] + '-points').innerHTML = playerMatchDetailsData[0][statArray[i]] * 2;
+        // document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
+        // document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
+    }
+    // Populate the Total Points row.
+    document.getElementById('totw-player-info-box-FTP').innerHTML = playerMatchDetailsData[0]["FTP"];
+    document.getElementById('totw-player-info-box-FTP-points').innerHTML = playerMatchDetailsData[0]["FTP"];
 
-    document.getElementById('totw-player-info-box-APP').innerHTML = playerMatchDetailsData[0].APP;
-    document.getElementById('totw-player-info-box-APP-points').innerHTML = playerMatchDetailsData[0].APP * 2;
-    document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
-    document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
+
 
     // Show the background overlay.
     document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
