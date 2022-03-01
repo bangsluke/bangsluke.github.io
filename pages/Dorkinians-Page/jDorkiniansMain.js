@@ -3028,3 +3028,426 @@ function closeDropdownList(dropdownID, tabName) {
     document.getElementById(dropdownID + '-contents').style.display = "none"; // Hide the selection dropdown content.
     document.getElementById('background-overlay-selection-dropdown-' + tabName).style.display = "none"; // Hide the background overlay behind the selection dropdown.
 }
+
+
+
+
+
+// sideMenu
+
+/// The functionality of the side menu is defined further down. https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+
+const sideMenuTemplate = document.createElement('template');
+const newLocal = `
+
+    <!-- Side Menu - not considered part of the "main-content-area" -->
+
+        <div id="side-menu">
+
+            <!-- The top side bar fixed container. -->
+            <div id="side-menu-top-container">
+
+                <!-- The x close button. -->
+                <a id="side-menu-close-button" href="javascript:void(0)" onclick="closeNav()">×</a>
+
+                <!-- Add the Dorkinians logo. -->
+                <img class="logo center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp"
+                alt="Dorkinians Logo" width="80" height="80">
+
+            </div>
+
+            <!-- The main side bar menu options. -->
+            <div id="side-menu-main-container">
+
+                <!-- The site details section of the side bar menu. -->
+                <section id="side-menu-site-details-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Site Details</h3>
+
+                    <div id="side-menu-site-details-grid-section">
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Version Number: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-version-number-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Current Season: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-current-season-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Last Updated Stats: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-last-updated-stats-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Page Details Last Refreshed: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-page-details-last-refereshed-text"></p>
+                        </div>
+                    </div>    
+
+                </section>
+
+                <!-- The actions section of the side bar menu options. -->
+                <section id="side-menu-actions-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Actions</h3>
+
+                    <div id="side-menu-actions-section-grid">
+
+                        <!-- Add the change theme item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Theme Change Icon.webp" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
+                        </div>
+
+                        <!-- Add the text size change action item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Text Size Icon.webp" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon">
+                        </div>
+                        <div class="side-menu-text-container side-menu-action-button-container">
+                            <h4>Change Text Size</h4>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-increment" onclick="changeTextSize(1)">
+                                +
+                            </button>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-decrement" onclick="changeTextSize(-1)">
+                                -
+                            </button>
+                        </div>
+
+                        <!-- Add the full reset item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Reset Page Icon.webp" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-height-text" onclick="resetActionVariables()">Reset Page Settings</h4>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- The quick links section of the side bar menu. -->
+                <section id="side-menu-quick-links-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Quick Links</h3>
+
+                    <div id="side-menu-quick-links-section-grid">
+
+                        <!-- Add a link to the Dorkinians homepage. -->
+                        <div class="side-menu-icon-container">
+                            <a href="https://www.dorkiniansfc.co.uk/">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon" height="25px">
+                            </a>
+                        </div>
+                        <div class="side-menu-text-container">
+                            <a href="https://www.dorkiniansfc.co.uk/">
+                                <h4>dorkiniansfc.co.uk</h4>
+                            </a>
+                        </div>
+
+                        <!-- Add a link to the FA homepage. -->
+                        <div class="side-menu-icon-container">
+                            <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
+                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.webp" class="side-menu-icon" alt="The FA Logo Icon" height="25px">
+                            </a>
+                        </div>
+                        <div class="side-menu-text-container">
+                            <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
+                                <h4>FULL-TIME.TheFA.com</h4>
+                            </a>
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <!-- The additional section of the side bar menu. -->
+                <section id="side-menu-additional-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Additional</h3>
+
+                    <!-- Add a "Stat Details" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Details', displaySiteDetailsArrayOfObjects[0]['Stat Details'])">Stat Details</a>
+                    </div>
+
+                    <!-- Add a "Version Release Details" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Version Release Details', displaySiteDetailsArrayOfObjects[0]['Version Release Details'])">Version Release Details</a>
+                    </div>
+
+                    <!-- Add an "Updates To Come" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Updates To Come', displaySiteDetailsArrayOfObjects[0]['Updates To Come'])">Updates To Come</a>
+                    </div>
+
+                    <!-- Add a "Stat Limitations" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Limitations', displaySiteDetailsArrayOfObjects[0]['Stat Limitations'])">Stat Limitations</a>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+`;
+sideMenuTemplate.innerHTML = newLocal;
+
+// Create a class for the element
+class sideMenu extends HTMLElement {
+
+    // Always call super first in constructor
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+
+        // Create a shadow root
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+
+        // Apply external styles to the shadow DOM
+        const styleSheet = document.createElement('link');
+        styleSheet.setAttribute('rel', 'stylesheet');
+        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/DorkiniansMain.min.css');
+        shadowRoot.appendChild(styleSheet);
+
+        // Attach the created elements to the shadow DOM
+        shadowRoot.appendChild(sideMenuTemplate.content);
+    }
+}
+
+customElements.define('side-menu-component', sideMenu);
+
+// jSideBar.js JavaScript Functions
+
+// Side bar scripts
+// https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+
+// Publically define a number of global constants and variables.
+
+var sideMenuWidth = '80%'; // Originally 15.6rem.
+var fontSizeMin = 10; // Set a minimum font size in pixels.
+var fontSizeMax = 22; // Set a maximum font size in pixels.
+var pageHeightMin = 0; // Set a minimum page height in pixels.
+var pageHeightMax = 100; // Set a maximum page height in pixels.
+
+// Open the navigation side menu.
+function openNav() {
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = sideMenuWidth; // Increase the width of the side-menu to make it visible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
+
+    // Show the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "inline"; // Show the background overlay behind the side menu.
+    document.getElementById('background-overlay-side-menu').style.zIndex = 19; // Set the z-index of the background overlay to be right behind the side menu.
+
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "none"; // Hide the options icon.
+    } else {
+        //console.log("not doing anything");
+    }
+}
+
+// Close the navigation side menu.
+function closeNav() {
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
+
+    // Hide the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "none"; // Hide the background overlay behind the side menu.
+
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "inline"; // Show the options icon.
+    } else {
+        //console.log("not doing anything");
+    }
+}
+
+// Change the site theme style.
+function changeSiteTheme() {
+    console.log("changeSiteTheme clicked."); // Log that the function has been called.
+
+    // Select the element holding the change site theme text.
+    let themeTextElement = document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-actions-change-theme-text');
+
+    // Check which site theme has been selected and then define the required colours for the CSS styling sheet.
+    if (themeTextElement.innerHTML == "Change to Dark Theme") {
+        // Change site theme to dark mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#222129');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#252432');
+        document.documentElement.style.setProperty('--third-background-colour', '#282735');
+        document.documentElement.style.setProperty('--main-accent-colour', '#FF3CAC');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '255, 60, 172');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF85');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#222129');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Light Theme";
+
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#FF3CAC', '#FFFFFF85', '#222129');
+        buildWeatherWidget();
+
+    } else {
+        // Change site theme to light mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#1C8841');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#31a057');
+        document.documentElement.style.setProperty('--third-background-colour', '#236f38');
+        document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#236f38');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Dark Theme";
+
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#F9ED32', '#FFFFFF', '#1C8841');
+        buildWeatherWidget();
+
+    }
+
+    closeNav(); // Close the side navigation that the function was called from.
+    //console.log("Site theme changed."); // Log a final success message.
+}
+
+// Change the site text size.
+function changeTextSize(delta) {
+    console.log("changeTextSize clicked. Font size changed by " + delta + "."); // Log that the function has been called.
+
+    let fontSize = getComputedStyle(document.documentElement).getPropertyValue('--main-font-size'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
+    fontSize = parseInt(fontSize.replace("px", "")); // Remove the pixels from the returned string.
+
+    console.log('fontSize before is = ' + fontSize); // Log the font size value before the function has been run.
+
+    if (delta == 1) {
+        // Increment the font size to be larger.
+        if (fontSize < fontSizeMax) { // Only increment the font size if it is less than the max. 
+            fontSize += delta;
+        }
+    } else {
+        // Decrement the font size to be smaller.
+        if (fontSize > fontSizeMin) { // Only dedcrement the font size if it is larger than the min. 
+            fontSize += delta;
+        }
+    }
+    console.log('fontSize after is = ' + fontSize); // Log the font size value after the function has been run.
+
+    // Append the pixels to the new value.
+    fontSize = fontSize + "px";
+
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', fontSize);
+    document.documentElement.style.setProperty('font-size', fontSize);
+}
+function increaseFontSize() {
+    changeTextSize(1);
+}
+function decreaseFontSize() {
+    changeTextSize(-1);
+}
+
+// Reset all prveiously modified variables.
+function resetActionVariables() {
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', '16px');
+    document.documentElement.style.setProperty('font-size', '16px');
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-background-colour', '#1C8841');
+    document.documentElement.style.setProperty('--secondary-background-colour', '#31a057');
+    document.documentElement.style.setProperty('--third-background-colour', '#236f38');
+    document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
+    document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
+    document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+    document.documentElement.style.setProperty('--tooltip-background-colour', '#236f38');
+    openPopUpBox("Page Settings Reset", "Font size and theme reset."); // Display a pop up to show the reset has worked.
+}
+
+
+// Snap Tabs
+
+// Add a function used for SnapTabs. See https://web.dev/building-a-tabs-component/.
+function t(t) { var n = Array.isArray(t) ? e(t) : void 0; if (n || (n = "undefined" != typeof Symbol && Symbol.iterator in Object(t) ? Array.from(t) : void 0), !n) t: { if (t) { if ("string" == typeof t) { n = e(t, void 0); break t } if ("Object" === (n = Object.prototype.toString.call(t).slice(8, -1)) && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n) { n = Array.from(n); break t } if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) { n = e(t, void 0); break t } } n = void 0 } if (!(t = n)) throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); return t } function e(t, e) { (null == e || e > t.length) && (e = t.length); for (var n = 0, r = Array(e); n < e; n++)r[n] = t[n]; return r } !function () { function t(t, e) { for (var n = 0; n < e.length; n++) { var r = e[n]; r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r) } } function e(e, n, r) { return n && t(e.prototype, n), r && t(e, r), e } function n(t) { return (t = t.trim().match(/^(-?[0-9]*\.?[0-9]*)(px|%)$/)) ? { value: t[1], unit: t[2] } : null } function r(t) { return t === document.scrollingElement ? document : t } function o(t) { var e = a.get(t).animations; if (0 !== e.length) { t = t.currentTime; for (var n = 0; n < e.length; n++)null == t ? "paused" === e[n].playState && e[n].cancel() : e[n].currentTime = t } } function i(t) { return 1 / 0 === t.iterationCount ? 1 / 0 : Math.max((t.startDelay || 0) + (t.duration || 0) * (t.iterationCount || 1) + (t.endDelay || 0), 0) } function l(t, e, r, o, i) { return i ? i(e, r, o, "0%" === t ? "start" : "end") : ("block" === r ? r = "vertical" : "inline" === r && (r = "horizontal"), e = "vertical" === r ? e.scrollHeight - e.clientHeight : e.scrollWidth - e.clientWidth, "%" === (t = n("auto" === o ? t : o)).unit ? parseFloat(t.value) * e / 100 : parseFloat(t.value)) } var a = new WeakMap, c = [], s = function () { function t(t) { a.set(this, { scrollSource: null, orientation: "block", startScrollOffset: "auto", endScrollOffset: "auto", timeRange: "auto", fill: "none", animations: [], animationOptions: [] }), this.scrollSource = t && t.scrollSource || document.scrollingElement, this.orientation = t && t.orientation || "block", this.startScrollOffset = t && t.startScrollOffset || "auto", this.endScrollOffset = t && t.endScrollOffset || "auto", this.timeRange = t && t.timeRange || "auto", this.fill = t && t.fill || "none" } return e(t, [{ key: "scrollSource", set: function (t) { var e = this; this.scrollSource && r(this.scrollSource).removeEventListener("scroll", (function () { return o(e) })), t instanceof Element || (t = document.scrollingElement), a.get(this).scrollSource = t, r(t).addEventListener("scroll", (function () { return o(e) })), o(this) }, get: function () { return a.get(this).scrollSource } }, { key: "orientation", set: function (t) { -1 === ["block", "inline", "horizontal", "vertical"].indexOf(t) && (t = "block"), a.get(this).orientation = t, o(this) }, get: function () { return a.get(this).orientation } }, { key: "startScrollOffset", set: function (t) { var e = a.get(this); e.startScrollOffsetFunction = null; for (var n = 0; n < c.length; n++) { var r = c[n].parse(t); if (void 0 !== r) { t = r, e.startScrollOffsetFunction = c[n].evaluate; break } } e.startScrollOffset = t, o(this) }, get: function () { return a.get(this).startScrollOffset } }, { key: "endScrollOffset", set: function (t) { a.get(this).endScrollOffsetFunction = null; for (var e = 0; e < c.length; e++) { var n = c[e].parse(t); if (void 0 !== n) { t = n, a.get(this).endScrollOffsetFunction = c[e].evaluate; break } } a.get(this).endScrollOffset = t, o(this) }, get: function () { return a.get(this).endScrollOffset } }, { key: "timeRange", set: function (t) { a.get(this).timeRange = t, o(this) }, get: function () { return a.get(this).timeRange } }, { key: "currentTime", get: function () { if (!this.scrollSource) return null; var t, e, n = l("0%", this.scrollSource, this.orientation, this.startScrollOffset, a.get(this).startScrollOffsetFunction), r = l("100%", this.scrollSource, this.orientation, this.endScrollOffset, a.get(this).endScrollOffsetFunction), o = this.timeRange; if ("auto" === o) { o = 0; for (var c = a.get(this).animationOptions, s = 0; s < c.length; s++)o = Math.max(o, i(c[s])); 1 / 0 === o && (o = 0) } return c = this.scrollSource.scrollTop, "inline" !== this.orientation && "horizontal" !== this.orientation || (c = this.scrollSource.scrollLeft), c < n ? "none" === this.fill || "forwards" === this.fill ? null : 0 : c >= r ? r < (t = this.scrollSource, "block" === (e = this.orientation) ? e = "vertical" : "inline" === e && (e = "horizontal"), "vertical" === e ? t.scrollHeight - t.clientHeight : "horizontal" === e ? t.scrollWidth - t.clientWidth : void 0) && ("none" === this.fill || "backwards" === this.fill) ? null : o : (c - n) / (r - n) * o } }, { key: "__polyfill", get: function () { return !0 } }]), t }(), u = new WeakMap, f = [[[0, 1, 2, 3]], [[0, 2], [1, 3]], [[0], [1, 3], [2]], [[0], [1], [2], [3]]], h = function () { function t(t) { u.set(this, { target: null, edge: "start", threshold: 0, rootMargin: [[0, "px"], [0, "px"], [0, "px"], [0, "px"]] }), this.target = t.target, this.edge = t.edge || "start", this.threshold = t.threshold || 0, this.rootMargin = t.rootMargin || "0px 0px 0px 0px", this.clamp = t.clamp || !1 } return e(t, [{ key: "target", set: function (t) { if (!(t instanceof Element)) throw u.get(this).target = null, Error("Intersection target must be an element."); u.get(this).target = t }, get: function () { return u.get(this).target } }, { key: "edge", set: function (t) { -1 != ["start", "end"].indexOf(t) && (u.get(this).edge = t) }, get: function () { return u.get(this).edge } }, { key: "threshold", set: function (t) { if (0 > (t = parseFloat(t)) || 1 < t) throw RangeError("threshold must be in the range [0, 1]"); u.get(this).threshold = t }, get: function () { return u.get(this).threshold } }, { key: "rootMargin", set: function (t) { if (1 > (t = t.split(/ +/)).length || 4 < t.length) throw TypeError("rootMargin must contain between 1 and 4 length components"); for (var e = [[], [], [], []], r = 0; r < t.length; r++) { var o = n(t[r]); if (!o) throw TypeError("Unrecognized rootMargin length"); for (var i = f[t.length - 1][r], l = 0; l < i.length; l++)e[i[l]] = [parseFloat(o.value), o.unit] } u.get(this).rootMargin = e }, get: function () { return u.get(this).rootMargin.map((function (t) { return t.join("") })).join(" ") } }, { key: "clamp", set: function (t) { u.get(this).clamp = !!t } }]), t }(), g = window.Element.prototype.animate; if (c.push({ parse: function (t) { if (t.target) return new h(t) }, evaluate: function (t, e, n) { "block" == e ? e = "vertical" : "inline" == e && (e = "horizontal"); for (var r, o = t == document.scrollingElement ? { left: 0, right: t.clientWidth, top: 0, bottom: t.clientHeight, width: t.clientWidth, height: t.clientHeight } : t.getBoundingClientRect(), i = u.get(n).rootMargin, l = [], a = 0; 4 > a; a++)l.push("%" == (r = i[a])[1] ? r[0] * (0 == a % 2 ? o.height : o.width) / 100 : r[0]); i = o.left - l[3], r = o.right - o.left + l[3] + l[1], a = o.top - l[0], l = o.bottom - o.top + l[0] + l[2], o = u.get(n).clamp; var c = n.target.getBoundingClientRect(), s = n.threshold; return "start" == n.edge && (s = 1 - s), "vertical" == e ? (e = c.top + c.height * s - a + t.scrollTop, o ? "end" == n.edge ? Math.max(0, e - l) : Math.min(e, t.scrollHeight - l) : "end" == n.edge ? e - l : e) : (e = c.left + c.width * s - i + t.scrollLeft, o ? "end" == n.edge ? Math.max(0, e - r) : Math.min(e, t.scrollWidth - r) : "end" == n.edge ? e - r : e) } }), !Reflect.defineProperty(window, "ScrollTimeline", { value: s })) throw Error("Error installing ScrollTimeline polyfill: could not attach ScrollTimeline to window"); if (!Reflect.defineProperty(Element.prototype, "animate", { value: function (t, e) { var n = e.timeline; if (!(n && n instanceof s)) return g.apply(this, [t, e]); delete e.timeline, (t = g.apply(this, [t, e])).pause(); var r = a.get(n).animations, i = a.get(n).animationOptions; return r.push(t), i.push(e), o(n), t } })) throw Error("Error installing ScrollTimeline polyfill: could not attach WAAPI's animate to DOM Element") }(); var n = window.matchMedia("(prefers-reduced-motion: no-preference)").matches, r = document.querySelector("snap-tabs"), o = r.querySelector(":scope > section"), i = r.querySelector(":scope nav"), l = i.querySelectorAll(":scope a"), a = r.querySelector(":scope .snap-indicator"), c = new ScrollTimeline({ scrollSource: o, orientation: "inline", fill: "both" }); function s(t) { i.querySelector(":scope a[active]").removeAttribute("active"), t.setAttribute("active", ""), t.scrollIntoView() } function u() { var t = l[o.scrollLeft / o.clientWidth]; t && s(t) } l.forEach((function (e) { e.animate({ color: t(l).map((function (t) { return t === e ? "var(--text-active-color)" : "var(--text-color)" })) }, { duration: 1e3, fill: "both", timeline: c }) })), n && a.animate({ transform: t(l).map((function (t) { return "translateX(".concat(t.offsetLeft, "px)") })), width: t(l).map((function (t) { return "".concat(t.offsetWidth, "px") })) }, { duration: 1e3, fill: "both", timeline: c }), i.addEventListener("click", (function (t) { "A" === t.target.nodeName && s(t.target) })), o.addEventListener("scroll", (function () { clearTimeout(o.scrollEndTimer), o.scrollEndTimer = setTimeout(u, 100) })), window.onload = function () { location.hash && (o.scrollLeft = document.querySelector(location.hash).offsetLeft), u() };
+//# sourceMappingURL=bundle.js.map
+
+
+// weatherWidget.js JavaScript
+
+// Javascript for building and creating the weather widget.
+
+function buildWeatherWidget() {
+    // console.log("buildWeatherWidget called."); // Log the function to the console.
+
+    // Call the original script used to build the weather widget.
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+}
+
+
+function createWeatherWidgetHTML(highColor, lowColor, cloudFillColor) {
+    // console.log("createWeatherWidgetHTML called."); // Log the function to the console.
+
+    // Define the parent element of the widget.
+    let parentElement = document.getElementById("weather-widget-container");
+
+    // Clear all children elements from the container (deleting all of the previous widget).
+    parentElement.innerHTML = ''; // Clear all children. https://stackoverflow.com/a/3955238/14290169.
+
+    // Create the new element.
+    let weatherElement = document.createElement('a');
+
+    // Set all of the properties of the element.
+    weatherElement.setAttribute('id', 'weather-widget');
+    weatherElement.setAttribute('class', 'weatherwidget-io');
+    weatherElement.setAttribute('SameSite', 'None');
+    weatherElement.setAttribute('href', 'https://forecast7.com/en/51d23n0d33/dorking/');
+    weatherElement.setAttribute('data-label_1', 'PIXHAM LANE, DORKING');
+    weatherElement.setAttribute('data-label_2', 'Weather');
+    weatherElement.setAttribute('data-icons', 'Climacons Animated');
+    weatherElement.setAttribute('data-theme', 'original');
+    weatherElement.setAttribute('data-basecolor', 'rgba(0, 0, 0, 0.05)');
+    weatherElement.setAttribute('data-accent', 'rgba(0, 0, 0, 0.05)');
+    weatherElement.setAttribute('data-highcolor', highColor);
+    weatherElement.setAttribute('data-lowcolor', lowColor);
+    weatherElement.setAttribute('data-suncolor', '#F9ED32');
+    weatherElement.setAttribute('data-cloudfill', cloudFillColor);
+    weatherElement.setAttribute('data-raincolor', '#00ffff');
+    weatherElement.innerHTML = 'PIXHAM LANE Weather';
+
+    // Add the new element into the DOM.
+    parentElement.appendChild(weatherElement);
+
+    // Create the new script element.
+    let scriptElement = document.createElement('script');
+
+    // Set all of the properties of the element.
+    scriptElement.setAttribute('id', 'weatherwidget-io-js');
+    scriptElement.setAttribute('src', 'https://weatherwidget.io/js/widget.min.js');
+
+    // Add the new element into the DOM.
+    weatherElement.appendChild(scriptElement);
+}
