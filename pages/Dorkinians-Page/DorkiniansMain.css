@@ -1757,7 +1757,8 @@ Section 4
 	text-align: center;
 }
 #totw-total-points {
-	font-size: 2rem;
+	font-size: 3rem;
+	padding-bottom: 1.2rem;
 }
 #team-of-the-week-header-summary-star-man {
 	/* background-color: greenyellow; */
@@ -1775,7 +1776,7 @@ Section 4
 	/* height: 520px; */
 	min-height: 250px;
 	height: max-content;
-	height: 100%;
+	/* height: 100%; */
 
 	/* min-width: 820px; */
     /* background-size: 420px 100%; */
@@ -1881,6 +1882,10 @@ Section 4
 	border-radius: var(--section-border-radius, 2rem);
 	padding: 0.7rem; /* Add internal padding to the totw-player-info box. */
 }
+/* Style the text in the totw-player-info box. */
+#totw-player-info-box a, h3, p, span {
+	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
+}
 /* The x close button. */
 #totw-player-info-box #totw-player-info-box-close-button {
 	position: absolute;
@@ -1899,7 +1904,7 @@ Section 4
 	grid-template-rows: 1.5rem 1fr;
 	gap: 0 0; /* First value is between rows, second columns. */
 }
-#totw-player-info-box-header-container {
+#totw-player-info-box-header-text {
 	/* background: red; */
 	height: 1.5rem;
 }
@@ -1908,9 +1913,48 @@ Section 4
 	line-height: normal;
 	vertical-align: middle;
 }
-/* Style the text in the totw-player-info box. */
-#totw-player-info-box a, h3, p {
-	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
+#totw-player-info-box-result {
+	/* background: green; */
+	position: relative;
+	height: max-content;
+	width: 100%;
+	font-size: 0.8rem;
+	padding: 0.8rem;
+}
+
+#totw-player-info-box-gameweek-details {
+	/* background: red; */
+}
+
+/* Format the table in the pop up. */
+#totw-player-info-box-gameweek-table {
+	border-radius: none;
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
+}
+/* Format the table headers. */
+#totw-player-info-box-gameweek-table th {
+	box-shadow: inset 0rem 0rem 0rem var(--main-accent-colour, yellow), inset 0rem -0.25rem 0rem var(--main-accent-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	font-style: bold; /* Make the header text bold */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
+	text-align: center; /* By default, center all table text. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
+	height: 2rem;
+}
+/* Format the table cells. */
+#totw-player-info-box-gameweek-table td {
+	padding: 0.5rem; /* Add padding within the table cells to give the table space. */
+}
+/* Add a top border radius to the last row. (https://stackoverflow.com/a/4094151/14290169). */
+#totw-player-info-box-gameweek-table tr:last-child {
+	box-shadow: inset 0rem 0.15rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
+}
+
+
+#totw-player-info-box-season-details {
+	/* background: blue; */
+	padding-top: 2rem;
 }
 
 
@@ -2134,6 +2178,10 @@ Section 5
 		/* .comparison-stats-table {
 			width: 100%;
 		} */
+		#team-of-the-week-pitch-area {
+			height: 380px; /* Format the height of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
 	}
 	
 	@media only screen and (min-width: 480px) and (max-width: 768px) {

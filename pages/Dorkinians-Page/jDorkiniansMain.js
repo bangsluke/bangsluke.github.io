@@ -1896,31 +1896,11 @@ function updateTeamOfTheWeekWeekNumberInfo() {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// // Define the y positions of each Classification.
-// let GKy = 5;
-// let DEFy = 150;
-// let MIDy = 300;
-// let FWDy = 450;
-// // Define the x positions of each Classification.
-// let Centerx = 200;
-// let LeftOf2x = 150;
-// let RightOf2x = 250;
-// let LeftOf3x = 100;
-// let RightOf3x = 300;
-// let LeftOf4x = 10;
-// let LeftCenterOf4x = 100;
-// let RightCenterOf4x = 250;
-// let RightOf4x = 350;
-// let LeftOf5x = 5;
-// let LeftCenterOf5x = 80;
-// let RightCenterOf5x = 270;
-// let RightOf5x = 355;
-
 // Define the y positions of each Classification.
-let GKy = 8;
-let DEFy = 24;
-let MIDy = 51;
-let FWDy = 78;
+let GKy = 2;
+let DEFy = 25;
+let MIDy = 48;
+let FWDy = 72;
 // Define the x positions of each Classification.
 let PlayerWidth = 20;
 let Centerx = 50 - (PlayerWidth / 2);
@@ -2382,12 +2362,12 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Get an object from the array by creating an object from the first array value.
     TOTWStatObject = dataArrayOfObjects[arrayNumberRef];
-    console.log("TOTWStatObject =");
-    console.log(TOTWStatObject);
+    // console.log("TOTWStatObject =");
+    // console.log(TOTWStatObject);
 
     // Define the formation to display.
     let formation = TOTWStatObject["BEST FORMATION"];
-    console.log("Formation = " + formation);
+    // console.log("Formation = " + formation);
 
     // Populate the total number of points for the team.
     document.getElementById("totw-total-points").innerHTML = TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
@@ -2472,7 +2452,7 @@ const showTOTWPlayerInfo = function () {
     let playerName = TOTWStatObject["POS " + playerIDNumber + " PLAYER"];
     let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
     console.log("playerName = " + playerName);
-    console.log("seasonWeekNumRef = " + seasonWeekNumRef);
+    // console.log("seasonWeekNumRef = " + seasonWeekNumRef);
 
     // Begin working with the Match Details data.
     var objectLength = displayMatchDetailsArrayOfObjects.length; // Get the original length of the array.
@@ -2482,34 +2462,151 @@ const showTOTWPlayerInfo = function () {
     // Filter the full match details array down to the same season fixture id. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
     const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
     objectLength = matchDetailsWeekData.length; // Get the new length of the array.
-    console.log(objectLength);
-    console.log(matchDetailsWeekData);
+    // console.log("matchDetailsWeekData Length: " + objectLength);
+    // console.log(matchDetailsWeekData);
 
     // Filter the reduced array down to just the player.
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
+    objectLength = playerMatchDetailsData.length; // Get the new length of the array.
+    console.log("playerMatchDetailsData Length: " + objectLength);
     console.log(playerMatchDetailsData);
 
     // Populate the player pop up info box.
     // Populate the top information.
     document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
     document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
+    // Get the player position (class).
+    let playerClass = playerMatchDetailsData[0].CLASS;
+    console.log("Player class = " + playerClass);
     // Loop through the stats table and fill in the details.
     let statArray = ["APP", "MOM", "G", "A", "CLS", "C", "Y", "R", "OG", "PM", "PCO", "PSV"];
+    let multiplierValue = ""; // Initially define a multiplier value to be populated and used later.
     console.log(statArray)
     for (let i = 0; i < statArray.length; i++) {
         console.log("i = " + i + ", which is " + statArray[i]);
-        console.log('totw-player-info-box-' + statArray[i]);
+        // console.log('totw-player-info-box-' + statArray[i]);
         console.log("playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
-        document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
-        document.getElementById('totw-player-info-box-' + statArray[i] + '-points').innerHTML = playerMatchDetailsData[0][statArray[i]] * 2;
-        // document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
-        // document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
+
+        // Check if the received value is empty/undefined/blank or not.
+        if (playerMatchDetailsData[0][statArray[i]] == null || playerMatchDetailsData[0][statArray[i]] == undefined || playerMatchDetailsData[0][statArray[i]] == "") {
+
+            // If the value is empty, hide the whole row.
+            console.log("Stat " + statArray[i] + " value is empty so hiding row.");
+            document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.add("hidden");
+
+        } else {
+
+            // If the value is not empty, add the value to the pop up menu.
+            console.log("Stat " + statArray[i] + " value is not empty so populating row.");
+            document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
+
+            //! TO DO - work out what to do with a player who has played twice in one game week!
+
+            // Add a switch statement to deal with the various different points to be awarded.
+            switch (statArray[i]) {
+                case "APP":
+                    if (playerMatchDetailsData[0]["APP"] >= 60) {
+                        document.getElementById('totw-player-info-box-APP-points').innerHTML = 2;
+                    } else {
+                        document.getElementById('totw-player-info-box-APP-points').innerHTML = 1;
+                    }
+                    break;
+                case "MOM":
+                    document.getElementById('totw-player-info-box-MOM-points').innerHTML = playerMatchDetailsData[0]["MOM"] * 3;
+                    break;
+                case "G":
+                    // Change the multiplier value based on the class of the player.
+                    switch (playerClass) {
+                        case "GK":
+                            multiplierValue = 6;
+                            break;
+                        case "DEF":
+                            multiplierValue = 6;
+                            break;
+                        case "MID":
+                            multiplierValue = 5;
+                            break;
+                        case "FWD":
+                            multiplierValue = 4;
+                            break;
+                        default:
+                            multiplierValue = 0;
+                    }
+                    document.getElementById('totw-player-info-box-G-points').innerHTML = (playerMatchDetailsData[0]["G"] + playerMatchDetailsData[0]["PSC"]) * multiplierValue;
+                    break;
+                case "A":
+                    document.getElementById('totw-player-info-box-A-points').innerHTML = playerMatchDetailsData[0]["A"] * 3;
+                    break;
+                case "C":
+                    if (playerMatchDetailsData[0]["C"] == 0 || playerMatchDetailsData[0]["C"] == "0") {
+                        // Change the multiplier value based on the class of the player.
+                        switch (playerClass) {
+                            case "GK":
+                                multiplierValue = 4;
+                                break;
+                            case "DEF":
+                                multiplierValue = 4;
+                                break;
+                            case "MID":
+                                multiplierValue = 1;
+                                break;
+                            case "FWD":
+                                multiplierValue = 0;
+                                break;
+                            default:
+                                multiplierValue = 0;
+                        }
+                        document.getElementById('totw-player-info-box-C-row').classList.add("hidden");
+                        document.getElementById('totw-player-info-box-CLS-row').classList.remove("hidden");
+                        document.getElementById('totw-player-info-box-CLS').innerHTML = 1;
+                        document.getElementById('totw-player-info-box-CLS-points').innerHTML = 1 * multiplierValue;
+                    } else {
+                        // Change the multiplier value based on the class of the player.
+                        switch (playerClass) {
+                            case "GK":
+                                document.getElementById('totw-player-info-box-C-points').innerHTML = Math.round(playerMatchDetailsData[0]["C"] * -0.5); // Round the number of goals conceded points to be an integer.
+                                break;
+                            case "DEF":
+                                document.getElementById('totw-player-info-box-C-points').innerHTML = Math.round(playerMatchDetailsData[0]["C"] * -0.5); // Round the number of goals conceded points to be an integer.
+                                break;
+                            case "MID":
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden"); // Hide for MID and FWD.
+                                break;
+                            case "FWD":
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden"); // Hide for MID and FWD.
+                                break;
+                            default:
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden");
+                        }
+                    }
+                    break;
+                case "Y":
+                    document.getElementById('totw-player-info-box-Y-points').innerHTML = playerMatchDetailsData[0]["Y"] * -1;
+                    break;
+                case "R":
+                    document.getElementById('totw-player-info-box-R-points').innerHTML = playerMatchDetailsData[0]["R"] * -3;
+                    break;
+                case "OG":
+                    document.getElementById('totw-player-info-box-OG-points').innerHTML = playerMatchDetailsData[0]["OG"] * -2;
+                    break;
+                case "PM":
+                    document.getElementById('totw-player-info-box-PM-points').innerHTML = playerMatchDetailsData[0]["PM"] * -2;
+                    break;
+                case "PCO":
+                    document.getElementById('totw-player-info-box-PCO-points').innerHTML = playerMatchDetailsData[0]["PCO"] * 0;
+                    break;
+                case "PSV":
+                    document.getElementById('totw-player-info-box-PSV-points').innerHTML = playerMatchDetailsData[0]["PSV"] * 5;
+                    break;
+                default:
+                    console.log(statArray[i] + " has defaulted.")
+            }
+
+        }
+
     }
     // Populate the Total Points row.
-    document.getElementById('totw-player-info-box-FTP').innerHTML = playerMatchDetailsData[0]["FTP"];
     document.getElementById('totw-player-info-box-FTP-points').innerHTML = playerMatchDetailsData[0]["FTP"];
-
-
 
     // Show the background overlay.
     document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
