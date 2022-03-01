@@ -137,14 +137,93 @@
         <!-- Add a div to hold the header and message. -->
         <div id="totw-player-info-box-container">
 
-            <!-- Add a div to hold the player name text. -->
-            <div id="totw-player-info-box-header-container">
-                <h3 id="totw-player-info-box-header-text">Testing</h3>
+            <!-- Add the players name text. -->
+            <h3 id="totw-player-info-box-header-text">Testing</h3>
+
+            <p class="textcenter" id="totw-player-info-box-result">Result</p>
+
+            <!-- Add a div to hold the current gameweek details. -->
+            <div id="totw-player-info-box-gameweek-details">
+
+                <!-- Add a table to hold all details. -->
+                <table>
+                    <tr>
+                        <th>Statistics</th>
+                        <th>Value</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr id="totw-player-info-box-APP-row">
+                        <td>Minutes played</td>
+                        <td id="totw-player-info-box-APP"></td>
+                        <td id="totw-player-info-box-APP-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-MOM-row">
+                        <td>Man of the Match</td>
+                        <td id="totw-player-info-box-MOM"></td>
+                        <td id="totw-player-info-box-MOM-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-G-row">
+                        <td>Goals scored</td>
+                        <td id="totw-player-info-box-G"></td>
+                        <td id="totw-player-info-box-G-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-A-row">
+                        <td>Assists provided</td>
+                        <td id="totw-player-info-box-A"></td>
+                        <td id="totw-player-info-box-A-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-CLS-row">
+                        <td>Clean sheets</td>
+                        <td id="totw-player-info-box-CLS"></td>
+                        <td id="totw-player-info-box-CLS-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-C-row">
+                        <td>Goals conceded</td>
+                        <td id="totw-player-info-box-C"></td>
+                        <td id="totw-player-info-box-C-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-Y-row">
+                        <td>Yellow cards</td>
+                        <td id="totw-player-info-box-Y"></td>
+                        <td id="totw-player-info-box-Y-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-R-row">
+                        <td>Red cards</td>
+                        <td id="totw-player-info-box-R"></td>
+                        <td id="totw-player-info-box-R-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-OG-row">
+                        <td>Own goals</td>
+                        <td id="totw-player-info-box-OG"></td>
+                        <td id="totw-player-info-box-OG-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PM-row">
+                        <td>Penalties missed</td>
+                        <td id="totw-player-info-box-PM"></td>
+                        <td id="totw-player-info-box-PM-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PCO-row">
+                        <td>Penalties conceded</td>
+                        <td id="totw-player-info-box-PCO"></td>
+                        <td id="totw-player-info-box-PCO-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PSV-row">
+                        <td>Penalties saved</td>
+                        <td id="totw-player-info-box-PSV"></td>
+                        <td id="totw-player-info-box-PSV-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-FTP-row">
+                        <td>Total Points</td>
+                        <td id="totw-player-info-box-FTP"></td>
+                        <td id="totw-player-info-box-FTP-points"></td>
+                    </tr>
+                </table>
+
             </div>
 
-            <!-- Add a div to hold the message text. -->
-            <div id="totw-player-info-box-message-container">
-                <h4>Statistics</h4>
+            <!-- Add a div to hold the past season details. -->
+            <div id="totw-player-info-box-season-details">
+                <h4>This Season</h4>
                 <p id="totw-player-info-box-APP">Minutes played </p>
                 <p id="totw-player-info-box-G">Goals scored </p>
             </div>
@@ -1533,7 +1612,7 @@
                                         <!-- Let the user pick which season to filter for. -->
                                         <select name="SeasonSelection" class="selection-dropdown"
                                             id="TOTW-season-selection-dropdown"
-                                            onchange="updateTeamOfTheWeekPlayersInfo()">
+                                            onchange="updateTeamOfTheWeekWeekNumberInfo()">
                                             <option value="">Season</option>
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
@@ -1548,14 +1627,6 @@
                                             id="TOTW-week-selection-dropdown"
                                             onchange="updateTeamOfTheWeekPlayersInfo()">
                                             <option value="">Select Week</option>
-                                            <option value="2">Week 2</option>
-                                            <option value="3">Week 3</option>
-                                            <option value="4">Week 4</option>
-                                            <option value="5">Week 5</option>
-                                            <option value="6">Week 6</option>
-                                            <option value="7" selected="selected">Week 7</option>
-                                            <option value="15">Week 15</option>
-                                            <option value="38">Week 38</option>
                                         </select>
 
                                     </div>
@@ -1564,149 +1635,129 @@
 
                                 <section class="totw-team-of-the-week-container">
 
-                                    <h3 class="textcenter" id="totw-total-points">TOTW Total Points: </h3>
+                                    <!-- Add a header container above the pitch. -->
+                                    <div id="team-of-the-week-header-summary">
+
+                                        <!-- Group the summary text on the left hand side. -->
+                                        <div id="team-of-the-week-header-summary-text">
+                                            <h3 class="textcenter">TOTW Total Points:</h4>
+                                                <h3 class="textcenter" id="totw-total-points">TBC</h3>
+                                                <p class="textcenter" id="totw-week-number-players">Number Players
+                                                    Played:
+                                                </p>
+                                        </div>
+
+                                        <!-- Display the star man on the right side. -->
+                                        <div id="team-of-the-week-header-summary-star-man">
+                                            <h3 class="textcenter">Star Man</h3>
+                                            <div class="totw-player-div totw-player-div-star-man">
+                                                <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                    class="totw-dorkinians-kit totw-dorkinians-kit-star-man">
+                                                <div class="totw-player-box totw-player-name-box"
+                                                    id="totw-player-pos-star-man-name"></div>
+                                                <div class="totw-player-box totw-player-points-box"
+                                                    id="totw-player-pos-star-man-points"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <!-- Add a div to hold the pitch and all players. -->
                                     <div id="team-of-the-week-pitch-area">
 
                                         <!-- Add the divs that hold the players. The onclick event is added using JavaScript. -->
-                                        <div class="totw-player-div" id="totw-player-pos-1">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKitKeeper.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - White.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-1">
+                                            <img src="/pages/Dorkinians-Page/images/KeeperKit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-1-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-1-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-2">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-2">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-2-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-2-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-3">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-3">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-3-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-3-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-4">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-4">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-4-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-4-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-5">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-5">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-5-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-5-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-6">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-6">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-6-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-6-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-7">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-7">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-7-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-7-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-8">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-8">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-8-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-8-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-9">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-9">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-9-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-9-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-10">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-10">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-10-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
                                                 id="totw-player-pos-10-points"></div>
                                         </div>
 
-                                        <div class="totw-player-div" id="totw-player-pos-11">
-                                            <img src="/pages/Dorkinians-Page/images/TeamKit.svg"
-                                                class="totw-dorkinians-kit">
-                                            <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Green Logo - 32 Pixels.png"
-                                                class="totw-dorkinians-logo">
-                                            <img src="/pages/Dorkinians-Page/images/Rebecca Cannon Logo.png"
-                                                class="totw-rebecca-cannon-logo">
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-11">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
                                             <div class="totw-player-box totw-player-name-box"
                                                 id="totw-player-pos-11-name"></div>
                                             <div class="totw-player-box totw-player-points-box"
@@ -3286,7 +3337,7 @@
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
     <!-- New SnapTabs JavaScript -->
-    <script src="/pages/Dorkinians-Page/bundle.js" type="module" defer></script>
+    <!-- <script src="/pages/Dorkinians-Page/bundle.js" type="module" defer></script> -->
 
     <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
@@ -3295,11 +3346,8 @@
     <!-- Get main page JS -->
     <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
 
-    <!-- Get side menu JS -->
-    <script src="/pages/Dorkinians-Page/sideMenu.min.js"></script>
-
     <!-- Get weather widget JS -->
-    <script src="/pages/Dorkinians-Page/weatherWidget.min.js"></script>
+    <!-- <script src="/pages/Dorkinians-Page/weatherWidget.min.js"></script> -->
 
 </body>
 

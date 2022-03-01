@@ -34,7 +34,7 @@ console.time(); // Start the console timer.
 
 // Ready Global Variable
 var readyComponentsCount = 0;
-const numberReadyComponents = 9;
+const numberReadyComponents = 10;
 // const numberReadyComponents = 16;
 
 // Create an array of phrases to be displayed on the loading page.
@@ -401,9 +401,11 @@ var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to
 
 // Homepage Tab
 
+// Next Fixtures
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
+// Captains and Awards
 const captainsAndAwardsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1483872425&single=true&output=csv';
 var displayCaptainsAndAwardsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
@@ -598,14 +600,6 @@ function init() {
     // Team Of The Week Tab.
     console.log('%c' + '> 4. Team Of The Week tab data being loaded in.', 'background-color: lightblue; color: black; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
 
-    // This Season Stats Info
-    Papa.parse(displayTOTWSheetCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
-    });
-
     // Match Details Info
     Papa.parse(displayMatchDetailsSheetCSV, {
         download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
@@ -613,6 +607,9 @@ function init() {
         fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
         complete: getMatchDetailsInfo, // The callback to execute when parsing is complete.
     });
+
+    // This Season Stats Info
+    // Called later on.
 
     // Update the information bar.
     displayInformation("team-of-the-week-information-bar", "Select a week filter to begin reviewing past teams of the week. Or click on a player to see more details");
@@ -719,7 +716,359 @@ function hideLoadingPage() {
 
 // 0. Side Menu and Other Functions
 
-// 0.1. Side Menu data "getter" function.
+// Side Menu
+
+// 0.1. The side menu HTML
+// The functionality of the side menu is defined further down. https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
+const sideMenuTemplate = document.createElement('template');
+const sideMenuHTML = `
+
+    <!-- Side Menu - not considered part of the "main-content-area" -->
+
+        <div id="side-menu">
+
+            <!-- The top side bar fixed container. -->
+            <div id="side-menu-top-container">
+
+                <!-- The x close button. -->
+                <a id="side-menu-close-button" href="javascript:void(0)" onclick="closeNav()">×</a>
+
+                <!-- Add the Dorkinians logo. -->
+                <img class="logo center" id="side-menu-dorkinians-logo" src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp"
+                alt="Dorkinians Logo" width="80" height="80">
+
+            </div>
+
+            <!-- The main side bar menu options. -->
+            <div id="side-menu-main-container">
+
+                <!-- The site details section of the side bar menu. -->
+                <section id="side-menu-site-details-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Site Details</h3>
+
+                    <div id="side-menu-site-details-grid-section">
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Version Number: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-version-number-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Current Season: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-current-season-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Last Updated Stats: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-last-updated-stats-text"></p>
+                        </div>
+
+                        <div class="side-menu-site-details-grid-container">
+                            <p>Page Details Last Refreshed: </p>
+                        </div>
+                        <div class="side-menu-site-details-grid-container">
+                            <p id="side-menu-site-details-page-details-last-refereshed-text"></p>
+                        </div>
+                    </div>    
+
+                </section>
+
+                <!-- The actions section of the side bar menu options. -->
+                <section id="side-menu-actions-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Actions</h3>
+
+                    <div id="side-menu-actions-section-grid">
+
+                        <!-- Add the change theme item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Theme Change Icon.webp" class="side-menu-icon" id="side-menu-theme-change-icon" alt="Theme Change Icon" onclick="changeSiteTheme()">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-theme-text" onclick="changeSiteTheme()">Change to Dark Theme</h4>
+                        </div>
+
+                        <!-- Add the text size change action item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Text Size Icon.webp" class="side-menu-icon" id="side-menu-text-size-icon" alt="Text Size Icon">
+                        </div>
+                        <div class="side-menu-text-container side-menu-action-button-container">
+                            <h4>Change Text Size</h4>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-increment" onclick="changeTextSize(1)">
+                                +
+                            </button>
+                            <button class="side-menu-button" id="side-menu-button-change-font-size-decrement" onclick="changeTextSize(-1)">
+                                -
+                            </button>
+                        </div>
+
+                        <!-- Add the full reset item. -->
+                        <div class="side-menu-icon-container">
+                            <img src="/pages/Dorkinians-Page/images/Reset Page Icon.webp" class="side-menu-icon" id="side-menu-reset-page-icon" alt="Reset Page Icon" onclick="resetActionVariables()">
+                        </div>
+                        <div class="side-menu-text-container">
+                            <h4 id="side-menu-actions-change-height-text" onclick="resetActionVariables()">Reset Page Settings</h4>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- The quick links section of the side bar menu. -->
+                <section id="side-menu-quick-links-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Quick Links</h3>
+
+                    <div id="side-menu-quick-links-section-grid">
+
+                        <!-- Add a link to the Dorkinians homepage. -->
+                        <div class="side-menu-icon-container">
+                            <a href="https://www.dorkiniansfc.co.uk/">
+                                <img src="/pages/Dorkinians-Page/images/Dorkinians Logo - Header and Side Menu.webp" class="side-menu-icon" alt="Dorkinians Logo Icon" height="25px">
+                            </a>
+                        </div>
+                        <div class="side-menu-text-container">
+                            <a href="https://www.dorkiniansfc.co.uk/">
+                                <h4>dorkiniansfc.co.uk</h4>
+                            </a>
+                        </div>
+
+                        <!-- Add a link to the FA homepage. -->
+                        <div class="side-menu-icon-container">
+                            <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
+                                <img src="/pages/Dorkinians-Page/images/The FA Logo Icon.webp" class="side-menu-icon" alt="The FA Logo Icon" height="25px">
+                            </a>
+                        </div>
+                        <div class="side-menu-text-container">
+                            <a href="https://fulltime.thefa.com/index.html?league=9031785&selectedSeason=697858796&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_513480600">
+                                <h4>FULL-TIME.TheFA.com</h4>
+                            </a>
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <!-- The additional section of the side bar menu. -->
+                <section id="side-menu-additional-section" class="side-menu-section">
+
+                    <h3 class="side-menu-section-header">Additional</h3>
+
+                    <!-- Add a "Stat Details" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Details', displaySiteDetailsArrayOfObjects[0]['Stat Details'])">Stat Details</a>
+                    </div>
+
+                    <!-- Add a "Version Release Details" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Version Release Details', displaySiteDetailsArrayOfObjects[0]['Version Release Details'])">Version Release Details</a>
+                    </div>
+
+                    <!-- Add an "Updates To Come" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Updates To Come', displaySiteDetailsArrayOfObjects[0]['Updates To Come'])">Updates To Come</a>
+                    </div>
+
+                    <!-- Add a "Stat Limitations" clickable option. -->
+                    <div class="side-menu-additional-section-item-container">
+                        <a href="javascript:void(0)" onclick="openPopUpBox('Stat Limitations', displaySiteDetailsArrayOfObjects[0]['Stat Limitations'])">Stat Limitations</a>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+`;
+sideMenuTemplate.innerHTML = sideMenuHTML;
+
+// 0.2. Create a sideMenu class for the element.
+class sideMenu extends HTMLElement {
+
+    // Always call super first in constructor
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+
+        // Create a shadow root
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+
+        // Apply external styles to the shadow DOM
+        const styleSheet = document.createElement('link');
+        styleSheet.setAttribute('rel', 'stylesheet');
+        styleSheet.setAttribute('href', '/pages/Dorkinians-Page/DorkiniansMain.min.css');
+        shadowRoot.appendChild(styleSheet);
+
+        // Attach the created elements to the shadow DOM
+        shadowRoot.appendChild(sideMenuTemplate.content);
+    }
+}
+
+// 0.3. Define the custom HTML element.
+customElements.define('side-menu-component', sideMenu);
+
+// 0.4 Side Bar JavaScript Sub Functions
+
+// 0.4.1. Publically define a number of global constants and variables.
+var sideMenuWidth = '80%'; // Originally 15.6rem.
+var fontSizeMin = 10; // Set a minimum font size in pixels.
+var fontSizeMax = 22; // Set a maximum font size in pixels.
+var pageHeightMin = 0; // Set a minimum page height in pixels.
+var pageHeightMax = 100; // Set a maximum page height in pixels.
+
+// 0.4.2. Open the navigation side menu. https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
+function openNav() {
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = sideMenuWidth; // Increase the width of the side-menu to make it visible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "0rem"; // Reset the side menu side to the edge of the screen.
+
+    // Show the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "inline"; // Show the background overlay behind the side menu.
+    document.getElementById('background-overlay-side-menu').style.zIndex = 19; // Set the z-index of the background overlay to be right behind the side menu.
+
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "none"; // Hide the options icon.
+    } else {
+        //console.log("not doing anything");
+    }
+}
+
+// 0.4.3. Close the navigation side menu.
+function closeNav() {
+    // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.width = "0"; // Reduce the width of the side-menu to make it invisible.
+    document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu').style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
+
+    // Hide the background overlay.
+    document.getElementById('background-overlay-side-menu').style.display = "none"; // Hide the background overlay behind the side menu.
+
+    // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+    var myEle = document.getElementsByTagName('header-component')[0];
+    if (myEle) {
+        // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'options-button'.
+        document.getElementsByTagName('header-component')[0].shadowRoot.getElementById('options-button').style.display = "inline"; // Show the options icon.
+    } else {
+        //console.log("not doing anything");
+    }
+}
+
+// 0.4.4. Change the site theme style.
+function changeSiteTheme() {
+    console.log("changeSiteTheme clicked."); // Log that the function has been called.
+
+    // Select the element holding the change site theme text.
+    let themeTextElement = document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-actions-change-theme-text');
+
+    // Check which site theme has been selected and then define the required colours for the CSS styling sheet.
+    if (themeTextElement.innerHTML == "Change to Dark Theme") {
+        // Change site theme to dark mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#222129');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#252432');
+        document.documentElement.style.setProperty('--third-background-colour', '#282735');
+        document.documentElement.style.setProperty('--main-accent-colour', '#FF3CAC');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '255, 60, 172');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF85');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#222129');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Light Theme";
+
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#FF3CAC', '#FFFFFF85', '#222129');
+        buildWeatherWidget();
+
+    } else {
+        // Change site theme to light mode.
+
+        // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+        document.documentElement.style.setProperty('--main-background-colour', '#1C8841');
+        document.documentElement.style.setProperty('--secondary-background-colour', '#31a057');
+        document.documentElement.style.setProperty('--third-background-colour', '#236f38');
+        document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
+        document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
+        document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+        document.documentElement.style.setProperty('--tooltip-background-colour', '#236f38');
+
+        // Change the text of the element holding the change site theme text.
+        themeTextElement.innerHTML = "Change to Dark Theme";
+
+        // Update the weather widget. See weatherWidget.js for details.
+        createWeatherWidgetHTML('#F9ED32', '#FFFFFF', '#1C8841');
+        buildWeatherWidget();
+
+    }
+
+    closeNav(); // Close the side navigation that the function was called from.
+    //console.log("Site theme changed."); // Log a final success message.
+}
+
+// 0.4.5. Change the site text size.
+function changeTextSize(delta) {
+    console.log("changeTextSize clicked. Font size changed by " + delta + "."); // Log that the function has been called.
+
+    let fontSize = getComputedStyle(document.documentElement).getPropertyValue('--main-font-size'); // Get the value of the CSS variable as a string. https://davidwalsh.name/css-variables-javascript.
+    fontSize = parseInt(fontSize.replace("px", "")); // Remove the pixels from the returned string.
+
+    console.log('fontSize before is = ' + fontSize); // Log the font size value before the function has been run.
+
+    if (delta == 1) {
+        // Increment the font size to be larger.
+        if (fontSize < fontSizeMax) { // Only increment the font size if it is less than the max. 
+            fontSize += delta;
+        }
+    } else {
+        // Decrement the font size to be smaller.
+        if (fontSize > fontSizeMin) { // Only dedcrement the font size if it is larger than the min. 
+            fontSize += delta;
+        }
+    }
+    console.log('fontSize after is = ' + fontSize); // Log the font size value after the function has been run.
+
+    // Append the pixels to the new value.
+    fontSize = fontSize + "px";
+
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', fontSize);
+    document.documentElement.style.setProperty('font-size', fontSize);
+}
+function increaseFontSize() {
+    changeTextSize(1);
+}
+function decreaseFontSize() {
+    changeTextSize(-1);
+}
+
+// 0.4.6. Reset all previously modified variables.
+function resetActionVariables() {
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-font-size', '16px');
+    document.documentElement.style.setProperty('font-size', '16px');
+    // Modify the CSS variable of the DorkiniansMain.css stylesheet. https://stackoverflow.com/a/37802204/14290169.
+    document.documentElement.style.setProperty('--main-background-colour', '#1C8841');
+    document.documentElement.style.setProperty('--secondary-background-colour', '#31a057');
+    document.documentElement.style.setProperty('--third-background-colour', '#236f38');
+    document.documentElement.style.setProperty('--main-accent-colour', '#F9ED32');
+    document.documentElement.style.setProperty('--main-accent-colour-rgb', '249, 237, 50');
+    document.documentElement.style.setProperty('--secondary-accent-colour', '#FFFFFF');
+    document.documentElement.style.setProperty('--tooltip-background-colour', '#236f38');
+    openPopUpBox("Page Settings Reset", "Font size and theme reset."); // Display a pop up to show the reset has worked.
+}
+
+// 0.5. Side Menu data "getter" function.
 function getSideMenuInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getSideMenuInfo.', 'background-color: yellow; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -731,7 +1080,7 @@ function getSideMenuInfo(results) {
     showSideMenuInfo(displaySiteDetailsArrayOfObjects); // Call the showSideMenuInfo function.
 }
 
-// 0.2. Side Menu data "show-er" function.
+// 0.6. Side Menu data "show-er" function.
 function showSideMenuInfo(results) {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> showSideMenuInfo.', 'background-color: yellow; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -758,7 +1107,9 @@ function showSideMenuInfo(results) {
     incrementComponentReadyCount("Side Menu");
 }
 
-// 0.3. Player Dropdown data "getter" function.
+// Dropdowns
+
+// 0.7. Player Dropdown data "getter" function.
 function getPlayerDropdownInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
@@ -778,6 +1129,12 @@ function getPlayerDropdownInfo(results) {
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Dropdowns populated");
 }
+
+// 0.8. Snap Tabs
+
+// Add a function used for SnapTabs. See https://web.dev/building-a-tabs-component/.
+function t(t) { var n = Array.isArray(t) ? e(t) : void 0; if (n || (n = "undefined" != typeof Symbol && Symbol.iterator in Object(t) ? Array.from(t) : void 0), !n) t: { if (t) { if ("string" == typeof t) { n = e(t, void 0); break t } if ("Object" === (n = Object.prototype.toString.call(t).slice(8, -1)) && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n) { n = Array.from(n); break t } if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) { n = e(t, void 0); break t } } n = void 0 } if (!(t = n)) throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); return t } function e(t, e) { (null == e || e > t.length) && (e = t.length); for (var n = 0, r = Array(e); n < e; n++)r[n] = t[n]; return r } !function () { function t(t, e) { for (var n = 0; n < e.length; n++) { var r = e[n]; r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r) } } function e(e, n, r) { return n && t(e.prototype, n), r && t(e, r), e } function n(t) { return (t = t.trim().match(/^(-?[0-9]*\.?[0-9]*)(px|%)$/)) ? { value: t[1], unit: t[2] } : null } function r(t) { return t === document.scrollingElement ? document : t } function o(t) { var e = a.get(t).animations; if (0 !== e.length) { t = t.currentTime; for (var n = 0; n < e.length; n++)null == t ? "paused" === e[n].playState && e[n].cancel() : e[n].currentTime = t } } function i(t) { return 1 / 0 === t.iterationCount ? 1 / 0 : Math.max((t.startDelay || 0) + (t.duration || 0) * (t.iterationCount || 1) + (t.endDelay || 0), 0) } function l(t, e, r, o, i) { return i ? i(e, r, o, "0%" === t ? "start" : "end") : ("block" === r ? r = "vertical" : "inline" === r && (r = "horizontal"), e = "vertical" === r ? e.scrollHeight - e.clientHeight : e.scrollWidth - e.clientWidth, "%" === (t = n("auto" === o ? t : o)).unit ? parseFloat(t.value) * e / 100 : parseFloat(t.value)) } var a = new WeakMap, c = [], s = function () { function t(t) { a.set(this, { scrollSource: null, orientation: "block", startScrollOffset: "auto", endScrollOffset: "auto", timeRange: "auto", fill: "none", animations: [], animationOptions: [] }), this.scrollSource = t && t.scrollSource || document.scrollingElement, this.orientation = t && t.orientation || "block", this.startScrollOffset = t && t.startScrollOffset || "auto", this.endScrollOffset = t && t.endScrollOffset || "auto", this.timeRange = t && t.timeRange || "auto", this.fill = t && t.fill || "none" } return e(t, [{ key: "scrollSource", set: function (t) { var e = this; this.scrollSource && r(this.scrollSource).removeEventListener("scroll", (function () { return o(e) })), t instanceof Element || (t = document.scrollingElement), a.get(this).scrollSource = t, r(t).addEventListener("scroll", (function () { return o(e) })), o(this) }, get: function () { return a.get(this).scrollSource } }, { key: "orientation", set: function (t) { -1 === ["block", "inline", "horizontal", "vertical"].indexOf(t) && (t = "block"), a.get(this).orientation = t, o(this) }, get: function () { return a.get(this).orientation } }, { key: "startScrollOffset", set: function (t) { var e = a.get(this); e.startScrollOffsetFunction = null; for (var n = 0; n < c.length; n++) { var r = c[n].parse(t); if (void 0 !== r) { t = r, e.startScrollOffsetFunction = c[n].evaluate; break } } e.startScrollOffset = t, o(this) }, get: function () { return a.get(this).startScrollOffset } }, { key: "endScrollOffset", set: function (t) { a.get(this).endScrollOffsetFunction = null; for (var e = 0; e < c.length; e++) { var n = c[e].parse(t); if (void 0 !== n) { t = n, a.get(this).endScrollOffsetFunction = c[e].evaluate; break } } a.get(this).endScrollOffset = t, o(this) }, get: function () { return a.get(this).endScrollOffset } }, { key: "timeRange", set: function (t) { a.get(this).timeRange = t, o(this) }, get: function () { return a.get(this).timeRange } }, { key: "currentTime", get: function () { if (!this.scrollSource) return null; var t, e, n = l("0%", this.scrollSource, this.orientation, this.startScrollOffset, a.get(this).startScrollOffsetFunction), r = l("100%", this.scrollSource, this.orientation, this.endScrollOffset, a.get(this).endScrollOffsetFunction), o = this.timeRange; if ("auto" === o) { o = 0; for (var c = a.get(this).animationOptions, s = 0; s < c.length; s++)o = Math.max(o, i(c[s])); 1 / 0 === o && (o = 0) } return c = this.scrollSource.scrollTop, "inline" !== this.orientation && "horizontal" !== this.orientation || (c = this.scrollSource.scrollLeft), c < n ? "none" === this.fill || "forwards" === this.fill ? null : 0 : c >= r ? r < (t = this.scrollSource, "block" === (e = this.orientation) ? e = "vertical" : "inline" === e && (e = "horizontal"), "vertical" === e ? t.scrollHeight - t.clientHeight : "horizontal" === e ? t.scrollWidth - t.clientWidth : void 0) && ("none" === this.fill || "backwards" === this.fill) ? null : o : (c - n) / (r - n) * o } }, { key: "__polyfill", get: function () { return !0 } }]), t }(), u = new WeakMap, f = [[[0, 1, 2, 3]], [[0, 2], [1, 3]], [[0], [1, 3], [2]], [[0], [1], [2], [3]]], h = function () { function t(t) { u.set(this, { target: null, edge: "start", threshold: 0, rootMargin: [[0, "px"], [0, "px"], [0, "px"], [0, "px"]] }), this.target = t.target, this.edge = t.edge || "start", this.threshold = t.threshold || 0, this.rootMargin = t.rootMargin || "0px 0px 0px 0px", this.clamp = t.clamp || !1 } return e(t, [{ key: "target", set: function (t) { if (!(t instanceof Element)) throw u.get(this).target = null, Error("Intersection target must be an element."); u.get(this).target = t }, get: function () { return u.get(this).target } }, { key: "edge", set: function (t) { -1 != ["start", "end"].indexOf(t) && (u.get(this).edge = t) }, get: function () { return u.get(this).edge } }, { key: "threshold", set: function (t) { if (0 > (t = parseFloat(t)) || 1 < t) throw RangeError("threshold must be in the range [0, 1]"); u.get(this).threshold = t }, get: function () { return u.get(this).threshold } }, { key: "rootMargin", set: function (t) { if (1 > (t = t.split(/ +/)).length || 4 < t.length) throw TypeError("rootMargin must contain between 1 and 4 length components"); for (var e = [[], [], [], []], r = 0; r < t.length; r++) { var o = n(t[r]); if (!o) throw TypeError("Unrecognized rootMargin length"); for (var i = f[t.length - 1][r], l = 0; l < i.length; l++)e[i[l]] = [parseFloat(o.value), o.unit] } u.get(this).rootMargin = e }, get: function () { return u.get(this).rootMargin.map((function (t) { return t.join("") })).join(" ") } }, { key: "clamp", set: function (t) { u.get(this).clamp = !!t } }]), t }(), g = window.Element.prototype.animate; if (c.push({ parse: function (t) { if (t.target) return new h(t) }, evaluate: function (t, e, n) { "block" == e ? e = "vertical" : "inline" == e && (e = "horizontal"); for (var r, o = t == document.scrollingElement ? { left: 0, right: t.clientWidth, top: 0, bottom: t.clientHeight, width: t.clientWidth, height: t.clientHeight } : t.getBoundingClientRect(), i = u.get(n).rootMargin, l = [], a = 0; 4 > a; a++)l.push("%" == (r = i[a])[1] ? r[0] * (0 == a % 2 ? o.height : o.width) / 100 : r[0]); i = o.left - l[3], r = o.right - o.left + l[3] + l[1], a = o.top - l[0], l = o.bottom - o.top + l[0] + l[2], o = u.get(n).clamp; var c = n.target.getBoundingClientRect(), s = n.threshold; return "start" == n.edge && (s = 1 - s), "vertical" == e ? (e = c.top + c.height * s - a + t.scrollTop, o ? "end" == n.edge ? Math.max(0, e - l) : Math.min(e, t.scrollHeight - l) : "end" == n.edge ? e - l : e) : (e = c.left + c.width * s - i + t.scrollLeft, o ? "end" == n.edge ? Math.max(0, e - r) : Math.min(e, t.scrollWidth - r) : "end" == n.edge ? e - r : e) } }), !Reflect.defineProperty(window, "ScrollTimeline", { value: s })) throw Error("Error installing ScrollTimeline polyfill: could not attach ScrollTimeline to window"); if (!Reflect.defineProperty(Element.prototype, "animate", { value: function (t, e) { var n = e.timeline; if (!(n && n instanceof s)) return g.apply(this, [t, e]); delete e.timeline, (t = g.apply(this, [t, e])).pause(); var r = a.get(n).animations, i = a.get(n).animationOptions; return r.push(t), i.push(e), o(n), t } })) throw Error("Error installing ScrollTimeline polyfill: could not attach WAAPI's animate to DOM Element") }(); var n = window.matchMedia("(prefers-reduced-motion: no-preference)").matches, r = document.querySelector("snap-tabs"), o = r.querySelector(":scope > section"), i = r.querySelector(":scope nav"), l = i.querySelectorAll(":scope a"), a = r.querySelector(":scope .snap-indicator"), c = new ScrollTimeline({ scrollSource: o, orientation: "inline", fill: "both" }); function s(t) { i.querySelector(":scope a[active]").removeAttribute("active"), t.setAttribute("active", ""), t.scrollIntoView() } function u() { var t = l[o.scrollLeft / o.clientWidth]; t && s(t) } l.forEach((function (e) { e.animate({ color: t(l).map((function (t) { return t === e ? "var(--text-active-color)" : "var(--text-color)" })) }, { duration: 1e3, fill: "both", timeline: c }) })), n && a.animate({ transform: t(l).map((function (t) { return "translateX(".concat(t.offsetLeft, "px)") })), width: t(l).map((function (t) { return "".concat(t.offsetWidth, "px") })) }, { duration: 1e3, fill: "both", timeline: c }), i.addEventListener("click", (function (t) { "A" === t.target.nodeName && s(t.target) })), o.addEventListener("scroll", (function () { clearTimeout(o.scrollEndTimer), o.scrollEndTimer = setTimeout(u, 100) })), window.onload = function () { location.hash && (o.scrollLeft = document.querySelector(location.hash).offsetLeft), u() };
+//# sourceMappingURL=bundle.js.map
 
 
 
@@ -909,6 +1266,60 @@ function updateHomepageInfo() {
     stopRotateLogo("dorkinians-header-logo");
 }
 
+// 1.6. Homepage tab Weather Forecast. weatherWidget.js JavaScript. https://weatherwidget.io/. Javascript for building and creating the weather widget.
+
+// 1.6.1. buildWeatherWidget.
+function buildWeatherWidget() {
+    // console.log("buildWeatherWidget called."); // Log the function to the console.
+
+    // Call the original script used to build the weather widget.
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+}
+
+// 1.6.2. createWeatherWidgetHTML.
+function createWeatherWidgetHTML(highColor, lowColor, cloudFillColor) {
+    // console.log("createWeatherWidgetHTML called."); // Log the function to the console.
+
+    // Define the parent element of the widget.
+    let parentElement = document.getElementById("weather-widget-container");
+
+    // Clear all children elements from the container (deleting all of the previous widget).
+    parentElement.innerHTML = ''; // Clear all children. https://stackoverflow.com/a/3955238/14290169.
+
+    // Create the new element.
+    let weatherElement = document.createElement('a');
+
+    // Set all of the properties of the element.
+    weatherElement.setAttribute('id', 'weather-widget');
+    weatherElement.setAttribute('class', 'weatherwidget-io');
+    weatherElement.setAttribute('SameSite', 'None');
+    weatherElement.setAttribute('href', 'https://forecast7.com/en/51d23n0d33/dorking/');
+    weatherElement.setAttribute('data-label_1', 'PIXHAM LANE, DORKING');
+    weatherElement.setAttribute('data-label_2', 'Weather');
+    weatherElement.setAttribute('data-icons', 'Climacons Animated');
+    weatherElement.setAttribute('data-theme', 'original');
+    weatherElement.setAttribute('data-basecolor', 'rgba(0, 0, 0, 0.05)');
+    weatherElement.setAttribute('data-accent', 'rgba(0, 0, 0, 0.05)');
+    weatherElement.setAttribute('data-highcolor', highColor);
+    weatherElement.setAttribute('data-lowcolor', lowColor);
+    weatherElement.setAttribute('data-suncolor', '#F9ED32');
+    weatherElement.setAttribute('data-cloudfill', cloudFillColor);
+    weatherElement.setAttribute('data-raincolor', '#00ffff');
+    weatherElement.innerHTML = 'PIXHAM LANE Weather';
+
+    // Add the new element into the DOM.
+    parentElement.appendChild(weatherElement);
+
+    // Create the new script element.
+    let scriptElement = document.createElement('script');
+
+    // Set all of the properties of the element.
+    scriptElement.setAttribute('id', 'weatherwidget-io-js');
+    scriptElement.setAttribute('src', 'https://weatherwidget.io/js/widget.min.js');
+
+    // Add the new element into the DOM.
+    weatherElement.appendChild(scriptElement);
+}
 
 
 // 2. Club/Team Stats Tab
@@ -1397,7 +1808,27 @@ function showPlayerStatsTabUpdatedInfo() {
 
 // 4. Team of the Week Tab
 
-// 4.1. Team of the Week Players Info data "getter" function.
+// 4.1. Team of the Week - Match Details Info data "getter" function.
+function getMatchDetailsInfo(results) {
+    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
+    console.log('%c' + '>> getMatchDetailsInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Process the original array of objects received.
+    displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+
+    // Increment the component ready count by 1.
+    incrementComponentReadyCount("Match Details information fetched");
+
+    // This Season Stats Info
+    Papa.parse(displayTOTWSheetCSV, {
+        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
+        header: true, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
+        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
+        complete: getTeamOfTheWeekPlayersInfo, // The callback to execute when parsing is complete.
+    });
+}
+
+// 4.2. Team of the Week - Players Info data "getter" function.
 function getTeamOfTheWeekPlayersInfo(results) {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getTeamOfTheWeekPlayersInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1412,28 +1843,99 @@ function getTeamOfTheWeekPlayersInfo(results) {
     displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
     // console.log(displayTOTWArrayOfObjects); // Log the global variable.
-    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+
+    // Initially populate the week number dropdown.
+    updateTeamOfTheWeekWeekNumberInfo();
 }
 
+// 4.3. Team of the Week - Week Number data "update-er" function.
+function updateTeamOfTheWeekWeekNumberInfo() {
+    // Create a function that is called when the user changes the season dropdown. This function is called from the HTML select elements.
+    console.log('%c' + '>> updateTeamOfTheWeekWeekNumberInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
+
+    // Start the rotation of the Dorkinians logo to simulate loading.
+    rotateLogo("dorkinians-header-logo");
+
+    // Get the selected season and the week dropdown element.
+    let selectedSeason = document.getElementById('TOTW-season-selection-dropdown').value; // Get the selected season text.
+    let weekDropdown = document.getElementById('TOTW-week-selection-dropdown'); // Define the week dropdown.
+    weekDropdown.options.length = 0; // Clear all options from the dropdown.
+
+    // Get the TOTW object.
+    // console.log("displayTOTWArrayOfObjects: ");
+    // console.log(displayTOTWArrayOfObjects);
+
+    // Filter the TOTW details array down to the selected season to get the list of week numbers for that season. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    const selectedSeasonWeekData = displayTOTWArrayOfObjects.filter(seasonData => seasonData.SEASON === selectedSeason);
+    // console.log("selectedSeasonWeekData: ");
+    // console.log(selectedSeasonWeekData);
+    let selectedSeasonWeekCount = selectedSeasonWeekData.length; // Get the number of weeks from that season.
+    // console.log("selectedSeasonWeekCount: ");
+    // console.log(selectedSeasonWeekCount);
+
+    // Populate the weeks dropdown list with options. https://betterprogramming.pub/how-to-dynamically-populate-a-year-dropdown-with-javascript-bcf4f849bc4f
+
+    // Loop through the passed data and get the row of data to be displayed and used.
+    for (let i = 0; i < selectedSeasonWeekCount; i++) {
+        // console.log(i); // Log the number being run through.
+        let weekOption = document.createElement('option');
+        // console.log("Week selectedSeasonWeekData[i].WEEK");
+        // console.log("Week " + selectedSeasonWeekData[i].WEEK);
+        weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK;
+        weekOption.value = selectedSeasonWeekData[i].WEEK;
+        weekDropdown.add(weekOption);
+    }
+
+    // Mark the last option in the list as selected. https://stackoverflow.com/a/8140900/14290169
+    document.getElementById("TOTW-week-selection-dropdown").selectedIndex = selectedSeasonWeekCount - 1;
+
+    // Populate the TOTW tab.
+    showTeamOfTheWeekPlayersInfo(displayTOTWArrayOfObjects); // Call the showTotalClubStatsInfo function.
+
+    // End the rotation of the Dorkinians logo to simulate loading being completed.
+    stopRotateLogo("dorkinians-header-logo");
+}
+
+// // Define the y positions of each Classification.
+// let GKy = 5;
+// let DEFy = 150;
+// let MIDy = 300;
+// let FWDy = 450;
+// // Define the x positions of each Classification.
+// let Centerx = 200;
+// let LeftOf2x = 150;
+// let RightOf2x = 250;
+// let LeftOf3x = 100;
+// let RightOf3x = 300;
+// let LeftOf4x = 10;
+// let LeftCenterOf4x = 100;
+// let RightCenterOf4x = 250;
+// let RightOf4x = 350;
+// let LeftOf5x = 5;
+// let LeftCenterOf5x = 80;
+// let RightCenterOf5x = 270;
+// let RightOf5x = 355;
+
 // Define the y positions of each Classification.
-let GKy = 5;
-let DEFy = 150;
-let MIDy = 300;
-let FWDy = 450;
+let GKy = 8;
+let DEFy = 24;
+let MIDy = 51;
+let FWDy = 78;
 // Define the x positions of each Classification.
-let Centerx = 200;
-let LeftOf2x = 150;
-let RightOf2x = 250;
-let LeftOf3x = 100;
-let RightOf3x = 300;
-let LeftOf4x = 10;
-let LeftCenterOf4x = 100;
-let RightCenterOf4x = 250;
-let RightOf4x = 350;
-let LeftOf5x = 5;
-let LeftCenterOf5x = 80;
-let RightCenterOf5x = 270;
-let RightOf5x = 355;
+let PlayerWidth = 20;
+let Centerx = 50 - (PlayerWidth / 2);
+let LeftOf2x = 30 - (PlayerWidth / 2);
+let RightOf2x = 70 - (PlayerWidth / 2);
+let LeftOf3x = 25 - (PlayerWidth / 2);
+let RightOf3x = 75 - (PlayerWidth / 2);
+let LeftOf4x = 15 - (PlayerWidth / 2);
+let LeftCenterOf4x = 35 - (PlayerWidth / 2);
+let RightCenterOf4x = 65 - (PlayerWidth / 2);
+let RightOf4x = 85 - (PlayerWidth / 2);
+let LeftOf5x = 10 - (PlayerWidth / 2);
+let LeftCenterOf5x = 35 - (PlayerWidth / 2);
+let RightCenterOf5x = 65 - (PlayerWidth / 2);
+let RightOf5x = 90 - (PlayerWidth / 2);
 
 // Define an object of formations to define the various positions of players.
 const formationCoordinateObject = {
@@ -1838,7 +2340,7 @@ const formationCoordinateObject = {
     }
 }
 
-// 4.2. Team of the Week Players Info data "show-er" function.
+// 4.4. Team of the Week - Players Info data "show-er" function.
 function showTeamOfTheWeekPlayersInfo(results) {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> showTeamOfTheWeekPlayersInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
@@ -1857,9 +2359,6 @@ function showTeamOfTheWeekPlayersInfo(results) {
     // Season selection.
     var seasonValueDropdown = document.getElementById("TOTW-season-selection-dropdown"); // Get the season selected dropdown.
     var seasonValue = seasonValueDropdown.options[seasonValueDropdown.selectedIndex].text; // Get the season selected. (https://stackoverflow.com/a/8549358/14290169).
-
-    // ! UPDATE HERE
-    // Add code to dynamically update the available week numbers after the user has picked a season.
 
     // Week selection.
     var weekValueDropdown = document.getElementById("TOTW-week-selection-dropdown"); // Get the week selected dropdown.
@@ -1883,7 +2382,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Get an object from the array by creating an object from the first array value.
     TOTWStatObject = dataArrayOfObjects[arrayNumberRef];
-    console.log("statObject =");
+    console.log("TOTWStatObject =");
     console.log(TOTWStatObject);
 
     // Define the formation to display.
@@ -1891,35 +2390,57 @@ function showTeamOfTheWeekPlayersInfo(results) {
     console.log("Formation = " + formation);
 
     // Populate the total number of points for the team.
-    document.getElementById("totw-total-points").innerHTML = "TOTW Total Points: " + TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-total-points").innerHTML = TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
+
+    // Filter the full match details array down to the same season fixture id to get the number of players who played. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    // console.log(TOTWStatObject)
+    let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
+    // console.log(seasonWeekNumRef);
+    const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
+    let weekPlayerCount = matchDetailsWeekData.length; // Get the number of players who played that week from the new length of the array.
+    // console.log(weekPlayerCount);
+    document.getElementById("totw-week-number-players").innerHTML = "Number Players Played: " + weekPlayerCount; // Populate the found HTML element with the players name.
+
+    // Define some variables for use within the loop.
+    var maxPoints = 0;
+    var starManID;
 
     // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
     for (let i = 1; i <= 11; i++) {
         // console.log(i);
         // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
+
+        // Populate the HTML elements.
         document.getElementById("totw-player-pos-" + i + "-name").innerHTML = TOTWStatObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
         document.getElementById("totw-player-pos-" + i + "-points").innerHTML = TOTWStatObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
 
+        // Get the star man details.
+        if (parseInt(TOTWStatObject["POS " + i + " POINTS"]) > maxPoints) {
+            // console.log("i = " + i + ", points = " + TOTWStatObject["POS " + i + " POINTS"] + ", maxPoints = " + maxPoints);
+            maxPoints = parseInt(TOTWStatObject["POS " + i + " POINTS"]);
+            starManID = i;
+        }
+
         // Position the overall player div.
-        var x = parseInt(0); // The left of the pitch.
-        var y = parseInt(0); // The top of the pitch.
         let playerDiv = document.getElementById("totw-player-pos-" + i);
-        // playerDiv.style.position = "absolute";
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Received Object Coordinates x=" + formationCoordinateObject[formation]["Pos" + i]["x"] + ", y=" + formationCoordinateObject[formation]["Pos" + i]["y"]);
-        let leftPosition = x + parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
-        let topPosition = y + parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
-        playerDiv.style.left = leftPosition + 'px';
-        playerDiv.style.top = topPosition + 'px';
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned Coordinates x=" + leftPosition + ", y=" + topPosition);
+        let leftPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["x"]);
+        let topPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
+        playerDiv.style.left = leftPosition + '%';
+        playerDiv.style.top = topPosition + '%';
+        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
     }
+
+    // Populate the star man details.
+    document.getElementById("totw-player-pos-star-man-name").innerHTML = TOTWStatObject["POS " + starManID + " PLAYER"]; // Populate the found HTML element with the players name.
+    document.getElementById("totw-player-pos-star-man-points").innerHTML = TOTWStatObject["POS " + starManID + " POINTS"]; // Populate the found HTML element with the players points.
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("TOTW - All TOTW Players");
 }
 
-// 4.3. Team of the Week Players Info data "update-er" functions.
+// 4.5. Team of the Week - Players Info data "update-er" functions.
 function updateTeamOfTheWeekPlayersInfo() {
-    // Create a function that is called when the user changes the season or week dropdowns. This function is called from the HTML select elements.
+    // Create a function that is called when the user changes the week dropdown. This function is called from the HTML select elements.
 
     // Start the rotation of the Dorkinians logo to simulate loading.
     rotateLogo("dorkinians-header-logo");
@@ -1931,16 +2452,7 @@ function updateTeamOfTheWeekPlayersInfo() {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// 4.4. Team of the Week - Match Details Info data "getter" function.
-function getMatchDetailsInfo(results) {
-    // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
-    console.log('%c' + '>> getMatchDetailsInfo.', 'background-color: lightblue; color:black; padding: 0.5em 0em; font-weight: bold;');
-
-    // Process the original array of objects received.
-    displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-}
-
-// 4.5. Team of the Week Player Pop Up Info function.
+// 4.6. Team of the Week - Player Pop Up Info function.
 const showTOTWPlayerInfo = function () {
     // Create a function that is called when the user clicks on a player in TOTW. This function is called from the HTML elements.
     // https://thewebdev.info/2021/03/20/how-to-get-the-id-of-the-clicked-element-in-the-javascript-click-handler/
@@ -1964,7 +2476,7 @@ const showTOTWPlayerInfo = function () {
 
     // Begin working with the Match Details data.
     var objectLength = displayMatchDetailsArrayOfObjects.length; // Get the original length of the array.
-    console.log(objectLength);
+    // console.log(objectLength);
     // console.log(displayMatchDetailsArrayOfObjects);
 
     // Filter the full match details array down to the same season fixture id. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
@@ -1977,11 +2489,27 @@ const showTOTWPlayerInfo = function () {
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
     console.log(playerMatchDetailsData);
 
-
     // Populate the player pop up info box.
+    // Populate the top information.
     document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
-    document.getElementById('totw-player-info-box-APP').innerHTML = "Minutes played " + playerMatchDetailsData[0].APP;
-    document.getElementById('totw-player-info-box-G').innerHTML = "Goals scored " + playerMatchDetailsData[0].G;
+    document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
+    // Loop through the stats table and fill in the details.
+    let statArray = ["APP", "MOM", "G", "A", "CLS", "C", "Y", "R", "OG", "PM", "PCO", "PSV"];
+    console.log(statArray)
+    for (let i = 0; i < statArray.length; i++) {
+        console.log("i = " + i + ", which is " + statArray[i]);
+        console.log('totw-player-info-box-' + statArray[i]);
+        console.log("playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
+        document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
+        document.getElementById('totw-player-info-box-' + statArray[i] + '-points').innerHTML = playerMatchDetailsData[0][statArray[i]] * 2;
+        // document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
+        // document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
+    }
+    // Populate the Total Points row.
+    document.getElementById('totw-player-info-box-FTP').innerHTML = playerMatchDetailsData[0]["FTP"];
+    document.getElementById('totw-player-info-box-FTP-points').innerHTML = playerMatchDetailsData[0]["FTP"];
+
+
 
     // Show the background overlay.
     document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
@@ -1995,7 +2523,7 @@ const showTOTWPlayerInfo = function () {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// 4.5.1. Team of the Week Player Pop Up Info Close function.
+// 4.6.1. Team of the Week - Player Pop Up Info Close function.
 function closeTOTWPlayerInfo() {
     // Display the retrieved data onto the page.
     console.log('%c' + '>> closeTOTWPlayerInfo.', 'background-color: pink; color:black; padding: 0.5em 0em; font-weight: bold;');
