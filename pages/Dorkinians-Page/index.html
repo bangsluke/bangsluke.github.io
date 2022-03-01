@@ -140,13 +140,13 @@
             <!-- Add the players name text. -->
             <h3 id="totw-player-info-box-header-text">Testing</h3>
 
-            <p class="textcenter" id="totw-player-info-box-result">Result</p>
+            <span class="textcenter" id="totw-player-info-box-result">Result</span>
 
             <!-- Add a div to hold the current gameweek details. -->
             <div id="totw-player-info-box-gameweek-details">
 
                 <!-- Add a table to hold all details. -->
-                <table>
+                <table id="totw-player-info-box-gameweek-table">
                     <tr>
                         <th>Statistics</th>
                         <th>Value</th>
@@ -214,7 +214,7 @@
                     </tr>
                     <tr id="totw-player-info-box-FTP-row">
                         <td>Total Points</td>
-                        <td id="totw-player-info-box-FTP"></td>
+                        <td></td>
                         <td id="totw-player-info-box-FTP-points"></td>
                     </tr>
                 </table>
@@ -1650,7 +1650,8 @@
                                         <!-- Display the star man on the right side. -->
                                         <div id="team-of-the-week-header-summary-star-man">
                                             <h3 class="textcenter">Star Man</h3>
-                                            <div class="totw-player-div totw-player-div-star-man">
+                                            <div class="totw-player-div totw-player-div-star-man"
+                                                id="totw-player-star-man">
                                                 <img src="/pages/Dorkinians-Page/images/Kit.svg"
                                                     class="totw-dorkinians-kit totw-dorkinians-kit-star-man">
                                                 <div class="totw-player-box totw-player-name-box"
