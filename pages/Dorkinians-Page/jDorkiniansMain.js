@@ -45,7 +45,7 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Waiting for Sam Smith to score from open play...",
+    "Questioning if Sam Smith's open play goal was actually his...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
     "Will be ready as soon as Rupert Cape uses his left foot...",
@@ -57,7 +57,7 @@ var phrasesArray = [
     "Expecting a goalkeeper hissy fit any moment now...",
     "Probably should get out of 1st gear for the second half...",
     "Waiting to see if Harry Lynn will turn up for the game...",
-    "Crying out for Al Thom to finally score a goal...",
+    "Enjoying Al Thom's roly poly celebration for his first club goal...",
     "Sliding Shaun Patterson into TOTW because of a bet...",
     "Counting out Will Westcott's late fines...",
     "Adjusting teams on Saturday morning following late dropouts...",
@@ -1862,16 +1862,16 @@ function updateTeamOfTheWeekWeekNumberInfo() {
     weekDropdown.options.length = 0; // Clear all options from the dropdown.
 
     // Get the TOTW object.
-    // console.log("displayTOTWArrayOfObjects: ");
-    // console.log(displayTOTWArrayOfObjects);
+    console.log("displayTOTWArrayOfObjects: ");
+    console.log(displayTOTWArrayOfObjects);
 
     // Filter the TOTW details array down to the selected season to get the list of week numbers for that season. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
     const selectedSeasonWeekData = displayTOTWArrayOfObjects.filter(seasonData => seasonData.SEASON === selectedSeason);
-    // console.log("selectedSeasonWeekData: ");
-    // console.log(selectedSeasonWeekData);
+    console.log("selectedSeasonWeekData: ");
+    console.log(selectedSeasonWeekData);
     let selectedSeasonWeekCount = selectedSeasonWeekData.length; // Get the number of weeks from that season.
-    // console.log("selectedSeasonWeekCount: ");
-    // console.log(selectedSeasonWeekCount);
+    console.log("selectedSeasonWeekCount: ");
+    console.log(selectedSeasonWeekCount);
 
     // Populate the weeks dropdown list with options. https://betterprogramming.pub/how-to-dynamically-populate-a-year-dropdown-with-javascript-bcf4f849bc4f
 
@@ -1881,7 +1881,8 @@ function updateTeamOfTheWeekWeekNumberInfo() {
         let weekOption = document.createElement('option');
         // console.log("Week selectedSeasonWeekData[i].WEEK");
         // console.log("Week " + selectedSeasonWeekData[i].WEEK);
-        weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK;
+        // weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK ;
+        weekOption.text = "Week " + selectedSeasonWeekData[i]["WEEK ADJUSTED"] + " (" + selectedSeasonWeekData[i]["DATE LOOKUP"] + ")";
         weekOption.value = selectedSeasonWeekData[i].WEEK;
         weekDropdown.add(weekOption);
     }
@@ -2328,8 +2329,6 @@ function showTeamOfTheWeekPlayersInfo(results) {
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
     // console.log("dataArrayOfObjects");
-    // console.log(dataArrayOfObjects); // Log the returned data.
-
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
@@ -2391,7 +2390,21 @@ function showTeamOfTheWeekPlayersInfo(results) {
         // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
 
         // Populate the HTML elements.
-        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = TOTWStatObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
+        // Populate the player name. Limit to a certain length of characters.
+        var playerName = TOTWStatObject["POS " + i + " PLAYER"];
+        // console.log("playerName: " + playerName);
+        if (playerName.length > 12) {
+            let spacePosition = playerName.indexOf(' ') + 1;
+            // console.log("spacePosition: " + spacePosition);
+            let playerFirstName = playerName.substring(0, spacePosition);
+            // console.log("playerFirstName: " + playerFirstName);
+            let playerSecondNameInitial = playerName.substring(spacePosition, spacePosition + 1);
+            // console.log("playerSecondNameInitial: " + playerSecondNameInitial);
+            playerName = playerFirstName + " " + playerSecondNameInitial;
+            // console.log("playerName changed to: " + playerName);
+        }
+        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = playerName; // Populate the found HTML element with the players name.
+        // Populate points.
         document.getElementById("totw-player-pos-" + i + "-points").innerHTML = TOTWStatObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
 
         // Get the star man details.
