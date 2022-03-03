@@ -2386,8 +2386,8 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
     for (let i = 1; i <= 11; i++) {
-        console.log(i);
-        console.log(TOTWStatObject["POS " + i + " PLAYER"]);
+        // console.log(i);
+        // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
 
         // Populate the HTML elements.
         // Populate the player name. Limit to a certain length of characters.

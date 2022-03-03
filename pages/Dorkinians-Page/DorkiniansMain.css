@@ -1337,21 +1337,24 @@ p+p {
 	cursor: pointer;
 }
 /* Style the buttons in the side-menu. */
-button {
+.side-menu-button {
 	background: transparent; /* Transparent background. */
 	color: var(--secondary-accent-colour, white);
-	margin: 0 0.2rem;
+	margin: 0 0.5rem;
 	border: 2px solid var(--main-accent-colour, yellow);
 	border-radius: 6px;
-	cursor: pointer;      
-    text-decoration: none;      
+	cursor: pointer;
+	text-decoration: none;      
     text-transform: uppercase;
 	width: 2rem;
 	position: relative;
 }
-button:hover {
+.side-menu-button:hover {
 	background-color: var(--main-accent-colour, yellow);
 	color: var(--main-background-colour, green);
+}
+#side-menu-button-change-font-size-increment {
+	margin-left: 0.5;
 }
 /* Style all side menu sections. */
 .side-menu-section {
@@ -1708,7 +1711,7 @@ Section 4
 /* 4. Team of the Week Tab */
 
 /* Top level section to hold all tab content. */
-.team-of-the-week-area {
+#team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 100%; 
@@ -1718,10 +1721,11 @@ Section 4
 	  "WeekSelection"
 	  "TeamOfTheWeek"
 	  "TopPerformers";
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
 }
 
 /* Top selection section. */
-.totw-week-selection-container {
+#totw-week-selection-container {
 	/* background-color: blue; */
 	grid-area: WeekSelection;
 	padding: 0.3rem;
@@ -1734,10 +1738,11 @@ Section 4
 }
 
 /* Team of the Week pitch container. */
-.totw-team-of-the-week-container {
+#totw-team-of-the-week-container {
 	/* background-color: yellow; */
 	grid-area: TeamOfTheWeek;
 	/* padding: 0.3rem; */
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
 
 	display: grid; 
 	grid-template-columns: 100%; 
@@ -1962,6 +1967,7 @@ Section 4
 /* Format the table in the pop up. */
 #totw-player-info-box-gameweek-table {
 	border-radius: none;
+	border-collapse: collapse;
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.9rem; /* Relative to root (html) value. */
 }
@@ -1974,6 +1980,7 @@ Section 4
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 	height: 2rem;
+	background: rgba(255, 255, 255, 0.10);
 }
 /* Format the table cells. */
 #totw-player-info-box-gameweek-table td {
@@ -1981,18 +1988,15 @@ Section 4
 }
 /* Add a top border radius to the last row. (https://stackoverflow.com/a/4094151/14290169). */
 #totw-player-info-box-gameweek-table tr:last-child {
-	box-shadow: inset 0rem 0.15rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
+	box-shadow: inset 0rem 0.2rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
 }
-
 
 #totw-player-info-box-season-details {
 	/* background: blue; */
 	padding-top: 2rem;
 }
 
-
-
-.totw-top-performers-container {
+#totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
 	padding: 0.3rem;
