@@ -489,7 +489,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -2481,8 +2481,8 @@ const showTOTWPlayerInfo = function () {
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
     objectLength = playerMatchDetailsData.length; // Get the new length of the array.
     // console.log("playerMatchDetailsData Length: " + objectLength);
-    console.log("playerMatchDetailsData:");
-    console.log(playerMatchDetailsData);
+    // console.log("playerMatchDetailsData:");
+    // console.log(playerMatchDetailsData);
 
     // Populate the player pop up info box.
     // Populate the top information.
@@ -2500,7 +2500,7 @@ const showTOTWPlayerInfo = function () {
     let multiplierValue = ""; // Initially define a multiplier value to be populated and used later.
     // console.log(statArray)
     for (let i = 0; i < statArray.length; i++) {
-        console.log("i = " + i + ", which is " + statArray[i] + ". playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
+        // console.log("i = " + i + ", which is " + statArray[i] + ". playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
 
         // Initially remove the hidden class from the row, to reset the box from the last selected person.
         document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.remove("hidden");
@@ -2510,7 +2510,18 @@ const showTOTWPlayerInfo = function () {
         // Go into a complicated if else switch statement combindation to correctly populate the pop up box stats.
         if (statArray[i] == "G") {
 
-            let goalsScored = playerMatchDetailsData[0]["G"] + playerMatchDetailsData[0]["PSC"];
+            // Correctly add goals to penalties scored using parseInt and avoiding blanks.
+            let goalsScored = 0;
+            if (playerMatchDetailsData[0]["G"] == "" && playerMatchDetailsData[0]["PSC"] == "") {
+                goalsScored = 0;
+            } else if (playerMatchDetailsData[0]["G"] == "") {
+                goalsScored = parseInt(playerMatchDetailsData[0]["PSC"]);
+            } else if (playerMatchDetailsData[0]["PSC"] == "") {
+                goalsScored = parseInt(playerMatchDetailsData[0]["G"]);
+            } else {
+                goalsScored = parseInt(playerMatchDetailsData[0]["G"]) + parseInt(playerMatchDetailsData[0]["PSC"]);
+            }
+
             // console.log(goalsScored);
 
             if (goalsScored == 0) {
@@ -2541,13 +2552,13 @@ const showTOTWPlayerInfo = function () {
             // Check if the received value is empty/undefined/blank or not.
 
             // If the value is empty, hide the whole row.
-            console.log("Stat " + statArray[i] + " value is empty so hiding row.");
+            // console.log("Stat " + statArray[i] + " value is empty so hiding row.");
             document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.add("hidden");
 
         } else {
 
             // If the value is not empty, add the value to the pop up menu.
-            console.log("Stat " + statArray[i] + " value is not empty so populating row.");
+            // console.log("Stat " + statArray[i] + " value is not empty so populating row.");
             document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
 
             // Add a switch statement to deal with the various different points to be awarded.
