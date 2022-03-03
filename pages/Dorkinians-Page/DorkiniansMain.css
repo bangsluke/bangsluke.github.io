@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	/* display: none !important; */
+	display: none !important;
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1813,15 +1813,6 @@ Section 4
 .totw-player-div-player {
 	width: 20%;
 }
-.totw-player-div-star-man {
-	padding-top: 10px;
-	width: 60px;
-	position: relative;
-}
-#totw-player-pos-star-man-name, #totw-player-pos-star-man-points {
-	width: max-content;
-	font-size: 0.8rem;
-}
 
 /* Format the Dorkinians Kit image. */
 .totw-dorkinians-kit {
@@ -1848,24 +1839,56 @@ Section 4
 	height: max-content;
 	min-height: 1rem;
 	width: max-content;
-	min-width: 100px;
-	max-width: 120px;
 	padding: 3px;
 	color: white;
 	text-align: center;
+	white-space: nowrap;
 }
 /* Format the players name box below the kit. */
 .totw-player-name-box {
 	background-color: #00753A;
+	min-width: 65px;
 	font-size: 0.7rem;
 }
 /* Format the players name box below the kit. */
 .totw-player-points-box {
 	background-color: #00FF87;
 	color: black;
+	min-width: 65px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	font-size: 0.6rem;
+}
+
+/* Format Star Man slightly differently. */
+.totw-player-div-star-man {
+	padding-top: 10px;
+	width: 60px;
+	position: relative;
+}
+.totw-player-box-star-man {
+	position: relative;
+	/* top: -28%; */
+	/* left: 4%; */
+	height: max-content;
+	min-height: 1rem;
+	width: max-content;
+	min-width: 100px;
+	padding: 3px;
+	color: white;
+	text-align: center;
+	white-space: nowrap;
+}
+#totw-player-pos-star-man-name {
+	background-color: #00753A;
+	font-size: 0.8rem;
+}
+#totw-player-pos-star-man-points {
+	background-color: #00FF87;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 0.7rem;
 }
 
 
@@ -1934,10 +1957,6 @@ Section 4
 	width: 100%;
 	font-size: 0.8rem;
 	padding: 0.8rem;
-}
-
-#totw-player-info-box-gameweek-details {
-	/* background: red; */
 }
 
 /* Format the table in the pop up. */
@@ -2197,6 +2216,11 @@ Section 5
 			height: 360px; /* Format the height of the TOTW pitch container. */
 			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
 		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			max-width: 40px;
+		}
 		/* Format the players name box below the kit. */
 		.totw-player-name-box {
 			font-size: 0.6rem;
@@ -2204,6 +2228,12 @@ Section 5
 		/* Format the players point box below the kit. */
 		.totw-player-points-box {
 			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
 		}
 	}
 	
