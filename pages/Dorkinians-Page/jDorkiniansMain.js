@@ -2420,7 +2420,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
         let topPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
         playerDiv.style.left = leftPosition + '%';
         playerDiv.style.top = topPosition + '%';
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
+        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
     }
 
     // Populate the star man details.
@@ -2459,12 +2459,11 @@ const showTOTWPlayerInfo = function () {
     // Return the clicked element and manipulate it to get the position number clicked on.
     let clickedHTMLElementID = this.id;
     let playerIDNumber = clickedHTMLElementID.substring(16, 18);
-    console.log(clickedHTMLElementID + ", number: " + playerIDNumber);
+    // console.log(clickedHTMLElementID + ", number: " + playerIDNumber);
 
     // Get the required information from the saved TOTWStatObject.
     let playerName = TOTWStatObject["POS " + playerIDNumber + " PLAYER"];
     let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
-    console.log("playerName = " + playerName);
     // console.log("seasonWeekNumRef = " + seasonWeekNumRef);
 
     // Begin working with the Match Details data.
@@ -2481,7 +2480,8 @@ const showTOTWPlayerInfo = function () {
     // Filter the reduced array down to just the player.
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
     objectLength = playerMatchDetailsData.length; // Get the new length of the array.
-    console.log("playerMatchDetailsData Length: " + objectLength);
+    // console.log("playerMatchDetailsData Length: " + objectLength);
+    console.log("playerMatchDetailsData:");
     console.log(playerMatchDetailsData);
 
     // Populate the player pop up info box.
@@ -2490,18 +2490,55 @@ const showTOTWPlayerInfo = function () {
     document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
     // Get the player position (class).
     let playerClass = playerMatchDetailsData[0].CLASS;
-    console.log("Player class = " + playerClass);
+    // console.log("Player class = " + playerClass);
+
+    // Log the known information up to here.
+    console.log("Clicked player number = " + clickedHTMLElementID + ", name: " + playerName + ", position: " + playerClass);
+
     // Loop through the stats table and fill in the details.
     let statArray = ["APP", "MOM", "G", "A", "CLS", "C", "Y", "R", "OG", "PM", "PCO", "PSV"];
     let multiplierValue = ""; // Initially define a multiplier value to be populated and used later.
-    console.log(statArray)
+    // console.log(statArray)
     for (let i = 0; i < statArray.length; i++) {
-        console.log("i = " + i + ", which is " + statArray[i]);
-        // console.log('totw-player-info-box-' + statArray[i]);
-        console.log("playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
+        console.log("i = " + i + ", which is " + statArray[i] + ". playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
 
-        // Check if the received value is empty/undefined/blank or not.
-        if (playerMatchDetailsData[0][statArray[i]] == null || playerMatchDetailsData[0][statArray[i]] == undefined || playerMatchDetailsData[0][statArray[i]] == "") {
+        // Initially remove the hidden class from the row, to reset the box from the last selected person.
+        document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.remove("hidden");
+
+        //! TO DO - work out what to do with a player who has played twice in one game week!
+
+        // Go into a complicated if else switch statement combindation to correctly populate the pop up box stats.
+        if (statArray[i] == "G") {
+
+            let goalsScored = playerMatchDetailsData[0]["G"] + playerMatchDetailsData[0]["PSC"];
+            // console.log(goalsScored);
+
+            if (goalsScored == 0) {
+                document.getElementById('totw-player-info-box-G-row').classList.add("hidden");
+            }
+
+            // Change the multiplier value based on the class of the player.
+            switch (playerClass) {
+                case "GK":
+                    multiplierValue = 6;
+                    break;
+                case "DEF":
+                    multiplierValue = 6;
+                    break;
+                case "MID":
+                    multiplierValue = 5;
+                    break;
+                case "FWD":
+                    multiplierValue = 4;
+                    break;
+                default:
+                    multiplierValue = 0;
+            }
+            document.getElementById('totw-player-info-box-G').innerHTML = goalsScored;
+            document.getElementById('totw-player-info-box-G-points').innerHTML = goalsScored * multiplierValue;
+
+        } else if (playerMatchDetailsData[0][statArray[i]] == null || playerMatchDetailsData[0][statArray[i]] == undefined || playerMatchDetailsData[0][statArray[i]] == "") {
+            // Check if the received value is empty/undefined/blank or not.
 
             // If the value is empty, hide the whole row.
             console.log("Stat " + statArray[i] + " value is empty so hiding row.");
@@ -2512,8 +2549,6 @@ const showTOTWPlayerInfo = function () {
             // If the value is not empty, add the value to the pop up menu.
             console.log("Stat " + statArray[i] + " value is not empty so populating row.");
             document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
-
-            //! TO DO - work out what to do with a player who has played twice in one game week!
 
             // Add a switch statement to deal with the various different points to be awarded.
             switch (statArray[i]) {
@@ -2526,26 +2561,6 @@ const showTOTWPlayerInfo = function () {
                     break;
                 case "MOM":
                     document.getElementById('totw-player-info-box-MOM-points').innerHTML = playerMatchDetailsData[0]["MOM"] * 3;
-                    break;
-                case "G":
-                    // Change the multiplier value based on the class of the player.
-                    switch (playerClass) {
-                        case "GK":
-                            multiplierValue = 6;
-                            break;
-                        case "DEF":
-                            multiplierValue = 6;
-                            break;
-                        case "MID":
-                            multiplierValue = 5;
-                            break;
-                        case "FWD":
-                            multiplierValue = 4;
-                            break;
-                        default:
-                            multiplierValue = 0;
-                    }
-                    document.getElementById('totw-player-info-box-G-points').innerHTML = (playerMatchDetailsData[0]["G"] + playerMatchDetailsData[0]["PSC"]) * multiplierValue;
                     break;
                 case "A":
                     document.getElementById('totw-player-info-box-A-points').innerHTML = playerMatchDetailsData[0]["A"] * 3;
