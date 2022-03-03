@@ -489,7 +489,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    updateLoadingPage();
+    // updateLoadingPage();
 
 
     // Step 0. 
@@ -1862,16 +1862,16 @@ function updateTeamOfTheWeekWeekNumberInfo() {
     weekDropdown.options.length = 0; // Clear all options from the dropdown.
 
     // Get the TOTW object.
-    console.log("displayTOTWArrayOfObjects: ");
-    console.log(displayTOTWArrayOfObjects);
+    // console.log("displayTOTWArrayOfObjects: ");
+    // console.log(displayTOTWArrayOfObjects);
 
     // Filter the TOTW details array down to the selected season to get the list of week numbers for that season. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
     const selectedSeasonWeekData = displayTOTWArrayOfObjects.filter(seasonData => seasonData.SEASON === selectedSeason);
-    console.log("selectedSeasonWeekData: ");
-    console.log(selectedSeasonWeekData);
+    // console.log("selectedSeasonWeekData: ");
+    // console.log(selectedSeasonWeekData);
     let selectedSeasonWeekCount = selectedSeasonWeekData.length; // Get the number of weeks from that season.
-    console.log("selectedSeasonWeekCount: ");
-    console.log(selectedSeasonWeekCount);
+    // console.log("selectedSeasonWeekCount: ");
+    // console.log(selectedSeasonWeekCount);
 
     // Populate the weeks dropdown list with options. https://betterprogramming.pub/how-to-dynamically-populate-a-year-dropdown-with-javascript-bcf4f849bc4f
 
@@ -1914,8 +1914,8 @@ let LeftCenterOf4x = 35 - (PlayerWidth / 2);
 let RightCenterOf4x = 65 - (PlayerWidth / 2);
 let RightOf4x = 85 - (PlayerWidth / 2);
 let LeftOf5x = 10 - (PlayerWidth / 2);
-let LeftCenterOf5x = 35 - (PlayerWidth / 2);
-let RightCenterOf5x = 65 - (PlayerWidth / 2);
+let LeftCenterOf5x = 30 - (PlayerWidth / 2);
+let RightCenterOf5x = 70 - (PlayerWidth / 2);
 let RightOf5x = 90 - (PlayerWidth / 2);
 
 // Define an object of formations to define the various positions of players.
@@ -2386,8 +2386,8 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Loop through the TOTWStatObject to add the player details. Each stat corresponds to an HTML element.
     for (let i = 1; i <= 11; i++) {
-        // console.log(i);
-        // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
+        console.log(i);
+        console.log(TOTWStatObject["POS " + i + " PLAYER"]);
 
         // Populate the HTML elements.
         // Populate the player name. Limit to a certain length of characters.
