@@ -25,6 +25,15 @@
     <meta property="og:description" content="Stats and information for the best club in the world.">
     <meta property="og:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
 
+    <!-- Add Twitter Card Meta Elements for sharing. https://stackoverflow.com/a/22395173/14290169 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content="@site_username"> -->
+    <meta name="twitter:title" content="Dorkinians FC Stats">
+    <meta name="twitter:description" content="Stats and information for the best club in the world.">
+    <!-- <meta name="twitter:creator" content="@creator_username"> -->
+    <meta name="twitter:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+    <meta name="twitter:domain" content="dorkiniansfcstats.co.uk">
+
     <!-- Link to fonts to be used on site. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
@@ -1613,7 +1622,8 @@
                                         <select name="SeasonSelection" class="selection-dropdown"
                                             id="TOTW-season-selection-dropdown"
                                             onchange="updateTeamOfTheWeekWeekNumberInfo()">
-                                            <option value="">Season</option>
+                                            <!-- <option value="All Time">All Time</option>
+                                            <option value="Season">Season</option> -->
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
                                             <option value="2018/19">2018/19</option>
@@ -1766,6 +1776,13 @@
                                         </div>
 
                                     </div>
+
+                                    <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                        data-size="large" data-text="Dorkinians FC TOTW"
+                                        data-url="http://www.dorkiniansfcstats.co.uk/#team-of-the-week" data-lang="en"
+                                        data-show-count="false">Tweet</a>
+                                    <script async src="https://platform.twitter.com/widgets.js"
+                                        charset="utf-8"></script> -->
 
                                 </section>
 
@@ -3341,7 +3358,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
     <!-- Get main page JS -->
-    <script src="/pages/Dorkinians-Page/jDorkiniansMain.js"></script>
+    <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
 
 </body>
 

@@ -817,7 +817,7 @@ header {
 .loading-page {
 	
 	/* Change the below property on/off to hide/show the loading page. */
-	display: none !important;
+	/* display: none !important; */
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
@@ -1961,7 +1961,7 @@ Section 4
 	position: relative;
 	height: max-content;
 	width: 100%;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	padding: 0.8rem;
 }
 
@@ -1990,6 +1990,8 @@ Section 4
 /* Add a top border radius to the last row. (https://stackoverflow.com/a/4094151/14290169). */
 #totw-player-info-box-gameweek-table tr:last-child {
 	box-shadow: inset 0rem 0.2rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
+	font-weight: bold;
+	z-index: 2;
 }
 
 #totw-player-info-box-season-details {
