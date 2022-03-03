@@ -1898,10 +1898,10 @@ function updateTeamOfTheWeekWeekNumberInfo() {
 }
 
 // Define the y positions of each Classification.
-let GKy = 2;
-let DEFy = 25;
-let MIDy = 48;
-let FWDy = 72;
+let GKy = 1;
+let DEFy = 24;
+let MIDy = 47;
+let FWDy = 71;
 // Define the x positions of each Classification.
 let PlayerWidth = 20;
 let Centerx = 50 - (PlayerWidth / 2);
