@@ -341,7 +341,7 @@ td:hover {
 	border: 0.1rem solid var(--secondary-accent-colour, white);
 }
 /* Add row highlighting. */
-tr:hover {
+.column-highlight tr:hover {
 	font: bold;
 	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
@@ -352,7 +352,7 @@ td, th {
 	position: relative;
 }
 /* Column highlighting. Only on tables with class "column-highlight". */
-.column-highlight td:hover::after, th:hover::after {
+.column-highlight td:hover::after, .column-highlight th:hover::after {
 	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
 	color: var(--secondary-accent-colour, white);
@@ -1133,8 +1133,8 @@ p+p {
 	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
 	max-height: 60%; /* At maximum, have the height at 60%. */
 	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
-	width: 95%;
-	
+	width: var(--pagewidth, 95%);
+
 	/* Style the pop up box. */
 	border: 0.125rem solid var(--secondary-accent-colour, white);
 	border-radius: var(--section-border-radius, 2rem);
@@ -1337,21 +1337,24 @@ p+p {
 	cursor: pointer;
 }
 /* Style the buttons in the side-menu. */
-button {
+.side-menu-button {
 	background: transparent; /* Transparent background. */
 	color: var(--secondary-accent-colour, white);
-	margin: 0 0.2rem;
+	margin: 0 0.5rem;
 	border: 2px solid var(--main-accent-colour, yellow);
 	border-radius: 6px;
-	cursor: pointer;      
-    text-decoration: none;      
+	cursor: pointer;
+	text-decoration: none;      
     text-transform: uppercase;
 	width: 2rem;
 	position: relative;
 }
-button:hover {
+.side-menu-button:hover {
 	background-color: var(--main-accent-colour, yellow);
 	color: var(--main-background-colour, green);
+}
+#side-menu-button-change-font-size-increment {
+	margin-left: 0.5;
 }
 /* Style all side menu sections. */
 .side-menu-section {
@@ -1708,7 +1711,7 @@ Section 4
 /* 4. Team of the Week Tab */
 
 /* Top level section to hold all tab content. */
-.team-of-the-week-area {
+#team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 100%; 
@@ -1718,27 +1721,28 @@ Section 4
 	  "WeekSelection"
 	  "TeamOfTheWeek"
 	  "TopPerformers";
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
 }
 
 /* Top selection section. */
-.totw-week-selection-container {
+#totw-week-selection-container {
 	/* background-color: blue; */
 	grid-area: WeekSelection;
 	padding: 0.3rem;
 }
 #TOTW-season-selection-dropdown {
-	min-width: 7rem;
+	min-width: 60px;
 }
 #TOTW-week-selection-dropdown {
 	min-width: 12rem;
 }
 
 /* Team of the Week pitch container. */
-.totw-team-of-the-week-container {
+#totw-team-of-the-week-container {
 	/* background-color: yellow; */
 	grid-area: TeamOfTheWeek;
 	/* padding: 0.3rem; */
-
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: max-content max-content;
@@ -1761,6 +1765,7 @@ Section 4
 #team-of-the-week-header-summary-text {
 	/* background-color: green; */
 	text-align: center;
+	margin: 0 auto; /* Centrally align the text in the container. */
 }
 #totw-total-points {
 	font-size: 3rem;
@@ -1781,6 +1786,7 @@ Section 4
 #team-of-the-week-pitch-area {
 	grid-area: Pitch;
 	position: relative;
+	margin: 0 auto; /* Center the whole pitch on the screen. */
 	width: 100%;
 	/* height: 520px; */
 	min-height: 250px;
@@ -1912,7 +1918,7 @@ Section 4
 	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
 	max-height: 60%; /* At maximum, have the height at 60%. */
 	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
-	width: 95%;
+	width: var(--pagewidth, 95%);
 	
 	/* Style the totw-player-info box. */
 	border: 0.125rem solid var(--secondary-accent-colour, white);
@@ -1962,6 +1968,7 @@ Section 4
 /* Format the table in the pop up. */
 #totw-player-info-box-gameweek-table {
 	border-radius: none;
+	border-collapse: collapse;
 	font-size: 14px; /* Fallback value. */
 	font-size: 0.9rem; /* Relative to root (html) value. */
 }
@@ -1974,6 +1981,7 @@ Section 4
 	text-align: center; /* By default, center all table text. */
 	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
 	height: 2rem;
+	background: rgba(255, 255, 255, 0.10);
 }
 /* Format the table cells. */
 #totw-player-info-box-gameweek-table td {
@@ -1981,18 +1989,15 @@ Section 4
 }
 /* Add a top border radius to the last row. (https://stackoverflow.com/a/4094151/14290169). */
 #totw-player-info-box-gameweek-table tr:last-child {
-	box-shadow: inset 0rem 0.15rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
+	box-shadow: inset 0rem 0.2rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
 }
-
 
 #totw-player-info-box-season-details {
 	/* background: blue; */
 	padding-top: 2rem;
 }
 
-
-
-.totw-top-performers-container {
+#totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
 	padding: 0.3rem;
@@ -2201,20 +2206,23 @@ Section 5
 	812 pixels (iPhone X landscape)
 	1024 pixels (iPad landscape) */
 
-	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-		/* background: blue; */
+	@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {
+		/* Narrow Smartphones */
 		:root {
+			/* background: lightblue; */
 			/* --headerHeight: 2.8rem; Define the header height variable. */
-			--pagewidth: 96%; /* Used for controlling the width of items on each page */
+			--pagewidth: 98%; /* Used for controlling the width of items on each page */
 		}
 
-
 		/* Team Of The Week Tab */
+		/* Season selection dropdown. */
+		#TOTW-season-selection-dropdown {
+			min-width: 80px;
+		}
 		/* TOTW Pitch Container. */
 		#team-of-the-week-pitch-area {
-			height: 360px; /* Format the height of the TOTW pitch container. */
-			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
+			height: 340px; /* Format the height of the TOTW pitch container. */
+			background-size: 170% auto; /* Format how much of the background the pitch SVG fills. */ 
 		}
 		/* Format the boxes below the kit. */
 		.totw-player-box {
@@ -2237,79 +2245,308 @@ Section 5
 		}
 	}
 	
-	@media only screen and (min-width: 480px) and (max-width: 768px) {
-		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: green; */
+	@media only screen and (min-device-width: 360px) and (max-device-width: 420px) {
+		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 		:root {
+			/* background: blue; */
+			/* --headerHeight: 2.8rem; Define the header height variable. */
+			--pagewidth: 96%; /* Used for controlling the width of items on each page */
+		}
+
+		/* Team Of The Week Tab */
+		/* Season selection dropdown. */
+		#TOTW-season-selection-dropdown {
+			min-width: 90px;
+		}
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 340px; /* Format the height of the TOTW pitch container. */
+			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 63px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.6rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+
+	@media only screen and (min-device-width: 420px) and (max-device-width: 480px) {
+		/* Slightly Wider Smartphones */
+		:root {
+			/* background: darkblue; */
+			/* --headerHeight: 2.8rem; Define the header height variable. */
+			--pagewidth: 96%; /* Used for controlling the width of items on each page */
+		}
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 400px; /* Format the height of the TOTW pitch container. */
+			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 63px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.6rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 620px) {
+		/* Smaller Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		:root {
+			/* background: lightgreen; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 95%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 95%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 460px; /* Format the height of the TOTW pitch container. */
+			background-size: 150% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 75px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.7rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.6rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+
+	@media only screen and (min-width: 620px) and (max-width: 768px) {
+		/* Larger Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		:root {
+			/* background: darkgreen; */
+			/* --headerHeight: 4rem; Define the header height variable. */
+			--pagewidth: 95%; /* Used for controlling the width of items on each page */
+		}
+		html {
+			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
+		}
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 480px; /* Format the height of the TOTW pitch container. */
+			background-size: 120% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 85px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 		/* Covers iPads and other tablets. */
-		/* background: orange; */
 		:root {
+			/* background: orange; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 95%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 100px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
 		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: cyan; */
 		:root {
+			/* background: cyan; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 90%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 110px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1224px) {
 		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-		/* background: red; */
 		:root {
+			/* background: red; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
-			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
+			font-size: 28px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 90%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			width: 70%; /* Format the width of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 120px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1824px) {
 		/* Desktops and Laptops - For larger monitors and displays. */
-		/* background: yellow; */
 		:root {
+			/* background: purple; */
 			/* --headerHeight: 4rem; Define the header height variable. */
-			--pagewidth: 80%; /* Used for controlling the width of items on each page */
+			--pagewidth: 70%; /* Used for controlling the width of items on each page */
 		}
 		html {
-			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
+			font-size: 30px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 85%;
-		} */
+		
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			width: 60%; /* Format the width of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 120px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	/* Add a set up for media devices with preference for dark mode. */
