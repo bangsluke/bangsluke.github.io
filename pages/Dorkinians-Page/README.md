@@ -22,3 +22,22 @@ Accessibility - 74
 Best Practices - 93
 SEO - 92
 Progressive Web App - n/a
+=======
+
+## Lighthouse Rating
+
+Fet as Mobile for device.
+
+### Tue 18th Jan 2022
+
+Performance - 15
+Accessibility - 74
+Best Practices - 80
+SEO - 92
+
+Improved to;
+
+Performance - 35
+Accessibility - 74
+Best Practices - 80
+SEO - 92
