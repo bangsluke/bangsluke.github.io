@@ -7,6 +7,22 @@ To get the files ready for upload to the main site, do the following actions;
 
 # Lighthouse Reports
 
+Tested as Mobile for device.
+
+### 18/01/2022
+
+Performance - 15
+Accessibility - 74
+Best Practices - 80
+SEO - 92
+
+Improved to;
+
+Performance - 35
+Accessibility - 74
+Best Practices - 80
+SEO - 92
+
 ## 26/01/2022
 
 Performance - 15
@@ -22,22 +38,11 @@ Accessibility - 74
 Best Practices - 93
 SEO - 92
 Progressive Web App - n/a
-=======
 
-## Lighthouse Rating
+## 04/03/2022
 
-Fet as Mobile for device.
-
-### Tue 18th Jan 2022
-
-Performance - 15
-Accessibility - 74
-Best Practices - 80
-SEO - 92
-
-Improved to;
-
-Performance - 35
-Accessibility - 74
-Best Practices - 80
-SEO - 92
+Performance - 27
+Accessibility - 59
+Best Practices - 83
+SEO - 75
+Progressive Web App - n/a
