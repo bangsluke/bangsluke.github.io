@@ -123,6 +123,7 @@ var statsObject = {
         "Perudo": ["n/a"],
         "Poker": ["n/a"],
         "Punctuality": ["n/a"],
+        "Shuffleboard": ["n/a"],
         "Spike Ball": ["n/a"],
         "Thumb Rating": ["n/a"],
         "WhatsApp": ["n/a"]
