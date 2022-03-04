@@ -25,7 +25,6 @@
 // Third section loads in the Fixtures tab data.
 
 
-
 // ! Code
 
 console.time(); // Start the console timer.
@@ -45,7 +44,7 @@ var phrasesArray = [
     "Adding up the sheer quantity of Peck's goals...",
     "Going into overdrive counting all of Alex Wills' yellow cards...",
     "Crafting the basis of the AFA's rep teams from Dorkinians players...",
-    "Waiting for Sam Smith to score from open play...",
+    "Questioning if Sam Smith's open play goal was actually his...",
     "Pretending the 1's team's yellow cards never happened...",
     "Accepting bribes for stat fiddling...",
     "Will be ready as soon as Rupert Cape uses his left foot...",
@@ -57,7 +56,7 @@ var phrasesArray = [
     "Expecting a goalkeeper hissy fit any moment now...",
     "Probably should get out of 1st gear for the second half...",
     "Waiting to see if Harry Lynn will turn up for the game...",
-    "Crying out for Al Thom to finally score a goal...",
+    "Enjoying Al Thom's roly poly celebration for his first club goal...",
     "Sliding Shaun Patterson into TOTW because of a bet...",
     "Counting out Will Westcott's late fines...",
     "Adjusting teams on Saturday morning following late dropouts...",
@@ -417,13 +416,10 @@ var displayTotalClubStatsArrayOfObjects = ""; // Define an initially blank array
 
 // Team Season Results
 const teamSeasonResultsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1269354033&single=true&output=csv';
+// Not used right now!
 var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Player Stats Tab
-
-// Player Selection
-const displayAllowedPlayersSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=0&single=true&output=csv';
-var displayAllowedPlayersArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // This Season Stats
 const displayThisSeasonStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1147882021&single=true&output=csv';
@@ -434,11 +430,11 @@ const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2P
 var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Fixtures List Tab
-const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
+//const fixturesListSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1820717347&single=true&output=csv';
 // Match Details Tab
 //var matchDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=1016205165&single=true&output=csv';
 // Display Details Tab
-const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
+//const displayDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTykPTiCIP9ovpx5P_mEqfxZ6DrRwXNIgwHmyWGev2Cm4yVfKxxpcHUe5af6MH8cUML1wsdDjMxhba6/pub?gid=628628597&single=true&output=csv';
 
 // TOTW Tab
 
@@ -506,14 +502,6 @@ function init() {
 
     // Drop Down Options.
     console.log('%c' + '> 0. Drop down data being loaded in.', 'background-color: darkblue; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-
-    // Drop Down Options Info
-    Papa.parse(displayAllowedPlayersSheetCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerDropdownInfo, // The callback to execute when parsing is complete.
-    });
 
 
     // Step 1. 
@@ -1076,6 +1064,7 @@ function getSideMenuInfo(results) {
     // Process the original array of objects received.
     displaySiteDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displaySiteDetailsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getSideMenuInfo:");
     // console.log(displaySiteDetailsArrayOfObjects); // Log the global variable.
     showSideMenuInfo(displaySiteDetailsArrayOfObjects); // Call the showSideMenuInfo function.
 }
@@ -1093,10 +1082,6 @@ function showSideMenuInfo(results) {
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
 
     // Populate the site details information into the side menu.
-
-    // var versionNumber = displaySiteDetailsArrayOfObjects[0]["Version Number"];
-    // console.log(versionNumber);
-
     // Work down the DOM, finding the 'side-menu-component' element and then look inside it for ids to populate.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-version-number-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Version Number"]; // Add the text to the side menu.
     document.getElementsByTagName('side-menu-component')[0].shadowRoot.getElementById('side-menu-site-details-current-season-text').innerHTML = displaySiteDetailsArrayOfObjects[0]["Current Season"]; // Add the text to the side menu.
@@ -1110,21 +1095,33 @@ function showSideMenuInfo(results) {
 // Dropdowns
 
 // 0.7. Player Dropdown data "getter" function.
-function getPlayerDropdownInfo(results) {
+function getPlayerDropdownInfo() {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
-    // Process the original array of objects received.
-    displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
-    // console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
+    // Filter the All Time Stat details object down to just the players allowed on the site. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    const displayAllowedPlayersArrayOfObjects = displayAllTimeStatsArrayOfObjects.filter(playersData => playersData.ALLOWEDONSITE === "TRUE");
+    // console.log("displayAllowedPlayersArrayOfObjects"); // Log the filtered object.
+    // console.table(displayAllowedPlayersArrayOfObjects); // Log the filtered object in a table format.
+
+    // Next, map the object just down to the player names.
+    let allowedPlayers = displayAllowedPlayersArrayOfObjects.map(({ NAME }) => {
+        return [NAME];
+    });
+    // console.log("allowedPlayers"); // Log the mapped object.
+    // console.log(allowedPlayers); // Log the mapped object.
+
+    // Finally, turn the object into an array to pass to the populateDropdownList function.
+    const allowedPlayersArray = Object.values(allowedPlayers);
+    // console.log("allowedPlayersArray");
+    // console.log(allowedPlayersArray);
 
     // Populate the various dropdown components with player names.
     // Player Stats tab
-    populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('player-stats', allowedPlayersArray, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
     // Comparison Tab
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', allowedPlayersArray, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', allowedPlayersArray, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Dropdowns populated");
@@ -1150,6 +1147,7 @@ function getHomepageTabNextFixturesInfo(results) {
     // Process the original array of objects received.
     displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getHomepageTabNextFixturesInfo");
     // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
     showHomepageTabNextFixturesInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabNextFixturesInfo function.
 }
@@ -1195,7 +1193,8 @@ function getHomepageTabCaptainsAndAwardsInfo(results) {
     // Process the original array of objects received.
     displayCaptainsAndAwardsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayCaptainsAndAwardsArrayOfObjects' defined:"); // Log the global variable.
-    // console.log(displayCaptainsAndAwardsArrayOfObjects); // Log the global variable.
+    console.log("getHomepageTabCaptainsAndAwardsInfo");
+    console.log(displayCaptainsAndAwardsArrayOfObjects); // Log the global variable.
     showHomepageTabCaptainsAndAwardsInfo(displayCaptainsAndAwardsArrayOfObjects); // Call the showHomepageTabCaptainsAndAwardsInfo function.
 }
 
@@ -1333,8 +1332,9 @@ function getTotalClubStatsInfo(results) {
 
     // Process the original array of objects received.
     displayTotalClubStatsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
-    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    // console.log("Global variable 'displayTotalClubStatsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getTotalClubStatsInfo");
+    // console.log(displayTotalClubStatsArrayOfObjects); // Log the global variable.
     showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
 
@@ -1554,7 +1554,7 @@ function prefillPlayerStatsTab() {
 
             }
             catch (err) {
-                console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                // console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
             }
         }
     }
@@ -1576,6 +1576,7 @@ function getPlayerStatsThisSeasonTabInfo(results) {
     // Process the original array of objects received.
     displayThisSeasonStatsArrayOfObjects = results.data // Define the global variable "displayThisSeasonStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayThisSeasonStatsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getPlayerStatsThisSeasonTabInfo");
     // console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStatsThisSeasonTabInfo function.
 }
@@ -1588,8 +1589,12 @@ function getPlayerStatsAllTimeTabInfo(results) {
     // Process the original array of objects received.
     displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getPlayerStatsAllTimeTabInfo");
     // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
+
+    // Call the getPlayerDropdownInfo function to populate the site dropdowns.
+    getPlayerDropdownInfo();
 }
 
 // 3.2.a. Player Stats This Season tab data "show-er" function.
@@ -1644,7 +1649,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Loop through the created stat array. Each stat corresponds to an HTML element in the This Seasons Grid.
     for (let i = 0; i < statsArray.length; i++) {
-        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
@@ -1742,7 +1747,7 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Loop through the created stat array. Each stat corresponds to an HTML element in the All Time Grid.
     for (let i = 0; i < statsArray.length; i++) {
-        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
@@ -1777,7 +1782,7 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
         }
         catch (err) {
-            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+            // console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
         }
     }
 
@@ -1815,6 +1820,8 @@ function getMatchDetailsInfo(results) {
 
     // Process the original array of objects received.
     displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
+    // console.log("getMatchDetailsInfo");
+    // console.log(displayMatchDetailsArrayOfObjects);
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Match Details information fetched");
@@ -1842,6 +1849,7 @@ function getTeamOfTheWeekPlayersInfo(results) {
     // Process the original array of objects received.
     displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
+    // console.log("getTeamOfTheWeekPlayersInfo");
     // console.log(displayTOTWArrayOfObjects); // Log the global variable.
 
     // Initially populate the week number dropdown.
@@ -1881,7 +1889,8 @@ function updateTeamOfTheWeekWeekNumberInfo() {
         let weekOption = document.createElement('option');
         // console.log("Week selectedSeasonWeekData[i].WEEK");
         // console.log("Week " + selectedSeasonWeekData[i].WEEK);
-        weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK;
+        // weekOption.text = "Week " + selectedSeasonWeekData[i].WEEK ;
+        weekOption.text = "Week " + selectedSeasonWeekData[i]["WEEK ADJUSTED"] + " (" + selectedSeasonWeekData[i]["DATE LOOKUP"] + ")";
         weekOption.value = selectedSeasonWeekData[i].WEEK;
         weekDropdown.add(weekOption);
     }
@@ -1896,31 +1905,11 @@ function updateTeamOfTheWeekWeekNumberInfo() {
     stopRotateLogo("dorkinians-header-logo");
 }
 
-// // Define the y positions of each Classification.
-// let GKy = 5;
-// let DEFy = 150;
-// let MIDy = 300;
-// let FWDy = 450;
-// // Define the x positions of each Classification.
-// let Centerx = 200;
-// let LeftOf2x = 150;
-// let RightOf2x = 250;
-// let LeftOf3x = 100;
-// let RightOf3x = 300;
-// let LeftOf4x = 10;
-// let LeftCenterOf4x = 100;
-// let RightCenterOf4x = 250;
-// let RightOf4x = 350;
-// let LeftOf5x = 5;
-// let LeftCenterOf5x = 80;
-// let RightCenterOf5x = 270;
-// let RightOf5x = 355;
-
 // Define the y positions of each Classification.
-let GKy = 8;
+let GKy = 1;
 let DEFy = 24;
-let MIDy = 51;
-let FWDy = 78;
+let MIDy = 47;
+let FWDy = 71;
 // Define the x positions of each Classification.
 let PlayerWidth = 20;
 let Centerx = 50 - (PlayerWidth / 2);
@@ -1933,8 +1922,8 @@ let LeftCenterOf4x = 35 - (PlayerWidth / 2);
 let RightCenterOf4x = 65 - (PlayerWidth / 2);
 let RightOf4x = 85 - (PlayerWidth / 2);
 let LeftOf5x = 10 - (PlayerWidth / 2);
-let LeftCenterOf5x = 35 - (PlayerWidth / 2);
-let RightCenterOf5x = 65 - (PlayerWidth / 2);
+let LeftCenterOf5x = 30 - (PlayerWidth / 2);
+let RightCenterOf5x = 70 - (PlayerWidth / 2);
 let RightOf5x = 90 - (PlayerWidth / 2);
 
 // Define an object of formations to define the various positions of players.
@@ -2348,8 +2337,6 @@ function showTeamOfTheWeekPlayersInfo(results) {
     // Set the dataArrayOfObjects.
     const dataArrayOfObjects = results; // Data comes through from results as an array of object. This is because the header setting on the above papa parse is set to true.
     // console.log("dataArrayOfObjects");
-    // console.log(dataArrayOfObjects); // Log the returned data.
-
     // console.log(dataArrayOfObjects); // Log the received array of objects.
     var objectLength = dataArrayOfObjects.length; // Get the original length of the array.
     // console.log("Original Length of dataArrayOfObjects = " + objectLength); // Log the original length.
@@ -2382,12 +2369,12 @@ function showTeamOfTheWeekPlayersInfo(results) {
 
     // Get an object from the array by creating an object from the first array value.
     TOTWStatObject = dataArrayOfObjects[arrayNumberRef];
-    console.log("TOTWStatObject =");
-    console.log(TOTWStatObject);
+    // console.log("TOTWStatObject =");
+    // console.log(TOTWStatObject);
 
     // Define the formation to display.
     let formation = TOTWStatObject["BEST FORMATION"];
-    console.log("Formation = " + formation);
+    // console.log("Formation = " + formation);
 
     // Populate the total number of points for the team.
     document.getElementById("totw-total-points").innerHTML = TOTWStatObject["TOTW SCORE"]; // Populate the found HTML element with the players name.
@@ -2411,7 +2398,21 @@ function showTeamOfTheWeekPlayersInfo(results) {
         // console.log(TOTWStatObject["POS " + i + " PLAYER"]);
 
         // Populate the HTML elements.
-        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = TOTWStatObject["POS " + i + " PLAYER"]; // Populate the found HTML element with the players name.
+        // Populate the player name. Limit to a certain length of characters.
+        var playerName = TOTWStatObject["POS " + i + " PLAYER"];
+        // console.log("playerName: " + playerName);
+        if (playerName.length > 12) {
+            let spacePosition = playerName.indexOf(' ') + 1;
+            // console.log("spacePosition: " + spacePosition);
+            let playerFirstName = playerName.substring(0, spacePosition);
+            // console.log("playerFirstName: " + playerFirstName);
+            let playerSecondNameInitial = playerName.substring(spacePosition, spacePosition + 1);
+            // console.log("playerSecondNameInitial: " + playerSecondNameInitial);
+            playerName = playerFirstName + " " + playerSecondNameInitial;
+            // console.log("playerName changed to: " + playerName);
+        }
+        document.getElementById("totw-player-pos-" + i + "-name").innerHTML = playerName; // Populate the found HTML element with the players name.
+        // Populate points.
         document.getElementById("totw-player-pos-" + i + "-points").innerHTML = TOTWStatObject["POS " + i + " POINTS"]; // Populate the found HTML element with the players points.
 
         // Get the star man details.
@@ -2427,7 +2428,7 @@ function showTeamOfTheWeekPlayersInfo(results) {
         let topPosition = parseInt(formationCoordinateObject[formation]["Pos" + i]["y"]);
         playerDiv.style.left = leftPosition + '%';
         playerDiv.style.top = topPosition + '%';
-        console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
+        // console.log("Player Name: " + TOTWStatObject["POS " + i + " PLAYER"] + " - Positioned at x=" + leftPosition + "%, y=" + topPosition + "%");
     }
 
     // Populate the star man details.
@@ -2466,13 +2467,12 @@ const showTOTWPlayerInfo = function () {
     // Return the clicked element and manipulate it to get the position number clicked on.
     let clickedHTMLElementID = this.id;
     let playerIDNumber = clickedHTMLElementID.substring(16, 18);
-    console.log(clickedHTMLElementID + ", number: " + playerIDNumber);
+    // console.log(clickedHTMLElementID + ", number: " + playerIDNumber);
 
     // Get the required information from the saved TOTWStatObject.
     let playerName = TOTWStatObject["POS " + playerIDNumber + " PLAYER"];
     let seasonWeekNumRef = TOTWStatObject["SEASON WEEK NUM REF"];
-    console.log("playerName = " + playerName);
-    console.log("seasonWeekNumRef = " + seasonWeekNumRef);
+    // console.log("seasonWeekNumRef = " + seasonWeekNumRef);
 
     // Begin working with the Match Details data.
     var objectLength = displayMatchDetailsArrayOfObjects.length; // Get the original length of the array.
@@ -2482,34 +2482,178 @@ const showTOTWPlayerInfo = function () {
     // Filter the full match details array down to the same season fixture id. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
     const matchDetailsWeekData = displayMatchDetailsArrayOfObjects.filter(weekData => weekData.SEASONWEEKNUMREF === seasonWeekNumRef);
     objectLength = matchDetailsWeekData.length; // Get the new length of the array.
-    console.log(objectLength);
-    console.log(matchDetailsWeekData);
+    // console.log("matchDetailsWeekData Length: " + objectLength);
+    // console.log(matchDetailsWeekData);
 
     // Filter the reduced array down to just the player.
     const playerMatchDetailsData = matchDetailsWeekData.filter(playerData => playerData.PLAYERNAME == playerName);
-    console.log(playerMatchDetailsData);
+    objectLength = playerMatchDetailsData.length; // Get the new length of the array.
+    // console.log("playerMatchDetailsData Length: " + objectLength);
+    // console.log("playerMatchDetailsData:");
+    // console.log(playerMatchDetailsData);
 
     // Populate the player pop up info box.
     // Populate the top information.
     document.getElementById('totw-player-info-box-header-text').innerHTML = playerName;
     document.getElementById('totw-player-info-box-result').innerHTML = playerMatchDetailsData[0].SUMMARY;
+    // Get the player position (class).
+    let playerClass = playerMatchDetailsData[0].CLASS;
+    // console.log("Player class = " + playerClass);
+
+    // Log the known information up to here.
+    console.log("Clicked player number = " + clickedHTMLElementID + ", name: " + playerName + ", position: " + playerClass);
+
     // Loop through the stats table and fill in the details.
     let statArray = ["APP", "MOM", "G", "A", "CLS", "C", "Y", "R", "OG", "PM", "PCO", "PSV"];
-    console.log(statArray)
+    let multiplierValue = ""; // Initially define a multiplier value to be populated and used later.
+    // console.log(statArray)
     for (let i = 0; i < statArray.length; i++) {
-        console.log("i = " + i + ", which is " + statArray[i]);
-        console.log('totw-player-info-box-' + statArray[i]);
-        console.log("playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
-        document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
-        document.getElementById('totw-player-info-box-' + statArray[i] + '-points').innerHTML = playerMatchDetailsData[0][statArray[i]] * 2;
-        // document.getElementById('totw-player-info-box-G').innerHTML = playerMatchDetailsData[0].G;
-        // document.getElementById('totw-player-info-box-G-points').innerHTML = playerMatchDetailsData[0].G * 4;
+        // console.log("i = " + i + ", which is " + statArray[i] + ". playerMatchDetailsData[0][statArray[i]] = " + playerMatchDetailsData[0][statArray[i]])
+
+        // Initially remove the hidden class from the row, to reset the box from the last selected person.
+        document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.remove("hidden");
+
+        //! TO DO - work out what to do with a player who has played twice in one game week!
+
+        // Go into a complicated if else switch statement combindation to correctly populate the pop up box stats.
+        if (statArray[i] == "G") {
+
+            // Correctly add goals to penalties scored using parseInt and avoiding blanks.
+            let goalsScored = 0;
+            if (playerMatchDetailsData[0]["G"] == "" && playerMatchDetailsData[0]["PSC"] == "") {
+                goalsScored = 0;
+            } else if (playerMatchDetailsData[0]["G"] == "") {
+                goalsScored = parseInt(playerMatchDetailsData[0]["PSC"]);
+            } else if (playerMatchDetailsData[0]["PSC"] == "") {
+                goalsScored = parseInt(playerMatchDetailsData[0]["G"]);
+            } else {
+                goalsScored = parseInt(playerMatchDetailsData[0]["G"]) + parseInt(playerMatchDetailsData[0]["PSC"]);
+            }
+
+            // console.log(goalsScored);
+
+            if (goalsScored == 0) {
+                document.getElementById('totw-player-info-box-G-row').classList.add("hidden");
+            }
+
+            // Change the multiplier value based on the class of the player.
+            switch (playerClass) {
+                case "GK":
+                    multiplierValue = 6;
+                    break;
+                case "DEF":
+                    multiplierValue = 6;
+                    break;
+                case "MID":
+                    multiplierValue = 5;
+                    break;
+                case "FWD":
+                    multiplierValue = 4;
+                    break;
+                default:
+                    multiplierValue = 0;
+            }
+            document.getElementById('totw-player-info-box-G').innerHTML = goalsScored;
+            document.getElementById('totw-player-info-box-G-points').innerHTML = goalsScored * multiplierValue;
+
+        } else if (playerMatchDetailsData[0][statArray[i]] == null || playerMatchDetailsData[0][statArray[i]] == undefined || playerMatchDetailsData[0][statArray[i]] == "") {
+            // Check if the received value is empty/undefined/blank or not.
+
+            // If the value is empty, hide the whole row.
+            // console.log("Stat " + statArray[i] + " value is empty so hiding row.");
+            document.getElementById('totw-player-info-box-' + statArray[i] + '-row').classList.add("hidden");
+
+        } else {
+
+            // If the value is not empty, add the value to the pop up menu.
+            // console.log("Stat " + statArray[i] + " value is not empty so populating row.");
+            document.getElementById('totw-player-info-box-' + statArray[i]).innerHTML = playerMatchDetailsData[0][statArray[i]];
+
+            // Add a switch statement to deal with the various different points to be awarded.
+            switch (statArray[i]) {
+                case "APP":
+                    if (playerMatchDetailsData[0]["APP"] >= 60) {
+                        document.getElementById('totw-player-info-box-APP-points').innerHTML = 2;
+                    } else {
+                        document.getElementById('totw-player-info-box-APP-points').innerHTML = 1;
+                    }
+                    break;
+                case "MOM":
+                    document.getElementById('totw-player-info-box-MOM-points').innerHTML = playerMatchDetailsData[0]["MOM"] * 3;
+                    break;
+                case "A":
+                    document.getElementById('totw-player-info-box-A-points').innerHTML = playerMatchDetailsData[0]["A"] * 3;
+                    break;
+                case "C":
+                    if (playerMatchDetailsData[0]["C"] == 0 || playerMatchDetailsData[0]["C"] == "0") {
+                        // Change the multiplier value based on the class of the player.
+                        switch (playerClass) {
+                            case "GK":
+                                multiplierValue = 4;
+                                break;
+                            case "DEF":
+                                multiplierValue = 4;
+                                break;
+                            case "MID":
+                                multiplierValue = 1;
+                                break;
+                            case "FWD":
+                                multiplierValue = 0;
+                                break;
+                            default:
+                                multiplierValue = 0;
+                        }
+                        document.getElementById('totw-player-info-box-C-row').classList.add("hidden");
+                        document.getElementById('totw-player-info-box-CLS-row').classList.remove("hidden");
+                        document.getElementById('totw-player-info-box-CLS').innerHTML = 1;
+                        document.getElementById('totw-player-info-box-CLS-points').innerHTML = 1 * multiplierValue;
+                    } else {
+                        // Change the multiplier value based on the class of the player.
+                        switch (playerClass) {
+                            case "GK":
+                                document.getElementById('totw-player-info-box-C-points').innerHTML = Math.round(playerMatchDetailsData[0]["C"] * -0.5); // Round the number of goals conceded points to be an integer.
+                                break;
+                            case "DEF":
+                                document.getElementById('totw-player-info-box-C-points').innerHTML = Math.round(playerMatchDetailsData[0]["C"] * -0.5); // Round the number of goals conceded points to be an integer.
+                                break;
+                            case "MID":
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden"); // Hide for MID and FWD.
+                                break;
+                            case "FWD":
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden"); // Hide for MID and FWD.
+                                break;
+                            default:
+                                document.getElementById('totw-player-info-box-C-row').classList.add("hidden");
+                        }
+                    }
+                    break;
+                case "Y":
+                    document.getElementById('totw-player-info-box-Y-points').innerHTML = playerMatchDetailsData[0]["Y"] * -1;
+                    break;
+                case "R":
+                    document.getElementById('totw-player-info-box-R-points').innerHTML = playerMatchDetailsData[0]["R"] * -3;
+                    break;
+                case "OG":
+                    document.getElementById('totw-player-info-box-OG-points').innerHTML = playerMatchDetailsData[0]["OG"] * -2;
+                    break;
+                case "PM":
+                    document.getElementById('totw-player-info-box-PM-points').innerHTML = playerMatchDetailsData[0]["PM"] * -2;
+                    break;
+                case "PCO":
+                    document.getElementById('totw-player-info-box-PCO-points').innerHTML = playerMatchDetailsData[0]["PCO"] * 0;
+                    break;
+                case "PSV":
+                    document.getElementById('totw-player-info-box-PSV-points').innerHTML = playerMatchDetailsData[0]["PSV"] * 5;
+                    break;
+                default:
+                    console.log(statArray[i] + " has defaulted.")
+            }
+
+        }
+
     }
     // Populate the Total Points row.
-    document.getElementById('totw-player-info-box-FTP').innerHTML = playerMatchDetailsData[0]["FTP"];
     document.getElementById('totw-player-info-box-FTP-points').innerHTML = playerMatchDetailsData[0]["FTP"];
-
-
 
     // Show the background overlay.
     document.getElementById('background-overlay-totw-player-info').style.display = "inline"; // Show the background overlay behind the player pop up info box.
@@ -3373,6 +3517,9 @@ function displayInformation(informationBarID, displayMessage) {
 // 1. Populate the dropdown with Player names.
 function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
     // console.log("Function populateDropdownList called with dropdownID: " + dropdownID + ", from tab: " + tabName); // Log that the function has been called.
+
+    // console.log("playerNameArray"); // Log the received array.
+    // console.log(playerNameArray); // Log the received array.
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {

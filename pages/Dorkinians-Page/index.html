@@ -25,6 +25,15 @@
     <meta property="og:description" content="Stats and information for the best club in the world.">
     <meta property="og:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
 
+    <!-- Add Twitter Card Meta Elements for sharing. https://stackoverflow.com/a/22395173/14290169 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content="@site_username"> -->
+    <meta name="twitter:title" content="Dorkinians FC Stats">
+    <meta name="twitter:description" content="Stats and information for the best club in the world.">
+    <!-- <meta name="twitter:creator" content="@creator_username"> -->
+    <meta name="twitter:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+    <meta name="twitter:domain" content="dorkiniansfcstats.co.uk">
+
     <!-- Link to fonts to be used on site. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
@@ -140,13 +149,13 @@
             <!-- Add the players name text. -->
             <h3 id="totw-player-info-box-header-text">Testing</h3>
 
-            <p class="textcenter" id="totw-player-info-box-result">Result</p>
+            <span class="textcenter" id="totw-player-info-box-result">Result</span>
 
             <!-- Add a div to hold the current gameweek details. -->
             <div id="totw-player-info-box-gameweek-details">
 
                 <!-- Add a table to hold all details. -->
-                <table>
+                <table id="totw-player-info-box-gameweek-table">
                     <tr>
                         <th>Statistics</th>
                         <th>Value</th>
@@ -214,7 +223,7 @@
                     </tr>
                     <tr id="totw-player-info-box-FTP-row">
                         <td>Total Points</td>
-                        <td id="totw-player-info-box-FTP"></td>
+                        <td></td>
                         <td id="totw-player-info-box-FTP-points"></td>
                     </tr>
                 </table>
@@ -222,11 +231,11 @@
             </div>
 
             <!-- Add a div to hold the past season details. -->
-            <div id="totw-player-info-box-season-details">
+            <!-- <div id="totw-player-info-box-season-details">
                 <h4>This Season</h4>
                 <p id="totw-player-info-box-APP">Minutes played </p>
                 <p id="totw-player-info-box-G">Goals scored </p>
-            </div>
+            </div> -->
 
         </div>
 
@@ -573,6 +582,10 @@
                                     </h4>
                                     <p class="homepage-grid-item ClubAwards"
                                         id="homepage-most-improved-player-of-the-season-award"></p>
+
+                                    <h4 class="homepage-grid-item ClubAwards">Golden Boot</h4>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-golden-boot">
+                                    </p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Newcomer of the Year Award</h4>
                                     <p class="homepage-grid-item ClubAwards" id="homepage-newcomer-of-the-year-award">
@@ -1603,9 +1616,9 @@
                             <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
                             <div class="information-bar" id="team-of-the-week-information-bar"></div>
 
-                            <section class="team-of-the-week-area">
+                            <section id="team-of-the-week-area">
 
-                                <section class="totw-week-selection-container">
+                                <section id="totw-week-selection-container">
 
                                     <div class="selection-container">
 
@@ -1613,7 +1626,8 @@
                                         <select name="SeasonSelection" class="selection-dropdown"
                                             id="TOTW-season-selection-dropdown"
                                             onchange="updateTeamOfTheWeekWeekNumberInfo()">
-                                            <option value="">Season</option>
+                                            <!-- <option value="All Time">All Time</option>
+                                            <option value="Season">Season</option> -->
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
                                             <option value="2018/19">2018/19</option>
@@ -1633,7 +1647,7 @@
 
                                 </section>
 
-                                <section class="totw-team-of-the-week-container">
+                                <section id="totw-team-of-the-week-container">
 
                                     <!-- Add a header container above the pitch. -->
                                     <div id="team-of-the-week-header-summary">
@@ -1642,20 +1656,21 @@
                                         <div id="team-of-the-week-header-summary-text">
                                             <h3 class="textcenter">TOTW Total Points:</h4>
                                                 <h3 class="textcenter" id="totw-total-points">TBC</h3>
-                                                <p class="textcenter" id="totw-week-number-players">Number Players
-                                                    Played:
+                                                <p class="textcenter" id="totw-week-number-players">
+                                                    Number Players Played:
                                                 </p>
                                         </div>
 
                                         <!-- Display the star man on the right side. -->
                                         <div id="team-of-the-week-header-summary-star-man">
                                             <h3 class="textcenter">Star Man</h3>
-                                            <div class="totw-player-div totw-player-div-star-man">
+                                            <div class="totw-player-div totw-player-div-star-man"
+                                                id="totw-player-star-man">
                                                 <img src="/pages/Dorkinians-Page/images/Kit.svg"
                                                     class="totw-dorkinians-kit totw-dorkinians-kit-star-man">
-                                                <div class="totw-player-box totw-player-name-box"
+                                                <div class="totw-player-box-star-man"
                                                     id="totw-player-pos-star-man-name"></div>
-                                                <div class="totw-player-box totw-player-points-box"
+                                                <div class="totw-player-box-star-man"
                                                     id="totw-player-pos-star-man-points"></div>
                                             </div>
                                         </div>
@@ -1764,12 +1779,18 @@
                                                 id="totw-player-pos-11-points"></div>
                                         </div>
 
-
                                     </div>
+
+                                    <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                        data-size="large" data-text="Dorkinians FC TOTW"
+                                        data-url="http://www.dorkiniansfcstats.co.uk/#team-of-the-week" data-lang="en"
+                                        data-show-count="false">Tweet</a>
+                                    <script async src="https://platform.twitter.com/widgets.js"
+                                        charset="utf-8"></script> -->
 
                                 </section>
 
-                                <section class="totw-top-performers-container">
+                                <!-- <section id="totw-top-performers-container">
 
                                     <h3 class="textleft">Top TOTW Performers</h3>
 
@@ -1777,7 +1798,7 @@
                                     <p>- Most likely to get in next week.</p>
                                     <p>- Hall of famers.</p>
 
-                                </section>
+                                </section> -->
 
                             </section>
 
@@ -3336,18 +3357,12 @@
     <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- New SnapTabs JavaScript -->
-    <!-- <script src="/pages/Dorkinians-Page/bundle.js" type="module" defer></script> -->
-
     <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
     <!-- Get main page JS -->
     <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
-
-    <!-- Get weather widget JS -->
-    <!-- <script src="/pages/Dorkinians-Page/weatherWidget.min.js"></script> -->
 
 </body>
 
