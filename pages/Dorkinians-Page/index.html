@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 
-<!-- Declare the language of the Web Page. -->
+<!-- Declare the language of the Web Page and the default font size. -->
 <html lang="en-uk" style="font-size:16px">
 
 <head>
 
     <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
     <title>Dorkinians FC Stats</title>
+    <meta name="description" content="Stats and information for the best club in the world." />
 
     <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
-    <!-- Define the width to teh device being used, the initial zoom level when the page loads and if the user can zoom. -->
+    <meta charset="UTF-8" />
+    <!-- Define the width to the device being used, the initial zoom level when the page loads and if the user can zoom. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Stats and information for the best club in the world." />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="bangsluke" />
     <meta name="copyright" content="bangsluke" />
     <meta name="robots" content="nofollow" />
+
+    <!-- Add Open Graph Meta Elements for Social Cards - https://www.sitepoint.com/a-basic-html5-template/ -->
+    <meta property="og:title" content="Dorkinians FC Stats">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dorkiniansfcstats.co.uk/">
+    <meta property="og:description" content="Stats and information for the best club in the world.">
+    <meta property="og:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+
+    <!-- Add Twitter Card Meta Elements for sharing. https://stackoverflow.com/a/22395173/14290169 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content="@site_username"> -->
+    <meta name="twitter:title" content="Dorkinians FC Stats">
+    <meta name="twitter:description" content="Stats and information for the best club in the world.">
+    <!-- <meta name="twitter:creator" content="@creator_username"> -->
+    <meta name="twitter:image" content="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+    <meta name="twitter:domain" content="dorkiniansfcstats.co.uk">
 
     <!-- Link to fonts to be used on site. -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,6 +48,8 @@
 
     <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/pages/Dorkinians-Page/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/pages/Dorkinians-Page/images/Dorkinians Logo - Loading Page.webp">
+    <!-- For iOS users who link the site to their homepage. -->
 
 </head>
 
@@ -92,6 +111,8 @@
         onclick="closePopUpBox()"></div>
     <div class="background-overlay background-overlay-dark" id="background-overlay-side-menu" style="display: none"
         onclick="closeNav()"></div>
+    <div class="background-overlay background-overlay-dark" id="background-overlay-totw-player-info"
+        style="display: none" onclick="closeTOTWPlayerInfo()"></div>
 
     <!-- Pop Up Box. Add a pop up box that can be modified and called for various reasons. -->
     <div id="pop-up-box" style="display: none">
@@ -116,6 +137,110 @@
 
     </div>
 
+    <!-- TOTW Player Info Pop Up Box. -->
+    <div id="totw-player-info-box" style="display: none">
+
+        <!-- The x close button. -->
+        <a id="totw-player-info-box-close-button" href="javascript:void(0)" onclick="closeTOTWPlayerInfo()">×</a>
+
+        <!-- Add a div to hold the header and message. -->
+        <div id="totw-player-info-box-container">
+
+            <!-- Add the players name text. -->
+            <h3 id="totw-player-info-box-header-text">Testing</h3>
+
+            <span class="textcenter" id="totw-player-info-box-result">Result</span>
+
+            <!-- Add a div to hold the current gameweek details. -->
+            <div id="totw-player-info-box-gameweek-details">
+
+                <!-- Add a table to hold all details. -->
+                <table id="totw-player-info-box-gameweek-table">
+                    <tr>
+                        <th>Statistics</th>
+                        <th>Value</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr id="totw-player-info-box-APP-row">
+                        <td>Minutes played</td>
+                        <td id="totw-player-info-box-APP"></td>
+                        <td id="totw-player-info-box-APP-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-MOM-row">
+                        <td>Man of the Match</td>
+                        <td id="totw-player-info-box-MOM"></td>
+                        <td id="totw-player-info-box-MOM-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-G-row">
+                        <td>Goals scored</td>
+                        <td id="totw-player-info-box-G"></td>
+                        <td id="totw-player-info-box-G-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-A-row">
+                        <td>Assists provided</td>
+                        <td id="totw-player-info-box-A"></td>
+                        <td id="totw-player-info-box-A-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-CLS-row">
+                        <td>Clean sheets</td>
+                        <td id="totw-player-info-box-CLS"></td>
+                        <td id="totw-player-info-box-CLS-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-C-row">
+                        <td>Goals conceded</td>
+                        <td id="totw-player-info-box-C"></td>
+                        <td id="totw-player-info-box-C-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-Y-row">
+                        <td>Yellow cards</td>
+                        <td id="totw-player-info-box-Y"></td>
+                        <td id="totw-player-info-box-Y-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-R-row">
+                        <td>Red cards</td>
+                        <td id="totw-player-info-box-R"></td>
+                        <td id="totw-player-info-box-R-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-OG-row">
+                        <td>Own goals</td>
+                        <td id="totw-player-info-box-OG"></td>
+                        <td id="totw-player-info-box-OG-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PM-row">
+                        <td>Penalties missed</td>
+                        <td id="totw-player-info-box-PM"></td>
+                        <td id="totw-player-info-box-PM-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PCO-row">
+                        <td>Penalties conceded</td>
+                        <td id="totw-player-info-box-PCO"></td>
+                        <td id="totw-player-info-box-PCO-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-PSV-row">
+                        <td>Penalties saved</td>
+                        <td id="totw-player-info-box-PSV"></td>
+                        <td id="totw-player-info-box-PSV-points"></td>
+                    </tr>
+                    <tr id="totw-player-info-box-FTP-row">
+                        <td>Total Points</td>
+                        <td></td>
+                        <td id="totw-player-info-box-FTP-points"></td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <!-- Add a div to hold the past season details. -->
+            <!-- <div id="totw-player-info-box-season-details">
+                <h4>This Season</h4>
+                <p id="totw-player-info-box-APP">Minutes played </p>
+                <p id="totw-player-info-box-G">Goals scored </p>
+            </div> -->
+
+        </div>
+
+    </div>
+
     <!-- Side Menu. Add the common website side menu using shadow DOMs. See /pages/Group-Page/sideMenu.js for the side menu code. -->
     <side-menu-component></side-menu-component>
 
@@ -134,7 +259,7 @@
                         <a href="#home" active>Home</a>
                         <a href="#club-stats" id="club-stats-tab-text">Club Stats</a>
                         <a href="#player-stats">Player Stats</a>
-                        <!-- <a href="#team-of-the-week">TOTW</a> -->
+                        <a href="#team-of-the-week">TOTW</a>
                         <a href="#comparison">Comparison</a>
                         <a href="#tables-results-fixtures">Tables, Results & Fixtures</a>
                     </nav>
@@ -381,26 +506,26 @@
                             <!-- Awards Section -->
                             <section class="homepage-club-captains-and-awards-container">
 
-                                <h3 class="textleft">Club Captains and Awards</h3>
+                                <!-- <h3 class="textleft">Club Captains and Awards</h3> -->
 
                                 <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                                <div class="information-bar" id="homepage-information-bar"></div>
+                                <!-- <div class="information-bar" id="homepage-information-bar"></div> -->
 
-                                <div class="selection-container" id="homepage-club-captains-and-awards-selection">
+                                <!-- <div class="selection-container" id="homepage-club-captains-and-awards-selection"> -->
 
-                                    <!-- Add a drop down select box for the user to change the awards shown. -->
+                                <!-- Add a drop down select box for the user to change the awards shown. -->
 
-                                    <!-- Let the user pick if to show captains or awards. -->
-                                    <select name="DisplaySelection" class="selection-dropdown"
+                                <!-- Let the user pick if to show captains or awards. -->
+                                <!-- <select name="DisplaySelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-display-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="ClubAwards" selected="selected">Club Awards</option>
                                         <option value="TeamAwards">Team Awards</option>
                                         <option value="Captains">Captains</option>
-                                    </select>
+                                    </select> -->
 
-                                    <!-- Let the user pick which season to filter for. -->
-                                    <select name="SeasonSelection" class="selection-dropdown"
+                                <!-- Let the user pick which season to filter for. -->
+                                <!-- <select name="SeasonSelection" class="selection-dropdown"
                                         id="homepage-captains-and-awards-season-selection-dropdown"
                                         onchange="updateHomepageInfo()">
                                         <option value="2016/17">2016/17</option>
@@ -409,11 +534,11 @@
                                         <option value="2019/20">2019/20</option>
                                         <option value="2020/21">2020/21</option>
                                         <option value="2021/22">2021/22</option>
-                                    </select>
+                                    </select> -->
 
-                                </div>
+                                <!-- </div> -->
 
-                                <div id="homepage-club-captains-and-awards-grid-container">
+                                <!-- <div id="homepage-club-captains-and-awards-grid-container">
 
                                     <h4 class="homepage-grid-item Captains">Club Captain</h4>
                                     <p class="homepage-grid-item Captains" id="homepage-club-captain"></p>
@@ -446,54 +571,78 @@
                                     <p class="homepage-grid-item Captains" id="homepage-vets-captain(s)"></p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Player of the Season Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-player-of-the-season-award"></p>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-player-of-the-season-award">
+                                    </p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Young Player of the Season Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-young-player-of-the-season-award"></p>
+                                    <p class="homepage-grid-item ClubAwards"
+                                        id="homepage-young-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item ClubAwards">Most Improved Player of the Season Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-most-improved-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item ClubAwards">Most Improved Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item ClubAwards"
+                                        id="homepage-most-improved-player-of-the-season-award"></p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Newcomer of the Year Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-newcomer-of-the-year-award"></p>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-newcomer-of-the-year-award">
+                                    </p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Alan Lambert Sportsmanship Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-alan-lambert-sportsmanship-award"></p>
+                                    <p class="homepage-grid-item ClubAwards"
+                                        id="homepage-alan-lambert-sportsmanship-award"></p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Chairman's Cup</h4>
                                     <p class="homepage-grid-item ClubAwards" id="homepage-chairman's-cup"></p>
 
                                     <h4 class="homepage-grid-item ClubAwards">Peter Mills Volunteers Award</h4>
-                                    <p class="homepage-grid-item ClubAwards" id="homepage-peter-mills-volunteers-award"></p>
+                                    <p class="homepage-grid-item ClubAwards" id="homepage-peter-mills-volunteers-award">
+                                    </p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">1st XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-1st-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">1st XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-1st-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">2nd XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-2nd-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">2nd XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-2nd-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">3rd XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-3rd-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">3rd XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-3rd-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">4th XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-4th-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">4th XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-4th-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">5th XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-5th-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">5th XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-5th-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">6th XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-6th-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">6th XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-6th-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">7th XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-7th-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">7th XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-7th-xi-squad-player-of-the-season-award"></p>
 
-                                    <h4 class="homepage-grid-item TeamAwards">8th XI Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-8th-xi-squad-player-of-the-season-award"></p>
+                                    <h4 class="homepage-grid-item TeamAwards">8th XI Squad Player of the Season Award
+                                    </h4>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-8th-xi-squad-player-of-the-season-award"></p>
 
                                     <h4 class="homepage-grid-item TeamAwards">Vets Squad Player of the Season Award</h4>
-                                    <p class="homepage-grid-item TeamAwards" id="homepage-vets-squad-player-of-the-season-award"></p>
+                                    <p class="homepage-grid-item TeamAwards"
+                                        id="homepage-vets-squad-player-of-the-season-award"></p>
 
-                                </div>
+                                </div> -->
 
                             </section>
 
@@ -558,44 +707,63 @@
 
                                     <div id="club-stats-total-club-and-team-stats-stats-grid-container">
 
-                                        <h5 class="club-stats-grid-item">Number of games played:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGamesPlayed">
+                                            Number of games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of league games played:</h5>
+
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberLeagueGamesPlayed">Number of league games
+                                            played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberLeagueGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of cup games played:</h5>
+
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberCupGamesPlayed">Number of cup games played:
+                                        </h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberCupGamesPlayed"></p>
-                                        <h5 class="club-stats-grid-item">Number of friendly games played:</h5>
+
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberFriendlyGamesPlayed">Number of friendly
+                                            games played:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberFriendlyGamesPlayed"></p>
 
-                                        <h5 class="club-stats-grid-item">Number of recorded players:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberPlayers">
+                                            Number of recorded players:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-numberPlayers">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goals scored:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalsScored">
+                                            Number of goals scored:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsScored"></p>
 
-                                        <h5 class="club-stats-grid-item">Average number of goals scored per game:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-goalsPerGame">
+                                            Average number of goals scored per game:</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-goalsPerGame">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goalscorers:</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-numberGoalscorers">
+                                            Number of goalscorers:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalscorers"></p>
 
-                                        <h5 class="club-stats-grid-item">Top goalscorer (and total):</h5>
+                                        <h5 class="club-stats-grid-item" id="club-team-stats-header-topGoalscorer">Top
+                                            goalscorer (and total):</h5>
                                         <p class="yellowtext club-stats-grid-item" id="club-team-stats-topGoalscorer">
                                         </p>
 
-                                        <h5 class="club-stats-grid-item">Number of goals conceded:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-numberGoalsConceded">Number of goals conceded:
+                                        </h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-numberGoalsConceded"></p>
 
-                                        <h5 class="club-stats-grid-item">Average number of goals conceded per game:</h5>
+                                        <h5 class="club-stats-grid-item"
+                                            id="club-team-stats-header-goalsConcededPerGame">Average number of goals
+                                            conceded per game:</h5>
                                         <p class="yellowtext club-stats-grid-item"
                                             id="club-team-stats-goalsConcededPerGame"></p>
                                     </div>
@@ -1434,58 +1602,191 @@
                     </article>
 
                     <!-- 4. Team of the Week Tab -->
-                    <div id="team-of-the-week-placement-holder-div">
-                        <!-- Delete when done. -->
-                        <!-- <article class="nav-targets" id="team-of-the-week"> -->
+                    <article class="nav-targets" id="team-of-the-week">
 
                         <!-- Add the main lighter coloured page section. -->
-                        <!-- <section class="page-section"> -->
+                        <section class="page-section">
 
-                        <!-- <h2 class="textcenter">Team of the Week</h2> -->
+                            <h2 class="textcenter">Team of the Week</h2>
 
-                        <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
-                        <!-- <div class="information-bar" id="team-of-the-week-information-bar"></div> -->
+                            <!-- Add an information bar to the top of the page below the header to help the user through the page. -->
+                            <div class="information-bar" id="team-of-the-week-information-bar"></div>
 
-                        <!-- <section class="team-of-the-week-area"> -->
+                            <section id="team-of-the-week-area">
 
-                        <!-- <section class="totw-week-selection-container"> -->
+                                <section id="totw-week-selection-container">
 
-                        <!-- <div class="selection-container"> -->
+                                    <div class="selection-container">
 
-                        <!-- Let the user pick which season to filter for. -->
-                        <!-- <select name="SeasonSelection" class="selection-dropdown"
-                                            id="player-stats-season-selection-dropdown"
-                                            onchange="showPlayerStatsTabUpdatedInfo()">
-                                            <option value="" selected="selected">Season</option>
+                                        <!-- Let the user pick which season to filter for. -->
+                                        <select name="SeasonSelection" class="selection-dropdown"
+                                            id="TOTW-season-selection-dropdown"
+                                            onchange="updateTeamOfTheWeekWeekNumberInfo()">
+                                            <!-- <option value="All Time">All Time</option>
+                                            <option value="Season">Season</option> -->
                                             <option value="2016/17">2016/17</option>
                                             <option value="2017/18">2017/18</option>
                                             <option value="2018/19">2018/19</option>
                                             <option value="2019/20">2019/20</option>
                                             <option value="2020/21">2020/21</option>
-                                            <option value="2021/22">2021/22</option>
-                                        </select> -->
+                                            <option value="2021/22" selected="selected">2021/22</option>
+                                        </select>
 
-                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
-                        <!-- <select name="WeekSelection" class="selection-dropdown"
-                                            id="TOTW-week-selection-dropdown">
-                                            <option value="" selected="selected">Select Week</option>
-                                            <option value="week1">Week 1</option>
-                                        </select> -->
+                                        <!-- Add a drop down select box for the user to change the selected week for TOTW. -->
+                                        <select name="WeekSelection" class="selection-dropdown"
+                                            id="TOTW-week-selection-dropdown"
+                                            onchange="updateTeamOfTheWeekPlayersInfo()">
+                                            <option value="">Select Week</option>
+                                        </select>
 
-                        <!-- </div> -->
-
-                        <!-- </section> -->
-
-                        <!-- <section class="totw-team-of-the-week-container">
-
-                                    <h3 class="textleft">TOTW</h3>
-
-                                    <img src="/pages/Dorkinians-Page/images/Layout Images/Team Of The Week 2020-10-24.webp"
-                                        width="943" height="1209" class="center" alt="Profile">
+                                    </div>
 
                                 </section>
 
-                                <section class="totw-top-performers-container">
+                                <section id="totw-team-of-the-week-container">
+
+                                    <!-- Add a header container above the pitch. -->
+                                    <div id="team-of-the-week-header-summary">
+
+                                        <!-- Group the summary text on the left hand side. -->
+                                        <div id="team-of-the-week-header-summary-text">
+                                            <h3 class="textcenter">TOTW Total Points:</h4>
+                                                <h3 class="textcenter" id="totw-total-points">TBC</h3>
+                                                <p class="textcenter" id="totw-week-number-players">
+                                                    Number Players Played:
+                                                </p>
+                                        </div>
+
+                                        <!-- Display the star man on the right side. -->
+                                        <div id="team-of-the-week-header-summary-star-man">
+                                            <h3 class="textcenter">Star Man</h3>
+                                            <div class="totw-player-div totw-player-div-star-man"
+                                                id="totw-player-star-man">
+                                                <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                    class="totw-dorkinians-kit totw-dorkinians-kit-star-man">
+                                                <div class="totw-player-box-star-man"
+                                                    id="totw-player-pos-star-man-name"></div>
+                                                <div class="totw-player-box-star-man"
+                                                    id="totw-player-pos-star-man-points"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Add a div to hold the pitch and all players. -->
+                                    <div id="team-of-the-week-pitch-area">
+
+                                        <!-- Add the divs that hold the players. The onclick event is added using JavaScript. -->
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-1">
+                                            <img src="/pages/Dorkinians-Page/images/KeeperKit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-1-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-1-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-2">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-2-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-2-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-3">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-3-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-3-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-4">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-4-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-4-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-5">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-5-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-5-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-6">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-6-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-6-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-7">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-7-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-7-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-8">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-8-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-8-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-9">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-9-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-9-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-10">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-10-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-10-points"></div>
+                                        </div>
+
+                                        <div class="totw-player-div totw-player-div-player" id="totw-player-pos-11">
+                                            <img src="/pages/Dorkinians-Page/images/Kit.svg"
+                                                class="totw-dorkinians-kit totw-dorkinians-kit-player">
+                                            <div class="totw-player-box totw-player-name-box"
+                                                id="totw-player-pos-11-name"></div>
+                                            <div class="totw-player-box totw-player-points-box"
+                                                id="totw-player-pos-11-points"></div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                        data-size="large" data-text="Dorkinians FC TOTW"
+                                        data-url="http://www.dorkiniansfcstats.co.uk/#team-of-the-week" data-lang="en"
+                                        data-show-count="false">Tweet</a>
+                                    <script async src="https://platform.twitter.com/widgets.js"
+                                        charset="utf-8"></script> -->
+
+                                </section>
+
+                                <!-- <section id="totw-top-performers-container">
 
                                     <h3 class="textleft">Top TOTW Performers</h3>
 
@@ -1495,12 +1796,11 @@
 
                                 </section> -->
 
-                        <!-- </section> -->
+                            </section>
 
-                        <!-- </section> -->
+                        </section>
 
-                        <!-- </article> -->
-                    </div>
+                    </article>
 
                     <!-- 5. Comparison Tab -->
                     <article class="nav-targets" id="comparison">
@@ -1587,11 +1887,6 @@
 
                                 </div>
 
-                                <!-- Add a div to hold the comparison explanation. -->
-                                <!-- <div class="comparison-explanation-section">
-                                    <span>The stats shown below are all time stats.</span>
-                                </div> -->
-
                                 <!-- Add a div to hold the player stats header. -->
                                 <div class="comparison-player-1-stats-container">
                                     <h4 class="center">Player 1 Stats</h4>
@@ -1641,6 +1936,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Appearance Icon.webp" alt="APP Icon"
                                             class="stat-icon white center" height="25px" width="25px">
 
+                                        <p id="comparison-APP-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-APP-player-2-value"> </div>
 
@@ -1672,6 +1969,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Minutes Icon.webp" alt="Minutes Icon"
                                             class="stat-icon white center" height="25px" width="25px">
 
+                                        <p id="comparison-M-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-M-player-2-value"> </div>
 
@@ -1700,6 +1999,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/MoM Icon.webp" alt="MoM Icon"
                                             class="stat-icon white center" height="25px" width="25px">
+
+                                        <p id="comparison-MOM-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MOM-player-2-value"> </div>
@@ -1730,6 +2031,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Goals Icon.webp" alt="Goals Icon"
                                             class="stat-icon white center" height="25px" width="25px">
 
+                                        <p id="comparison-G-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-G-player-2-value"> </div>
 
@@ -1758,6 +2061,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Assist Icon.webp" alt="Assist Icon"
                                             class="stat-icon white center" height="25px" width="25px">
+
+                                        <p id="comparison-A-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-A-player-2-value"> </div>
@@ -1788,6 +2093,8 @@
                                         <!-- Create the yellow card icon using CSS. -->
                                         <div id="yellow-card" class="stat-icon center card-icon"></div>
 
+                                        <p id="comparison-Y-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-Y-player-2-value"> </div>
 
@@ -1816,6 +2123,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <!-- Create the red card icon using CSS. -->
                                         <div id="red-card" class="stat-icon center card-icon"></div>
+
+                                        <p id="comparison-R-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-R-player-2-value"> </div>
@@ -1846,6 +2155,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Own Goal Icon.webp" alt="OG Icon"
                                             class="stat-icon center" height="25px" width="25px">
 
+                                        <p id="comparison-OG-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-OG-player-2-value"> </div>
 
@@ -1874,6 +2185,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Conceded Icon.webp" alt="Conceded Icon"
                                             class="stat-icon red center" height="25px" width="25px">
+
+                                        <p id="comparison-C-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-C-player-2-value"> </div>
@@ -1905,6 +2218,8 @@
                                             alt="Clean Sheet Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-CLS-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CLS-player-2-value"> </div>
 
@@ -1934,6 +2249,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Penalties Scored Icon.webp"
                                             alt="Penalties Scored Icon" class="stat-icon white center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-PSC-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PSC-player-2-value"> </div>
@@ -1965,6 +2282,8 @@
                                             alt="Penalties Missed Icon" class="stat-icon red center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-PM-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PM-player-2-value"> </div>
 
@@ -1994,6 +2313,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Penalties Conceded Icon.webp"
                                             alt="Penalties Conceded Icon" class="stat-icon red center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-PCO-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PCO-player-2-value"> </div>
@@ -2025,6 +2346,8 @@
                                             alt="Penalties Saved Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-PSV-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-PSV-player-2-value"> </div>
 
@@ -2055,6 +2378,8 @@
                                             alt="Fantasy Points Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-FTP-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-FTP-player-2-value"> </div>
 
@@ -2084,6 +2409,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/GperApp Icon.webp" alt="GperAPP Icon"
                                             class="stat-icon white center" height="25px" width="25px">
+
+                                        <p id="comparison-GperAPP-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-GperAPP-player-2-value"> </div>
@@ -2116,6 +2443,8 @@
                                         <img src="/pages/Dorkinians-Page/images/CperApp Icon.webp" alt="CperAPP Icon"
                                             class="stat-icon red center" height="25px" width="25px">
 
+                                        <p id="comparison-CperAPP-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-CperAPP-player-2-value"> </div>
 
@@ -2146,6 +2475,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/MperG Icon.webp" alt="MperG Icon"
                                             class="stat-icon white center" height="25px" width="25px">
+
+                                        <p id="comparison-MperG-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MperG-player-2-value"> </div>
@@ -2178,6 +2509,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Minutes Per Clean Sheet Icon.webp"
                                             alt="Minutes Per Clean Sheet Icon" class="stat-icon white center"
                                             height="25px" width="25px">
+
+                                        <p id="comparison-MperCLS-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MperCLS-player-2-value"> </div>
@@ -2212,6 +2545,8 @@
                                             alt="Fantasy Points Per Appearance Icon" class="stat-icon white center"
                                             height="25px" width="25px">
 
+                                        <p id="comparison-FTPperAPP-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-FTPperAPP-player-2-value"> </div>
 
@@ -2241,6 +2576,8 @@
                                         <!-- Add the icon for the stat. -->
                                         <img src="/pages/Dorkinians-Page/images/Distance Icon.webp" alt="Distance Icon"
                                             class="stat-icon white center" height="25px" width="25px">
+
+                                        <p id="comparison-DIST-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-DIST-player-2-value"> </div>
@@ -2275,6 +2612,8 @@
                                             alt="Games % Won Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-Games%Won-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-Games%Won-player-2-value"> </div>
 
@@ -2307,6 +2646,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Home Games Icon.webp"
                                             alt="Home Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-HomeGames-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-HomeGames-player-2-value"> </div>
@@ -2341,6 +2682,8 @@
                                             alt="Home Wins Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-HomeWins-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-HomeWins-player-2-value"> </div>
 
@@ -2373,6 +2716,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Home Games Percentage Icon.webp"
                                             alt="Home Games Win % Icon" class="stat-icon white center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-HomeGames%Won-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-HomeGames%Won-player-2-value"> </div>
@@ -2407,6 +2752,8 @@
                                             alt="Away Games Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-AwayGames-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-AwayGames-player-2-value"> </div>
 
@@ -2439,6 +2786,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Away Games Won Icon.webp"
                                             alt="Away Wins Icon" class="stat-icon white center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-AwayWins-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-AwayWins-player-2-value"> </div>
@@ -2473,6 +2822,8 @@
                                             alt="Away Games Win % Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-AwayGames%Won-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-AwayGames%Won-player-2-value"> </div>
 
@@ -2506,6 +2857,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Most Played For Team Icon.webp"
                                             alt="Most Played For Team Icon" class="stat-icon white center" height="25px"
                                             width="25px">
+
+                                        <p id="comparison-MostPlayedForTeam-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MostPlayedForTeam-player-2-value">
@@ -2542,6 +2895,8 @@
                                             alt="Most Scored For Team Icon" class="stat-icon white center" height="25px"
                                             width="25px">
 
+                                        <p id="comparison-MostScoredForTeam-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-MostScoredForTeam-player-2-value">
                                         </div>
@@ -2577,6 +2932,8 @@
                                             alt="Number Teams Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
 
+                                        <p id="comparison-NumberTeamsPlayedFor-short-text"></p>
+
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-NumberTeamsPlayedFor-player-2-value">
                                         </div>
@@ -2611,6 +2968,8 @@
                                         <img src="/pages/Dorkinians-Page/images/Number Seasons Played For Icon.webp"
                                             alt="Number Seasons Played For Icon" class="stat-icon white center"
                                             height="25px" width="25px">
+
+                                        <p id="comparison-NumberSeasonsPlayedFor-short-text"></p>
 
                                         <!-- Player 2 stat text loaded into here by jDorkiniansMain.js -->
                                         <div class="cell center" id="comparison-NumberSeasonsPlayedFor-player-2-value">
@@ -2675,7 +3034,8 @@
                                 <div id="lrep747153979" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+                                </div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '747153979'
                                 </script>
@@ -2693,7 +3053,8 @@
                                 <div id="lrep241472326" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '241472326'
                                 </script>
@@ -2711,7 +3072,8 @@
                                 <div id="lrep650285541" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '650285541'
                                 </script>
@@ -2729,7 +3091,8 @@
                                 <div id="lrep715891159" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '715891159'
                                 </script>
@@ -2757,7 +3120,8 @@
                                 <div id="lrep549908553" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '549908553'
                                 </script>
@@ -2775,7 +3139,8 @@
                                 <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '768016187'
                                 </script>
@@ -2793,7 +3158,8 @@
                                 <div id="lrep768016187" class="AFCTable">Data loading....<a rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '768016187'
                                 </script>
@@ -2823,7 +3189,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=513480600">click
                                         here for Premier</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a>
+                                </div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '381388329'
                                 </script>
@@ -2842,7 +3209,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=832226870">click
                                         here for Senior Two South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '709797986'
                                 </script>
@@ -2861,7 +3229,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=404112176">click
                                         here for One South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '266611945'
                                 </script>
@@ -2880,7 +3249,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=467368386">click
                                         here for Four South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '897042508'
                                 </script>
@@ -2910,7 +3280,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=683433004">click
                                         here for Six South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '201995739'
                                 </script>
@@ -2929,7 +3300,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '157121765'
                                 </script>
@@ -2948,7 +3320,8 @@
                                         rel="preconnect"
                                         href="https://fulltime-league.thefa.com/index.html?divisionseason=673114409">click
                                         here for Eight South</a><br /><br /><a
-                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+                                        href="http://www.thefa.com/FULL-TIME">FULL-TIME
+                                        Home</a></div>
                                 <script language="javascript" type="text/javascript">
                                     var lrcode = '506904509'
                                 </script>
@@ -2980,21 +3353,12 @@
     <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
     <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- New SnapTabs JavaScript -->
-    <script src="/pages/Dorkinians-Page/bundle.js" type="module" defer></script>
-
     <!-- Get the first PapaParse JS which isn't called immediately -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
     <!-- Get main page JS -->
-    <script src="/pages/Dorkinians-Page/jDorkiniansMain.min.js"></script>
-
-    <!-- Get side menu JS -->
-    <script src="/pages/Dorkinians-Page/sideMenu.min.js"></script>
-
-    <!-- Get weather widget JS -->
-    <script src="/pages/Dorkinians-Page/weatherWidget.min.js"></script>
+    <script src="/pages/Dorkinians-Page/jDorkiniansMain.js"></script>
 
 </body>
 

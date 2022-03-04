@@ -4,18 +4,18 @@
 
 /* File Layout */
 
-/* 1. Top level rules.
+/* Section 1. Top level rules.
 	1.1. All root variables.
 	1.2. HTML rules.
 	1.3. * rules.
 	1.4. body rules.
-2. All general rules.
+Section 2. All general rules.
 	2.1. Text styling.
 	2.2  Table styling.
 	2.3  Dropdown styling.
-3. Page layout (header/footer) specific rules.
-4. Tab layout rules.
-5. Media Queries
+Section 3. Page layout (header/footer) specific rules.
+Section 4. Tab layout rules.
+Section 5. Media Queries
 	5.1. Scaling rules.
 	5.2. Dark mode rules. */
 
@@ -341,7 +341,7 @@ td:hover {
 	border: 0.1rem solid var(--secondary-accent-colour, white);
 }
 /* Add row highlighting. */
-tr:hover {
+.column-highlight tr:hover {
 	font: bold;
 	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
@@ -352,7 +352,7 @@ td, th {
 	position: relative;
 }
 /* Column highlighting. Only on tables with class "column-highlight". */
-.column-highlight td:hover::after, th:hover::after {
+.column-highlight td:hover::after, .column-highlight th:hover::after {
 	background-color: var(--main-accent-colour, yellow); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--main-accent-colour-rgb), 0.2); /* Same colour with opacity. */
 	color: var(--secondary-accent-colour, white);
@@ -821,10 +821,15 @@ header {
 
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
-    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-    /* background-color: var(--main-background-colour, black); */
-	background-image: linear-gradient(60deg, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%);
+    /*background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+    background-color: var(--main-background-colour, black);
+	/* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	/* background-image: linear-gradient(100deg, #f44b13 10%, #ce641d 25%, #490bf3 50%, var(--main-background-colour) 75%, #236f38 95%); */
+	background-image: linear-gradient(120deg, #236f38 10%, var(--main-background-colour)35%, #490bf3 50%, #ce641d 65%, #f44b13 90%);
+	background-size: 250% 250%;
+	animation: gradient 30s ease infinite; /* https://1stwebdesigner.com/15-css-background-effects/ */
 	position: fixed;
+	min-height: 100%;
 	height: 100%;
 	width: 100%;
 	z-index: 100; /* loading-page */
@@ -838,6 +843,17 @@ header {
 	  "Title"
 	  "Phrases"
 	  "Count";
+}
+@keyframes gradient { /* https://1stwebdesigner.com/15-css-background-effects/ */
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .loading-page-container {
 	/* background-color: lightgreen; */
@@ -1117,8 +1133,8 @@ p+p {
 	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
 	max-height: 60%; /* At maximum, have the height at 60%. */
 	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
-	width: 95%;
-	
+	width: var(--pagewidth, 95%);
+
 	/* Style the pop up box. */
 	border: 0.125rem solid var(--secondary-accent-colour, white);
 	border-radius: var(--section-border-radius, 2rem);
@@ -1189,6 +1205,262 @@ p+p {
 	background-color: rgba(255, 255, 255, 0.50);
 	border-radius: 20px;
 	/* border: 3px solid orange; */
+}
+
+
+
+/* SideMenu Component styling */
+
+/* The css styling used for the side menu component. Side Menu is the full side menu that appears on click of the options icon. */
+
+#side-menu {
+	background: var(--main-background-colour, green);
+	/* background-color: lightblue; */
+	height: 100%;
+	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
+	position: fixed;
+	z-index: 20; /* Set the z index to be in front of other items. */
+	top: 0rem;
+	right: -0.1rem; /* Slightly position the side-menu off to the side to avoid seing the border. */
+	overflow-x: hidden;
+	transition: 0.5s;
+	/* padding-top: 3.75rem; */
+	border-left: solid 0.125rem var(--main-accent-colour, yellow);
+	display: inline;
+
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: max-content max-content;
+	gap: 0 0; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "TopContainer"
+	  "MainContainer";
+
+}
+#side-menu-top-container {
+	background: var(--main-background-colour, green);
+	/* background-color: darkcyan; */
+	grid-area: TopContainer;
+	/*position: relative; /* Fix the top container section so that it doesn't scroll within the side menu. */ 
+	
+	position: sticky; /* Sticky acts as static and becomes fixed when the top becomes 0. https://blog.webdevsimplified.com/2022-01/css-position/?fromNewsletter=true */ 
+	top: 0;
+	left: 0;
+	
+	/* top: 0rem; /* Lock the container to the top of the side menu. */
+	/* height: 6rem; */
+	height: 100px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
+	/* padding-top: 1rem; */
+	padding-top: 12px; /* Try adding height in fixed pixels instead of REM to keep header always visible. */
+	/*width: 80%; /* Set the width to be the same as the width of the open side menu. */
+	width: 100%;
+	display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+	z-index: 25; /* side-menu-top-container */
+}
+/* The x close button. */
+#side-menu-top-container #side-menu-close-button {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	top: 8px;  /* Try adding height in fixed pixels instead of REM to keep header always visible. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+#side-menu-close-button {
+	text-decoration: none;
+	z-index: 26; /* side-menu-close-button */
+}
+/* The side menu Dorkinians logo. */
+#side-menu-dorkinians-logo {
+	height: 80px;
+	z-index: 26; /* side-menu-dorkinians-logo */
+}
+/* Container holds all of the smaller icon and text containers. */
+#side-menu-main-container {
+	background: rgba(255, 255, 255, 0.10);
+	/* background-color: lightpink; */
+	padding: 1rem 0.5rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+	grid-area: MainContainer;
+    position: relative;
+	/*top: 7.5rem; /* Offset the main container below the top container. */
+	display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+	height: max-content;
+	width: 90%;
+	overflow-y: scroll;
+	margin: 0rem auto 5rem auto; /* Add an offset below the main container so all side menu options are available. */
+	z-index: 1; /* side-menu-main-container */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+	line-height: 1;
+}
+/* Style the text in the side menu. */
+#side-menu h3 {
+	color: var(--main-accent-colour, yellow);
+}
+#side-menu a, h4, p {
+	color: var(--secondary-accent-colour, white);
+	margin: auto 0rem;
+	padding: 0rem;
+}
+#side-menu p {
+	font-size: 0.8rem;
+}
+/* Style the header text in the side menu. */
+.side-menu-section-header {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	transition: 0.3s;
+	height: max-content;
+	padding-bottom: 0.5rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-family: 'Roboto', sans-serif;
+	margin: 0rem; /* Remove all older margins from the main page styling. */
+}
+/* Style the hyperlinks. */
+#side-menu a {
+	display: block;
+	transition: 0.3s;
+	margin-bottom: 1.25rem;
+	/* text-transform: uppercase; */
+	font-weight: 900;
+	font-family: 'Roboto', sans-serif;
+}
+#side-menu a:hover {
+	color: var(--main-accent-colour, yellow);
+	cursor: pointer;
+}
+/* Style the buttons in the side-menu. */
+.side-menu-button {
+	background: transparent; /* Transparent background. */
+	color: var(--secondary-accent-colour, white);
+	margin: 0 0.5rem;
+	border: 2px solid var(--main-accent-colour, yellow);
+	border-radius: 6px;
+	cursor: pointer;
+	text-decoration: none;      
+    text-transform: uppercase;
+	width: 2rem;
+	position: relative;
+}
+.side-menu-button:hover {
+	background-color: var(--main-accent-colour, yellow);
+	color: var(--main-background-colour, green);
+}
+#side-menu-button-change-font-size-increment {
+	margin-left: 0.5;
+}
+/* Style all side menu sections. */
+.side-menu-section {
+	width: 100%;
+	padding: 1.5rem 0rem 0rem 0rem; /* Add padding at the top of each section. */
+}
+/* Add a container to hold each menu icon. */
+.side-menu-icon-container {
+	/* background-color: lightgreen; */
+	height: 2rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+/* Add styling for the icons in the side menu. */
+.side-menu-icon {
+	height: 2rem;
+	filter: brightness(0) invert(1);
+	margin: 0 0.8rem 0 0.2rem; /* Add a margin either side of the icons. */
+}
+/* Add a container to hold each menu text. */
+.side-menu-text-container {
+	/* background-color: blueviolet; */
+	height: 2rem;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	padding: 0rem 0rem;
+}
+/* Style the site details section. */
+#side-menu-site-details-section {
+	/* background-color: red; */
+	position: relative;
+	width: 100%;
+	height: max-content;
+	padding: 0rem;
+	margin: 0rem;
+}
+#side-menu-site-details-grid-section {
+	/* background-color: purple; */
+	display: grid;
+	grid-template-columns: 1fr max-content; 
+	grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem;
+	gap: 0rem 0.2rem; /* First value is between rows, second columns. */
+	justify-items: stretch;
+	align-items: stretch;
+	justify-content: stretch;
+	align-content: stretch;
+}
+.side-menu-site-details-grid-container {
+	height: 1.5rem;
+	justify-self: start;
+	align-self: start;
+}
+/* Style the actions section. */
+#side-menu-actions-section {
+	/* background-color: green; */
+	position: relative;
+	width: 100%;
+}
+#side-menu-actions-section-grid {
+	display: grid;
+	grid-template-columns: max-content 1fr; 
+	grid-template-rows: 2rem 2rem;
+	gap: 0.5rem 0.2rem; /* First value is between rows, second columns. */
+}
+.side-menu-action-button-container {
+	display: grid;
+	grid-template-columns: 70% 15% 15%; 
+	grid-template-rows: 1fr;
+
+}
+/* Style the quick links section. */
+#side-menu-quick-links-section {
+	/* background-color: orange; */
+	position: relative;
+	width: 100%;
+}
+a > h4 {
+	margin-top: 0.5rem;
+}
+#side-menu-quick-links-section-grid {
+	display: grid;
+	grid-template-columns: max-content 1fr; 
+	grid-template-rows: 2rem 2rem;
+	gap: 0.5rem 0.2rem; /* First value is between rows, second columns. */
+}
+/* Style the additional section. */
+#side-menu-additional-section {
+	/* background-color: yellow; */
+	position: relative;
+	width: 100%;
+}
+.side-menu-additional-section-item-container {
+	/* background-color: blueviolet; */
+	height: 1rem;
+	width: 100%;
+	justify-content: center;
+	align-content: flex-start;
+	padding: 0.5rem 0rem;
+}
+/* Add a style to flip one of the icons. */
+.flip-image {
+	-webkit-transform: scaleX(-1);
+  	transform: scaleX(-1);
 }
 
 
@@ -1296,11 +1568,6 @@ Section 4
 	  "TotalClubAndTeamStats"
 	  "TeamSeasonResults"
 	  "AllClubResults";
-}
-
-/* Style the selection section at the top of the page. */
-#club-stats-team-season-results-selection {
-	/* background-color: pink; */
 }
 
 /* Whole Club Stats Section */
@@ -1412,22 +1679,22 @@ Section 4
 }
 
 /* This Season Stats */
-#player-stats-this-season-top-container {
-	/* background-color: greenyellow;	 */
-}
-.player-stats-this-season-stat-container {
-	/* background-color: violet; */
-}
+/* #player-stats-this-season-top-container {
+	background-color: greenyellow;	
+} */
+/* .player-stats-this-season-stat-container {
+	background-color: violet;
+} */
 /* Add a class just for the divs that hold the yellow and red cards. */
-.player-stats-this-season-stat-container div {
-	/* background-color: rgb(132, 130, 238); */
-}
-.player-stats-this-season-stat-container h5 {
-	/* background-color: red; */
-}
-.player-stats-this-season-stat-container img {
-	/* background-color: blue; */
-}
+/* .player-stats-this-season-stat-container div {
+	background-color: rgb(132, 130, 238);
+} */
+/* .player-stats-this-season-stat-container h5 {
+	background-color: red;
+} */
+/* .player-stats-this-season-stat-container img {
+	background-color: blue;
+} */
 
 
 /* Past Season Stats */
@@ -1436,45 +1703,303 @@ Section 4
 }
 
 /* All Time Stats */
-#player-stats-all-time-top-container {
-	/* background-color: lightblue; */
-}
+/* #player-stats-all-time-top-container {
+	background-color: lightblue;
+} */
 
 
 /* 4. Team of the Week Tab */
 
-#team-of-the-week-placement-holder-div { /* Remove when ready to show on the page. */
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
-#team-of-the-week {
-	visibility: hidden; /* Remove when ready to show on the page. */
-	display: none; /* Remove when ready to show on the page. */
-}
-
-.team-of-the-week-area {
+/* Top level section to hold all tab content. */
+#team-of-the-week-area {
 	/* background-color: violet; */
 	display: grid; 
 	grid-template-columns: 100%; 
 	grid-template-rows: max-content max-content max-content;
-	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
+	gap: 0.2rem 0.3rem; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "WeekSelection"
 	  "TeamOfTheWeek"
 	  "TopPerformers";
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
 }
-.totw-week-selection-container {
+
+/* Top selection section. */
+#totw-week-selection-container {
 	/* background-color: blue; */
 	grid-area: WeekSelection;
 	padding: 0.3rem;
 }
-.totw-team-of-the-week-container {
+#TOTW-season-selection-dropdown {
+	min-width: 60px;
+}
+#TOTW-week-selection-dropdown {
+	min-width: 12rem;
+}
+
+/* Team of the Week pitch container. */
+#totw-team-of-the-week-container {
 	/* background-color: yellow; */
 	grid-area: TeamOfTheWeek;
-	padding: 0.3rem;
+	/* padding: 0.3rem; */
+	padding-bottom: 0rem; /* Remove when id="totw-top-performers-container" re-added. */
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: max-content max-content;
+	gap: 1rem 0.3rem; /* First value is between rows, second columns. */
+	grid-template-areas: 
+	  "HeaderSummary"
+	  "Pitch";
 }
-.totw-top-performers-container {
+#team-of-the-week-header-summary {
+	/* background-color: blue; */
+	background-color: rgba(255,255,255,0.1);
+	padding: 0.3rem;
+	border-radius: var(--border-radius, 0.2rem);
+	grid-area: HeaderSummary;
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 140px;
+	gap: 0rem 0rem; /* First value is between rows, second columns. */
+}
+#team-of-the-week-header-summary-text {
+	/* background-color: green; */
+	text-align: center;
+	margin: 0 auto; /* Centrally align the text in the container. */
+}
+#totw-total-points {
+	font-size: 3rem;
+	padding-bottom: 1.2rem;
+}
+#totw-week-number-players {
+	font-size: 0.8rem;
+}
+#team-of-the-week-header-summary-star-man {
+	/* background-color: greenyellow; */
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+#team-of-the-week-pitch-area {
+	grid-area: Pitch;
+	position: relative;
+	margin: 0 auto; /* Center the whole pitch on the screen. */
+	width: 100%;
+	/* height: 520px; */
+	min-height: 250px;
+	height: max-content;
+	/* height: 100%; */
+
+	/* min-width: 820px; */
+    /* background-size: 420px 100%; */
+	background-size: 100% auto;
+	/* background-size: 500px 100%; */
+	background-image: url('https://fantasy.premierleague.com/static/media/pitch-bud.50582128.svg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center top;
+}
+
+/* Style the div holding the kit, name and points box. */
+.totw-player-div {
+	/* background-color: #ce641d; */
+	height: 80px;
+	width: 20%;
+	/* padding: 0px auto; */
+	position: absolute;
+	top: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.totw-player-div-player {
+	width: 20%;
+}
+
+/* Format the Dorkinians Kit image. */
+.totw-dorkinians-kit {
+	position: relative;
+	top: 0;
+	/* width: 40%;
+	height: auto; */
+	margin: 0 auto 4px auto;
+	/* width: auto; */
+}
+.totw-dorkinians-kit-player {
+	width: 40%;
+	height: auto
+}
+.totw-dorkinians-kit-star-man {
+	height: 100px;
+}
+
+/* Format the boxes below the kit. */
+.totw-player-box {
+	position: relative;
+	/* top: -28%; */
+	/* left: 4%; */
+	height: max-content;
+	min-height: 1rem;
+	width: max-content;
+	padding: 3px;
+	color: white;
+	text-align: center;
+	white-space: nowrap;
+}
+/* Format the players name box below the kit. */
+.totw-player-name-box {
+	background-color: #00753A;
+	min-width: 65px;
+	font-size: 0.7rem;
+}
+/* Format the players name box below the kit. */
+.totw-player-points-box {
+	background-color: #00FF87;
+	color: black;
+	min-width: 65px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 0.6rem;
+}
+
+/* Format Star Man slightly differently. */
+.totw-player-div-star-man {
+	padding-top: 10px;
+	width: 60px;
+	position: relative;
+}
+.totw-player-box-star-man {
+	position: relative;
+	/* top: -28%; */
+	/* left: 4%; */
+	height: max-content;
+	min-height: 1rem;
+	width: max-content;
+	min-width: 100px;
+	padding: 3px;
+	color: white;
+	text-align: center;
+	white-space: nowrap;
+}
+#totw-player-pos-star-man-name {
+	background-color: #00753A;
+	font-size: 0.8rem;
+}
+#totw-player-pos-star-man-points {
+	background-color: #00FF87;
+	color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 0.7rem;
+}
+
+
+/* TOTW Player Info Pop Up Box */
+
+#totw-player-info-box {
+	
+	/* Change the below property on/off to hide/show the totw-player-info box. */
+	/* display: none !important; */
+
+	background: var(--main-background-colour, green);
+	
+	/* Set the position of the box to be bang in the center of the screen. */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 30; /* pop-up-box. Have the totw-player-info in front of all other items on the page. */
+
+	/* Control and set the size of the box based on the content. */
+	min-height: 20%; /* At minimum, have the height at 20%. By default, this is the size of the box. */
+	max-height: 60%; /* At maximum, have the height at 60%. */
+	overflow: scroll; /* Allow the user to scroll through any displayed text that is too long. */
+	width: var(--pagewidth, 95%);
+	
+	/* Style the totw-player-info box. */
+	border: 0.125rem solid var(--secondary-accent-colour, white);
+	border-radius: var(--section-border-radius, 2rem);
+	padding: 0.7rem; /* Add internal padding to the totw-player-info box. */
+}
+/* Style the text in the totw-player-info box. */
+#totw-player-info-box a, h3, p, span {
+	color: var(--secondary-accent-colour, var(--secondary-accent-colour, white));
+}
+/* The x close button. */
+#totw-player-info-box #totw-player-info-box-close-button {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+#totw-player-info-box-container {
+	/* background: #490bf3; */
+	height: 100%;
+	width: 100%;
+	display: grid; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 1.5rem 1fr;
+	gap: 0 0; /* First value is between rows, second columns. */
+}
+#totw-player-info-box-header-text {
+	/* background: red; */
+	height: 1.5rem;
+}
+#totw-player-info-box-header-container h3 {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+#totw-player-info-box-result {
+	/* background: green; */
+	position: relative;
+	height: max-content;
+	width: 100%;
+	font-size: 0.7rem;
+	padding: 0.8rem;
+}
+
+/* Format the table in the pop up. */
+#totw-player-info-box-gameweek-table {
+	border-radius: none;
+	border-collapse: collapse;
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
+}
+/* Format the table headers. */
+#totw-player-info-box-gameweek-table th {
+	box-shadow: inset 0rem 0rem 0rem var(--main-accent-colour, yellow), inset 0rem -0.25rem 0rem var(--main-accent-colour, yellow); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
+	font-style: bold; /* Make the header text bold */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root (html) value. */
+	text-align: center; /* By default, center all table text. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
+	height: 2rem;
+	background: rgba(255, 255, 255, 0.10);
+}
+/* Format the table cells. */
+#totw-player-info-box-gameweek-table td {
+	padding: 0.5rem; /* Add padding within the table cells to give the table space. */
+}
+/* Add a top border radius to the last row. (https://stackoverflow.com/a/4094151/14290169). */
+#totw-player-info-box-gameweek-table tr:last-child {
+	box-shadow: inset 0rem 0.2rem 0rem var(--secondary-accent-colour, white); /* Add a box-shadow as a top border. */
+	font-weight: bold;
+	z-index: 2;
+}
+
+#totw-player-info-box-season-details {
+	/* background: blue; */
+	padding-top: 2rem;
+}
+
+#totw-top-performers-container {
 	/* background-color: red; */
 	grid-area: TopPerformers;
 	padding: 0.3rem;
@@ -1487,13 +2012,13 @@ Section 4
 /* Style the full holding comparison div. */ 
 .comparison-area {
 	/* background-color: violet; */
+	width: 100%;
 	display: grid;
 	grid-template-columns: 45% 6% 45%; 
 	grid-template-rows: 2rem 1rem 1.2rem max-content; /* Repeat the same height row x number of times. */
-	gap: 1rem 2%; /* First value is between rows, second columns. */
+	gap: 1rem 1%; /* First value is between rows, second columns. */
 	grid-template-areas: 
 	  "PlayerSelection1 Blank PlayerSelection2"
-	  /* "Explanation Explanation Explanation" */
 	  "Player1Stats Blank Player2Stats"
 	  "StatCategorySelection StatCategorySelection StatCategorySelection"
 	  "ComparisonStatsTable ComparisonStatsTable ComparisonStatsTable";
@@ -1528,13 +2053,6 @@ Section 4
 	min-width: 13rem !important;
 	float: right;
 }
-/* Style the explanation section. */
-/* .comparison-explanation-section {
-	background-color: orange;
-	grid-area: Explanation;
-	padding: 0.3rem;
-	width: 100%;
-} */
 .comparison-player-1-stats-container {
 	/* background-color: yellow; */
 	grid-area: Player1Stats;
@@ -1568,9 +2086,14 @@ Section 4
 	display: grid;
 	/* flex-flow: column wrap; */
 	width: 100%;
-	grid-template-columns: 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
+	grid-template-columns: 3fr minmax(4rem, 1fr) minmax(28px, 0.5fr) 15% minmax(4rem, 1fr) 3fr; /* 5 columns of varying width. */
 	grid-template-rows: 1.5rem; /* One row height. */
 	/*gap: 0.5rem 0.3rem; /* First value is between rows, second columns. */
+}
+/* Style the explanation font on the left of the comparison tab. */
+.comparison-stats-table-row-container p {
+	font-size: 0.6rem;
+	align-self: center; /* Vertically align the text to the center point of the row container. */
 }
 div.cell {
 	/* background: LightBlue; */
@@ -1685,91 +2208,347 @@ Section 5
 	812 pixels (iPhone X landscape)
 	1024 pixels (iPad landscape) */
 
-	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-		/* background: blue; */
+	@media only screen and (min-device-width: 320px) and (max-device-width: 360px) {
+		/* Narrow Smartphones */
 		:root {
+			/* background: lightblue; */
+			/* --headerHeight: 2.8rem; Define the header height variable. */
+			--pagewidth: 98%; /* Used for controlling the width of items on each page */
+		}
+
+		/* Team Of The Week Tab */
+		/* Season selection dropdown. */
+		#TOTW-season-selection-dropdown {
+			min-width: 80px;
+		}
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 340px; /* Format the height of the TOTW pitch container. */
+			background-size: 170% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			max-width: 40px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.6rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+	
+	@media only screen and (min-device-width: 360px) and (max-device-width: 420px) {
+		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+		:root {
+			/* background: blue; */
 			/* --headerHeight: 2.8rem; Define the header height variable. */
 			--pagewidth: 96%; /* Used for controlling the width of items on each page */
 		}
-		/* .comparison-stats-table {
-			width: 100%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* Season selection dropdown. */
+		#TOTW-season-selection-dropdown {
+			min-width: 90px;
+		}
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 340px; /* Format the height of the TOTW pitch container. */
+			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 63px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.6rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+
+	@media only screen and (min-device-width: 420px) and (max-device-width: 480px) {
+		/* Slightly Wider Smartphones */
+		:root {
+			/* background: darkblue; */
+			/* --headerHeight: 2.8rem; Define the header height variable. */
+			--pagewidth: 96%; /* Used for controlling the width of items on each page */
+		}
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 400px; /* Format the height of the TOTW pitch container. */
+			background-size: 160% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 63px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.6rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.5rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
-	@media only screen and (min-width: 480px) and (max-width: 768px) {
-		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: green; */
+	@media only screen and (min-width: 480px) and (max-width: 620px) {
+		/* Smaller Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 		:root {
+			/* background: lightgreen; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 95%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 95%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 460px; /* Format the height of the TOTW pitch container. */
+			background-size: 150% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 75px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.7rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.6rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
+	}
+
+	@media only screen and (min-width: 620px) and (max-width: 768px) {
+		/* Larger Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		:root {
+			/* background: darkgreen; */
+			/* --headerHeight: 4rem; Define the header height variable. */
+			--pagewidth: 95%; /* Used for controlling the width of items on each page */
+		}
+		html {
+			font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
+		}
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 480px; /* Format the height of the TOTW pitch container. */
+			background-size: 120% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 85px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 		/* Covers iPads and other tablets. */
-		/* background: orange; */
 		:root {
+			/* background: orange; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 95%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 100px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
 		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: cyan; */
 		:root {
+			/* background: cyan; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
 			font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 90%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 110px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1224px) {
 		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-		/* background: red; */
 		:root {
+			/* background: red; */
 			/* --headerHeight: 4rem; Define the header height variable. */
 			--pagewidth: 80%; /* Used for controlling the width of items on each page */
 		}
 		html {
-			font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
+			font-size: 28px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 90%;
-		} */
+
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			width: 70%; /* Format the width of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 120px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	@media only screen and (min-width: 1824px) {
 		/* Desktops and Laptops - For larger monitors and displays. */
-		/* background: yellow; */
 		:root {
+			/* background: purple; */
 			/* --headerHeight: 4rem; Define the header height variable. */
-			--pagewidth: 80%; /* Used for controlling the width of items on each page */
+			--pagewidth: 70%; /* Used for controlling the width of items on each page */
 		}
 		html {
-			font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
+			font-size: 30px; /* Add a top level font size that all other CSS is relative to. */
 		}
-		/* .comparison-stats-table {
-			width: 85%;
-		} */
+		
+		/* Team Of The Week Tab */
+		/* TOTW Pitch Container. */
+		#team-of-the-week-pitch-area {
+			height: 600px; /* Format the height of the TOTW pitch container. */
+			width: 60%; /* Format the width of the TOTW pitch container. */
+			background-size: 140% auto; /* Format how much of the background the pitch SVG fills. */ 
+		}
+		/* Format the boxes below the kit. */
+		.totw-player-box {
+			width: fit-content;
+			min-width: 120px;
+		}
+		/* Format the players name box below the kit. */
+		.totw-player-name-box {
+			font-size: 0.8rem;
+		}
+		/* Format the players point box below the kit. */
+		.totw-player-points-box {
+			font-size: 0.7rem;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		/* Format the star man text boxes. */
+		.totw-player-box-star-man {
+			min-width: 110px;
+		}
 	}
 	
 	/* Add a set up for media devices with preference for dark mode. */
