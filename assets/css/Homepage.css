@@ -1,12 +1,16 @@
 /* Homepage Styling Guide. */
 
+
 /* An added homepage css style file. */
+
 
 /* CSS Best Coding Practice
 	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
 */
 
+
 /*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
 
 /* :root {
 
@@ -16,48 +20,50 @@
 /* A top container for the quick links. */
 
 #QuickLinks-container {
-	/* background-color: blue; */
-	/* background-color: rgba(255,255,255,0.05); */
-	min-width: 300px;
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	padding: 0px 20px 40px 20px;
-	margin: 0px auto 20px auto;
+    /* background-color: blue; */
+    /* background-color: rgba(255,255,255,0.05); */
+    min-width: 300px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 40px 20px;
+    margin: 0px auto 20px auto;
 }
 
 
 /* main-link-container holds the three columns of links. */
 
 .main-link-container {
-	/* background-color: red; */
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 0px auto 2em auto;
-	flex-wrap: wrap;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px auto 2em auto;
+    flex-wrap: wrap;
 }
+
 
 /* column-link-container holds the rows of links. */
 
 .column-link-container {
-	/* background-color: blue; */
-	background-color: rgba(255,255,255,0.05);
-	min-width: 300px;
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	padding: 0px 20px 40px 20px;
-	margin: 0px auto 20px auto;
+    /* background-color: blue; */
+    background-color: rgba(255, 255, 255, 0.05);
+    min-width: 300px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 40px 20px;
+    margin: 0px auto 20px auto;
 }
 
 .center {
-	text-align: center;
+    text-align: center;
 }
+
 
 /* Add a small offset for the hyperlinked anchors. */
 
 .offset {
-	margin-left: 1em;
+    margin-left: 1em;
 }
