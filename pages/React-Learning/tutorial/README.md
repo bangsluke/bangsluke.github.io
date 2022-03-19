@@ -1,3 +1,11 @@
+# Hosting
+
+Note: This tutorial site is hosted on Netlify at;
+
+[https://react-tutorial-bangsluke.netlify.app/](https://react-tutorial-bangsluke.netlify.app/)
+
+# Create React App Details
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
