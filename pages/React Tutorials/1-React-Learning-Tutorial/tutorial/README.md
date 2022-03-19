@@ -2,7 +2,7 @@
 
 Note: This tutorial site is hosted on Netlify at;
 
-[https://react-tutorial-bangsluke.netlify.app/](https://react-tutorial-bangsluke.netlify.app/)
+[https://1-react-learning-tutorial.netlify.app/](https://1-react-learning-tutorial.netlify.app/)
 
 # Create React App Details
 
