@@ -118,12 +118,12 @@ body {
 
 a { text-decoration: none; }
 
-li { list-style: none; }
+li {
+  list-style: none;
+}
 
-img, ion-icon, a, button, time, span { display: block; }
-
-#profilePicture {
-    border-radius: 100%;
+img, ion-icon, a, button, time, span {
+  display: block;
 }
 
 button {
@@ -293,8 +293,6 @@ main {
 
 
 
-
-
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
@@ -316,9 +314,15 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+/* Style the profile picture. */
+#profilePicture {
+    border-radius: 100%;
+    padding: 0.2em;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+}
+#profilePicture:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #ff6382;
 }
 
 .info-content .name {
@@ -751,14 +755,16 @@ main {
   #RESUME
 \*-----------------------------------*/
 
-.article-title { margin-bottom: 30px; }
+.article-title {
+  margin-bottom: 30px;
+}
 
 
-/**
- * education and experience 
- */
+/* Education and experience */
 
-.timeline { margin-bottom: 30px; }
+.timeline {
+  margin-bottom: 30px;
+}
 
 .timeline .title-wrapper {
   display: flex;
@@ -766,6 +772,8 @@ main {
   gap: 15px;
   margin-bottom: 25px;
 }
+
+/* Format the li items. */
 
 .timeline-list {
   font-size: var(--fs-6);
@@ -798,6 +806,8 @@ main {
   background: var(--jet);
 }
 
+
+/* Format the bullet stop next to each list item. */
 .timeline-item::after {
   content: "";
   position: absolute;
@@ -808,7 +818,19 @@ main {
   background: var(--text-gradient-yellow);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
+
+/* Add an animation to the bullet points to make them pulse. */
+@keyframes pulse {
+  0%   {box-shadow: 0 0 0 0px var(--jet)}
+  50%  {box-shadow: 0 0 0 4px var(--jet)}
+  100% {box-shadow: 0 0 0 0px var(--jet)}
+}
+
 
 .timeline-text {
   color: var(--light-gray);
