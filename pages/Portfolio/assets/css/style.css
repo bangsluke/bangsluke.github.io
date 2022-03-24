@@ -745,6 +745,15 @@ article.active {
   width: 20px;
 }
 
+/* About Article Media Queries */
+
+@media (min-width: 450px) {
+  /* Responsive larger than 450px screen */
+  .clients-item {
+    min-width: calc(33.33% - 10px);
+  }
+}
+
 /* Resume Article */
 
 /* Skills Section */
@@ -768,10 +777,6 @@ article.active {
   border-radius: inherit;
   z-index: -1;
 }
-
-/*-----------------------------------*\
-  #RESUME
-\*-----------------------------------*/
 
 .article-title {
   margin-bottom: 30px;
@@ -903,19 +908,18 @@ article.active {
   border-radius: inherit;
 }
 
-/*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
+/* Portfolio Article */
 
+/* Style the top filter section. */
+
+/* Hide the filter list for mobile. */
 .filter-list {
   display: none;
 }
-
 .filter-select-box {
   position: relative;
   margin-bottom: 25px;
 }
-
 .filter-select {
   background: var(--eerie-black-2);
   color: var(--light-gray);
@@ -929,7 +933,6 @@ article.active {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
-
 .filter-select.active .select-icon {
   transform: rotate(0.5turn);
 }
@@ -977,10 +980,12 @@ article.active {
   margin-bottom: 10px;
 }
 
+/* Initially style the project-items not to show. */
 .project-item {
   display: none;
 }
 
+/* Only show the project-item with active status. */
 .project-item.active {
   display: block;
   animation: scaleUp 0.25s ease forwards;
@@ -1080,9 +1085,9 @@ article.active {
   font-weight: var(--fw-300);
 }
 
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
+/* Contact Article */
+
+/* Style the mapbox section */
 
 .mapbox {
   position: relative;
@@ -1105,12 +1110,6 @@ article.active {
   filter: grayscale(1) invert(1);
 }
 
-.contact-form {
-  margin-bottom: 10px;
-}
-
-/* Contact Article */
-
 .contact-me-section {
   white-space: nowrap;
   display: inline-block;
@@ -1123,6 +1122,12 @@ article.active {
 
 .contact-email {
   font-style: bold;
+}
+
+/* Form Section */
+
+.contact-form {
+  margin-bottom: 10px;
 }
 
 .form-title {
@@ -1235,10 +1240,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * client
    */
-
-  .clients-item {
-    min-width: calc(33.33% - 10px);
-  }
 
   /**
    * #PORTFOLIO
