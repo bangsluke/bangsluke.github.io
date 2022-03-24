@@ -24,12 +24,10 @@
   <body>
     <main>
       <!-- Sidebar -->
-
       <aside class="sidebar" data-sidebar>
         <div class="sidebar-info">
+          <!-- Add my profile picture. -->
           <figure class="avatar-box">
-            <!-- <img src="/images/OnlineProfilePicture.png" alt="Luke Bangs" width="80"> -->
-
             <img
               id="profilePicture"
               src="/images/OnlineProfilePicture.png"
@@ -38,22 +36,26 @@
             />
           </figure>
 
+          <!-- Add my name and title below my image. -->
           <div class="info-content">
             <h1 class="name" title="Luke Bangs">Luke Bangs</h1>
-
             <p class="title">Web developer</p>
           </div>
 
+          <!-- Add a show contacts button for when in mobile mode. -->
           <button class="info_more-btn" data-sidebar-btn>
             <span>Show Contacts</span>
-
             <ion-icon name="chevron-down"></ion-icon>
           </button>
         </div>
 
         <div class="sidebar-info_more">
+          <!-- Add a line separator across the div. -->
           <div class="separator"></div>
 
+          <!-- Add various contact details. -->
+
+          <!-- Email Address -->
           <ul class="contacts-list">
             <li class="contact-item">
               <div class="icon-box">
@@ -67,6 +69,7 @@
               </div>
             </li>
 
+            <!-- Phone Number -->
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="phone-portrait-outline"></ion-icon>
@@ -79,6 +82,7 @@
               </div>
             </li>
 
+            <!-- Birthday -->
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="calendar-outline"></ion-icon>
@@ -89,6 +93,7 @@
               </div>
             </li>
 
+            <!-- Location -->
             <li class="contact-item">
               <div class="icon-box">
                 <ion-icon name="location-outline"></ion-icon>
@@ -100,8 +105,10 @@
             </li>
           </ul>
 
+          <!-- Add a line separator across the div. -->
           <div class="separator"></div>
 
+          <!-- Add some contact icons with further methods of contact. -->
           <ul class="social-list">
             <li class="social-item">
               <a href="https://twitter.com/bangsluke" class="social-link">
@@ -128,10 +135,8 @@
       </aside>
 
       <!-- Main-content -->
-
       <div class="main-content">
         <!-- Navigation Bar -->
-
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
@@ -152,13 +157,13 @@
           </ul>
         </nav>
 
-        <!-- About -->
-
+        <!-- About (About Me) -->
         <article class="about active" data-page="about">
           <header>
             <h2 class="h2 article-title">About me</h2>
           </header>
 
+          <!-- Top About Me text -->
           <section class="about-text">
             <p>
               I am a new developer, just starting out on my development path
@@ -184,8 +189,7 @@
             </p>
           </section>
 
-          <!-- Service -->
-
+          <!-- What I'm Doing -->
           <section class="service">
             <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -244,7 +248,7 @@
           </section>
 
           <!-- Testimonials -->
-
+          <!-- Removed for now. -->
           <section class="testimonials">
             <!-- <h3 class="h3 testimonials-title">Testimonials</h3>
 
@@ -295,7 +299,6 @@
           </section>
 
           <!-- Testimonials Modal -->
-
           <div class="modal-container" data-modal-container>
             <!-- <div class="overlay" data-overlay></div>
 
@@ -335,7 +338,6 @@
           </div>
 
           <!-- Clients -->
-
           <section class="clients">
             <h3 class="h3 clients-title">Clients</h3>
 
@@ -371,7 +373,6 @@
         </article>
 
         <!-- Resume -->
-
         <article class="resume" data-page="resume">
           <header>
             <h2 class="h2 article-title">Resume</h2>
@@ -545,79 +546,92 @@
         </article>
 
         <!-- Portfolio -->
-
         <article class="portfolio" data-page="portfolio">
           <header>
             <h2 class="h2 article-title">Portfolio</h2>
           </header>
 
           <section class="projects">
+            <!-- Create an unordered list of options to filter the Portfolio. -->
             <ul class="filter-list">
+              <!-- Create an all button. -->
               <li class="filter-item">
                 <button class="active" data-filter-btn>All</button>
               </li>
 
+              <!-- Create a Personal Designs button. -->
               <li class="filter-item">
                 <button data-filter-btn>Personal Designs</button>
               </li>
 
+              <!-- Create a Work Items button. -->
               <li class="filter-item">
                 <button data-filter-btn>Work Items</button>
               </li>
 
+              <!-- Create a References button. -->
               <li class="filter-item">
                 <button data-filter-btn>References</button>
               </li>
             </ul>
 
+            <!-- Create the same list options but in a select box for mobile. -->
             <div class="filter-select-box">
+              <!-- Create the select box. -->
               <button class="filter-select" data-select>
-                <div class="select-value" data-selecct-value>
+                <div class="select-value" data-select-value>
                   Select category
                 </div>
-
                 <div class="select-icon">
                   <ion-icon name="chevron-down"></ion-icon>
                 </div>
               </button>
 
+              <!-- Create an unordered list of options to filter the Portfolio. -->
               <ul class="select-list">
+                <!-- Create an all button. -->
                 <li class="select-item">
                   <button data-select-item>All</button>
                 </li>
 
+                <!-- Create a Personal Designs button. -->
                 <li class="select-item">
                   <button data-select-item>Personal Designs</button>
                 </li>
 
+                <!-- Create a Work Items button. -->
                 <li class="select-item">
                   <button data-select-item>Work Items</button>
                 </li>
 
+                <!-- Create a References button. -->
                 <li class="select-item">
                   <button data-select-item>References</button>
                 </li>
               </ul>
             </div>
 
-            <h2 style="color: red">To Do</h2>
-            <p style="color: red">Get the filter to work.</p>
-            <p style="color: red">
-              Make the eye icon open a larger version of the image.
-            </p>
-            <p style="color: red">
-              Align the size of all images so they're bigger.
-            </p>
-            <p style="color: red">
-              Move the hyperlink on the images to a new icon to allow the user
-              to follow the link.
-            </p>
-            <p style="color: red">
-              Add a third icon with a pop up of text to explain what the page is
-              about/why I did it.
-            </p>
+            <div>
+              <!-- <h2 style="color: red">To Do</h2>
+              <p style="color: red">
+                Make the eye icon open a larger version of the image.
+              </p>
+              <p style="color: red">
+                Align the size of all images so they're bigger.
+              </p>
+              <p style="color: red">
+                Move the hyperlink on the images to a new icon to allow the user
+                to follow the link.
+              </p>
+              <p style="color: red">
+                Add a third icon with a pop up of text to explain what the page
+                is about/why I did it.
+              </p> -->
+            </div>
 
+            <!-- Create the list of project portfolio cards. -->
             <ul class="project-list">
+              <!-- Add all the list items below. -->
               <li
                 class="project-item active"
                 data-filter-item
@@ -864,12 +878,12 @@
         </article>
 
         <!-- Contact -->
-
         <article class="contact" data-page="contact">
           <header>
             <h2 class="h2 article-title">Contact</h2>
           </header>
 
+          <!-- Add an iframe holding a map to Chelmsford. -->
           <section class="mapbox" data-mapbox>
             <figure>
               <iframe
@@ -881,38 +895,58 @@
             </figure>
           </section>
 
+          <!-- Add a section of how best to contact me. -->
           <section class="contact-form">
             <h3 class="h3 form-title">Contact Me</h3>
 
-            <span>
-              <h4 class="h4">
-                Contact me by email at
-                <a href="mailto:bangsluke@gmail.com" class="contact-link"
-                  >bangsluke@gmail.com</a
-                >
-              </h4>
-            </span>
+            <div class="contact-me-section">
+              <p class="contact-text">
+                The best way to contact me is by email at
+              </p>
+              <a href="mailto:bangsluke@gmail.com" class="contact-email"
+                >bangsluke@gmail.com</a
+              >
+            </div>
           </section>
 
+          <!-- Hide the contact form until I know how to make it work. -->
           <section class="contact-form">
             <!-- <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form> -->
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form> -->
           </section>
         </article>
       </div>
@@ -921,7 +955,7 @@
     <!-- Custom JS link -->
     <script src="./assets/js/script.min.js"></script>
 
-    <!-- ionicon link -->
+    <!-- Import ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
