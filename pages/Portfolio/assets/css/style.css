@@ -1,6 +1,6 @@
-/**
- * copyright 2022 @codewithsadee
- */
+/* Style.css */
+
+/* Top Level Styling */
 
 /* All root variables and styles. */
 
@@ -163,6 +163,27 @@ textarea {
   outline-color: var(--orange-yellow-crayola);
 }
 
+/* Top Level Styling Media Queries */
+
+@media (min-width: 580px) {
+  /* Responsive larger than 580px screen */
+  :root {
+    /* Typography */
+    --fs-1: 32px;
+    --fs-2: 24px;
+    --fs-3: 26px;
+    --fs-4: 18px;
+    --fs-6: 15px;
+    --fs-7: 15px;
+    --fs-8: 12px;
+  }
+
+  main {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
 /* Font Styling */
 
 /* Define the colours of all headers and capitalise the first letter of each word. */
@@ -206,6 +227,8 @@ textarea {
   border-radius: 3px;
 }
 
+/* Article Styling */
+
 /* Format the large sections used for the sidebar and the articles. */
 .sidebar,
 article {
@@ -235,6 +258,26 @@ article.active {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Article Styling Media Queries */
+
+@media (min-width: 580px) {
+  /* Responsive larger than 580px screen */
+  .sidebar,
+  article {
+    width: 520px;
+    margin-inline: auto;
+    padding: 30px;
+  }
+  .article-title {
+    font-weight: var(--fw-600);
+    padding-bottom: 15px;
+  }
+  .article-title::after {
+    width: 40px;
+    height: 5px;
   }
 }
 
@@ -427,6 +470,16 @@ article.active {
 /* Style how thick the line stroke on the icons are. */
 .icon-box ion-icon {
   --ionicon-stroke-width: 35px;
+}
+
+@media (min-width: 580px) {
+  /* Responsive larger than 580px screen */
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
 }
 
 /* Navbar Styling */
@@ -1085,6 +1138,15 @@ article.active {
   font-weight: var(--fw-300);
 }
 
+/* Portfolio Article Media Queries */
+
+@media (min-width: 450px) {
+  /* Responsive larger than 450px screen */
+  .project-img {
+    height: auto;
+  }
+}
+
 /* Contact Article */
 
 /* Style the mapbox section */
@@ -1233,24 +1295,6 @@ textarea.form-input::-webkit-resizer {
 \*-----------------------------------*/
 
 /**
- * responsive larger than 450px screen
- */
-
-@media (min-width: 450px) {
-  /**
-   * client
-   */
-
-  /**
-   * #PORTFOLIO
-   */
-
-  .project-img {
-    height: auto;
-  }
-}
-
-/**
  * responsive larger than 580px screen
  */
 
@@ -1258,57 +1302,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * CUSTOM PROPERTY
    */
-
-  :root {
-    /**
-     * typography
-     */
-
-    --fs-1: 32px;
-    --fs-2: 24px;
-    --fs-3: 26px;
-    --fs-4: 18px;
-    --fs-6: 15px;
-    --fs-7: 15px;
-    --fs-8: 12px;
-  }
-
-  /**
-   * #REUSED STYLE
-   */
-
-  .sidebar,
-  article {
-    width: 520px;
-    margin-inline: auto;
-    padding: 30px;
-  }
-
-  .article-title {
-    font-weight: var(--fw-600);
-    padding-bottom: 15px;
-  }
-
-  .article-title::after {
-    width: 40px;
-    height: 5px;
-  }
-
-  .icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    font-size: 18px;
-  }
-
-  /**
-   * #MAIN
-   */
-
-  main {
-    margin-top: 60px;
-    margin-bottom: 100px;
-  }
 
   /**
    * #SIDEBAR
