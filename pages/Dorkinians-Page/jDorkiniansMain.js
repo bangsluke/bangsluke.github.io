@@ -402,14 +402,6 @@ const statObject = {
   },
 };
 
-// Globally define an object containing all awards and historical captains that can be referenced in other functions.
-const awardsObject = {
-  AlanLambertSportsmanshipAward: {
-    "2005/06": "John Bullock",
-    "2006/07": "James Bray",
-  },
-};
-
 // Google Sheet Links
 
 // Site Details
@@ -580,6 +572,25 @@ function init() {
     fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
     complete: getHomepageTabCaptainsAndAwardsInfo, // The callback to execute when parsing is complete.
   });
+
+  // Globally define an object containing all awards and historical captains that can be referenced in other functions.
+  const awardsObject = {
+    AlanLambertSportsmanshipAward: {
+      "2005/06": "John Bullock",
+      "2006/07": "James Bray",
+    },
+    AlanLambertSportsmanshipAward: {
+      "2005/06": "John Bullock",
+      "2006/07": "James Bray",
+    },
+  };
+
+  console.log("hello");
+  for (var TrophyName in awardsObject) {
+    for (var Season in awardsObject[TrophyName]) {
+      console.log(awardsObject.TrophyName + awardsObject[TrophyName][Season]);
+    }
+  }
 
   // Step 2.
   // Club Stats Tab.
