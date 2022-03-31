@@ -396,26 +396,22 @@ const statObject = {
 
 // Site Details
 const siteDetailsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1978614347&single=true&output=csv';
-// Checked!
 var displaySiteDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Homepage Tab
 
 // Next Fixtures
 const nextFixturesSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=267145747&single=true&output=csv';
-// Checked!
 var displayNextFixturesArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Captains and Awards
 const captainsAndAwardsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1483872425&single=true&output=csv';
-// Checked!
 var displayCaptainsAndAwardsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Club Stats Tab
 
 // Total Club Stats
 const totalClubStatsSheetURLCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1673925166&single=true&output=csv';
-// Checked!
 var displayTotalClubStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Team Season Results
@@ -425,19 +421,12 @@ var displayTeamSeasonResultsArrayOfObjects = ""; // Define an initially blank ar
 
 // Player Stats Tab
 
-// Player Selection
-const displayAllowedPlayersSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=0&single=true&output=csv';
-// Checked!
-var displayAllowedPlayersArrayOfObjects = ""; // Define an initially blank array to be populated later.
-
 // This Season Stats
 const displayThisSeasonStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=1147882021&single=true&output=csv';
-// Checked!
 var displayThisSeasonStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // All Time Stats
 const displayAllTimeStatsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=978685299&single=true&output=csv';
-// Checked!
 var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 
 // Fixtures List Tab
@@ -451,10 +440,8 @@ var displayAllTimeStatsArrayOfObjects = ""; // Define an initially blank array t
 
 // TOTW Players
 const displayTOTWSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=2004273327&single=true&output=csv';
-// Checked!
 var displayTOTWArrayOfObjects = ""; // Define an initially blank array to be populated later.
 const displayMatchDetailsSheetCSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQTt-X1FYq4s0zvVk8zMR2026noZnc2ULB4y-l5Z8HX10JLUCMELKiFQykK2PRRLhViBq7myWebkui4/pub?gid=162734061&single=true&output=csv';
-// Checked!
 var displayMatchDetailsArrayOfObjects = ""; // Define an initially blank array to be populated later.
 var TOTWStatObject = ""; // Define an initially blank object to be populated later.
 
@@ -498,7 +485,7 @@ function init() {
     readyComponentsCount = 0;
 
     // Call the updateLoadingPage function to change the shown phrase.
-    // updateLoadingPage();
+    updateLoadingPage();
 
 
     // Step 0. 
@@ -515,14 +502,6 @@ function init() {
 
     // Drop Down Options.
     console.log('%c' + '> 0. Drop down data being loaded in.', 'background-color: darkblue; color: white; padding: 0.5em 0em; font-weight: bold;'); // Log the function call to the console.
-
-    // Drop Down Options Info
-    Papa.parse(displayAllowedPlayersSheetCSV, {
-        download: true, // If true, this indicates that the string you passed as the first argument to parse() is actually a URL from which to download a file and parse its contents.
-        header: false, // If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name.
-        fastmode: true, // Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false.
-        complete: getPlayerDropdownInfo, // The callback to execute when parsing is complete.
-    });
 
 
     // Step 1. 
@@ -1085,8 +1064,8 @@ function getSideMenuInfo(results) {
     // Process the original array of objects received.
     displaySiteDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displaySiteDetailsArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getSideMenuInfo:");
-    console.log(displaySiteDetailsArrayOfObjects); // Log the global variable.
+    // console.log("getSideMenuInfo:");
+    // console.log(displaySiteDetailsArrayOfObjects); // Log the global variable.
     showSideMenuInfo(displaySiteDetailsArrayOfObjects); // Call the showSideMenuInfo function.
 }
 
@@ -1116,22 +1095,33 @@ function showSideMenuInfo(results) {
 // Dropdowns
 
 // 0.7. Player Dropdown data "getter" function.
-function getPlayerDropdownInfo(results) {
+function getPlayerDropdownInfo() {
     // Pass the results output from Papa Parse (see - https://www.papaparse.com/docs#csv-to-json) into a function to display the contents of the data. Note that a parse result always contains three objects: data, errors, and meta. Data and errors are arrays, and meta is an object. In the step callback, the data array will only contain one element.
     console.log('%c' + '>> getPlayerDropdownInfo.', 'background-color: darkblue; color:white; padding: 0.5em 0em; font-weight: bold;');
 
-    // Process the original array of objects received.
-    displayAllowedPlayersArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    // console.log("Global variable 'displayAllowedPlayersArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getPlayerDropdownInfo:");
-    console.log(displayAllowedPlayersArrayOfObjects); // Log the global variable.
+    // Filter the All Time Stat details object down to just the players allowed on the site. https://masteringjs.io/tutorials/fundamentals/filter-array-of-objects
+    const displayAllowedPlayersArrayOfObjects = displayAllTimeStatsArrayOfObjects.filter(playersData => playersData.ALLOWEDONSITE === "TRUE");
+    // console.log("displayAllowedPlayersArrayOfObjects"); // Log the filtered object.
+    // console.table(displayAllowedPlayersArrayOfObjects); // Log the filtered object in a table format.
+
+    // Next, map the object just down to the player names.
+    let allowedPlayers = displayAllowedPlayersArrayOfObjects.map(({ NAME }) => {
+        return [NAME];
+    });
+    // console.log("allowedPlayers"); // Log the mapped object.
+    // console.log(allowedPlayers); // Log the mapped object.
+
+    // Finally, turn the object into an array to pass to the populateDropdownList function.
+    const allowedPlayersArray = Object.values(allowedPlayers);
+    // console.log("allowedPlayersArray");
+    // console.log(allowedPlayersArray);
 
     // Populate the various dropdown components with player names.
     // Player Stats tab
-    populateDropdownList('player-stats', displayAllowedPlayersArrayOfObjects, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('player-stats', allowedPlayersArray, 'player-stats-selection-dropdown', 'player-stats-selection-dropdown-button', 'player-stats-selection-dropdown-option-container'); // Call the populateDropdownList function.
     // Comparison Tab
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
-    populateDropdownList('comparison', displayAllowedPlayersArrayOfObjects, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', allowedPlayersArray, 'comparison-player-1-selection-dropdown', 'comparison-player-1-selection-dropdown-button', 'comparison-player-1-selection-dropdown-option-container'); // Call the populateDropdownList function.
+    populateDropdownList('comparison', allowedPlayersArray, 'comparison-player-2-selection-dropdown', 'comparison-player-2-selection-dropdown-button', 'comparison-player-2-selection-dropdown-option-container'); // Call the populateDropdownList function.
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Dropdowns populated");
@@ -1157,8 +1147,8 @@ function getHomepageTabNextFixturesInfo(results) {
     // Process the original array of objects received.
     displayNextFixturesArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayNextFixturesArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getHomepageTabNextFixturesInfo");
-    console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
+    // console.log("getHomepageTabNextFixturesInfo");
+    // console.log(displayNextFixturesArrayOfObjects); // Log the global variable.
     showHomepageTabNextFixturesInfo(displayNextFixturesArrayOfObjects); // Call the showHomepageTabNextFixturesInfo function.
 }
 
@@ -1343,8 +1333,8 @@ function getTotalClubStatsInfo(results) {
     // Process the original array of objects received.
     displayTotalClubStatsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayTotalClubStatsArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getTotalClubStatsInfo");
-    console.log(displayTotalClubStatsArrayOfObjects); // Log the global variable.
+    // console.log("getTotalClubStatsInfo");
+    // console.log(displayTotalClubStatsArrayOfObjects); // Log the global variable.
     showTotalClubStatsInfo(displayTotalClubStatsArrayOfObjects); // Call the showTotalClubStatsInfo function.
 }
 
@@ -1564,7 +1554,7 @@ function prefillPlayerStatsTab() {
 
             }
             catch (err) {
-                console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+                // console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
             }
         }
     }
@@ -1586,8 +1576,8 @@ function getPlayerStatsThisSeasonTabInfo(results) {
     // Process the original array of objects received.
     displayThisSeasonStatsArrayOfObjects = results.data // Define the global variable "displayThisSeasonStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayThisSeasonStatsArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getPlayerStatsThisSeasonTabInfo");
-    console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
+    // console.log("getPlayerStatsThisSeasonTabInfo");
+    // console.log(displayThisSeasonStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsThisSeasonTabInfo(displayThisSeasonStatsArrayOfObjects); // Call the showPlayerStatsThisSeasonTabInfo function.
 }
 
@@ -1599,9 +1589,12 @@ function getPlayerStatsAllTimeTabInfo(results) {
     // Process the original array of objects received.
     displayAllTimeStatsArrayOfObjects = results.data // Define the global variable "displayAllTimeStatsArrayOfObjects" to be used later on. Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayAllTimeStatsArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getPlayerStatsAllTimeTabInfo");
-    console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
+    // console.log("getPlayerStatsAllTimeTabInfo");
+    // console.log(displayAllTimeStatsArrayOfObjects); // Log the global variable.
     showPlayerStatsAllTimeTabInfo(displayAllTimeStatsArrayOfObjects); // Call the showPlayerStats function.
+
+    // Call the getPlayerDropdownInfo function to populate the site dropdowns.
+    getPlayerDropdownInfo();
 }
 
 // 3.2.a. Player Stats This Season tab data "show-er" function.
@@ -1656,7 +1649,7 @@ function showPlayerStatsThisSeasonTabInfo(results) {
 
     // Loop through the created stat array. Each stat corresponds to an HTML element in the This Seasons Grid.
     for (let i = 0; i < statsArray.length; i++) {
-        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
@@ -1754,7 +1747,7 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
     // Loop through the created stat array. Each stat corresponds to an HTML element in the All Time Grid.
     for (let i = 0; i < statsArray.length; i++) {
-        console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
+        // console.log("Stat = " + statsArray[i] + ", format = " + statObject[statsArray[i]].statFormat); // Log the stat being updated and it's format.
 
         // Add a try catch around dynamically updating HTML elements as not all stats object to be used. 
         try {
@@ -1789,7 +1782,7 @@ function showPlayerStatsAllTimeTabInfo(results) {
 
         }
         catch (err) {
-            console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
+            // console.log("Stat = " + statsArray[i] + " not found on sheet so skipping.");
         }
     }
 
@@ -1827,8 +1820,8 @@ function getMatchDetailsInfo(results) {
 
     // Process the original array of objects received.
     displayMatchDetailsArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
-    console.log("getMatchDetailsInfo");
-    console.log(displayMatchDetailsArrayOfObjects);
+    // console.log("getMatchDetailsInfo");
+    // console.log(displayMatchDetailsArrayOfObjects);
 
     // Increment the component ready count by 1.
     incrementComponentReadyCount("Match Details information fetched");
@@ -1856,8 +1849,8 @@ function getTeamOfTheWeekPlayersInfo(results) {
     // Process the original array of objects received.
     displayTOTWArrayOfObjects = results.data // Data comes through from results as an array of objects. This is because the header setting on the above papa parse is set to true.
     // console.log("Global variable 'displayTOTWArrayOfObjects' defined:"); // Log the global variable.
-    console.log("getTeamOfTheWeekPlayersInfo");
-    console.log(displayTOTWArrayOfObjects); // Log the global variable.
+    // console.log("getTeamOfTheWeekPlayersInfo");
+    // console.log(displayTOTWArrayOfObjects); // Log the global variable.
 
     // Initially populate the week number dropdown.
     updateTeamOfTheWeekWeekNumberInfo();
@@ -3524,6 +3517,9 @@ function displayInformation(informationBarID, displayMessage) {
 // 1. Populate the dropdown with Player names.
 function populateDropdownList(tabName, playerNameArray, dropdownID, dropdownButtonID, dropdownOptionContainerParentID) {
     // console.log("Function populateDropdownList called with dropdownID: " + dropdownID + ", from tab: " + tabName); // Log that the function has been called.
+
+    // console.log("playerNameArray"); // Log the received array.
+    // console.log(playerNameArray); // Log the received array.
 
     // Loop through the player name array and add the names as options below the dropdown selector.
     for (let i = 0; i < playerNameArray.length; i++) {
