@@ -1,5 +1,7 @@
 // jDorkiniansMain.js JavaScript Functions
 
+"use strict";
+
 // Papa Parse (previously TableTop) Google Sheets Database scripts
 // Papa Parse - https://www.papaparse.com/docs#csv-to-json
 // How to use Papa Parse - https://dev.to/bornfightcompany/using-google-sheets-as-a-simple-database-with-papa-parse-2k7o
