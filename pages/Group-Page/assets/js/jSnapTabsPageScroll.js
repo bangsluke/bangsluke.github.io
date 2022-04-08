@@ -1,11 +1,12 @@
 // jSnapTabsPageScroll.js
 
+"use strict";
+
 // https://stackoverflow.com/a/13067009/14290169
 
 //console.log("jSnapTabsPageScroll.js loaded");
 
 (function (document, history, location) {
-
   //console.log("jSnapTabsPageScroll: main function"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
 
   var HISTORY_SUPPORT = !!(history && history.pushState);
@@ -18,8 +19,8 @@
     init: function () {
       //console.log("jSnapTabsPageScroll: init"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
       this.scrollToCurrent();
-      window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
-      document.body.addEventListener('click', this.delegateAnchors.bind(this));
+      window.addEventListener("hashchange", this.scrollToCurrent.bind(this));
+      document.body.addEventListener("click", this.delegateAnchors.bind(this));
     },
 
     // Return the offset amount to deduct from the normal scroll position. Modify as appropriate to allow for dynamic calculations
@@ -55,10 +56,10 @@
         //console.log("rect.top = " + rect.top);
 
         anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset(); // Get the anchorOffset by combining the window offset in Y, the DOMRect top of the anchor item and the fixed offset.
-        
+
         //console.log("anchorOffset = " + anchorOffset);
         //console.log("window.pageXOffset = " + window.pageXOffset);
-        
+
         window.scrollTo(window.pageXOffset, anchorOffset); // Scroll to the correctly offset position.
 
         //console.log(history);
@@ -83,15 +84,16 @@
       //console.log("jSnapTabsPageScroll: delegateAnchors"); // Pass an initial message as part of debugging to determine the order of JavaScript functions.
       var elem = e.target;
       if (
-        elem.nodeName === 'A' &&
-        this.scrollIfAnchor(elem.getAttribute('href'), true)
+        elem.nodeName === "A" &&
+        this.scrollIfAnchor(elem.getAttribute("href"), true)
       ) {
         e.preventDefault();
       }
-    }
+    },
   };
 
   window.addEventListener(
-    'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
+    "DOMContentLoaded",
+    anchorScrolls.init.bind(anchorScrolls)
   );
 })(window.document, window.history, window.location);
