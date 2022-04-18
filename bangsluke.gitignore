@@ -3,7 +3,6 @@
 # Below is a list of files that Git should not track.
 # https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring
 
-
 # ignore all .gslides files to ignore the Website Layouts.gslides file.
 *.gslides
 
@@ -12,28 +11,6 @@
 
 # ignore all files in any directory named templated-visualize as don't need these.
 templated-visualize/
-
-# ignore all files in any directory named images/Archive/ as don't need these.
-images/Archive/
-
-# ignore all files in any directory named pages/Group-Page/Archive/ as don't need these.
-pages/Group-Page/Archive/
-
-# ignore all files in any directory named pages/Group-Page/assets/components/Header/Archive/ as don't need these.
-pages/Group-Page/assets/components/Header/Archive/
-
-# ignore all files in any directory named pages/Group-Page/assets/components/SideMenu/Archive/ as don't need these.
-pages/Group-Page/assets/components/SideMenu/Archive/
-
-# ignore all files in any directory named pages/Group-Page/assets/components/Footer/Archive/ as don't need these.
-pages/Group-Page/assets/components/Footer/Archive/
-
-
-
-
-
-
-
 
 
 # Examples below
