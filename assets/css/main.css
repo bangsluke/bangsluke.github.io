@@ -1453,7 +1453,7 @@ a {
   /* border-bottom: dotted 1px rgba(255, 255, 255, 0.35); */
 }
 
-#underline {
+.underline {
   border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
   -moz-transition: border-bottom-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -webkit-transition: border-bottom-color 0.2s ease-in-out,
@@ -2637,9 +2637,9 @@ body.is-covered #wrapper {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #ff6382;
 }
 
-/* Add an id for fading in an item over two seconds. */
+/* Add a class for fading in an item over two seconds. */
 
-#fadein {
+.fadein {
   animation: fadein 2s ease forwards;
 }
 
