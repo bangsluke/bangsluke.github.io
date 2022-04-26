@@ -2,7 +2,7 @@
 
 ## About
 
-A custom site homepage and new browser tab.
+A custom built site homepage and new browser tab.
 
 ### Status
 
