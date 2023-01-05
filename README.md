@@ -1,8 +1,10 @@
-# Hompage
+<p align="center">
+  <img src="https://i.imgur.com/ibIuKyP.png" alt="bangsluke Logo" width="200" style="border-radius: 50%;"/>
+</p>
 
-## About
+# Homepage
 
-A custom built site homepage and new browser tab.
+A custom built site homepage and new browser tab
 
 ### Status
 
