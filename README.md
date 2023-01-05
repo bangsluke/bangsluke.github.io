@@ -6,6 +6,8 @@
 
 A custom built site homepage and new browser tab
 
+For a link to the HelperDoc, click [here](https://github.com/bangsluke/bangsluke.github.io/blob/newMDFile/HelperDoc.md)
+
 ### Status
 
 <!-- Project Badges -->
