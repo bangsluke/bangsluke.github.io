@@ -15,6 +15,8 @@ A document containing useful commands and fixes for projects
 
 
 ## Git Commands
+- `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
+
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
 - `git branch -M main` - Switch to the main branch
