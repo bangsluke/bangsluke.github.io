@@ -4,6 +4,22 @@ A document containing useful commands and fixes for projects
 
 ## Table of Contents
 
+- [Helper Doc](#helper-doc)
+	- [Table of Contents](#table-of-contents)
+	- [Powershell Commands/Shortcuts](#powershell-commandsshortcuts)
+	- [Git Commands](#git-commands)
+	- [Keyboard Shortcuts](#keyboard-shortcuts)
+		- [VS Code](#vs-code)
+		- [Chrome](#chrome)
+	- [Updating Versions](#updating-versions)
+		- [NPM and Yarn](#npm-and-yarn)
+		- [Node](#node)
+	- [Git Fixes](#git-fixes)
+		- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
+			- [Delete all desktop.ini files](#delete-all-desktopini-files)
+			- [Manually delete each desktop.ini file with explanations](#manually-delete-each-desktopini-file-with-explanations)
+		- [Clearing Secrets from History](#clearing-secrets-from-history)
+
 ## Powershell Commands/Shortcuts
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - `pwd` - To print the current directory
@@ -38,15 +54,15 @@ A document containing useful commands and fixes for projects
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
 
-## Versions and Updates
+## Updating Versions
 
-## NPM and Yarn
+### NPM and Yarn
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable for the latest version)
 
-## Node
+### Node
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
@@ -105,3 +121,5 @@ Summary:
 > Reference
 
 Link 1: https://blog.gitguardian.com/rewriting-git-history-cheatsheet/
+
+[^ Back To Top](#table-of-contents)
