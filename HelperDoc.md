@@ -21,6 +21,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 			- [Database](#database)
 			- [Hosting](#hosting)
 		- [Create The New App](#create-the-new-app)
+		- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github)
+		- [ESLint and Prettier Config](#eslint-and-prettier-config)
 	- [Project Release Checklist](#project-release-checklist)
 	- [Git Fixes](#git-fixes)
 		- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
@@ -81,11 +83,10 @@ A document containing useful commands, set up, checklists and fixes for projects
 > Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
 - `nvm use 4.2` - Switch between the installed versions on your machine
 
-> Sources
+> References
 >
-> [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
->
-> [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
+> 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
+> 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
 
 > [^ Back To Top](#table-of-contents)
 
@@ -130,9 +131,9 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > References
 >
-> - [Which Is Better? SQL vs NoSQL](https://www.youtube.com/watch?v=t0GlGbtMTio&feature=youtu.be&ab_channel=WebDevSimplified)
-> - [How To Choose a Database for your App](https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma)
-> - [Build a TypeScript API with Express, RapidAPI, and Xata](https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick)
+> 1. [Which Is Better? SQL vs NoSQL](https://www.youtube.com/watch?v=t0GlGbtMTio&feature=youtu.be&ab_channel=WebDevSimplified)
+> 2. [How To Choose a Database for your App](https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma)
+> 3. [Build a TypeScript API with Express, RapidAPI, and Xata](https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick)
 
 #### Hosting
 
@@ -183,6 +184,33 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
+
+### Initiate a Git Repository and link to GitHub
+
+- Create a new repository on GitHub
+- In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
+```
+git init
+git remote add origin https://github.com/bangsluke/hacker-stories.git
+git branch -M main
+git commit -m "Initial commit"
+git push -u origin main
+```
+- Make the repo private or public based on the requirements
+- Protect the main branch from being pushed to directly
+- Create a develop branch
+- Add a .gitignore file to the root of the project
+
+### ESLint and Prettier Config
+
+- Copy over the .eslintrc.json and .prettierrc set ups from a good project
+- Make changes if any are required
+- Consider the below references if needed
+
+> References
+>
+> 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
+> 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
 
 > [^ Back To Top](#table-of-contents)
 
@@ -236,7 +264,7 @@ Summary:
 - Open the CMD for the repo
 - Use the command `git filter-repo --replace-text ../BigLynnReplacements.txt --force` to go through the history of the repo and make all the required replacements
 
-> Reference
+> References
 >
 > 1. [Rewriting Git History Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
 
