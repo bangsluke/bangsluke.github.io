@@ -1,6 +1,6 @@
 # Helper Doc
 
-A document containing useful commands and fixes for projects
+A document containing useful commands, set up, checklists and fixes for projects
 
 ## Table of Contents
 
@@ -29,19 +29,20 @@ A document containing useful commands and fixes for projects
 - `cd ~` - To change directory back to the root level
 - `cd ..` - To change directory back up one level
 
+> [^ Back To Top](#table-of-contents)
 
 ## Git Commands
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
-
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
 - `git branch -M main` - Switch to the main branch
 - `git commit -m "Initial commit"` - Commit with the message (-m) "Initial commit"
 - `git push -u origin main` - Push to the main branch
-
 - `git fetch --prune` - Fetch all branches and remove remote deleted branches
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
+
+> [^ Back To Top](#table-of-contents)
 
 ## Keyboard Shortcuts
 
@@ -49,10 +50,12 @@ A document containing useful commands and fixes for projects
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
 - `Ctrl + V` - Copy Line (Copy full line of code down once)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
+- `Ctrl + Shift + K` - Delete the current code line
 
 ### Chrome
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
+> [^ Back To Top](#table-of-contents)
 
 ## Updating Versions
 
@@ -60,19 +63,23 @@ A document containing useful commands and fixes for projects
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
-- `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable for the latest version)
+- `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
 ### Node
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
 - `nvm install 8.1.0` - Install a specific version of Node (check https://nodejs.org/en/ for the latest version)
-> note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
+> Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
 - `nvm use 4.2` - Switch between the installed versions on your machine
-> Sources
-> https://stackoverflow.com/questions/8191459/how-do-i-update-node-js
-> https://github.com/coreybutler/nvm-windows/releases - NVM latest release - use "nvm-setup.exe"
 
+> Sources
+>
+> [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
+>
+> [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
+
+> [^ Back To Top](#table-of-contents)
 
 ## Git Fixes
 
@@ -100,11 +107,14 @@ Summary: Bad desktop.ini file that is created by Google Drive. Needs to be delet
 
 
 > References
-
-Link 1: Explanation Link: https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/
-Link 2: Show Hidden Files: https://www.computerhope.com/issues/ch001464.htm
-Link 3: Remove Attributes from Files: https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad
-Link 4: Delete All Hidden Files: https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/
+>
+> Link 1: [Explanation Link](https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/)
+>
+> Link 2: [Show Hidden Files](https://www.computerhope.com/issues/ch001464.htm)
+>
+> Link 3: [Remove Attributes from Files](https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad)
+>
+> Link 4: [Delete All Hidden Files](https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/)
 
 
 ### Clearing Secrets from History
@@ -119,7 +129,7 @@ Summary:
 - Use the command `git filter-repo --replace-text ../BigLynnReplacements.txt --force` to go through the history of the repo and make all the required replacements
 
 > Reference
+>
+> Link 1: [Rewriting Git History Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
 
-Link 1: https://blog.gitguardian.com/rewriting-git-history-cheatsheet/
-
-[^ Back To Top](#table-of-contents)
+> [^ Back To Top](#table-of-contents)
