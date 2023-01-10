@@ -226,6 +226,27 @@ git push -u origin main
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
 
+### .env Files and Variables
+
+- To securely store environment variables, create a .env file in the root of the project
+- Then create a .gitignore file in the root of the project and add the .env file to it
+- For CRA, you can create .env variables named as `REACT_APP_` and they will be available in the browser
+  - Example: `REACT_APP_API_KEY=1234567890`
+  - You can then use the variable in the code as `process.env.REACT_APP_API_KEY`
+  - [See this article](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+- For Vite, you can create .env variables named as `VITE_` and they will be available in the browser
+  - Example: `VITE_API_KEY=1234567890`
+  - You can then use the variable in the code as `import.meta.env.VITE_API_KEY`
+  - [See this article](https://vitejs.dev/guide/env-and-mode.html#env-files)
+- For Next.JS, you can create .env variables with any name (no prefix needed) and they will be available in the browser
+  - Example: `API_KEY=1234567890`
+  - You can then use the variable in the code as `process.env.API_KEY`
+  - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
+
+> References
+>
+> 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
+
 ### ![](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
 
 - Create the folder structure .github/workflows at the root folder
