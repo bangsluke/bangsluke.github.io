@@ -20,9 +20,14 @@ A document containing useful commands, set up, checklists and fixes for projects
 			- [Back End Architecture](#back-end-architecture)
 			- [Database](#database)
 			- [Hosting](#hosting)
-		- [Create The New App](#create-the-new-app)
+		- [Create the New App](#create-the-new-app)
 		- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github)
 		- [ESLint and Prettier Config](#eslint-and-prettier-config)
+		- [GitHub Workflows](#github-workflows)
+		- [Testing](#testing)
+		- [Deployment](#deployment)
+		- [Documentation](#documentation)
+		- [Optional Extras](#optional-extras)
 	- [Project Release Checklist](#project-release-checklist)
 	- [Git Fixes](#git-fixes)
 		- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
@@ -149,7 +154,7 @@ A document containing useful commands, set up, checklists and fixes for projects
   - Amazon RDS (expensive)
   - BlueHost (basic)
 
-### Create The New App
+### Create the New App
 
 - CRA (Create React App)
   - `npx create-react-app my-app` - Create a new React app called "my-app"
@@ -203,7 +208,7 @@ git push -u origin main
 
 ### ESLint and Prettier Config
 
-- Copy over the .eslintrc.json and .prettierrc set ups from a good project
+- Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
 - Consider the below references if needed
 
@@ -212,9 +217,52 @@ git push -u origin main
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
 
+### GitHub Workflows
+
+- Create the folder structure .github/workflows at the root folder
+- Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
+  - CI.yml
+  - CD.yml
+  - CodeQL.yml
+  - dependencyReview.yml
+  - dependabot.yml
+- Modify any details of the workflow to suit your needs
+
+### Testing
+
+- Set up testing throughout the application based on its requirements
+- [Testing Trophy and Testing Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
+  - Static tests (ESLint, TypeScript) - Done automatically in VS Code e.g. typos and type errors
+  - Unit tests (Jest)
+  - Integration tests (React Testing Library / Cypress)
+  - E2E tests (Cypress)
+
+### Deployment
+
+- Set up deployment to the hosting service of choice
+- Recommend Netlify for a simple deployment
+
+### Documentation
+
+- Set up documentation for the project via a README.md file
+- Write from scratch or use a template such as [readme.so](https://readme.so/)
+
+### Optional Extras
+
+- Web Analytics
+  - Google Analytics
+  - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
+- Application Notifications
+  - [ntfy](https://ntfy.sh/?ref=console.dev)
+> Note - for more, see "Coding Resources" Todoist project
+
+
 > [^ Back To Top](#table-of-contents)
 
 ## Project Release Checklist
+
+
+
 
 
 
