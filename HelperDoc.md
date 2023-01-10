@@ -2,6 +2,10 @@
 
 A document containing useful commands, set up, checklists and fixes for projects
 
+<p align="center">
+  <img src="https://w7.pngwing.com/pngs/477/513/png-transparent-resistance-helper-symbol-brwanjeya-mills-games-online-dino-chess-for-kids-fest-miscellaneous-game-logo.png" alt="Helper Logo" width="100" style="border-radius: 50%;"/>
+</p>
+
 ## Table of Contents
 
 - [Helper Doc](#helper-doc)
@@ -21,6 +25,9 @@ A document containing useful commands, set up, checklists and fixes for projects
 			- [Database](#database)
 			- [Hosting](#hosting)
 		- [Create the New App](#create-the-new-app)
+			- [CRA (Create React App)](#cra-create-react-app)
+			- [Vite](#vite)
+			- [Next.js](#nextjs)
 		- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github)
 		- [ESLint and Prettier Config](#eslint-and-prettier-config)
 		- [GitHub Workflows](#github-workflows)
@@ -43,7 +50,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ## Tool Commands/Shortcuts
 
-### Powershell Commands
+### ![](https://i.imgur.com/wBg7htx.png) Powershell Commands
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - `pwd` - To print the current directory
 - `ls` - To list all options in the current folder
@@ -52,7 +59,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `cd ~` - To change directory back to the root level
 - `cd ..` - To change directory back up one level
 
-### Git Commands
+### ![](https://i.imgur.com/2xve41Z.png) Git Commands
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
@@ -63,26 +70,28 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
 
-### VS Code Commands
+### ![](https://i.imgur.com/2lK00uT.png) VS Code Commands
+- `Ctrl + P` - Open the file search
+- `Ctrl + Shift + P` - Open the command palette
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
 - `Ctrl + V` - Copy Line (Copy full line of code down once)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
 - `Ctrl + Shift + K` - Delete the current code line
 
-### Chrome Shortcuts
+### ![](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
 > [^ Back To Top](#table-of-contents)
 
 ## Updating Versions
 
-### NPM and Yarn
+### ![](https://i.imgur.com/ufPLPqy.png) NPM and ![](https://i.imgur.com/IXZDNL8.png) Yarn
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
-### Node
+### ![](https://i.imgur.com/EvX1vFR.png) Node
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
@@ -158,13 +167,13 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ### Create the New App
 
-- CRA (Create React App)
+#### ![](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
   - `npx create-react-app my-app` - Create a new React app called "my-app"
   - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
   - `cd my-app` - Change directory to the new React app
   - `npm start` - Start the React app
   - `npm run build` - Build the React app for production
-- Vite
+#### ![](https://i.imgur.com/smpppHt.png) Vite
   - JavaScript and npm
     - `npm create vite@latest my-app --template react` - Create a new React app called "my-app"
     > Note - npm 7+, extra double-dash is needed: `npm create vite@latest my-app -- --template react`
@@ -178,7 +187,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
-- Next.JS
+#### ![](https://i.imgur.com/OGtWPsT.png) Next.JS
   - JavaScript and npm
 	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
 	- `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
@@ -192,7 +201,9 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
 
-### Initiate a Git Repository and link to GitHub
+> [^ Back To Top](#table-of-contents)
+
+### Initiate a ![](https://i.imgur.com/2xve41Z.png) Git Repository and link to ![](https://i.imgur.com/zD0C9oF.png) GitHub
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -208,7 +219,7 @@ git push -u origin main
 - Create a develop branch
 - Add a .gitignore file to the root of the project
 
-### ESLint and Prettier Config
+### ![](https://i.imgur.com/ebsMde1.png) ESLint and ![](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
@@ -219,7 +230,7 @@ git push -u origin main
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
 
-### GitHub Workflows
+### ![](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
@@ -230,7 +241,7 @@ git push -u origin main
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 
-### Testing
+### ![](https://i.imgur.com/BUzlvBh.png) Testing
 
 - Set up testing throughout the application based on its requirements
 - [Testing Trophy and Testing Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
@@ -239,7 +250,7 @@ git push -u origin main
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Cypress)
 
-### Deployment
+### ![](https://i.imgur.com/reePUUY.png) Deployment
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment
@@ -285,7 +296,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [HTML & CSS Features, Tips For a 10x fast Page Loading Speed](https://levelup.gitconnected.com/html-css-features-tips-for-a-10x-fast-page-loading-speed-5fb6c2d88df8)
   - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
 
-### GitHub Information
+### ![](https://i.imgur.com/zD0C9oF.png) GitHub Information
 
 - Check that the GitHub repo has all the details that it needs, such as:
   - About Section
@@ -316,7 +327,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 > [^ Back To Top](#table-of-contents)
 
-## Git Fixes
+## ![](https://i.imgur.com/2xve41Z.png) Git Fixes
 
 ### Error: Unable to load Commits. fatal: bad object desktop.ini
 
