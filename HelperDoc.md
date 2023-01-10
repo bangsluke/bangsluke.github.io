@@ -14,6 +14,14 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [Updating Versions](#updating-versions)
 		- [NPM and Yarn](#npm-and-yarn)
 		- [Node](#node)
+	- [Project Set Up](#project-set-up)
+		- [Decide on Architecture](#decide-on-architecture)
+			- [Front End Architecture](#front-end-architecture)
+			- [Back End Architecture](#back-end-architecture)
+			- [Database](#database)
+			- [Hosting](#hosting)
+		- [Create The New App](#create-the-new-app)
+	- [Project Release Checklist](#project-release-checklist)
 	- [Git Fixes](#git-fixes)
 		- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
 			- [Delete all desktop.ini files](#delete-all-desktopini-files)
@@ -81,6 +89,109 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > [^ Back To Top](#table-of-contents)
 
+## Project Set Up
+
+### Decide on Architecture
+
+#### Front End Architecture
+
+- Considerations:
+  - Single page application or not?
+  - SSR (Server side rendering) or SSG (Static site generation) required?
+- Options:
+  - CRA (Create React App)
+  - Vite
+  - NextJS
+
+#### Back End Architecture
+
+- Considerations:
+  - Need to investigate
+- Options:
+  - ExpressJS
+  - NodeJS
+
+#### Database
+
+- Considerations:
+  - Should it be SQL or non SQL?
+  - How am I going to query my database? Via a client? By the CLI?
+  - Consider TypeORM or Prisma for type safe access to your database
+- Options:
+  - Sequel DBs:
+    - Xata
+    - MySQL
+    - Postgress (recommended)
+  - No Sequel DBs:
+    - Firebase
+    - MongoDB
+    - PlanetScale
+    - Supebase
+
+> References
+>
+> - [Which Is Better? SQL vs NoSQL](https://www.youtube.com/watch?v=t0GlGbtMTio&feature=youtu.be&ab_channel=WebDevSimplified)
+> - [How To Choose a Database for your App](https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma)
+> - [Build a TypeScript API with Express, RapidAPI, and Xata](https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick)
+
+#### Hosting
+
+- Considerations:
+  - How much will hosting the site cost?
+  - What features does the hosting provide?
+  - What access protection does the hosting service offer for limiting access to your app or database?
+- Options:
+  - Netlify (free)
+  - Vercel
+  - Heroku (cheap)
+  - DigitalOcean (cheap)
+  - Amazon RDS (expensive)
+  - BlueHost (basic)
+
+### Create The New App
+
+- CRA (Create React App)
+  - `npx create-react-app my-app` - Create a new React app called "my-app"
+  - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
+  - `cd my-app` - Change directory to the new React app
+  - `npm start` - Start the React app
+  - `npm run build` - Build the React app for production
+- Vite
+  - JavaScript and npm
+    - `npm create vite@latest my-app --template react` - Create a new React app called "my-app"
+    > Note - npm 7+, extra double-dash is needed: `npm create vite@latest my-app -- --template react`
+    - `cd my-app` - Change directory to the new React app
+    - `npm install` - Install the dependencies
+    - `npm run dev` - Start the React app
+    - `npm run build` - Build the React app for production
+  - Typescript and yarn
+	- `yarn create vite@latest my-app --template react-ts` - Create a new React app called "my-app" with TypeScript
+	- `cd my-app` - Change directory to the new React app
+	- `yarn` - Install the dependencies
+	- `yarn dev` - Start the React app
+	- `yarn build` - Build the React app for production
+- Next.JS
+  - JavaScript and npm
+	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
+	- `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
+	- `npm install` - Install the dependencies
+	- `npm run dev` - Start the React app
+	- `npm run build` - Build the React app for production
+  - Typescript and yarn
+    - `yarn create next-app --typescript` - Create a new Next.JS app with TypeScript (name will be requested)
+    - `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
+	- `yarn` - Install the dependencies
+	- `yarn dev` - Start the React app
+	- `yarn build` - Build the React app for production
+
+> [^ Back To Top](#table-of-contents)
+
+## Project Release Checklist
+
+
+
+> [^ Back To Top](#table-of-contents)
+
 ## Git Fixes
 
 ### Error: Unable to load Commits. fatal: bad object desktop.ini
@@ -108,13 +219,10 @@ Summary: Bad desktop.ini file that is created by Google Drive. Needs to be delet
 
 > References
 >
-> Link 1: [Explanation Link](https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/)
->
-> Link 2: [Show Hidden Files](https://www.computerhope.com/issues/ch001464.htm)
->
-> Link 3: [Remove Attributes from Files](https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad)
->
-> Link 4: [Delete All Hidden Files](https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/)
+> 1. [Explanation Link](https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/)
+> 2. [Show Hidden Files](https://www.computerhope.com/issues/ch001464.htm)
+> 3. [Remove Attributes from Files](https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad)
+> 4. [Delete All Hidden Files](https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/)
 
 
 ### Clearing Secrets from History
@@ -130,6 +238,6 @@ Summary:
 
 > Reference
 >
-> Link 1: [Rewriting Git History Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
+> 1. [Rewriting Git History Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
 
 > [^ Back To Top](#table-of-contents)
