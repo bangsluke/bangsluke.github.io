@@ -29,6 +29,11 @@ A document containing useful commands, set up, checklists and fixes for projects
 		- [Documentation](#documentation)
 		- [Optional Extras](#optional-extras)
 	- [Project Release Checklist](#project-release-checklist)
+		- [SEO and Meta Data](#seo-and-meta-data)
+		- [404 Page](#404-page)
+		- [Page Speed Testing](#page-speed-testing)
+		- [GitHub Information](#github-information)
+		- [Other Options](#other-options)
 	- [Git Fixes](#git-fixes)
 		- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
 			- [Delete all desktop.ini files](#delete-all-desktopini-files)
@@ -258,10 +263,56 @@ git push -u origin main
 
 ## Project Release Checklist
 
+Use this checklist tool for each site released - [frontendchecklist.io](https://frontendchecklist.io/)
 
+### SEO and Meta Data
 
+- This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
+- Set up meta tags in the index.html file
+  - [metatags.io](https://metatags.io/)
 
+### 404 Page
 
+- Create a 404 page for catching routing errors
+  - [error404.fun](https://error404.fun/)
+- Consider if additional 404 pages are required for other errors, such as 500, 503, etc.
+
+### Page Speed Testing
+
+- Check the speed of the app and improve where possible
+  - Use Chrome DevTools LightHouse tool
+  - [GTmetrix](https://gtmetrix.com/)
+  - [HTML & CSS Features, Tips For a 10x fast Page Loading Speed](https://levelup.gitconnected.com/html-css-features-tips-for-a-10x-fast-page-loading-speed-5fb6c2d88df8)
+  - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
+
+### GitHub Information
+
+- Check that the GitHub repo has all the details that it needs, such as:
+  - About Section
+    - Description
+    - Tags
+  - Is public/private
+  - Is pinned to main GitHub profile if suitable
+- Check that the README has all the required details it needs, including;
+  - Structure - [see here](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+	- Project Title
+	- Project Description
+	- Table of Contents
+	- Installation
+	- Usage
+	- Contributing
+	- License
+  - Badges
+    - Version number
+    - Repo status
+    - Tests passing
+    - Netlify deployment status
+
+### Other Options
+
+- [Remove console logs from Production](https://dev.to/gulshanaggarwal/say-goodbye-to-consolelog-from-production-environment-5382)
+- [Add a share button](https://dev.to/dailydevtips1/using-the-native-web-share-javascript-api-23ei)
+- [Markup validation](https://validator.w3.org/)
 
 > [^ Back To Top](#table-of-contents)
 
