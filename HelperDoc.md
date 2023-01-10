@@ -6,11 +6,11 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 - [Helper Doc](#helper-doc)
 	- [Table of Contents](#table-of-contents)
-	- [Powershell Commands/Shortcuts](#powershell-commandsshortcuts)
-	- [Git Commands](#git-commands)
-	- [Keyboard Shortcuts](#keyboard-shortcuts)
-		- [VS Code](#vs-code)
-		- [Chrome](#chrome)
+	- [Tool Commands/Shortcuts](#tool-commandsshortcuts)
+		- [Powershell Commands](#powershell-commands)
+		- [Git Commands](#git-commands)
+		- [VS Code Commands](#vs-code-commands)
+		- [Chrome Shortcuts](#chrome-shortcuts)
 	- [Updating Versions](#updating-versions)
 		- [NPM and Yarn](#npm-and-yarn)
 		- [Node](#node)
@@ -35,7 +35,10 @@ A document containing useful commands, set up, checklists and fixes for projects
 			- [Manually delete each desktop.ini file with explanations](#manually-delete-each-desktopini-file-with-explanations)
 		- [Clearing Secrets from History](#clearing-secrets-from-history)
 
-## Powershell Commands/Shortcuts
+
+## Tool Commands/Shortcuts
+
+### Powershell Commands
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - `pwd` - To print the current directory
 - `ls` - To list all options in the current folder
@@ -44,9 +47,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `cd ~` - To change directory back to the root level
 - `cd ..` - To change directory back up one level
 
-> [^ Back To Top](#table-of-contents)
-
-## Git Commands
+### Git Commands
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
@@ -57,17 +58,13 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
 
-> [^ Back To Top](#table-of-contents)
-
-## Keyboard Shortcuts
-
-### VS Code
+### VS Code Commands
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
 - `Ctrl + V` - Copy Line (Copy full line of code down once)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
 - `Ctrl + Shift + K` - Delete the current code line
 
-### Chrome
+### Chrome Shortcuts
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
 > [^ Back To Top](#table-of-contents)
