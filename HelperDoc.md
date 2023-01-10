@@ -3,19 +3,19 @@
 A document containing useful commands, set up, checklists and fixes for projects
 
 <p align="center">
-  <img src="https://i.imgur.com/Qtr66Z2.png" alt="Helper Logo" width="200"/>
+  <img src="https://i.imgur.com/Qtr66Z2.png" alt="Helper Logo" width="150"/>
 </p>
 
 ## Table of Contents
 
 - [Tool Commands/Shortcuts](#tool-commandsshortcuts)
 	- [Powershell Commands](#-powershell-commands)
-	- [Git Commands](#git-commands)
-	- [VS Code Commands](#vs-code-commands)
-	- [Chrome Shortcuts](#chrome-shortcuts)
+	- [Git Commands](#--git-commands)
+	- [VS Code Commands](#-vs-code-commands)
+	- [Chrome Shortcuts](#-chrome-shortcuts)
 - [Updating Versions](#updating-versions)
-	- [NPM and Yarn](#npm-and-yarn)
-	- [Node](#node)
+	- [NPM and Yarn](#-npm-and--yarn)
+	- [Node](#-node)
 - [Project Set Up](#project-set-up)
 	- [Decide on Architecture](#decide-on-architecture)
 		- [Front End Architecture](#front-end-architecture)
@@ -23,23 +23,23 @@ A document containing useful commands, set up, checklists and fixes for projects
 		- [Database](#database)
 		- [Hosting](#hosting)
 	- [Create the New App](#create-the-new-app)
-		- [CRA (Create React App)](#cra-create-react-app)
-		- [Vite](#vite)
-		- [Next.js](#nextjs)
-	- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github)
-	- [ESLint and Prettier Config](#eslint-and-prettier-config)
-	- [GitHub Workflows](#github-workflows)
-	- [Testing](#testing)
-	- [Deployment](#deployment)
+		- [CRA (Create React App)](#-cra-create-react-app)
+		- [Vite](#-vite)
+		- [Next.js](#-nextjs)
+	- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to--github)
+	- [ESLint and Prettier Config](#-eslint-and--prettier-config)
+	- [GitHub Workflows](#-github-workflows)
+	- [Testing](#-testing)
+	- [Deployment](#-deployment)
 	- [Documentation](#documentation)
 	- [Optional Extras](#optional-extras)
 - [Project Release Checklist](#project-release-checklist)
 	- [SEO and Meta Data](#seo-and-meta-data)
 	- [404 Page](#404-page)
 	- [Page Speed Testing](#page-speed-testing)
-	- [GitHub Information](#github-information)
+	- [GitHub Information](#-github-information)
 	- [Other Options](#other-options)
-- [Git Fixes](#git-fixes)
+- [Git Fixes](#--git-fixes)
 	- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
 	- [Clearing Secrets from History](#clearing-secrets-from-history)
 
@@ -55,7 +55,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `cd ~` - To change directory back to the root level
 - `cd ..` - To change directory back up one level
 
-### ![](https://i.imgur.com/2xve41Z.png) Git Commands
+### ![](https://i.imgur.com/2xve41Z.png)  Git Commands
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
@@ -199,7 +199,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > [^ Back To Top](#table-of-contents)
 
-### Initiate a ![](https://i.imgur.com/2xve41Z.png) Git Repository and link to ![](https://i.imgur.com/zD0C9oF.png) GitHub
+### Initiate a Git Repository and link to ![](https://i.imgur.com/zD0C9oF.png) GitHub
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -323,7 +323,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 > [^ Back To Top](#table-of-contents)
 
-## ![](https://i.imgur.com/2xve41Z.png) Git Fixes
+## ![](https://i.imgur.com/2xve41Z.png)  Git Fixes
 
 ### Error: Unable to load Commits. fatal: bad object desktop.ini
 
