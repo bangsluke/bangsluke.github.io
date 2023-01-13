@@ -73,6 +73,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `Ctrl + V` - Copy Line (Copy full line of code down once)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
 - `Ctrl + Shift + K` - Delete the current code line
+- `Alt + Up/Down` - Move the current line up or down
+- `Alt + Shift + Up/Down` - Copy the current line up or down
 
 ### ![](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
 - `Ctrl + Shift + J` - Open Chrome dev tools console
@@ -271,7 +273,7 @@ git push -u origin main
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment
-- Set up additional Netlify integrations (e.g. Lighthouse, Checklinks, HTML Validate). Link is [here](https://app.netlify.com/sites/dorkinians-mobile-stats/integrations) once deployed.
+- Set up additional Netlify integrations (e.g. Lighthouse, Checklinks, HTML Validate). Link is [here](https://app.netlify.com/sites/dorkinians-mobile-stats/integrations) once deployed. (!NOTE - Not yet got these working on a repo)
   - Must haves
     - LightHouse - Automatically run a Lighthouse audit on your website after every build.
     - Checklinks - Checklinks helps you keep all your asset references correct and avoid embarrassing broken links to your internal pages, or even to external pages you link out to.
