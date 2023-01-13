@@ -165,6 +165,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ### Create the New App
 
+### Boilerplate Code
+  - Consider using a boilerplate code to get started, as listed [here](https://todoist.com/showTask?id=6518989300&sync_id=6518989300)
 #### ![](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
   - `npx create-react-app my-app` - Create a new React app called "my-app"
   - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
@@ -262,6 +264,7 @@ git push -u origin main
 
 ### ![](https://i.imgur.com/BUzlvBh.png) Testing
 
+- Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
 - Set up testing throughout the application based on its requirements
 - [Testing Trophy and Testing Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
   - Static tests (ESLint, TypeScript) - Done automatically in VS Code e.g. typos and type errors
@@ -291,6 +294,10 @@ git push -u origin main
 
 ### Optional Extras
 
+- Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
+  - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
+  - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
+  - [General Design Inspiration](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
 - Web Analytics
   - Google Analytics
   - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
