@@ -294,6 +294,7 @@ git push -u origin main
 - Web Analytics
   - Google Analytics
   - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
+- Available [APIs](https://todoist.com/app/project/2305622709/task/6002402049)
 - Application Notifications
   - [ntfy](https://ntfy.sh/?ref=console.dev)
 > Note - for more, see "Coding Resources" Todoist project
