@@ -13,6 +13,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [Git Commands](#--git-commands)
 	- [VS Code Commands](#-vs-code-commands)
 	- [Chrome Shortcuts](#-chrome-shortcuts)
+	- [VBA Shortcuts](#-VBA-shortcuts)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#-npm-and--yarn)
 	- [Node](#-node)
@@ -78,6 +79,11 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ### ![](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
 - `Ctrl + Shift + J` - Open Chrome dev tools console
+
+### ![](https://i.imgur.com/TrsfWN1.png) VBA Shortcuts
+- `F5` - Run the current script
+- `F8` - Run the current line of code
+- `Ctrl + Y` - Delete the current code line
 
 > [^ Back To Top](#table-of-contents)
 
