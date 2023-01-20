@@ -28,6 +28,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 		- [Vite](#-vite)
 		- [Next.js](#-nextjs)
 	- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to--github)
+	- [Folder and File Structure](#folder-and-file-structure)
 	- [ESLint and Prettier Config](#-eslint-and--prettier-config)
 	- [GitHub Workflows](#-github-workflows)
 	- [Testing](#-testing)
@@ -43,7 +44,6 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Git Fixes](#--git-fixes)
 	- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
 	- [Clearing Secrets from History](#clearing-secrets-from-history)
-
 
 ## Tool Commands/Shortcuts
 
@@ -224,6 +224,57 @@ git push -u origin main
 - Protect the main branch from being pushed to directly
 - Create a develop branch
 - Add a .gitignore file to the root of the project
+
+### Folder and File Structure
+
+#### Folder Structure
+- Create a folder structure that makes sense for the project
+  - For a React project, have the following set up
+  > Note, this structure is based off of the [Bulletproof React](https://github.com/alan2207/bulletproof-react) project
+
+```
+src
+|
++-- /assets            # Assets folder can contain all the static files such as images, fonts, etc.
++-- /components        # Shared components used across the entire application
++-- /config            # All the global configuration, env variables etc. get exported from here and used in the app
++---- .env             # Environment variables
++-- /data              # Any stored data that is used across the application (my own addition)
++-- /features          # Feature based modules
++-- /hooks             # Shared hooks used across the entire application
++-- /lib               # Re-exporting different libraries preconfigured for the application
++-- /providers         # All of the application providers
++-- /routes            # Routes configuration
++-- /stores            # Global state stores
++-- /test              # Test utilities and mock server
++-- /types             # Base types used across the application
++-- /utils             # Shared utility functions
+```
+
+  - For a Next project, consider which folders are not needed, e.g. Routes would not be needed as Next handles routing via the pages folder
+  - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
+    - [Folder Structure Command.md](https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md)
+
+#### File Set Up
+
+- Also, it is best practice to have a certain few files within your project
+> Note, these files are already created in the above command
+  - README.md file in the root of the project
+    `echo "# Project" > README.md`
+  - An empty .env file in the root of the project
+    ```
+    echo "# Add an API Key" > .env
+    echo "API_KEY=AddKey" >> .env
+    ```
+  - .gitignore file in the root of the project
+    ```
+    echo "# local env files" > .gitignore
+    echo ".env" >> .gitignore
+    ```
+    - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
+
+
+
 
 ### ![](https://i.imgur.com/ebsMde1.png) ESLint and ![](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
 
