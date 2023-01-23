@@ -33,6 +33,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [GitHub Workflows](#-github-workflows)
 	- [Testing](#-testing)
 	- [Deployment](#-deployment)
+	- [Security](#security)
 	- [Documentation](#documentation)
 	- [Optional Extras](#optional-extras)
 - [Project Release Checklist](#project-release-checklist)
@@ -273,9 +274,6 @@ src
     ```
     - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
 
-
-
-
 ### ![](https://i.imgur.com/ebsMde1.png) ESLint and ![](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
@@ -342,7 +340,13 @@ src
     - Image Optim - Optimize images as part of your Netlify build process.
     - Is Website Vulnerable - A Netlify plugin that uses Snyk to test for security vulnerabilities in a website's JavaScript libraries.
     - Minify HTML - A plugin to add HTML minification as a post-processing optimisation in Netlify.
-    - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries.
+    - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
+
+### Security
+
+- Set up security scanning via Snyk
+  - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
+  - Check and close off all vulnerabilities
 
 ### Documentation
 
