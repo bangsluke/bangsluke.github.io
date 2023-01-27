@@ -50,12 +50,28 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ### ![](https://i.imgur.com/wBg7htx.png) Powershell Commands
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
-- `pwd` - To print the current directory
-- `ls` - To list all options in the current folder
-- `ls -la` - List everything in current directory
-- `cd xxx` - To change directory to the next typed characters
-- `cd ~` - To change directory back to the root level
-- `cd ..` - To change directory back up one level
+- Navigating Folders and Files
+  - `pwd` - To print the current directory
+  - `ls` - To list all options in the current folder
+  - `ls -la` - List everything in current directory
+  - `cd xxx` - To change directory to the next typed characters
+  - `cd ~` - To change directory back to the root level
+  - `cd ..` - To change directory back up one level
+  - `cat xxx` - To print the contents of a file
+  - `history` - To print the history of commands
+- Modifying Files
+  - `mkdir xxx` - To create a new folder with the name of the next typed characters
+  - `touch xxx` - To create a new file with the name of the next typed characters
+  - `code xxx` - To open a file in VS Code
+  - `cp xxx yyy` - To copy a file from xxx to yyy
+  - `mv xxx yyy` - To move a file from xxx to yyy
+  - `rm xxx` - To remove a file
+  - `>` - To overwrite a file, e.g. `echo "Hello World" > hello.txt` will overwrite the file hello.txt with "Hello World"
+  - `>>` - To append a call to a file, e.g. `echo "Hello World" >> hello.txt` will append "Hello World" to the end of the file hello.txt
+- Aliases
+  - To open your bash alias file, navigate to the root folder using `cd ~` and then open using `code .bash_aliases`. This should open the file up in VS Code.
+  - `alias` - To print all aliases
+  - `alias xxx="yyy"` - To create a new alias, e.g. `alias g="git"` will create an alias for git
 
 ### ![](https://i.imgur.com/2xve41Z.png)  Git Commands
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
