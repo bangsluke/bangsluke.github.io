@@ -23,6 +23,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 		- [Back End Architecture](#back-end-architecture)
 		- [Database](#database)
 		- [Hosting](#hosting)
+    - [Mobile Architecture](#mobile-architecture)
 	- [Create the New App](#create-the-new-app)
 		- [CRA (Create React App)](#-cra-create-react-app)
 		- [Vite](#-vite)
@@ -131,6 +132,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 ### Decide on Architecture
 
+If it is just a web app to be built, consider the below Front End, Back End and Database Architecture options. If it also needs to be a mobile app, consider the below Mobile Architecture options.
+
 #### Front End Architecture
 
 - Considerations:
@@ -185,6 +188,11 @@ A document containing useful commands, set up, checklists and fixes for projects
   - DigitalOcean (cheap)
   - Amazon RDS (expensive)
   - BlueHost (basic)
+
+#### Mobile Architecture
+
+- Expo - https://expo.io/
+- Capacitor.js - https://capacitorjs.com/
 
 ### Create the New App
 
@@ -375,6 +383,8 @@ src
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
   - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
   - [General Design Inspiration](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
+  - [Zustand](https://github.com/pmndrs/zustand) - State management library
+  - [Framer Motion](https://www.framer.com/motion/) - Animation library
 - Web Analytics
   - Google Analytics
   - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
