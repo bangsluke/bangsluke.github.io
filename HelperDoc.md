@@ -89,7 +89,6 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `Ctrl + P` - Open the file search
 - `Ctrl + Shift + P` - Open the command palette
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
-- `Ctrl + V` - Copy Line (Copy full line of code down once)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
 - `Ctrl + Shift + K` - Delete the current code line
 - `Alt + Up/Down` - Move the current line up or down
@@ -382,6 +381,7 @@ src
 - Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
   - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
+  - [React Error Catching](https://www.developerway.com/posts/how-to-handle-errors-in-react?utm_source=reactdigest&utm_medium&utm_campaign=1527)
   - [General Design Inspiration](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
   - [Zustand](https://github.com/pmndrs/zustand) - State management library
   - [Framer Motion](https://www.framer.com/motion/) - Animation library
