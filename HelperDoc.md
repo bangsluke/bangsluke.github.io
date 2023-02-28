@@ -382,6 +382,7 @@ src
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
   - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
   - [React Error Catching](https://www.developerway.com/posts/how-to-handle-errors-in-react?utm_source=reactdigest&utm_medium&utm_campaign=1527)
+  - [Why Did You Render](https://www.npmjs.com/package/@welldone-software/why-did-you-render)
   - [General Design Inspiration](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
   - [Zustand](https://github.com/pmndrs/zustand) - State management library
   - [Framer Motion](https://www.framer.com/motion/) - Animation library
