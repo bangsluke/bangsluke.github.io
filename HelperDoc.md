@@ -378,6 +378,18 @@ src
 
 ### Optional Extras
 
+- Recommended Libraries
+  - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
+    - `import { v4 as uuid } from "uuid";`
+    - Then use `key: uuid(),`
+  - React Query - `yarn add react-query` - [https://react-query.tanstack.com/](https://react-query.tanstack.com/)
+  - Material UI - Component Library - `yarn add @material-ui/core` - [https://material-ui.com/](https://material-ui.com/)
+  - Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
+  - Animations
+    - Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
+    - AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
+    - React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
+    - Animista - Animation library (All CSS) - https://animista.net/
 - Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
   - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
