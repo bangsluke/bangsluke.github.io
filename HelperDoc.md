@@ -419,6 +419,12 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - Set up meta tags in the index.html file
   - [metatags.io](https://metatags.io/)
 
+### Favicon
+
+- Create a favicon for the site and for all applications that may access the site
+  - [realfavicongenerator.net](https://realfavicongenerator.net/)
+  > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
+
 ### 404 Page
 
 - Create a 404 page for catching routing errors
