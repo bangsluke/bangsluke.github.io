@@ -439,6 +439,11 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [HTML & CSS Features, Tips For a 10x fast Page Loading Speed](https://levelup.gitconnected.com/html-css-features-tips-for-a-10x-fast-page-loading-speed-5fb6c2d88df8)
   - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
 
+### Other General Tests
+
+- Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (https://calvinke.com/seo/fixed-header-anchor-css/)
+- Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
+
 ### ![](https://i.imgur.com/zD0C9oF.png) GitHub Information
 
 - Check that the GitHub repo has all the details that it needs, such as:
