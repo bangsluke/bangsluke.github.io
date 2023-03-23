@@ -204,15 +204,11 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - `npm start` - Start the React app
   - `npm run build` - Build the React app for production
 #### ![](https://i.imgur.com/smpppHt.png) Vite
-  - JavaScript and npm
-    - `npm create vite@latest my-app --template react` - Create a new React app called "my-app"
-    > Note - npm 7+, extra double-dash is needed: `npm create vite@latest my-app -- --template react`
-    - `cd my-app` - Change directory to the new React app
-    - `npm install` - Install the dependencies
-    - `npm run dev` - Start the React app
-    - `npm run build` - Build the React app for production
-  - Typescript and yarn
-	- `yarn create vite@latest my-app --template react-ts` - Create a new React app called "my-app" with TypeScript
+  - To use Vite with Yarn and TypeScript do the following;
+    - `yarn create vite my-app --template react-ts`
+    - Then follow the instructions in the terminal
+      - Note: For "package name" use the name of the app
+    - For other possible Vite options see [here](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
 	- `cd my-app` - Change directory to the new React app
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
