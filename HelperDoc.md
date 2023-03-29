@@ -440,6 +440,26 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - Optimize Your Bundle
     - Manage Third-Party Scripts
   - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
+  - [Senior Engineering Strategies for Advanced React and TypeScript](https://asimzaidi.medium.com/senior-engineering-strategies-for-advanced-react-and-typescript-9d7aa8a07fd8)
+    - Specifically look at the Performance section for the LazyLoadedComponent
+
+## Framework Specific Checks
+
+- If using Next.js
+  - [Advanced Next JS Concepts](https://blog.devgenius.io/advanced-next-js-concepts-8439a8752597)
+  - Make sure to optimize images using next/image. e.g.
+    ```
+    import Image from 'next/image'
+    <Image
+        src="/images/my-image.jpg"
+        alt="My Image"
+        width={500}
+        height={500}
+        loading="lazy"
+      />
+    ```
+  - Add Next.js Analytics (see section 4.d of the above article)
+    - https://nextjs.org/analytics
 
 ### Other General Tests
 
