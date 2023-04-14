@@ -16,6 +16,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [VBA Shortcuts](#-VBA-shortcuts)
 - [Python](#python)
   - [Installing Python](#installing-python)
+  - [Python Scripts](#python-scripts)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#-npm-and--yarn)
 	- [Node](#-node)
@@ -106,7 +107,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > [^ Back To Top](#table-of-contents)
 
-## Python
+## ![](https://i.imgur.com/PbuJx5s.png) Python
 
 ### Installing Python
 
@@ -115,6 +116,12 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Set Python Path](https://stackoverflow.com/a/47808351)
 - Install required packages, e.g;
   - `pip install pyautogui`
+
+### Python Scripts
+
+To see my Python scripts, check out my [Python Learning](https://github.com/bangsluke/python-learning) repo.
+
+This contains basic scripts detailing how to use Python to automate tasks and describing basic syntax.
 
 
 > [^ Back To Top](#table-of-contents)
