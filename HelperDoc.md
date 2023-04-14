@@ -14,6 +14,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [VS Code Commands](#-vs-code-commands)
 	- [Chrome Shortcuts](#-chrome-shortcuts)
 	- [VBA Shortcuts](#-VBA-shortcuts)
+- [Python](#python)
+  - [Installing Python](#installing-python)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#-npm-and--yarn)
 	- [Node](#-node)
