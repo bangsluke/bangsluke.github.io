@@ -104,6 +104,19 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > [^ Back To Top](#table-of-contents)
 
+## Python
+
+### Installing Python
+
+- [Download Python](https://www.python.org/downloads/)
+- [Install pip](https://pip.pypa.io/en/stable/installation/)
+- [Set Python Path](https://stackoverflow.com/a/47808351)
+- Install required packages, e.g;
+  - `pip install pyautogui`
+
+
+> [^ Back To Top](#table-of-contents)
+
 ## Updating Versions
 
 ### ![](https://i.imgur.com/ufPLPqy.png) NPM and ![](https://i.imgur.com/IXZDNL8.png) Yarn
