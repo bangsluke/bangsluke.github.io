@@ -494,6 +494,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - Check the speed of the app and improve where possible
   - Use Chrome DevTools LightHouse tool
   - [GTmetrix](https://gtmetrix.com/)
+  - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
   - [HTML & CSS Features, Tips For a 10x fast Page Loading Speed](https://levelup.gitconnected.com/html-css-features-tips-for-a-10x-fast-page-loading-speed-5fb6c2d88df8)
   - [Low-Hanging Web Performance Fruits: A Cheat Sheet](https://betterprogramming.pub/low-hanging-web-performance-fruits-a-cheat-sheet-3aa1d338b6c1)
     - Optimize Your Assets
