@@ -377,9 +377,10 @@ src
   - Example: `VITE_API_KEY=1234567890`
   - You can then use the variable in the code as `import.meta.env.VITE_API_KEY`
   - [See this article](https://vitejs.dev/guide/env-and-mode.html#env-files)
-- For Next.JS, you can create .env variables with any name (no prefix needed) and they will be available in the browser
+- For Next.JS;
   - Example: `API_KEY=1234567890`
-  - You can then use the variable in the code as `process.env.API_KEY`
+  - If you're just working in Node.JS, you can then use the variable in the code as `process.env.API_KEY`
+  - If you're working in the browser, you have to prefix the variable in the code as `process.env.NEXT_PUBLIC_API_KEY`
   - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
 
 > References
