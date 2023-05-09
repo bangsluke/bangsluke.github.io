@@ -1,4 +1,24 @@
 {
-	"cSpell.ignoreWords": ["Svgj", "Tmetrix", "Zustand", "frontendchecklist", "metatags"],
-	"cSpell.words": ["Checklinks", "ntfy", "Optim", "Postgress", "preconfigured", "Snyk", "Supebase", "Todoist"]
+  "cSpell.ignoreWords": [
+    "Animista",
+    "Svgj",
+    "Tmetrix",
+    "Toastify",
+    "WOODHAM",
+    "Zustand",
+    "frontendchecklist",
+    "metatags",
+    "realfavicongenerator",
+    "uuidv"
+  ],
+  "cSpell.words": [
+    "Checklinks",
+    "ntfy",
+    "Optim",
+    "Postgress",
+    "preconfigured",
+    "Snyk",
+    "Supebase",
+    "Todoist"
+  ]
 }
