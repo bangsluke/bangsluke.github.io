@@ -384,7 +384,7 @@ src
   - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
 
 > References
->
+
 > 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
 
 ### ![](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
@@ -424,7 +424,7 @@ src
     - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
 
 ### Security
-
+r
 - Set up security scanning via Snyk
   - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
   - Check and close off all vulnerabilities
