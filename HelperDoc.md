@@ -21,7 +21,7 @@ A document containing useful commands, set up, checklists and fixes for projects
   - [Installing Python](#installing-python)
   - [Python Scripts](#python-scripts)
 - [Updating Versions](#updating-versions)
-	- [NPM and Yarn](#npm-and--yarn)
+	- [NPM and Yarn](#npm-and-yarn)
 	- [Yarn Packages](#yarn-packages)
 	- [Node](#node)
 - [Project Set Up](#project-set-up)
@@ -173,6 +173,16 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
+
+### ![](https://i.imgur.com/IXZDNL8.png) Yarn Packages
+- [Link](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/) to all documentation
+- `yarn upgrade` - Upgrade all packages to their latest version
+- `yarn upgrade left-pad` - Upgrade a specific package to its latest version
+- `yarn upgrade left-pad@^1.0.0` - Upgrade a specific package to a specific version
+- `yarn upgrade left-pad grunt` - Upgrade multiple packages to their latest version
+- `yarn upgrade @angular` - Upgrade all packages with the name @angular to their latest version
+- `yarn upgrade --latest` - Upgrade all packages to their latest version
+- `yarn upgrade left-pad --latest` - Upgrade a specific package to its latest version
 
 ### ![](https://i.imgur.com/EvX1vFR.png) Node
 - `node --version` - Check the current installed version of node
