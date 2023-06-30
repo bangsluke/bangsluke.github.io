@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/ibIuKyP.png" alt="bangsluke Logo" width="200" style="border-radius: 50%;"/>
 </p>
 
-# Homepage
+## Homepage
 
 A custom built site homepage and new browser tab
 

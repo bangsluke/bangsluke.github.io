@@ -9,38 +9,38 @@ A document containing useful commands, set up, checklists and fixes for projects
 ## Table of Contents
 
 - [Tool Commands/Shortcuts](#tool-commandsshortcuts)
-	- [Powershell Commands](#powershell-commands)
-	- [Git Commands](#git-commands)
-	- [VS Code Commands](#vs-code-commands)
-	- [Chrome Shortcuts](#chrome-shortcuts)
-	- [VBA Shortcuts](#VBA-shortcuts)
-- [Open AI and ChatGPT](#open-ai-and-chatgpt)
+	- [Powershell Commands](#powershell-logo-powershell-commands)
+	- [Git Commands](#git-logo-git-commands)
+	- [VS Code Commands](#vs-code-logo-vs-code-commands)
+	- [Chrome Shortcuts](#chrome-logo-chrome-shortcuts)
+	- [VBA Shortcuts](#vba-logo-vba-shortcuts)
+- [Open AI and ChatGPT](#openai-logo-open-ai-and-chatgpt)
   - [OpenAI Links](#openai-links)
   - [ChatGPT Prompts](#chatgpt-prompts)
-- [Python](#python)
+- [Python](#python-logo-python)
   - [Installing Python](#installing-python)
   - [Python Scripts](#python-scripts)
 - [Updating Versions](#updating-versions)
-	- [NPM and Yarn](#npm-and-yarn)
-	- [Yarn Packages](#yarn-packages)
-	- [Node](#node)
+	- [NPM and Yarn](#npm-logo-npm-and-yarn-logo-yarn)
+	- [Yarn Packages](#yarn-logo-yarn-packages)
+	- [Node](#node-logo-node)
 - [Project Set Up](#project-set-up)
 	- [Decide on Architecture](#decide-on-architecture)
 		- [Front End Architecture](#front-end-architecture)
 		- [Back End Architecture](#back-end-architecture)
 		- [Database](#database)
 		- [Hosting](#hosting)
-    - [Mobile Architecture](#mobile-architecture)
+		- [Mobile Architecture](#mobile-architecture)
 	- [Create the New App](#create-the-new-app)
-		- [CRA (Create React App)](#cra-create-react-app)
-		- [Vite](#vite)
-		- [Next.js](#nextjs)
-	- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to--github)
+		- [CRA (Create React App)](#react-logo-cra-create-react-app)
+		- [Vite](#vite-logo-vite)
+		- [Next.js](#nextjs-logo-nextjs)
+	- [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github-logo-github)
 	- [Folder and File Structure](#folder-and-file-structure)
-	- [ESLint and Prettier Config](#eslint-and-prettier-config)
-	- [GitHub Workflows](#github-workflows)
-	- [Testing](#testing)
-	- [Deployment](#deployment)
+	- [ESLint and Prettier Config](#eslint-logo-eslint-and-prettier-logo-prettier-config)
+	- [GitHub Workflows](#github-logo-github-workflows)
+	- [Testing](#cypress-logo-testing)
+	- [Deployment](#netlify-logo-deployment)
 	- [Security](#security)
 	- [Documentation](#documentation)
 	- [Optional Extras](#optional-extras)
@@ -48,15 +48,16 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [SEO and Meta Data](#seo-and-meta-data)
 	- [404 Page](#404-page)
 	- [Page Speed Testing](#page-speed-testing)
-	- [GitHub Information](#github-information)
+	- [GitHub Information](#github-logo-github-information)
 	- [Other Options](#other-options)
-- [Git Fixes](#git-fixes)
+- [Git Fixes](#git-logo-git-fixes)
 	- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
 	- [Clearing Secrets from History](#clearing-secrets-from-history)
 
 ## Tool Commands/Shortcuts
 
-### ![](https://i.imgur.com/wBg7htx.png) Powershell Commands
+### ![Powershell Logo](https://i.imgur.com/wBg7htx.png) Powershell Commands
+
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - Navigating Folders and Files
   - `pwd` - To print the current directory
@@ -81,7 +82,8 @@ A document containing useful commands, set up, checklists and fixes for projects
   - `alias` - To print all aliases
   - `alias xxx="yyy"` - To create a new alias, e.g. `alias g="git"` will create an alias for git
 
-### ![](https://i.imgur.com/2xve41Z.png)  Git Commands
+### ![Git Logo](https://i.imgur.com/2xve41Z.png) Git Commands
+
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
 - `git remote add origin https://github.com/bangsluke/hacker-stories.git` - Add a GitHub repository
@@ -92,7 +94,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
 
-### ![](https://i.imgur.com/2lK00uT.png) VS Code Commands
+### ![VS Code Logo](https://i.imgur.com/2lK00uT.png) VS Code Commands
+
 - `Ctrl + P` - Open the file search
 - `Ctrl + Shift + P` - Open the command palette
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
@@ -101,18 +104,19 @@ A document containing useful commands, set up, checklists and fixes for projects
 - `Alt + Up/Down` - Move the current line up or down
 - `Alt + Shift + Up/Down` - Copy the current line up or down
 
-### ![](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
+### ![Chrome Logo](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
+
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
-### ![](https://i.imgur.com/TrsfWN1.png) VBA Shortcuts
+### ![VBA Logo](https://i.imgur.com/TrsfWN1.png) VBA Shortcuts
+
 - `F5` - Run the current script
 - `F8` - Run the current line of code
 - `Ctrl + Y` - Delete the current code line
 
 > [^ Back To Top](#table-of-contents)
 
-
-## ![](https://i.imgur.com/KkOSP3l.png) Open AI and ChatGPT
+## ![OpenAI Logo](https://i.imgur.com/KkOSP3l.png) Open AI and ChatGPT
 
 ### OpenAI Links
 
@@ -146,8 +150,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 
 > [^ Back To Top](#table-of-contents)
 
-
-## ![](https://i.imgur.com/PbuJx5s.png) Python
+## ![Python Logo](https://i.imgur.com/PbuJx5s.png) Python
 
 ### Installing Python
 
@@ -163,18 +166,19 @@ To see my Python scripts, check out my [Python Learning](https://github.com/bang
 
 This contains basic scripts detailing how to use Python to automate tasks and describing basic syntax.
 
-
 > [^ Back To Top](#table-of-contents)
 
 ## Updating Versions
 
-### ![](https://i.imgur.com/ufPLPqy.png) NPM and ![](https://i.imgur.com/IXZDNL8.png) Yarn
+### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM and ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
+
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
-### ![](https://i.imgur.com/IXZDNL8.png) Yarn Packages
+### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn Packages
+
 - [Link](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/) to all documentation
 - `yarn upgrade` - Upgrade all packages to their latest version
 - `yarn upgrade left-pad` - Upgrade a specific package to its latest version
@@ -183,13 +187,17 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 - `yarn upgrade @angular` - Upgrade all packages with the name @angular to their latest version
 - `yarn upgrade --latest` - Upgrade all packages to their latest version
 - `yarn upgrade left-pad --latest` - Upgrade a specific package to its latest version
+- `yarn remove left-pad` - Removes a specific package
 
-### ![](https://i.imgur.com/EvX1vFR.png) Node
+### ![Node Logo](https://i.imgur.com/EvX1vFR.png) Node
+
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
-- `nvm install 8.1.0` - Install a specific version of Node (check https://nodejs.org/en/ for the latest version)
+- `nvm install 8.1.0` - Install a specific version of Node (check <https://nodejs.org/en/> for the latest version)
+
 > Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
+
 - `nvm use 4.2` - Switch between the installed versions on your machine
 
 > References
@@ -262,30 +270,37 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 #### Mobile Architecture
 
-- Expo - https://expo.io/
-- Capacitor.js - https://capacitorjs.com/
+- Expo - <https://expo.io/>
+- Capacitor.js - <https://capacitorjs.com/>
 
 ### Create the New App
 
 ### Boilerplate Code
+
   - Consider using a boilerplate code to get started, as listed [here](https://todoist.com/showTask?id=6518989300&sync_id=6518989300)
-#### ![](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
+
+#### ![React Logo](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
+
   - `npx create-react-app my-app` - Create a new React app called "my-app"
   - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
   - `cd my-app` - Change directory to the new React app
   - `npm start` - Start the React app
   - `npm run build` - Build the React app for production
-#### ![](https://i.imgur.com/smpppHt.png) Vite
+
+#### ![Vite Logo](https://i.imgur.com/smpppHt.png) Vite
+
   - To use Vite with Yarn and TypeScript do the following;
     - `yarn create vite my-app --template react-ts`
     - Then follow the instructions in the terminal
       - Note: For "package name" use the name of the app
     - For other possible Vite options see [here](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
-	- `cd my-app` - Change directory to the new React app
+  - `cd my-app` - Change directory to the new React app
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
-#### ![](https://i.imgur.com/OGtWPsT.png) Next.JS
+
+#### ![NextJS Logo](https://i.imgur.com/OGtWPsT.png) Next.JS
+
   - JavaScript and npm
 	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
 	- `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
@@ -295,23 +310,25 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - Typescript and yarn
     - `yarn create next-app --typescript` - Create a new Next.JS app with TypeScript (name will be requested)
     - `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
-	- `yarn` - Install the dependencies
+  - `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
 
 > [^ Back To Top](#table-of-contents)
 
-### Initiate a Git Repository and link to ![](https://i.imgur.com/zD0C9oF.png) GitHub
+### Initiate a Git Repository and link to ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
-```
+
+```powershell
 git init
 git remote add origin https://github.com/bangsluke/hacker-stories.git
 git branch -M main
 git commit -m "Initial commit"
 git push -u origin main
 ```
+
 - Make the repo private or public based on the requirements
 - Protect the main branch from being pushed to directly
 - Create a develop branch
@@ -320,11 +337,12 @@ git push -u origin main
 ### Folder and File Structure
 
 #### Folder Structure
+
 - Create a folder structure that makes sense for the project
   - For a React project, have the following set up
   > Note, this structure is based off of the [Bulletproof React](https://github.com/alan2207/bulletproof-react) project
 
-```
+```n/a
 src
 |
 +-- /assets            # Assets folder can contain all the static files such as images, fonts, etc.
@@ -350,22 +368,28 @@ src
 #### File Set Up
 
 - Also, it is best practice to have a certain few files within your project
+
 > Note, these files are already created in the above command
+
   - README.md file in the root of the project
     `echo "# Project" > README.md`
   - An empty .env file in the root of the project
-    ```
+
+    ```powershell
     echo "# Add an API Key" > .env
     echo "API_KEY=AddKey" >> .env
     ```
+
   - .gitignore file in the root of the project
-    ```
+
+    ```powershell
     echo "# local env files" > .gitignore
     echo ".env" >> .gitignore
     ```
+
     - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
 
-### ![](https://i.imgur.com/ebsMde1.png) ESLint and ![](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
+### ![ESLint Logo](https://i.imgur.com/ebsMde1.png) ESLint and ![Prettier Logo](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
@@ -398,7 +422,7 @@ src
 
 > 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
 
-### ![](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
+### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
@@ -409,7 +433,7 @@ src
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 
-### ![](https://i.imgur.com/BUzlvBh.png) Testing
+### ![Cypress Logo](https://i.imgur.com/BUzlvBh.png) Testing
 
 - Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
 - Set up testing throughout the application based on its requirements
@@ -419,7 +443,7 @@ src
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Cypress)
 
-### ![](https://i.imgur.com/reePUUY.png) Deployment
+### ![Netlify Logo](https://i.imgur.com/reePUUY.png) Deployment
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment
@@ -459,7 +483,7 @@ r
     - Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
     - AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
     - React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
-    - Animista - Animation library (All CSS) - https://animista.net/
+    - Animista - Animation library (All CSS) - <https://animista.net/>
     - [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
 - Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
@@ -480,8 +504,8 @@ r
 - Available [APIs](https://todoist.com/showTask?id=6002402049&sync_id=6506084811)
 - Application Notifications
   - [ntfy](https://ntfy.sh/?ref=console.dev)
-> Note - for more, see "Coding Resources" Todoist project
 
+> Note - for more, see "Coding Resources" Todoist project
 
 > [^ Back To Top](#table-of-contents)
 
@@ -530,7 +554,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - If using Next.js
   - [Advanced Next JS Concepts](https://blog.devgenius.io/advanced-next-js-concepts-8439a8752597)
   - Make sure to optimize images using next/image. e.g.
-    ```
+
+    ```javascript
     import Image from 'next/image'
     <Image
         src="/images/my-image.jpg"
@@ -540,15 +565,16 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
         loading="lazy"
       />
     ```
+
   - Add Next.js Analytics (see section 4.d of the above article)
-    - https://nextjs.org/analytics
+    - <https://nextjs.org/analytics>
 
 ### Other General Tests
 
-- Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (https://calvinke.com/seo/fixed-header-anchor-css/)
+- Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (<https://calvinke.com/seo/fixed-header-anchor-css/>)
 - Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
 
-### ![](https://i.imgur.com/zD0C9oF.png) GitHub Information
+### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Information
 
 - Check that the GitHub repo has all the details that it needs, such as:
   - About Section
@@ -579,7 +605,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 > [^ Back To Top](#table-of-contents)
 
-## ![](https://i.imgur.com/2xve41Z.png)  Git Fixes
+## ![Git Logo](https://i.imgur.com/2xve41Z.png) Git Fixes
 
 ### Error: Unable to load Commits. fatal: bad object desktop.ini
 
@@ -603,14 +629,12 @@ Summary: Bad desktop.ini file that is created by Google Drive. Needs to be delet
 7. Continue for all files that need to be deleted
 8. Reload the git graph extension and the error should have gone
 
-
 > References
 >
 > 1. [Explanation Link](https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/)
 > 2. [Show Hidden Files](https://www.computerhope.com/issues/ch001464.htm)
 > 3. [Remove Attributes from Files](https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad)
 > 4. [Delete All Hidden Files](https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/)
-
 
 ### Clearing Secrets from History
 
