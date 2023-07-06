@@ -227,6 +227,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 - Considerations:
   - Need to investigate
+  - [Backend development is more than writing endpoints for frontend](https://dev.to/this-is-learning/backend-development-is-more-than-writing-endpoints-for-frontend-gl1)
 - Options:
   - ExpressJS
   - NodeJS
