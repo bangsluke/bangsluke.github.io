@@ -534,12 +534,10 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 ### Page Speed Testing
 
-- Check the speed of the app and improve where possible
-  - Use Chrome DevTools LightHouse tool
-  - [GTmetrix](https://gtmetrix.com/)
-  - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
-  - [HTML & CSS Features, Tips For a 10x fast Page Loading Speed](https://levelup.gitconnected.com/html-css-features-tips-for-a-10x-fast-page-loading-speed-5fb6c2d88df8)
-  - [Responsive Images](https://blog.webdevsimplified.com/2023-05/responsive-images/)
+- Optimise the site for speed
+  - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
+    - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
+    - See ways to optimize runtimes - [Link](https://reacthandbook.dev/react-performance-optimization#runtimes-optimize)
   - [Low-Hanging Web Performance Fruits: A Cheat Sheet](https://betterprogramming.pub/low-hanging-web-performance-fruits-a-cheat-sheet-3aa1d338b6c1)
     - Optimize Your Assets
     - Cache Your Assets
@@ -549,6 +547,14 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
   - [Senior Engineering Strategies for Advanced React and TypeScript](https://asimzaidi.medium.com/senior-engineering-strategies-for-advanced-react-and-typescript-9d7aa8a07fd8)
     - Specifically look at the Performance section for the LazyLoadedComponent
+  - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
+- Check the speed of the app and improve where possible
+  - Use <https://www.webpagetest.org/> to test the speed of the site
+    - Mark the tick box to Audit using Lighthouse
+    - Review the results and make improvements based on the potential opportunities the tool suggests
+  - Other Speed Testing Tools
+    - Use Chrome DevTools LightHouse tool
+    - [GTmetrix](https://gtmetrix.com/)
 
 ## Framework Specific Checks
 
