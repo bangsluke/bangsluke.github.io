@@ -20,6 +20,9 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Python](#python-logo-python)
   - [Installing Python](#installing-python)
   - [Python Scripts](#python-scripts)
+- [Package Managers](#package-managers)
+  - [NPM](#npm-logo-npm)
+  - [Yarn](#yarn-logo-yarn)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#npm-logo-npm-and-yarn-logo-yarn)
 	- [Yarn Packages](#yarn-logo-yarn-packages)
@@ -168,16 +171,34 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 > [^ Back To Top](#table-of-contents)
 
-## Updating Versions
+## Package Managers
 
-### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM and ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
+### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
+
+- `npm i` - Can be used as a shortcut for `npm install`
+- `npm install` - Install all packages
+- `npm install <package>` - Install a package
+- `npm install <package> --save-dev` - Install a package as a dev dependency
+- `npm install <package> --global` - Install a package globally
+
+### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
+
+- `yarn install` - Install all packages
+- `yarn add <package>` - Install a package
+- `yarn add <package> --dev` - Install a package as a dev dependency
+
+> [^ Back To Top](#table-of-contents)
+
+### Updating Versions
+
+#### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM and ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
-### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn Packages
+#### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn Packages
 
 - [Link](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/) to all documentation
 - `yarn upgrade` - Upgrade all packages to their latest version
@@ -189,7 +210,7 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 - `yarn upgrade left-pad --latest` - Upgrade a specific package to its latest version
 - `yarn remove left-pad` - Removes a specific package
 
-### ![Node Logo](https://i.imgur.com/EvX1vFR.png) Node
+#### ![Node Logo](https://i.imgur.com/EvX1vFR.png) Node
 
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
@@ -534,6 +555,10 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 ### Page Speed Testing
 
+- Reduce your image sizes
+  - Convert all of your jpg and png files to smaller image types such as webp
+- Lazy Load
+  - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
 - Optimise the site for speed
   - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
