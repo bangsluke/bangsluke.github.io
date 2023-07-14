@@ -175,6 +175,12 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
 
+- `npm i` - Can be used as a shortcut for `npm install`
+- `npm install` - Install all packages
+- `npm install <package>` - Install a package
+- `npm install <package> --save-dev` - Install a package as a dev dependency
+- `npm install <package> --global` - Install a package globally
+
 ### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
 - `yarn install` - Install all packages
