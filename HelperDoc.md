@@ -175,11 +175,17 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
 
+- `npm --version` - Check the current installed version of npm
+- `npm init` - Create a new package.json file
 - `npm i` - Can be used as a shortcut for `npm install`
 - `npm install` - Install all packages
 - `npm install <package>` - Install a package
 - `npm install <package> --save-dev` - Install a package as a dev dependency
 - `npm install <package> --global` - Install a package globally
+- `npm uninstall <package>` - Uninstall a package
+- `npm update` - Update all packages
+- `npm outdated` - Check for outdated packages
+- `npm run <script>` - Run a script from the package.json file
 
 ### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
