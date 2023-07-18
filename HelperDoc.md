@@ -175,6 +175,8 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
 
+For more commands, see this [cheatsheet](https://devhints.io/npm).
+
 - `npm --version` - Check the current installed version of npm
 - `npm init` - Create a new package.json file
 - `npm i` - Can be used as a shortcut for `npm install`
@@ -189,9 +191,14 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
-- `yarn install` - Install all packages
-- `yarn add <package>` - Install a package
+For more commands, see this [cheatsheet](https://devhints.io/yarn).
+
+- `yarn --version` - Check the current installed version of yarn
+- `yarn init` - Create a new package.json file
+- `yarn` - Install all packages defined in package.json - same as `npm install`
+- `yarn add <package>` - Install a package - same as `npm install <package>`
 - `yarn add <package> --dev` - Install a package as a dev dependency
+- `yarn upgrade` - Update all packages - same as `npm update`
 
 > [^ Back To Top](#table-of-contents)
 
