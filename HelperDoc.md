@@ -44,7 +44,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [GitHub Workflows](#github-logo-github-workflows)
 	- [Testing](#cypress-logo-testing)
 	- [Deployment](#netlify-logo-deployment)
-	- [Security](#security)
+	- [Security and Authentication](#security-and-authentication)
 	- [Documentation](#documentation)
 	- [Optional Extras](#optional-extras)
 - [Project Release Checklist](#project-release-checklist)
@@ -493,11 +493,15 @@ src
     - Minify HTML - A plugin to add HTML minification as a post-processing optimisation in Netlify.
     - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
 
-### Security
+### Security and Authentication
 
-- Set up security scanning via Snyk
+- Set up repository security scanning via Snyk
   - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
   - Check and close off all vulnerabilities
+
+- For authentication, consider using the following resources;
+  - [Logto Auth](https://logto.io/?ref=console)
+  - [Firebase](https://firebase.google.com/)
 
 ### Documentation
 
