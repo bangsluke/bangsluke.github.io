@@ -28,6 +28,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [Yarn Packages](#yarn-logo-yarn-packages)
 	- [Node](#node-logo-node)
 - [Project Set Up](#project-set-up)
+  - [Inspiration](#inspiration)
 	- [Decide on Architecture](#decide-on-architecture)
 		- [Front End Architecture](#front-end-architecture)
 		- [Back End Architecture](#back-end-architecture)
@@ -242,6 +243,10 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 > [^ Back To Top](#table-of-contents)
 
 ## Project Set Up
+
+### Inspiration
+
+For inspiration for projects, check out the following resources on the `Coding Resources` - [`Design UI_UX Links` Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
 
 ### Decide on Architecture
 
