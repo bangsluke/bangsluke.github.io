@@ -28,6 +28,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [Yarn Packages](#yarn-logo-yarn-packages)
 	- [Node](#node-logo-node)
 - [Project Set Up](#project-set-up)
+  - [Inspiration](#inspiration)
 	- [Decide on Architecture](#decide-on-architecture)
 		- [Front End Architecture](#front-end-architecture)
 		- [Back End Architecture](#back-end-architecture)
@@ -44,7 +45,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 	- [GitHub Workflows](#github-logo-github-workflows)
 	- [Testing](#cypress-logo-testing)
 	- [Deployment](#netlify-logo-deployment)
-	- [Security](#security)
+	- [Security and Authentication](#security-and-authentication)
 	- [Documentation](#documentation)
 	- [Optional Extras](#optional-extras)
 - [Project Release Checklist](#project-release-checklist)
@@ -242,6 +243,10 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 > [^ Back To Top](#table-of-contents)
 
 ## Project Set Up
+
+### Inspiration
+
+For inspiration for projects, check out the following resources on the `Coding Resources` - [`Design UI_UX Links` Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
 
 ### Decide on Architecture
 
@@ -493,11 +498,15 @@ src
     - Minify HTML - A plugin to add HTML minification as a post-processing optimisation in Netlify.
     - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
 
-### Security
-r
-- Set up security scanning via Snyk
+### Security and Authentication
+
+- Set up repository security scanning via Snyk
   - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
   - Check and close off all vulnerabilities
+
+- For authentication, consider using the following resources;
+  - [Logto Auth](https://logto.io/?ref=console)
+  - [Firebase](https://firebase.google.com/)
 
 ### Documentation
 
