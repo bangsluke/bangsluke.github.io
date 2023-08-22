@@ -313,11 +313,15 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 - Expo - <https://expo.io/>
 - Capacitor.js - <https://capacitorjs.com/>
 
+> [^ Back To Top](#table-of-contents)
+
 ### Create the New App
 
 ### Boilerplate Code
 
   - Consider using a boilerplate code to get started, as listed [here](https://todoist.com/showTask?id=6518989300&sync_id=6518989300)
+
+> [^ Back To Top](#table-of-contents)
 
 #### ![React Logo](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
 
@@ -326,6 +330,8 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - `cd my-app` - Change directory to the new React app
   - `npm start` - Start the React app
   - `npm run build` - Build the React app for production
+
+> [^ Back To Top](#table-of-contents)
 
 #### ![Vite Logo](https://i.imgur.com/smpppHt.png) Vite
 
@@ -338,6 +344,8 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
+
+> [^ Back To Top](#table-of-contents)
 
 #### ![NextJS Logo](https://i.imgur.com/OGtWPsT.png) Next.JS
 
@@ -374,6 +382,8 @@ git push -u origin main
 - Create a develop branch
 - Add a .gitignore file to the root of the project
 
+> [^ Back To Top](#table-of-contents)
+
 ### Folder and File Structure
 
 #### Folder Structure
@@ -405,6 +415,8 @@ src
   - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
     - [Folder Structure Command.md](https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md)
 
+> [^ Back To Top](#table-of-contents)
+
 #### File Set Up
 
 - Also, it is best practice to have a certain few files within your project
@@ -429,6 +441,8 @@ src
 
     - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
 
+> [^ Back To Top](#table-of-contents)
+
 ### ![ESLint Logo](https://i.imgur.com/ebsMde1.png) ESLint and ![Prettier Logo](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
@@ -439,6 +453,8 @@ src
 >
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
+
+> [^ Back To Top](#table-of-contents)
 
 ### .env Files and Variables
 
@@ -462,6 +478,8 @@ src
 
 > 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
 
+> [^ Back To Top](#table-of-contents)
+
 ### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
 
 - Create the folder structure .github/workflows at the root folder
@@ -473,6 +491,8 @@ src
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 
+> [^ Back To Top](#table-of-contents)
+
 ### ![Cypress Logo](https://i.imgur.com/BUzlvBh.png) Testing
 
 - Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
@@ -482,6 +502,8 @@ src
   - Unit tests (Jest)
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Cypress)
+
+> [^ Back To Top](#table-of-contents)
 
 ### ![Netlify Logo](https://i.imgur.com/reePUUY.png) Deployment
 
@@ -498,6 +520,8 @@ src
     - Minify HTML - A plugin to add HTML minification as a post-processing optimisation in Netlify.
     - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
 
+> [^ Back To Top](#table-of-contents)
+
 ### Security and Authentication
 
 - Set up repository security scanning via Snyk
@@ -508,10 +532,14 @@ src
   - [Logto Auth](https://logto.io/?ref=console)
   - [Firebase](https://firebase.google.com/)
 
+> [^ Back To Top](#table-of-contents)
+
 ### Documentation
 
 - Set up documentation for the project via a README.md file
 - Write from scratch or use a template such as [readme.so](https://readme.so/)
+
+> [^ Back To Top](#table-of-contents)
 
 ### Optional Extras
 
@@ -566,17 +594,24 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [metatags.io](https://metatags.io/)
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
 
+> [^ Back To Top](#table-of-contents)
+
 ### Favicon
 
 - Create a favicon for the site and for all applications that may access the site
   - [realfavicongenerator.net](https://realfavicongenerator.net/)
   > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
 
+> [^ Back To Top](#table-of-contents)
+
 ### 404 Page
 
 - Create a 404 page for catching routing errors
   - [error404.fun](https://error404.fun/)
+  - Add simple JavaScript back function to a back button (see Big Lynn error page for example)
 - Consider if additional 404 pages are required for other errors, such as 500, 503, etc.
+
+> [^ Back To Top](#table-of-contents)
 
 ### Page Speed Testing
 
@@ -606,6 +641,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - Use Chrome DevTools LightHouse tool
     - [GTmetrix](https://gtmetrix.com/)
 
+> [^ Back To Top](#table-of-contents)
+
 ## Framework Specific Checks
 
 - If using Next.js
@@ -630,6 +667,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 - Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (<https://calvinke.com/seo/fixed-header-anchor-css/>)
 - Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
+
+> [^ Back To Top](#table-of-contents)
 
 ### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Information
 
