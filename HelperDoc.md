@@ -529,6 +529,7 @@ src
     - React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
     - Animista - Animation library (All CSS) - <https://animista.net/>
     - [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
+  - [Email JS - send emails from your code without a backend server](https://www.emailjs.com/)
 - Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
   - [Hooks](https://todoist.com/showTask?id=6132071986&sync_id=6506084871)
