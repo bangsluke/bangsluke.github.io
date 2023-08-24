@@ -163,6 +163,8 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Set Python Path](https://stackoverflow.com/a/47808351)
 - Install required packages, e.g;
   - `pip install pyautogui`
+- To update pip, use the following command:
+  - `python.exe -m pip install --upgrade pip`
 
 ### Python Scripts
 
