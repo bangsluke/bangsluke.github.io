@@ -608,7 +608,11 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 - Create a 404 page for catching routing errors
   - [error404.fun](https://error404.fun/)
-  - Add simple JavaScript back function to a back button (see Big Lynn error page for example)
+  - For a Next.js, use the following steps and code (example on [Big Lynn site](https://github.com/bangsluke/BigLynn2023));
+    - Add a new page to the `pages` directory
+    - Add the following import code: `import { useRouter } from "next/router";`
+    - Add the following code: `const router = useRouter();` within the page component
+    - Add the following onClick code to a button: `onClick={() => router.back()} // Go back to the last visited page`
 - Consider if additional 404 pages are required for other errors, such as 500, 503, etc.
 
 > [^ Back To Top](#table-of-contents)
