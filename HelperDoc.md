@@ -575,6 +575,7 @@ src
   - [Framer Motion](https://www.framer.com/motion/) - Animation library
 - Web Analytics
   - Google Analytics
+  - [Umami](https://umami.is/)
   - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
   - [Top 6 tools for Node.js monitoring](https://medium.com/@akashjha9041/top-6-tools-for-node-js-monitoring-4645784b8534)
 - Available [APIs](https://todoist.com/showTask?id=6002402049&sync_id=6506084811)
