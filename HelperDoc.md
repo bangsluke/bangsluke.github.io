@@ -475,6 +475,7 @@ src
   - If you're just working in Node.JS, you can then use the variable in the code as `process.env.API_KEY`
   - If you're working in the browser, you have to prefix the variable in the code as `process.env.NEXT_PUBLIC_API_KEY`
   - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
+  - [Read this Medium story if still have issues](https://frontend-digest.com/environment-variables-in-next-js-9a272f0bf655)
 
 > References
 
