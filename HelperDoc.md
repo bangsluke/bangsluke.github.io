@@ -23,6 +23,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Package Managers](#package-managers)
   - [NPM](#npm-logo-npm)
   - [Yarn](#yarn-logo-yarn)
+  - [PNPM](#pnpm-logo-pnpm)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#npm-logo-npm-and-yarn-logo-yarn)
 	- [Yarn Packages](#yarn-logo-yarn-packages)
@@ -176,6 +177,8 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ## Package Managers
 
+Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
+
 ### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
 
 For more commands, see this [cheatsheet](https://devhints.io/npm).
@@ -192,6 +195,8 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 - `npm outdated` - Check for outdated packages
 - `npm run <script>` - Run a script from the package.json file
 
+> [^ Back To Top](#table-of-contents)
+
 ### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
 For more commands, see this [cheatsheet](https://devhints.io/yarn).
@@ -204,6 +209,11 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn upgrade` - Update all packages - same as `npm update`
 
 > [^ Back To Top](#table-of-contents)
+
+### ![PNPM Logo](https://i.imgur.com/1YKlWVX.png) PNPM
+
+- [Link](https://pnpm.io/) to all documentation
+- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
 
 ### Updating Versions
 
