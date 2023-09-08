@@ -23,6 +23,7 @@ A document containing useful commands, set up, checklists and fixes for projects
 - [Package Managers](#package-managers)
   - [NPM](#npm-logo-npm)
   - [Yarn](#yarn-logo-yarn)
+  - [PNPM](#pnpm-logo-pnpm)
 - [Updating Versions](#updating-versions)
 	- [NPM and Yarn](#npm-logo-npm-and-yarn-logo-yarn)
 	- [Yarn Packages](#yarn-logo-yarn-packages)
@@ -176,6 +177,8 @@ This contains basic scripts detailing how to use Python to automate tasks and de
 
 ## Package Managers
 
+Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
+
 ### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
 
 For more commands, see this [cheatsheet](https://devhints.io/npm).
@@ -192,6 +195,8 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 - `npm outdated` - Check for outdated packages
 - `npm run <script>` - Run a script from the package.json file
 
+> [^ Back To Top](#table-of-contents)
+
 ### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
 
 For more commands, see this [cheatsheet](https://devhints.io/yarn).
@@ -204,6 +209,11 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn upgrade` - Update all packages - same as `npm update`
 
 > [^ Back To Top](#table-of-contents)
+
+### ![PNPM Logo](https://i.imgur.com/1YKlWVX.png) PNPM
+
+- [Link](https://pnpm.io/) to all documentation
+- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
 
 ### Updating Versions
 
@@ -475,6 +485,7 @@ src
   - If you're just working in Node.JS, you can then use the variable in the code as `process.env.API_KEY`
   - If you're working in the browser, you have to prefix the variable in the code as `process.env.NEXT_PUBLIC_API_KEY`
   - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
+  - [Read this Medium story if still have issues](https://frontend-digest.com/environment-variables-in-next-js-9a272f0bf655)
 
 > References
 
