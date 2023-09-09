@@ -634,9 +634,10 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 ### Page Speed Testing
 
 - Reduce your image sizes
+  - [9 Image optimisation techniques](https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54)
   - Convert all of your jpg and png files to smaller image types such as webp
-- Lazy Load
-  - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
+  - Lazy Load
+    - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
 - Optimise the site for speed
   - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
