@@ -642,7 +642,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
     - See ways to optimize runtimes - [Link](https://reacthandbook.dev/react-performance-optimization#runtimes-optimize)
-  - [Next App speed increases](https://medium.com/weekly-webtips/10-ways-to-improve-your-next-js-app-performance-8e6f81b32dac)
+  - [Next.js App speed increases](https://medium.com/weekly-webtips/10-ways-to-improve-your-next-js-app-performance-8e6f81b32dac)
+  - [Next.js Caching Animation](https://www.youtube.com/watch?v=KzS_AG6nWdg)
   - [Low-Hanging Web Performance Fruits: A Cheat Sheet](https://betterprogramming.pub/low-hanging-web-performance-fruits-a-cheat-sheet-3aa1d338b6c1)
     - Optimize Your Assets
     - Cache Your Assets
