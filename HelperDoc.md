@@ -586,6 +586,7 @@ src
   - [Framer Motion](https://www.framer.com/motion/) - Animation library
 - Web Analytics
   - Google Analytics
+  - [Umami](https://umami.is/)
   - [GoatCounter](https://www.goatcounter.com/?ref=console.dev)
   - [Top 6 tools for Node.js monitoring](https://medium.com/@akashjha9041/top-6-tools-for-node-js-monitoring-4645784b8534)
 - Available [APIs](https://todoist.com/showTask?id=6002402049&sync_id=6506084811)
@@ -633,13 +634,16 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 ### Page Speed Testing
 
 - Reduce your image sizes
+  - [9 Image optimisation techniques](https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54)
   - Convert all of your jpg and png files to smaller image types such as webp
-- Lazy Load
-  - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
+  - Lazy Load
+    - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
 - Optimise the site for speed
   - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
     - See ways to optimize runtimes - [Link](https://reacthandbook.dev/react-performance-optimization#runtimes-optimize)
+  - [Next.js App speed increases](https://medium.com/weekly-webtips/10-ways-to-improve-your-next-js-app-performance-8e6f81b32dac)
+  - [Next.js Caching Animation](https://www.youtube.com/watch?v=KzS_AG6nWdg)
   - [Low-Hanging Web Performance Fruits: A Cheat Sheet](https://betterprogramming.pub/low-hanging-web-performance-fruits-a-cheat-sheet-3aa1d338b6c1)
     - Optimize Your Assets
     - Cache Your Assets
