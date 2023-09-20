@@ -537,11 +537,16 @@ src
 
 ### Security and Authentication
 
+#### Security
+
 - Set up repository security scanning via Snyk
   - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
   - Check and close off all vulnerabilities
 
-- For authentication, consider using the following resources;
+#### Authentication
+
+- Next.js - NextAuth - [Link](https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4)
+- For other authentication, consider using the following resources;
   - [Logto Auth](https://logto.io/?ref=console)
   - [Firebase](https://firebase.google.com/)
 
