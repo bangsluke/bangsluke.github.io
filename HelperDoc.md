@@ -614,6 +614,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - Set up meta tags in the index.html file
   - [metatags.io](https://metatags.io/)
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
+  - [theme colour html](https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa)
 
 > [^ Back To Top](#table-of-contents)
 
