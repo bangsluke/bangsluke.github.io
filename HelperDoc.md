@@ -44,6 +44,7 @@ A document containing useful commands, set up, checklists and fixes for projects
   - [Folder and File Structure](#folder-and-file-structure)
   - [ESLint and Prettier Config](#eslint-logo-eslint-and-prettier-logo-prettier-config)
   - [GitHub Workflows](#github-logo-github-workflows)
+  - [Issues and Debugging](#react-logo-issues-and-debugging)
   - [Testing](#cypress-logo-testing)
   - [Deployment](#netlify-logo-deployment)
   - [Security and Authentication](#security-and-authentication)
@@ -503,6 +504,19 @@ src
   - dependencyReview.yml
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
+
+> [^ Back To Top](#table-of-contents)
+
+### ![React Logo](https://i.imgur.com/LMShXOo.png) Issues and Debugging
+
+- For issues in `React` (including `Vite` and `Next.JS`):
+  - Issue 1 - Cannot be used as a JSX component
+
+    ```javascript
+    'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
+    ```
+
+    Solution: <https://stackoverflow.com/a/75093164>
 
 > [^ Back To Top](#table-of-contents)
 
