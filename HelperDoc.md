@@ -44,6 +44,7 @@ A document containing useful commands, set up, checklists and fixes for projects
   - [Folder and File Structure](#folder-and-file-structure)
   - [ESLint and Prettier Config](#eslint-logo-eslint-and-prettier-logo-prettier-config)
   - [GitHub Workflows](#github-logo-github-workflows)
+  - [Issues and Debugging](#react-logo-issues-and-debugging)
   - [Testing](#cypress-logo-testing)
   - [Deployment](#netlify-logo-deployment)
   - [Security and Authentication](#security-and-authentication)
@@ -506,6 +507,19 @@ src
 
 > [^ Back To Top](#table-of-contents)
 
+### ![React Logo](https://i.imgur.com/LMShXOo.png) Issues and Debugging
+
+- For issues in `React` (including `Vite` and `Next.JS`):
+  - Issue 1 - Cannot be used as a JSX component
+
+    ```javascript
+    'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
+    ```
+
+    Solution: <https://stackoverflow.com/a/75093164>
+
+> [^ Back To Top](#table-of-contents)
+
 ### ![Cypress Logo](https://i.imgur.com/BUzlvBh.png) Testing
 
 - Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
@@ -547,6 +561,7 @@ src
 
 - Next.js - NextAuth - [Link](https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4)
 - For other authentication, consider using the following resources;
+  - [PropelAuth](https://levelup.gitconnected.com/say-goodbye-to-authentication-headaches-with-propelauth-the-ultimate-solution-for-developers-b5cdad57d7d2)
   - [Logto Auth](https://logto.io/?ref=console)
   - [Firebase](https://firebase.google.com/)
 
@@ -613,6 +628,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - Set up meta tags in the index.html file
   - [metatags.io](https://metatags.io/)
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
+  - [theme colour html](https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa)
 
 > [^ Back To Top](#table-of-contents)
 
