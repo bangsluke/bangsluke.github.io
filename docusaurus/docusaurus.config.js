@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "bangsluke Documentation",
+  tagline: "Helper documentation for development",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -62,23 +62,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/bangsluke.github.io-social-card.png",
       navbar: {
-        title: "My Site",
+        title: "bangsluke Documentation",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "bangsluke Logo",
+          src: "img/bangsluke.png",
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
+            to: "/docs",
+            label: "    Documents",
             position: "left",
-            label: "Tutorial",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/bangsluke",
             label: "GitHub",
             position: "right",
           },
@@ -88,11 +88,15 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Links",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "bangsluke Homepage",
+                to: "https://bangsluke.github.io/Homepage.html",
+              },
+              {
+                label: "bangsluke New Tab",
+                to: "https://bangsluke.github.io/pages/NewTab.html",
               },
             ],
           },
@@ -121,13 +125,13 @@ const config = {
                 to: "/blog",
               },
               {
-                label: "GitHub",
+                label: "Docusaurus GitHub",
                 href: "https://github.com/facebook/docusaurus",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} bangsluke Documentation, built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
