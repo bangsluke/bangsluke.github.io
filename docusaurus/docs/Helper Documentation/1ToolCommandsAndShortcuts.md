@@ -1,6 +1,8 @@
 # Tool Commands/Shortcuts
 
-### ![Powershell Logo](https://i.imgur.com/wBg7htx.png) Powershell Commands
+## Powershell Commands
+
+![Powershell Logo](https://i.imgur.com/wBg7htx.png)
 
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - Navigating Folders and Files
@@ -26,7 +28,9 @@
   - `alias` - To print all aliases
   - `alias xxx="yyy"` - To create a new alias, e.g. `alias g="git"` will create an alias for git
 
-### ![Git Logo](https://i.imgur.com/2xve41Z.png) Git Commands
+## Git Commands
+
+![Git Logo](https://i.imgur.com/2xve41Z.png)
 
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
@@ -38,7 +42,9 @@
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
 
-### ![VS Code Logo](https://i.imgur.com/2lK00uT.png) VS Code Commands
+## VS Code Commands
+
+![VS Code Logo](https://i.imgur.com/2lK00uT.png)
 
 - `Ctrl + P` - Open the file search
 - `Ctrl + Shift + P` - Open the command palette
@@ -48,14 +54,16 @@
 - `Alt + Up/Down` - Move the current line up or down
 - `Alt + Shift + Up/Down` - Copy the current line up or down
 
-### ![Chrome Logo](https://i.imgur.com/yTEUQ3I.png) Chrome Shortcuts
+## Chrome Shortcuts
+
+![Chrome Logo](https://i.imgur.com/yTEUQ3I.png)
 
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
-### ![VBA Logo](https://i.imgur.com/TrsfWN1.png) VBA Shortcuts
+## VBA Shortcuts
+
+![VBA Logo](https://i.imgur.com/TrsfWN1.png)
 
 - `F5` - Run the current script
 - `F8` - Run the current line of code
 - `Ctrl + Y` - Delete the current code line
-
-> [^ Back To Top](#table-of-contents)
