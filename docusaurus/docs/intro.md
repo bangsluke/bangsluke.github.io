@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Documentation Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Full details on my development journey and process.
 
 ## Contents of the Site
 
