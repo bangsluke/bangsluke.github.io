@@ -6,42 +6,56 @@ sidebar_position: 1
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+## Contents of the Site
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at <http://localhost:3000/>.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Tool Commands/Shortcuts](#tool-commandsshortcuts)
+	- [Powershell Commands](#powershell-logo-powershell-commands)
+	- [Git Commands](#git-logo-git-commands)
+	- [VS Code Commands](#vs-code-logo-vs-code-commands)
+	- [Chrome Shortcuts](#chrome-logo-chrome-shortcuts)
+	- [VBA Shortcuts](#vba-logo-vba-shortcuts)
+- [Open AI and ChatGPT](#openai-logo-open-ai-and-chatgpt)
+  - [OpenAI Links](#openai-links)
+  - [ChatGPT Prompts](#chatgpt-prompts)
+- [Python](#python-logo-python)
+  - [Installing Python](#installing-python)
+  - [Python Scripts](#python-scripts)
+- [Package Managers](#package-managers)
+  - [NPM](#npm-logo-npm)
+  - [Yarn](#yarn-logo-yarn)
+  - [PNPM](#pnpm-logo-pnpm)
+- [Updating Versions](#updating-versions)
+	- [NPM and Yarn](#npm-logo-npm-and-yarn-logo-yarn)
+	- [Yarn Packages](#yarn-logo-yarn-packages)
+	- [Node](#node-logo-node)
+- [Project Set Up](#project-set-up)
+  - [Inspiration](#inspiration)
+  - [Decide on Architecture](#decide-on-architecture)
+    - [Front End Architecture](#front-end-architecture)
+    - [Back End Architecture](#back-end-architecture)
+    - [Database](#database)
+    - [Hosting](#hosting)
+    - [Mobile Architecture](#mobile-architecture)
+  - [Create the New App](#create-the-new-app)
+    - [CRA (Create React App)](#react-logo-cra-create-react-app)
+    - [Vite](#vite-logo-vite)
+    - [Next.js](#nextjs-logo-nextjs)
+  - [Initiate a Git Repository and link to GitHub](#initiate-a-git-repository-and-link-to-github-logo-github)
+  - [Folder and File Structure](#folder-and-file-structure)
+  - [ESLint and Prettier Config](#eslint-logo-eslint-and-prettier-logo-prettier-config)
+  - [GitHub Workflows](#github-logo-github-workflows)
+  - [Issues and Debugging](#react-logo-issues-and-debugging)
+  - [Testing](#cypress-logo-testing)
+  - [Deployment](#netlify-logo-deployment)
+  - [Security and Authentication](#security-and-authentication)
+  - [Documentation](#documentation)
+  - [Optional Extras](#optional-extras)
+- [Project Release Checklist](#project-release-checklist)
+	- [SEO and Meta Data](#seo-and-meta-data)
+	- [404 Page](#404-page)
+	- [Page Speed Testing](#page-speed-testing)
+	- [GitHub Information](#github-logo-github-information)
+	- [Other Options](#other-options)
+- [Git Fixes](#git-logo-git-fixes)
+	- [Error: Unable to load Commits. fatal: bad object desktop.ini](#error-unable-to-load-commits-fatal-bad-object-desktopini)
+	- [Clearing Secrets from History](#clearing-secrets-from-history)
