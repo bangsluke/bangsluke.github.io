@@ -88,41 +88,33 @@ const config = {
         style: "dark",
         links: [
           {
+            title: "Internal Links",
+            items: [
+              {
+                label: "Documentation Introduction",
+                to: "/docs/intro",
+              },
+            ],
+          },
+          {
             title: "Links",
             items: [
               {
                 label: "bangsluke Homepage",
-                to: "https://bangsluke.github.io/Homepage.html",
+                href: "https://bangsluke.github.io/Homepage.html",
               },
               {
                 label: "bangsluke New Tab",
-                to: "https://bangsluke.github.io/pages/NewTab.html",
+                href: "https://bangsluke.github.io/pages/NewTab.html",
               },
             ],
           },
           {
-            title: "Community",
+            title: "Docusaurus Links",
             items: [
               {
                 label: "Stack Overflow",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
               },
               {
                 label: "Docusaurus GitHub",

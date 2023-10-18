@@ -5,7 +5,15 @@
   width: 100%;
 }
 
+.featureSvgContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
 .featureSvg {
-  height: 200px;
+  height: 100px;
   width: 200px;
+  margin: 0 auto;
 }
