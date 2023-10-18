@@ -2,7 +2,7 @@
 
 Use this checklist tool for each site released - [frontendchecklist.io](https://frontendchecklist.io/)
 
-### SEO and Meta Data
+## SEO and Meta Data
 
 - This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
 - Set up meta tags in the index.html file
@@ -10,17 +10,13 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
   - [theme colour html](https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa)
 
-> [^ Back To Top](#table-of-contents)
-
-### Favicon
+## Favicon
 
 - Create a favicon for the site and for all applications that may access the site
   - [realfavicongenerator.net](https://realfavicongenerator.net/)
   > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
 
-> [^ Back To Top](#table-of-contents)
-
-### 404 Page
+## 404 Page
 
 - Create a 404 page for catching routing errors
   - [error404.fun](https://error404.fun/)
@@ -31,9 +27,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - Add the following onClick code to a button: `onClick={() => router.back()} // Go back to the last visited page`
 - Consider if additional 404 pages are required for other errors, such as 500, 503, etc.
 
-> [^ Back To Top](#table-of-contents)
-
-### Page Speed Testing
+## Page Speed Testing
 
 - Reduce your image sizes
   - [9 Image optimisation techniques](https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54)
@@ -64,8 +58,6 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - Use Chrome DevTools LightHouse tool
     - [GTmetrix](https://gtmetrix.com/)
 
-> [^ Back To Top](#table-of-contents)
-
 ## Framework Specific Checks
 
 - If using Next.js
@@ -86,14 +78,14 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - Add Next.js Analytics (see section 4.d of the above article)
     - <https://nextjs.org/analytics>
 
-### Other General Tests
+## Other General Tests
 
 - Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (<https://calvinke.com/seo/fixed-header-anchor-css/>)
 - Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
 
-> [^ Back To Top](#table-of-contents)
+## GitHub Information
 
-### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Information
+![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Check that the GitHub repo has all the details that it needs, such as:
   - About Section
@@ -116,10 +108,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - Tests passing
     - Netlify deployment status
 
-### Other Options
+## Other Options
 
 - [Remove console logs from Production](https://dev.to/gulshanaggarwal/say-goodbye-to-consolelog-from-production-environment-5382)
 - [Add a share button](https://dev.to/dailydevtips1/using-the-native-web-share-javascript-api-23ei)
 - [Markup validation](https://validator.w3.org/)
-
-> [^ Back To Top](#table-of-contents)

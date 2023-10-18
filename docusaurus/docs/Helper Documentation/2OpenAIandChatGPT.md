@@ -1,12 +1,14 @@
 # OpenAI and ChatGPT
 
-### ![OpenAI Logo](https://i.imgur.com/KkOSP3l.png) OpenAI Links
+## OpenAI Links
+
+![OpenAI Logo](https://i.imgur.com/KkOSP3l.png)
 
 - [ChatGPT](https://chat.openai.com/)
 - [OpenAI](https://openai.com/)
 - [OpenAI API](https://beta.openai.com/docs/api-reference/introduction)
 
-### ChatGPT Prompts
+## ChatGPT Prompts
 
 - [How to use ChatGPT in daily life](https://levelup.gitconnected.com/how-to-use-chatgpt-in-daily-life-4688f7afb930)
   - Summarize a book or article
@@ -29,5 +31,3 @@
     - `Write me a React component that displays a list of items.`
     - `Write me a React unit test for the above component.`
     - `Write me a Python script that reads a CSV file and prints the contents.`
-
-> [^ Back To Top](#table-of-contents)
