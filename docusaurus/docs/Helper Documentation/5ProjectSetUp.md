@@ -1,14 +1,14 @@
 # Project Set Up
 
-### Inspiration
+## Inspiration
 
-For inspiration for projects, check out the following resources on the `Coding Resources` - [`Design UI_UX Links` Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
+For inspiration for projects, check out the following resources on the `Coding Resources` [Design UI/UX Links Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
 
-### Decide on Architecture
+## Decide on Architecture
 
 If it is just a web app to be built, consider the below Front End, Back End and Database Architecture options. If it also needs to be a mobile app, consider the below Mobile Architecture options.
 
-#### Front End Architecture
+### Front End Architecture
 
 - Considerations:
   - Single page application or not?
@@ -18,7 +18,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - Vite
   - NextJS
 
-#### Back End Architecture
+### Back End Architecture
 
 - Considerations:
   - Need to investigate
@@ -27,7 +27,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - ExpressJS
   - NodeJS
 
-#### Database
+### Database
 
 - Considerations:
   - Should it be SQL or non SQL?
@@ -50,7 +50,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 > 2. [How To Choose a Database for your App](https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma)
 > 3. [Build a TypeScript API with Express, RapidAPI, and Xata](https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick)
 
-#### Hosting
+### Hosting
 
 - Considerations:
   - How much will hosting the site cost?
@@ -64,22 +64,20 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - Amazon RDS (expensive)
   - BlueHost (basic)
 
-#### Mobile Architecture
+### Mobile Architecture
 
 - Expo - <https://expo.io/>
 - Capacitor.js - <https://capacitorjs.com/>
 
-> [^ Back To Top](#table-of-contents)
-
-### Create the New App
+## Create the New App
 
 ### Boilerplate Code
 
   - Consider using a boilerplate code to get started, as listed [here](https://todoist.com/showTask?id=6518989300&sync_id=6518989300)
 
-> [^ Back To Top](#table-of-contents)
+### CRA (Create React App)
 
-#### ![React Logo](https://i.imgur.com/LMShXOo.png) CRA (Create React App)
+![React Logo](https://i.imgur.com/LMShXOo.png)
 
   - `npx create-react-app my-app` - Create a new React app called "my-app"
   - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
@@ -87,9 +85,9 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - `npm start` - Start the React app
   - `npm run build` - Build the React app for production
 
-> [^ Back To Top](#table-of-contents)
+### Vite
 
-#### ![Vite Logo](https://i.imgur.com/smpppHt.png) Vite
+![Vite Logo](https://i.imgur.com/smpppHt.png)
 
   - To use Vite with Yarn and TypeScript do the following;
     - `yarn create vite my-app --template react-ts`
@@ -101,9 +99,9 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
 
-> [^ Back To Top](#table-of-contents)
+### Next.JS
 
-#### ![NextJS Logo](https://i.imgur.com/OGtWPsT.png) Next.JS
+![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
 
   - JavaScript and npm
 	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
@@ -118,9 +116,9 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 	- `yarn dev` - Start the React app
 	- `yarn build` - Build the React app for production
 
-> [^ Back To Top](#table-of-contents)
+## Initiate a Git Repository and link to GitHub
 
-### Initiate a Git Repository and link to ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub
+![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -138,11 +136,9 @@ git push -u origin main
 - Create a develop branch
 - Add a .gitignore file to the root of the project
 
-> [^ Back To Top](#table-of-contents)
+## Folder and File Structure
 
-### Folder and File Structure
-
-#### Folder Structure
+### Folder Structure
 
 - Create a folder structure that makes sense for the project
   - For a React project, have the following set up
@@ -171,9 +167,7 @@ src
   - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
     - [Folder Structure Command.md](https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md)
 
-> [^ Back To Top](#table-of-contents)
-
-#### File Set Up
+### File Set Up
 
 - Also, it is best practice to have a certain few files within your project
 
@@ -197,9 +191,9 @@ src
 
     - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
 
-> [^ Back To Top](#table-of-contents)
+## ESLint and Prettier Config
 
-### ![ESLint Logo](https://i.imgur.com/ebsMde1.png) ESLint and ![Prettier Logo](https://i.imgur.com/IJ3Ksm0.png) Prettier Config
+![ESLint Logo](https://i.imgur.com/ebsMde1.png) ![Prettier Logo](https://i.imgur.com/IJ3Ksm0.png)
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
@@ -210,9 +204,7 @@ src
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
 
-> [^ Back To Top](#table-of-contents)
-
-### .env Files and Variables
+## .env Files and Variables
 
 - To securely store environment variables, create a .env file in the root of the project
 - Then create a .gitignore file in the root of the project and add the .env file to it
@@ -235,9 +227,9 @@ src
 
 > 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
 
-> [^ Back To Top](#table-of-contents)
+## GitHub Workflows
 
-### ![GitHub Logo](https://i.imgur.com/zD0C9oF.png) GitHub Workflows
+![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
@@ -248,9 +240,9 @@ src
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 
-> [^ Back To Top](#table-of-contents)
+## Issues and Debugging
 
-### ![React Logo](https://i.imgur.com/LMShXOo.png) Issues and Debugging
+![React Logo](https://i.imgur.com/LMShXOo.png)
 
 - For issues in `React` (including `Vite` and `Next.JS`):
   - Issue 1 - Cannot be used as a JSX component
@@ -261,9 +253,9 @@ src
 
     Solution: <https://stackoverflow.com/a/75093164>
 
-> [^ Back To Top](#table-of-contents)
+## Testing
 
-### ![Cypress Logo](https://i.imgur.com/BUzlvBh.png) Testing
+![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
 - Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
 - Set up testing throughout the application based on its requirements
@@ -273,9 +265,9 @@ src
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Cypress)
 
-> [^ Back To Top](#table-of-contents)
+## Deployment
 
-### ![Netlify Logo](https://i.imgur.com/reePUUY.png) Deployment
+![Netlify Logo](https://i.imgur.com/reePUUY.png)
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment
@@ -290,17 +282,15 @@ src
     - Minify HTML - A plugin to add HTML minification as a post-processing optimisation in Netlify.
     - Snyk Security - A Snyk Netlify plugin to find and monitor new security vulnerabilities in JavaScript libraries (also see below).
 
-> [^ Back To Top](#table-of-contents)
+## Security and Authentication
 
-### Security and Authentication
-
-#### Security
+### Security
 
 - Set up repository security scanning via Snyk
   - Add the project to Snyk [here](https://app.snyk.io/org/bangsluke/projects)
   - Check and close off all vulnerabilities
 
-#### Authentication
+### Authentication
 
 - Next.js - NextAuth - [Link](https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4)
 - For other authentication, consider using the following resources;
@@ -308,16 +298,12 @@ src
   - [Logto Auth](https://logto.io/?ref=console)
   - [Firebase](https://firebase.google.com/)
 
-> [^ Back To Top](#table-of-contents)
-
-### Documentation
+## Documentation
 
 - Set up documentation for the project via a README.md file
 - Write from scratch or use a template such as [readme.so](https://readme.so/)
 
-> [^ Back To Top](#table-of-contents)
-
-### Optional Extras
+## Optional Extras
 
 - Recommended Libraries
   - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
@@ -358,5 +344,3 @@ src
   - [ntfy](https://ntfy.sh/?ref=console.dev)
 
 > Note - for more, see "Coding Resources" Todoist project
-
-> [^ Back To Top](#table-of-contents)

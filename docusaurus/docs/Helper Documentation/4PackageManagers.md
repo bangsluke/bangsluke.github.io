@@ -2,7 +2,11 @@
 
 Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
-### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM
+## NPM
+
+![NPM Logo](https://i.imgur.com/ufPLPqy.png)
+
+### NPM Commands
 
 For more commands, see this [cheatsheet](https://devhints.io/npm).
 
@@ -18,9 +22,16 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 - `npm outdated` - Check for outdated packages
 - `npm run <script>` - Run a script from the package.json file
 
-> [^ Back To Top](#table-of-contents)
+### NPM Updates
 
-### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
+- `npm --version` - Check the current installed version of npm
+- `npm install -g npm` - Install globally the latest stable version of npm
+
+## Yarn
+
+![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
+
+### Yarn Commands
 
 For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
@@ -31,23 +42,12 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn add <package> --dev` - Install a package as a dev dependency
 - `yarn upgrade` - Update all packages - same as `npm update`
 
-> [^ Back To Top](#table-of-contents)
+### Yarn Updates
 
-### ![PNPM Logo](https://i.imgur.com/1YKlWVX.png) PNPM
-
-- [Link](https://pnpm.io/) to all documentation
-- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
-
-### Updating Versions
-
-#### ![NPM Logo](https://i.imgur.com/ufPLPqy.png) NPM and ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn
-
-- `npm --version` - Check the current installed version of npm
-- `npm install -g npm` - Install globally the latest stable version of npm
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
-#### ![Yarn Logo](https://i.imgur.com/IXZDNL8.png) Yarn Packages
+### Yarn Package Updates
 
 - [Link](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/) to all documentation
 - `yarn upgrade` - Upgrade all packages to their latest version
@@ -59,7 +59,16 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn upgrade left-pad --latest` - Upgrade a specific package to its latest version
 - `yarn remove left-pad` - Removes a specific package
 
-#### ![Node Logo](https://i.imgur.com/EvX1vFR.png) Node
+## PNPM Commands
+
+![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
+
+- [Link](https://pnpm.io/) to all documentation
+- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
+
+## Node
+
+![Node Logo](https://i.imgur.com/EvX1vFR.png)
 
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
@@ -74,5 +83,3 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 >
 > 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
 > 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
-
-> [^ Back To Top](#table-of-contents)
