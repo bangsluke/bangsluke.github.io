@@ -8,13 +8,13 @@ Use `cd docusaurus` to navigate to the root of the website. Then `yarn start` to
 
 ### Installation
 
-```
+```bash
 yarn
 ```
 
 ### Local Development
 
-```
+```bash
 yarn start
 ```
 
@@ -22,7 +22,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Build
 
-```
+```bash
 yarn build
 ```
 
@@ -32,13 +32,13 @@ This command generates static content into the `build` directory and can be serv
 
 Using SSH:
 
-```
+```bash
 USE_SSH=true yarn deploy
 ```
 
 Not using SSH:
 
-```
+```bash
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
