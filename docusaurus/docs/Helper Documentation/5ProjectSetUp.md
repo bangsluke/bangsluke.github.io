@@ -312,6 +312,7 @@ src
   - React Query - `yarn add react-query` - [https://react-query.tanstack.com/](https://react-query.tanstack.com/)
     - [Mastering react Query - A Complete Guide](https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3)
   - Material UI - Component Library - `yarn add @material-ui/core` - [https://material-ui.com/](https://material-ui.com/)
+  - Novu [In app notifications](https://github.com/novuhq/novu)
   - Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
   - Animations
     - [React Flip Move](https://www.npmjs.com/package/react-flip-move) - Animation library - `yarn add react-flip-move`
