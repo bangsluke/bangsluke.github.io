@@ -83,3 +83,54 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 >
 > 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
 > 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
+
+## Switching Package Managers
+
+### From NPM to Yarn
+
+![NPM Logo](https://i.imgur.com/ufPLPqy.png) > ![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
+
+- Install yarn using `npm i -g yarn` if not already installed
+- Go to the directory where you install packages and run the `yarn` command
+- Yarn will init and create its `yarn.lock` file
+- Now delete `package-lock.json` `*Note`
+- In your `package.json` file replace all npm commands with yarn in "scripts"
+- Run `yarn dev` or whatever command you use for running a yarn script
+
+> `*Note`: It is important you don't delete it before yarn command (as some people suggest) it can break things, for example your yarn command will not even work and it will throw error:
+`Error: ENOENT: no such file or directory, open './package-lock.json'`
+
+> References
+>
+> 1. [How do I switch from npm to yarn](https://stackoverflow.com/a/71481424)
+
+### From Yarn to PNPM
+
+Migrating from yarn to pnpm is quite straightforward:
+
+- Install pnpm `npm install -g pnpm` if not already installed
+- Rename all your yarn commands to pnpm:
+	- `yarn` -> `pnpm install`
+	- `yarn test` -> `pnpm test`
+	- `yarn package` -> `pnpm package`
+	- `yarn deploy` -> `pnpm run deploy` (**run** is required here, as `pnpm deploy` is a reserved command)
+- Replace all occurrences of the string `yarn.lock` in your source files with `pnpm-lock.yaml` (search, prettier, etc.)
+- In your CI/CD, when using `actions/setup-node@v3`, set `cache` to `'pnpm'`
+- If you're using yarn PnP, remove `.yarnrc.yml` and the `.yarn` folder
+- In the root `package.json` set the packageManager key to `pnpm@<version>` (replace `<version>` with the latest available version)
+- Create a `pnpm-workspace.yaml` file with:
+
+	```yaml
+	packages:
+	- 'services/*'
+	- 'contracts/*'
+	- 'packages/*'
+	```
+
+	and everything that is in the `workspaces` key of the root `package.json`
+- Run `pnpm import` to generate a `pnpm-lock.yaml` from your `yarn.lock`, then remove `yarn.lock`
+- Run `pnpm install`
+
+> References
+>
+> 1. [Swarmion - From Yarn to PNPM](https://www.swarmion.dev/docs/how-to-guides/migration-guides/yarn-to-pnpm/#:~:text=Migrating%20from%20yarn%20to%20pnpm%20is%20quite%20straightforward%3A,remove%20.yarnrc.yml%20and%20the%20.yarn%20folder%20More%20items)
