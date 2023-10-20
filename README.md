@@ -4,7 +4,7 @@
 
 ## Homepage
 
-A custom built site homepage and new browser tab
+A custom built site homepage, new browser tab and Docusaurus documentation site
 
 For a link to the HelperDoc, click [here](https://github.com/bangsluke/bangsluke.github.io/blob/newMDFile/HelperDoc.md)
 
@@ -42,7 +42,7 @@ Drop me an email at [bangsluke@gmail.com](mailto:bangsluke@gmail.com) or visit m
 
 ## Getting Started
 
-There is no need to install, just visit the [site here](https://bangsluke.github.io/Homepage.html).
+There is no need to install, just visit the [site here](https://bangsluke.github.io/Homepage.html) for the homepage.
 
 ## Author Notes
 
