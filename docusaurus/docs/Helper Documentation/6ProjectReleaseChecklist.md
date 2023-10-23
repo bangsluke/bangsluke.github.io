@@ -60,8 +60,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 ## Console Logs
 
-- Delete all console.logs - It's important to remove console.log in production code to prevent sensitive information leaks and enhance performance
-- Investigate and fix all console.errors and console.warning - It's important to address console errors in production code to maintain a smooth and error-free user experiences.
+- Delete all `console.logs` - It's important to remove console.log in production code to prevent sensitive information leaks and enhance performance
+- Investigate and fix all `console.errors` and `console.warning` - It's important to address console errors in production code to maintain a smooth and error-free user experiences.
 
 ## Framework Specific Checks
 
