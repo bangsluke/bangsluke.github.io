@@ -87,6 +87,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 - Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (<https://calvinke.com/seo/fixed-header-anchor-css/>)
 - Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
+- Check that input boxes are using the correct attributes to help user input - <https://better-mobile-inputs.netlify.app/>
 
 ## GitHub Information
 
