@@ -22,11 +22,6 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 - `npm outdated` - Check for outdated packages
 - `npm run <script>` - Run a script from the package.json file
 
-### NPM Updates
-
-- `npm --version` - Check the current installed version of npm
-- `npm install -g npm` - Install globally the latest stable version of npm
-
 ## Yarn
 
 ![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
@@ -41,11 +36,6 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn add <package>` - Install a package - same as `npm install <package>`
 - `yarn add <package> --dev` - Install a package as a dev dependency
 - `yarn upgrade` - Update all packages - same as `npm update`
-
-### Yarn Updates
-
-- `yarn --version` - Check the current installed version of yarn
-- `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
 
 ### Yarn Package Updates
 
@@ -65,24 +55,6 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
 - [Link](https://pnpm.io/) to all documentation
 - [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
-
-## Node
-
-![Node Logo](https://i.imgur.com/EvX1vFR.png)
-
-- `node --version` - Check the current installed version of node
-- `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
-- `nvm ls available` - List all versions of Node.js available for installation
-- `nvm install 8.1.0` - Install a specific version of Node (check <https://nodejs.org/en/> for the latest version)
-
-> Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
-
-- `nvm use 4.2` - Switch between the installed versions on your machine
-
-> References
->
-> 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
-> 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
 
 ## Switching Package Managers
 
