@@ -58,7 +58,7 @@ const config = {
       // Replace with your project's social card
       image: "img/bangsluke.github.io-social-card.png",
       navbar: {
-        title: "bangsluke Documentation",
+        title: "bangsluke",
         logo: {
           alt: "bangsluke Logo",
           src: "img/bangsluke.png",
@@ -68,8 +68,8 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             to: "/docs",
-            label: "    Documents",
-            position: "right",
+            label: "Documentation",
+            position: "left",
           },
           {
             href: "https://github.com/bangsluke",
