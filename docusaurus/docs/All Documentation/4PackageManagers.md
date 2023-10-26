@@ -10,16 +10,29 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
 For more commands, see this [cheatsheet](https://devhints.io/npm).
 
-- `npm --version` - Check the current installed version of npm
+#### NPM Initialization
+
 - `npm init` - Create a new package.json file
 - `npm i` - Can be used as a shortcut for `npm install`
+
+#### NPM Install
+
 - `npm install` - Install all packages
 - `npm install <package>` - Install a package
 - `npm install <package> --save-dev` - Install a package as a dev dependency
 - `npm install <package> --global` - Install a package globally
 - `npm uninstall <package>` - Uninstall a package
+
+#### NPM Update and Audit
+
 - `npm update` - Update all packages
 - `npm outdated` - Check for outdated packages
+- `npm audit` - Check for vulnerabilities in installed packages
+- `npm audit fix` - Fix vulnerabilities in installed packages
+- `npm audit fix --force` - Fix vulnerabilities in installed packages and remove outdated packages
+
+#### NPM Run
+
 - `npm run <script>` - Run a script from the package.json file
 
 ## Yarn
@@ -30,11 +43,19 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 
 For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
-- `yarn --version` - Check the current installed version of yarn
+#### Yarn Initialization
+
 - `yarn init` - Create a new package.json file
+
+#### Yarn Install
+
 - `yarn` - Install all packages defined in package.json - same as `npm install`
+
 - `yarn add <package>` - Install a package - same as `npm install <package>`
 - `yarn add <package> --dev` - Install a package as a dev dependency
+
+#### Yarn Upgrade
+
 - `yarn upgrade` - Update all packages - same as `npm update`
 
 ### Yarn Package Updates
