@@ -49,7 +49,9 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [Everything you need to know about Web Performance (in 5 Minutes)](https://dev.to/vue-storefront/everything-you-need-to-know-about-web-performance-as-a-dev-in-5-minutes-450l)
   - [Senior Engineering Strategies for Advanced React and TypeScript](https://asimzaidi.medium.com/senior-engineering-strategies-for-advanced-react-and-typescript-9d7aa8a07fd8)
     - Specifically look at the Performance section for the LazyLoadedComponent
-  - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
+  - Clean up CSS
+    - [Unused CSS](https://unused-css.com/)
+    - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
 - Check the speed of the app and improve where possible
   - Use <https://www.webpagetest.org/> to test the speed of the site
     - Mark the tick box to Audit using Lighthouse
