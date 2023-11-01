@@ -11,6 +11,8 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 
+> Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the following link <https://stackoverflow.com/a/31520672>
+
 ## Yarn
 
 ![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
