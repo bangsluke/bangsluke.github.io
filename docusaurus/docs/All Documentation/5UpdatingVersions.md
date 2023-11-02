@@ -41,8 +41,12 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 > Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
 
 - `nvm use 4.2` - Switch between the installed versions on your machine
+- Re-run `node --version` to check the new version is being used
+
+> Note - if after using `nvm use`, you find yourself still using the old version, you can fix this by deleting the `C:\Program Files\nodejs` folder and then running `nvm use` again (ref 3)
 
 > References
 >
 > 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
 > 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
+> 3. [nvm use does not switch node versions](https://stackoverflow.com/a/55131758)
