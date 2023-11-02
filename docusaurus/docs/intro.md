@@ -44,6 +44,7 @@ Full details on my development journey and process.
   - [Initiate a Git Repository and link to GitHub](All%20Documentation/6ProjectSetUp#initiate-a-git-repository-and-link-to-github)
   - [Folder and File Structure](All%20Documentation/6ProjectSetUp#folder-and-file-structure)
   - [ESLint and Prettier Config](All%20Documentation/6ProjectSetUp#eslint-and-prettier-config)
+  - [Framework Specific Development](All%20Documentation/6ProjectSetUp#framework-specific-development)
   - [GitHub Workflows](All%20Documentation/6ProjectSetUp#github-workflows)
   - [Issues and Debugging](All%20Documentation/6ProjectSetUp#issues-and-debugging)
   - [Testing](All%20Documentation/6ProjectSetUp#testing)
