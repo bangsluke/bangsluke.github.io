@@ -240,6 +240,12 @@ src
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 
+## Framework Specific Development
+
+### Next.js
+
+- [Mastering Error and Loading pages](https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526)
+
 ## Issues and Debugging
 
 ![React Logo](https://i.imgur.com/LMShXOo.png)
