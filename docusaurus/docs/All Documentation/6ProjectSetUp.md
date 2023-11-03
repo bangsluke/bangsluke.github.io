@@ -244,7 +244,10 @@ src
 
 ### Next.js
 
+![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
+
 - [Mastering Error and Loading pages](https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526)
+- [Adding unconfigured image hostname to next.config.js](https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j)
 
 ## Issues and Debugging
 
