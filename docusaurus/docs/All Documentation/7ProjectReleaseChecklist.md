@@ -34,6 +34,8 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - Convert all of your jpg and png files to smaller image types such as webp
   - Lazy Load
     - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
+- Optimise your data speed
+  - [JSON is incredibly slow, here's what's faster](https://medium.com/data-science-community-srm/json-is-incredibly-slow-heres-what-s-faster-ca35d5aaf9e8)
 - Optimise the site for speed
   - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
