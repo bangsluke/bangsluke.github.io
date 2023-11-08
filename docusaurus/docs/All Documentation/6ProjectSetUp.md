@@ -239,6 +239,7 @@ src
   - dependencyReview.yml
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
+- Add automated linting to CI/CD
 
 ## Framework Specific Development
 
