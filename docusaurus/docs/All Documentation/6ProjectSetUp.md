@@ -240,6 +240,7 @@ src
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 - Add automated linting to CI/CD
+  - https://github.com/github/super-linter#filter-linted-files
 
 ## Framework Specific Development
 
