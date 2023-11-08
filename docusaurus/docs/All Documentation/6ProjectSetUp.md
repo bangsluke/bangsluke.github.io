@@ -314,6 +314,10 @@ src
 
 ## Optional Extras
 
+- Add smooth scrolling;
+  `html {
+    scroll-behavior: smooth;
+  }`
 - Recommended Libraries
   - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
     - `import { v4 as uuid } from "uuid";`
