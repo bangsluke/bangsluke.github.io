@@ -274,7 +274,9 @@ src
   - Static tests (ESLint, TypeScript) - Done automatically in VS Code e.g. typos and type errors
   - Unit tests (Jest)
   - Integration tests (React Testing Library / Cypress)
-  - E2E tests (Cypress)
+  - E2E tests (Playwright / Cypress)
+    - [E2E Playwright testing with Next.js](https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111)
+- Use ChatGPT or Codeium to write some simple tests
 
 ## Deployment
 
