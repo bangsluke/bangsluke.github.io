@@ -256,6 +256,7 @@ src
 ![React Logo](https://i.imgur.com/LMShXOo.png)
 
 - For issues in `React` (including `Vite` and `Next.JS`):
+  - General debugging - https://profy.dev/article/debug-react-vscode
   - Issue 1 - Cannot be used as a JSX component
 
     ```javascript
