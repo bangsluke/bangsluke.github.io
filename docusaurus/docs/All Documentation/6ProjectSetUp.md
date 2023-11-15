@@ -66,8 +66,8 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ### Mobile Architecture
 
-- Expo - <https://expo.io/>
-- Capacitor.js - <https://capacitorjs.com/>
+- [Expo](https://expo.io/)
+- [Capacitor.js](https://capacitorjs.com/)
 
 ## Create the New App
 
@@ -239,6 +239,8 @@ src
   - dependencyReview.yml
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
+- Add automated linting to CI/CD
+  - [Super Linter GitHub](https://github.com/github/super-linter#filter-linted-files)
 
 ## Framework Specific Development
 
@@ -254,13 +256,14 @@ src
 ![React Logo](https://i.imgur.com/LMShXOo.png)
 
 - For issues in `React` (including `Vite` and `Next.JS`):
+  - General debugging - [Debug React in VSCode](https://profy.dev/article/debug-react-vscode)
   - Issue 1 - Cannot be used as a JSX component
 
     ```javascript
     'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
     ```
 
-    Solution: <https://stackoverflow.com/a/75093164>
+    Solution [link](https://stackoverflow.com/a/75093164)
 
 ## Testing
 
@@ -272,7 +275,9 @@ src
   - Static tests (ESLint, TypeScript) - Done automatically in VS Code e.g. typos and type errors
   - Unit tests (Jest)
   - Integration tests (React Testing Library / Cypress)
-  - E2E tests (Cypress)
+  - E2E tests (Playwright / Cypress)
+    - [E2E Playwright testing with Next.js](https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111)
+- Use ChatGPT or Codeium to write some simple tests
 
 ## Deployment
 
@@ -314,6 +319,10 @@ src
 
 ## Optional Extras
 
+- Add smooth scrolling;
+  `html {
+    scroll-behavior: smooth;
+  }`
 - Recommended Libraries
   - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
     - `import { v4 as uuid } from "uuid";`
@@ -328,7 +337,7 @@ src
     - Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
     - AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
     - React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
-    - Animista - Animation library (All CSS) - <https://animista.net/>
+    - Animista - Animation library (All CSS) - [Animista](https://animista.net/)
     - [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
   - [Email JS - send emails from your code without a backend server](https://www.emailjs.com/)
 - Review the full list of Coding resources on Todoist [here](https://todoist.com/app/project/2305622709#section-86202880)

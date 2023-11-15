@@ -11,7 +11,7 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 
-> Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the following link <https://stackoverflow.com/a/31520672>
+> Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the [this link](https://stackoverflow.com/a/31520672)
 
 ## Yarn
 
@@ -36,7 +36,7 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
-- `nvm install 8.1.0` - Install a specific version of Node (check <https://nodejs.org/en/> for the latest version)
+- `nvm install 8.1.0` - Install a specific version of Node (check [node.js](https://nodejs.org/en/) for the latest version)
 
 > Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
 
