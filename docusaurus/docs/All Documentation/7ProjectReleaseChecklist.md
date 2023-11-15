@@ -34,8 +34,10 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - Convert all of your jpg and png files to smaller image types such as webp
   - Lazy Load
     - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
+- Optimise your data speed
+  - [JSON is incredibly slow, here's what's faster](https://medium.com/data-science-community-srm/json-is-incredibly-slow-heres-what-s-faster-ca35d5aaf9e8)
 - Optimise the site for speed
-  - If using React, then visit <https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678>
+  - If using React, then visit [Reacthandbook.dev](https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678)
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
     - See ways to optimize runtimes - [Link](https://reacthandbook.dev/react-performance-optimization#runtimes-optimize)
   - [Next.js App speed increases](https://medium.com/weekly-webtips/10-ways-to-improve-your-next-js-app-performance-8e6f81b32dac)
@@ -53,7 +55,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
     - [Unused CSS](https://unused-css.com/)
     - [Sniper-CSS, avoid unused styles](https://link.medium.com/JK0GxKTA7yb)
 - Check the speed of the app and improve where possible
-  - Use <https://www.webpagetest.org/> to test the speed of the site
+  - Use [WebPageTest](https://www.webpagetest.org/) to test the speed of the site
     - Mark the tick box to Audit using Lighthouse
     - Review the results and make improvements based on the potential opportunities the tool suggests
   - Other Speed Testing Tools
@@ -82,14 +84,13 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
       />
     ```
 
-  - Add Next.js Analytics (see section 4.d of the above article)
-    - <https://nextjs.org/analytics>
+  - Add Next.js Analytics (see section 4.d of the above article) - [Link](https://nextjs.org/analytics)
 
 ## Other General Tests
 
-- Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - (<https://calvinke.com/seo/fixed-header-anchor-css/>)
+- Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - [Link](https://calvinke.com/seo/fixed-header-anchor-css/)
 - Check that the site works on all devices and browsers - [BrowserStack](https://www.browserstack.com/)
-- Check that input boxes are using the correct attributes to help user input - <https://better-mobile-inputs.netlify.app/>
+- Check that input boxes are using the correct attributes to help user input - [Better Mobile Inputs](https://better-mobile-inputs.netlify.app/)
 
 ## GitHub Information
 

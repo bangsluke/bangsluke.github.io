@@ -2,6 +2,15 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+## Table of Contents
+
+- [Before Starting](#before-starting)
+  - [Installation](#installation)
+  - [MDX Checking](#mdx-checking)
+  - [Local Development](#local-development)
+  - [Build](#build)
+  - [Deployment](#deployment)
+
 ## Before Starting
 
 Use `cd docusaurus` to navigate to the root of the website. Then `yarn start` to start a local development server.
@@ -11,6 +20,10 @@ Use `cd docusaurus` to navigate to the root of the website. Then `yarn start` to
 ```bash
 yarn
 ```
+
+### MDX Checking
+
+To check the MDX files are formatted correctly, use `npx docusaurus-mdx-checker`
 
 ### Local Development
 
