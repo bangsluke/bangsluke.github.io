@@ -244,6 +244,12 @@ src
 
 ## Framework Specific Development
 
+### React
+
+![React Logo](https://i.imgur.com/LMShXOo.png)
+
+- [6 ways of getting data into React](https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267)
+
 ### Next.js
 
 ![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
