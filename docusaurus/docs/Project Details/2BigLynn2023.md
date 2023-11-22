@@ -1,8 +1,10 @@
+# Big Lynn 2023
+
 <p align="center">
   <img src="https://i.imgur.com/OhMP4b0.png" alt="Big Lynn Logo" width="200"></img>
 </p>
 
-# Big Lynn 2023
+## Big Lynn 2023 Site
 
 An information page for the Big Lynn 2023 golf competition including details and stats from past years.
 
