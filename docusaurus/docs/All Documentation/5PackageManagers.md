@@ -50,7 +50,6 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 #### Yarn Install
 
 - `yarn` - Install all packages defined in package.json - same as `npm install`
-
 - `yarn add <package>` - Install a package - same as `npm install <package>`
 - `yarn add <package> --dev` - Install a package as a dev dependency
 
@@ -68,6 +67,7 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 - `yarn upgrade @angular` - Upgrade all packages with the name @angular to their latest version
 - `yarn upgrade --latest` - Upgrade all packages to their latest version
 - `yarn upgrade left-pad --latest` - Upgrade a specific package to its latest version
+- `yarn upgrade left-pad@^1.0.0 --dev` - Upgrade a specific development dependency package to a specific version
 - `yarn remove left-pad` - Removes a specific package
 
 ## PNPM Commands
