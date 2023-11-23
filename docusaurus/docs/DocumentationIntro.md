@@ -6,6 +6,8 @@ sidebar_position: 1
 
 Full details on my development journey and process.
 
+[Quick link to Useful Links page](UsefulLinks)
+
 ## Contents of the Site
 
 - [All Documentation](category/all-documentation)
@@ -65,6 +67,4 @@ Full details on my development journey and process.
   - [Git Fixes](All%20Documentation/8GitFixes#git-fixes)
   	- [Error: Unable to load Commits. fatal: bad object desktop.ini](All%20Documentation/8GitFixes#error-unable-to-load-commits-fatal-bad-object-desktopini)
   	- [Clearing Secrets from History](All%20Documentation/8GitFixes#clearing-secrets-from-history)
-- [Project Details](category/project-details)
-  - [bangsluke.github.io](Project%20Details/1bangslukegithubio)
-  - [Big Lynn 2023](Project%20Details/2BigLynn2023)
+- [Useful Links](UsefulLinks)
