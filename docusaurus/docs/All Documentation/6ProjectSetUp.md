@@ -339,6 +339,7 @@ src
   - Novu [In app notifications](https://github.com/novuhq/novu)
   - Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
   - Animations
+    - [10 Best Animation Libraries](https://javascript.plainenglish.io/10-best-animation-librarys-you-can-use-in-your-next-project-a6f17bddf233)
     - [React Flip Move](https://www.npmjs.com/package/react-flip-move) - Animation library - `yarn add react-flip-move`
     - Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
     - AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
