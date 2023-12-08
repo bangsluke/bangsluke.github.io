@@ -275,6 +275,7 @@ src
 
 ![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
+- [Testing in Next.js and React](https://medium.com/@kristiyan.velkov/the-pyramid-of-testing-in-react-js-or-next-js-a4090d3bfad2)
 - Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
 - Set up testing throughout the application based on its requirements
 - [Testing Trophy and Testing Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
