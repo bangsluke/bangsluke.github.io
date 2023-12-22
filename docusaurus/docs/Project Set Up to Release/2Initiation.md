@@ -1,5 +1,7 @@
 # Initiation
 
+> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+
 ## Create the New App
 
 ### Boilerplate Code

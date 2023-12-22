@@ -1,5 +1,7 @@
 # Planning
 
+> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+
 ## Inspiration
 
 For inspiration for projects, check out the following resources on the `Coding Resources` [Design UI/UX Links Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
