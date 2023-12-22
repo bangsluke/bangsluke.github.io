@@ -56,30 +56,46 @@
 - Set up documentation for the project via a README.md file
 - Write from scratch or use a template such as [readme.so](https://readme.so/)
 
-## Optional Extras
+## Easy Adds
 
 - Add smooth scrolling;
   `html {
     scroll-behavior: smooth;
   }`
-- Recommended Libraries
-  - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
-    - `import { v4 as uuid } from "uuid";`
-    - Then use `key: uuid(),`
-  - React Query - `yarn add react-query` - [https://react-query.tanstack.com/](https://react-query.tanstack.com/)
-    - [Mastering react Query - A Complete Guide](https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3)
-  - Material UI - Component Library - `yarn add @material-ui/core` - [https://material-ui.com/](https://material-ui.com/)
-  - Novu [In app notifications](https://github.com/novuhq/novu)
-  - Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
-  - Animations
-    - [10 Best Animation Libraries](https://javascript.plainenglish.io/10-best-animation-librarys-you-can-use-in-your-next-project-a6f17bddf233)
-    - [React Flip Move](https://www.npmjs.com/package/react-flip-move) - Animation library - `yarn add react-flip-move`
-    - Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
-    - AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
-    - React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
-    - Animista - Animation library (All CSS) - [Animista](https://animista.net/)
-    - [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
-  - [Email JS - send emails from your code without a backend server](https://www.emailjs.com/)
+
+### Recommended Libraries
+
+#### Components
+
+- [saas-ui](https://saas-ui.dev/)
+  - Getting started with SaaS UI is easy. First, you’ll have to install Chakra UI into your React project, then install SaaS UI, like this:
+  - `npm i @chakra-ui/react @emotion/react@¹¹ @emotion/styled@¹¹ framer-motion@⁶\`
+  - `npm i @saas-ui/react`
+  - If yarn is more your jam, you can do this instead:
+  - `yarn add @chakra-ui/react @emotion/react@¹¹ @emotion/styled@¹¹ framer-motion@⁶\`
+  - `yarn add @saas-ui/react`
+- Material UI - Component Library - `yarn add @material-ui/core` - [https://material-ui.com/](https://material-ui.com/)
+
+#### Animations
+
+- [10 Best Animation Libraries](https://javascript.plainenglish.io/10-best-animation-librarys-you-can-use-in-your-next-project-a6f17bddf233)
+- [React Flip Move](https://www.npmjs.com/package/react-flip-move) - Animation library - `yarn add react-flip-move`
+- Framer Motion - Animation library - `yarn add framer-motion` - [https://www.framer.com/motion/](https://www.framer.com/motion/)
+- AOS - Animation library - `yarn add aos` - [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
+- React Spring - Animation library - `yarn add react-spring` - [https://www.react-spring.io/](https://www.react-spring.io/)
+- Animista - Animation library (All CSS) - [Animista](https://animista.net/)
+- [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
+
+#### Other Libraries
+
+- UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
+  - `import { v4 as uuid } from "uuid";`
+  - Then use `key: uuid(),`
+- React Query - `yarn add react-query` - [https://react-query.tanstack.com/](https://react-query.tanstack.com/)
+  - [Mastering react Query - A Complete Guide](https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3)
+- Novu [In app notifications](https://github.com/novuhq/novu)
+- Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
+- [Email JS - send emails from your code without a backend server](https://www.emailjs.com/)
 - Review the full list of Coding resources on Todoist [here](https://todoist.com/app/project/2305622709#section-86202880)
 - Review the full list of React resources on Todoist [here](https://todoist.com/showTask?id=5756174140&sync_id=6506084710)
   - [React Components](https://todoist.com/showTask?id=6131657730&sync_id=6506084845)
