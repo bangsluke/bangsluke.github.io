@@ -41,7 +41,11 @@
 
 ### Authentication
 
-- Next.js - NextAuth - [Link](https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4)
+- Next.js
+  - NextAuth
+    - [Medium Link](https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4)
+    - [Freecodecamp Tutorial](https://www.freecodecamp.org/news/secure-next-js-applications-with-role-based-authentication-using-nextauth/)
+  - Auth0
 - For other authentication, consider using the following resources;
   - [PropelAuth](https://levelup.gitconnected.com/say-goodbye-to-authentication-headaches-with-propelauth-the-ultimate-solution-for-developers-b5cdad57d7d2)
   - [Logto Auth](https://logto.io/?ref=console)
