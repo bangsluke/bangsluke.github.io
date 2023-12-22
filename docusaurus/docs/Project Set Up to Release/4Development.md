@@ -63,9 +63,9 @@
     scroll-behavior: smooth;
   }`
 
-### Recommended Libraries
+## Recommended Libraries
 
-#### Components
+### Components
 
 - [saas-ui](https://saas-ui.dev/)
   - Getting started with SaaS UI is easy. First, you’ll have to install Chakra UI into your React project, then install SaaS UI, like this:
@@ -76,7 +76,7 @@
   - `yarn add @saas-ui/react`
 - Material UI - Component Library - `yarn add @material-ui/core` - [https://material-ui.com/](https://material-ui.com/)
 
-#### Animations
+### Animations
 
 - [10 Best Animation Libraries](https://javascript.plainenglish.io/10-best-animation-librarys-you-can-use-in-your-next-project-a6f17bddf233)
 - [React Flip Move](https://www.npmjs.com/package/react-flip-move) - Animation library - `yarn add react-flip-move`
@@ -86,7 +86,7 @@
 - Animista - Animation library (All CSS) - [Animista](https://animista.net/)
 - [Spinners Designs](https://tobiasahlin.com/spinkit/) - just HTML and CSS
 
-#### Other Libraries
+### Other Libraries
 
 - UUIDv4 - Key management - `yarn add uuidv4` - [https://www.npmjs.com/package/uuidv4](https://www.npmjs.com/package/uuidv4)
   - `import { v4 as uuid } from "uuid";`
@@ -118,4 +118,4 @@
 - Application Notifications
   - [ntfy](https://ntfy.sh/?ref=console.dev)
 
-> Note - for more, see "Coding Resources" Todoist project
+> Note - for more, see "[Coding Resources](https://app.todoist.com/app/project/2305622709#section-86202880)" Todoist project
