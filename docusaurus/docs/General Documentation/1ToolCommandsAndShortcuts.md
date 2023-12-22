@@ -1,5 +1,7 @@
 # Tool Commands/Shortcuts
 
+> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+
 ## Powershell Commands
 
 ![Powershell Logo](https://i.imgur.com/wBg7htx.png)
