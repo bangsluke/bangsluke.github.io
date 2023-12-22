@@ -8,6 +8,10 @@
 
 ![React Logo](https://i.imgur.com/LMShXOo.png)
 
+- [10 Best Practices in Front End Development](https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df)
+  - (1) Use of Absolute Paths Instead of Relative Paths
+    - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
+  - (4) Proper File Naming Conventions
 - [6 ways of getting data into React](https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267)
 
 ### Next.js
@@ -16,6 +20,7 @@
 
 - [Mastering Error and Loading pages](https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526)
 - [Adding unconfigured image hostname to next.config.js](https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j)
+- [Top 12 Libraries for Your Next.js Project](https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob)
 
 ## Issues and Debugging
 

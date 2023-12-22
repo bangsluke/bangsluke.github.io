@@ -33,6 +33,34 @@ src
   - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
     - [Folder Structure Command.md](https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md)
 
+### Component Set Up
+
+See point 4 of [10 Best Practices in Front End Development (React)](https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df)
+
+Structure your components in the following way, using Export Barrelling (point 2);
+
+```n/a
+--components:
+----Button
+------index.ts (exports everything necessary)
+------types.ts
+------styles.css
+------utils.ts
+------component.tsx
+----Icon
+------index.ts (exports everything necessary)
+------types.ts
+------styles.css
+------utils.ts
+------component.tsx
+----Input
+------index.ts (exports everything necessary)
+------types.ts
+------styles.css
+------utils.ts
+------component.tsx
+```
+
 ### File Set Up
 
 - Also, it is best practice to have a certain few files within your project
