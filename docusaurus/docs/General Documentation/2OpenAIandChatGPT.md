@@ -1,5 +1,7 @@
 # OpenAI and ChatGPT
 
+> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+
 ## OpenAI Links
 
 ![OpenAI Logo](https://i.imgur.com/KkOSP3l.png)
