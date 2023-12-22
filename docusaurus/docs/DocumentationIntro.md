@@ -10,7 +10,7 @@ Full details on my development journey and process.
 
 ## Contents of the Site
 
-- [All Documentation](category/all-documentation)
+- [General Documentation](category/general-documentation)
   - [Tool Commands/Shortcuts](General%20Documentation/1ToolCommandsAndShortcuts)
   	- [Powershell Commands](General%20Documentation/1ToolCommandsAndShortcuts#powershell-commands)
   	- [Git Commands](General%20Documentation/1ToolCommandsAndShortcuts#git-commands)
@@ -35,7 +35,7 @@ Full details on my development journey and process.
   - [Git Fixes](General%20Documentation/6GitFixes#git-fixes)
   	- [Error: Unable to load Commits. fatal: bad object desktop.ini](General%20Documentation/6GitFixes#error-unable-to-load-commits-fatal-bad-object-desktopini)
   	- [Clearing Secrets from History](General%20Documentation/6GitFixes#clearing-secrets-from-history)
-- [Project Set Up to Release](ProjectSetUptoRelease)
+- [Project Set Up to Release](category/Project-Set-Up-to-Release)
   - [Planning](Project%20Set%20Up%20to%20Release/1Planning)
     - [Inspiration](Project%20Set%20Up%20to%20Release/1Planning#inspiration)
     - [Decide on Architecture](Project%20Set%20Up%20to%20Release/1Planning#decide-on-architecture)

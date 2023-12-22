@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Useful Links
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to Documentation Intro Contents](/DocumentationIntro.md)
 
 Useful links for Development.
 
