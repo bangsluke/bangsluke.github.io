@@ -13,6 +13,13 @@
     - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
   - (4) Proper File Naming Conventions
 - [6 ways of getting data into React](https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267)
+- Use TanStack Router - [https://tanstack.com/router/v1/docs/overview](https://tanstack.com/router/v1/docs/overview)
+
+### Vite
+
+![Vite Logo](https://i.imgur.com/smpppHt.png)
+
+- Use TanStack Router - [https://tanstack.com/router/v1/docs/overview](https://tanstack.com/router/v1/docs/overview)
 
 ### Next.js
 
@@ -98,6 +105,8 @@
   - Then use `key: uuid(),`
 - React Query - `yarn add react-query` - [https://react-query.tanstack.com/](https://react-query.tanstack.com/)
   - [Mastering react Query - A Complete Guide](https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3)
+- TanStack Router - [https://tanstack.com/router/v1/docs/overview](https://tanstack.com/router/v1/docs/overview)
+  - [Why you should not use React Router](https://techmade.medium.com/why-you-should-not-use-react-router-as-a-frontend-engineer-25d96497e143)
 - Novu [In app notifications](https://github.com/novuhq/novu)
 - Apex Charts - Charts Library - `yarn add apexcharts` - [https://apexcharts.com/](https://apexcharts.com/)
 - [Email JS - send emails from your code without a backend server](https://www.emailjs.com/)
