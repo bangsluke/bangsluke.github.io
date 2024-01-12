@@ -1,7 +1,9 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* CSS files with the .module.css suffix will be treated as CSS modules and scoped locally. */
+
+.header {
+  font-size: 2rem;
+  /* color: red; */
+}
 
 .heroBanner {
   padding: 4rem 0;
