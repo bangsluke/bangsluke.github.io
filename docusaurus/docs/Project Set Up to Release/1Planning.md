@@ -17,13 +17,19 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ### Front End Architecture
 
+![React Logo](https://i.imgur.com/LMShXOo.png) ![Vite Logo](https://i.imgur.com/smpppHt.png) ![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
+
 - Considerations:
   - Single page application or not?
   - SSR (Server side rendering) or SSG (Static site generation) required?
 - Options:
   - CRA (Create React App)
-  - Vite
-  - NextJS
+  - Vite.js
+  - Next.js
+- Recommendations (from [Robin Wieruch](https://www.robinwieruch.de/react-libraries/)):
+  - Vite.js for client-side rendered React applications
+  - Next.js server-side rendered React applications
+  - Astro for static-side generated React applications
 
 ### Back End Architecture
 
