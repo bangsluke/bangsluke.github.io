@@ -65,6 +65,7 @@ Full details on my development journey and process.
       - [Components](Project%20Set%20Up%20to%20Release/4Development#components)
       - [Animations](Project%20Set%20Up%20to%20Release/4Development#animations)
       - [Other Libraries](Project%20Set%20Up%20to%20Release/4Development#other-libraries)
+    - [Other Tips](Project%20Set%20Up%20to%20Release/4Development#other-tips)
   - [Testing and Deployment](Project%20Set%20Up%20to%20Release/5TestingandDeployment)
     - [Testing](Project%20Set%20Up%20to%20Release/5TestingandDeployment#testing)
     - [Deployment](Project%20Set%20Up%20to%20Release/5TestingandDeployment#deployment)

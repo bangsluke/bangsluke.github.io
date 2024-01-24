@@ -4,6 +4,36 @@
 
 ## Framework Specific Development
 
+### All Frameworks
+
+- [Set up your HTML head with some nice small tweaks](https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c)
+  - Use theme-colour and add your theme `<meta name="theme-color" content="#f00" />`
+  - The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.
+
+    ```html
+    <!-- theme color is white unless in dark mode, then it's black -->
+    <meta name="theme-color" content="#fff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+    ```
+
+  - Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.
+
+    ```html
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Title">
+    <meta property="og:description" content="Description of the page.">
+    <meta property="og:url" content="link.to.be.displayed.when.shared">
+    <meta property="og:image" content="link.to.thumbnail.image">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Page Title">
+    <meta name="twitter:description" content="Description of the page.">
+    <meta name="twitter:url" content="link.to.be.displayed.when.shared">
+    <meta name="twitter:image" content="link.to.thumbnail.image">
+    ```
+
+  - Add a favicon
+
 ### React
 
 ![React Logo](https://i.imgur.com/LMShXOo.png)
@@ -133,3 +163,8 @@
   - [ntfy](https://ntfy.sh/?ref=console.dev)
 
 > Note - for more, see "[Coding Resources](https://app.todoist.com/app/project/2305622709#section-86202880)" Todoist project
+
+## Other Tips
+
+- With the `accent-color` property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.
+- Use the correct HTML `<input type="">` attribute for the correct input type. There are [22 HTML input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
