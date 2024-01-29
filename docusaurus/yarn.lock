@@ -1384,10 +1384,10 @@
     webpack-merge "^5.9.0"
     webpackbar "^5.0.2"
 
-"@docusaurus/core@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-3.0.1.tgz#ad9a66b20802ea81b25e65db75d4ca952eda7e01"
-  integrity sha512-CXrLpOnW+dJdSv8M5FAJ3JBwXtL6mhUWxFA8aS0ozK6jBG/wgxERk5uvH28fCeFxOGbAT9v1e9dOMo1X2IEVhQ==
+"@docusaurus/core@^3.1.0":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@docusaurus/core/-/core-3.1.1.tgz#29ce8df7a3d3d12ee8962d6d86133b87235ff17b"
+  integrity sha512-2nQfKFcf+MLEM7JXsXwQxPOmQAR6ytKMZVSx7tVi9HEm9WtfwBH1fp6bn8Gj4zLUhjWKCLoysQ9/Wm+EZCQ4yQ==
   dependencies:
     "@babel/core" "^7.23.3"
     "@babel/generator" "^7.23.3"
@@ -1399,13 +1399,13 @@
     "@babel/runtime" "^7.22.6"
     "@babel/runtime-corejs3" "^7.22.6"
     "@babel/traverse" "^7.22.8"
-    "@docusaurus/cssnano-preset" "3.0.1"
-    "@docusaurus/logger" "3.0.1"
-    "@docusaurus/mdx-loader" "3.0.1"
+    "@docusaurus/cssnano-preset" "3.1.1"
+    "@docusaurus/logger" "3.1.1"
+    "@docusaurus/mdx-loader" "3.1.1"
     "@docusaurus/react-loadable" "5.5.2"
-    "@docusaurus/utils" "3.0.1"
-    "@docusaurus/utils-common" "3.0.1"
-    "@docusaurus/utils-validation" "3.0.1"
+    "@docusaurus/utils" "3.1.1"
+    "@docusaurus/utils-common" "3.1.1"
+    "@docusaurus/utils-validation" "3.1.1"
     "@slorber/static-site-generator-webpack-plugin" "^4.0.7"
     "@svgr/webpack" "^6.5.1"
     autoprefixer "^10.4.14"
