@@ -51,6 +51,7 @@
   - (4) Proper File Naming Conventions
 - [6 ways of getting data into React](https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267)
 - Use TanStack Router - [https://tanstack.com/router/v1/docs/overview](https://tanstack.com/router/v1/docs/overview)
+- [Optimizing React Performance](https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7)
 
 ### Vite
 
