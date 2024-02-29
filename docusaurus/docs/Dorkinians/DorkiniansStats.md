@@ -131,7 +131,7 @@ The stats are created from several interconnected Google Sheet files, where capt
 
 The website then reads in this data every time it loads, which is why the loading is so slow and you can see it loading section by section, as it loads in different required data tables.
 
-<img src="../../img/Dorkinians/Sheets and Website Explained.png" alt="Stats Sheets and Website Explained" width="800"></img>
+<img src="/img/Dorkinians/Sheets and Website Explained.png" alt="Stats Sheets and Website Explained" width="800"></img>
 
 - The site is hosted on Netlify (https://app.netlify.com/sites/dorkinians-stats-site/overview) - a website hosting site
 - The code is hosted on GitHub (https://github.com/bangsluke/Dorkinians-Dev-Site)
@@ -177,7 +177,7 @@ As the website loads, I log some statements such as "getPlayerStats" etc. which 
 
 If there is an error, have a look at what the site was trying to do before it failed, as this may give some indication of what went wrong.
 
-<img src="../../img/Dorkinians/Debug Console.png" alt="Debug Console" width="500"></img>
+<img src="/img/Dorkinians/Debug Console.png" alt="Debug Console" width="500"></img>
 
 > [Back to top](#table-of-contents)
 
@@ -194,7 +194,7 @@ To add a player to the Dorkinians database, do the following steps;
 - You can ignore the remaining details - we no longer use them
 
 <a href="https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?pli=1#gid=2110221697&range=A1" target="_blank" rel="noopener noreferrer">
-	<img src="../../img/Dorkinians/Players List.png" alt="Stats Players List" width="400"></img>
+	<img src="/img/Dorkinians/Players List.png" alt="Stats Players List" width="400"></img>
 </a>
 
 > [Back to top](#table-of-contents)
@@ -213,7 +213,7 @@ This is how I calculate distance travelled for players
 :::
 
 <a href="https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?pli=1#gid=1731773426&range=H1" target="_blank" rel="noopener noreferrer">
-	<img src="../../img/Dorkinians/Teams List.png" alt="Stats Teams List" width="400"></img>
+	<img src="/img/Dorkinians/Teams List.png" alt="Stats Teams List" width="400"></img>
 </a>
 
 > [Back to top](#table-of-contents)
