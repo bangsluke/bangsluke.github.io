@@ -97,7 +97,7 @@ The control panel can be used to monitor that status of each team's stats. If th
 Each column provides a specific error type to help debug where to look.
 
 <a href="https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?pli=1#gid=1246584563&range=B2" target="_blank" rel="noopener noreferrer">
-	<img src="../../img/Dorkinians/Control Panel.png" alt="Stats Control Panel" width="800"></img>
+	<img src="../../static/img/Dorkinians/Control Panel.png" alt="Stats Control Panel" width="800"></img>
 </a>
 
 ### Stats Abbreviations
