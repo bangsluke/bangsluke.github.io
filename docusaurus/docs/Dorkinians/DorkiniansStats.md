@@ -38,6 +38,10 @@
 - Chase the captains to complete their [stats](#control-panel) and fix any problems they have
 - ⁠Once all captains have done their stats, load the [website](https://www.dorkiniansfcstats.co.uk/#team-of-the-week), screenshot TOTW and post
 
+### Monthly
+
+- Post the Fantasy Player of the Month - by screenshotting the player below the TOTW
+
 > [Back to top](#table-of-contents)
 
 ## Sheet Links
