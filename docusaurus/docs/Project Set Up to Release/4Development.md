@@ -64,6 +64,7 @@
 ![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
 
 - [Mastering Error and Loading pages](https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526)
+- [Handling images in Next.js 14](https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36)
 - [Adding unconfigured image hostname to next.config.js](https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j)
 - [Top 12 Libraries for Your Next.js Project](https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob)
 - [How to use CORS in Next.js 14](https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797)
