@@ -6,7 +6,8 @@ sidebar_position: 1
 
 Full details on my development journey and process.
 
-[Quick link to Useful Links page](UsefulLinks)
+- [Quick link to Dorkinians Stats](Dorkinians/DorkiniansStats)
+- [Quick link to Useful Links page](UsefulLinks)
 
 ## Contents of the Site
 

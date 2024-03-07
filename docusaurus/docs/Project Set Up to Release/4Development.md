@@ -68,6 +68,9 @@
 - [Adding unconfigured image hostname to next.config.js](https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j)
 - [Top 12 Libraries for Your Next.js Project](https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob)
 - [How to use CORS in Next.js 14](https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797)
+- [A guide to caching in Next.js](https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/)
+- [Advanced features of Next.js](https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev)
+- [Things you didn't know about Next.js](https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f)
 
 ## CSS
 
