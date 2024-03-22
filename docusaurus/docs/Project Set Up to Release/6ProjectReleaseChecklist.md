@@ -75,6 +75,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 - If using Next.js
   - [Advanced Next JS Concepts](https://blog.devgenius.io/advanced-next-js-concepts-8439a8752597)
+  - [Get the best performance from your Next.js app](https://javascript.plainenglish.io/get-the-best-performance-on-your-next-js-app-f407cc25d1f9)
   - Make sure to optimize images using next/image. e.g.
 
     ```javascript
