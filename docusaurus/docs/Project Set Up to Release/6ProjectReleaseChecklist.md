@@ -31,6 +31,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 ## Page Speed Testing
 
+- Remove unused packages in package.json - You can check those items by running `npx depcheck`.
 - Reduce your image sizes
   - [9 Image optimisation techniques](https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54)
   - Convert all of your jpg and png files to smaller image types such as webp
