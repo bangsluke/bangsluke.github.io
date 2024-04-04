@@ -9,6 +9,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
 - Set up meta tags in the index.html file
   - [metatags.io](https://metatags.io/)
+  - [The Power of Metadata in Next.js 13 (Part 3): Optimize Your Website’s SEO NOW!](https://levelup.gitconnected.com/the-power-of-metadata-in-next-js-13-part-3-optimize-your-websites-seo-now-a64e9fc1f5f9)
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
   - [theme colour html](https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa)
 
