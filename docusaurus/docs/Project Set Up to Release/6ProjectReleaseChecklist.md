@@ -63,6 +63,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - Use [WebPageTest](https://www.webpagetest.org/) to test the speed of the site
     - Mark the tick box to Audit using Lighthouse
     - Review the results and make improvements based on the potential opportunities the tool suggests
+  - [Reduce tasks over 50ms](https://javascript.plainenglish.io/optimizing-web-performance-keeping-long-tasks-under-50ms-with-the-rail-model-d13504f45f63)
   - Other Speed Testing Tools
     - Use Chrome DevTools LightHouse tool
     - [GTmetrix](https://gtmetrix.com/)
