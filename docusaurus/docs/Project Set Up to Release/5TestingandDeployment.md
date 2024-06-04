@@ -15,6 +15,7 @@
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Playwright / Cypress)
     - [E2E Playwright testing with Next.js](https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111)
+    - [Ultimate Guide to Visual Testing with Playwright](https://www.browsercat.com/post/ultimate-guide-visual-testing-playwright)
 - Use ChatGPT or Codeium to write some simple tests
 
 ## Deployment

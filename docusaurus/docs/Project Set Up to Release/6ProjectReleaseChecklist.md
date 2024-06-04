@@ -9,6 +9,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 - This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
 - Set up meta tags in the index.html file
   - [metatags.io](https://metatags.io/)
+  - [The Power of Metadata in Next.js 13 (Part 3): Optimize Your Website’s SEO NOW!](https://levelup.gitconnected.com/the-power-of-metadata-in-next-js-13-part-3-optimize-your-websites-seo-now-a64e9fc1f5f9)
   - [The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website’s SEO NOW!](https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920)
   - [theme colour html](https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa)
 
@@ -31,6 +32,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 ## Page Speed Testing
 
+- Remove unused packages in package.json - You can check those items by running `npx depcheck`.
 - Reduce your image sizes
   - [9 Image optimisation techniques](https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54)
   - Convert all of your jpg and png files to smaller image types such as webp
@@ -62,6 +64,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - Use [WebPageTest](https://www.webpagetest.org/) to test the speed of the site
     - Mark the tick box to Audit using Lighthouse
     - Review the results and make improvements based on the potential opportunities the tool suggests
+  - [Reduce tasks over 50ms](https://javascript.plainenglish.io/optimizing-web-performance-keeping-long-tasks-under-50ms-with-the-rail-model-d13504f45f63)
   - Other Speed Testing Tools
     - Use Chrome DevTools LightHouse tool
     - [GTmetrix](https://gtmetrix.com/)
@@ -75,6 +78,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
 
 - If using Next.js
   - [Advanced Next JS Concepts](https://blog.devgenius.io/advanced-next-js-concepts-8439a8752597)
+  - [Get the best performance from your Next.js app](https://javascript.plainenglish.io/get-the-best-performance-on-your-next-js-app-f407cc25d1f9)
   - Make sure to optimize images using next/image. e.g.
 
     ```javascript
