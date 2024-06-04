@@ -40,6 +40,7 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [JSON is incredibly slow, here's what's faster](https://medium.com/data-science-community-srm/json-is-incredibly-slow-heres-what-s-faster-ca35d5aaf9e8)
   - [How to Make Your JavaScript Code Blazingly Fast With This One Simple Trick! 🔥](https://javascript.plainenglish.io/how-to-make-your-javascript-code-blazingly-fast-with-this-one-simple-trick-92c53adbf1a1)
 - Optimise the site for speed
+  - Remove dependencies that are not required - `npx depcheck`
   - If using React, then visit [Reacthandbook.dev](https://reacthandbook.dev/react-performance-optimization?utm_source=reactdigest&utm_medium&utm_campaign=1678)
     - See ways to optimize loadtimes - [Link](https://reacthandbook.dev/react-performance-optimization#loadtimes-optimize)
     - See ways to optimize runtimes - [Link](https://reacthandbook.dev/react-performance-optimization#runtimes-optimize)
