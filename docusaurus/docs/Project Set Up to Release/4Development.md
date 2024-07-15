@@ -123,6 +123,8 @@ const Headline = ({ title }) =>
 
 ## Issues and Debugging
 
+### React Issues
+
 ![React Logo](https://i.imgur.com/LMShXOo.png)
 
 - For issues in `React` (including `Vite` and `Next.JS`):
@@ -134,6 +136,12 @@ const Headline = ({ title }) =>
     ```
 
     Solution [link](https://stackoverflow.com/a/75093164)
+
+### HTML, CSS and JavaScript Issues
+
+- If you are trying to minify JavaScript files and you get the error `Minify Failed: 'preserve_line' is not a supported option`, then run the command "Minify" again in VSCode using `CTRL + Shift + M`.
+  - If this still fails, open user settings in VSCode, change a value in the minify section and try to save the file again to force the minification.
+  - Return the user settings options back once done.
 
 ## Security and Authentication
 
