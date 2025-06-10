@@ -13,7 +13,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ## Before Starting
 
-Use `cd docusaurus` to navigate to the root of the website. Then `yarn start` to start a local development server.
+Use `cd docusaurus` to navigate to the root of the website. Then `yarn dev` to start a local development server.
 
 ### Installation
 
