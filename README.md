@@ -42,7 +42,7 @@ Drop me an email at [bangsluke@gmail.com](mailto:bangsluke@gmail.com) or visit m
 
 ## Getting Started
 
-There is no need to install, just visit the [site here](https://bangsluke.github.io/Homepage.html) for the homepage.
+Visit the [site here](https://bangsluke.github.io/Homepage.html) for the homepage.
 
 ## Author Notes
 
