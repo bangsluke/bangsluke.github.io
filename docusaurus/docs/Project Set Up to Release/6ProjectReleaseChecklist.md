@@ -19,7 +19,11 @@ Use this checklist tool for each site released - [frontendchecklist.io](https://
   - [realfavicongenerator.net](https://realfavicongenerator.net/)
   > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
 
-## 404 Page
+## User Experience
+
+- [12 Frontend Micro-Interactions That Users Secretly Judge](https://medium.com/@amareshadak/12-frontend-micro-interactions-that-users-secretly-judge-d0b333165191)
+
+### 404 Page
 
 - Create a 404 page for catching routing errors
   - [error404.fun](https://error404.fun/)

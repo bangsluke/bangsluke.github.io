@@ -120,3 +120,9 @@ Structure your components in the following way, using Export Barrelling (point 2
 >
 > 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
 > 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
+
+## React Set Up
+
+If using React, consider the following links:
+
+- [Don’t use React imports like this. Use Wrapper Pattern instead](https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4) - wrapper to go around library imports

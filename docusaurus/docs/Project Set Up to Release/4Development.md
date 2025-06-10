@@ -52,6 +52,7 @@
 - [6 ways of getting data into React](https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267)
 - Use TanStack Router - [https://tanstack.com/router/v1/docs/overview](https://tanstack.com/router/v1/docs/overview)
 - [Optimizing React Performance](https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7)
+- [You’re Using Context Providers the Wrong Way! Here’s How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium](https://medium.com/devlander/youre-using-context-providers-the-wrong-way-here-s-how-to-fix-it-c91247b6e828)
 
 ### Vite
 
