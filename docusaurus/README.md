@@ -1,15 +1,17 @@
-# Website
+# Docusaurus
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Table of Contents
 
-- [Before Starting](#before-starting)
-  - [Installation](#installation)
-  - [MDX Checking](#mdx-checking)
-  - [Local Development](#local-development)
-  - [Build](#build)
-  - [Deployment](#deployment)
+- [Docusaurus](#docusaurus)
+  - [Table of Contents](#table-of-contents)
+  - [Before Starting](#before-starting)
+    - [Installation](#installation)
+    - [MDX Checking](#mdx-checking)
+    - [Local Development](#local-development)
+    - [Build](#build)
+    - [Deployment](#deployment)
 
 ## Before Starting
 

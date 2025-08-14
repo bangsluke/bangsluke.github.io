@@ -76,6 +76,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ### Mobile Architecture
 
+- <a href="https://reactnative.dev/" target="_blanks">React Native</a>
 - <a href="https://expo.io/" target="_blank">Expo</a>
 - <a href="https://capacitorjs.com/" target="_blank">Capacitor.js</a>
 
@@ -88,5 +89,6 @@ For inspiration for projects, check out the following resources on the `Coding R
 
 Top Links:
 
+- <a href="https://v0.app/" target="_blank">V0 - UI Design Tool</a>
 - <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
 - <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
