@@ -8,7 +8,7 @@
 
 If it is just a web app to be built, consider the below Front End, Back End and Database Architecture options. If it also needs to be a mobile app, consider the below Mobile Architecture options.
 
-1. Ask AI to recommend an architecture with justification - see the AI coding prompts in your notes
+1. Ask AI to recommend an architecture with justification - see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">the Obsidian note on AI Prompts here</a>
 2. Review the below architecture considerations against the AI output and verify it makes sense
 
 
