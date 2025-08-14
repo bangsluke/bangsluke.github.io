@@ -6,9 +6,9 @@
 
 ## Installing Python
 
-- [Download Python](https://www.python.org/downloads/)
-- [Install pip](https://pip.pypa.io/en/stable/installation/)
-- [Set Python Path](https://stackoverflow.com/a/47808351)
+- <a href="https://www.python.org/downloads/" target="_blank">Download Python</a>
+- <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">Install pip</a>
+- <a href="https://stackoverflow.com/a/47808351" target="_blank">Set Python Path</a>
 - Install required packages, e.g;
   - `pip install pyautogui`
 - To update pip, use the following command:
@@ -16,6 +16,6 @@
 
 ## Python Scripts
 
-To see my Python scripts, check out my [Python Learning](https://github.com/bangsluke/python-learning) repo.
+To see my Python scripts, check out my <a href="https://github.com/bangsluke/python-learning" target="_blank">Python Learning</a> repo.
 
 This contains basic scripts detailing how to use Python to automate tasks and describing basic syntax.

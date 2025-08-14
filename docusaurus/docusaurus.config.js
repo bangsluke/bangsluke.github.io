@@ -75,6 +75,7 @@ const config = {
             href: "https://github.com/bangsluke",
             label: "GitHub",
             position: "right",
+            target: "_blank",
           },
         ],
       },
@@ -96,10 +97,12 @@ const config = {
               {
                 label: "bangsluke Homepage",
                 href: "https://bangsluke.github.io/Homepage.html",
+                target: "_blank",
               },
               {
                 label: "bangsluke New Tab",
                 href: "https://bangsluke.github.io/pages/NewTab.html",
+                target: "_blank",
               },
             ],
           },
@@ -109,10 +112,12 @@ const config = {
               {
                 label: "Stack Overflow",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                target: "_blank",
               },
               {
                 label: "Docusaurus GitHub",
                 href: "https://github.com/facebook/docusaurus",
+                target: "_blank",
               },
             ],
           },

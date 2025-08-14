@@ -6,16 +6,16 @@
 
 ![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
-- [Testing in Next.js and React](https://medium.com/@kristiyan.velkov/the-pyramid-of-testing-in-react-js-or-next-js-a4090d3bfad2)
-- Review the testing resources saved in [Todoist](https://todoist.com/showTask?id=6132185936&sync_id=6506084877)
+- <a href="https://medium.com/@kristiyan.velkov/the-pyramid-of-testing-in-react-js-or-next-js-a4090d3bfad2" target="_blank">Testing in Next.js and React</a>
+- Review the testing resources saved in <a href="https://todoist.com/showTask?id=6132185936&sync_id=6506084877" target="_blank">Todoist</a>
 - Set up testing throughout the application based on its requirements
-- [Testing Trophy and Testing Classifications](https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications)
+- <a href="https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications" target="_blank">Testing Trophy and Testing Classifications</a>
   - Static tests (ESLint, TypeScript) - Done automatically in VS Code e.g. typos and type errors
   - Unit tests (Jest)
   - Integration tests (React Testing Library / Cypress)
   - E2E tests (Playwright / Cypress)
-    - [E2E Playwright testing with Next.js](https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111)
-    - [Ultimate Guide to Visual Testing with Playwright](https://www.browsercat.com/post/ultimate-guide-visual-testing-playwright)
+    - <a href="https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111" target="_blank">E2E Playwright testing with Next.js</a>
+    - <a href="https://www.browsercat.com/post/ultimate-guide-visual-testing-playwright" target="_blank">Ultimate Guide to Visual Testing with Playwright</a>
 - Use ChatGPT or Codeium to write some simple tests
 
 ## Deployment
@@ -24,7 +24,7 @@
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment
-- Set up additional Netlify integrations (e.g. Lighthouse, Checklinks, HTML Validate). Link is [here](https://app.netlify.com/sites/dorkinians-mobile-stats/integrations) once deployed. (!NOTE - Not yet got these working on a repo)
+- Set up additional Netlify integrations (e.g. Lighthouse, Checklinks, HTML Validate). Link is <a href="https://app.netlify.com/sites/dorkinians-mobile-stats/integrations" target="_blank">here</a> once deployed. (!NOTE - Not yet got these working on a repo)
   - Must haves
     - LightHouse - Automatically run a Lighthouse audit on your website after every build.
     - Checklinks - Checklinks helps you keep all your asset references correct and avoid embarrassing broken links to your internal pages, or even to external pages you link out to.

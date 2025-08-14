@@ -6,13 +6,13 @@
 
 ![OpenAI Logo](https://i.imgur.com/KkOSP3l.png)
 
-- [ChatGPT](https://chat.openai.com/)
-- [OpenAI](https://openai.com/)
-- [OpenAI API](https://beta.openai.com/docs/api-reference/introduction)
+- <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+- <a href="https://openai.com/" target="_blank">OpenAI</a>
+- <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI API</a>
 
 ## ChatGPT Prompts
 
-- [How to use ChatGPT in daily life](https://levelup.gitconnected.com/how-to-use-chatgpt-in-daily-life-4688f7afb930)
+- <a href="https://levelup.gitconnected.com/how-to-use-chatgpt-in-daily-life-4688f7afb930" target="_blank">How to use ChatGPT in daily life</a>
   - Summarize a book or article
     - `Summarize animal farm by George Orwell.`
     - `Summarize the contents of this link https://docs.python.org/3/library/string.html`
