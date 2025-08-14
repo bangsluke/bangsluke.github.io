@@ -1,42 +1,48 @@
 # Dorkinians Stats
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to Documentation Intro Contents](../../DocumentationIntro.md)
 
 ![Dorkinians Logo](https://i.imgur.com/6er1G1n.png)
 
 ## Table of Contents
 
-- [To Do List](#to-do-list)
-- [Sheet Links](#sheet-links)
-  - [Main Stats Sheets](#main-stats-sheets)
-  - [Team Stats Sheets](#team-stats-sheets)
-- [Details](#details)
-  - [Sheets to maintain](#sheets-to-maintain)
-  - [Control Panel](#control-panel)
-  - [Stats Abbreviations](#stats-abbreviations)
-- [How the stats site works](#how-the-stats-site-works)
-- [Debugging Stats Problems](#debugging-stats-problems)
-  - [Common Problems](#common-problems)
-  - [Stat Errors](#stat-errors)
-  - [Website Errors](#website-errors)
-  - [Adding a Player](#adding-a-player)
-  - [Adding an Opposition Team](#adding-an-opposition-team)
-- [Useful Links](#useful-links)
+- [Dorkinians Stats](#dorkinians-stats)
+  - [Table of Contents](#table-of-contents)
+  - [To Do List](#to-do-list)
+    - [Thursday](#thursday)
+    - [Saturday](#saturday)
+    - [Sunday/Monday](#sundaymonday)
+    - [Monthly](#monthly)
+  - [Sheet Links](#sheet-links)
+    - [Main Stats Sheets](#main-stats-sheets)
+    - [Team Stats Sheets](#team-stats-sheets)
+  - [Details](#details)
+    - [Sheets to maintain](#sheets-to-maintain)
+    - [Control Panel](#control-panel)
+    - [Stats Abbreviations](#stats-abbreviations)
+  - [How the stats site works](#how-the-stats-site-works)
+  - [Debugging Stats Problems](#debugging-stats-problems)
+    - [Common Problems](#common-problems)
+    - [Stat Errors](#stat-errors)
+    - [Website Errors](#website-errors)
+    - [Adding a Player](#adding-a-player)
+    - [Adding an Opposition Team](#adding-an-opposition-team)
+  - [Useful Links](#useful-links)
 
 ## To Do List
 
 ### Thursday
 
-- Look up the [fixtures from the FA Site](https://fulltime.thefa.com/fixtures.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010) for each team and add them to the [main sheet `Fixtures List` tab](https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?pli=1#gid=1820717347&range=A1)
+- Look up the <a href="https://fulltime.thefa.com/fixtures.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010" target="_blank">fixtures from the FA Site</a> for each team and add them to the <a href="https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?pli=1#gid=1820717347&range=A1" target="_blank">main sheet `Fixtures List` tab</a>
 
 ### Saturday
 
-- Add results from the Dorkinians group chat or [results from the FA Site](https://fulltime.thefa.com/results.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010) to the sheet so that when captains add stats, they have the right number of goals to allocate (can also be Sunday)
+- Add results from the Dorkinians group chat or <a href="https://fulltime.thefa.com/results.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010" target="_blank">results from the FA Site</a> to the sheet so that when captains add stats, they have the right number of goals to allocate (can also be Sunday)
 
 ### Sunday/Monday
 
 - Chase the captains to complete their [stats](#control-panel) and fix any problems they have
-- ⁠Once all captains have done their stats, load the [website](https://www.dorkiniansfcstats.co.uk/#team-of-the-week), screenshot TOTW and post
+- ⁠Once all captains have done their stats, load the <a href="https://www.dorkiniansfcstats.co.uk/#team-of-the-week" target="_blank">website</a>, screenshot TOTW and post
 
 ### Monthly
 
@@ -52,8 +58,8 @@ All sheets can only be opened by people with added access
 
 ### Main Stats Sheets
 
-- [Dorkinians Stats 2016-25](https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?usp=sharing) - The easy read stats sheet that collates all captains stats
-- [Dorkinians Online Stats](https://docs.google.com/spreadsheets/d/1dikd8bRgeiNYzinSN7VHCvh6brclC8T5s6l9yfnxU4g/edit?usp=sharing) - The data that the website parses for display.
+- <a href="https://docs.google.com/spreadsheets/d/1yRYxEP4KtL1TZ7m9uFVw4CWJfyviNLwqXAmoqLtTVlc/edit?usp=sharing" target="_blank">Dorkinians Stats 2016-25</a> - The easy read stats sheet that collates all captains stats
+- <a href="https://docs.google.com/spreadsheets/d/1dikd8bRgeiNYzinSN7VHCvh6brclC8T5s6l9yfnxU4g/edit?usp=sharing" target="_blank">Dorkinians Online Stats</a> - The data that the website parses for display.
 
 :::tip
 There is no need to view the second link - Online Stats, unless something has gone really wrong
@@ -63,15 +69,15 @@ There is no need to view the second link - Online Stats, unless something has go
 
 ### Team Stats Sheets
 
-- [Dorkinians 1s Stats](https://docs.google.com/spreadsheets/d/1c-Z38ZU6LzuGZkIAR1OWSfM285tZQpIYZXYlKWRBMCk/edit?usp=sharing)
-- [Dorkinians 2s Stats](https://docs.google.com/spreadsheets/d/1VAfBTMGzrubx1KjkcE0teqGsKaxhY05E9tVLW0pp4Js/edit?usp=sharing)
-- [Dorkinians 3s Stats](https://docs.google.com/spreadsheets/d/1_jZwz0DVFP12lCV0hPt8vPYKB08I3Hpq7yv_187MjpI/edit?usp=sharing)
-- [Dorkinians 4s Stats](https://docs.google.com/spreadsheets/d/1Q41WLJWITudG-3_kPjgtkYUS6K1eQiLcHkvreRZHyTg/edit?usp=sharing)
-- [Dorkinians 5s Stats](https://docs.google.com/spreadsheets/d/1Z1L_mfnhKPPwPtSeIvwNXVzvgCEu814KtyAl9OLRE-k/edit?usp=sharing)
-- [Dorkinians 6s Stats](https://docs.google.com/spreadsheets/d/1DaFADa8I-y_bmjJYS4mcJg61abTWaydgQbNWMMyzMEI/edit?usp=sharing)
-- [Dorkinians 7s Stats](https://docs.google.com/spreadsheets/d/1vqQmddiYzm46qShnAob1x8daIVFU9GXiAlb5MXJNeL0/edit?usp=sharing)
-- [Dorkinians 8s Stats](https://docs.google.com/spreadsheets/d/1khDoDviBavkijIRtl08W273SH5-UuPt-8lObsi8_LXk/edit?usp=sharing)
-- [Dorkinians Vets Stats](https://docs.google.com/spreadsheets/d/1WvIBfMRF_hSTGeoNzOz_MqMn3UaTGeyZAyooMC8DxtI/edit?usp=sharing)
+- <a href="https://docs.google.com/spreadsheets/d/1c-Z38ZU6LzuGZkIAR1OWSfM285tZQpIYZXYlKWRBMCk/edit?usp=sharing" target="_blank">Dorkinians 1s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1VAfBTMGzrubx1KjkcE0teqGsKaxhY05E9tVLW0pp4Js/edit?usp=sharing" target="_blank">Dorkinians 2s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1_jZwz0DVFP12lCV0hPt8vPYKB08I3Hpq7yv_187MjpI/edit?usp=sharing" target="_blank">Dorkinians 3s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1Q41WLJWITudG-3_kPjgtkYUS6K1eQiLcHkvreRZHyTg/edit?usp=sharing" target="_blank">Dorkinians 4s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1Z1L_mfnhKPPwPtSeIvwNXVzvgCEu814KtyAl9OLRE-k/edit?usp=sharing" target="_blank">Dorkinians 5s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1DaFADa8I-y_bmjJYS4mcJg61abTWaydgQbNWMMyzMEI/edit?usp=sharing" target="_blank">Dorkinians 6s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1vqQmddiYzm46qShnAob1x8daIVFU9GXiAlb5MXJNeL0/edit?usp=sharing" target="_blank">Dorkinians 7s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1khDoDviBavkijIRtl08W273SH5-UuPt-8lObsi8_LXk/edit?usp=sharing" target="_blank">Dorkinians 8s Stats</a>
+- <a href="https://docs.google.com/spreadsheets/d/1WvIBfMRF_hSTGeoNzOz_MqMn3UaTGeyZAyooMC8DxtI/edit?usp=sharing" target="_blank">Dorkinians Vets Stats</a>
 
 > [Back to top](#table-of-contents)
 
@@ -133,8 +139,8 @@ The website then reads in this data every time it loads, which is why the loadin
 
 <img src="/img/Dorkinians/Sheets and Website Explained.png" alt="Stats Sheets and Website Explained" width="800"></img>
 
-- The site is hosted on Netlify (https://app.netlify.com/sites/dorkinians-stats-site/overview) - a website hosting site
-- The code is hosted on GitHub (https://github.com/bangsluke/Dorkinians-Dev-Site)
+- The site is hosted on Netlify (<a href="https://app.netlify.com/sites/dorkinians-stats-site/overview" target="_blank">https://app.netlify.com/sites/dorkinians-stats-site/overview</a>) - a website hosting site
+- The code is hosted on GitHub (<a href="https://github.com/bangsluke/Dorkinians-Dev-Site" target="_blank">https://github.com/bangsluke/Dorkinians-Dev-Site</a>)
 - The domain name "https://www.dorkiniansfcstats.co.uk/" is bought and owned for the next three years, expiring on 14/11/2026.
 
 ## Debugging Stats Problems
@@ -171,7 +177,7 @@ If after all, you're sure that the stats are right on a sheet, either for a line
 
 ### Website Errors
 
-If the [website](https://www.dorkiniansfcstats.co.uk/) isn't loading for any reason, another check that can be done is to right click on the website (on a computer) and click "Inspect". Each browser has a "Debug Console" (or something named similar) that can viewed.
+If the <a href="https://www.dorkiniansfcstats.co.uk/" target="_blank">website</a> isn't loading for any reason, another check that can be done is to right click on the website (on a computer) and click "Inspect". Each browser has a "Debug Console" (or something named similar) that can viewed.
 
 As the website loads, I log some statements such as "getPlayerStats" etc. which give some indication of what is happening on the site.
 
@@ -220,10 +226,10 @@ This is how I calculate distance travelled for players
 
 ## Useful Links
 
-- [Dorkinians Stats Site](https://www.dorkiniansfcstats.co.uk/)
-- [FA Full Time Fixtures](https://fulltime.thefa.com/fixtures.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010)
-- [FA Full Time Results](https://fulltime.thefa.com/results.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010)
-- [GitHub Repository](https://github.com/bangsluke/Dorkinians-Dev-Site)
-- [Netlify Deployment](https://app.netlify.com/sites/dorkinians-stats-site/overview)
+- <a href="https://www.dorkiniansfcstats.co.uk/" target="_blank">Dorkinians Stats Site</a>
+- <a href="https://fulltime.thefa.com/fixtures.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010" target="_blank">FA Full Time Fixtures</a>
+- <a href="https://fulltime.thefa.com/results.html?league=9031785&selectedSeason=495559713&selectedDivision=921408008&selectedCompetition=0&selectedFixtureGroupKey=1_313360010" target="_blank">FA Full Time Results</a>
+- <a href="https://github.com/bangsluke/Dorkinians-Dev-Site" target="_blank">GitHub Repository</a>
+- <a href="https://app.netlify.com/sites/dorkinians-stats-site/overview" target="_blank">Netlify Deployment</a>
 
 > [Back to top](#table-of-contents)

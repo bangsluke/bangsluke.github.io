@@ -4,12 +4,12 @@
 
 ## Inspiration
 
-For inspiration for projects, check out the following resources on the `Coding Resources` [Design UI/UX Links Todoist list](https://todoist.com/showTask?id=6132126520&sync_id=6506085362)
+For inspiration for projects, check out the following resources on the `Coding Resources` <a href="https://todoist.com/showTask?id=6132126520&sync_id=6506085362" target="_blank">Design UI/UX Links Todoist list</a>
 
 Top Links:
 
-- [uizard - UI Design Tool](https://uizard.io/)
-- [Dribble - Ideas](https://dribbble.com/search/dashboard)
+- <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
+- <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
 
 ## Decide on Architecture
 
@@ -26,7 +26,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
   - CRA (Create React App)
   - Vite.js
   - Next.js
-- Recommendations (from [Robin Wieruch](https://www.robinwieruch.de/react-libraries/)):
+- Recommendations (from <a href="https://www.robinwieruch.de/react-libraries/" target="_blank">Robin Wieruch</a>):
   - Vite.js for client-side rendered React applications
   - Next.js server-side rendered React applications
   - Astro for static-side generated React applications
@@ -35,7 +35,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 - Considerations:
   - Need to investigate
-  - [Backend development is more than writing endpoints for frontend](https://dev.to/this-is-learning/backend-development-is-more-than-writing-endpoints-for-frontend-gl1)
+  - <a href="https://dev.to/this-is-learning/backend-development-is-more-than-writing-endpoints-for-frontend-gl1" target="_blank">Backend development is more than writing endpoints for frontend</a>
 - Options:
   - ExpressJS
   - NodeJS
@@ -59,9 +59,9 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 > References
 >
-> 1. [Which Is Better? SQL vs NoSQL](https://www.youtube.com/watch?v=t0GlGbtMTio&feature=youtu.be&ab_channel=WebDevSimplified)
-> 2. [How To Choose a Database for your App](https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma)
-> 3. [Build a TypeScript API with Express, RapidAPI, and Xata](https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick)
+> 1. <a href="https://www.youtube.com/watch?v=t0GlGbtMTio&feature=youtu.be&ab_channel=WebDevSimplified" target="_blank">Which Is Better? SQL vs NoSQL</a>
+> 2. <a href="https://www.youtube.com/watch?v=xGCm_cLxets&feature=youtu.be&ab_channel=Prisma" target="_blank">How To Choose a Database for your App</a>
+> 3. <a href="https://www.youtube.com/watch?v=8MjjmCQIdiY&t=3s&ab_channel=JamesQQuick" target="_blank">Build a TypeScript API with Express, RapidAPI, and Xata</a>
 
 ### Hosting
 
@@ -79,5 +79,5 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ### Mobile Architecture
 
-- [Expo](https://expo.io/)
-- [Capacitor.js](https://capacitorjs.com/)
+- <a href="https://expo.io/" target="_blank">Expo</a>
+- <a href="https://capacitorjs.com/" target="_blank">Capacitor.js</a>

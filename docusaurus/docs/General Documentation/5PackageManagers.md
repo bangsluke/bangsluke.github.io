@@ -2,7 +2,7 @@
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
+Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" target="_blank">PNPM</a>.
 
 ## NPM
 
@@ -10,7 +10,7 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
 ### NPM Commands
 
-For more commands, see this [cheatsheet](https://devhints.io/npm).
+For more commands, see this <a href="https://devhints.io/npm" target="_blank">cheatsheet</a>.
 
 #### NPM Initialization
 
@@ -43,7 +43,7 @@ For more commands, see this [cheatsheet](https://devhints.io/npm).
 
 ### Yarn Commands
 
-For more commands, see this [cheatsheet](https://devhints.io/yarn).
+For more commands, see this <a href="https://devhints.io/yarn" target="_blank">cheatsheet</a>.
 
 #### Yarn Initialization
 
@@ -61,7 +61,7 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
 ### Yarn Package Updates
 
-- [Link](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/) to all documentation
+- <a href="https://classic.yarnpkg.com/lang/en/docs/cli/upgrade/" target="_blank">Link</a> to all documentation
 - `yarn upgrade` - Upgrade all packages to their latest version
 - `yarn upgrade left-pad` - Upgrade a specific package to its latest version
 - `yarn upgrade left-pad@^1.0.0` - Upgrade a specific package to a specific version
@@ -76,8 +76,8 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
 ![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
 
-- [Link](https://pnpm.io/) to all documentation
-- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
+- <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
+- <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
 
 ## Switching Package Managers
 
@@ -97,7 +97,7 @@ For more commands, see this [cheatsheet](https://devhints.io/yarn).
 
 > References
 >
-> 1. [How do I switch from npm to yarn](https://stackoverflow.com/a/71481424)
+> 1. <a href="https://stackoverflow.com/a/71481424" target="_blank">How do I switch from npm to yarn</a>
 
 ### From Yarn to PNPM
 
@@ -128,4 +128,4 @@ Migrating from yarn to pnpm is quite straightforward:
 
 > References
 >
-> 1. [Swarmion - From Yarn to PNPM](https://www.swarmion.dev/docs/how-to-guides/migration-guides/yarn-to-pnpm/#:~:text=Migrating%20from%20yarn%20to%20pnpm%20is%20quite%20straightforward%3A,remove%20.yarnrc.yml%20and%20the%20.yarn%20folder%20More%20items)
+> 1. <a href="https://www.swarmion.dev/docs/how-to-guides/migration-guides/yarn-to-pnpm/#:~:text=Migrating%20from%20yarn%20to%20pnpm%20is%20quite%20straightforward%3A,remove%20.yarnrc.yml%20and%20the%20.yarn%20folder%20More%20items" target="_blank">Swarmion - From Yarn to PNPM</a>

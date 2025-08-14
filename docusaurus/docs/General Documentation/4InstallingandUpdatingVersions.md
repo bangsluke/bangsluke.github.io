@@ -2,7 +2,7 @@
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
+Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" target="_blank">PNPM</a>.
 
 ## NPM
 
@@ -10,14 +10,14 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
 ### NPM Download
 
-- https://nodejs.org/en/download/
+- <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a>
 
 ### NPM Updates
 
 - `npm --version` - Check the current installed version of npm
 - `npm install -g npm` - Install globally the latest stable version of npm
 
-> Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the [this link](https://stackoverflow.com/a/31520672)
+> Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the <a href="https://stackoverflow.com/a/31520672" target="_blank">this link</a>
 
 ## Yarn
 
@@ -25,19 +25,19 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
 ### Yarn Download
 
-- `npm install --global yarn` - (https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+- `npm install --global yarn` - (<a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable</a>)
 
 ### Yarn Updates
 
 - `yarn --version` - Check the current installed version of yarn
-- `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check [Yarn Windows Releases](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) for the latest version)
+- `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check <a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">Yarn Windows Releases</a> for the latest version)
 
 ## PNPM Commands
 
 ![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
 
-- [Link](https://pnpm.io/) to all documentation
-- [Introduction article](https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1)
+- <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
+- <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
 
 ## Node
 
@@ -46,7 +46,7 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
 - `nvm ls available` - List all versions of Node.js available for installation
-- `nvm install 8.1.0` - Install a specific version of Node (check [node.js](https://nodejs.org/en/) for the latest version)
+- `nvm install 8.1.0` - Install a specific version of Node (check <a href="https://nodejs.org/en/" target="_blank">node.js</a> for the latest version)
 
 > Note - you can also use `npm install -g node@v16.18` - Install globally a specific version of node
 
@@ -57,6 +57,6 @@ Before defaulting to NPM or Yarn, consider using [PNPM](https://pnpm.io/).
 
 > References
 >
-> 1. [How Do I Update NodeJS](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
-> 2. [NVM Windows Releases](https://github.com/coreybutler/nvm-windows/releases) - NVM latest release - use "nvm-setup.exe"
-> 3. [nvm use does not switch node versions](https://stackoverflow.com/a/55131758)
+> 1. <a href="https://stackoverflow.com/questions/8191459/how-do-i-update-node-js" target="_blank">How Do I Update NodeJS</a>
+> 2. <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">NVM Windows Releases</a> - NVM latest release - use "nvm-setup.exe"
+> 3. <a href="https://stackoverflow.com/a/55131758" target="_blank">nvm use does not switch node versions</a>

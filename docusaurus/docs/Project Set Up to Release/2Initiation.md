@@ -6,7 +6,7 @@
 
 ### Boilerplate Code
 
-  - Consider using a boilerplate code to get started, as listed [here](https://todoist.com/showTask?id=6518989300&sync_id=6518989300)
+  - Consider using a boilerplate code to get started, as listed <a href="https://todoist.com/showTask?id=6518989300&sync_id=6518989300" target="_blank">here</a>
 
 ### CRA (Create React App)
 
@@ -26,7 +26,7 @@
     - `yarn create vite my-app --template react-ts`
     - Then follow the instructions in the terminal
       - Note: For "package name" use the name of the app
-    - For other possible Vite options see [here](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+    - For other possible Vite options see <a href="https://vitejs.dev/guide/#scaffolding-your-first-vite-project" target="_blank">here</a>
   - `cd my-app` - Change directory to the new React app
 	- `yarn` - Install the dependencies
 	- `yarn dev` - Start the React app
@@ -82,4 +82,4 @@ git push -u origin main
   - dependabot.yml
 - Modify any details of the workflow to suit your needs
 - Add automated linting to CI/CD
-  - [Super Linter GitHub](https://github.com/github/super-linter#filter-linted-files)
+  - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>

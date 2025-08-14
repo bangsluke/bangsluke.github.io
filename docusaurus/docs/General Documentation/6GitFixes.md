@@ -28,10 +28,10 @@ Summary: Bad desktop.ini file that is created by Google Drive. Needs to be delet
 
 > References
 >
-> 1. [Explanation Link](https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/)
-> 2. [Show Hidden Files](https://www.computerhope.com/issues/ch001464.htm)
-> 3. [Remove Attributes from Files](https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad)
-> 4. [Delete All Hidden Files](https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/)
+> 1. <a href="https://iamalsojohn.wordpress.com/2018/04/18/git-google-drive-and-bad-references/" target="_blank">Explanation Link</a>
+> 2. <a href="https://www.computerhope.com/issues/ch001464.htm" target="_blank">Show Hidden Files</a>
+> 3. <a href="https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad" target="_blank">Remove Attributes from Files</a>
+> 4. <a href="https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/" target="_blank">Delete All Hidden Files</a>
 
 ## Clearing Secrets from History
 
@@ -46,4 +46,4 @@ Summary:
 
 > References
 >
-> 1. [Rewriting Git History Cheatsheet](https://blog.gitguardian.com/rewriting-git-history-cheatsheet/)
+> 1. <a href="https://blog.gitguardian.com/rewriting-git-history-cheatsheet/" target="_blank">Rewriting Git History Cheatsheet</a>

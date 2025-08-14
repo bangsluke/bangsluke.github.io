@@ -8,7 +8,7 @@
 
 - Create a folder structure that makes sense for the project
   - For a React project, have the following set up
-  > Note, this structure is based off of the [Bulletproof React](https://github.com/alan2207/bulletproof-react) project
+  > Note, this structure is based off of the <a href="https://github.com/alan2207/bulletproof-react" target="_blank">Bulletproof React</a> project
 
 ```n/a
 src
@@ -31,11 +31,11 @@ src
 
   - For a Next project, consider which folders are not needed, e.g. Routes would not be needed as Next handles routing via the pages folder
   - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
-    - [Folder Structure Command.md](https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md)
+    - <a href="https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md" target="_blank">Folder Structure Command.md</a>
 
 ### Component Set Up
 
-See point 4 of [10 Best Practices in Front End Development (React)](https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df)
+See point 4 of <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development (React)</a>
 
 Structure your components in the following way, using Export Barrelling (point 2);
 
@@ -83,7 +83,7 @@ Structure your components in the following way, using Export Barrelling (point 2
     echo ".env" >> .gitignore
     ```
 
-    - [Gitignore.io](https://www.toptal.com/developers/gitignore) is a great resource to generate a .gitignore file for your project
+    - <a href="https://www.toptal.com/developers/gitignore" target="_blank">Gitignore.io</a> is a great resource to generate a .gitignore file for your project
 
 ## .env Files and Variables
 
@@ -92,21 +92,21 @@ Structure your components in the following way, using Export Barrelling (point 2
 - For CRA, you can create .env variables named as `REACT_APP_` and they will be available in the browser
   - Example: `REACT_APP_API_KEY=1234567890`
   - You can then use the variable in the code as `process.env.REACT_APP_API_KEY`
-  - [See this article](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+  - <a href="https://create-react-app.dev/docs/adding-custom-environment-variables/" target="_blank">See this article</a>
 - For Vite, you can create .env variables named as `VITE_` and they will be available in the browser
   - Example: `VITE_API_KEY=1234567890`
   - You can then use the variable in the code as `import.meta.env.VITE_API_KEY`
-  - [See this article](https://vitejs.dev/guide/env-and-mode.html#env-files)
+  - <a href="https://vitejs.dev/guide/env-and-mode.html#env-files" target="_blank">See this article</a>
 - For Next.JS;
   - Example: `API_KEY=1234567890`
   - If you're just working in Node.JS, you can then use the variable in the code as `process.env.API_KEY`
   - If you're working in the browser, you have to prefix the variable in the code as `process.env.NEXT_PUBLIC_API_KEY`
-  - [See this article](https://nextjs.org/docs/basic-features/environment-variables)
-  - [Read this Medium story if still have issues](https://frontend-digest.com/environment-variables-in-next-js-9a272f0bf655)
+  - <a href="https://nextjs.org/docs/basic-features/environment-variables" target="_blank">See this article</a>
+  - <a href="https://frontend-digest.com/environment-variables-in-next-js-9a272f0bf655" target="_blank">Read this Medium story if still have issues</a>
 
 > References
 
-> 1. [Hiding Secret Keys in React](https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app)
+> 1. <a href="https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app" target="_blank">Hiding Secret Keys in React</a>
 
 ## ESLint and Prettier Config
 
@@ -118,11 +118,11 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 > References
 >
-> 1. [React + TypeScript + ESLint + Prettier Full Setup](https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j)
-> 2. [How to properly set up Prettier in less than 2 minutes](https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0)
+> 1. <a href="https://dev.to/suchintan/reacttypescripteslint-prettier-full-setup-p7j" target="_blank">React + TypeScript + ESLint + Prettier Full Setup</a>
+> 2. <a href="https://dev.to/bokub/how-to-properly-set-up-prettier-in-less-than-2-minutes-2ld0" target="_blank">How to properly set up Prettier in less than 2 minutes</a>
 
 ## React Set Up
 
 If using React, consider the following links:
 
-- [Don’t use React imports like this. Use Wrapper Pattern instead](https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4) - wrapper to go around library imports
+- <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
