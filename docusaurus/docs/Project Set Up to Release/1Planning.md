@@ -2,18 +2,15 @@
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-## Inspiration
-
-For inspiration for projects, check out the following resources on the `Coding Resources` <a href="https://todoist.com/showTask?id=6132126520&sync_id=6506085362" target="_blank">Design UI/UX Links Todoist list</a>
-
-Top Links:
-
-- <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
-- <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
-
 ## Decide on Architecture
 
+> If you already have an architcecture in mind, jump to [Plan the UI](#plan-the-ui)
+
 If it is just a web app to be built, consider the below Front End, Back End and Database Architecture options. If it also needs to be a mobile app, consider the below Mobile Architecture options.
+
+1. Ask AI to recommend an architecture with justification - see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">the Obsidian note here</a>
+2. Review the below architecture considerations against the AI output and verify it makes sense
+
 
 ### Front End Architecture
 
@@ -81,3 +78,15 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 - <a href="https://expo.io/" target="_blank">Expo</a>
 - <a href="https://capacitorjs.com/" target="_blank">Capacitor.js</a>
+
+
+## Plan the UI
+
+### Inspiration
+
+For inspiration for projects, check out the following resources on the `Coding Resources` <a href="https://todoist.com/showTask?id=6132126520&sync_id=6506085362" target="_blank">Design UI/UX Links Todoist list</a>
+
+Top Links:
+
+- <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
+- <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
