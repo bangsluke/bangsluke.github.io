@@ -1,4 +1,4 @@
-# Project Release Checklist
+# Release Checklist
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
@@ -11,7 +11,7 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
   - <a href="https://metatags.io/" target="_blank">metatags.io</a>
   - <a href="https://levelup.gitconnected.com/the-power-of-metadata-in-next-js-13-part-3-optimize-your-websites-seo-now-a64e9fc1f5f9" target="_blank">The Power of Metadata in Next.js 13 (Part 3): Optimize Your Website's SEO NOW!</a>
   - <a href="https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920" target="_blank">The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website's SEO NOW!</a>
-  - <a href="https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa" target="_blank">theme colour html</a>
+  - <a href="https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa" target="_blank">Theme colour HTML tag</a>
 
 ## Favicon
 
