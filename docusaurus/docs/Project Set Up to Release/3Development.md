@@ -164,10 +164,20 @@ const Headline = ({ title }) =>
   - <a href="https://logto.io/?ref=console" target="_blank">Logto Auth</a>
   - <a href="https://firebase.google.com/" target="_blank">Firebase</a>
 
+## Analytics
+
+- Set up analytics for the project if it requires it. Ask AI to define the best solution, however possible options include:
+  - <a href="https://umami.is/" target="_blank">Umami</a>
+    - Benefits including being self-hosted, no tracking of users, no cookies, no data collection, no data sharing, no data selling
+  - <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
+    - Benefits including being free, easy to set up, and has a lot of features
+  - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
+
 ## Documentation
 
 - Set up documentation for the project via a README.md file
 - Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a>
+- Ensure that there is a Cursor rule for keeping the documentation up to date
 
 ## Recommended Libraries
 

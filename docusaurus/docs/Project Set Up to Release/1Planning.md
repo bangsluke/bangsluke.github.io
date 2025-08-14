@@ -4,7 +4,7 @@
 
 ## Decide on Architecture
 
-> If you already have an architcecture in mind, jump to [Plan the UI](#plan-the-ui)
+> If you already have an architecture in mind, jump to [Plan the UI](#plan-the-ui)
 
 If it is just a web app to be built, consider the below Front End, Back End and Database Architecture options. If it also needs to be a mobile app, consider the below Mobile Architecture options.
 
