@@ -36,3 +36,10 @@
 ### E2E Tests
 
 - For E2E tests, use a testing library such as <a href="https://playwright.dev/" target="_blank">Playwright</a> or <a href="https://www.cypress.io/" target="_blank">Cypress</a>
+
+## Performance Testing
+
+- Before releasing the project, test the performance of the project using these tools:
+  - <a href="https://lighthouse.dev/" target="_blank">Lighthouse</a> - Chrome DevTools extension
+  - <a href="https://www.webpagetest.org/" target="_blank">WebPageTest</a> - Lets you test the performance of your site across multiple locations and devices
+  - <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a> - Chrome DevTools extension

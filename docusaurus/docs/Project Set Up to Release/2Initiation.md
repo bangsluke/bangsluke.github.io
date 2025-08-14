@@ -69,21 +69,6 @@ git push -u origin main
 - Create a develop branch
 - Add a .gitignore file to the root of the project
 
-## GitHub Workflows
-
-![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
-
-- Create the folder structure .github/workflows at the root folder
-- Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
-  - CI.yml
-  - CD.yml
-  - CodeQL.yml
-  - dependencyReview.yml
-  - dependabot.yml
-- Modify any details of the workflow to suit your needs
-- Add automated linting to CI/CD
-  - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>
-
 
 ## Structure and File Setup
 
@@ -211,3 +196,18 @@ Structure your components in the following way, using Export Barrelling (point 2
 If using React, consider the following links:
 
 - <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
+
+## GitHub Workflows
+
+![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
+
+- Create the folder structure .github/workflows at the root folder
+- Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
+  - CI.yml
+  - CD.yml
+  - CodeQL.yml
+  - dependencyReview.yml
+  - dependabot.yml
+- Modify any details of the workflow to suit your needs
+- Add automated linting to CI/CD
+  - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>
