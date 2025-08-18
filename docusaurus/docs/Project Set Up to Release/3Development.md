@@ -6,16 +6,20 @@
 
 ### All Frameworks
 
-- <a href="https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c" target="_blank">Set up your HTML head with some nice small tweaks</a>
-  - Use theme-colour and add your theme `<meta name="theme-color" content="#f00" />`
-  - The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.
+#### HTML Tips
 
-    ```html
-    <!-- theme color is white unless in dark mode, then it's black -->
-    <meta name="theme-color" content="#fff" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-    ```
+- Theme Colour
+  - <a href="https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c" target="_blank">Set up your HTML head with some nice small tweaks</a>
+    - Use theme-colour and add your theme `<meta name="theme-color" content="#f00" />`
+    - The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.
 
+      ```html
+      <!-- theme color is white unless in dark mode, then it's black -->
+      <meta name="theme-color" content="#fff" />
+      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      ```
+
+- Meta Tags
   - Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.
 
     ```html
@@ -32,7 +36,6 @@
     <meta name="twitter:image" content="link.to.thumbnail.image">
     ```
 
-  - Add a favicon
 - Add smooth scrolling (in CSS file);
 
   ```CSS
@@ -40,6 +43,27 @@
     scroll-behavior: smooth;
   }
   ```
+
+- enterkeyhint property of the virtual keyboard
+  - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint" target="_blank">enterkeyhint MDN</a>
+  - `enterkeyhint` is a new attribute of the HTML `input` tag. This attribute affects the style and behavior of the enter keys of the virtual keyboard. It is mainly used on devices such as mobile terminals and tablets, so that users can clearly know what action the enter key will perform. Typical values for this attribute are "enter", "done", "go", "next", "previous", "search", and "send". 📱
+  - 🔎 For example, if you use the attribute in a search box enterkeyhint="search", when the user uses the search box on a mobile device, the enter key will change to "Search" and the user will be able to submit the search by clicking this key. 🔍
+
+    ```html
+    <form action="/search">
+    <input type="text" enterkeyhint="search" name="q">
+    <input type="submit" value="Search">
+    </form>
+    ```
+
+  - In this example, the input field’s enterkeyhint property is set to “search”, so that on the mobile device’s virtual keyboard, the label of the enter key changes to “search”. 🔑 For `enterkeyhint` the possible values and their meanings are as follows:
+    - “enter”: The default behavior, which generally means a newline operation. ↩️
+    - “done”: Indicates that the input operation is completed, such as after filling the last field of the form, the button on the virtual keyboard may change to “done”. ✅
+    - “go”: means to navigate to a new page or view, or to start a process. 🚦
+    - “next”: Indicates that the user will move to the next input field, suitable for forms with multiple input fields. ➡️
+    - “previous”: Indicates that the user will move to the previous input field, suitable for forms with multiple input fields. ⬅️
+    - “search”: Indicates to initiate a search operation, applicable to the search box. 🔍
+    - “send”: Indicates that a message or other type of text will be sent, suitable for chat or mail applications. 📤
 
 ### React
 
