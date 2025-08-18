@@ -42,7 +42,7 @@ jobs:
         username: ${{ secrets.MAIL_USERNAME }}
         password: ${{ secrets.MAIL_PASSWORD }}
         subject: "Docusaurus Build Failed - ${{ github.repository }}"
-        to: your-email@example.com
+        to: ${{ secrets.MAIL_USERNAME }}
         from: GitHub Actions
         body: |
           Build failed for repository: ${{ github.repository }}
