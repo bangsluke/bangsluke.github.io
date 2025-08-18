@@ -17,13 +17,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        cache: 'npm'
+        cache: 'yarn'
+        cache-dependency-path: 'docusaurus/yarn.lock'
     
     - name: Install dependencies
-      run: npm ci
+      working-directory: ./docusaurus
+      run: yarn install --frozen-lockfile
     
     - name: Build Docusaurus
-      run: npm run build
+      working-directory: ./docusaurus
+      run: yarn build
       id: build
     
     - name: Deploy to GitHub Pages
@@ -31,7 +34,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./docusaurus/build
     
     - name: Send failure notification
       if: failure()
