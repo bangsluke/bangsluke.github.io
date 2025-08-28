@@ -85,10 +85,13 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ### Inspiration
 
-For inspiration for projects, check out the following resources on the `Coding Resources` <a href="https://todoist.com/showTask?id=6132126520&sync_id=6506085362" target="_blank">Design UI/UX Links Todoist list</a>
+For inspiration for projects, check out the following resources:
 
-Top Links:
-
-- <a href="https://v0.app/" target="_blank">V0 - UI Design Tool</a>
-- <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
-- <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
+- Design Tools
+  - <a href="https://v0.app/" target="_blank">V0 - UI Design Tool</a>
+  - <a href="https://uizard.io/" target="_blank">uizard - UI Design Tool</a>
+- Design Inspiration Sources
+  - <a href="https://dribbble.com/search/dashboard" target="_blank">Dribble - Ideas</a>
+  - <a href="https://godly.website/" target="_blank">Godly - Site Ideas</a>
+  - <a href="https://www.siteinspire.com/" target="_blank">SiteInspire - Site Ideas</a>
+  - <a href="https://www.uidesigndaily.com/" target="_blank">UI Design Daily - Site Ideas</a>

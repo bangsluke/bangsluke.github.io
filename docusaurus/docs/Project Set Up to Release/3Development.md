@@ -123,6 +123,7 @@ const Headline = ({ title }) =>
     - <a href="https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4" target="_blank">Medium Link</a>
     - <a href="https://www.freecodecamp.org/news/secure-next-js-applications-with-role-based-authentication-using-nextauth/" target="_blank">Freecodecamp Tutorial</a>
   - Auth0
+    - <a href="https://auth0.com/" target="_blank">Auth0 documentation</a>
 - For other authentication, consider using the following resources;
   - <a href="https://levelup.gitconnected.com/say-goodbye-to-authentication-headaches-with-propelauth-the-ultimate-solution-for-developers-b5cdad57d7d2" target="_blank">PropelAuth</a>
   - <a href="https://logto.io/?ref=console" target="_blank">Logto Auth</a>
@@ -148,7 +149,7 @@ const Headline = ({ title }) =>
 - Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a>
 - Ensure that there is a Cursor rule for keeping the documentation up to date
 
-## Recommended Libraries
+## Recommended Libraries & Tools
 
 ### State Management
 
@@ -235,7 +236,28 @@ In order of recommendation:
   - <a href="https://www.npmjs.com/package/@welldone-software/why-did-you-render" target="_blank">Why Did You Render</a>
 - <a href="https://github.com/gilbarbara/react-joyride" target="_blank">Joyride</a> - Create guided tours of your website
 
-> Note - for more, see "<a href="https://app.todoist.com/app/project/2305622709#section-86202880" target="_blank">Coding Resources</a>" Todoist project
+### Image Tools, Generation and Modification
+
+- Image Enhancements
+  - <a href="https://www.remove.bg/" target="_blank">Remove bg - Remove background of an image</a>
+  - <a href="https://letsenhance.io/" target="_blank">AI Image Enhancement</a>
+  - <a href="https://squoosh.app/" target="_blank">Squoosh</a> - Google's Image Compression Tool
+  - <a href="https://magicstudio.com/magiceraser/" target="_blank">Magic Eraser</a> - AI Tool to remove object from image
+- Stock Image Tools
+  - <a href="https://unsplash.com/developers" target="_blank">Unsplash Developers</a> - The largest open source photo library with over 2.5M high-quality free photos. Get random photos using their API.
+  - <a href="https://www.cleanpng.com/" target="_blank">Clean Png - online free png images</a>
+- Image Generator Tools
+  - <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>
+  - <a href="https://www.logoai.com/" target="_blank">Logo AI</a>
+
+### Other Tools
+
+- <a href="https://responsively.app/" target="_blank">Responsively</a> - A web app to quickly test and view your responsive websites across devices.
+- Documentation & API Reference Tools
+  - <a href="https://overapi.com/" target="_blank">OverAPI</a> - API Documentation Explorer
+  - <a href="https://devdocs.io/" target="_blank">DevDocs</a> - API Documentation Explorer
+  - <a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - A collective list of free APIs
+  - <a href="https://www.postman.com/" target="_blank">Postman</a> - API testing tool
 
 ## Framework-specific Development Tips
 
