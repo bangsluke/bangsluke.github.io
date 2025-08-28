@@ -13,7 +13,6 @@ For a link to the HelperDoc, click [here](https://github.com/bangsluke/bangsluke
 <!-- Project Badges -->
 <p align="center">
   <a href="https://github.com/bangsluke/Homepage" alt="Stable release version badge"><img src="https://img.shields.io/badge/version-1.0.0-blue)" alt="Repo version badge"/></a>
-
   <a href="https://github.com/bangsluke/Homepage"><img src="https://img.shields.io/badge/Repo_Status-Active-informational?style=flat&logo=LOGO_NAME&logoColor=white&color=2bbc8a)" alt="Repo status badge" /></a>
 </p>
 
