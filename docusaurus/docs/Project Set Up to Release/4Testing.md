@@ -7,6 +7,7 @@
 ![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
 - <a href="https://medium.com/@kristiyan.velkov/the-pyramid-of-testing-in-react-js-or-next-js-a4090d3bfad2" target="_blank">Testing in Next.js and React</a>
+- <a href="https://profy.dev/article/cypress-react" target="_blank">Cypress React Tutorial</a>
 - Review the testing resources saved in <a href="https://todoist.com/showTask?id=6132185936&sync_id=6506084877" target="_blank">Todoist</a>
 - Set up testing throughout the application based on its requirements
 - <a href="https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications" target="_blank">Testing Trophy and Testing Classifications</a>

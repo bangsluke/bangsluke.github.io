@@ -2,26 +2,21 @@
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-## Framework Specific Development
 
-### All Frameworks
-
-#### HTML Tips
+## HTML
 
 - Theme Colour
   - <a href="https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c" target="_blank">Set up your HTML head with some nice small tweaks</a>
     - Use theme-colour and add your theme `<meta name="theme-color" content="#f00" />`
     - The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.
-
       ```html
       <!-- theme color is white unless in dark mode, then it's black -->
       <meta name="theme-color" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       ```
-
+  - With the `accent-color` property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.
 - Meta Tags
   - Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.
-
     ```html
     <meta property="og:type" content="website">
     <meta property="og:title" content="Page Title">
@@ -35,27 +30,16 @@
     <meta name="twitter:url" content="link.to.be.displayed.when.shared">
     <meta name="twitter:image" content="link.to.thumbnail.image">
     ```
-
-- Add smooth scrolling (in CSS file);
-
-  ```CSS
-  html {
-    scroll-behavior: smooth;
-  }
-  ```
-
 - enterkeyhint property of the virtual keyboard
   - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint" target="_blank">enterkeyhint MDN</a>
   - `enterkeyhint` is a new attribute of the HTML `input` tag. This attribute affects the style and behavior of the enter keys of the virtual keyboard. It is mainly used on devices such as mobile terminals and tablets, so that users can clearly know what action the enter key will perform. Typical values for this attribute are "enter", "done", "go", "next", "previous", "search", and "send". 📱
   - 🔎 For example, if you use the attribute in a search box enterkeyhint="search", when the user uses the search box on a mobile device, the enter key will change to "Search" and the user will be able to submit the search by clicking this key. 🔍
-
     ```html
     <form action="/search">
     <input type="text" enterkeyhint="search" name="q">
     <input type="submit" value="Search">
     </form>
     ```
-
   - In this example, the input field’s enterkeyhint property is set to “search”, so that on the mobile device’s virtual keyboard, the label of the enter key changes to “search”. 🔑 For `enterkeyhint` the possible values and their meanings are as follows:
     - “enter”: The default behavior, which generally means a newline operation. ↩️
     - “done”: Indicates that the input operation is completed, such as after filling the last field of the form, the button on the virtual keyboard may change to “done”. ✅
@@ -64,42 +48,19 @@
     - “previous”: Indicates that the user will move to the previous input field, suitable for forms with multiple input fields. ⬅️
     - “search”: Indicates to initiate a search operation, applicable to the search box. 🔍
     - “send”: Indicates that a message or other type of text will be sent, suitable for chat or mail applications. 📤
-
-### React
-
-![React Logo](https://i.imgur.com/LMShXOo.png)
-
-- <a href="https://reactbits.dev/" target="_blank">React Bits Components</a>
-- <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
-  - (1) Use of Absolute Paths Instead of Relative Paths
-    - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
-  - (4) Proper File Naming Conventions
-- <a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
-- Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
-- <a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
-- <a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You're Using Context Providers the Wrong Way! Here's How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
-
-### Vite
-
-![Vite Logo](https://i.imgur.com/smpppHt.png)
-
-- Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
-
-### Next.js
-
-![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
-
-- <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
-- <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
-- <a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
-- <a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
-- <a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
-- <a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
-- <a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
-- <a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
-- <a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn't know about Next.js</a>
+- Use the correct HTML `<input type="">` attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.
 
 ## CSS
+
+### CSS Tips
+
+- Add smooth scrolling (in CSS file);
+
+  ```CSS
+  html {
+    scroll-behavior: smooth;
+  }
+  ```
 
 **Recommendations:** (from <a href="https://www.robinwieruch.de/react-libraries/" target="_blank">Robin Wieruch</a>)
 
@@ -147,28 +108,6 @@ const Headline = ({ title }) =>
   </BlueHeadline>
 ```
 
-## Issues and Debugging
-
-### React Issues
-
-![React Logo](https://i.imgur.com/LMShXOo.png)
-
-- For issues in `React` (including `Vite` and `Next.JS`):
-  - General debugging - <a href="https://profy.dev/article/debug-react-vscode" target="_blank">Debug React in VSCode</a>
-  - Issue 1 - Cannot be used as a JSX component
-
-    ```javascript
-    'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
-    ```
-
-    Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a>
-
-### HTML, CSS and JavaScript Issues
-
-- If you are trying to minify JavaScript files and you get the error `Minify Failed: 'preserve_line' is not a supported option`, then run the command "Minify" again in VSCode using `CTRL + Shift + M`.
-  - If this still fails, open user settings in VSCode, change a value in the minify section and try to save the file again to force the minification.
-  - Return the user settings options back once done.
-
 ## Security and Authentication
 
 ### Security
@@ -197,6 +136,11 @@ const Headline = ({ title }) =>
   - <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
     - Benefits including being free, easy to set up, and has a lot of features
   - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
+
+## Internationalisation (i18n)
+
+- <a href="https://react.i18next.com/" target="_blank">i18n React</a> - i18n React components
+  - <a href="https://translate.i18next.com/" target="_blank">i18next</a> - i18next website
 
 ## Documentation
 
@@ -240,6 +184,7 @@ const Headline = ({ title }) =>
 ### Components
 
 - Material UI - Component Library - `yarn add @material-ui/core` - <a href="https://material-ui.com/" target="_blank">https://material-ui.com/</a>
+- <a href="https://reactbits.dev/" target="_blank">React Bits Components</a> - Various useful React components
 - shadcn/ui - <a href="https://ui.shadcn.com/" target="_blank">https://ui.shadcn.com/</a>
 - <a href="https://saas-ui.dev/" target="_blank">saas-ui</a>
   - Getting started with SaaS UI is easy. First, you’ll have to install Chakra UI into your React project, then install SaaS UI, like this:
@@ -260,6 +205,8 @@ In order of recommendation:
 - AOS - Animation library - `yarn add aos` - <a href="https://michalsnik.github.io/aos/" target="_blank">https://michalsnik.github.io/aos/</a>
 - Animista - Animation library (All CSS) - <a href="https://animista.net/" target="_blank">Animista</a>
 - <a href="https://tobiasahlin.com/spinkit/" target="_blank">Spinners Designs</a> - just HTML and CSS
+- <a href="https://www.npmjs.com/package/react-scroll" target="_blank">React Scroll</a> - Smooth scrolling - `yarn add react-scroll`
+- <a href="https://www.npmjs.com/package/react-scroll-parallax" target="_blank">React Scroll Parallax</a> - Parallax scrolling - `yarn add react-scroll-parallax`
 
 ### Charts
 
@@ -274,11 +221,6 @@ In order of recommendation:
 - UUIDv4 - Key management - `yarn add uuidv4` - <a href="https://www.npmjs.com/package/uuidv4" target="_blank">https://www.npmjs.com/package/uuidv4</a>
   - `import { v4 as uuid } from "uuid";`
   - Then use `key: uuid(),`
-- Web Analytics
-  - Google Analytics
-  - <a href="https://umami.is/" target="_blank">Umami</a>
-  - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
-  - <a href="https://medium.com/@akashjha9041/top-6-tools-for-node-js-monitoring-4645784b8534" target="_blank">Top 6 tools for Node.js monitoring</a>
 - Available <a href="https://todoist.com/showTask?id=6002402049&sync_id=6506084811" target="_blank">APIs</a>
 - Application Notifications
   - <a href="https://ntfy.sh/?ref=console.dev" target="_blank">ntfy</a>
@@ -291,18 +233,73 @@ In order of recommendation:
   - <a href="https://www.npmjs.com/package/react-device-detect" target="_blank">React Device Detect</a> - Detect the device type (mobile, tablet, desktop) and OS (iOS, Android, Windows, Mac)
   - <a href="https://www.developerway.com/posts/how-to-handle-errors-in-react?utm_source=reactdigest&utm_medium&utm_campaign=1527" target="_blank">React Error Catching</a>
   - <a href="https://www.npmjs.com/package/@welldone-software/why-did-you-render" target="_blank">Why Did You Render</a>
-- Review the full list of Coding resources on Todoist <a href="https://todoist.com/app/project/2305622709#section-86202880" target="_blank">here</a>
-- Review the full list of React resources on Todoist <a href="https://todoist.com/showTask?id=5756174140&sync_id=6506084710" target="_blank">here</a>
-  - <a href="https://todoist.com/showTask?id=6131657730&sync_id=6506084845" target="_blank">React Components</a>
-  - <a href="https://todoist.com/showTask?id=6132071986&sync_id=6506084871" target="_blank">Hooks</a>
-  - <a href="https://todoist.com/showTask?id=6132126520&sync_id=6506085362" target="_blank">General Design Inspiration</a>
+- <a href="https://github.com/gilbarbara/react-joyride" target="_blank">Joyride</a> - Create guided tours of your website
 
 > Note - for more, see "<a href="https://app.todoist.com/app/project/2305622709#section-86202880" target="_blank">Coding Resources</a>" Todoist project
 
-## Other Tips and Easy Wins
+## Framework-specific Development Tips
 
-- With the `accent-color` property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.
-- Use the correct HTML `<input type="">` attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.
+### React
+
+![React Logo](https://i.imgur.com/LMShXOo.png)
+
+- Hooks
+  - <a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
+  - <a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
+- Optimisations
+  - <a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
+- Routing
+  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
+- Context
+  - <a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You're Using Context Providers the Wrong Way! Here's How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
+- Other References/Links
+  - <a href="https://github.com/bradtraversy/50projects50days" target="_blank">50 projects in 50 days</a> - 50 projects in 50 days
+  - <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
+    - (1) Use of Absolute Paths Instead of Relative Paths
+      - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
+    - (4) Proper File Naming Conventions
+  - <a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
+
+### Vite
+
+![Vite Logo](https://i.imgur.com/smpppHt.png)
+
+- Routing
+  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
+
+### Next.js
+
+![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
+
+- <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
+- <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
+- <a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
+- <a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
+- <a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
+- <a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
+- <a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
+- <a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
+- <a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn't know about Next.js</a>
+
+## Issues and Debugging
+
+### HTML, CSS and JavaScript Issues
+
+- If you are trying to minify JavaScript files and you get the error `Minify Failed: 'preserve_line' is not a supported option`, then run the command "Minify" again in VSCode using `CTRL + Shift + M`.
+  - If this still fails, open user settings in VSCode, change a value in the minify section and try to save the file again to force the minification.
+  - Return the user settings options back once done.
+
+### React Issues
+
+![React Logo](https://i.imgur.com/LMShXOo.png)
+
+- For issues in `React` (including `Vite` and `Next.JS`):
+  - General debugging - <a href="https://profy.dev/article/debug-react-vscode" target="_blank">Debug React in VSCode</a>
+  - Issue 1 - Cannot be used as a JSX component
+    ```javascript
+    'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
+    ```
+    Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a>
 
 
 ## Deployment
