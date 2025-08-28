@@ -69,6 +69,7 @@
 
 ![React Logo](https://i.imgur.com/LMShXOo.png)
 
+- <a href="https://reactbits.dev/" target="_blank">React Bits Components</a>
 - <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
   - (1) Use of Absolute Paths Instead of Relative Paths
     - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
