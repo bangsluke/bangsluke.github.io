@@ -72,9 +72,11 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 - `yarn upgrade left-pad@^1.0.0 --dev` - Upgrade a specific development dependency package to a specific version
 - `yarn remove left-pad` - Removes a specific package
 
-## PNPM Commands
+## PNPM
 
 ![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
+
+### PNPM Commands
 
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
 - <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
