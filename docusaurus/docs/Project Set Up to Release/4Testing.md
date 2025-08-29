@@ -2,7 +2,7 @@
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-## Testing
+## Testing Links
 
 ![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
