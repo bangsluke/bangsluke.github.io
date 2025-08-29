@@ -11,7 +11,8 @@ Full details on my development journey and process.
 
 ## Contents of the Site
 
-- [General Documentation](category/general-documentation)
+### General Documentation
+
   - [Tool Commands/Shortcuts](General%20Documentation/1ToolCommandsAndShortcuts)
   	- [Powershell Commands](General%20Documentation/1ToolCommandsAndShortcuts#powershell-commands)
   	- [Git Commands](General%20Documentation/1ToolCommandsAndShortcuts#git-commands)
@@ -36,7 +37,9 @@ Full details on my development journey and process.
   - [Git Fixes](General%20Documentation/6GitFixes)
   	- [Error: Unable to load Commits. fatal: bad object desktop.ini](General%20Documentation/6GitFixes#error-unable-to-load-commits-fatal-bad-object-desktopini)
   	- [Clearing Secrets from History](General%20Documentation/6GitFixes#clearing-secrets-from-history)
-- [Project Set Up to Release](category/project-set-up-to-release)
+
+## Project Set Up to Release
+
   - [Planning](Project%20Set%20Up%20to%20Release/1Planning)
     - [Decide on Architecture](Project%20Set%20Up%20to%20Release/1Planning#decide-on-architecture)
       - [Front End Architecture](Project%20Set%20Up%20to%20Release/1Planning#front-end-architecture)
@@ -46,6 +49,7 @@ Full details on my development journey and process.
       - [Mobile Architecture](Project%20Set%20Up%20to%20Release/1Planning#mobile-architecture)
     - [Plan the UI](Project%20Set%20Up%20to%20Release/1Planning#plan-the-ui)
       - [Inspiration](Project%20Set%20Up%20to%20Release/1Planning#inspiration)
+      - [Colour Selection](Project%20Set%20Up%20to%20Release/1Planning#colour-selection)
   - [Initiation](Project%20Set%20Up%20to%20Release/2Initiation)
     - [Create the New App](Project%20Set%20Up%20to%20Release/2Initiation#create-the-new-app)
       - [CRA (Create React App)](Project%20Set%20Up%20to%20Release/2Initiation#cra-create-react-app)
@@ -55,14 +59,38 @@ Full details on my development journey and process.
     - [Structure and File Setup](Project%20Set%20Up%20to%20Release/2Initiation#structure-and-file-setup)
     - [GitHub Workflows](Project%20Set%20Up%20to%20Release/2Initiation#github-workflows)
   - [Development](Project%20Set%20Up%20to%20Release/3Development)
-    - [Framework Specific Development](Project%20Set%20Up%20to%20Release/3Development#framework-specific-development)
+    - [HTML](Project%20Set%20Up%20to%20Release/3Development#html)
     - [CSS](Project%20Set%20Up%20to%20Release/3Development#css)
-    - [Issues and Debugging](Project%20Set%20Up%20to%20Release/3Development#issues-and-debugging)
+      - [CSS Tips](Project%20Set%20Up%20to%20Release/3Development#css-tips)
+      - [CSS-in-CSS](Project%20Set%20Up%20to%20Release/3Development#css-in-css)
+      - [Utility-First-CSS](Project%20Set%20Up%20to%20Release/3Development#utility-first-css)
+      - [CSS-in-JS](Project%20Set%20Up%20to%20Release/3Development#css-in-js)
     - [Security and Authentication](Project%20Set%20Up%20to%20Release/3Development#security-and-authentication)
+      - [Security](Project%20Set%20Up%20to%20Release/3Development#security)
+      - [Authentication](Project%20Set%20Up%20to%20Release/3Development#authentication)
+    - [Analytics](Project%20Set%20Up%20to%20Release/3Development#analytics)
+    - [Internationalisation (i18n)](Project%20Set%20Up%20to%20Release/3Development#internationalisation-i18n)
     - [Documentation](Project%20Set%20Up%20to%20Release/3Development#documentation)
-    - [Recommended Libraries](Project%20Set%20Up%20to%20Release/3Development#recommended-libraries)
-    - [Other Tips and Easy Wins](Project%20Set%20Up%20to%20Release/3Development#other-tips-and-easy-wins)
+    - [Recommended Libraries & Tools](Project%20Set%20Up%20to%20Release/3Development#recommended-libraries--tools)
+      - [State Management](Project%20Set%20Up%20to%20Release/3Development#state-management)
+      - [Data Fetching](Project%20Set%20Up%20to%20Release/3Development#data-fetching)
+      - [Routing](Project%20Set%20Up%20to%20Release/3Development#routing)
+      - [Components](Project%20Set%20Up%20to%20Release/3Development#components)
+      - [Animations](Project%20Set%20Up%20to%20Release/3Development#animations)
+      - [Charts](Project%20Set%20Up%20to%20Release/3Development#charts)
+      - [Other Libraries](Project%20Set%20Up%20to%20Release/3Development#other-libraries)
+      - [Image Tools, Generation and Modification](Project%20Set%20Up%20to%20Release/3Development#image-tools-generation-and-modification)
+      - [Other Tools](Project%20Set%20Up%20to%20Release/3Development#other-tools)
+    - [Framework-specific Development Tips](Project%20Set%20Up%20to%20Release/3Development#framework-specific-development-tips)
+      - [React](Project%20Set%20Up%20to%20Release/3Development#react)
+      - [Vite](Project%20Set%20Up%20to%20Release/3Development#vite)
+      - [Next.js](Project%20Set%20Up%20to%20Release/3Development#nextjs)
+    - [Issues and Debugging](Project%20Set%20Up%20to%20Release/3Development#issues-and-debugging)
+      - [HTML, CSS and JavaScript Issues](Project%20Set%20Up%20to%20Release/3Development#html-css-and-javascript-issues)
+      - [React Issues](Project%20Set%20Up%20to%20Release/3Development#react-issues)
+    - [Deployment](Project%20Set%20Up%20to%20Release/3Development#deployment)
   - [Testing](Project%20Set%20Up%20to%20Release/4Testing)
+     - [Testing](Project%20Set%20Up%20to%20Release/4Testing#testing)
      - [Static Tests](Project%20Set%20Up%20to%20Release/4Testing#static-tests)
      - [Unit Tests](Project%20Set%20Up%20to%20Release/4Testing#unit-tests)
      - [Integration Tests](Project%20Set%20Up%20to%20Release/4Testing#integration-tests)
@@ -72,8 +100,14 @@ Full details on my development journey and process.
    	- [SEO and Meta Data](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#seo-and-meta-data)
    	- [Favicon](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#favicon)
    	- [User Experience](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#user-experience)
-   	- [404 Page](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#404-page)
+      - [404 Page](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#404-page)
    	- [Page Speed Testing](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#page-speed-testing)
    	- [Console Logs](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#console-logs)
    	- [Framework Specific Checks](Project%20Set%20Up%20to%20Release/5ReleaseChecklist#framework-specific-checks)
+
+## Projects
+
+  - [Dorkinians](Projects/Dorkinians)
+    - [Dorkinians Stats](Projects/Dorkinians/DorkiniansStats)
+
 - [Useful Links](UsefulLinks)
