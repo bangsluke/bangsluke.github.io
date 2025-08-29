@@ -107,7 +107,6 @@ Full details on my development journey and process.
 
 ## Projects
 
-  - [Dorkinians](Projects/Dorkinians)
-    - [Dorkinians Stats](Projects/Dorkinians/DorkiniansStats)
+  - [Dorkinians](Projects/Dorkinians/DorkiniansStats)
 
 - [Useful Links](UsefulLinks)
