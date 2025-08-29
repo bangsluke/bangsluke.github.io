@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Development | bangsluke Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://bangsluke-documentation.netlify.app/img/bangsluke.github.io-social-card.png"><meta data-rh="true" name="twitter:image" content="https://bangsluke-documentation.netlify.app/img/bangsluke.github.io-social-card.png"><meta data-rh="true" property="og:url" content="https://bangsluke-documentation.netlify.app/docs/Project Set Up to Release/3Development"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Development | bangsluke Documentation"><meta data-rh="true" name="description" content="Back to Documentation Intro Contents"><meta data-rh="true" property="og:description" content="Back to Documentation Intro Contents"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://bangsluke-documentation.netlify.app/docs/Project Set Up to Release/3Development"><link data-rh="true" rel="alternate" href="https://bangsluke-documentation.netlify.app/docs/Project Set Up to Release/3Development" hreflang="en"><link data-rh="true" rel="alternate" href="https://bangsluke-documentation.netlify.app/docs/Project Set Up to Release/3Development" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://311LVMR47I-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Project Set Up to Release","item":"https://bangsluke-documentation.netlify.app/docs/category/project-set-up-to-release"},{"@type":"ListItem","position":2,"name":"Development","item":"https://bangsluke-documentation.netlify.app/docs/Project Set Up to Release/3Development"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="bangsluke Documentation" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.348cbf77.css">
-<script src="/assets/js/runtime~main.9b1f94f9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.bdf78532.js" defer="defer"></script>
 <script src="/assets/js/main.7e29dec1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,55 +15,39 @@
 <blockquote>
 <p><a href="/docs/DocumentationIntro">Back to Documentation Intro Contents</a></p>
 </blockquote>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="framework-specific-development">Framework Specific Development<a href="#framework-specific-development" class="hash-link" aria-label="Direct link to Framework Specific Development" title="Direct link to Framework Specific Development">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="all-frameworks">All Frameworks<a href="#all-frameworks" class="hash-link" aria-label="Direct link to All Frameworks" title="Direct link to All Frameworks">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="html-tips">HTML Tips<a href="#html-tips" class="hash-link" aria-label="Direct link to HTML Tips" title="Direct link to HTML Tips">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="html">HTML<a href="#html" class="hash-link" aria-label="Direct link to HTML" title="Direct link to HTML">​</a></h2>
 <ul>
-<li>
-<p>Theme Colour</p>
+<li>Theme Colour<!-- -->
 <ul>
 <li>
 <a href="https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c" target="_blank">Set up your HTML head with some nice small tweaks</a>
 <ul>
-<li>
-<p>Use theme-colour and add your theme <code>&lt;meta name=&quot;theme-color&quot; content=&quot;#f00&quot; /&gt;</code></p>
-</li>
-<li>
-<p>The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.</p>
+<li>Use theme-colour and add your theme <code>&lt;meta name=&quot;theme-color&quot; content=&quot;#f00&quot; /&gt;</code></li>
+<li>The theme-color doesn’t have to be unique within the page. It can be personalized using the media attribute to change colors depending on the browser’s/computer’s configuration.<!-- -->
 <div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">&lt;!-- theme color is white unless in dark mode, then it&#x27;s black --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">theme-color</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">#fff</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag punctuation" style="color:#393A34">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">theme-color</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">media</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">(prefers-color-scheme: dark)</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">#000</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag punctuation" style="color:#393A34">/&gt;</span><br></span></code></pre></div></div>
 </li>
 </ul>
 </li>
+<li>With the <code>accent-color</code> property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.</li>
 </ul>
 </li>
-<li>
-<p>Meta Tags</p>
+<li>Meta Tags<!-- -->
 <ul>
-<li>
-<p>Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.</p>
+<li>Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.<!-- -->
 <div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">property</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">og:type</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">website</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">property</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">og:title</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">Page Title</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">property</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">og:description</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">Description of the page.</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">property</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">og:url</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">link.to.be.displayed.when.shared</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">property</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">og:image</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">link.to.thumbnail.image</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">twitter:card</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">summary</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">twitter:title</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">Page Title</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">twitter:description</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">Description of the page.</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">twitter:url</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">link.to.be.displayed.when.shared</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">meta</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">twitter:image</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">content</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">link.to.thumbnail.image</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
 </li>
 </ul>
 </li>
-<li>
-<p>Add smooth scrolling (in CSS file);</p>
-<div class="language-CSS language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token selector" style="color:#00009f">html</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">scroll-behavior</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> smooth</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
-</li>
-<li>
-<p>enterkeyhint property of the virtual keyboard</p>
+<li>enterkeyhint property of the virtual keyboard<!-- -->
 <ul>
 <li>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint" target="_blank">enterkeyhint MDN</a>
 </li>
-<li>
-<p><code>enterkeyhint</code> is a new attribute of the HTML <code>input</code> tag. This attribute affects the style and behavior of the enter keys of the virtual keyboard. It is mainly used on devices such as mobile terminals and tablets, so that users can clearly know what action the enter key will perform. Typical values for this attribute are &quot;enter&quot;, &quot;done&quot;, &quot;go&quot;, &quot;next&quot;, &quot;previous&quot;, &quot;search&quot;, and &quot;send&quot;. 📱</p>
-</li>
-<li>
-<p>🔎 For example, if you use the attribute in a search box enterkeyhint=&quot;search&quot;, when the user uses the search box on a mobile device, the enter key will change to &quot;Search&quot; and the user will be able to submit the search by clicking this key. 🔍</p>
+<li><code>enterkeyhint</code> is a new attribute of the HTML <code>input</code> tag. This attribute affects the style and behavior of the enter keys of the virtual keyboard. It is mainly used on devices such as mobile terminals and tablets, so that users can clearly know what action the enter key will perform. Typical values for this attribute are &quot;enter&quot;, &quot;done&quot;, &quot;go&quot;, &quot;next&quot;, &quot;previous&quot;, &quot;search&quot;, and &quot;send&quot;. 📱</li>
+<li>🔎 For example, if you use the attribute in a search box enterkeyhint=&quot;search&quot;, when the user uses the search box on a mobile device, the enter key will change to &quot;Search&quot; and the user will be able to submit the search by clicking this key. 🔍<!-- -->
 <div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">form</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">action</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">/search</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">input</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">type</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">text</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">enterkeyhint</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">search</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">name</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">q</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">input</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">type</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">submit</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name" style="color:#00a4db">value</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">Search</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">form</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
 </li>
-<li>
-<p>In this example, the input field’s enterkeyhint property is set to “search”, so that on the mobile device’s virtual keyboard, the label of the enter key changes to “search”. 🔑 For <code>enterkeyhint</code> the possible values and their meanings are as follows:</p>
+<li>In this example, the input field’s enterkeyhint property is set to “search”, so that on the mobile device’s virtual keyboard, the label of the enter key changes to “search”. 🔑 For <code>enterkeyhint</code> the possible values and their meanings are as follows:<!-- -->
 <ul>
 <li>“enter”: The default behavior, which generally means a newline operation. ↩️</li>
 <li>“done”: Indicates that the input operation is completed, such as after filling the last field of the form, the button on the virtual keyboard may change to “done”. ✅</li>
@@ -76,69 +60,16 @@
 </li>
 </ul>
 </li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="react">React<a href="#react" class="hash-link" aria-label="Direct link to React" title="Direct link to React">​</a></h3>
-<p><img decoding="async" loading="lazy" src="https://i.imgur.com/LMShXOo.png" alt="React Logo" class="img_ev3q"></p>
-<ul>
-<li>
-<a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
-<ul>
-<li>(1) Use of Absolute Paths Instead of Relative Paths<!-- -->
-<ul>
-<li>Change <code>import { Button } from &#x27;../../../../components/Button&#x27;</code> to <code>import { Button } from &#x27;@/components/Button&#x27;</code></li>
-</ul>
-</li>
-<li>(4) Proper File Naming Conventions</li>
-</ul>
-</li>
-<li>
-<a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
-</li>
-<li>Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank"><a href="https://tanstack.com/router/v1/docs/overview" target="_blank" rel="noopener noreferrer">https://tanstack.com/router/v1/docs/overview</a></a></li>
-<li>
-<a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
-</li>
-<li>
-<a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You&#x27;re Using Context Providers the Wrong Way! Here&#x27;s How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
-</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vite">Vite<a href="#vite" class="hash-link" aria-label="Direct link to Vite" title="Direct link to Vite">​</a></h3>
-<p><img decoding="async" loading="lazy" src="https://i.imgur.com/smpppHt.png" alt="Vite Logo" class="img_ev3q"></p>
-<ul>
-<li>Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank"><a href="https://tanstack.com/router/v1/docs/overview" target="_blank" rel="noopener noreferrer">https://tanstack.com/router/v1/docs/overview</a></a></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nextjs">Next.js<a href="#nextjs" class="hash-link" aria-label="Direct link to Next.js" title="Direct link to Next.js">​</a></h3>
-<p><img decoding="async" loading="lazy" src="https://i.imgur.com/OGtWPsT.png" alt="NextJS Logo" class="img_ev3q"></p>
-<ul>
-<li>
-<a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
-</li>
-<li>
-<a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
-</li>
-<li>
-<a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
-</li>
-<li>
-<a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
-</li>
-<li>
-<a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
-</li>
-<li>
-<a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
-</li>
-<li>
-<a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
-</li>
-<li>
-<a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
-</li>
-<li>
-<a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn&#x27;t know about Next.js</a>
-</li>
+<li>Use the correct HTML <code>&lt;input type=&quot;&quot;&gt;</code> attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="css">CSS<a href="#css" class="hash-link" aria-label="Direct link to CSS" title="Direct link to CSS">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="css-tips">CSS Tips<a href="#css-tips" class="hash-link" aria-label="Direct link to CSS Tips" title="Direct link to CSS Tips">​</a></h3>
+<ul>
+<li>
+<p>Add smooth scrolling (in CSS file);</p>
+<div class="language-CSS language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token selector" style="color:#00009f">html</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">scroll-behavior</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> smooth</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+</li>
+</ul>
 <p><strong>Recommendations:</strong> (from <a href="https://www.robinwieruch.de/react-libraries/" target="_blank">Robin Wieruch</a>)</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="css-in-css">CSS-in-CSS<a href="#css-in-css" class="hash-link" aria-label="Direct link to CSS-in-CSS" title="Direct link to CSS-in-CSS">​</a></h3>
 <ul>
@@ -159,32 +90,6 @@
 <li>StyleX by Facebook</li>
 </ul>
 <div class="language-CSS language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">import styled from </span><span class="token string" style="color:#e3116c">&#x27;styled-components&#x27;</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const BlueHeadline = styled.h1`</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">color</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token color">blue</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">`</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token selector" style="color:#00009f">const Headline = </span><span class="token selector punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> title </span><span class="token punctuation" style="color:#393A34">}</span><span class="token selector punctuation" style="color:#393A34">)</span><span class="token selector" style="color:#00009f"> =</span><span class="token selector combinator" style="color:#00009f">&gt;</span><span class="token selector" style="color:#00009f"></span><br></span><span class="token-line" style="color:#393A34"><span class="token selector" style="color:#00009f">  &lt;BlueHeadline</span><span class="token selector combinator" style="color:#00009f">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain">title</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/BlueHeadline&gt;</span><br></span></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues-and-debugging">Issues and Debugging<a href="#issues-and-debugging" class="hash-link" aria-label="Direct link to Issues and Debugging" title="Direct link to Issues and Debugging">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="react-issues">React Issues<a href="#react-issues" class="hash-link" aria-label="Direct link to React Issues" title="Direct link to React Issues">​</a></h3>
-<p><img decoding="async" loading="lazy" src="https://i.imgur.com/LMShXOo.png" alt="React Logo" class="img_ev3q"></p>
-<ul>
-<li>For issues in <code>React</code> (including <code>Vite</code> and <code>Next.JS</code>):<!-- -->
-<ul>
-<li>
-<p>General debugging - <a href="https://profy.dev/article/debug-react-vscode" target="_blank">Debug React in VSCode</a></p>
-</li>
-<li>
-<p>Issue 1 - Cannot be used as a JSX component</p>
-<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">&#x27;SidebarItem&#x27;</span><span class="token plain"> cannot be used </span><span class="token keyword module" style="color:#00009f">as</span><span class="token plain"> a </span><span class="token constant" style="color:#36acaa">JSX</span><span class="token plain"> component</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">   </span><span class="token property-access maybe-class-name">Its</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;(props: SidebarLink) =&gt; Element&#x27;</span><span class="token plain"> is not a valid </span><span class="token constant" style="color:#36acaa">JSX</span><span class="token plain"> element type</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">     </span><span class="token property-access maybe-class-name">Type</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;(props: SidebarLink) =&gt; Element&#x27;</span><span class="token plain"> is not assignable to type </span><span class="token string" style="color:#e3116c">&#x27;(props: any, deprecatedLegacyContext?: any) =&gt; ReactNode&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">       </span><span class="token property-access maybe-class-name">Type</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Element&#x27;</span><span class="token plain"> is not assignable to type </span><span class="token string" style="color:#e3116c">&#x27;ReactNode&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">         </span><span class="token property-access maybe-class-name">Property</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;children&#x27;</span><span class="token plain"> is missing </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;Element&#x27;</span><span class="token plain"> but required </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;ReactPortal&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><br></span></code></pre></div></div>
-<p>Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="html-css-and-javascript-issues">HTML, CSS and JavaScript Issues<a href="#html-css-and-javascript-issues" class="hash-link" aria-label="Direct link to HTML, CSS and JavaScript Issues" title="Direct link to HTML, CSS and JavaScript Issues">​</a></h3>
-<ul>
-<li>If you are trying to minify JavaScript files and you get the error <code>Minify Failed: &#x27;preserve_line&#x27; is not a supported option</code>, then run the command &quot;Minify&quot; again in VSCode using <code>CTRL + Shift + M</code>.<!-- -->
-<ul>
-<li>If this still fails, open user settings in VSCode, change a value in the minify section and try to save the file again to force the minification.</li>
-<li>Return the user settings options back once done.</li>
-</ul>
-</li>
-</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-and-authentication">Security and Authentication<a href="#security-and-authentication" class="hash-link" aria-label="Direct link to Security and Authentication" title="Direct link to Security and Authentication">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="security">Security<a href="#security" class="hash-link" aria-label="Direct link to Security" title="Direct link to Security">​</a></h3>
 <ul>
@@ -209,7 +114,13 @@
 </li>
 </ul>
 </li>
-<li>Auth0</li>
+<li>Auth0<!-- -->
+<ul>
+<li>
+<a href="https://auth0.com/" target="_blank">Auth0 documentation</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>For other authentication, consider using the following resources;<!-- -->
@@ -248,13 +159,21 @@
 </ul>
 </li>
 </ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="internationalisation-i18n">Internationalisation (i18n)<a href="#internationalisation-i18n" class="hash-link" aria-label="Direct link to Internationalisation (i18n)" title="Direct link to Internationalisation (i18n)">​</a></h2>
+<ul>
+<li><a href="https://react.i18next.com/" target="_blank">i18n React</a> - i18n React components<!-- -->
+<ul>
+<li><a href="https://translate.i18next.com/" target="_blank">i18next</a> - i18next website</li>
+</ul>
+</li>
+</ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="documentation">Documentation<a href="#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation">​</a></h2>
 <ul>
 <li>Set up documentation for the project via a README.md file</li>
 <li>Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a></li>
 <li>Ensure that there is a Cursor rule for keeping the documentation up to date</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-libraries">Recommended Libraries<a href="#recommended-libraries" class="hash-link" aria-label="Direct link to Recommended Libraries" title="Direct link to Recommended Libraries">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recommended-libraries--tools">Recommended Libraries &amp; Tools<a href="#recommended-libraries--tools" class="hash-link" aria-label="Direct link to Recommended Libraries &amp; Tools" title="Direct link to Recommended Libraries &amp; Tools">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="state-management">State Management<a href="#state-management" class="hash-link" aria-label="Direct link to State Management" title="Direct link to State Management">​</a></h3>
 <ul>
 <li><a href="https://github.com/pmndrs/zustand" target="_blank">Zustand</a> - State management library - It allows you to manage global application state which can be read and modified by any React component that is connected to its store(s).</li>
@@ -315,6 +234,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h3>
 <ul>
 <li>Material UI - Component Library - <code>yarn add @material-ui/core</code> - <a href="https://material-ui.com/" target="_blank"><a href="https://material-ui.com/" target="_blank" rel="noopener noreferrer">https://material-ui.com/</a></a></li>
+<li><a href="https://reactbits.dev/" target="_blank">React Bits Components</a> - Various useful React components</li>
 <li>shadcn/ui - <a href="https://ui.shadcn.com/" target="_blank"><a href="https://ui.shadcn.com/" target="_blank" rel="noopener noreferrer">https://ui.shadcn.com/</a></a></li>
 <li>
 <a href="https://saas-ui.dev/" target="_blank">saas-ui</a>
@@ -340,6 +260,8 @@
 <li>AOS - Animation library - <code>yarn add aos</code> - <a href="https://michalsnik.github.io/aos/" target="_blank"><a href="https://michalsnik.github.io/aos/" target="_blank" rel="noopener noreferrer">https://michalsnik.github.io/aos/</a></a></li>
 <li>Animista - Animation library (All CSS) - <a href="https://animista.net/" target="_blank">Animista</a></li>
 <li><a href="https://tobiasahlin.com/spinkit/" target="_blank">Spinners Designs</a> - just HTML and CSS</li>
+<li><a href="https://www.npmjs.com/package/react-scroll" target="_blank">React Scroll</a> - Smooth scrolling - <code>yarn add react-scroll</code></li>
+<li><a href="https://www.npmjs.com/package/react-scroll-parallax" target="_blank">React Scroll Parallax</a> - Parallax scrolling - <code>yarn add react-scroll-parallax</code></li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="charts">Charts<a href="#charts" class="hash-link" aria-label="Direct link to Charts" title="Direct link to Charts">​</a></h3>
 <p>In order of recommendation:</p>
@@ -354,20 +276,6 @@
 <ul>
 <li><code>import { v4 as uuid } from &quot;uuid&quot;;</code></li>
 <li>Then use <code>key: uuid(),</code></li>
-</ul>
-</li>
-<li>Web Analytics<!-- -->
-<ul>
-<li>Google Analytics</li>
-<li>
-<a href="https://umami.is/" target="_blank">Umami</a>
-</li>
-<li>
-<a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
-</li>
-<li>
-<a href="https://medium.com/@akashjha9041/top-6-tools-for-node-js-monitoring-4645784b8534" target="_blank">Top 6 tools for Node.js monitoring</a>
-</li>
 </ul>
 </li>
 <li>Available <a href="https://todoist.com/showTask?id=6002402049&amp;sync_id=6506084811" target="_blank">APIs</a></li>
@@ -396,28 +304,167 @@
 </li>
 </ul>
 </li>
-<li>Review the full list of Coding resources on Todoist <a href="https://todoist.com/app/project/2305622709#section-86202880" target="_blank">here</a></li>
-<li>Review the full list of React resources on Todoist <a href="https://todoist.com/showTask?id=5756174140&amp;sync_id=6506084710" target="_blank">here</a>
+<li><a href="https://github.com/gilbarbara/react-joyride" target="_blank">Joyride</a> - Create guided tours of your website</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="image-tools-generation-and-modification">Image Tools, Generation and Modification<a href="#image-tools-generation-and-modification" class="hash-link" aria-label="Direct link to Image Tools, Generation and Modification" title="Direct link to Image Tools, Generation and Modification">​</a></h3>
+<ul>
+<li>Image Enhancements<!-- -->
 <ul>
 <li>
-<a href="https://todoist.com/showTask?id=6131657730&amp;sync_id=6506084845" target="_blank">React Components</a>
+<a href="https://www.remove.bg/" target="_blank">Remove bg - Remove background of an image</a>
 </li>
 <li>
-<a href="https://todoist.com/showTask?id=6132071986&amp;sync_id=6506084871" target="_blank">Hooks</a>
+<a href="https://letsenhance.io/" target="_blank">AI Image Enhancement</a>
+</li>
+<li><a href="https://squoosh.app/" target="_blank">Squoosh</a> - Google&#x27;s Image Compression Tool</li>
+<li><a href="https://magicstudio.com/magiceraser/" target="_blank">Magic Eraser</a> - AI Tool to remove object from image</li>
+</ul>
+</li>
+<li>Stock Image Tools<!-- -->
+<ul>
+<li><a href="https://unsplash.com/developers" target="_blank">Unsplash Developers</a> - The largest open source photo library with over 2.5M high-quality free photos. Get random photos using their API.</li>
+<li>
+<a href="https://www.cleanpng.com/" target="_blank">Clean Png - online free png images</a>
+</li>
+</ul>
+</li>
+<li>Image Generator Tools<!-- -->
+<ul>
+<li>
+<a href="https://www.midjourney.com/" target="_blank">Midjourney</a>
 </li>
 <li>
-<a href="https://todoist.com/showTask?id=6132126520&amp;sync_id=6506085362" target="_blank">General Design Inspiration</a>
+<a href="https://www.logoai.com/" target="_blank">Logo AI</a>
 </li>
 </ul>
 </li>
 </ul>
-<blockquote>
-<p>Note - for more, see &quot;<a href="https://app.todoist.com/app/project/2305622709#section-86202880" target="_blank">Coding Resources</a>&quot; Todoist project</p>
-</blockquote>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="other-tips-and-easy-wins">Other Tips and Easy Wins<a href="#other-tips-and-easy-wins" class="hash-link" aria-label="Direct link to Other Tips and Easy Wins" title="Direct link to Other Tips and Easy Wins">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="other-tools">Other Tools<a href="#other-tools" class="hash-link" aria-label="Direct link to Other Tools" title="Direct link to Other Tools">​</a></h3>
 <ul>
-<li>With the <code>accent-color</code> property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.</li>
-<li>Use the correct HTML <code>&lt;input type=&quot;&quot;&gt;</code> attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.</li>
+<li><a href="https://responsively.app/" target="_blank">Responsively</a> - A web app to quickly test and view your responsive websites across devices.</li>
+<li>Documentation &amp; API Reference Tools<!-- -->
+<ul>
+<li><a href="https://overapi.com/" target="_blank">OverAPI</a> - API Documentation Explorer</li>
+<li><a href="https://devdocs.io/" target="_blank">DevDocs</a> - API Documentation Explorer</li>
+<li><a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - A collective list of free APIs</li>
+<li><a href="https://www.postman.com/" target="_blank">Postman</a> - API testing tool</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="framework-specific-development-tips">Framework-specific Development Tips<a href="#framework-specific-development-tips" class="hash-link" aria-label="Direct link to Framework-specific Development Tips" title="Direct link to Framework-specific Development Tips">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="react">React<a href="#react" class="hash-link" aria-label="Direct link to React" title="Direct link to React">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://i.imgur.com/LMShXOo.png" alt="React Logo" class="img_ev3q"></p>
+<ul>
+<li>Hooks<!-- -->
+<ul>
+<li>
+<a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
+</li>
+<li>
+<a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
+</li>
+</ul>
+</li>
+<li>Optimisations<!-- -->
+<ul>
+<li>
+<a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
+</li>
+</ul>
+</li>
+<li>Routing<!-- -->
+<ul>
+<li>Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank"><a href="https://tanstack.com/router/v1/docs/overview" target="_blank" rel="noopener noreferrer">https://tanstack.com/router/v1/docs/overview</a></a></li>
+</ul>
+</li>
+<li>Context<!-- -->
+<ul>
+<li>
+<a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You&#x27;re Using Context Providers the Wrong Way! Here&#x27;s How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
+</li>
+</ul>
+</li>
+<li>Other References/Links<!-- -->
+<ul>
+<li><a href="https://github.com/bradtraversy/50projects50days" target="_blank">50 projects in 50 days</a> - 50 projects in 50 days</li>
+<li>
+<a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
+<ul>
+<li>(1) Use of Absolute Paths Instead of Relative Paths<!-- -->
+<ul>
+<li>Change <code>import { Button } from &#x27;../../../../components/Button&#x27;</code> to <code>import { Button } from &#x27;@/components/Button&#x27;</code></li>
+</ul>
+</li>
+<li>(4) Proper File Naming Conventions</li>
+</ul>
+</li>
+<li>
+<a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vite">Vite<a href="#vite" class="hash-link" aria-label="Direct link to Vite" title="Direct link to Vite">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://i.imgur.com/smpppHt.png" alt="Vite Logo" class="img_ev3q"></p>
+<ul>
+<li>Routing<!-- -->
+<ul>
+<li>Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank"><a href="https://tanstack.com/router/v1/docs/overview" target="_blank" rel="noopener noreferrer">https://tanstack.com/router/v1/docs/overview</a></a></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nextjs">Next.js<a href="#nextjs" class="hash-link" aria-label="Direct link to Next.js" title="Direct link to Next.js">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://i.imgur.com/OGtWPsT.png" alt="NextJS Logo" class="img_ev3q"></p>
+<ul>
+<li>
+<a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
+</li>
+<li>
+<a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
+</li>
+<li>
+<a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
+</li>
+<li>
+<a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
+</li>
+<li>
+<a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
+</li>
+<li>
+<a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
+</li>
+<li>
+<a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
+</li>
+<li>
+<a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
+</li>
+<li>
+<a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn&#x27;t know about Next.js</a>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues-and-debugging">Issues and Debugging<a href="#issues-and-debugging" class="hash-link" aria-label="Direct link to Issues and Debugging" title="Direct link to Issues and Debugging">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="html-css-and-javascript-issues">HTML, CSS and JavaScript Issues<a href="#html-css-and-javascript-issues" class="hash-link" aria-label="Direct link to HTML, CSS and JavaScript Issues" title="Direct link to HTML, CSS and JavaScript Issues">​</a></h3>
+<ul>
+<li>If you are trying to minify JavaScript files and you get the error <code>Minify Failed: &#x27;preserve_line&#x27; is not a supported option</code>, then run the command &quot;Minify&quot; again in VSCode using <code>CTRL + Shift + M</code>.<!-- -->
+<ul>
+<li>If this still fails, open user settings in VSCode, change a value in the minify section and try to save the file again to force the minification.</li>
+<li>Return the user settings options back once done.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="react-issues">React Issues<a href="#react-issues" class="hash-link" aria-label="Direct link to React Issues" title="Direct link to React Issues">​</a></h3>
+<p><img decoding="async" loading="lazy" src="https://i.imgur.com/LMShXOo.png" alt="React Logo" class="img_ev3q"></p>
+<ul>
+<li>For issues in <code>React</code> (including <code>Vite</code> and <code>Next.JS</code>):<!-- -->
+<ul>
+<li>General debugging - <a href="https://profy.dev/article/debug-react-vscode" target="_blank">Debug React in VSCode</a></li>
+<li>Issue 1 - Cannot be used as a JSX component<!-- -->
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">&#x27;SidebarItem&#x27;</span><span class="token plain"> cannot be used </span><span class="token keyword module" style="color:#00009f">as</span><span class="token plain"> a </span><span class="token constant" style="color:#36acaa">JSX</span><span class="token plain"> component</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">   </span><span class="token property-access maybe-class-name">Its</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;(props: SidebarLink) =&gt; Element&#x27;</span><span class="token plain"> is not a valid </span><span class="token constant" style="color:#36acaa">JSX</span><span class="token plain"> element type</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">     </span><span class="token property-access maybe-class-name">Type</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;(props: SidebarLink) =&gt; Element&#x27;</span><span class="token plain"> is not assignable to type </span><span class="token string" style="color:#e3116c">&#x27;(props: any, deprecatedLegacyContext?: any) =&gt; ReactNode&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">       </span><span class="token property-access maybe-class-name">Type</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Element&#x27;</span><span class="token plain"> is not assignable to type </span><span class="token string" style="color:#e3116c">&#x27;ReactNode&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">         </span><span class="token property-access maybe-class-name">Property</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;children&#x27;</span><span class="token plain"> is missing </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;Element&#x27;</span><span class="token plain"> but required </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> type </span><span class="token string" style="color:#e3116c">&#x27;ReactPortal&#x27;</span><span class="token punctuation" style="color:#393A34">.</span><br></span></code></pre></div></div>
+<!-- -->Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a></li>
+</ul>
+</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="deployment">Deployment<a href="#deployment" class="hash-link" aria-label="Direct link to Deployment" title="Direct link to Deployment">​</a></h2>
 <p><img decoding="async" loading="lazy" src="https://i.imgur.com/reePUUY.png" alt="Netlify Logo" class="img_ev3q"></p>
@@ -443,6 +490,6 @@
 </li>
 </ul>
 </li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Project Set Up to Release/2Initiation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Initiation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Project Set Up to Release/4Testing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Testing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#framework-specific-development" class="table-of-contents__link toc-highlight">Framework Specific Development</a><ul><li><a href="#all-frameworks" class="table-of-contents__link toc-highlight">All Frameworks</a></li><li><a href="#react" class="table-of-contents__link toc-highlight">React</a></li><li><a href="#vite" class="table-of-contents__link toc-highlight">Vite</a></li><li><a href="#nextjs" class="table-of-contents__link toc-highlight">Next.js</a></li></ul></li><li><a href="#css" class="table-of-contents__link toc-highlight">CSS</a><ul><li><a href="#css-in-css" class="table-of-contents__link toc-highlight">CSS-in-CSS</a></li><li><a href="#utility-first-css" class="table-of-contents__link toc-highlight">Utility-First-CSS</a></li><li><a href="#css-in-js" class="table-of-contents__link toc-highlight">CSS-in-JS</a></li></ul></li><li><a href="#issues-and-debugging" class="table-of-contents__link toc-highlight">Issues and Debugging</a><ul><li><a href="#react-issues" class="table-of-contents__link toc-highlight">React Issues</a></li><li><a href="#html-css-and-javascript-issues" class="table-of-contents__link toc-highlight">HTML, CSS and JavaScript Issues</a></li></ul></li><li><a href="#security-and-authentication" class="table-of-contents__link toc-highlight">Security and Authentication</a><ul><li><a href="#security" class="table-of-contents__link toc-highlight">Security</a></li><li><a href="#authentication" class="table-of-contents__link toc-highlight">Authentication</a></li></ul></li><li><a href="#analytics" class="table-of-contents__link toc-highlight">Analytics</a></li><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li><li><a href="#recommended-libraries" class="table-of-contents__link toc-highlight">Recommended Libraries</a><ul><li><a href="#state-management" class="table-of-contents__link toc-highlight">State Management</a></li><li><a href="#data-fetching" class="table-of-contents__link toc-highlight">Data Fetching</a></li><li><a href="#routing" class="table-of-contents__link toc-highlight">Routing</a></li><li><a href="#components" class="table-of-contents__link toc-highlight">Components</a></li><li><a href="#animations" class="table-of-contents__link toc-highlight">Animations</a></li><li><a href="#charts" class="table-of-contents__link toc-highlight">Charts</a></li><li><a href="#other-libraries" class="table-of-contents__link toc-highlight">Other Libraries</a></li></ul></li><li><a href="#other-tips-and-easy-wins" class="table-of-contents__link toc-highlight">Other Tips and Easy Wins</a></li><li><a href="#deployment" class="table-of-contents__link toc-highlight">Deployment</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Internal Links</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/DocumentationIntro">Documentation Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://bangsluke.github.io/Homepage.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">bangsluke Homepage<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://bangsluke.github.io/pages/NewTab.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">bangsluke New Tab<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docusaurus Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 bangsluke Documentation, built with Docusaurus.</div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/Project Set Up to Release/2Initiation"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Initiation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/Project Set Up to Release/4Testing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Testing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#html" class="table-of-contents__link toc-highlight">HTML</a></li><li><a href="#css" class="table-of-contents__link toc-highlight">CSS</a><ul><li><a href="#css-tips" class="table-of-contents__link toc-highlight">CSS Tips</a></li><li><a href="#css-in-css" class="table-of-contents__link toc-highlight">CSS-in-CSS</a></li><li><a href="#utility-first-css" class="table-of-contents__link toc-highlight">Utility-First-CSS</a></li><li><a href="#css-in-js" class="table-of-contents__link toc-highlight">CSS-in-JS</a></li></ul></li><li><a href="#security-and-authentication" class="table-of-contents__link toc-highlight">Security and Authentication</a><ul><li><a href="#security" class="table-of-contents__link toc-highlight">Security</a></li><li><a href="#authentication" class="table-of-contents__link toc-highlight">Authentication</a></li></ul></li><li><a href="#analytics" class="table-of-contents__link toc-highlight">Analytics</a></li><li><a href="#internationalisation-i18n" class="table-of-contents__link toc-highlight">Internationalisation (i18n)</a></li><li><a href="#documentation" class="table-of-contents__link toc-highlight">Documentation</a></li><li><a href="#recommended-libraries--tools" class="table-of-contents__link toc-highlight">Recommended Libraries &amp; Tools</a><ul><li><a href="#state-management" class="table-of-contents__link toc-highlight">State Management</a></li><li><a href="#data-fetching" class="table-of-contents__link toc-highlight">Data Fetching</a></li><li><a href="#routing" class="table-of-contents__link toc-highlight">Routing</a></li><li><a href="#components" class="table-of-contents__link toc-highlight">Components</a></li><li><a href="#animations" class="table-of-contents__link toc-highlight">Animations</a></li><li><a href="#charts" class="table-of-contents__link toc-highlight">Charts</a></li><li><a href="#other-libraries" class="table-of-contents__link toc-highlight">Other Libraries</a></li><li><a href="#image-tools-generation-and-modification" class="table-of-contents__link toc-highlight">Image Tools, Generation and Modification</a></li><li><a href="#other-tools" class="table-of-contents__link toc-highlight">Other Tools</a></li></ul></li><li><a href="#framework-specific-development-tips" class="table-of-contents__link toc-highlight">Framework-specific Development Tips</a><ul><li><a href="#react" class="table-of-contents__link toc-highlight">React</a></li><li><a href="#vite" class="table-of-contents__link toc-highlight">Vite</a></li><li><a href="#nextjs" class="table-of-contents__link toc-highlight">Next.js</a></li></ul></li><li><a href="#issues-and-debugging" class="table-of-contents__link toc-highlight">Issues and Debugging</a><ul><li><a href="#html-css-and-javascript-issues" class="table-of-contents__link toc-highlight">HTML, CSS and JavaScript Issues</a></li><li><a href="#react-issues" class="table-of-contents__link toc-highlight">React Issues</a></li></ul></li><li><a href="#deployment" class="table-of-contents__link toc-highlight">Deployment</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Internal Links</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/DocumentationIntro">Documentation Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://bangsluke.github.io/Homepage.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">bangsluke Homepage<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://bangsluke.github.io/pages/NewTab.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">bangsluke New Tab<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docusaurus Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 bangsluke Documentation, built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
