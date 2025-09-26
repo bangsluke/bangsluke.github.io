@@ -77,6 +77,8 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 
 - Delete all `console.logs` - It's important to remove console.log in production code to prevent sensitive information leaks and enhance performance
 - Investigate and fix all `console.errors` and `console.warning` - It's important to address console errors in production code to maintain a smooth and error-free user experiences.
+- Framework links
+  - Next.js - <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Next JS Console Logs</a>
 
 ## Framework Specific Checks
 
