@@ -1,6 +1,10 @@
+---
+slug: /docs/projects/dorkinians-website/home-page
+---
+
 # Home
 
-> [Back to Dorkinians Website Documentation](1Dorkinians-Website.md)
+> [Back to Dorkinians Website Documentation](1DorkiniansWebsite.md)
 
 ## Table of Contents
 
