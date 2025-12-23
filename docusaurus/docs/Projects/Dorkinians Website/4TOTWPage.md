@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website/totw-page
+slug: /projects/dorkinians-website/totw-page
 ---
 
 # TOTW

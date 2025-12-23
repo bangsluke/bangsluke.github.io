@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website/club-info-page
+slug: /projects/dorkinians-website/club-info-page
 ---
 
 # Club Info
