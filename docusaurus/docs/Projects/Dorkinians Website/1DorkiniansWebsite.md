@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website
+slug: /projects/dorkinians-website
 ---
 
 # Dorkinians Website

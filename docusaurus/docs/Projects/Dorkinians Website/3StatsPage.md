@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website/stats-page
+slug: /projects/dorkinians-website/stats-page
 ---
 
 # Stats

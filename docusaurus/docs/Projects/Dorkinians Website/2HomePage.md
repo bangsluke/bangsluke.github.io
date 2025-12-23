@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website/home-page
+slug: /projects/dorkinians-website/home-page
 ---
 
 # Home

@@ -2,7 +2,7 @@
 
 > [Back to Documentation Intro Contents](../../DocumentationIntro.md)
 
-![Dorkinians Logo](https://i.imgur.com/6er1G1n.png)
+![Dorkinians Logo](https://i.postimg.cc/rm1f3Kth/Dorkinians.png)
 
 ## Table of Contents
 

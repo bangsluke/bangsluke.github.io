@@ -1,5 +1,5 @@
 ---
-slug: /docs/projects/dorkinians-website/settings-page
+slug: /projects/dorkinians-website/settings-page
 ---
 
 # Settings
