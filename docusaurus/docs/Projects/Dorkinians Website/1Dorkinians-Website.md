@@ -68,7 +68,7 @@ The Home page features the chatbot interface where you can ask natural language 
 - Conversation history
 - Visual data responses
 
-[View Home Documentation →](Home.md)
+[View Home Documentation →](2Home.md)
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -82,7 +82,7 @@ The Stats section provides comprehensive statistics for players, teams, and the 
 - **Club Stats**: Club-wide statistics and comparisons
 - **Comparison**: Side-by-side player comparison with radar charts
 
-[View Stats Documentation →](Stats.md)
+[View Stats Documentation →](3Stats.md)
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -94,7 +94,7 @@ The TOTW (Team of the Week) section displays the best performing players each we
 - **Team of the Week**: Weekly best XI with visual pitch display
 - **Players of the Month**: Monthly player awards
 
-[View TOTW Documentation →](TOTW.md)
+[View TOTW Documentation →](4TOTW.md)
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -109,7 +109,7 @@ The Club Info section contains information about the club, leagues, captains, aw
 - **Club Awards**: Award information and winners
 - **Useful Links**: External resources and links
 
-[View Club Info Documentation →](Club-Info.md)
+[View Club Info Documentation →](5Club-Info.md)
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -123,7 +123,7 @@ The Settings page provides quick navigation to all app sections, database status
 - PWA installation prompt
 - App version information
 
-[View Settings Documentation →](Settings.md)
+[View Settings Documentation →](6Settings.md)
 
 > [Back to Table of Contents](#table-of-contents)
 
