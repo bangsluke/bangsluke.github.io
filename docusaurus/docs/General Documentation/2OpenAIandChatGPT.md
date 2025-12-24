@@ -1,13 +1,15 @@
+---
+slug: /general-documentation/openai-and-chatgpt
+---
+
 # OpenAI and ChatGPT
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
 ## OpenAI Links
 
-![OpenAI Logo](https://i.imgur.com/KkOSP3l.png)
-
 - <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
-- <a href="https://openai.com/" target="_blank">OpenAI</a>
+- <a href="https://openai.com/" target="_blank">OpenAI Website</a>
 - <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI API</a>
 
 ## ChatGPT Prompts

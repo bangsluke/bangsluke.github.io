@@ -1,3 +1,7 @@
+---
+slug: /general-documentation/package-managers
+---
+
 # Package Managers
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
@@ -5,8 +9,6 @@
 Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" target="_blank">PNPM</a>.
 
 ## NPM
-
-![NPM Logo](https://i.imgur.com/ufPLPqy.png)
 
 ### NPM Commands
 
@@ -38,8 +40,6 @@ For more commands, see this <a href="https://devhints.io/npm" target="_blank">ch
 - `npm run <script>` - Run a script from the package.json file
 
 ## Yarn
-
-![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
 
 ### Yarn Commands
 
@@ -74,8 +74,6 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 
 ## PNPM
 
-![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
-
 ### PNPM Commands
 
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
@@ -84,8 +82,6 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 ## Switching Package Managers
 
 ### From NPM to Yarn
-
-![NPM Logo](https://i.imgur.com/ufPLPqy.png) > ![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
 
 - Install yarn using `npm i -g yarn` if not already installed
 - Go to the directory where you install packages and run the `yarn` command

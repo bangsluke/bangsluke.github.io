@@ -1,3 +1,7 @@
+---
+slug: /project-set-up-to-release/initiation
+---
+
 # Initiation
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
@@ -10,8 +14,6 @@
 
 ### CRA (Create React App)
 
-![React Logo](https://i.imgur.com/LMShXOo.png)
-
   - `npx create-react-app my-app` - Create a new React app called "my-app"
   - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
   - `cd my-app` - Change directory to the new React app
@@ -19,8 +21,6 @@
   - `npm run build` - Build the React app for production
 
 ### Vite
-
-![Vite Logo](https://i.imgur.com/smpppHt.png)
 
   - To use Vite with Yarn and TypeScript do the following;
     - `yarn create vite my-app --template react-ts`
@@ -33,8 +33,6 @@
 	- `yarn build` - Build the React app for production
 
 ### Next.JS
-
-![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
 
   - JavaScript and npm
 	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
@@ -50,8 +48,6 @@
 	- `yarn build` - Build the React app for production
 
 ## Initiate a Git Repository and link to GitHub
-
-![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -180,8 +176,6 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 ### ESLint and Prettier Config
 
-![ESLint Logo](https://i.imgur.com/ebsMde1.png) ![Prettier Logo](https://i.imgur.com/IJ3Ksm0.png)
-
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
 - Consider the below references if needed
@@ -198,8 +192,6 @@ If using React, consider the following links:
 - <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
 
 ## GitHub Workflows
-
-![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)

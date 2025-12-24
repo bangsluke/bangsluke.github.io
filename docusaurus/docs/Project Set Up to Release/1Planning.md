@@ -1,3 +1,7 @@
+---
+slug: /project-set-up-to-release/planning
+---
+
 # Planning
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
@@ -13,8 +17,6 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 
 ### Front End Architecture
-
-![React Logo](https://i.imgur.com/LMShXOo.png) ![Vite Logo](https://i.imgur.com/smpppHt.png) ![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
 
 - Considerations:
   - Single page application or not?

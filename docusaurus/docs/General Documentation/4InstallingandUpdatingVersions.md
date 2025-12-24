@@ -1,3 +1,7 @@
+---
+slug: /general-documentation/installing-and-updating-versions
+---
+
 # Installing and Updating Versions
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
@@ -5,8 +9,6 @@
 Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" target="_blank">PNPM</a>.
 
 ## NPM
-
-![NPM Logo](https://i.imgur.com/ufPLPqy.png)
 
 ### NPM Download
 
@@ -21,8 +23,6 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 ## Yarn
 
-![Yarn Logo](https://i.imgur.com/IXZDNL8.png)
-
 ### Yarn Download
 
 - `npm install --global yarn` - (<a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable</a>)
@@ -34,14 +34,10 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 ## PNPM Commands
 
-![PNPM Logo](https://i.imgur.com/1YKlWVX.png)
-
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
 - <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
 
 ## Node
-
-![Node Logo](https://i.imgur.com/EvX1vFR.png)
 
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
