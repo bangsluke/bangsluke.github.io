@@ -1,10 +1,12 @@
+---
+slug: /general-documentation/tool-commands-and-shortcuts
+---
+
 # Tool Commands/Shortcuts
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
 ## Powershell Commands
-
-![Powershell Logo](https://i.imgur.com/wBg7htx.png)
 
 - To get to Powershell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - Navigating Folders and Files
@@ -30,9 +32,47 @@
   - `alias` - To print all aliases
   - `alias xxx="yyy"` - To create a new alias, e.g. `alias g="git"` will create an alias for git
 
-## Git Commands
+### PowerShell Aliases Example
 
-![Git Logo](https://i.imgur.com/2xve41Z.png)
+The below example shows how to create a PowerShell alias for opening the PowerShell profile file in VS Code or Cursor and then setting an alias for a folder in the Documents folder.
+
+```powershell
+# Add a welcoming message
+Write-Host "PowerShell profile loaded from `C:\Users\bangs\Documents\Coding Projects\PowerShell-Aliases\Microsoft.PowerShell_profile.ps1`!" -ForegroundColor Yellow
+
+function OpenAliasFunction {
+    param (
+        [string]$Path = $PROFILE
+    )
+
+    try {
+        code $Path
+    } catch {
+        Write-Host "'code' failed, trying 'cursor'..." -ForegroundColor Yellow
+        try {
+            cursor $Path
+        } catch {
+            Write-Host "Both editors failed to launch." -ForegroundColor Red
+        }
+    }
+}
+
+Set-Alias openalias OpenAliasFunction
+Set-Alias profile OpenAliasFunction
+
+# Define the folder path variable
+$folderPath = "C:\Users\bangs\Documents\Coding Projects\"
+
+function CodingFunction {
+    $fullPath = $folderPath
+    set-location $fullPath
+}
+
+Set-Alias coding CodingFunction
+
+```
+
+## Git Commands
 
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
@@ -46,8 +86,6 @@
 
 ## VS Code Commands
 
-![VS Code Logo](https://i.imgur.com/2lK00uT.png)
-
 - `Ctrl + P` - Open the file search
 - `Ctrl + Shift + P` - Open the command palette
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
@@ -58,13 +96,9 @@
 
 ## Chrome Shortcuts
 
-![Chrome Logo](https://i.imgur.com/yTEUQ3I.png)
-
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
 ## VBA Shortcuts
-
-![VBA Logo](https://i.imgur.com/TrsfWN1.png)
 
 - `F5` - Run the current script
 - `F8` - Run the current line of code
