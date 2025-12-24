@@ -1,8 +1,10 @@
+---
+slug: /general-documentation/git-fixes
+---
+
 # Git Fixes
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
-
-![Git Logo](https://i.imgur.com/2xve41Z.png)
 
 ## Error: Unable to load Commits. fatal: bad object desktop.ini
 

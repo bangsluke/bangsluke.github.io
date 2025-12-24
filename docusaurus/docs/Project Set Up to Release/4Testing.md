@@ -1,10 +1,12 @@
+---
+slug: /project-set-up-to-release/testing
+---
+
 # Testing
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
 ## Testing Links
-
-![Cypress Logo](https://i.imgur.com/BUzlvBh.png)
 
 - <a href="https://medium.com/@kristiyan.velkov/the-pyramid-of-testing-in-react-js-or-next-js-a4090d3bfad2" target="_blank">Testing in Next.js and React</a>
 - <a href="https://profy.dev/article/cypress-react" target="_blank">Cypress React Tutorial</a>

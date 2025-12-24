@@ -1,7 +1,10 @@
+---
+slug: /project-set-up-to-release/development
+---
+
 # Development
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
-
 
 ## HTML
 
@@ -263,8 +266,6 @@ In order of recommendation:
 
 ### React
 
-![React Logo](https://i.imgur.com/LMShXOo.png)
-
 - Hooks
   - <a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
   - <a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
@@ -284,14 +285,10 @@ In order of recommendation:
 
 ### Vite
 
-![Vite Logo](https://i.imgur.com/smpppHt.png)
-
 - Routing
   - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
 
 ### Next.js
-
-![NextJS Logo](https://i.imgur.com/OGtWPsT.png)
 
 - <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
 - <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
@@ -313,8 +310,6 @@ In order of recommendation:
 
 ### React Issues
 
-![React Logo](https://i.imgur.com/LMShXOo.png)
-
 - For issues in `React` (including `Vite` and `Next.JS`):
   - General debugging - <a href="https://profy.dev/article/debug-react-vscode" target="_blank">Debug React in VSCode</a>
   - Issue 1 - Cannot be used as a JSX component
@@ -323,10 +318,7 @@ In order of recommendation:
     ```
     Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a>
 
-
 ## Deployment
-
-![Netlify Logo](https://i.imgur.com/reePUUY.png)
 
 - Set up deployment to the hosting service of choice
 - Recommend Netlify for a simple deployment

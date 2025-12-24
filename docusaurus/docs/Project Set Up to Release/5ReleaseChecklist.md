@@ -1,3 +1,7 @@
+---
+slug: /project-set-up-to-release/release-checklist
+---
+
 # Release Checklist
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
@@ -107,8 +111,6 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 - Check that input boxes are using the correct attributes to help user input - <a href="https://better-mobile-inputs.netlify.app/" target="_blank">Better Mobile Inputs</a>
 
 ## GitHub Information
-
-![GitHub Logo](https://i.imgur.com/zD0C9oF.png)
 
 - Check that the GitHub repo has all the details that it needs, such as:
   - About Section

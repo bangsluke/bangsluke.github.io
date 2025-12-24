@@ -1,8 +1,12 @@
+---
+slug: /projects/dorkinians-stats/maintenance
+---
+
 # Dorkinians Stats Maintenance
 
 > [Back to Documentation Intro Contents](../../DocumentationIntro.md)
 
-![Dorkinians Logo](https://i.postimg.cc/rm1f3Kth/Dorkinians.png)
+<img src="https://i.postimg.cc/rm1f3Kth/Dorkinians.png" width="200"></img>
 
 ## Table of Contents
 
