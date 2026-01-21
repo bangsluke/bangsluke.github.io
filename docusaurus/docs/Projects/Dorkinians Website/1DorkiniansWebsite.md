@@ -14,11 +14,11 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
 
 ## Quick Links
 
-- [Home Page](2HomePage.md)
-- [Stats Page](3StatsPage.md)
-- [TOTW Page](4TOTWPage.md)
-- [Club Info Page](5ClubInfoPage.md)
-- [Settings Page](6SettingsPage.md)
+- [Home Page Documentation](2HomePage.md)
+- [Stats Page Documentation](3StatsPage.md)
+- [TOTW Page Documentation](4TOTWPage.md)
+- [Club Info Page Documentation](5ClubInfoPage.md)
+- [Settings Page Documentation](6SettingsPage.md)
 
 ## Table of Contents
 
@@ -129,12 +129,16 @@ The Club Info section contains information about the club, leagues, captains, aw
 
 ### Settings
 
-The Settings page provides quick navigation to all app sections, database status information, and PWA installation options.
+The Settings page provides quick navigation to all app sections, database status information, PWA installation options, and app management features.
 
 **Features:**
+- PWA installation prompt (if supported by your device)
+- Help documentation access
 - Quick navigation to all screens
+- App settings
+- Feedback submission (bug reports and feature requests)
+- Data privacy information and removal requests
 - Database seeding status
-- PWA installation prompt
 - App version information
 
 :::info

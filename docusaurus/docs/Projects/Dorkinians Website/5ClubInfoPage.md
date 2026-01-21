@@ -27,7 +27,6 @@ slug: /projects/dorkinians-website/club-info-page
 - [Useful Links](#useful-links)
   - [External Resources](#external-resources)
   - [Quick Access](#quick-access)
-- [Tips and Tricks](#tips-and-tricks)
 
 ## Overview
 
@@ -37,7 +36,16 @@ The Club Info section provides comprehensive information about Dorkinians FC, in
 This section serves as a central hub for club information and resources.
 :::
 
-[Image: Club Info Page Screenshot]
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/Wpn5mVKH/Club_Information_Mobile.png"
+    alt="Club Information Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/gk2NN5bb/League_Information_Desktop.png"
+    alt="League Information Desktop Screenshot"
+  />
+</div>
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -62,6 +70,17 @@ You can navigate between these sub-pages by:
 
 The Club Information sub-page provides essential details about Dorkinians FC, including the club's history, notable milestones, and location information.
 
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/Wpn5mVKH/Club_Information_Mobile.png"
+    alt="Club Information Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/Wpn5mVC1/Club_Information_Desktop.png"
+    alt="Club Information Desktop Screenshot"
+  />
+</div>
+
 ### Club History
 
 The Club History section displays information about the formation and background of Dorkinians FC:
@@ -73,8 +92,6 @@ The Club History section displays information about the formation and background
 :::info
 Dorkinians FC was formed in 1930 and has been a dominant force in Surrey football from youth to senior level.
 :::
-
-[Image: Club History Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -100,8 +117,6 @@ The Milestones section displays significant achievements and records reached by 
 Check the "Nearing Milestones" section regularly to see what club records are about to be broken!
 :::
 
-[Image: Milestones Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Location and Navigation
@@ -123,13 +138,22 @@ The Location section provides information about the club's home ground and navig
 The navigation link uses your current location (if enabled) to provide the most direct route to Pixham Sports Ground.
 :::
 
-[Image: Location and Navigation Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ## League Information
 
 The League Information sub-page provides details about the leagues in which Dorkinians FC teams compete.
+
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/Pf4SbHc7/League_Information_Mobile.png"
+    alt="League Information Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/gk2NN5bb/League_Information_Desktop.png"
+    alt="League Information Desktop Screenshot"
+  />
+</div>
 
 ### League Details
 
@@ -141,8 +165,6 @@ The League Details section displays information about:
 - **Season Information**: Current season details
 
 This information helps understand the competitive context in which the teams play.
-
-[Image: League Details Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -160,13 +182,22 @@ The Standings section (where available) may display:
 Standings information may be updated periodically and may not always be available for all teams or leagues.
 :::
 
-[Image: Standings Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ## Club Captains
 
 The Club Captains sub-page displays information about current and historical team captains.
+
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/sfcTPz8b/Club_Captains_Mobile.png"
+    alt="Club Captains Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/pVZsQv42/Club_Captains_Desktop.png"
+    alt="Club Captains Desktop Screenshot"
+  />
+</div>
 
 ### Current Captains
 
@@ -177,8 +208,6 @@ The Current Captains section shows:
 - **Contact Information**: Where available, contact details for captains
 
 This information helps identify who to contact for team-specific matters.
-
-[Image: Current Captains Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -194,13 +223,22 @@ The Historical Captains section (where available) may display:
 Historical captain information may be limited depending on available records.
 :::
 
-[Image: Historical Captains Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ## Club Awards
 
 The Club Awards sub-page provides information about club awards, recognition, and achievements.
+
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/h4r28nww/Club_Awards_Mobile.png"
+    alt="Club Awards Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/05fVGvFx/Club_Awards_Desktop.png"
+    alt="Club Awards Desktop Screenshot"
+  />
+</div>
 
 ### Award Categories
 
@@ -212,8 +250,6 @@ The Award Categories section may include:
 - **Team Awards**: Team-based recognition
 
 Each award category may have its own criteria and selection process.
-
-[Image: Award Categories Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -232,13 +268,22 @@ This section celebrates outstanding individual and team achievements throughout 
 Check this section to see who has won various club awards and what achievements they represent.
 :::
 
-[Image: Award Winners Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ## Useful Links
 
 The Useful Links sub-page provides quick access to external resources and important links related to Dorkinians FC.
+
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/MZD90w4N/Useful_Links_Mobile.png"
+    alt="Useful Links Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/nVk3Kxgf/Useful_Links_Desktop.png"
+    alt="Useful Links Desktop Screenshot"
+  />
+</div>
 
 ### External Resources
 
@@ -255,8 +300,6 @@ Each link opens in a new tab/window for easy access.
 Links are regularly updated to ensure they remain current and accessible.
 :::
 
-[Image: External Resources Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Quick Access
@@ -270,27 +313,4 @@ The Useful Links section provides quick access to:
 
 Links are organized for easy navigation and quick access to the most commonly needed resources.
 
-[Image: Useful Links Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
-
-## Tips and Tricks
-
-1. **Check Milestones Regularly**: The milestones section is updated as achievements are reached - check back often to see new records
-
-2. **Use Navigation Link**: When traveling to matches, use the navigation link for the most direct route to Pixham Sports Ground
-
-3. **Explore Historical Information**: Browse historical captains and awards to learn about the club's heritage
-
-4. **Bookmark Useful Links**: Save frequently used external links for quick access
-
-5. **Filter Milestones**: Use the milestone filter to focus on specific achievement categories you're interested in
-
-6. **Check League Information**: Stay informed about league structures and competition formats for each team
-
-:::warning
-Some information in the Club Info section may be updated less frequently than statistics, so check the Stats section for the most current performance data.
-:::
-
-> [Back to Table of Contents](#table-of-contents)
-

@@ -31,7 +31,6 @@ slug: /projects/dorkinians-website/settings-page
   - [Feedback Modal](#feedback-modal)
   - [Data Privacy Modal](#data-privacy-modal)
 - [App Information](#app-information)
-- [Tips and Tricks](#tips-and-tricks)
 
 ## Overview
 
@@ -41,7 +40,16 @@ The Settings page provides quick navigation to all app sections, displays databa
 The Settings page is accessible from the header menu icon on any page in the app.
 :::
 
-[Image: Settings Page Screenshot]
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/qBL1crYP/Settings_Mobile.png"
+    alt="Settings Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/v8z07yks/Settings_Desktop.png"
+    alt="Settings Desktop Screenshot"
+  />
+</div>
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -56,8 +64,6 @@ To access the Settings page:
 :::tip
 The Settings page is hidden from the bottom navigation bar to keep the main navigation clean, but it's always accessible via the header menu.
 :::
-
-[Image: Accessing Settings Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -75,8 +81,6 @@ The main navigation pages are displayed with icons:
 - **Club Info**: Club information section with sub-pages
 
 Each main page is displayed as a button that navigates directly to that page when tapped.
-
-[Image: Main Pages Navigation Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -107,8 +111,6 @@ Each sub-page is displayed as a nested button that navigates directly to that sp
 Use the sub-page navigation to jump directly to a specific section without having to navigate through the main pages first.
 :::
 
-[Image: Sub-Pages Navigation Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Quick Navigation
@@ -120,8 +122,6 @@ The Available Screens section can be expanded or collapsed:
 - **Visual Hierarchy**: Main pages and sub-pages are visually distinguished with different styling
 
 This provides a quick way to navigate to any section of the app without using the bottom navigation or swiping through pages.
-
-[Image: Quick Navigation Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -142,8 +142,6 @@ The seeding status indicates whether the database has been successfully populate
 Database seeding is the process of loading statistics data into the database. This typically happens automatically but may need to be triggered manually in some cases.
 :::
 
-[Image: Seeding Status Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Status Indicators
@@ -156,8 +154,6 @@ Status indicators use color-coded icons to show the current state:
 - **Gray Clock**: Status is unknown or not available
 
 The status indicator is accompanied by a text summary explaining the current state.
-
-[Image: Status Indicators Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -174,8 +170,6 @@ This information helps verify that the database contains the expected amount of 
 :::tip
 If you notice statistics seem outdated, check the database status to see when data was last updated.
 :::
-
-[Image: Database Information Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -200,8 +194,6 @@ The install prompt appears when:
 PWA installation is supported on most modern mobile browsers and some desktop browsers (Chrome, Edge, Safari).
 :::
 
-[Image: Install Prompt Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Installation Benefits
@@ -218,8 +210,6 @@ Installing the app as a PWA provides several benefits:
 Installing the app provides a more native, app-like experience compared to using it in a browser.
 :::
 
-[Image: Installation Benefits Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Update Notifications
@@ -231,8 +221,6 @@ When the app is installed as a PWA, you may receive notifications about:
 - **Important Announcements**: Club or app-related announcements
 
 Update notifications help ensure you're always using the latest version with the most current data.
-
-[Image: Update Notifications Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -258,8 +246,6 @@ You can manually check for app updates from the Settings page:
 Check for updates regularly to ensure you have access to the latest features and improvements.
 :::
 
-[Image: Check for Updates Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Update Toast
@@ -279,8 +265,6 @@ When an app update is available, an Update Toast notification appears at the bot
 :::info
 If you dismiss the update toast, you can still update the app later from the Settings page.
 :::
-
-[Image: Update Toast Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -302,88 +286,142 @@ The documentation includes:
 - Tips and tricks for using the app effectively
 - Troubleshooting information
 
-[Image: Help Button Screenshot]
-
 > [Back to Table of Contents](#table-of-contents)
 
 ### Feedback Modal
 
-The Settings page includes a feedback option to submit comments, suggestions, or report issues:
+The Settings page includes a feedback option to submit comments, suggestions, or report issues. The Feedback Modal provides an easy way to communicate with the development team.
 
-1. **Access Feedback**: Look for the feedback option in the Settings page
-2. **Open Modal**: Tap to open the feedback modal
-3. **Submit Feedback**: Enter your feedback and submit
+**Accessing the Feedback Modal:**
 
-**Feedback Types:**
-- Bug reports
-- Feature suggestions
-- General comments
-- Questions or concerns
+1. **Find Feedback Button**: Look for the feedback button in the Settings page (typically displayed with a bug or lightbulb icon)
+2. **Tap to Open**: Tap the button to open the feedback modal
+3. **Select Feedback Type**: Choose between "Report a Bug" or "Request a Feature"
+
+**Submitting Feedback:**
+
+1. **Select Type**: Choose whether you're reporting a bug or requesting a feature
+   - **Report a Bug**: Use this option to report issues, errors, or unexpected behavior
+   - **Request a Feature**: Use this option to suggest new features or improvements
+2. **Enter Your Name**: Provide your name (optional but recommended for follow-up)
+3. **Enter Your Message**: Describe the bug or feature request in detail
+   - For bugs: Include steps to reproduce the issue, what you expected to happen, and what actually happened
+   - For features: Describe the feature you'd like to see and how it would benefit users
+4. **Submit**: Tap the submit button to send your feedback
+5. **Confirmation**: You'll see a success message confirming your feedback was submitted
+
+**Feedback Processing:**
+
+- All feedback is automatically timestamped and includes the app version you're using
+- Bug reports and feature requests are reviewed by the development team
+- Your feedback helps prioritize improvements and fixes
+
+**Modal Features:**
+
+- **Type Selection**: Switch between bug reports and feature requests
+- **Form Validation**: The form ensures both name and message are provided before submission
+- **Success Feedback**: Clear confirmation when feedback is successfully submitted
+- **Error Handling**: Error messages if submission fails, with option to try again
+- **Keyboard Accessible**: Full keyboard navigation support
 
 :::tip
-Your feedback helps improve the app. Don't hesitate to share your thoughts!
+When reporting bugs, be as specific as possible. Include details like what page you were on, what action you took, and any error messages you saw. This helps the development team fix issues faster.
 :::
 
-[Image: Feedback Modal Screenshot]
+:::info
+Your feedback is valuable! The development team reviews all feedback to improve the app experience for everyone.
+:::
 
 > [Back to Table of Contents](#table-of-contents)
 
 ### Data Privacy Modal
 
-The Settings page provides access to data privacy information:
+The Settings page provides access to data privacy information and the ability to request data removal. The Data Privacy Modal helps you understand how your data is handled and provides options for data management.
 
-1. **Access Privacy Info**: Look for the data privacy option in the Settings page
-2. **Open Modal**: Tap to open the data privacy modal
-3. **Review Information**: Read about how your data is handled
+**Accessing the Data Privacy Modal:**
 
-The data privacy modal includes information about:
-- Data collection practices
-- How data is used
-- Data storage and security
-- Your privacy rights
+1. **Find Privacy Button**: Look for the data privacy button in the Settings page (typically displayed with a shield icon)
+2. **Tap to Open**: Tap the button to open the data privacy modal
+3. **Review Information**: Read about data collection, usage, and your privacy rights
+
+**Data Privacy Information:**
+
+The modal provides comprehensive information about:
+
+- **Data Collection Practices**: What data is collected when you use the app
+- **Data Usage**: How collected data is used to provide app functionality
+- **Data Storage**: Where and how your data is stored
+- **Data Security**: Security measures in place to protect your data
+- **Privacy Rights**: Your rights regarding your personal data
+- **Local Storage**: Information about data stored locally on your device (conversation history, player selections, etc.)
+
+**Requesting Data Removal:**
+
+If you want to request removal of your data:
+
+1. **Enter Your Name**: Provide the name associated with the data you want removed
+2. **Submit Request**: Tap the submit button to send your data removal request
+3. **Confirmation**: You'll see a success message confirming your request was submitted
+4. **Processing**: The development team will process your request and remove your data
+
+**What Data Can Be Removed:**
+
+- Player statistics and match data (if you're a player)
+- User preferences and settings
+- Feedback submissions
+- Other personal data associated with your name
+
+**What Data Cannot Be Removed:**
+
+- Historical match records (these are part of the club's official records)
+- Statistics that are part of team and club records
+- Data required for maintaining historical accuracy
+
+**Modal Features:**
+
+- **Clear Information**: Easy-to-understand explanation of data practices
+- **Request Form**: Simple form to request data removal
+- **Success Feedback**: Confirmation when removal request is submitted
+- **Error Handling**: Error messages if submission fails
+- **Keyboard Accessible**: Full keyboard navigation support
 
 :::info
-The app is committed to protecting your privacy. Review the data privacy information to understand how your data is handled.
+The app is committed to protecting your privacy. All data removal requests are processed in accordance with privacy regulations and best practices.
 :::
 
-[Image: Data Privacy Modal Screenshot]
+:::warning
+Requesting data removal will permanently delete your personal data. This action cannot be undone. Historical match records that are part of official club statistics may be retained for record-keeping purposes.
+:::
 
 > [Back to Table of Contents](#table-of-contents)
 
 ## App Information
 
-The Settings page may display additional app information, such as:
+The Settings page displays app version and build information to help you identify which version you're using.
 
-- **App Version**: Current version number
-- **Last Updated**: When the app was last updated
-- **Build Information**: Technical details about the app build
+**App Version Display:**
 
-This information helps identify which version of the app you're using and when it was last updated.
+- **Location**: The app version is typically displayed in the Settings page, often near the bottom or in an "About" section
+- **Format**: Version numbers follow semantic versioning (e.g., "1.1.31")
+- **Purpose**: Helps identify which version of the app you're running, useful for:
+  - Reporting bugs (include version number in bug reports)
+  - Checking if you have the latest version
+  - Understanding which features are available in your version
 
-[Image: App Information Screenshot]
+**Version Information Includes:**
 
-> [Back to Table of Contents](#table-of-contents)
+- **Current Version**: The version number of the app you're currently using
+- **Build Information**: Technical details about the app build (where applicable)
+- **Auto-Updated**: Version information is automatically updated when the app is updated
 
-## Tips and Tricks
+**Checking for Updates:**
 
-1. **Use Quick Navigation**: The Available Screens section is the fastest way to jump to any specific page or sub-page
+- Use the "Check for Updates" feature (if available) to see if a newer version is available
+- The app may automatically check for updates in the background
+- Update notifications will appear when new versions are available
 
-2. **Check Database Status**: If statistics seem outdated or incorrect, check the database status to see when data was last updated
-
-3. **Install as PWA**: For the best experience, install the app as a PWA on your mobile device
-
-4. **Monitor Updates**: Keep an eye on update notifications to ensure you're using the latest version. Use the "Check for Updates" feature regularly
-
-5. **Expand Navigation Tree**: Expand the Available Screens section to see all available pages at a glance
-
-6. **Use Settings as Hub**: The Settings page serves as a central hub - use it to quickly navigate to any section
-
-7. **Access Help**: Use the Help button to access complete documentation when you need assistance
-
-8. **Provide Feedback**: Use the feedback option to share your thoughts and help improve the app
-
-:::warning
-If database seeding fails, some statistics may not be available. Check the database status and contact support if issues persist.
+:::info
+The app version is also included automatically when you submit feedback or data removal requests, helping the development team understand which version you're using.
 :::
 
 > [Back to Table of Contents](#table-of-contents)

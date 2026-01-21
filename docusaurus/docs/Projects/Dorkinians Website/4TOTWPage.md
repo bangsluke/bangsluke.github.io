@@ -20,7 +20,6 @@ slug: /projects/dorkinians-website/totw-page
 - [Players of the Month](#players-of-the-month)
   - [Monthly Awards](#monthly-awards)
   - [Historical Winners](#historical-winners)
-- [Tips and Tricks](#tips-and-tricks)
 
 ## Overview
 
@@ -30,7 +29,17 @@ The TOTW (Team of the Week) section displays the best performing players each we
 Team of the Week is calculated based on fantasy points earned in each match, with the highest-scoring players in each position selected for the team.
 :::
 
-[Image: TOTW Page Screenshot]
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/9XpLP2Sg/TOTW_Mobile.png"
+    alt="TOTW Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/8kHZdG9C/Players_of_the_Month_Desktop.png"
+    alt="Players of the Month Desktop Screenshot"
+  />
+</div>
+
 > [Back to Table of Contents](#table-of-contents)
 
 ## Navigation
@@ -51,6 +60,17 @@ You can navigate between these sub-pages by:
 
 The Team of the Week displays the best performing players from each week, arranged in a visual football pitch formation.
 
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/9XpLP2Sg/TOTW_Mobile.png"
+    alt="TOTW Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/v8z07ykB/TOTW_Desktop.png"
+    alt="TOTW Desktop Screenshot"
+  />
+</div>
+
 ### Season and Week Selection
 
 To view a specific Team of the Week:
@@ -67,7 +87,6 @@ To view a specific Team of the Week:
 If no week is available for the selected season, it means no matches were played that week or the data hasn't been processed yet.
 :::
 
-[Image: Season and Week Selection Screenshot]
 > [Back to Table of Contents](#table-of-contents)
 
 ### Pitch Visualization
@@ -89,7 +108,6 @@ Each player is displayed with:
 The formation may vary slightly depending on the actual best-performing players and their positions for that week.
 :::
 
-[Image: Pitch Visualization Screenshot]
 > [Back to Table of Contents](#table-of-contents)
 
 ### Player Details
@@ -121,7 +139,6 @@ To view detailed statistics for a player in the Team of the Week:
 Use the player details modal to understand exactly how each player earned their fantasy points and why they were selected for Team of the Week.
 :::
 
-[Image: Player Details Modal Screenshot]
 > [Back to Table of Contents](#table-of-contents)
 
 ### Star Man
@@ -135,7 +152,6 @@ The Star Man is the highest-scoring player in the Team of the Week, displayed pr
 
 The Star Man represents the best individual performance of the week across all players and positions.
 
-[Image: Star Man Screenshot]
 > [Back to Table of Contents](#table-of-contents)
 
 ### Points System
@@ -172,6 +188,17 @@ The player with the highest total fantasy points in each position is selected fo
 
 The Players of the Month section displays monthly award winners who have achieved outstanding performance over a calendar month.
 
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/9XpLP2S8/Players_of_the_Month_Mobile.png"
+    alt="Players of the Month Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/8kHZdG9C/Players_of_the_Month_Desktop.png"
+    alt="Players of the Month Desktop Screenshot"
+  />
+</div>
+
 ### Monthly Awards
 
 Players of the Month are selected based on their performance throughout a specific month, considering:
@@ -196,7 +223,6 @@ Each monthly award winner is displayed with:
 Players of the Month often correlate with players who appeared multiple times in Team of the Week during that month.
 :::
 
-[Image: Players of the Month Screenshot]
 > [Back to Table of Contents](#table-of-contents)
 
 ### Historical Winners
@@ -210,23 +236,6 @@ The Players of the Month section allows you to browse historical award winners:
 :::info
 Historical data is available for all months where matches were played and statistics were recorded.
 :::
-
-[Image: Historical Winners Screenshot]
-> [Back to Table of Contents](#table-of-contents)
-
-## Tips and Tricks
-
-1. **Check Weekly**: Visit the Team of the Week regularly to see the best performers from each week's matches
-
-2. **Explore Player Details**: Tap on players to see exactly how they earned their selection - this helps understand what makes a great performance
-
-3. **Compare Weeks**: Switch between different weeks to see how team composition and individual performances vary
-
-4. **Track Monthly Winners**: Check the Players of the Month section to identify consistently high-performing players
-
-5. **Understand the System**: Familiarize yourself with the points system to understand what actions contribute most to Team of the Week selection
-
-6. **Star Man Recognition**: Pay attention to the Star Man - they represent the single best performance of the week
 
 :::warning
 Team of the Week is based on fantasy points, which may not always align with subjective assessments of performance. The system is objective and data-driven.
