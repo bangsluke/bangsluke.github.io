@@ -14,56 +14,18 @@ slug: /projects/dorkinians-website/stats-page
   - [Stats Navigation Menu](#stats-navigation-menu)
 - [Filters](#filters)
 - [Player Stats](#player-stats)
-  - [Key Performance Stats](#key-performance-stats)
-  - [Seasonal Performance](#seasonal-performance)
-  - [Team Performance](#team-performance)
-  - [Positional Stats](#positional-stats)
-  - [Match Results](#match-results)
-  - [Game Details](#game-details)
-  - [Monthly Performance](#monthly-performance)
-  - [Defensive Record](#defensive-record)
-  - [Distance Travelled](#distance-travelled)
-  - [Opposition Locations](#opposition-locations)
-  - [Minutes per Stats](#minutes-per-stats)
-  - [Opposition Performance](#opposition-performance)
-  - [Fantasy Points](#fantasy-points)
-  - [Penalty Stats](#penalty-stats)
-  - [Awards and Achievements](#awards-and-achievements)
-  - [Data Table](#data-table)
-  - [Sharing Statistics](#sharing-statistics)
+  - [Player Stats Sections](#player-stats-sections)
+  - [Player Stats Data Table](#player-stats-data-table)
 - [Team Stats](#team-stats)
-  - [Key Performance Stats](#key-performance-stats-1)
-  - [Recent Form](#recent-form)
-  - [Top Players](#top-players)
-  - [Seasonal Performance](#seasonal-performance-1)
-  - [Match Results](#match-results-1)
-  - [Goals Scored vs Conceded](#goals-scored-vs-conceded)
-  - [Home vs Away Performance](#home-vs-away-performance)
-  - [Key Team Stats](#key-team-stats)
-  - [Unique Player Stats](#unique-player-stats)
-  - [Best Season Finish](#best-season-finish)
-  - [Data Table](#data-table-1)
+  - [Team Stats Sections](#team-stats-sections)
+  - [Team Stats Data Table](#team-stats-data-table)
 - [Club Stats](#club-stats)
-  - [Key Club Stats](#key-club-stats)
-  - [Team Comparison](#team-comparison)
-  - [Top Players](#top-players-1)
-  - [Seasonal Performance](#seasonal-performance-2)
-  - [Player Distribution](#player-distribution)
-  - [Player Tenure](#player-tenure)
-  - [Stats Distribution](#stats-distribution)
-  - [Match Results](#match-results-2)
-  - [Game Details](#game-details-1)
-  - [Big Club Numbers](#big-club-numbers)
-  - [Goals Scored vs Conceded](#goals-scored-vs-conceded-1)
-  - [Home vs Away Performance](#home-vs-away-performance-1)
-  - [Key Team Stats](#key-team-stats-1)
-  - [Unique Player Stats](#unique-player-stats-1)
-  - [Data Table](#data-table-2)
+  - [Club Stats Sections](#club-stats-sections)
+  - [Club Stats Data Table](#club-stats-data-table)
 - [Comparison](#comparison)
   - [Selecting Players](#selecting-players)
   - [Radar Charts](#radar-charts)
-  - [Filtering Options](#filtering-options)
-- [Tips and Tricks](#tips-and-tricks)
+  - [Full Comparison](#full-comparison)
 
 ## Overview
 
@@ -71,6 +33,8 @@ The Stats section provides comprehensive statistics for players, teams, and the 
 
 :::info
 All statistics can be filtered by time range, team, location, opposition, competition, result, and position (where each is applicable).
+
+To do this, tap the filter icon in the header to open the [filter sidebar](#filters).
 :::
 
 <div className="sideBySide">
@@ -84,8 +48,6 @@ All statistics can be filtered by time range, team, location, opposition, compet
   />
 </div>
 
-<!-- TODO [Image: Stats Page Screenshot] -->
-
 > [Back to Table of Contents](#table-of-contents)
 
 ## Navigation
@@ -94,23 +56,31 @@ The Stats section has four main sub-pages accessible via swiping left or right o
 
 - **Player Stats**: Individual player performance metrics
 - **Team Stats**: Team-level statistics and analysis
-- **Club Stats**: Club-wide statistics and comparisons
+- **Club Stats**: Club-wide statistics and analysis
 - **Comparison**: Side-by-side player comparison
 
-:::tip
+:::info
 Swipe left or right on mobile devices to quickly switch between Stats sub-pages.
 :::
 
-You can also access the navigation menu by tapping the burger menu icon in the header (that's the three horizontal lines) to see all available sections and jump directly to any one.
+:::tip
+You can also access the [navigation menu](#stats-navigation-menu) by tapping the burger menu icon in the header (that's the three horizontal lines) to see all available sections and jump directly to any one.
+:::
 
 ### Stats Navigation Menu
 
-The Stats Navigation Menu provides quick access to all sections within the Stats pages. Access it by tapping the menu icon (three horizontal lines) in the header when viewing any Stats page.
+The Stats Navigation Menu provides quick access to all sections within the Stats pages. 
 
-**Using the Stats Navigation Menu:**
-1. Tap the menu icon in the header (on mobile) or sidebar (on desktop)
-2. Expand the stats page you want to navigate to
-3. Tap on any section to jump directly to it
+- Access it by tapping the menu icon (three horizontal lines) in the header when viewing any Stats page.
+- Expand the stats page you want to navigate to.
+- Tap on any section to jump directly to it.
+
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/W1XXkqpq/Stats-Navigation-Mobile.png"
+    alt="Stats Navigation Mobile Screenshot"
+  />
+</div>
 
 :::tip
 Use the Stats Navigation Menu to quickly jump to specific sections without scrolling through the entire page.
@@ -122,48 +92,24 @@ Use the Stats Navigation Menu to quickly jump to specific sections without scrol
 
 Filters allow you to narrow down statistics to specific criteria. Available filter types include:
 
-**Time Range Filter:**
-- Filter statistics by specific seasons (e.g., "2023/24", "2024/25")
-- Filter by custom date ranges (select start and end dates)
-- Filter by "All Time" to see statistics across all seasons
-- Filter by "This Season" for current season statistics only
-- Multiple seasons can be selected simultaneously
+- Quick Filters: Filter statistics by quick time periods
+- Time Range Filter: Filter statistics by specific seasons or date ranges
+- Home vs Away Filter: Filter statistics by home or away matches
+- Opposition Filter: Filter statistics by specific opposition teams
+- Competition Filter: Filter statistics by specific competitions
+- Result Filter: Filter statistics by match results
 
-**Team Filter:**
-- Filter by specific teams within the club (1st XI, 2nd XI, 3rd XI, etc.)
-- Select multiple teams to compare performance across teams
-- Available only for Player Stats and Comparison pages
-- When no teams are selected, all teams are included by default
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/W3MZ0x6L/Stats_Filter_Mobile.png"
+    alt="Stats Filter Mobile Screenshot"
+  />
+  <img
+    src="https://i.postimg.cc/RZ6Ncj4t/Stats-Filter-Desktop.png"
+    alt="Stats Filter Desktop Screenshot"
+  />
+</div>
 
-**Location Filter:**
-- Filter by "Home" matches only
-- Filter by "Away" matches only
-- Filter by both home and away (default)
-- Useful for analyzing home vs away performance differences
-
-**Opposition Filter:**
-- Filter by specific opposition teams
-- Select multiple opposition teams to analyze performance against specific clubs
-- Useful for identifying which teams a player or team performs best against
-- Shows all opposition teams the player/team has played against
-
-**Competition Filter:**
-- Filter by competition type: League, Cup, or Friendly matches
-- Filter by specific competitions (e.g., "Surrey Intermediate League")
-- Select multiple competition types simultaneously
-- Useful for comparing performance in different competition formats
-
-**Result Filter:**
-- Filter by match results: Wins, Draws, or Losses
-- Select multiple result types (e.g., wins and draws only)
-- Useful for analyzing performance in winning vs losing matches
-- Available for Player Stats, Team Stats, and Club Stats pages
-
-**Position Filter:**
-- Filter by player position: Goalkeeper (GK), Defender (DEF), Midfielder (MID), or Forward (FWD)
-- Available only for Player Stats and Comparison pages
-- Useful for analyzing performance in specific positions
-- Position is determined by where the player played the majority of each match
 
 **Using Filters:**
 1. Tap the filter icon to open the filter sidebar
@@ -176,7 +122,6 @@ Filters allow you to narrow down statistics to specific criteria. Available filt
 **Filter Persistence:**
 - Filters persist when navigating between Stats sub-pages (Player Stats, Team Stats, Club Stats, Comparison)
 - Filters are cleared when you change the selected player or team
-- Filters are stored in your browser's session storage
 
 :::tip
 Combine multiple filters to create very specific queries. For example, filter by "This Season", "Home", and "Wins" to see how a player performs in home wins this season.
@@ -185,8 +130,6 @@ Combine multiple filters to create very specific queries. For example, filter by
 :::warning
 Filters persist when navigating between Stats sub-pages, so remember to clear filters if you want to see unfiltered data in a different section.
 :::
-
-[Image: Filters Screenshot]
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -205,209 +148,62 @@ The Player Stats section provides comprehensive statistics for individual player
   />
 </div>
 
-### Key Performance Stats
+### Player Stats Sections
 
-The Key Performance Stats section displays the most important metrics for the selected player, including:
-
-- Appearances
-- Minutes played
-- Seasons count
-- Man of the Match awards
-- Goals scored
-- Assists
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Seasonal Performance
-
-The Seasonal Performance section shows how the player's statistics have changed across different seasons displayed in a column chart to show trends over time.
-
-:::tip
-Use the dropdown menu to select a different metric to display in the chart.
-:::
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Team Performance
-
-The Team Performance section shows how the player performs for different teams within the club. This includes:
-
-- Statistics broken down by team (1st XI, 2nd XI, etc.)
-- Most played for team
-- Best performing team
-- Goals scored per team
-
-This helps identify which team a player performs best for.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Positional Stats
-
-The Positional Stats section displays statistics broken down by the position the player played in (Goalkeeper, Defender, Midfielder, Forward). This includes:
-
-- Appearances in each position
-- Goals scored from each position
-- Performance metrics by position
-- Minutes played in each position
+1. **Key Performance Stats** - displays some of the most important metrics for the selected player, including Appearances, Minutes played, Seasons count, Man of the Match awards, Goals scored, and Assists
+2. **Seasonal Performance** - shows how the player's statistics have changed across different seasons displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
+3. **Team Performance** - shows how the player performs for different teams within the club displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
+4. **Positional Stats** - displays statistics broken down by the position the player played in (Goalkeeper, Defender, Midfielder, Forward), including appearances and minutes played in each position
 
 :::info
 Position is determined by the captain's assessment of where the player played the majority of each match.
 :::
 
-> [Back to Table of Contents](#table-of-contents)
-
-### Match Results
-
-The Match Results section shows the player's record in matches, including:
-
-- Win percentage
-- Games won, drawn, and lost
-- Win rate when the player scores
-- Home vs away win rates
-
-This section helps understand the player's impact on match outcomes.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Game Details
-
-The Game Details section provides a detailed list of all matches the player has participated in, including:
-
-- Match date
-- Opposition team
-- Result
-- Goals scored
-- Assists
-- Man of the Match awards
-- Other match-specific statistics
-
-You can scroll through the list to see individual match performances.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Monthly Performance
-
-The Monthly Performance section shows statistics broken down by month, helping identify:
-
-- Best performing months
-- Seasonal patterns
-- Monthly goal and assist trends
-
-Data is displayed in bar charts showing performance across different months.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Defensive Record
-
-The Defensive Record section focuses on defensive statistics, including:
-
-- Clean sheets
-- Goals conceded
-- Clean sheets per appearance
-- Goals conceded per appearance
-- Minutes per clean sheet
-
-This section is particularly relevant for defenders and goalkeepers.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Distance Travelled
-
-The Distance Travelled section shows the total distance the player has traveled to away matches, calculated from the club's home ground (Pixham Sports Ground) to each opposition ground.
+5. **Match Results** - shows the player's record in matches, such as games won, drawn, and lost, and average points per game
+6. **Game Details** - provides a summary of how many games were played in League, Cup, and Friendly matches, how many home and away games the player has played, and some other stats such as how many teammates they have played with
+7. **Monthly Performance** - shows statistics broken down by month, helping identify best performing months - with the ability to change which metric is displayed in the chart
+8. **Defensive Record** - focuses on defensive statistics, including clean sheets, goals conceded and goals conceded per appearance
 
 :::info
-Distance is calculated as the round trip (there and back) for each away match.
+If the player selected has ever played as a goalkeeper, the Defensive Record section will also include goalkeeper specific statistics such as saves
 :::
 
-> [Back to Table of Contents](#table-of-contents)
+9. **Distance Travelled** - shows the total distance round trip the player has traveled to away matches, calculated from the club's home ground (Pixham Sports Ground) to each opposition ground
+10. **Opposition Locations** - displays a map showing all the locations where the player has played away matches, providing a visual representation of their travel history
+11. **Opposition Performance** - shows how the player performs against different opposition teams, rated by Goals and Assists per appearance against each opposition
+12. **Fantasy Points** - displays the player's fantasy football points total and breakdown, as well as the player's highest scoring week and month
 
-### Opposition Locations
+:::info
+Fantasy points are calculated using the standard Premier League fantasy football scoring system.
+:::
 
-The Opposition Locations section displays a map or list showing all the locations where the player has played away matches, providing a visual representation of their travel history.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Minutes per Stats
-
-The Minutes per Stats section shows efficiency metrics, displaying how many minutes of play are required for various statistics:
-
-- Minutes per goal
-- Minutes per assist
-- Minutes per clean sheet
-- Minutes per appearance
-
-Lower numbers indicate higher efficiency.
+13. **Card Stats** - displays the player's yellow and red card statistics and how much it has cost them
+14. **Penalty Stats** - displays the player's penalty statistics, including penalties scored, penalties missed, penalties conceded, and penalties saved - in and out of penalty shootouts
+15. **Minutes per Stats** - displays efficiency metrics, displaying how many minutes of play are required for various statistics including minutes per goal, minutes per assist and minutes per clean sheet
+16. **Captaincies, Awards and Achievements** - displays the player's captaincies, awards and achievements, including Team of the Week appearances, Player of the Month awards, and Milestone achievements
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Opposition Performance
+### Player Stats Data Table
 
-The Opposition Performance section shows how the player performs against different opposition teams, including:
+The Data Table section provides a comprehensive table of all player statistics. To access this, click the "Switch to Data Table" button in the page header.
 
-- Goals scored against each opposition
-- Appearances against each opposition
-- Win rate against each opposition
-- Best and worst performing oppositions
-
-This helps identify which teams the player performs best against.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Fantasy Points
-
-The Fantasy Points section displays the player's fantasy football points total and breakdown, including:
-
-- Total fantasy points
-- Fantasy points per appearance
-- Points breakdown by category (goals, assists, clean sheets, etc.)
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/76xYbL9x/Player-Stats-Table-Mobile.png"
+    alt="Player Stats Data Table Mobile Screenshot"
+  />
+</div>
 
 :::tip
-Fantasy points are calculated using a standard fantasy football scoring system.
+You can click on any stat row in the data table to see a tooltip to help explain the stat.
 :::
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Penalty Stats
+<!-- TODO: Re-add the below section once the sharing functionality is implemented -->
 
-The Penalty Stats section provides detailed penalty statistics, including:
-
-- Penalties scored
-- Penalties missed
-- Penalties conceded
-- Penalties saved (for goalkeepers)
-- Penalty conversion rate
-
-This section helps assess a player's penalty-taking ability.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Awards and Achievements
-
-The Awards and Achievements section displays any awards, milestones, or achievements the player has earned, such as:
-
-- Team of the Week appearances
-- Player of the Month awards
-- Milestone achievements (e.g., 100 appearances, 50 goals)
-- Club records
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Data Table
-
-The Data Table section provides a comprehensive, sortable table of all player statistics. You can:
-
-- Sort by any column
-- Scroll through all available statistics
-- View raw data values
-- Export data (where supported)
-
-:::tip
-Use the data table when you need to see exact values or compare specific statistics that aren't shown in the visual sections.
-:::
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Sharing Statistics
+<!-- ### Sharing Statistics
 
 The Player Stats section includes functionality to share player statistics as images. This feature allows you to create and share visual representations of player performance data.
 
@@ -459,7 +255,7 @@ Use the share functionality to create personalized statistics cards for social m
 Share functionality may not be available on all devices or browsers. If the share button is not visible, the feature may be temporarily disabled or not supported on your device.
 :::
 
-> [Back to Table of Contents](#table-of-contents)
+> [Back to Table of Contents](#table-of-contents) -->
 
 ## Team Stats
 
@@ -476,142 +272,40 @@ The Team Stats section provides statistics and analysis for individual teams wit
   />
 </div>
 
-### Key Performance Stats
+### Team Stats Sections
 
-The Key Performance Stats section displays the most important metrics for the selected team, including:
+1. **Key Performance Stats** - displays the most important metrics for the selected team, including player count, games, wins and goals
+2. **Recent Form** - shows the team's performance in their most recent matches, displaying a form guide (W/D/L indicators) and goals scored and conceded in recent matches
 
-- Games played
-- Wins, draws, and losses
-- Goals scored and conceded
-- Goal difference
-- Clean sheets
-- Win percentage
-- Points per game
+:::tip
+Click on a box to see the details of that fixture or use the "Show detail boxes" to see details such as home and away, league, cup and friendly
+:::
 
-These stats are displayed as large, easy-to-read cards.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Recent Form
-
-The Recent Form section shows the team's performance in their most recent matches, displaying:
-
-- Recent match results
-- Form guide (W/D/L indicators)
-- Goals scored and conceded in recent matches
-- Current winning or losing streak
-
-This helps assess the team's current form and momentum.
+3. **Top Players** - displays the best performing players for the selected team across various metrics, including top goal scorers, top assist providers, most appearances, highest fantasy points, and other key statistics
+4. **Seasonal Performance** - shows how the team's statistics have changed across different seasons, including games, goals and other key metrics over time
+5. **Match Results** - shows the team's record in matches, such as games won, drawn, and lost, and average points per game
+6. **Goals Scored vs Conceded** - displays a comparison chart showing the relationship between goals scored and goals conceded, and the average goals scored and conceded per game
+7. **Home vs Away Performance** - compares the team's performance at home versus away matches, showing home win percentage vs away win percentage to establish the home advantage gained by the team
+8. **Key Team Stats** - displays important team-level statistics, including average points, goals and conceded per game, and other team metrics
+9. **Unique Player Stats** - shows statistics about the unique counts of players who have represented the team, including number of unique players, number of unique goals scored, and other unique player-related metrics
+10. **Best Season Finish** - displays the team's best league finish across all seasons
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Top Players
+### Team Stats Data Table
 
-The Top Players section displays the best performing players for the selected team across various metrics, including:
+The Data Table section provides a comprehensive table of all player statistics. To access this, click the "Switch to Data Table" button in the page header.
 
-- Top goal scorers
-- Top assist providers
-- Most appearances
-- Highest fantasy points
-- Other key statistics
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/26zhmrBF/Team-Stats-Table-Mobile.png"
+    alt="Team Stats Data Table Mobile Screenshot"
+  />
+</div>
 
-Players are ranked and displayed with their statistics.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Seasonal Performance
-
-The Seasonal Performance section shows how the team's statistics have changed across different seasons, including:
-
-- Win percentage per season
-- Goals scored per season
-- Goals conceded per season
-- League position per season
-- Other key metrics over time
-
-Data is displayed in charts showing trends across seasons.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Match Results
-
-The Match Results section provides a detailed list of all matches the team has played, including:
-
-- Match date
-- Opposition team
-- Result
-- Score
-- Competition
-- Location (home/away)
-
-You can scroll through the list to see individual match results.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Goals Scored vs Conceded
-
-The Goals Scored vs Conceded section displays a comparison chart showing the relationship between goals scored and goals conceded, helping identify:
-
-- Offensive strength
-- Defensive strength
-- Balance between attack and defense
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Home vs Away Performance
-
-The Home vs Away Performance section compares the team's performance at home versus away matches, showing:
-
-- Home win percentage vs away win percentage
-- Goals scored at home vs away
-- Goals conceded at home vs away
-- Other home/away comparisons
-
-This helps identify whether the team performs better at home or away.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Key Team Stats
-
-The Key Team Stats section displays important team-level statistics, including:
-
-- Average goals per game
-- Average goals conceded per game
-- Clean sheet percentage
-- Points per game
-- Other team metrics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Unique Player Stats
-
-The Unique Player Stats section shows interesting statistics about the players who have represented the team, such as:
-
-- Number of unique players
-- Most capped player
-- Longest-serving player
-- Other player-related metrics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Best Season Finish
-
-The Best Season Finish section displays the team's best league finish across all seasons, including:
-
-- Best league position achieved
-- Season when best finish occurred
-- Points total in best season
-- Other season records
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Data Table
-
-The Data Table section provides a comprehensive, sortable table of all team statistics. You can:
-
-- Sort by any column
-- Scroll through all available statistics
-- View raw data values
+:::tip
+You can click on any stat row in the data table to see a tooltip to help explain the stat.
+:::
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -630,156 +324,35 @@ The Club Stats section provides club-wide statistics and comparisons across all 
   />
 </div>
 
-### Key Club Stats
+### Club Stats Sections
 
-The Key Club Stats section displays the most important club-wide metrics, including:
-
-- Total games played across all teams
-- Total wins, draws, and losses
-- Total goals scored and conceded
-- Overall win percentage
-- Other club-level statistics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Team Comparison
-
-The Team Comparison section allows you to compare statistics across different teams within the club, showing:
-
-- Side-by-side comparisons of team performance
-- Comparative charts and graphs
-- Team rankings across various metrics
-
-This helps identify which teams are performing best and how they compare to each other.
+1. **Key Performance Stats** - displays the most important club-wide metrics, including total games played across all teams, total wins, draws, and losses, total goals scored and conceded, overall win percentage and other club-level statistics
+2. **Team Comparison** - allows you to compare statistics across different teams within the club, showing an overlaid radar chart across various metrics
+3. **Top Players** - displays the best performing players across the entire club, including top goal scorers, top assist providers, most appearances, highest fantasy points, and other club-wide player rankings
+4. **Seasonal Performance** - shows how the club's overall statistics have changed across different seasons, displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
+5. **Player Distribution** - shows how players are distributed across teams, including the number of players that have represented each team
+6. **Player Tenure** - displays statistics about how long players have been with the club, by years of service
+7. **Stats Distribution** - shows how various statistics are distributed across the club by position - with the ability to change which metric is displayed in the chart
+8. **Match Results** - shows the club's record in matches, such as games won, drawn, and lost, and average points per game
+9. **Game Details** - provides a summary of how many games were played in League, Cup, and Friendly matches, how many home and away games the club has played, and some other stats such as how many opposition teams the club has played against
+10. **Big Club Numbers** - displays three impressive club-wide records
+11. **Goals Scored vs Conceded** - displays a comparison chart showing the relationship between goals scored and goals conceded, and the average goals scored and conceded per game
+12. **Home vs Away Performance** - compares the club's performance at home versus away matches, showing home win percentage vs away win percentage to establish the home advantage gained by the club
+13. **Other Club Stats** - displays important club-level statistics, including average points, goals and conceded per game, and other club metrics
+14. **Unique Player Stats** - shows statistics about the unique counts of players who have represented the club, including number of unique players, number of unique goalscorers and other unique player-related metrics
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Top Players
+### Club Stats Data Table
 
-The Top Players section displays the best performing players across the entire club, including:
+The Data Table section provides a comprehensive table of all club statistics. To access this, click the "Switch to Data Table" button in the page header.
 
-- Top goal scorers (all teams)
-- Top assist providers (all teams)
-- Most appearances (all teams)
-- Highest fantasy points (all teams)
-- Other club-wide player rankings
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Seasonal Performance
-
-The Seasonal Performance section shows how the club's overall statistics have changed across different seasons, including:
-
-- Club-wide win percentage per season
-- Total goals scored per season
-- Total goals conceded per season
-- Other club metrics over time
-
-Data is displayed in charts showing trends across seasons.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Player Distribution
-
-The Player Distribution section shows how players are distributed across teams, including:
-
-- Number of players per team
-- Players who have played for multiple teams
-- Team representation statistics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Player Tenure
-
-The Player Tenure section displays statistics about how long players have been with the club, including:
-
-- Longest-serving players
-- Average player tenure
-- Players by years of service
-- Other tenure-related metrics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Stats Distribution
-
-The Stats Distribution section shows how various statistics are distributed across the club, including:
-
-- Distribution of goals across players
-- Distribution of appearances
-- Other statistical distributions
-
-This helps identify whether performance is concentrated in a few players or spread across many.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Match Results
-
-The Match Results section provides a comprehensive list of all matches played by all teams, including:
-
-- Match date
-- Team
-- Opposition team
-- Result
-- Score
-- Competition
-- Location (home/away)
-
-You can filter and scroll through all club matches.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Game Details
-
-The Game Details section provides detailed information about all matches, including comprehensive match statistics for the entire club.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Big Club Numbers
-
-The Big Club Numbers section displays impressive club-wide milestones and records, such as:
-
-- Total goals scored (all time)
-- Total appearances (all time)
-- Club records and achievements
-- Other significant numbers
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Goals Scored vs Conceded
-
-The Goals Scored vs Conceded section displays a club-wide comparison chart showing the relationship between goals scored and goals conceded across all teams.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Home vs Away Performance
-
-The Home vs Away Performance section compares the club's overall performance at home versus away matches across all teams.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Key Team Stats
-
-The Key Team Stats section displays important team-level statistics aggregated across all teams, showing club-wide averages and totals.
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Unique Player Stats
-
-The Unique Player Stats section shows interesting statistics about all players who have represented the club, such as:
-
-- Total unique players
-- Players who have played for multiple teams
-- Other club-wide player metrics
-
-> [Back to Table of Contents](#table-of-contents)
-
-### Data Table
-
-The Data Table section provides a comprehensive, sortable table of all club statistics. You can:
-
-- Sort by any column
-- Scroll through all available statistics
-- View raw data values
+<div className="sideBySide">
+  <img
+    src="https://i.postimg.cc/bNszMWdD/Club-Stats-Table-Mobile.png"
+    alt="Club Stats Data Table Mobile Screenshot"
+  />
+</div>
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -802,65 +375,33 @@ The Comparison section allows you to compare multiple players side-by-side using
 
 To compare players:
 
-1. Enter edit mode by tapping the edit icon
-2. Select the first player from the player selector
-3. Select additional players (up to the maximum allowed)
-4. Exit edit mode to view the comparison
+1. The first player is selected from the homepage. It can be changed using the pencil edit icon
+2. Select the second player by clicking and searching for their name in the player selector
 
 :::tip
-You can compare up to multiple players simultaneously. The radar chart will show all selected players for easy comparison.
+The comparison page still works with filters (see the [Filters](#filters) section for more details).
 :::
 
 > [Back to Table of Contents](#table-of-contents)
 
 ### Radar Charts
 
-Radar charts provide a visual comparison of multiple players across various statistics. Each axis represents a different statistic, and each player is represented by a different colored line.
+A radar chart provides a visual comparison of the two selected players across various statistics. Each axis represents a different statistic, and each player is represented by a different colored area.
 
-**Radar Chart Features:**
-- Multiple statistics displayed simultaneously
-- Easy visual comparison between players
-- Interactive tooltips showing exact values
-- Responsive design adapting to screen size
+You can change the statistic being displayed in the chart using the dropdown above the chart.
 
-:::info
-Radar charts are particularly useful for comparing players across multiple dimensions at once, such as goals, assists, appearances, and fantasy points.
+:::tip
+Click or touch on the radar to see a tooltip showing both player's values for that statistic.
 :::
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Filtering Options
+### Full Comparison
 
-The Comparison section supports all standard filters, allowing you to:
+Below the radar chart, you can see a full comparison table of the two players across all statistics. This is useful for seeing how the two players compare across all metrics.
 
-- Compare players within a specific time range
-- Compare players for specific teams
-- Compare players in home or away matches
-- Compare players against specific oppositions
-- Compare players in specific competitions
-- Compare players in matches with specific results
-- Compare players in specific positions
-
-Filters are applied to all players in the comparison simultaneously.
-
-> [Back to Table of Contents](#table-of-contents)
-
-## Tips and Tricks
-
-1. **Use Filters Strategically**: Apply filters to focus on specific aspects of performance (e.g., "this season", "home matches only")
-
-2. **Compare Across Sections**: Use the same filters across Player Stats, Team Stats, and Club Stats to see how individual performance relates to team and club performance
-
-3. **Explore Data Tables**: When you need exact values or want to see all available statistics, check the Data Table sections
-
-4. **Check Multiple Sections**: Some statistics appear in multiple sections with different visualizations - explore different sections to find the view that works best for you
-
-5. **Use Comparison for Insights**: The Comparison section is great for identifying strengths and weaknesses when evaluating players
-
-6. **Player Context**: Set a player context in Player Stats, then use the chatbot on the Home page with pronouns for quick queries
-
-:::warning
-Filters persist when navigating between Stats sub-pages, so remember to clear filters if you want to see unfiltered data in a different section.
+:::tip
+Click on a stat to see a tooltip to help explain the stat.
 :::
 
 > [Back to Table of Contents](#table-of-contents)
