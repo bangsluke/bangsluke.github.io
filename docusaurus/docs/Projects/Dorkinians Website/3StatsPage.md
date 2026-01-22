@@ -174,7 +174,7 @@ If the player selected has ever played as a goalkeeper, the Defensive Record sec
 12. **Fantasy Points** - displays the player's fantasy football points total and breakdown, as well as the player's highest scoring week and month
 
 :::info
-Fantasy points are calculated using the standard Premier League fantasy football scoring system.
+Fantasy points are calculated using the standard Premier League fantasy football scoring system - see the [Points System](4TOTWPage.md#points-system) section for more details.
 :::
 
 13. **Card Stats** - displays the player's yellow and red card statistics and how much it has cost them
