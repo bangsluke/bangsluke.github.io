@@ -9,7 +9,7 @@ slug: /projects/dorkinians-website
 :::danger[HOT TIP]
 This app works best when installed as a native app on your phone or tablet and is highly recommended to do so.
 
-Navigate to the Settings Page using the icon in the top right of the screen and follow the steps for "**Add App to Home Screen**" to install the app.
+Navigate to the Settings Page using the icon in the top right of the screen and follow the steps for "**Add App to Home Screen**" to install the app. [More details here.](6SettingsPage.md#pwa-installation)
 :::
 
 ## Quick Links
