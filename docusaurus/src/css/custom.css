@@ -28,3 +28,34 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Side by Side Images */
+.sideBySide {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Desktop: set your desired fixed width here */
+.sideBySide img {
+  flex: 0 0 auto;
+  width: auto;        /* <-- change this to your desktop width */
+  height: 320px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Mobile: images become 95% of the viewport width and keep auto height */
+@media (max-width: 768px) {
+  .sideBySide img {
+    width: 95vw;
+    max-width: 400px;
+    height: auto;
+  }
+}
