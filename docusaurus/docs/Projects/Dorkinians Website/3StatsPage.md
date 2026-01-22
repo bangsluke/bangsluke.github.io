@@ -54,10 +54,10 @@ To do this, tap the filter icon in the header to open the [filter sidebar](#filt
 
 The Stats section has four main sub-pages accessible via swiping left or right on mobile devices or using the navigation menu on desktop devices:
 
-- **Player Stats**: Individual player performance metrics
-- **Team Stats**: Team-level statistics and analysis
-- **Club Stats**: Club-wide statistics and analysis
-- **Comparison**: Side-by-side player comparison
+- **[Player Stats](3StatsPage.md#player-stats)**: Individual player performance metrics
+- **[Team Stats](3StatsPage.md#team-stats)**: Team-level statistics and analysis
+- **[Club Stats](3StatsPage.md#club-stats)**: Club-wide statistics and analysis
+- **[Comparison](3StatsPage.md#comparison)**: Side-by-side player comparison
 
 :::info
 Swipe left or right on mobile devices to quickly switch between Stats sub-pages.

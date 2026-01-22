@@ -44,8 +44,8 @@ Team of the Week is calculated based on fantasy points earned in each match, wit
 
 The TOTW section has two main sub-pages:
 
-- **Team of the Week**: Weekly best XI with visual pitch display
-- **Players of the Month**: Monthly player awards
+- **[Team of the Week](4TOTWPage.md#team-of-the-week)**: Weekly best XI with visual pitch display
+- **[Players of the Month](4TOTWPage.md#players-of-the-month)**: Monthly player awards
 
 :::tip
 Navigate between the sub-pages on mobile devices by swiping left or right on the screen.
