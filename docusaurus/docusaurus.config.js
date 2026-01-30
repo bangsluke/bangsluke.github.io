@@ -57,6 +57,65 @@ const config = {
     ],
   ],
 
+
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            attributes: {
+              rel: 'icon',
+              href: '/bangsluke-logo.png',
+            },
+          },
+          {
+            tagName: 'link',
+            attributes: {
+              rel: 'manifest',
+              href: '/manifest.json',
+            },
+          },
+          {
+            tagName: 'meta',
+            attributes: {
+              name: 'theme-color',
+              content: '#18191a',
+            },
+          },
+          {
+            tagName: 'meta',
+            attributes: {
+              name: 'apple-mobile-web-app-capable',
+              content: 'yes',
+            },
+          },
+          {
+            tagName: 'meta',
+            attributes: {
+              name: 'apple-mobile-web-app-status-bar-style',
+              content: '#000',
+            },
+          },
+          {
+            tagName: 'link',
+            attributes: {
+              rel: 'apple-touch-icon',
+              href: '/bangsluke-logo.png',
+            },
+          },
+        ],
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -66,7 +125,7 @@ const config = {
         title: "bangsluke",
         logo: {
           alt: "bangsluke Logo",
-          src: "img/bangsluke.png",
+          src: "bangsluke-logo.png",
         },
         items: [
           {
