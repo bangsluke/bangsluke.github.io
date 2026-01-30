@@ -85,6 +85,11 @@ Set-Alias coding CodingFunction
 - `git fetch --prune` - Fetch all branches and remove remote deleted branches
 - `git commit --allow-empty -m 'Empty commit'` - Trigger the CI/CD pipeline with a blank commit
 - `git rev-list --all | xargs git grep "git"` - Search for the word "git" in all files of all commits
+- `git stash -m "optional description here"` - Stash the current changes
+- `git stash apply` - Apply the last stashed changes
+- `git stash list` - List all stashed changes
+- `git stash drop` - Drop the last stashed changes
+- `git stash clear` - Clear all stashed changes
 
 ## VS Code Commands
 
