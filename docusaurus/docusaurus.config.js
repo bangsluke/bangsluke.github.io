@@ -73,7 +73,7 @@ const config = {
             tagName: 'link',
             attributes: {
               rel: 'icon',
-              href: '/bangsluke-logo.png',
+              href: '/img/bangsluke-logo.png',
             },
           },
           {
@@ -108,7 +108,8 @@ const config = {
             tagName: 'link',
             attributes: {
               rel: 'apple-touch-icon',
-              href: '/bangsluke-logo.png',
+              href: '/img/bangsluke-logo.png',
+              sizes: '180x180',
             },
           },
         ],
@@ -125,7 +126,7 @@ const config = {
         title: "bangsluke",
         logo: {
           alt: "bangsluke Logo",
-          src: "bangsluke-logo.png",
+          src: "img/bangsluke-logo.png",
         },
         items: [
           {
