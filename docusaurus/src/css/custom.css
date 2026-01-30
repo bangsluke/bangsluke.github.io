@@ -18,7 +18,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,6 +27,11 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docsearch-search-button-background: rgba(33, 175, 144, 0.3) !important;
+  --docsearch-text-color: #f5f6f7 !important;
+  --docsearch-search-button-text-color: #f5f6f7 !important;
+  --docsearch-muted-color: #8b9bb4 !important;
+  --docsearch-key-background: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Side by Side Images */
@@ -43,7 +48,8 @@
 /* Desktop: set your desired fixed width here */
 .sideBySide img {
   flex: 0 0 auto;
-  width: auto;        /* <-- change this to your desktop width */
+  width: auto;
+  /* <-- change this to your desktop width */
   height: 320px;
   max-width: 100%;
   object-fit: cover;
