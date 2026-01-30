@@ -1,6 +1,8 @@
 {
   "name": "bangsluke Documentation",
   "short_name": "Documentation",
+  "description": "Helper documentation for development",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
