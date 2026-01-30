@@ -41,23 +41,21 @@ export default function OfflinePopup({ status, onClose }) {
         <div className="offline-popup-content" style={{ fontWeight: 600 }}>
           {isDownloading ? 'Downloading for offline use...' : 'Ready for offline use'}
         </div>
-        {!isDownloading && (
-          <button 
-            className="offline-popup-close" 
-            onClick={onClose}
-            aria-label="Close"
-            style={{
-                background: 'none',
-                border: 'none',
-                fontSize: '24px',
-                cursor: 'pointer',
-                lineHeight: 1,
-                padding: '0 4px',
-            }}
-          >
-            ×
-          </button>
-        )}
+        <button 
+          className="offline-popup-close" 
+          onClick={onClose}
+          aria-label="Close"
+          style={{
+              background: 'none',
+              border: 'none',
+              fontSize: '24px',
+              cursor: 'pointer',
+              lineHeight: 1,
+              padding: '0 4px',
+          }}
+        >
+          ×
+        </button>
       </div>
     ),
     document.body
