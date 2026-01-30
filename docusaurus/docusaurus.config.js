@@ -108,8 +108,7 @@ const config = {
             tagName: 'link',
             attributes: {
               rel: 'apple-touch-icon',
-              href: '/img/bangsluke-logo.png',
-              sizes: '180x180',
+              href: '/img/apple-touch-icon.png',
             },
           },
         ],
