@@ -7,7 +7,7 @@
   "theme_color": "#18191a",
   "icons": [
     {
-      "src": "bangsluke-logo.png",
+      "src": "img/bangsluke-logo.png",
       "sizes": "192x192 512x512",
       "type": "image/png"
     }
