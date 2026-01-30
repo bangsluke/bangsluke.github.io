@@ -71,45 +71,34 @@ const config = {
         pwaHead: [
           {
             tagName: 'link',
-            attributes: {
-              rel: 'icon',
-              href: '/img/bangsluke-logo.png',
-            },
+            rel: 'icon',
+            href: '/bangsluke-logo.png',
           },
           {
             tagName: 'link',
-            attributes: {
-              rel: 'manifest',
-              href: '/manifest.json',
-            },
+            rel: 'manifest',
+            href: '/manifest.json',
           },
           {
             tagName: 'meta',
-            attributes: {
-              name: 'theme-color',
-              content: '#18191a',
-            },
+            name: 'theme-color',
+            content: '#18191a',
           },
           {
             tagName: 'meta',
-            attributes: {
-              name: 'apple-mobile-web-app-capable',
-              content: 'yes',
-            },
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
           },
           {
             tagName: 'meta',
-            attributes: {
-              name: 'apple-mobile-web-app-status-bar-style',
-              content: '#000',
-            },
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#000',
           },
           {
             tagName: 'link',
-            attributes: {
-              rel: 'apple-touch-icon',
-              href: '/img/apple-touch-icon.png',
-            },
+            rel: 'apple-touch-icon',
+            href: '/img/apple-touch-icon.png',
+            sizes: '180x180',
           },
         ],
       },
@@ -125,7 +114,7 @@ const config = {
         title: "bangsluke",
         logo: {
           alt: "bangsluke Logo",
-          src: "img/bangsluke-logo.png",
+          src: "bangsluke-logo.png",
         },
         items: [
           {
