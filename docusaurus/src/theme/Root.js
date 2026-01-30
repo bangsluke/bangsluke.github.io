@@ -26,24 +26,16 @@ export default function Root({children}) {
       if (!reg) return;
 
       // Polling fallback: Docusaurus PWA plugin can sometimes be tricky with events.
+      // We ONLY want to poll if we are actively expecting a change (i.e. we are downloading).
+      // We don't want to poll just because we are already offline ready (visited before).
       const pollForController = setInterval(() => {
-        // If we found a controller, we are ready.
-        if (navigator.serviceWorker.controller) {
-          setStatus('ready');
-          clearInterval(pollForController);
-        } else {
-            // If we are NOT controlled, but the worker is activated, we might need to wait for a reload
-            // OR we can assume ready if enough time passed? No, that's risky.
-            // Let's check reg.active
-            if (reg.active && reg.active.state === 'activated') {
-                // We are active, but not controlling.
-                // This usually means we need to claim clients.
-                // But Docusaurus PWA does this.
-                // Force ready if active exists?
-                // setStatus('ready'); // OPTIONAL: aggressive fallback
+        setOfflineStatus(prevStatus => {
+            if (prevStatus === 'downloading' && navigator.serviceWorker.controller) {
+                return 'ready';
             }
-        }
-      }, 500);
+            return prevStatus;
+        });
+      }, 1000);
 
       const handleInstalling = (worker) => {
         if (!worker) return;
@@ -74,8 +66,9 @@ export default function Root({children}) {
     });
 
     const onControllerChange = () => {
-      // Service Worker has taken control. We are ready.
-      setStatus('ready');
+      // Service Worker has taken control. 
+      // Only set to ready if we were downloading (avoid showing on every reload if already controlled)
+      setOfflineStatus(prev => (prev === 'downloading' ? 'ready' : prev));
     };
 
     navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
