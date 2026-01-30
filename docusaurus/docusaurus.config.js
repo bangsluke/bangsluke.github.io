@@ -73,7 +73,7 @@ const config = {
             tagName: 'link',
             attributes: {
               rel: 'icon',
-              href: '/img/bangsluke-logo.png',
+              href: '/bangsluke-logo.png',
             },
           },
           {
@@ -125,7 +125,7 @@ const config = {
         title: "bangsluke",
         logo: {
           alt: "bangsluke Logo",
-          src: "img/bangsluke-logo.png",
+          src: "bangsluke-logo.png",
         },
         items: [
           {
