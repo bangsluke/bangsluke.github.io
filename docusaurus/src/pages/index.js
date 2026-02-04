@@ -12,9 +12,12 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <h1 className={clsx("hero__title", styles.header)}>
-          {siteConfig.title}
-        </h1>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
+             <img src="/bangsluke-logo.png" alt="bangsluke Logo" style={{ height: '80px', borderRadius: '50%' }} />
+             <h1 className={clsx("hero__title", styles.header)} style={{ margin: 0 }}>
+              {siteConfig.title}
+            </h1>
+        </div>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -26,6 +29,7 @@ function HomepageHeader() {
         </div>
       </div>
     </header>
+
   );
 }
 

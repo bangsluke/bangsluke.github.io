@@ -11,11 +11,15 @@ description: OpenAI and ChatGPT and other AI tools
 
 ## OpenAI Links
 
+<img src="https://img.shields.io/badge/OpenAI-74AA9C?style=for-the-badge&logo=openaigym&logoColor=white" alt="OpenAI" />
+
 - <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
 - <a href="https://openai.com/" target="_blank">OpenAI Website</a>
 - <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI API</a>
 
 ## ChatGPT Prompts
+
+<img src="https://img.shields.io/badge/ChatGPT-74AA9C?style=for-the-badge&logo=openaigym&logoColor=white" alt="ChatGPT" />
 
 - <a href="https://levelup.gitconnected.com/how-to-use-chatgpt-in-daily-life-4688f7afb930" target="_blank">How to use ChatGPT in daily life</a>
   - Summarize a book or article

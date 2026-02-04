@@ -11,6 +11,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 ## NPM
 
+<img src="https://img.shields.io/badge/NPM-CD3E3D?style=for-the-badge&logo=npm&logoColor=white" alt="NPM" />
+
 ### NPM Commands
 
 For more commands, see this <a href="https://devhints.io/npm" target="_blank">cheatsheet</a>.
@@ -41,6 +43,8 @@ For more commands, see this <a href="https://devhints.io/npm" target="_blank">ch
 - `npm run <script>` - Run a script from the package.json file
 
 ## Yarn
+
+<img src="https://img.shields.io/badge/Yarn-3392BD?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
 
 ### Yarn Commands
 
@@ -74,6 +78,8 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 - `yarn remove left-pad` - Removes a specific package
 
 ## PNPM
+
+<img src="https://img.shields.io/badge/pnpm-F9B008?style=for-the-badge&logo=pnpm&logoColor=white" alt="PNPM" />
 
 ### PNPM Commands
 

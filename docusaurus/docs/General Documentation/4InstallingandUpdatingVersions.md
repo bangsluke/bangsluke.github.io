@@ -11,6 +11,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 ## NPM
 
+<img src="https://img.shields.io/badge/NPM-CD3E3D?style=for-the-badge&logo=npm&logoColor=white" alt="NPM" />
+
 ### NPM Download
 
 - <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a>
@@ -24,6 +26,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 ## Yarn
 
+<img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
+
 ### Yarn Download
 
 - `npm install --global yarn` - (<a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable</a>)
@@ -33,12 +37,29 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check <a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">Yarn Windows Releases</a> for the latest version)
 
-## PNPM Commands
+## PNPM
+
+<img src="https://img.shields.io/badge/pnpm-F9B008?style=for-the-badge&logo=pnpm&logoColor=white" alt="PNPM" />
+
+### PNPM Download
+
+- `npm install -g pnpm` - (<a href="https://pnpm.io/" target="_blank">https://pnpm.io/</a>)
+
+### PNPM Updates
+
+- `pnpm --version` - Check the current installed version of pnpm
+- `npm install -g pnpm@v1.22.19` - Install globally a specific version of pnpm (check <a href="https://pnpm.io/" target="_blank">PNPM Releases</a> for the latest version)
+
+### PNPM Documentation
 
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
 - <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
 
 ## Node
+
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=black" alt="Node.js" />
+
+### Node Commands
 
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
