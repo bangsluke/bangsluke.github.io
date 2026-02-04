@@ -23,6 +23,8 @@ description: Details on the Settings page of the Dorkinians Website
   - [Data \& Privacy](#data--privacy)
 - [Version Number](#version-number)
 
+<PageBreak />
+
 ## Overview
 
 The Settings page offers PWA (Progressive Web App) installation options, provides quick navigation to all app sections, displays database status information and various other bits of information about the app.
@@ -43,6 +45,8 @@ The Settings page is accessible from the header settings icon (the cog) on any p
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## PWA Installation
 
@@ -67,6 +71,8 @@ PWA installation is supported on most modern mobile browsers and some desktop br
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Available Screens Navigation
 
@@ -93,6 +99,8 @@ Use the sub-page navigation to jump directly to a specific section without havin
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## App Information
 
@@ -205,6 +213,8 @@ If you dismiss the update toast, you can still update the app later from the Set
 :::
 
 > [Back to Table of Contents](#table-of-contents) -->
+
+<PageBreak />
 
 ## Version Number
 

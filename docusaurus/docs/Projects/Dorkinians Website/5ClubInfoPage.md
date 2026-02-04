@@ -23,6 +23,8 @@ description: Details on the Club Info page and sub-pages of the Dorkinians Websi
 - [Club Awards](#club-awards)
 - [Useful Links](#useful-links)
 
+<PageBreak />
+
 ## Overview
 
 The Club Info section provides comprehensive information about Dorkinians FC, including club achievements, player milestones, league information, current and historical captains, individual awards, and useful external links.
@@ -40,6 +42,8 @@ The Club Info section provides comprehensive information about Dorkinians FC, in
 
 > [Back to Table of Contents](#table-of-contents)
 
+<PageBreak />
+
 ## Navigation
 
 The Club Info section has five main sub-pages accessible via navigation:
@@ -55,6 +59,8 @@ Navigate between the sub-pages on mobile devices by swiping left or right on the
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Club Information
 
@@ -90,6 +96,8 @@ The Milestones section displays significant achievements and records reached by 
 - **Filtering Milestones**: Use the filter dropdown to view milestones by category (goals, appearances, etc.)
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## League Information
 
@@ -157,6 +165,8 @@ It contains all of the same features that the normal league details section has.
 
 > [Back to Table of Contents](#table-of-contents)
 
+<PageBreak />
+
 ## Club Captains
 
 The Club Captains sub-page displays information about current and historical team captains.
@@ -177,6 +187,8 @@ Click on a captain's name to view all of their captaincies.
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Club Awards
 
@@ -202,6 +214,8 @@ We have award information going back to the 1973/74 season which can be seen in 
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Useful Links
 

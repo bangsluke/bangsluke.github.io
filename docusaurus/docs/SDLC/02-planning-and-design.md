@@ -32,6 +32,8 @@ Global AI tools are streamlining the planning process:
 - **Tool Spotlight:** [Atlassian Jira](https://www.atlassian.com/software/jira) uses AI to help teams make data-driven decisions in planning.
   :::
 
+<PageBreak />
+
 ## Design Phase
 
 Once requirements are clear, the **Design** phase translates them into a blueprint for construction. This includes both high-level architecture and low-level component design.

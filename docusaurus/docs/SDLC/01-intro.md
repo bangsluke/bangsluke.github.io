@@ -29,6 +29,8 @@ The classical SDLC typically follows a series of distinct phases. Each phase rel
 7.  **[Operate](./08-operate.md):** Running the software in the real world.
 8.  **[Monitor](./09-monitor.md):** Observing system health and user behavior.
 
+<PageBreak />
+
 ## The Evolution to AI
 
 While the core principles of SDLC remain constant, the tools and methodologies are evolving. Generative AI is now enhancing each of these stages, offering not just automation but "augmentation" of human capabilities.

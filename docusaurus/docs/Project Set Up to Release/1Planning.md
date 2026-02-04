@@ -82,6 +82,8 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 - <a href="https://expo.io/" target="_blank">Expo</a>
 - <a href="https://capacitorjs.com/" target="_blank">Capacitor.js</a>
 
+<PageBreak />
+
 ## Plan the UI
 
 ### Inspiration

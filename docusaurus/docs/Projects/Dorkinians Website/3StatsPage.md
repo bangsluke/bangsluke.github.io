@@ -28,6 +28,8 @@ description: Details on the Stats page and sub-pages of the Dorkinians Website
   - [Radar Charts](#radar-charts)
   - [Full Comparison](#full-comparison)
 
+<PageBreak />
+
 ## Overview
 
 The Stats section provides comprehensive statistics for players, teams, and the entire club, plus a player comparison section.
@@ -50,6 +52,8 @@ To do this, tap the filter icon in the header to open the [filter sidebar](#filt
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Navigation
 
@@ -88,6 +92,8 @@ Use the Stats Navigation Menu to quickly jump to specific sections without scrol
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Filters
 
@@ -134,6 +140,8 @@ Filters persist when navigating between Stats sub-pages, so remember to clear fi
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Player Stats
 
@@ -259,6 +267,8 @@ Share functionality may not be available on all devices or browsers. If the shar
 
 > [Back to Table of Contents](#table-of-contents) -->
 
+<PageBreak />
+
 ## Team Stats
 
 The Team Stats section provides statistics and analysis for individual teams within the club. Select a team using the team selector, then explore their performance across multiple categories.
@@ -311,6 +321,8 @@ You can click on any stat row in the data table to see a tooltip to help explain
 
 > [Back to Table of Contents](#table-of-contents)
 
+<PageBreak />
+
 ## Club Stats
 
 The Club Stats section provides club-wide statistics and comparisons across all teams. This section gives a comprehensive view of the entire club's performance.
@@ -357,6 +369,8 @@ The Data Table section provides a comprehensive table of all club statistics. To
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Comparison
 

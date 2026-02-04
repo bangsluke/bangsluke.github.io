@@ -54,6 +54,8 @@ description: The initiation phase of setting up the project
   - `yarn dev` - Start the React app
   - `yarn build` - Build the React app for production
 
+<PageBreak />
+
 ## Initiate a Git Repository and link to GitHub
 
 <img src="https://img.shields.io/badge/Git-EA5436?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
@@ -75,6 +77,8 @@ git push -u origin main
 - Protect the main branch from being pushed to directly
 - Create a develop branch
 - Add a .gitignore file to the root of the project
+
+<PageBreak />
 
 ## Structure and File Setup
 

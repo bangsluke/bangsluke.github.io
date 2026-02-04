@@ -1,0 +1,13 @@
+.pageBreak {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.withLine {
+  border-bottom: 2px solid #ccc;
+}
+
+:global(html[data-theme='dark']) .withLine {
+  border-bottom-color: var(--ifm-color-primary);
+}

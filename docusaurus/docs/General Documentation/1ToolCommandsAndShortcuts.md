@@ -77,7 +77,13 @@ Set-Alias coding CodingFunction
 
 ```
 
+<PageBreak />
+
 ## Git Commands
+
+<img src="https://img.shields.io/badge/Git-EA5436?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - `git clone https://git.rle.de/deloitte/deloitte-pm-tool.git` - Clone a repo from the provided URL
 - `git init` - Initiate a git repository
@@ -94,7 +100,13 @@ Set-Alias coding CodingFunction
 - `git stash drop` - Drop the last stashed changes
 - `git stash clear` - Clear all stashed changes
 
+<PageBreak />
+
 ## VS Code Commands
+
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - `Ctrl + P` - Open the file search
 - `Ctrl + Shift + P` - Open the command palette
@@ -104,11 +116,23 @@ Set-Alias coding CodingFunction
 - `Alt + Up/Down` - Move the current line up or down
 - `Alt + Shift + Up/Down` - Copy the current line up or down
 
+<PageBreak />
+
 ## Chrome Shortcuts
+
+<img src="https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=Google-Chrome&logoColor=white" alt="Chrome" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - `Ctrl + Shift + J` - Open Chrome dev tools console
 
+<PageBreak />
+
 ## VBA Shortcuts
+
+<img src="https://img.shields.io/badge/VBA-27A838?style=for-the-badge&logo=microsoft-visual-studio&logoColor=white" alt="VBA" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - `F5` - Run the current script
 - `F8` - Run the current line of code
