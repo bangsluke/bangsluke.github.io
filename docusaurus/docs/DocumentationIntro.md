@@ -21,8 +21,10 @@ This site holds all of my documentation for how I've developed my projects and m
 
 ### General Documentation
 
+- [General Documentation](/docs/general-documentation)
 - [Tool Commands/Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts)
-  - [Powershell Commands](/docs/general-documentation/tool-commands-and-shortcuts#powershell-commands)
+  - [PowerShell Commands](/docs/general-documentation/tool-commands-and-shortcuts#powershell-commands)
+    - [PowerShell Aliases Example](/docs/general-documentation/tool-commands-and-shortcuts#powershell-aliases-example)
   - [Git Commands](/docs/general-documentation/tool-commands-and-shortcuts#git-commands)
   - [VS Code Commands](/docs/general-documentation/tool-commands-and-shortcuts#vs-code-commands)
   - [Chrome Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts#chrome-shortcuts)
