@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/code
+description: The development (or implementation) phase where the software is built
 sidebar_position: 3
 ---
 
 # Code
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Code** (or Implementation) phase is where the actual software construction takes place. Developers write the code according to the design specifications created in the previous stage.
 

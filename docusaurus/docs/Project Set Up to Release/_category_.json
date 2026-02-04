@@ -1,7 +1,10 @@
 {
   "label": "Project Set Up to Release",
   "position": 4,
+  "collapsed": true,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "Project Set Up to Release documentation I follow",
+    "slug": "/project-set-up-to-release"
   }
 }

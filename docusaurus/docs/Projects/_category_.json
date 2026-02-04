@@ -1,7 +1,10 @@
 {
   "label": "Projects",
   "position": 5,
+  "collapsed": false,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "The documentation for some of my projects.",
+    "slug": "/projects"
   }
 }

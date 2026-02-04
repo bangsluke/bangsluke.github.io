@@ -1,5 +1,6 @@
 ---
 slug: /product-management/product-management-intro
+description: Product Management introduction and key concepts
 ---
 
 # Product Management Intro

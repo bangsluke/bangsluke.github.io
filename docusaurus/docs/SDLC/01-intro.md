@@ -1,4 +1,6 @@
 ---
+slug: /SDLC/introduction
+description: Introduction to Software Development Life Cycle
 sidebar_position: 1
 ---
 

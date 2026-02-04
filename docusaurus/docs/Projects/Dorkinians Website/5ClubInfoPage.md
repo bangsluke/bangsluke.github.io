@@ -1,5 +1,6 @@
 ---
 slug: /projects/dorkinians-website/club-info-page
+description: Details on the Club Info page and sub-pages of the Dorkinians Website
 ---
 
 # Club Info

@@ -1,5 +1,6 @@
 ---
 slug: /project-set-up-to-release/release-checklist
+description: A checklist developed to confirm the software is ready for release
 ---
 
 # Release Checklist
@@ -21,7 +22,7 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 
 - Create a favicon for the site and for all applications that may access the site
   - <a href="https://realfavicongenerator.net/" target="_blank">realfavicongenerator.net</a>
-  > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
+    > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
 
 ## User Experience
 
@@ -92,14 +93,14 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
   - Make sure to optimize images using next/image. e.g.
 
     ```javascript
-    import Image from 'next/image'
+    import Image from "next/image";
     <Image
-        src="/images/my-image.jpg"
-        alt="My Image"
-        width={500}
-        height={500}
-        loading="lazy"
-      />
+      src="/images/my-image.jpg"
+      alt="My Image"
+      width={500}
+      height={500}
+      loading="lazy"
+    />;
     ```
 
   - Add Next.js Analytics (see section 4.d of the above article) - <a href="https://nextjs.org/analytics" target="_blank">Link</a>
@@ -120,13 +121,13 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
   - Is pinned to main GitHub profile if suitable
 - Check that the README has all the required details it needs, including;
   - Structure - [see here](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-	- Project Title
-	- Project Description
-	- Table of Contents
-	- Installation
-	- Usage
-	- Contributing
-	- License
+  - Project Title
+  - Project Description
+  - Table of Contents
+  - Installation
+  - Usage
+  - Contributing
+  - License
   - Badges
     - Version number
     - Repo status

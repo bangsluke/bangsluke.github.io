@@ -1,7 +1,10 @@
 {
   "label": "General Documentation",
   "position": 2,
+  "collapsed": true,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "General documentation I have accumulated over time",
+    "slug": "/general-documentation"
   }
 }

@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/verify
+description: The verification (or testing) phase of the SDLC
 sidebar_position: 4
 ---
 
 # Verify
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Verify** (or Testing) phase ensures that the software is defect-free and meets the requirements defined in the planning phase. It is critical for quality assurance (QA).
 

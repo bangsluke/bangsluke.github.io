@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/operate
+description: The operations phase (day-to-day running) of the software
 sidebar_position: 8
 ---
 
 # Operate
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Operate** phase involves the day-to-day running of the software. This is where the value is delivered to the user.
 

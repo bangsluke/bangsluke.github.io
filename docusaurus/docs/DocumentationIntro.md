@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 slug: /documentation-intro
+description: Documentation Intro page for the full documentation site
 ---
 
 # Documentation Intro

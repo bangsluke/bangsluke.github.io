@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/deploy
+description: The deployment phase of pushing the software to production
 sidebar_position: 7
 ---
 
 # Deploy
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 **Deploy** is the action of pushing the software to the production environment where it becomes accessible to users.
 

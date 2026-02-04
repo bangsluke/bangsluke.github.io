@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/release
+description: The release phase of preparing the software for production
 sidebar_position: 6
 ---
 
 # Release
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Release** phase is where the software is prepared for delivery to the end-user. It involves planning, scheduling, and controlling the build through different stages and environments.
 

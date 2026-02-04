@@ -1,5 +1,6 @@
 ---
 slug: /general-documentation/tool-commands-and-shortcuts
+description: Tool Commands and Shortcuts across different tools
 ---
 
 # Tool Commands/Shortcuts
@@ -34,7 +35,7 @@ slug: /general-documentation/tool-commands-and-shortcuts
 
 ### PowerShell Aliases Example
 
->See my <a href="https://github.com/bangsluke/powershell-aliases" target="_blank">PowerShell Aliases GitHub repo</a> for the aliases I use.
+> See my <a href="https://github.com/bangsluke/powershell-aliases" target="_blank">PowerShell Aliases GitHub repo</a> for the aliases I use.
 
 The below example shows how to create a PowerShell alias for opening the PowerShell profile file in VS Code or Cursor and then setting an alias for a folder in the Documents folder.
 

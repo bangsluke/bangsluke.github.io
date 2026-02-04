@@ -1,5 +1,6 @@
 ---
 slug: /projects/dorkinians-website/stats-page
+description: Details on the Stats page and sub-pages of the Dorkinians Website
 ---
 
 # Stats
@@ -69,7 +70,7 @@ You can also access the [navigation menu](#stats-navigation-menu) by tapping the
 
 ### Stats Navigation Menu
 
-The Stats Navigation Menu provides quick access to all sections within the Stats pages. 
+The Stats Navigation Menu provides quick access to all sections within the Stats pages.
 
 - Access it by tapping the menu icon (three horizontal lines) in the header when viewing any Stats page.
 - Expand the stats page you want to navigate to.
@@ -110,8 +111,8 @@ Filters allow you to narrow down statistics to specific criteria. Available filt
   />
 </div>
 
-
 **Using Filters:**
+
 1. Tap the filter icon to open the filter sidebar
 2. Select your desired filter criteria for each filter type
 3. Click "Apply Filters" to apply your selections
@@ -120,6 +121,7 @@ Filters allow you to narrow down statistics to specific criteria. Available filt
 6. Tap "Clear All Filters" in the filter sidebar to remove all active filters
 
 **Filter Persistence:**
+
 - Filters persist when navigating between Stats sub-pages (Player Stats, Team Stats, Club Stats, Comparison)
 - Filters are cleared when you change the selected player or team
 

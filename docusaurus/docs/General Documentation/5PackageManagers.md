@@ -1,5 +1,6 @@
 ---
 slug: /general-documentation/package-managers
+description: NPM, Yarn, and PNPM commands and information
 ---
 
 # Package Managers
@@ -91,7 +92,7 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 - Run `yarn dev` or whatever command you use for running a yarn script
 
 > `*Note`: It is important you don't delete it before yarn command (as some people suggest) it can break things, for example your yarn command will not even work and it will throw error:
-`Error: ENOENT: no such file or directory, open './package-lock.json'`
+> `Error: ENOENT: no such file or directory, open './package-lock.json'`
 
 > References
 >
@@ -103,24 +104,25 @@ Migrating from yarn to pnpm is quite straightforward:
 
 - Install pnpm `npm install -g pnpm` if not already installed
 - Rename all your yarn commands to pnpm:
-	- `yarn` -> `pnpm install`
-	- `yarn test` -> `pnpm test`
-	- `yarn package` -> `pnpm package`
-	- `yarn deploy` -> `pnpm run deploy` (**run** is required here, as `pnpm deploy` is a reserved command)
+  - `yarn` -> `pnpm install`
+  - `yarn test` -> `pnpm test`
+  - `yarn package` -> `pnpm package`
+  - `yarn deploy` -> `pnpm run deploy` (**run** is required here, as `pnpm deploy` is a reserved command)
 - Replace all occurrences of the string `yarn.lock` in your source files with `pnpm-lock.yaml` (search, prettier, etc.)
 - In your CI/CD, when using `actions/setup-node@v3`, set `cache` to `'pnpm'`
 - If you're using yarn PnP, remove `.yarnrc.yml` and the `.yarn` folder
 - In the root `package.json` set the packageManager key to `pnpm@<version>` (replace `<version>` with the latest available version)
 - Create a `pnpm-workspace.yaml` file with:
 
-	```yaml
-	packages:
-	- 'services/*'
-	- 'contracts/*'
-	- 'packages/*'
-	```
+  ```yaml
+  packages:
+    - "services/*"
+    - "contracts/*"
+    - "packages/*"
+  ```
 
-	and everything that is in the `workspaces` key of the root `package.json`
+  and everything that is in the `workspaces` key of the root `package.json`
+
 - Run `pnpm import` to generate a `pnpm-lock.yaml` from your `yarn.lock`, then remove `yarn.lock`
 - Run `pnpm install`
 

@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/planning-and-design
+description: The planning and design phase of defining the scope, objectives, and feasibility of the project
 sidebar_position: 2
 ---
 
 # Planning and Design
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Planning** and **Design** phases are the foundational pillars of the SDLC. Mistakes made here are often the most expensive to fix later in the cycle.
 

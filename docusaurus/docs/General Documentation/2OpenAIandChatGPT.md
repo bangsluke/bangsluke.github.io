@@ -1,8 +1,11 @@
 ---
 slug: /general-documentation/openai-and-chatgpt
+description: OpenAI and ChatGPT and other AI tools
 ---
 
 # OpenAI and ChatGPT
+
+<!-- TODO: Update to be more AI general and less ChatGPT specific -->
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 

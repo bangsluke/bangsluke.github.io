@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/monitor
+description: The final phase, monitoring and observability when the software is running in production
 sidebar_position: 9
 ---
 
 # Monitoring and Observability
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 **Monitoring** is the process of collecting, analyzing, and using information to track applications and infrastructure in order to guide business decisions. **Observability** is the measure of how well internal states of a system can be inferred from knowledge of its external outputs.
 
@@ -12,7 +14,7 @@ sidebar_position: 9
 
 A robust monitoring strategy typically relies on three pillars:
 
-1.  **metrics:** Numerical data measured over time (e.g., CPU usage, Request Latency).
+1.  **Metrics:** Numerical data measured over time (e.g., CPU usage, Request Latency).
 2.  **Logs:** discrete events that happened (e.g., "Error: Connection failed at 10:00 PM").
 3.  **Traces:** The path of a request through a distributed system.
 

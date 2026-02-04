@@ -1,5 +1,6 @@
 ---
 slug: /product-management/research
+desciption: Summaries of research such as books read on Product Management
 ---
 
 # Product Management Research
@@ -7,8 +8,6 @@ slug: /product-management/research
 > [Back to Product Management Intro](../product-management/product-management-intro)
 
 ## Accelerate
-
-<!-- TODO: Add summary of Accelerate book -->
 
 > By Nicole Forsgren, Jez Humble and Gene Kim
 

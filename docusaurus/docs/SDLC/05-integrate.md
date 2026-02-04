@@ -1,10 +1,12 @@
 ---
+slug: /SDLC/integrate
+description: The integration phase (CI) of combining individual software modules into a unified group
 sidebar_position: 5
 ---
 
 # Integrate
 
-> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+> [Back to SDLC Intro](../SDLC/introduction)
 
 The **Integrate** phase involves combining individual software modules into a unified group. In modern DevOps, this is often continuous (CI), but conceptually it represents the assembly of the system.
 

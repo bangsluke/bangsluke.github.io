@@ -1,5 +1,6 @@
 ---
 slug: /project-set-up-to-release/planning
+description: The planning phase of defining the scope, objectives, and feasibility of the project
 ---
 
 # Planning
@@ -14,7 +15,6 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 1. Ask AI to recommend an architecture with justification - see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">the Obsidian note on AI Prompts here</a>
 2. Review the below architecture considerations against the AI output and verify it makes sense
-
 
 ### Front End Architecture
 
@@ -81,7 +81,6 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 - <a href="https://reactnative.dev/" target="_blanks">React Native</a>
 - <a href="https://expo.io/" target="_blank">Expo</a>
 - <a href="https://capacitorjs.com/" target="_blank">Capacitor.js</a>
-
 
 ## Plan the UI
 

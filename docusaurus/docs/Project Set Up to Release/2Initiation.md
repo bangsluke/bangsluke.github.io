@@ -1,5 +1,6 @@
 ---
 slug: /project-set-up-to-release/initiation
+description: The initiation phase of setting up the project
 ---
 
 # Initiation
@@ -10,42 +11,42 @@ slug: /project-set-up-to-release/initiation
 
 ### Boilerplate Code
 
-  - Consider using a boilerplate code to get started, as listed <a href="https://todoist.com/showTask?id=6518989300&sync_id=6518989300" target="_blank">here</a>
+- Consider using a boilerplate code to get started, as listed <a href="https://todoist.com/showTask?id=6518989300&sync_id=6518989300" target="_blank">here</a>
 
 ### CRA (Create React App)
 
-  - `npx create-react-app my-app` - Create a new React app called "my-app"
-  - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
-  - `cd my-app` - Change directory to the new React app
-  - `npm start` - Start the React app
-  - `npm run build` - Build the React app for production
+- `npx create-react-app my-app` - Create a new React app called "my-app"
+- `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
+- `cd my-app` - Change directory to the new React app
+- `npm start` - Start the React app
+- `npm run build` - Build the React app for production
 
 ### Vite
 
-  - To use Vite with Yarn and TypeScript do the following;
-    - `yarn create vite my-app --template react-ts`
-    - Then follow the instructions in the terminal
-      - Note: For "package name" use the name of the app
-    - For other possible Vite options see <a href="https://vitejs.dev/guide/#scaffolding-your-first-vite-project" target="_blank">here</a>
-  - `cd my-app` - Change directory to the new React app
-	- `yarn` - Install the dependencies
-	- `yarn dev` - Start the React app
-	- `yarn build` - Build the React app for production
+- To use Vite with Yarn and TypeScript do the following;
+  - `yarn create vite my-app --template react-ts`
+  - Then follow the instructions in the terminal
+    - Note: For "package name" use the name of the app
+  - For other possible Vite options see <a href="https://vitejs.dev/guide/#scaffolding-your-first-vite-project" target="_blank">here</a>
+- `cd my-app` - Change directory to the new React app
+  - `yarn` - Install the dependencies
+  - `yarn dev` - Start the React app
+  - `yarn build` - Build the React app for production
 
 ### Next.JS
 
-  - JavaScript and npm
-	- `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
-	- `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
-	- `npm install` - Install the dependencies
-	- `npm run dev` - Start the React app
-	- `npm run build` - Build the React app for production
-  - Typescript and yarn
-    - `yarn create next-app --typescript` - Create a new Next.JS app with TypeScript (name will be requested)
-    - `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
-  - `yarn` - Install the dependencies
-	- `yarn dev` - Start the React app
-	- `yarn build` - Build the React app for production
+- JavaScript and npm
+  - `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
+  - `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
+  - `npm install` - Install the dependencies
+  - `npm run dev` - Start the React app
+  - `npm run build` - Build the React app for production
+- Typescript and yarn
+  - `yarn create next-app --typescript` - Create a new Next.JS app with TypeScript (name will be requested)
+  - `cd xxx` - Change directory to the new Next.JS app replacing the xxx with the name of the app
+- `yarn` - Install the dependencies
+  - `yarn dev` - Start the React app
+  - `yarn build` - Build the React app for production
 
 ## Initiate a Git Repository and link to GitHub
 
@@ -65,7 +66,6 @@ git push -u origin main
 - Create a develop branch
 - Add a .gitignore file to the root of the project
 
-
 ## Structure and File Setup
 
 ### Folder and File Structure
@@ -74,7 +74,7 @@ git push -u origin main
 
 - Create a folder structure that makes sense for the project
   - For a React project, have the following set up
-  > Note, this structure is based off of the <a href="https://github.com/alan2207/bulletproof-react" target="_blank">Bulletproof React</a> project
+    > Note, this structure is based off of the <a href="https://github.com/alan2207/bulletproof-react" target="_blank">Bulletproof React</a> project
 
 ```n/a
 src
@@ -95,9 +95,9 @@ src
 +-- /utils             # Shared utility functions
 ```
 
-  - For a Next project, consider which folders are not needed, e.g. Routes would not be needed as Next handles routing via the pages folder
-  - To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
-    - <a href="https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md" target="_blank">Folder Structure Command.md</a>
+- For a Next project, consider which folders are not needed, e.g. Routes would not be needed as Next handles routing via the pages folder
+- To set up the above structure, first, navigate to the root folder of your project and then run the command from the linked file in the terminal
+  - <a href="https://github.com/bangsluke/bangsluke.github.io/blob/main/FolderStructureCommand.md" target="_blank">Folder Structure Command.md</a>
 
 #### Component Set Up
 
@@ -133,23 +133,23 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 > Note, these files are already created in the above command
 
-  - README.md file in the root of the project
-    `echo "# Project" > README.md`
-  - An empty .env file in the root of the project
+- README.md file in the root of the project
+  `echo "# Project" > README.md`
+- An empty .env file in the root of the project
 
-    ```powershell
-    echo "# Add an API Key" > .env
-    echo "API_KEY=AddKey" >> .env
-    ```
+  ```powershell
+  echo "# Add an API Key" > .env
+  echo "API_KEY=AddKey" >> .env
+  ```
 
-  - .gitignore file in the root of the project
+- .gitignore file in the root of the project
 
-    ```powershell
-    echo "# local env files" > .gitignore
-    echo ".env" >> .gitignore
-    ```
+  ```powershell
+  echo "# local env files" > .gitignore
+  echo ".env" >> .gitignore
+  ```
 
-    - <a href="https://www.toptal.com/developers/gitignore" target="_blank">Gitignore.io</a> is a great resource to generate a .gitignore file for your project
+  - <a href="https://www.toptal.com/developers/gitignore" target="_blank">Gitignore.io</a> is a great resource to generate a .gitignore file for your project
 
 ### .env Files and Variables
 
