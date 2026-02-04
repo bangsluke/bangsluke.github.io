@@ -18,8 +18,8 @@ function HomepageHeader() {
               {siteConfig.title}
             </h1>
         </div>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <p className="hero__subtitle" style={{ fontSize: '1.2rem' }}>{siteConfig.tagline}</p>
+        <div className={styles.buttons} style={{ fontSize: '1.2rem' }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/documentation-intro"

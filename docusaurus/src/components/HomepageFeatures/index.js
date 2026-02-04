@@ -90,21 +90,22 @@ const ExternalLinks = [
 
 function Feature({Svg, title, description, link}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        {/* Wrap Svg in a link if provided, otherwise just render it */}
-          <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
-            <Svg className={styles.featureSvg} role="img" />
-          </a>
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>
-             <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
-              {title}
+    <div className={clsx('col col--4', styles.featureCol)}>
+       <div className={styles.featureCard}>
+          <div className={styles.featureSvgContainer}>
+            <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer" style={{display:'block', width: '100%', height:'100%'}}>
+                <Svg className={styles.featureSvg} role="img" />
             </a>
-        </h3>
-        <p>{description}</p>
-      </div>
+          </div>
+          <div className={styles.featureContent}>
+            <h3 className={styles.featureTitle}>
+                <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
+                {title}
+                </a>
+            </h3>
+            <p className={styles.featureDescription}>{description}</p>
+          </div>
+       </div>
     </div>
   );
 }
