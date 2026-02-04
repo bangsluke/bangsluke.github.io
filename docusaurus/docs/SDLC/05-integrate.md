@@ -19,7 +19,7 @@ Successful integration ensures that separate components developed by different t
 - **Build Automation:** Compiling code and creating executable artifacts.
 - **Containerization:** Packaging applications with their dependencies (e.g., using [Docker](https://www.docker.com/)).
 
-### Key Deliverables
+### Integration Key Deliverables
 
 - Build Artifacts (JARs, WARs, Docker Images)
 - Integrated Codebase

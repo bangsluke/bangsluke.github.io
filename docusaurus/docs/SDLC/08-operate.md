@@ -19,7 +19,7 @@ The goal is to ensure high availability, reliability, and performance.
 - **Chaos Engineering:** Proactively testing system resilience by simulating failures.
 - **Security Operations (SecOps):** Defending against active threats.
 
-### Key Deliverables
+### Operations Key Deliverables
 
 - Service Level Agreements (SLAs) Reports
 - Incident Reports

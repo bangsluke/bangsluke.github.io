@@ -19,7 +19,7 @@ Modern deployment focuses on minimizing downtime and risk.
 - **Canary Analysis:** Rolling out the change to a small subset of users first.
 - **Orchestration:** Managing the lifecycle of containers (e.g., Kubernetes).
 
-### Key Deliverables
+### Deployment Key Deliverables
 
 - Live Production System
 - Configuration Scripts (IaC)

@@ -18,7 +18,7 @@ A robust monitoring strategy typically relies on three pillars:
 2.  **Logs:** discrete events that happened (e.g., "Error: Connection failed at 10:00 PM").
 3.  **Traces:** The path of a request through a distributed system.
 
-### Key Deliverables
+### Monitoring Key Deliverables
 
 - Dashboards
 - Alerting Rules

@@ -18,7 +18,7 @@ The **Planning** and **Design** phases are the foundational pillars of the SDLC.
 - **Requirement Analysis:** Detailed breakdown of features (Functional and Non-functional).
 - **Project Scheduling:** Estimating timelines, resources, and costs (often using Agile methodologies).
 
-### Key Deliverables
+### Planning Key Deliverables
 
 - Software Requirement Specification (SRS)
 - Project Plan / Roadmap
@@ -40,7 +40,7 @@ Once requirements are clear, the **Design** phase translates them into a bluepri
 - **Data Design:** Database schemas and data flow diagrams.
 - **UI/UX Design:** Wireframes, mockups, and prototypes for the user interface.
 
-### Key Deliverables
+### Design Key Deliverables
 
 - Design Document (High-Level and Low-Level)
 - Database Schema

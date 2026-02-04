@@ -19,7 +19,7 @@ This phase bridges the gap between development and operations.
 - **Documentation:** Creating release notes, updating user manuals, and training support staff.
 - **Staging:** Deploying to a pre-production environment that mirrors production for final sign-off.
 
-### Key Deliverables
+### Release Key Deliverables
 
 - Release Package
 - Release Notes
