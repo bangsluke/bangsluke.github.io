@@ -91,21 +91,24 @@ const ExternalLinks = [
 function Feature({Svg, title, description, link}) {
   return (
     <div className={clsx('col col--4', styles.featureCol)}>
-       <div className={styles.featureCard}>
+       <a 
+         href={link} 
+         className={styles.featureCard}
+         target={link.startsWith('http') ? '_blank' : '_self'} 
+         rel={link.startsWith('http') ? "noopener noreferrer" : undefined}
+       >
           <div className={styles.featureSvgContainer}>
-            <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer" style={{display:'block', width: '100%', height:'100%'}}>
+            <div style={{display:'block', width: '100%', height:'100%'}}>
                 <Svg className={styles.featureSvg} role="img" />
-            </a>
+            </div>
           </div>
           <div className={styles.featureContent}>
             <h3 className={styles.featureTitle}>
-                <a href={link} target={link.startsWith('http') ? '_blank' : '_self'} rel="noopener noreferrer">
                 {title}
-                </a>
             </h3>
             <p className={styles.featureDescription}>{description}</p>
           </div>
-       </div>
+       </a>
     </div>
   );
 }
