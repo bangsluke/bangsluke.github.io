@@ -1,8 +1,11 @@
 ---
 slug: /projects/dorkinians-website
+description: The starting page for users of the Dorkinians Website
 ---
 
 # Dorkinians Website
+
+> [Back to Projects Page](../projects)
 
 ![Dorkinians Website Screenshot](https://i.postimg.cc/Yq7Xvd7n/Dorkinians-Website.png)
 
@@ -93,6 +96,7 @@ Example questions are provided to get you started.
 The Stats section provides comprehensive statistics for players, teams, and the entire club.
 
 **Sub-sections:**
+
 - **Player Stats**: Individual player performance metrics across multiple categories
 - **Team Stats**: Team-level statistics and performance analysis
 - **Club Stats**: Club-wide statistics and comparisons
@@ -120,6 +124,7 @@ The Stats section provides comprehensive statistics for players, teams, and the 
 The TOTW (Team of the Week) section displays the best performing players each week and monthly award winners.
 
 **Sub-sections:**
+
 - **Team of the Week**: Weekly best XI with visual pitch display
 - **Players of the Month**: Monthly player awards
 
@@ -145,6 +150,7 @@ The TOTW (Team of the Week) section displays the best performing players each we
 The Club Info section contains information about the club, leagues, captains, awards, and useful links.
 
 **Sub-sections:**
+
 - **Club Information**: Club history, milestones, and location
 - **League Information**: League details and standings
 - **Club Captains**: Current and historical captains
@@ -196,4 +202,3 @@ The Settings page provides PWA installation options, links to help documentation
 - <a href="https://app.netlify.com/projects/dorkinians-website-v3/deploys" target="_blank">Netlify Deployment</a>
 
 > [Back to Table of Contents](#table-of-contents)
-

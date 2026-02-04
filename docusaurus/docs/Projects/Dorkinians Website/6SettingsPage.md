@@ -1,5 +1,6 @@
 ---
 slug: /projects/dorkinians-website/settings-page
+description: Details on the Settings page of the Dorkinians Website
 ---
 
 # Settings
@@ -56,6 +57,7 @@ The install prompt appears when:
 - Your browser supports PWA installation
 
 **To Install:**
+
 1. Tap the "Install App" button
 2. Follow your device's installation prompts
 3. The app will be added to your home screen or app drawer
@@ -140,7 +142,6 @@ Your feedback is valuable! The development team reviews all feedback to improve 
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
 
 ### Data & Privacy
 

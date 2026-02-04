@@ -1,5 +1,6 @@
 ---
 slug: /projects/dorkinians-website/totw-page
+description: Details on the TOTW page and sub-pages of the Dorkinians Website
 ---
 
 # TOTW
@@ -112,22 +113,22 @@ If two players have the same total fantasy points, the player who has appeared i
 
 The Team of the Week is selected based on a fantasy points system. Points are awarded for various actions:
 
-| Action | Points |
-| --- | --- |
-| Minutes Played | 2 points for an appearance over 60 minutes, 1 point for an appearance less than 60 minutes |
-| Man of the Match | 3 points |
-| Goal Scored | 4 points for a FWD, 5 points for a MID, 6 points for a DEF or GK |
-| Assist | 3 points |
-| Clean Sheet | 4 points for a DEF or GK, 1 point for a MID |
-| Goal Conceded | -1 point for each 2 goals conceded for a DEF or GK |
-| Yellow Card | -1 point |
-| Red Card | -3 points |
-| Save | 1 point for every 3 saves |
-| Own Goal | -2 points |
-| Penalty Scored | Same as a goal scored, done by position |
-| Penalty Missed | -2 points |
-| Penalty Conceded | 0 points |
-| Penalty Saved | 5 points |
+| Action           | Points                                                                                     |
+| ---------------- | ------------------------------------------------------------------------------------------ |
+| Minutes Played   | 2 points for an appearance over 60 minutes, 1 point for an appearance less than 60 minutes |
+| Man of the Match | 3 points                                                                                   |
+| Goal Scored      | 4 points for a FWD, 5 points for a MID, 6 points for a DEF or GK                           |
+| Assist           | 3 points                                                                                   |
+| Clean Sheet      | 4 points for a DEF or GK, 1 point for a MID                                                |
+| Goal Conceded    | -1 point for each 2 goals conceded for a DEF or GK                                         |
+| Yellow Card      | -1 point                                                                                   |
+| Red Card         | -3 points                                                                                  |
+| Save             | 1 point for every 3 saves                                                                  |
+| Own Goal         | -2 points                                                                                  |
+| Penalty Scored   | Same as a goal scored, done by position                                                    |
+| Penalty Missed   | -2 points                                                                                  |
+| Penalty Conceded | 0 points                                                                                   |
+| Penalty Saved    | 5 points                                                                                   |
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -170,4 +171,3 @@ This section shows the current selected player's FTP ranking for the month and s
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
-

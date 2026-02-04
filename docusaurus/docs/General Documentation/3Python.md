@@ -1,5 +1,6 @@
 ---
 slug: /general-documentation/python
+description: Python installation and scripts information
 ---
 
 # Python

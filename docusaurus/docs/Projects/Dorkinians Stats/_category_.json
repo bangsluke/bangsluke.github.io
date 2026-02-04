@@ -1,7 +1,10 @@
 {
   "label": "Dorkinians Stats",
-  "position": 3,
+  "position": 2,
+  "collapsed": true,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "The documentation for the upkeep of the Dorkinians stats",
+    "slug": "/projects/dorkinians-stats"
   }
 }

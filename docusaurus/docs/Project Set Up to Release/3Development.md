@@ -1,5 +1,6 @@
 ---
 slug: /project-set-up-to-release/development
+description: Resources and guide for the development of the software
 ---
 
 # Development
@@ -15,32 +16,37 @@ slug: /project-set-up-to-release/development
       ```html
       <!-- theme color is white unless in dark mode, then it's black -->
       <meta name="theme-color" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="#000" />
       ```
   - With the `accent-color` property you can specify the predominant color for checkboxes, radio buttons, ranges, and even progress bars.
 - Meta Tags
   - Add open graph meta tags - but note that the values should be page-specific and should be updated when navigating between pages.
-    ```html
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Page Title">
-    <meta property="og:description" content="Description of the page.">
-    <meta property="og:url" content="link.to.be.displayed.when.shared">
-    <meta property="og:image" content="link.to.thumbnail.image">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Page Title">
-    <meta name="twitter:description" content="Description of the page.">
-    <meta name="twitter:url" content="link.to.be.displayed.when.shared">
-    <meta name="twitter:image" content="link.to.thumbnail.image">
+    ```html
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Page Title" />
+    <meta property="og:description" content="Description of the page." />
+    <meta property="og:url" content="link.to.be.displayed.when.shared" />
+    <meta property="og:image" content="link.to.thumbnail.image" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta name="twitter:description" content="Description of the page." />
+    <meta name="twitter:url" content="link.to.be.displayed.when.shared" />
+    <meta name="twitter:image" content="link.to.thumbnail.image" />
     ```
+
 - enterkeyhint property of the virtual keyboard
   - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint" target="_blank">enterkeyhint MDN</a>
   - `enterkeyhint` is a new attribute of the HTML `input` tag. This attribute affects the style and behavior of the enter keys of the virtual keyboard. It is mainly used on devices such as mobile terminals and tablets, so that users can clearly know what action the enter key will perform. Typical values for this attribute are "enter", "done", "go", "next", "previous", "search", and "send". 📱
   - 🔎 For example, if you use the attribute in a search box enterkeyhint="search", when the user uses the search box on a mobile device, the enter key will change to "Search" and the user will be able to submit the search by clicking this key. 🔍
     ```html
     <form action="/search">
-    <input type="text" enterkeyhint="search" name="q">
-    <input type="submit" value="Search">
+      <input type="text" enterkeyhint="search" name="q" />
+      <input type="submit" value="Search" />
     </form>
     ```
   - In this example, the input field’s enterkeyhint property is set to “search”, so that on the mobile device’s virtual keyboard, the label of the enter key changes to “search”. 🔑 For `enterkeyhint` the possible values and their meanings are as follows:
@@ -163,15 +169,15 @@ const Headline = ({ title }) =>
 
 **Recommendations:** (from <a href="https://www.robinwieruch.de/react-libraries/" target="_blank">Robin Wieruch</a>)
 
-  - useState/useReducer for co-located or shared state
-  - opt-in useContext for enabling little global state
-  - Zustand (or an alternative) for lots of global state
+- useState/useReducer for co-located or shared state
+- opt-in useContext for enabling little global state
+- Zustand (or an alternative) for lots of global state
 
 ### Data Fetching
 
 - TanStack Query (formerly known as React Query) - `yarn add @tanstack/react-query` - <a href="https://tanstack.com/query/latest" target="_blank">https://tanstack.com/query/latest</a>
   - Works for both REST and GraphQL APIs
-  - <a href="https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3" target="_blank">Mastering React Query - A Complete Guide</a>**
+  - <a href="https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3" target="_blank">Mastering React Query - A Complete Guide</a>\*\*
 - Apollo Client - `yarn add @apollo/client` - <a href="https://www.apollographql.com/docs/react/" target="_blank">https://www.apollographql.com/docs/react/</a>
   - Works for GraphQL APIs
 - RTK Query - If using Redux - <a href="https://redux-toolkit.js.org/rtk-query/overview" target="_blank">https://redux-toolkit.js.org/rtk-query/overview</a>

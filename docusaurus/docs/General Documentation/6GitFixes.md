@@ -1,5 +1,6 @@
 ---
 slug: /general-documentation/git-fixes
+description: Details on making fixes to Git issues
 ---
 
 # Git Fixes
@@ -41,7 +42,7 @@ Summary:
 
 - Create a text file at the parent folder of the repo (not in the repo) of the replacements you need to make such as "BigLynnReplacements.txt"
 - Each line is a new replacement, e.g.;
-	`‘xau_8Q9v6YrRzXgPcSvgjOvVbYEwkKm1lgBo4’==>ENV[‘XATA_API_KEY’]` would replace the API key with the environment variable name
+  `‘xau_8Q9v6YrRzXgPcSvgjOvVbYEwkKm1lgBo4’==>ENV[‘XATA_API_KEY’]` would replace the API key with the environment variable name
 - Copy the file "git-filter-repo" from Personal Coding into the repo
 - Open the CMD for the repo
 - Use the command `git filter-repo --replace-text ../BigLynnReplacements.txt --force` to go through the history of the repo and make all the required replacements

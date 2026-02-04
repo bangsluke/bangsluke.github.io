@@ -1,5 +1,6 @@
 ---
 slug: /project-set-up-to-release/testing
+description: Links and resources for the testing of the software
 ---
 
 # Testing

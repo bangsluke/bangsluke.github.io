@@ -1,7 +1,10 @@
 {
-  "label": "Dorkinians Website",
-  "position": 3,
+  "label": "Dorkinians Website Project",
+  "position": 1,
+  "collapsed": true,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "The documentation for users of the Dorkinians Website",
+    "slug": "/projects/dorkinians-website-project"
   }
 }

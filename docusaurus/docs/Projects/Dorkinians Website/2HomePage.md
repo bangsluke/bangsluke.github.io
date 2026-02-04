@@ -1,5 +1,6 @@
 ---
 slug: /projects/dorkinians-website/home-page
+description: Details on the Home page of the Dorkinians Website
 ---
 
 # Home
@@ -140,4 +141,3 @@ Conversation history helps the chatbot understand context for follow-up question
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-

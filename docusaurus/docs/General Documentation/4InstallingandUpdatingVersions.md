@@ -1,5 +1,6 @@
 ---
 slug: /general-documentation/installing-and-updating-versions
+description: Installing and updating versions of NPM, Yarn, PNPM, and Node
 ---
 
 # Installing and Updating Versions
