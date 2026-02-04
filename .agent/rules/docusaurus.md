@@ -1,6 +1,13 @@
 ---
 trigger: glob
-globs: "docs/**/*.md", "docs/**/*.mdx", "docusaurus.config.js", "sidebars.js", "src/pages/**/*.md"
+globs:
+  [
+    "docs/**/*.md",
+    "docs/**/*.mdx",
+    "docusaurus.config.js",
+    "sidebars.js",
+    "src/pages/**/*.md",
+  ]
 ---
 
 ---

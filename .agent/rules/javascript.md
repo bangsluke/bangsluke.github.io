@@ -1,6 +1,6 @@
 ---
 trigger: glob
-globs: "**/*.js", "**/*.mjs"
+globs: ["**/*.js", "**/*.mjs"]
 ---
 
 ---

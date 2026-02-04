@@ -1,6 +1,13 @@
 ---
 trigger: glob
-globs: "src/**/*.js", "src/**/*.jsx", "src/components/**/*", "src/pages/**/*.js", "src/theme/**/*.js"
+globs:
+  [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/components/**/*",
+    "src/pages/**/*.js",
+    "src/theme/**/*.js",
+  ]
 ---
 
 ---
