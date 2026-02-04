@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Introduction to Software Development Life Cycle
 
+> [Back to Documentation Intro Contents](../DocumentationIntro.md)
+
 The **Software Development Life Cycle (SDLC)** is a structured methodology used by software industry to design, develop, and test high-quality software. The SDLC aims to produce high-quality software that meets or exceeds customer expectations, reaches completion within times and cost estimates.
 
 ## The Phases
@@ -25,9 +27,10 @@ While the core principles of SDLC remain constant, the tools and methodologies a
 
 :::tip[How AI Can Help]
 Generative AI is revolutionizing the SDLC by:
-*   **Reducing Overhead:** automating documentation and repetitive tasks.
-*   **Predicting Issues:** using historical data to foresee risks in planning or deployment.
-*   **Accelerating Creation:** generating code, tests, and configurations instantly.
 
-As Dr. James Bland from AWS states: *"Generative AI is not just enhancing software development; it’s redefining it."*
+- **Reducing Overhead:** automating documentation and repetitive tasks.
+- **Predicting Issues:** using historical data to foresee risks in planning or deployment.
+- **Accelerating Creation:** generating code, tests, and configurations instantly.
+
+As Dr. James Bland from AWS states: _"Generative AI is not just enhancing software development; it’s redefining it."_
 :::
