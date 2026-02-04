@@ -203,3 +203,18 @@ If using React, consider the following links:
 - Modify any details of the workflow to suit your needs
 - Add automated linting to CI/CD
   - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>
+
+
+## Cursor/Antigravity Project Rules
+
+If using either Cursor or Antigravity, you will already have a User Rule/Global Rule set up (see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">my Obsidian note on AI Prompts here</a>).
+
+For setting up the Project Rules, you can follow the notes in the Obsidian notes or follow below:
+
+- To set up Project rules, open the project in Cursor and then follow the instructions in the following link to automatically set up the correct Project rule files for your project. 
+  - [GitHub - Renvia-code/best-cursor-rules: Best Cursor Rules is a curated collection of 33 high-quality Cursor AI rules that actually work. Includes a Setup Wizard that analyzes your project and generates customized rules automatically.](https://github.com/Renvia-code/best-cursor-rules)
+- Answer the questions in the Setup Wizard to generate the correct Project rule files for your project.
+
+:::note
+If you are using Antigravity, ensure that you copy the rules generated in Cursor over into the Rules section of Antigravity - Settings.
+:::

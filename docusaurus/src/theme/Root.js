@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import OfflinePopup from '@site/src/components/OfflinePopup';
+import BackFab from '@site/src/components/BackFab';
 
 export default function Root({children}) {
   const [offlineStatus, setOfflineStatus] = useState(null); // 'downloading' | 'ready' | null
@@ -87,6 +88,7 @@ export default function Root({children}) {
           onClose={() => setOfflineStatus(null)} 
         />
       )}
+      <BackFab />
     </>
   );
 }

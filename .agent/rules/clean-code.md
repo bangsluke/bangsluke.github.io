@@ -1,0 +1,324 @@
+---
+trigger: always_on
+---
+
+---
+
+description: Clean code principles and code quality guidelines
+globs: []
+
+---
+
+# Clean Code Principles
+
+## Naming Conventions
+
+### Be Descriptive and Precise
+
+```javascript
+// Good - clear intent
+const activeUsers = users.filter(u => u.isActive);
+const maxRetryAttempts = 3;
+function calculateTotalPrice(items) { ... }
+
+// Bad - vague or abbreviated
+const data = users.filter(u => u.isActive);
+const max = 3;
+function calc(items) { ... }
+```
+
+### Naming Patterns
+
+| Type               | Convention       | Example                       |
+| ------------------ | ---------------- | ----------------------------- |
+| Variables          | camelCase, noun  | `userName`, `itemCount`       |
+| Functions          | camelCase, verb  | `fetchUser`, `calculateTotal` |
+| Constants          | UPPER_SNAKE_CASE | `MAX_RETRIES`, `API_URL`      |
+| Components         | PascalCase       | `UserProfile`, `NavBar`       |
+| Files (components) | PascalCase       | `UserProfile.js`              |
+| Files (utilities)  | camelCase        | `dateUtils.js`                |
+| CSS classes        | kebab-case       | `nav-item`, `btn-primary`     |
+
+### Boolean Naming
+
+```javascript
+// Prefix with is, has, can, should
+const isLoading = true;
+const hasPermission = user.role === "admin";
+const canEdit = hasPermission && !isLocked;
+const shouldRefresh = Date.now() > lastUpdate + interval;
+```
+
+---
+
+## Functions
+
+### Keep Functions Small
+
+- Aim for functions under 20 lines
+- Each function should do one thing well
+- If you need comments to explain sections, extract them into functions
+
+```javascript
+// Good - small, focused functions
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validateUser(user) {
+  return validateEmail(user.email) && validateName(user.name);
+}
+
+// Bad - doing too much
+function processUser(user) {
+  // validate email
+  // validate name
+  // format data
+  // save to database
+  // send notification
+  // ... 100 more lines
+}
+```
+
+### Limit Parameters
+
+```javascript
+// Good - use object for multiple parameters
+function createUser({ name, email, role = "user", department }) {
+  // ...
+}
+
+// Bad - too many positional parameters
+function createUser(name, email, role, department, team, manager) {
+  // ...
+}
+```
+
+### Return Early
+
+```javascript
+// Good - guard clauses at the top
+function processOrder(order) {
+  if (!order) return null;
+  if (!order.items?.length) return null;
+  if (order.status === "cancelled") return null;
+
+  // Main logic here
+  return calculateTotal(order);
+}
+
+// Bad - deep nesting
+function processOrder(order) {
+  if (order) {
+    if (order.items?.length) {
+      if (order.status !== "cancelled") {
+        // Main logic buried
+      }
+    }
+  }
+}
+```
+
+---
+
+## DRY (Don't Repeat Yourself)
+
+### Extract Common Logic
+
+```javascript
+// Good - shared utility
+function formatCurrency(amount, currency = "GBP") {
+  return new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency,
+  }).format(amount);
+}
+
+// Use everywhere
+const price = formatCurrency(item.price);
+const total = formatCurrency(cart.total);
+```
+
+### But Don't Over-Abstract
+
+```javascript
+// Bad - premature abstraction
+function doThing(type) {
+  if (type === "A") {
+    /* ... */
+  } else if (type === "B") {
+    /* ... */
+  } else if (type === "C") {
+    /* ... */
+  }
+}
+
+// Better - separate functions if logic differs significantly
+function doThingA() {
+  /* ... */
+}
+function doThingB() {
+  /* ... */
+}
+```
+
+---
+
+## Code Organization
+
+### File Structure
+
+- One component per file
+- Group related files in folders
+- Keep files under 200-300 lines
+- Extract utilities to separate files
+
+### Import Order
+
+```javascript
+// 1. External libraries
+import React, { useState } from "react";
+import clsx from "clsx";
+
+// 2. Internal modules (absolute paths)
+import { formatDate } from "@site/src/utils/dateUtils";
+
+// 3. Relative imports
+import Button from "./Button";
+import styles from "./Component.module.css";
+```
+
+### Component Organization
+
+```javascript
+// Order within a component file:
+// 1. Imports
+// 2. Type definitions / PropTypes
+// 3. Constants
+// 4. Helper functions (outside component)
+// 5. Component definition
+// 6. Export
+```
+
+---
+
+## Comments
+
+### When to Comment
+
+```javascript
+// Good - explain WHY, not WHAT
+// Using setTimeout to debounce rapid API calls
+// and prevent rate limiting (max 10 req/min)
+setTimeout(fetchData, 300);
+
+// Bad - obvious comment
+// Increment counter by 1
+counter++;
+```
+
+### TODO Comments
+
+```javascript
+// TODO: Implement caching to reduce API calls
+// FIXME: This breaks when user has no email
+// NOTE: This depends on external service X
+```
+
+### Documentation vs Comments
+
+- Use JSDoc for function documentation
+- Use inline comments sparingly for non-obvious logic
+- If code needs lots of comments, consider refactoring
+
+---
+
+## Error Handling
+
+### Be Specific
+
+```javascript
+// Good - specific error handling
+try {
+  const data = await fetchUser(id);
+  return processUser(data);
+} catch (error) {
+  if (error.status === 404) {
+    return { error: "User not found" };
+  }
+  if (error.status === 403) {
+    return { error: "Access denied" };
+  }
+  throw error; // Re-throw unexpected errors
+}
+
+// Bad - swallowing all errors
+try {
+  // ...
+} catch (error) {
+  console.log(error);
+}
+```
+
+### Fail Fast
+
+```javascript
+// Validate inputs at the start
+function processPayment(payment) {
+  if (!payment) throw new Error("Payment is required");
+  if (payment.amount <= 0) throw new Error("Amount must be positive");
+  if (!payment.currency) throw new Error("Currency is required");
+
+  // Now proceed with valid data
+}
+```
+
+---
+
+## Testing Mindset
+
+### Write Testable Code
+
+- Pure functions are easier to test
+- Inject dependencies instead of hardcoding
+- Avoid global state
+- Keep side effects at the edges
+
+```javascript
+// Good - testable
+function calculateDiscount(price, discountPercent) {
+  return price * (1 - discountPercent / 100);
+}
+
+// Bad - hard to test
+function calculateDiscount(price) {
+  const discount = globalConfig.discount; // global dependency
+  logToAnalytics(price); // side effect
+  return price * (1 - discount / 100);
+}
+```
+
+---
+
+## Performance Awareness
+
+### Avoid Premature Optimization
+
+- Write clear code first
+- Measure before optimizing
+- Optimize only proven bottlenecks
+
+### Common Pitfalls
+
+```javascript
+// Avoid creating objects/arrays in render
+// Bad - new array every render
+<Component items={items.filter((i) => i.active)} />;
+
+// Better - memoize or compute outside
+const activeItems = useMemo(() => items.filter((i) => i.active), [items]);
+<Component items={activeItems} />;
+```
+
+---
