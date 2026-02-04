@@ -19,8 +19,8 @@ description: Details on the Settings page of the Dorkinians Website
   - [Updates To Come](#updates-to-come)
   - [Stat Limitations](#stat-limitations)
   - [Share Site](#share-site)
-  - [Report Bug / Request Feature](#report-bug--request-feature)
-  - [Data \& Privacy](#data--privacy)
+  - [Report Bug / Request Feature](#report-bug-request-feature)
+  - [Data \& Privacy](#data-privacy)
 - [Version Number](#version-number)
 
 <PageBreak />
@@ -130,7 +130,7 @@ A share site button is provided to allow you to share the app with others.
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Report Bug / Request Feature
+### Report Bug / Request Feature {#report-bug-request-feature}
 
 A report bug / request feature button is provided to allow you to report bugs or request features.
 
@@ -151,7 +151,7 @@ Your feedback is valuable! The development team reviews all feedback to improve 
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Data & Privacy
+### Data & Privacy {#data-privacy}
 
 The Settings page provides the ability to request data removal. To remove your name from the app, please submit a request using this form.
 
