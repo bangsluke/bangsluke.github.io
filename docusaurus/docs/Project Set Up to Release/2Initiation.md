@@ -15,6 +15,8 @@ description: The initiation phase of setting up the project
 
 ### CRA (Create React App)
 
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+
 - `npx create-react-app my-app` - Create a new React app called "my-app"
 - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
 - `cd my-app` - Change directory to the new React app
@@ -22,6 +24,8 @@ description: The initiation phase of setting up the project
 - `npm run build` - Build the React app for production
 
 ### Vite
+
+<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
 
 - To use Vite with Yarn and TypeScript do the following;
   - `yarn create vite my-app --template react-ts`
@@ -33,7 +37,9 @@ description: The initiation phase of setting up the project
   - `yarn dev` - Start the React app
   - `yarn build` - Build the React app for production
 
-### Next.JS
+### Next.js
+
+<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
 
 - JavaScript and npm
   - `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
@@ -49,6 +55,10 @@ description: The initiation phase of setting up the project
   - `yarn build` - Build the React app for production
 
 ## Initiate a Git Repository and link to GitHub
+
+<img src="https://img.shields.io/badge/Git-EA5436?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -176,6 +186,9 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 ### ESLint and Prettier Config
 
+<img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+<img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier" />
+
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
 - Consider the below references if needed
@@ -187,11 +200,15 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 ### React Set Up
 
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+
 If using React, consider the following links:
 
 - <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
 
 ## GitHub Workflows
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
@@ -204,14 +221,16 @@ If using React, consider the following links:
 - Add automated linting to CI/CD
   - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>
 
-
 ## Cursor/Antigravity Project Rules
+
+<img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
+<img src="https://img.shields.io/badge/Antigravity-2F8EF5?style=for-the-badge&logo=antigravity&logoColor=white" alt="Antigravity" />
 
 If using either Cursor or Antigravity, you will already have a User Rule/Global Rule set up (see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">my Obsidian note on AI Prompts here</a>).
 
 For setting up the Project Rules, you can follow the notes in the Obsidian notes or follow below:
 
-- To set up Project rules, open the project in Cursor and then follow the instructions in the following link to automatically set up the correct Project rule files for your project. 
+- To set up Project rules, open the project in Cursor and then follow the instructions in the following link to automatically set up the correct Project rule files for your project.
   - [GitHub - Renvia-code/best-cursor-rules: Best Cursor Rules is a curated collection of 33 high-quality Cursor AI rules that actually work. Includes a Setup Wizard that analyzes your project and generates customized rules automatically.](https://github.com/Renvia-code/best-cursor-rules)
 - Answer the questions in the Setup Wizard to generate the correct Project rule files for your project.
 

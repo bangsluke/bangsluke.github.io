@@ -7,18 +7,22 @@ description: Details on making fixes to Git issues
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-## Error: Unable to load Commits. fatal: bad object desktop.ini
+## Git Errors
+
+<img src="https://img.shields.io/badge/Git-EA5436?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+
+### Error: Unable to load Commits. fatal: bad object desktop.ini
 
 Summary: Bad desktop.ini file that is created by Google Drive. Needs to be deleted.
 
-### Delete all desktop.ini files
+#### Delete all desktop.ini files
 
 1. Run CMD as administrator
 2. Navigate to the folder where the bad file is using `cd`
 3. Delete all "desktop.ini" files in the folder and all sub-folders using `del desktop.ini /A:H /S`
 4. Reload the git graph extension and the error should have gone
 
-### Manually delete each desktop.ini file with explanations
+#### Manually delete each desktop.ini file with explanations
 
 1. Run CMD as administrator
 2. Navigate to the folder where the bad file is using `cd`
@@ -36,7 +40,7 @@ Summary: Bad desktop.ini file that is created by Google Drive. Needs to be delet
 > 3. <a href="https://answers.microsoft.com/en-us/windows/forum/all/unable-to-remove-system-attribute-not-resetting/a68ca5b6-2c4d-4055-9219-1bf6944766ad" target="_blank">Remove Attributes from Files</a>
 > 4. <a href="https://www.windows-commandline.com/show-delete-hidden-files-command-prompt/" target="_blank">Delete All Hidden Files</a>
 
-## Clearing Secrets from History
+### Clearing Secrets from History
 
 Summary:
 

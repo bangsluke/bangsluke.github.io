@@ -24,10 +24,17 @@ description: Links and resources for the testing of the software
 
 ### Static Tests
 
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+
 - Static tests are done automatically in VS Code e.g. typos and type errors
 - Ensure static testing libraries are set up such as <a href="https://eslint.org/" target="_blank">ESLint</a> or <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
 
 ### Unit Tests
+
+<img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest" />
+<img src="https://img.shields.io/badge/Vitest-646CFF?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
+<img src="https://img.shields.io/badge/React_Testing_Library-E63959?style=for-the-badge&logo=react-testing-library&logoColor=white" alt="React Testing Library" />
 
 - To create unit tests, use AI to write the tests - see the "Testing Prompts" section of the Obsidian note on AI Prompts - and then review the tests and make improvements
 - Use a testing library such as <a href="https://jestjs.io/" target="_blank">Jest</a> or <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a>
@@ -35,10 +42,16 @@ description: Links and resources for the testing of the software
 
 ### Integration Tests
 
+<img src="https://img.shields.io/badge/React_Testing_Library-E63959?style=for-the-badge&logo=react-testing-library&logoColor=white" alt="React Testing Library" />
+<img src="https://img.shields.io/badge/Cypress-2AD796?style=for-the-badge&logo=cypress&logoColor=103045" alt="Cypress" />
+
 - To create integration tests, use AI to write the tests - see the "Testing Prompts" section of the Obsidian note on AI Prompts - and then review the tests and make improvements
 - Use a testing library such as <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a> or <a href="https://www.cypress.io/" target="_blank">Cypress</a>
 
 ### E2E Tests
+
+<img src="https://img.shields.io/badge/Playwright-45ba4b?style=for-the-badge&logo=Playwright&logoColor=white" alt="Playwright" />
+<img src="https://img.shields.io/badge/Cypress-2AD796?style=for-the-badge&logo=cypress&logoColor=103045" alt="Cypress" />
 
 - For E2E tests, use a testing library such as <a href="https://playwright.dev/" target="_blank">Playwright</a> or <a href="https://www.cypress.io/" target="_blank">Cypress</a>
 

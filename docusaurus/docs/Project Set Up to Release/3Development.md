@@ -9,6 +9,8 @@ description: Resources and guide for the development of the software
 
 ## HTML
 
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+
 - Theme Colour
   - <a href="https://levelup.gitconnected.com/small-details-to-improve-your-websites-experience-88425116a06c" target="_blank">Set up your HTML head with some nice small tweaks</a>
     - Use theme-colour and add your theme `<meta name="theme-color" content="#f00" />`
@@ -60,6 +62,8 @@ description: Resources and guide for the development of the software
 - Use the correct HTML `<input type="">` attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.
 
 ## CSS
+
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
 
 ### CSS Tips
 
@@ -272,6 +276,8 @@ In order of recommendation:
 
 ### React
 
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+
 - Hooks
   - <a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
   - <a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
@@ -291,10 +297,14 @@ In order of recommendation:
 
 ### Vite
 
+<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+
 - Routing
   - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
 
 ### Next.js
+
+<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
 
 - <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
 - <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
