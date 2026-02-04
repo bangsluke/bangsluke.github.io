@@ -18,11 +18,15 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
   - <a href="https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920" target="_blank">The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website's SEO NOW!</a>
   - <a href="https://levelup.gitconnected.com/1-minute-html-tip-theme-colors-44839431eafa" target="_blank">Theme colour HTML tag</a>
 
+<PageBreak />
+
 ## Favicon
 
 - Create a favicon for the site and for all applications that may access the site
   - <a href="https://realfavicongenerator.net/" target="_blank">realfavicongenerator.net</a>
     > Note: you can create a subfolder at the root called "favicon" and then update the head links to refer to this folder to keep the project tidy
+
+<PageBreak />
 
 ## User Experience
 
@@ -38,6 +42,8 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
     - Add the following code: `const router = useRouter();` within the page component
     - Add the following onClick code to a button: `onClick={() => router.back()} // Go back to the last visited page`
 - Consider if additional 404 pages are required for other errors, such as 500, 503, etc.
+
+<PageBreak />
 
 ## Page Speed Testing
 
@@ -78,12 +84,16 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
     - Use Chrome DevTools LightHouse tool
     - <a href="https://gtmetrix.com/" target="_blank">GTmetrix</a>
 
+<PageBreak />
+
 ## Console Logs
 
 - Delete all `console.logs` - It's important to remove console.log in production code to prevent sensitive information leaks and enhance performance
 - Investigate and fix all `console.errors` and `console.warning` - It's important to address console errors in production code to maintain a smooth and error-free user experiences.
 - Framework links
   - Next.js - <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Next JS Console Logs</a>
+
+<PageBreak />
 
 ## Framework Specific Checks
 
@@ -105,11 +115,15 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 
   - Add Next.js Analytics (see section 4.d of the above article) - <a href="https://nextjs.org/analytics" target="_blank">Link</a>
 
+<PageBreak />
+
 ## Other General Tests
 
 - Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - <a href="https://calvinke.com/seo/fixed-header-anchor-css/" target="_blank">Link</a>
 - Check that the site works on all devices and browsers - <a href="https://www.browserstack.com/" target="_blank">BrowserStack</a>
 - Check that input boxes are using the correct attributes to help user input - <a href="https://better-mobile-inputs.netlify.app/" target="_blank">Better Mobile Inputs</a>
+
+<PageBreak />
 
 ## GitHub Information
 
@@ -133,6 +147,8 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
     - Repo status
     - Tests passing
     - Netlify deployment status
+
+<PageBreak />
 
 ## Other Options
 

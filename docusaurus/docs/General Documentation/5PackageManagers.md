@@ -42,6 +42,8 @@ For more commands, see this <a href="https://devhints.io/npm" target="_blank">ch
 
 - `npm run <script>` - Run a script from the package.json file
 
+<PageBreak />
+
 ## Yarn
 
 <img src="https://img.shields.io/badge/Yarn-3392BD?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
@@ -77,6 +79,8 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 - `yarn upgrade left-pad@^1.0.0 --dev` - Upgrade a specific development dependency package to a specific version
 - `yarn remove left-pad` - Removes a specific package
 
+<PageBreak />
+
 ## PNPM
 
 <img src="https://img.shields.io/badge/pnpm-F9B008?style=for-the-badge&logo=pnpm&logoColor=white" alt="PNPM" />
@@ -85,6 +89,8 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
 - <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
+
+<PageBreak />
 
 ## Switching Package Managers
 

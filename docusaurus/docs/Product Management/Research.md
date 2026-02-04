@@ -58,6 +58,8 @@ Other than the [DORA metrics](../product-management/product-management-intro#dor
 23. Provide resources and tools that make work meaningful
 24. Support or embody transformational leadership
 
+<PageBreak />
+
 ## The Phoenix Project
 
 ### The Phoenix Project Summary
@@ -69,6 +71,8 @@ The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" by
 ### The Phoenix Project Key Concepts
 
 <!-- TODO: Add summary of key concepts -->
+
+<PageBreak />
 
 ## The DevOps Handbook
 

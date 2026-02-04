@@ -24,6 +24,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 > Note - for any issues with the above, follow the 'Upgrade with npm-windows-upgrade' part of the <a href="https://stackoverflow.com/a/31520672" target="_blank">this link</a>
 
+<PageBreak />
+
 ## Yarn
 
 <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white" alt="Yarn" />
@@ -36,6 +38,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 
 - `yarn --version` - Check the current installed version of yarn
 - `npm install -g yarn@v1.22.19` - Install globally a specific version of yarn (check <a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">Yarn Windows Releases</a> for the latest version)
+
+<PageBreak />
 
 ## PNPM
 
@@ -55,7 +59,9 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 - <a href="https://pnpm.io/" target="_blank">Link</a> to all documentation
 - <a href="https://javascript.plainenglish.io/what-is-pnpm-why-you-should-try-it-as-a-frontend-developer-8dc3853c1ba1" target="_blank">Introduction article</a>
 
-## Node
+<PageBreak />
+
+## Node.js
 
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=black" alt="Node.js" />
 

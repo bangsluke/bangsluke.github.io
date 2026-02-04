@@ -7,7 +7,55 @@ description: Resources and guide for the development of the software
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-## HTML
+## Framework-specific Development Tips
+
+### React
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+
+- Hooks
+  - <a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
+  - <a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
+- Optimisations
+  - <a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
+- Routing
+  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
+- Context
+  - <a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You're Using Context Providers the Wrong Way! Here's How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
+- Other References/Links
+  - <a href="https://github.com/bradtraversy/50projects50days" target="_blank">50 projects in 50 days</a> - 50 projects in 50 days
+  - <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
+    - (1) Use of Absolute Paths Instead of Relative Paths
+      - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
+    - (4) Proper File Naming Conventions
+  - <a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
+
+### Vite
+
+<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+
+- Routing
+  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
+
+### Next.js
+
+<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+
+- <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
+- <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
+- <a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
+- <a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
+- <a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
+- <a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
+- <a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
+- <a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
+- <a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn't know about Next.js</a>
+
+<PageBreak />
+
+## Language-specific Development Tips
+
+### HTML
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
 
@@ -61,11 +109,11 @@ description: Resources and guide for the development of the software
     - “send”: Indicates that a message or other type of text will be sent, suitable for chat or mail applications. 📤
 - Use the correct HTML `<input type="">` attribute for the correct input type. There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">22 HTML input types</a>.
 
-## CSS
+### CSS
 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
 
-### CSS Tips
+#### CSS Tips
 
 - Add smooth scrolling (in CSS file);
 
@@ -77,7 +125,7 @@ description: Resources and guide for the development of the software
 
 **Recommendations:** (from <a href="https://www.robinwieruch.de/react-libraries/" target="_blank">Robin Wieruch</a>)
 
-### CSS-in-CSS
+#### CSS-in-CSS
 
 - CSS Modules - CSS Modules give you a way to encapsulate your CSS into component co-located modules. This way, styles don't leak accidentally into other components:
 
@@ -90,7 +138,7 @@ description: Resources and guide for the development of the software
     </h1>
   ```
 
-### Utility-First-CSS
+#### Utility-First-CSS
 
 - Tailwind CSS - <a href="https://tailwindcss.com/" target="_blank">https://tailwindcss.com/</a>
 
@@ -101,7 +149,7 @@ const Headline = ({ title }) =>
   </h1>
 ```
 
-### CSS-in-JS
+#### CSS-in-JS
 
 Personally I'd not recommended runtime CSS-in-JS anymore due to performance and other problems in server-side environments
 
@@ -121,48 +169,9 @@ const Headline = ({ title }) =>
   </BlueHeadline>
 ```
 
-## Security and Authentication
+<PageBreak />
 
-### Security
-
-- Set up repository security scanning via Snyk
-  - Add the project to Snyk <a href="https://app.snyk.io/org/bangsluke/projects" target="_blank">here</a>
-  - Check and close off all vulnerabilities
-
-### Authentication
-
-- Next.js
-  - NextAuth
-    - <a href="https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4" target="_blank">Medium Link</a>
-    - <a href="https://www.freecodecamp.org/news/secure-next-js-applications-with-role-based-authentication-using-nextauth/" target="_blank">Freecodecamp Tutorial</a>
-  - Auth0
-    - <a href="https://auth0.com/" target="_blank">Auth0 documentation</a>
-- For other authentication, consider using the following resources;
-  - <a href="https://levelup.gitconnected.com/say-goodbye-to-authentication-headaches-with-propelauth-the-ultimate-solution-for-developers-b5cdad57d7d2" target="_blank">PropelAuth</a>
-  - <a href="https://logto.io/?ref=console" target="_blank">Logto Auth</a>
-  - <a href="https://firebase.google.com/" target="_blank">Firebase</a>
-
-## Analytics
-
-- Set up analytics for the project if it requires it. Ask AI to define the best solution, however possible options include:
-  - <a href="https://umami.is/" target="_blank">Umami</a>
-    - Benefits including being self-hosted, no tracking of users, no cookies, no data collection, no data sharing, no data selling
-  - <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
-    - Benefits including being free, easy to set up, and has a lot of features
-  - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
-
-## Internationalisation (i18n)
-
-- <a href="https://react.i18next.com/" target="_blank">i18n React</a> - i18n React components
-  - <a href="https://translate.i18next.com/" target="_blank">i18next</a> - i18next website
-
-## Documentation
-
-- Set up documentation for the project via a README.md file
-- Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a>
-- Ensure that there is a Cursor rule for keeping the documentation up to date
-
-## Recommended Libraries & Tools
+## Recommended Libraries & Tools {#recommended-libraries-tools}
 
 ### State Management
 
@@ -272,49 +281,56 @@ In order of recommendation:
   - <a href="https://github.com/public-apis/public-apis" target="_blank">Public APIs</a> - A collective list of free APIs
   - <a href="https://www.postman.com/" target="_blank">Postman</a> - API testing tool
 
-## Framework-specific Development Tips
+<PageBreak />
 
-### React
+## Security and Authentication
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+### Security
 
-- Hooks
-  - <a href="https://medium.com/@Chris1993/15-useful-custom-react-hooks-for-your-next-web-app-c5902d868f4c" target="_blank">15 Useful Custom React Hooks for Your Next Web App</a>
-  - <a href="https://github.com/juliencrn/usehooks-ts" target="_blank">usehooks-ts - A Collection of Essential React Hooks</a>
-- Optimisations
-  - <a href="https://blog.bitsrc.io/tips-for-optimizing-react-performance-890f2b3a36d7" target="_blank">Optimizing React Performance</a>
-- Routing
-  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
-- Context
-  - <a href="https://medium.com/devlander/youre-using-context-providers-the-wrong-way-heres-how-to-fix-it-c91247b6e828" target="_blank">You're Using Context Providers the Wrong Way! Here's How to Fix It | by Landon Johnson | devlander | Nov, 2024 | Medium</a>
-- Other References/Links
-  - <a href="https://github.com/bradtraversy/50projects50days" target="_blank">50 projects in 50 days</a> - 50 projects in 50 days
-  - <a href="https://medium.com/@renanolovics/10-best-practices-in-front-end-development-react-5277a671e2df" target="_blank">10 Best Practices in Front End Development</a>
-    - (1) Use of Absolute Paths Instead of Relative Paths
-      - Change `import { Button } from '../../../../components/Button'` to `import { Button } from '@/components/Button'`
-    - (4) Proper File Naming Conventions
-  - <a href="https://medium.com/@Choco23/6-ways-to-get-data-in-react-528dd11f267" target="_blank">6 ways of getting data into React</a>
+- Set up repository security scanning via Snyk
+  - Add the project to Snyk <a href="https://app.snyk.io/org/bangsluke/projects" target="_blank">here</a>
+  - Check and close off all vulnerabilities
 
-### Vite
+### Authentication
 
-<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+- Next.js
+  - NextAuth
+    - <a href="https://levelup.gitconnected.com/the-ultimate-guide-to-next-js-authentication-with-nextauth-js-ff6dc0c126e4" target="_blank">Medium Link</a>
+    - <a href="https://www.freecodecamp.org/news/secure-next-js-applications-with-role-based-authentication-using-nextauth/" target="_blank">Freecodecamp Tutorial</a>
+  - Auth0
+    - <a href="https://auth0.com/" target="_blank">Auth0 documentation</a>
+- For other authentication, consider using the following resources;
+  - <a href="https://levelup.gitconnected.com/say-goodbye-to-authentication-headaches-with-propelauth-the-ultimate-solution-for-developers-b5cdad57d7d2" target="_blank">PropelAuth</a>
+  - <a href="https://logto.io/?ref=console" target="_blank">Logto Auth</a>
+  - <a href="https://firebase.google.com/" target="_blank">Firebase</a>
 
-- Routing
-  - Use TanStack Router - <a href="https://tanstack.com/router/v1/docs/overview" target="_blank">https://tanstack.com/router/v1/docs/overview</a>
+<PageBreak />
 
-### Next.js
+## Internationalisation (i18n)
 
-<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+- <a href="https://react.i18next.com/" target="_blank">i18n React</a> - i18n React components
+  - <a href="https://translate.i18next.com/" target="_blank">i18next</a> - i18next website
 
-- <a href="https://medium.com/@halilatilla/removing-console-logs-in-next-js-projects-c55713a9f635" target="_blank">Removing Console Logs in Next.js</a>
-- <a href="https://levelup.gitconnected.com/mastering-error-and-loading-pages-in-next-js-13-best-practices-and-strategies-328e2622e526" target="_blank">Mastering Error and Loading pages</a>
-- <a href="https://levelup.gitconnected.com/handling-images-in-next-js-14-281d67ccad36" target="_blank">Handling images in Next.js 14</a>
-- <a href="https://stackoverflow.com/questions/74649324/next-image-hostname-is-not-configured-under-images-in-your-next-config-j" target="_blank">Adding unconfigured image hostname to next.config.js</a>
-- <a href="https://dev.to/nevodavid/top-12-libraries-for-your-nextjs-project-1oob" target="_blank">Top 12 Libraries for Your Next.js Project</a>
-- <a href="https://levelup.gitconnected.com/how-to-use-cors-in-next-js-14-b95a1c116797" target="_blank">How to use CORS in Next.js 14</a>
-- <a href="https://blog.webdevsimplified.com/2024-01/next-js-app-router-cache/" target="_blank">A guide to caching in Next.js</a>
-- <a href="https://codedrivendevelopment.com/posts/rarely-known-nextjs-features?utm_source=tldrwebdev" target="_blank">Advanced features of Next.js</a>
-- <a href="https://javascript.plainenglish.io/things-you-dont-know-about-next-js-02ee54cb5b7f" target="_blank">Things you didn't know about Next.js</a>
+<PageBreak />
+
+## Documentation
+
+- Set up documentation for the project via a README.md file
+- Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a>
+- Ensure that there is a Cursor rule for keeping the documentation up to date
+
+<PageBreak />
+
+## Analytics
+
+- Set up analytics for the project if it requires it. Ask AI to define the best solution, however possible options include:
+  - <a href="https://umami.is/" target="_blank">Umami</a>
+    - Benefits including being self-hosted, no tracking of users, no cookies, no data collection, no data sharing, no data selling
+  - <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
+    - Benefits including being free, easy to set up, and has a lot of features
+  - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
+
+<PageBreak />
 
 ## Issues and Debugging
 
@@ -333,6 +349,8 @@ In order of recommendation:
     'SidebarItem' cannot be used as a JSX component.   Its type '(props: SidebarLink) => Element' is not a valid JSX element type.     Type '(props: SidebarLink) => Element' is not assignable to type '(props: any, deprecatedLegacyContext?: any) => ReactNode'.       Type 'Element' is not assignable to type 'ReactNode'.         Property 'children' is missing in type 'Element' but required in type 'ReactPortal'.
     ```
     Solution <a href="https://stackoverflow.com/a/75093164" target="_blank">link</a>
+
+<PageBreak />
 
 ## Deployment
 

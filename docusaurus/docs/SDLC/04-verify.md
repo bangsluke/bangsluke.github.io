@@ -20,7 +20,7 @@ Testing identifies gaps, errors, or missing requirements contrary to the actual 
 - **Performance Testing:** Checking speed, responsiveness, and stability under load.
 - **Security Testing:** Ensuring the application is secure against threats.
 
-### Key Deliverables
+### Testing Key Deliverables
 
 - Test Plans and Test Cases
 - Bug Reports

@@ -17,7 +17,7 @@ description: OpenAI and ChatGPT and other AI tools
 - <a href="https://openai.com/" target="_blank">OpenAI Website</a>
 - <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI API</a>
 
-## ChatGPT Prompts
+### ChatGPT Prompts
 
 <img src="https://img.shields.io/badge/ChatGPT-74AA9C?style=for-the-badge&logo=openaigym&logoColor=white" alt="ChatGPT" />
 

@@ -55,6 +55,8 @@ description: Links and resources for the testing of the software
 
 - For E2E tests, use a testing library such as <a href="https://playwright.dev/" target="_blank">Playwright</a> or <a href="https://www.cypress.io/" target="_blank">Cypress</a>
 
+<PageBreak />
+
 ## Performance Testing
 
 - Before releasing the project, test the performance of the project using these tools:

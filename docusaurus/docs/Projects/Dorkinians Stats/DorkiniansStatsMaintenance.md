@@ -32,6 +32,8 @@ slug: /projects/dorkinians-stats/maintenance
   - [Adding an Opposition Team](#adding-an-opposition-team)
 - [Useful Links](#useful-links)
 
+<PageBreak />
+
 ## To Do List
 
 ### Thursday
@@ -52,6 +54,8 @@ slug: /projects/dorkinians-stats/maintenance
 - Post the Fantasy Player of the Month - by screenshotting the player below the TOTW
 
 > [Back to top](#table-of-contents)
+
+<PageBreak />
 
 ## Sheet Links
 
@@ -84,18 +88,20 @@ There is no need to view the second link - Online Stats, unless something has go
 
 > [Back to top](#table-of-contents)
 
+<PageBreak />
+
 ## Details
 
 ### Sheets to maintain
 
 There are only a few sheets that should ever need to be maintained, listed below.
 
-| Google Sheet | Sheet Name | Maintenance Needed |
-| --- | --- | --- |
-| Dorkinians Stats 2016-25 | Control Panel | [Read regularly to check stat completion](#control-panel) |
-| Dorkinians Stats 2016-25 | Fixtures List | Update weekly with fixtures and results |
-| Dorkinians Stats 2016-25 | Players List | [Update infrequently when a new player is to be added](#adding-a-player) |
-| Dorkinians Stats 2016-25 | Lookup | [Update infrequently when a new opposition team is to be added](#adding-an-opposition-team) |
+| Google Sheet             | Sheet Name    | Maintenance Needed                                                                          |
+| ------------------------ | ------------- | ------------------------------------------------------------------------------------------- |
+| Dorkinians Stats 2016-25 | Control Panel | [Read regularly to check stat completion](#control-panel)                                   |
+| Dorkinians Stats 2016-25 | Fixtures List | Update weekly with fixtures and results                                                     |
+| Dorkinians Stats 2016-25 | Players List  | [Update infrequently when a new player is to be added](#adding-a-player)                    |
+| Dorkinians Stats 2016-25 | Lookup        | [Update infrequently when a new opposition team is to be added](#adding-an-opposition-team) |
 
 All other documents and sheets should work without needing updates, or will need Luke's help to fix.
 
@@ -115,24 +121,26 @@ Each column provides a specific error type to help debug where to look.
 Each team stat sheet has this detail on the first tab of their document
 :::
 
-| Abbreviation | Full Name | Explanation |
-|---|---|---|
-|MIN|Appearance Minutes|The number of minutes that the player played. Go up to 120 minutes if extra time played.|
-|CLASS|Position Class|The position that the player played the majority of the game in. Can either be "GK", "DEF", "MID" or "FWD". Up to the captains to decide what position they feel their players played in.|
-|MOM|Man of the Match|The player who won man of the match. You are allowed more than 1 if required but we prefer 1.|
-|G|Goals|The number of goals scored by the player. Please don't include penalties in this as there is a separate stat for that.|
-|A|Assists|The number of assists that the player achieved.|
-|Y|Yellows|The number of yellow cards that a player can get. Can only be 1 or 0. If two yellows, please select 0 and add 1 red. Sin bins count as yellows.|
-|R|Reds|The number of red cards that a player can get. Can only be 1 or 0.|
-|SAVES|Saves|The number of clear big saves by the keeper. Please add for memorable big saves in the game.|
-|OG|Own Goals|The number of own goals scored by the player.|
-|PSC|Penalties Scored|The number of penalties scored by the player.|
-|PM|Penalties Missed|The number of penalties missed by the player.|
-|PCO|Penalties Conceded|The number of penalties conceded by the player.|
-|PSV|Penalties Saved|The number of penalties saved by the player.|
-|OPPO OG|Opposition Own Goals|For opposition own goals, please contact Luke Bangs or Oli Goddard to have them logged correctly.|
+| Abbreviation | Full Name            | Explanation                                                                                                                                                                               |
+| ------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MIN          | Appearance Minutes   | The number of minutes that the player played. Go up to 120 minutes if extra time played.                                                                                                  |
+| CLASS        | Position Class       | The position that the player played the majority of the game in. Can either be "GK", "DEF", "MID" or "FWD". Up to the captains to decide what position they feel their players played in. |
+| MOM          | Man of the Match     | The player who won man of the match. You are allowed more than 1 if required but we prefer 1.                                                                                             |
+| G            | Goals                | The number of goals scored by the player. Please don't include penalties in this as there is a separate stat for that.                                                                    |
+| A            | Assists              | The number of assists that the player achieved.                                                                                                                                           |
+| Y            | Yellows              | The number of yellow cards that a player can get. Can only be 1 or 0. If two yellows, please select 0 and add 1 red. Sin bins count as yellows.                                           |
+| R            | Reds                 | The number of red cards that a player can get. Can only be 1 or 0.                                                                                                                        |
+| SAVES        | Saves                | The number of clear big saves by the keeper. Please add for memorable big saves in the game.                                                                                              |
+| OG           | Own Goals            | The number of own goals scored by the player.                                                                                                                                             |
+| PSC          | Penalties Scored     | The number of penalties scored by the player.                                                                                                                                             |
+| PM           | Penalties Missed     | The number of penalties missed by the player.                                                                                                                                             |
+| PCO          | Penalties Conceded   | The number of penalties conceded by the player.                                                                                                                                           |
+| PSV          | Penalties Saved      | The number of penalties saved by the player.                                                                                                                                              |
+| OPPO OG      | Opposition Own Goals | For opposition own goals, please contact Luke Bangs or Oli Goddard to have them logged correctly.                                                                                         |
 
 > [Back to top](#table-of-contents)
+
+<PageBreak />
 
 ## How the stats site works
 
@@ -145,6 +153,8 @@ The website then reads in this data every time it loads, which is why the loadin
 - The site is hosted on Netlify (<a href="https://app.netlify.com/sites/dorkinians-stats-site/overview" target="_blank">https://app.netlify.com/sites/dorkinians-stats-site/overview</a>) - a website hosting site
 - The code is hosted on GitHub (<a href="https://github.com/bangsluke/Dorkinians-Dev-Site" target="_blank">https://github.com/bangsluke/Dorkinians-Dev-Site</a>)
 - The domain name "https://www.dorkiniansfcstats.co.uk/" is bought and owned for the next three years, expiring on 14/11/2026.
+
+<PageBreak />
 
 ## Debugging Stats Problems
 
@@ -166,13 +176,13 @@ The below section explains what each error means. These errors will be displayed
 Each team stat sheet has this detail on the first tab of their document
 :::
 
-|Error|Explanation|
-|---|---|
-|BLANK ERROR|A blank error means that one of the key bits of information for a player is missing (either name, date - match, APP or CLASS). Add the missing detail to clear the error.|
-|NAME ERROR|A name error means that the entered player name doesn't exist in the Dorkinians list of players. Try alternative names/spellings if you think this player should exist. If you think this is a new player, please contact your Stats Master to add the name.|
-|MOM ERROR|An MoM error means that the current match doesn't have a MoM assigned to it. We prefer to have one. If you definitely don't have one, you can overrule the flagged error on the Games Checker tab.|
-|GOALS ERROR|A goals error means that the number of goals listed as being scored by the Dorkinians team on the Games Checker tab doesn't align with the number of goals awarded on the stats. Check the number of goals are correct. If the Games Checker tab is an incorrect scoreline, contact your stats master. If one of the goals Dorkinians scored was an opposition own goal, record that on the Games Checker tab.|
-|DUPLICATE NAME ERROR|A duplicate name error means that you have the same player listed twice against a fixture. Check this. If there is definitely not a mistake, you can overrule the flagged error on the Games Checker tab.|
+| Error                | Explanation                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BLANK ERROR          | A blank error means that one of the key bits of information for a player is missing (either name, date - match, APP or CLASS). Add the missing detail to clear the error.                                                                                                                                                                                                                                      |
+| NAME ERROR           | A name error means that the entered player name doesn't exist in the Dorkinians list of players. Try alternative names/spellings if you think this player should exist. If you think this is a new player, please contact your Stats Master to add the name.                                                                                                                                                   |
+| MOM ERROR            | An MoM error means that the current match doesn't have a MoM assigned to it. We prefer to have one. If you definitely don't have one, you can overrule the flagged error on the Games Checker tab.                                                                                                                                                                                                             |
+| GOALS ERROR          | A goals error means that the number of goals listed as being scored by the Dorkinians team on the Games Checker tab doesn't align with the number of goals awarded on the stats. Check the number of goals are correct. If the Games Checker tab is an incorrect scoreline, contact your stats master. If one of the goals Dorkinians scored was an opposition own goal, record that on the Games Checker tab. |
+| DUPLICATE NAME ERROR | A duplicate name error means that you have the same player listed twice against a fixture. Check this. If there is definitely not a mistake, you can overrule the flagged error on the Games Checker tab.                                                                                                                                                                                                      |
 
 :::tip
 If after all, you're sure that the stats are right on a sheet, either for a line on one of the year tabs, or for a full match on the `Games Checker` tab, you can change the `Overrule Checker` to be "Mark As Ok". This will clear the errors but should be used as a last resort
@@ -226,6 +236,8 @@ This is how I calculate distance travelled for players
 </a>
 
 > [Back to top](#table-of-contents)
+
+<PageBreak />
 
 ## Useful Links
 

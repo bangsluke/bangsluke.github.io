@@ -20,6 +20,8 @@ description: Details on the TOTW page and sub-pages of the Dorkinians Website
   - [This Months Top Players](#this-months-top-players)
   - [This Month FTP Ranking and This Season FTP Ranking](#this-month-ftp-ranking-and-this-season-ftp-ranking)
 
+<PageBreak />
+
 ## Overview
 
 The TOTW (Team of the Week) section displays the best performing players each week and monthly top players.
@@ -41,6 +43,8 @@ Team of the Week is calculated based on fantasy points earned in each match, wit
 
 > [Back to Table of Contents](#table-of-contents)
 
+<PageBreak />
+
 ## Navigation
 
 The TOTW section has two main sub-pages:
@@ -53,6 +57,8 @@ Navigate between the sub-pages on mobile devices by swiping left or right on the
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Team of the Week
 
@@ -131,6 +137,8 @@ The Team of the Week is selected based on a fantasy points system. Points are aw
 | Penalty Saved    | 5 points                                                                                   |
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Players of the Month
 

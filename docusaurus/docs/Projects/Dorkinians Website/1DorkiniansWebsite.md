@@ -23,6 +23,8 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
 - [Club Info Page Documentation](5ClubInfoPage.md)
 - [Settings Page Documentation](6SettingsPage.md)
 
+<PageBreak />
+
 ## Table of Contents
 
 - [Quick Links](#quick-links)
@@ -37,11 +39,15 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
   - [Settings](#settings)
 - [Dorkinians Website Useful Links](#dorkinians-website-useful-links)
 
+<PageBreak />
+
 ## Overview
 
 The Dorkinians Website is a mobile-first Progressive Web App (PWA) that provides comprehensive statistics and information about Dorkinians Football Club. The app features a chatbot interface, detailed player, team, and club statistics, Team of the Week displays, and club information.
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Navigation
 
@@ -65,6 +71,8 @@ There is also an easy navigation feature on the [Settings Page](6SettingsPage.md
 On desktop devices, a persistent sidebar navigation is available on the left side of the screen, providing quick access to all main pages and sub-pages.
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Site Pages
 
@@ -194,6 +202,8 @@ The Settings page provides PWA installation options, links to help documentation
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+
+<PageBreak />
 
 ## Dorkinians Website Useful Links
 

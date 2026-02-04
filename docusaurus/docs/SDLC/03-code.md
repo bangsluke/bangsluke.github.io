@@ -19,7 +19,7 @@ This is typically the longest phase of the SDLC.
 - **Code Review:** Peer reviews to ensure code quality, readability, and adherence to standards.
 - **Documentation:** Writing inline comments and documentation for APIs.
 
-### Key Deliverables
+### Development Key Deliverables
 
 - Source Code
 - Unit Test Results

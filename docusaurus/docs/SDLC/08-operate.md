@@ -10,7 +10,7 @@ sidebar_position: 8
 
 The **Operate** phase involves the day-to-day running of the software. This is where the value is delivered to the user.
 
-## Operations & Reliability
+## Operations & Reliability {#operations-reliability}
 
 The goal is to ensure high availability, reliability, and performance.
 
@@ -19,7 +19,7 @@ The goal is to ensure high availability, reliability, and performance.
 - **Chaos Engineering:** Proactively testing system resilience by simulating failures.
 - **Security Operations (SecOps):** Defending against active threats.
 
-### Key Deliverables
+### Operations Key Deliverables
 
 - Service Level Agreements (SLAs) Reports
 - Incident Reports
