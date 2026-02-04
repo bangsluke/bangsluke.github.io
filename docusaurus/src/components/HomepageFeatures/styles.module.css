@@ -23,12 +23,16 @@
   align-items: center;
   transition: all 0.2s ease-in-out;
   height: 100%; /* Fill the column height */
+  text-decoration: none !important; /* Prevent underline */
+  color: inherit !important; /* Keep text color */
+  cursor: pointer;
 }
 
 .featureCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--ifm-global-shadow-md);
   border-color: var(--ifm-color-primary);
+  text-decoration: none !important;
 }
 
 .featureSvgContainer {
