@@ -1,0 +1,336 @@
+---
+trigger: glob
+globs: "**/*.js", "**/*.mjs"
+---
+
+---
+
+description: Modern JavaScript (ES6+) best practices and patterns
+globs:
+
+- "\*_/_.js"
+- "\*_/_.mjs"
+
+---
+
+# JavaScript Best Practices
+
+## Modern Syntax
+
+### Variable Declarations
+
+```javascript
+// Use const by default
+const config = { port: 3000 };
+
+// Use let only when reassignment is needed
+let counter = 0;
+counter++;
+
+// Never use var
+```
+
+### Arrow Functions
+
+```javascript
+// Prefer arrow functions for callbacks
+const doubled = numbers.map((n) => n * 2);
+
+// Use regular functions for methods that need 'this'
+const obj = {
+  name: "example",
+  getName() {
+    return this.name;
+  },
+};
+```
+
+### Template Literals
+
+```javascript
+// Use template literals for string interpolation
+const message = `Hello, ${name}! You have ${count} messages.`;
+
+// Multi-line strings
+const html = `
+  <div>
+    <h1>${title}</h1>
+  </div>
+`;
+```
+
+---
+
+## Destructuring
+
+### Object Destructuring
+
+```javascript
+// Extract properties
+const { name, email, age = 0 } = user;
+
+// Rename properties
+const { name: userName, email: userEmail } = user;
+
+// Nested destructuring
+const {
+  address: { city, country },
+} = user;
+```
+
+### Array Destructuring
+
+```javascript
+// Basic
+const [first, second, ...rest] = items;
+
+// Skip elements
+const [, , third] = items;
+
+// Swap values
+[a, b] = [b, a];
+```
+
+### Function Parameters
+
+```javascript
+// Destructure in parameters
+function createUser({ name, email, role = "user" }) {
+  return { name, email, role };
+}
+
+// With defaults
+function config({ port = 3000, host = "localhost" } = {}) {
+  return { port, host };
+}
+```
+
+---
+
+## Spread and Rest
+
+### Spread Operator
+
+```javascript
+// Clone arrays
+const copy = [...original];
+
+// Merge arrays
+const combined = [...arr1, ...arr2];
+
+// Clone objects
+const clone = { ...original };
+
+// Merge objects (later properties override)
+const merged = { ...defaults, ...options };
+```
+
+### Rest Parameters
+
+```javascript
+// Collect remaining arguments
+function log(message, ...args) {
+  console.log(message, ...args);
+}
+
+// Collect remaining properties
+const { id, ...rest } = object;
+```
+
+---
+
+## Async Patterns
+
+### Async/Await
+
+```javascript
+// Always use async/await over raw promises
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    throw error;
+  }
+}
+```
+
+### Parallel Execution
+
+```javascript
+// Run independent async operations in parallel
+const [users, posts] = await Promise.all([fetchUsers(), fetchPosts()]);
+
+// Handle partial failures
+const results = await Promise.allSettled([fetchUsers(), fetchPosts()]);
+```
+
+### Error Handling
+
+```javascript
+// Wrap async operations in try-catch
+async function processData() {
+  try {
+    const data = await fetchData();
+    return transform(data);
+  } catch (error) {
+    // Handle or rethrow with context
+    throw new Error(`Processing failed: ${error.message}`);
+  }
+}
+```
+
+---
+
+## Modules
+
+### Named Exports
+
+```javascript
+// Prefer named exports for utilities
+export function formatDate(date) { ... }
+export function parseDate(string) { ... }
+
+// Import specific functions
+import { formatDate, parseDate } from './dateUtils';
+```
+
+### Default Exports
+
+```javascript
+// Use default for main component/class per file
+export default function MyComponent() { ... }
+
+// Import
+import MyComponent from './MyComponent';
+```
+
+### Re-exports
+
+```javascript
+// Create barrel files for cleaner imports
+// index.js
+export { default as Button } from "./Button";
+export { default as Input } from "./Input";
+export * from "./utils";
+```
+
+---
+
+## JSDoc Documentation
+
+### Function Documentation
+
+```javascript
+/**
+ * Fetches user data from the API
+ * @param {string} userId - The user's unique identifier
+ * @param {Object} [options] - Optional configuration
+ * @param {boolean} [options.includeProfile=false] - Include profile data
+ * @returns {Promise<Object>} The user data
+ * @throws {Error} If the user is not found
+ */
+async function getUser(userId, options = {}) {
+  // implementation
+}
+```
+
+### Type Definitions
+
+```javascript
+/**
+ * @typedef {Object} User
+ * @property {string} id - Unique identifier
+ * @property {string} name - Display name
+ * @property {string} email - Email address
+ * @property {Date} createdAt - Account creation date
+ */
+
+/**
+ * @param {User} user
+ * @returns {string}
+ */
+function formatUserName(user) {
+  return user.name;
+}
+```
+
+---
+
+## Array Methods
+
+### Prefer Functional Methods
+
+```javascript
+// Filter
+const adults = users.filter((user) => user.age >= 18);
+
+// Map
+const names = users.map((user) => user.name);
+
+// Find
+const admin = users.find((user) => user.role === "admin");
+
+// Some/Every
+const hasAdmin = users.some((user) => user.role === "admin");
+const allVerified = users.every((user) => user.verified);
+
+// Reduce (use sparingly, prefer explicit loops for complex logic)
+const total = items.reduce((sum, item) => sum + item.price, 0);
+```
+
+### Chaining
+
+```javascript
+// Chain methods for transformations
+const result = users
+  .filter((user) => user.active)
+  .map((user) => user.name)
+  .sort();
+```
+
+---
+
+## Error Handling
+
+### Custom Errors
+
+```javascript
+class ValidationError extends Error {
+  constructor(message, field) {
+    super(message);
+    this.name = "ValidationError";
+    this.field = field;
+  }
+}
+
+// Usage
+throw new ValidationError("Email is required", "email");
+```
+
+### Defensive Coding
+
+```javascript
+// Validate inputs early
+function processUser(user) {
+  if (!user) {
+    throw new Error("User is required");
+  }
+  if (!user.email) {
+    throw new Error("User email is required");
+  }
+  // process...
+}
+
+// Use optional chaining
+const city = user?.address?.city ?? "Unknown";
+
+// Nullish coalescing
+const port = config.port ?? 3000;
+```
+
+---
