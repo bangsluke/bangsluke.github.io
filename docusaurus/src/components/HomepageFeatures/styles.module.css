@@ -28,7 +28,8 @@
   cursor: pointer;
 }
 
-.featureCard:hover {
+.featureCard:hover,
+.featureCardActive {
   transform: translateY(-5px);
   box-shadow: var(--ifm-global-shadow-md);
   border-color: var(--ifm-color-primary);

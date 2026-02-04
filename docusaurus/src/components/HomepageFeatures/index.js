@@ -89,14 +89,30 @@ const ExternalLinks = [
 ];
 
 function Feature({Svg, title, description, link}) {
+  const [isActive, setIsActive] = React.useState(false);
+  const isTouch = React.useRef(false);
+
   return (
     <div className={clsx('col col--4', styles.featureCol)}>
        <a 
          href={link} 
-         className={styles.featureCard}
+         className={clsx(styles.featureCard, isActive && styles.featureCardActive)}
          target={link.startsWith('http') ? '_blank' : '_self'} 
          rel={link.startsWith('http') ? "noopener noreferrer" : undefined}
-       >
+         onTouchStart={() => {
+            isTouch.current = true;
+         }}
+         onClick={(e) => {
+             // If it was a touch event and not yet active
+             if (isTouch.current && !isActive) {
+                 e.preventDefault();
+                 setIsActive(true);
+                 // Reset touch flag after a short delay or just let it be
+             }
+             // If active, let it pass (navigate)
+         }}
+         onBlur={() => setIsActive(false)} // Clear active state when focus leaves
+      >
           <div className={styles.featureSvgContainer}>
             <div style={{display:'block', width: '100%', height:'100%'}}>
                 <Svg className={styles.featureSvg} role="img" />
