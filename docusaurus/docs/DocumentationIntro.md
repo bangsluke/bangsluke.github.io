@@ -10,60 +10,16 @@ This site holds all of my documentation for how I've developed my projects and m
 
 ## Quick Links
 
-- [General Documentation](/docs/general-documentation)
 - [Product Management](/docs/product-management)
 - [Software Development Life Cycle](/docs/SDLC)
 - [Project Set Up to Release](/docs/project-set-up-to-release)
 - [Projects](/docs/projects)
+- [General Documentation](/docs/general-documentation)
 - [Useful Links](/docs/useful-links)
 
 <PageBreak />
 
 ## Contents of the Site
-
-### General Documentation
-
-- [Tool Commands/Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts)
-  - [PowerShell Commands](/docs/general-documentation/tool-commands-and-shortcuts#powershell-commands)
-    - [PowerShell Aliases Example](/docs/general-documentation/tool-commands-and-shortcuts#powershell-aliases-example)
-  - [Git Commands](/docs/general-documentation/tool-commands-and-shortcuts#git-commands)
-  - [VS Code Commands](/docs/general-documentation/tool-commands-and-shortcuts#vs-code-commands)
-  - [Chrome Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts#chrome-shortcuts)
-  - [VBA Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts#vba-shortcuts)
-- [OpenAI and ChatGPT](/docs/general-documentation/openai-and-chatgpt)
-  - [OpenAI Links](/docs/general-documentation/openai-and-chatgpt#openai-links)
-  - [ChatGPT Prompts](/docs/general-documentation/openai-and-chatgpt#chatgpt-prompts)
-- [Python](/docs/general-documentation/python)
-  - [Installing Python](/docs/general-documentation/python#installing-python)
-  - [Python Scripts](/docs/general-documentation/python#python-scripts)
-- [Installing and Updating Versions](/docs/general-documentation/installing-and-updating-versions)
-  - [NPM](/docs/general-documentation/installing-and-updating-versions#npm)
-    - [NPM Download](/docs/general-documentation/installing-and-updating-versions#npm-download)
-    - [NPM Updates](/docs/general-documentation/installing-and-updating-versions#npm-updates)
-  - [Yarn](/docs/general-documentation/installing-and-updating-versions#yarn)
-    - [Yarn Download](/docs/general-documentation/installing-and-updating-versions#yarn-download)
-    - [Yarn Updates](/docs/general-documentation/installing-and-updating-versions#yarn-updates)
-  - [PNPM](/docs/general-documentation/installing-and-updating-versions#pnpm)
-    - [PNPM Download](/docs/general-documentation/installing-and-updating-versions#pnpm-download)
-    - [PNPM Updates](/docs/general-documentation/installing-and-updating-versions#pnpm-updates)
-    - [PNPM Documentation](/docs/general-documentation/installing-and-updating-versions#pnpm-documentation)
-  - [Node](/docs/general-documentation/installing-and-updating-versions#nodejs)
-    - [Node Commands](/docs/general-documentation/installing-and-updating-versions#node-commands)
-- [Package Managers](/docs/general-documentation/package-managers)
-  - [NPM](/docs/general-documentation/package-managers#npm)
-    - [NPM Commands](/docs/general-documentation/package-managers#npm-commands)
-  - [Yarn](/docs/general-documentation/package-managers#yarn)
-    - [Yarn Commands](/docs/general-documentation/package-managers#yarn-commands)
-    - [Yarn Package Updates](/docs/general-documentation/package-managers#yarn-package-updates)
-  - [PNPM](/docs/general-documentation/package-managers#pnpm)
-    - [PNPM Commands](/docs/general-documentation/package-managers#pnpm-commands)
-  - [Switching Package Managers](/docs/general-documentation/package-managers#switching-package-managers)
-    - [From NPM to Yarn](/docs/general-documentation/package-managers#from-npm-to-yarn)
-    - [From Yarn to PNPM](/docs/general-documentation/package-managers#from-yarn-to-pnpm)
-- [Git Fixes](/docs/general-documentation/git-fixes)
-  - [Git Errors](/docs/general-documentation/git-fixes#git-errors)
-    - [Error: Unable to load Commits. fatal: bad object desktop.ini](/docs/general-documentation/git-fixes#error-unable-to-load-commits-fatal-bad-object-desktopini)
-    - [Clearing Secrets from History](/docs/general-documentation/git-fixes#clearing-secrets-from-history)
 
 ### Product Management
 
@@ -81,6 +37,8 @@ This site holds all of my documentation for how I've developed my projects and m
   - [The DevOps Handbook](/docs/product-management/research#the-devops-handbook)
     - [The DevOps Handbook Summary](/docs/product-management/research#the-devops-handbook-summary)
     - [The DevOps Handbook Key Concepts](/docs/product-management/research#the-devops-handbook-key-concepts)
+
+<PageBreak />
 
 ### Software Development Life Cycle
 
@@ -113,6 +71,8 @@ This site holds all of my documentation for how I've developed my projects and m
 - [Monitoring and Observability](/docs/SDLC/monitor)
   - [The Three Pillars](/docs/SDLC/monitor#the-three-pillars)
     - [Monitoring Key Deliverables](/docs/SDLC/monitor#monitoring-key-deliverables)
+
+<PageBreak />
 
 ### Project Set Up to Release
 
@@ -192,6 +152,8 @@ This site holds all of my documentation for how I've developed my projects and m
   - [Other General Tests](/docs/project-set-up-to-release/release-checklist#other-general-tests)
   - [GitHub Information](/docs/project-set-up-to-release/release-checklist#github-information)
   - [Other Options](/docs/project-set-up-to-release/release-checklist#other-options)
+
+<PageBreak />
 
 ### Projects
 
@@ -300,6 +262,54 @@ This site holds all of my documentation for how I've developed my projects and m
     - [Check for Updates](/docs/projects/dorkinians-website/settings-page#app-information)
     - [Update Toast](/docs/projects/dorkinians-website/settings-page#app-information)
   - [Version Number](/docs/projects/dorkinians-website/settings-page#version-number)
+
+<PageBreak />
+
+### General Documentation
+
+- [Tool Commands/Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts)
+  - [PowerShell Commands](/docs/general-documentation/tool-commands-and-shortcuts#powershell-commands)
+    - [PowerShell Aliases Example](/docs/general-documentation/tool-commands-and-shortcuts#powershell-aliases-example)
+  - [Git Commands](/docs/general-documentation/tool-commands-and-shortcuts#git-commands)
+  - [VS Code Commands](/docs/general-documentation/tool-commands-and-shortcuts#vs-code-commands)
+  - [Chrome Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts#chrome-shortcuts)
+  - [VBA Shortcuts](/docs/general-documentation/tool-commands-and-shortcuts#vba-shortcuts)
+- [OpenAI and ChatGPT](/docs/general-documentation/openai-and-chatgpt)
+  - [OpenAI Links](/docs/general-documentation/openai-and-chatgpt#openai-links)
+  - [ChatGPT Prompts](/docs/general-documentation/openai-and-chatgpt#chatgpt-prompts)
+- [Python](/docs/general-documentation/python)
+  - [Installing Python](/docs/general-documentation/python#installing-python)
+  - [Python Scripts](/docs/general-documentation/python#python-scripts)
+- [Installing and Updating Versions](/docs/general-documentation/installing-and-updating-versions)
+  - [NPM](/docs/general-documentation/installing-and-updating-versions#npm)
+    - [NPM Download](/docs/general-documentation/installing-and-updating-versions#npm-download)
+    - [NPM Updates](/docs/general-documentation/installing-and-updating-versions#npm-updates)
+  - [Yarn](/docs/general-documentation/installing-and-updating-versions#yarn)
+    - [Yarn Download](/docs/general-documentation/installing-and-updating-versions#yarn-download)
+    - [Yarn Updates](/docs/general-documentation/installing-and-updating-versions#yarn-updates)
+  - [PNPM](/docs/general-documentation/installing-and-updating-versions#pnpm)
+    - [PNPM Download](/docs/general-documentation/installing-and-updating-versions#pnpm-download)
+    - [PNPM Updates](/docs/general-documentation/installing-and-updating-versions#pnpm-updates)
+    - [PNPM Documentation](/docs/general-documentation/installing-and-updating-versions#pnpm-documentation)
+  - [Node](/docs/general-documentation/installing-and-updating-versions#nodejs)
+    - [Node Commands](/docs/general-documentation/installing-and-updating-versions#node-commands)
+- [Package Managers](/docs/general-documentation/package-managers)
+  - [NPM](/docs/general-documentation/package-managers#npm)
+    - [NPM Commands](/docs/general-documentation/package-managers#npm-commands)
+  - [Yarn](/docs/general-documentation/package-managers#yarn)
+    - [Yarn Commands](/docs/general-documentation/package-managers#yarn-commands)
+    - [Yarn Package Updates](/docs/general-documentation/package-managers#yarn-package-updates)
+  - [PNPM](/docs/general-documentation/package-managers#pnpm)
+    - [PNPM Commands](/docs/general-documentation/package-managers#pnpm-commands)
+  - [Switching Package Managers](/docs/general-documentation/package-managers#switching-package-managers)
+    - [From NPM to Yarn](/docs/general-documentation/package-managers#from-npm-to-yarn)
+    - [From Yarn to PNPM](/docs/general-documentation/package-managers#from-yarn-to-pnpm)
+- [Git Fixes](/docs/general-documentation/git-fixes)
+  - [Git Errors](/docs/general-documentation/git-fixes#git-errors)
+    - [Error: Unable to load Commits. fatal: bad object desktop.ini](/docs/general-documentation/git-fixes#error-unable-to-load-commits-fatal-bad-object-desktopini)
+    - [Clearing Secrets from History](/docs/general-documentation/git-fixes#clearing-secrets-from-history)
+
+<PageBreak />
 
 ### Useful Links
 

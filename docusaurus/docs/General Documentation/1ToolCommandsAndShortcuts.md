@@ -11,6 +11,8 @@ description: Tool Commands and Shortcuts across different tools
 
 <img src="https://img.shields.io/badge/PowerShell-0078D4?style=for-the-badge&logo=PowerShell&logoColor=white" alt="PowerShell" />
 
+<PageBreak displayLine={false} size="1rem" />
+
 - To get to PowerShell, you can type `powershell` into the top command line in windows explorer just like `cmd`.
 - Navigating Folders and Files
   - `pwd` - To print the current directory
