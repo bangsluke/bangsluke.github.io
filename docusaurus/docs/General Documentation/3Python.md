@@ -12,7 +12,7 @@ description: Python installation and scripts information
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
 
 - <a href="https://www.python.org/downloads/" target="_blank">Download Python</a>
-- <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">Install pip</a>
+- <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">Install <Tooltip text="pip" definition="The standard package installer for Python; used to add and manage third-party libraries." /></a>
 - <a href="https://stackoverflow.com/a/47808351" target="_blank">Set Python Path</a>
 - Install required packages, e.g;
   - `pip install pyautogui`

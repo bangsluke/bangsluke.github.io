@@ -52,7 +52,7 @@ The Settings page is accessible from the header settings icon (the cog) on any p
 
 The PWA Installation section provides options for installing the Dorkinians Website as a Progressive Web App on your device. This is highly recommended to do so as it provides a more native, app-like experience compared to using it in a browser.
 
-### Install Prompt
+### <Tooltip text="Install prompt" definition="The browser or app dialog that asks the user if they want to add the PWA to their home screen or device." /> {#install-prompt}
 
 The install prompt appears when:
 

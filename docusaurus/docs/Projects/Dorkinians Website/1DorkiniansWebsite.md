@@ -43,7 +43,7 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
 
 ## Overview
 
-The Dorkinians Website is a mobile-first Progressive Web App (PWA) that provides comprehensive statistics and information about Dorkinians Football Club. The app features a chatbot interface, detailed player, team, and club statistics, Team of the Week displays, and club information.
+The Dorkinians Website is a mobile-first <Tooltip text="Progressive Web App (PWA)" definition="Progressive Web App: a web app that can be installed, work offline, and feel like a native app on supported devices." /> that provides comprehensive statistics and information about Dorkinians Football Club. The app features a chatbot interface, detailed player, team, and club statistics, Team of the Week displays, and club information.
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -55,7 +55,7 @@ On mobile devices, the app uses a bottom navigation bar with four main tabs:
 
 - **Home**: Chatbot interface for asking questions and player selection
 - **Stats**: Player, team, and club statistics along with player comparison
-- **TOTW**: Team of the Week and Players of the Month
+- **<Tooltip text="TOTW" definition="Team of the Week: in this app, the weekly selection of top-performing players." />**: Team of the Week and Players of the Month
 - **Club Info**: Club information, league details, captains, awards, and useful links
 
 Within each tab, there can be multiple pages such as on the Stats tab.

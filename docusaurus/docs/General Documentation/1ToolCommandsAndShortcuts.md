@@ -30,7 +30,7 @@ description: Tool Commands and Shortcuts across different tools
   - `rm xxx` - To remove a file
   - `>` - To overwrite a file, e.g. `echo "Hello World" > hello.txt` will overwrite the file hello.txt with "Hello World"
   - `>>` - To append a call to a file, e.g. `echo "Hello World" >> hello.txt` will append "Hello World" to the end of the file hello.txt
-- Aliases
+- **<Tooltip text="Aliases" definition="A short name you define for a command or path so you can run it with fewer keystrokes." />**
   - To open your bash alias file, navigate to the root folder using `cd ~` and then open using `code .bash_aliases`. This should open the file up in VS Code.
   - `alias` - To print all aliases
   - `alias xxx="yyy"` - To create a new alias, e.g. `alias g="git"` will create an alias for git
@@ -109,7 +109,7 @@ Set-Alias coding CodingFunction
 <PageBreak displayLine={false} size="1rem" />
 
 - `Ctrl + P` - Open the file search
-- `Ctrl + Shift + P` - Open the command palette
+- `Ctrl + Shift + P` - Open the <Tooltip text="command palette" definition="A searchable list of editor commands, usually opened with Ctrl+Shift+P." />
 - `Ctrl + D` - Multi select (highlight a word and then press multiple times to select all words to type and replace)
 - `Ctrl + Space` - Autocomplete the word (and auto import)
 - `Ctrl + Shift + K` - Delete the current code line

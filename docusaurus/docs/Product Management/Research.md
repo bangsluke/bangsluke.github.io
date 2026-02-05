@@ -13,7 +13,7 @@ desciption: Summaries of research such as books read on Product Management
 
 ### Accelerate Summary
 
-Accelerate explores what makes top engineering organisations deliver software quickly and reliably, using several years of rigorous DevOps research. The authors show that high performance isn’t about heroics or rigid processes, but about adopting proven technical practices and building a supportive, learning‑focused culture. A major contribution is the [DORA metrics](../product-management/product-management-intro#dora-metrics), which give teams a clear way to measure delivery speed and stability. The book highlights how practices like continuous delivery, automation, trunk‑based development, and psychological safety consistently improve outcomes. Overall, it’s a concise, evidence‑backed guide to creating teams that ship faster, break less, and drive real business impact.
+Accelerate explores what makes top engineering organisations deliver software quickly and reliably, using several years of rigorous DevOps research. The authors show that high performance isn’t about heroics or rigid processes, but about adopting proven technical practices and building a supportive, learning‑focused culture. A major contribution is the [DORA metrics](../product-management/product-management-intro#dora-metrics), which give teams a clear way to measure delivery speed and stability. The book highlights how practices like <Tooltip text="continuous delivery (CD)" definition="Releasing software in a way that allows frequent, reliable deployments to production at any time." />, automation, <Tooltip text="trunk-based development" definition="A branching strategy where developers integrate small, frequent changes into a single main branch (trunk)." />, and <Tooltip text="psychological safety" definition="A team culture where people feel safe to take risks, ask questions, and admit mistakes without fear of blame." /> consistently improve outcomes. Overall, it’s a concise, evidence‑backed guide to creating teams that ship faster, break less, and drive real business impact.
 
 ### Accelerate Key Concepts
 
@@ -38,7 +38,7 @@ Other than the [DORA metrics](../product-management/product-management-intro#dor
 **Product and Process Capabilities:**
 
 11. Gather and implement customer feedback
-12. Make the flow of work visible through the value stream
+12. Make the flow of work visible through the <Tooltip text="value stream" definition="The end-to-end flow of work from idea or request to delivery to the user." />
 13. Work in small batches
 14. Foster and enable team experimentation
 
@@ -47,7 +47,7 @@ Other than the [DORA metrics](../product-management/product-management-intro#dor
 15. Have a lightweight change approval process
 16. Monitor acrosss application and infrastructure to inform business decisions
 17. Check system health proactively
-18. Identify processes and manage work with work-in-process (WIP) limits
+18. Identify processes and manage work with <Tooltip text="WIP limits" definition="Work-in-process limits: caps on how many items can be in progress at once to reduce overload and improve flow." />
 19. Visualize work to monitor quality and communicate throughout the team
 
 **Cultural Capabilities:**

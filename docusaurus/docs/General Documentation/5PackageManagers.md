@@ -19,14 +19,14 @@ For more commands, see this <a href="https://devhints.io/npm" target="_blank">ch
 
 #### NPM Initialization
 
-- `npm init` - Create a new package.json file
+- `npm init` - Create a new <Tooltip text="package.json" definition="A file that lists your project's dependencies, scripts, and metadata for Node.js projects." /> file
 - `npm i` - Can be used as a shortcut for `npm install`
 
 #### NPM Install
 
 - `npm install` - Install all packages
 - `npm install <package>` - Install a package
-- `npm install <package> --save-dev` - Install a package as a dev dependency
+- `npm install <package> --save-dev` - Install a package as a <Tooltip text="dev dependency" definition="A package required only during development or build (e.g. tests, linters), not in production." />
 - `npm install <package> --global` - Install a package globally
 - `npm uninstall <package>` - Uninstall a package
 
@@ -98,7 +98,7 @@ For more commands, see this <a href="https://devhints.io/yarn" target="_blank">c
 
 - Install yarn using `npm i -g yarn` if not already installed
 - Go to the directory where you install packages and run the `yarn` command
-- Yarn will init and create its `yarn.lock` file
+- Yarn will init and create its <Tooltip text="lock file" definition="A file (e.g. yarn.lock, pnpm-lock.yaml) that records exact versions of every dependency for reproducible installs." /> (`yarn.lock`)
 - Now delete `package-lock.json` `*Note`
 - In your `package.json` file replace all npm commands with yarn in "scripts"
 - Run `yarn dev` or whatever command you use for running a yarn script

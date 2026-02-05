@@ -9,10 +9,10 @@ description: A checklist developed to confirm the software is ready for release
 
 Use this checklist tool for each site released - <a href="https://frontendchecklist.io/" target="_blank">frontendchecklist.io</a>
 
-## SEO and Meta Data
+## <Tooltip text="SEO" definition="Search Engine Optimisation: practices that help search engines index and rank your site." /> and Meta Data {#seo-and-meta-data}
 
 - This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
-- Set up meta tags in the index.html file
+- Set up <Tooltip text="meta tags" definition="HTML tags in the head that describe the page (title, description, social preview) for browsers and search engines." /> in the index.html file
   - <a href="https://metatags.io/" target="_blank">metatags.io</a>
   - <a href="https://levelup.gitconnected.com/the-power-of-metadata-in-next-js-13-part-3-optimize-your-websites-seo-now-a64e9fc1f5f9" target="_blank">The Power of Metadata in Next.js 13 (Part 3): Optimize Your Website's SEO NOW!</a>
   - <a href="https://medium.com/@danielcracbusiness/the-power-of-metadata-in-next-js-13-part-2-optimize-your-websites-seo-now-d822c82ba920" target="_blank">The Power of Metadata in Next.js 13 (Part 2): Optimize Your Website's SEO NOW!</a>
@@ -32,7 +32,7 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 
 - <a href="https://medium.com/@amareshadak/12-frontend-micro-interactions-that-users-secretly-judge-d0b333165191" target="_blank">12 Frontend Micro-Interactions That Users Secretly Judge</a>
 
-### 404 Page
+### <Tooltip text="404 page" definition="The page shown when a user requests a URL that does not exist on the site." /> {#404-page}
 
 - Create a 404 page for catching routing errors
   - <a href="https://error404.fun/" target="_blank">error404.fun</a>
@@ -51,7 +51,7 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 - Reduce your image sizes
   - <a href="https://medium.com/@arulvalananto/9-image-optimization-tricks-for-a-seamless-web-experience-b41867e87e54" target="_blank">9 Image optimisation techniques</a>
   - Convert all of your jpg and png files to smaller image types such as webp
-  - Lazy Load
+  - <Tooltip text="Lazy load" definition="Loading images or other assets only when they are about to come into view, to improve initial load time." />
     - Lazy load images and videos - add to the image and iframe tags `loading="lazy"`
 - Optimise your data speed
   - <a href="https://medium.com/data-science-community-srm/json-is-incredibly-slow-heres-whats-faster-ca35d5aaf9e8" target="_blank">JSON is incredibly slow, here's what's faster</a>

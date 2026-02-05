@@ -15,7 +15,7 @@ description: OpenAI and ChatGPT and other AI tools
 
 - <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>
 - <a href="https://openai.com/" target="_blank">OpenAI Website</a>
-- <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI API</a>
+- <a href="https://beta.openai.com/docs/api-reference/introduction" target="_blank">OpenAI <Tooltip text="API" definition="Application Programming Interface: a way for programs to talk to a service using requests and responses." /></a>
 
 ### ChatGPT Prompts
 

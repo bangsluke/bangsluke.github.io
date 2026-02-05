@@ -19,8 +19,8 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 ### Front End Architecture
 
 - Considerations:
-  - Single page application or not?
-  - SSR (Server side rendering) or SSG (Static site generation) required?
+  - <Tooltip text="Single page application (SPA)" definition="A web app that loads one HTML page and updates content dynamically with JavaScript instead of full page reloads." /> or not?
+  - <Tooltip text="SSR" definition="Server-Side Rendering: generating HTML on the server for each request so content is ready when the page loads." /> (Server side rendering) or <Tooltip text="SSG" definition="Static Site Generation: building HTML at build time so pages are pre-rendered and served as static files." /> (Static site generation) required?
 - Options:
   - CRA (Create React App)
   - Vite.js
@@ -42,7 +42,7 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 ### Database
 
 - Considerations:
-  - Should it be SQL or non SQL?
+  - Should it be <Tooltip text="SQL" definition="Structured Query Language: a language and type of database that stores data in tables with fixed schemas and relations." /> or <Tooltip text="NoSQL" definition="A broad category of databases that store data in flexible or non-tabular formats (e.g. documents, key-value)." />?
   - How am I going to query my database? Via a client? By the CLI?
   - Consider TypeORM or Prisma for type safe access to your database
 - Options:

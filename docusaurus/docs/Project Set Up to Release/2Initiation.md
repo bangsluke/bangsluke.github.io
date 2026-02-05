@@ -11,7 +11,7 @@ description: The initiation phase of setting up the project
 
 ### Boilerplate Code
 
-- Consider using a boilerplate code to get started, as listed <a href="https://todoist.com/showTask?id=6518989300&sync_id=6518989300" target="_blank">here</a>
+- Consider using <Tooltip text="boilerplate" definition="Starter code or a template project used to begin a new app with a standard structure and config." /> code to get started, as listed <a href="https://todoist.com/showTask?id=6518989300&sync_id=6518989300" target="_blank">here</a>
 
 ### CRA (Create React App)
 
@@ -165,7 +165,7 @@ Structure your components in the following way, using Export Barrelling (point 2
 
   - <a href="https://www.toptal.com/developers/gitignore" target="_blank">Gitignore.io</a> is a great resource to generate a .gitignore file for your project
 
-### .env Files and Variables
+### <Tooltip text=".env" definition="A file (usually not committed) that holds environment-specific variables like API keys and config." /> Files and Variables {#env-files-and-variables}
 
 - To securely store environment variables, create a .env file in the root of the project
 - Then create a .gitignore file in the root of the project and add the .env file to it
@@ -188,7 +188,7 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 > 1. <a href="https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app" target="_blank">Hiding Secret Keys in React</a>
 
-### ESLint and Prettier Config
+### <Tooltip text="ESLint" definition="A tool that analyzes JavaScript/TypeScript code for bugs, style issues, and best-practice violations." /> and <Tooltip text="Prettier" definition="A code formatter that enforces a consistent style (indentation, quotes, line breaks) across the codebase." /> Config {#eslint-and-prettier-config}
 
 <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
 <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier" />
@@ -210,7 +210,7 @@ If using React, consider the following links:
 
 - <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
 
-## GitHub Workflows
+## <Tooltip text="GitHub Workflows" definition="Automated jobs (CI/CD, checks) that run on GitHub when you push, open a PR, or on a schedule." /> {#github-workflows}
 
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 
