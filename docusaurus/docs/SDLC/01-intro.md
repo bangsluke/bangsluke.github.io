@@ -42,3 +42,7 @@ Generative AI is revolutionizing the SDLC by:
 - **Predicting Issues:** Using historical data to foresee risks in planning or deployment.
 - **Accelerating Creation:** Generating code, tests, and configurations near-instantly.
   :::
+
+:::info
+One issue that software teams often face is questions over the positive impact of AI tools. [Jellyfish](https://jellyfish.co/) helps provide productivity insights and usage data to help teams understand the impact of AI tools.
+:::

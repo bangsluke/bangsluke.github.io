@@ -17,7 +17,7 @@ Modern deployment focuses on minimizing downtime and risk.
 - **Infrastructure as Code (IaC):** Managing infrastructure through code rather than manual processes.
 - **Blue/Green Deployment:** Running two identical environments; one is live (Blue), the other (Green) is where you deploy the new version.
 - **Canary Analysis:** Rolling out the change to a small subset of users first.
-- **Orchestration:** Managing the lifecycle of containers (e.g., Kubernetes).
+- **Orchestration:** Managing the lifecycle of containers (e.g., [Kubernetes](https://kubernetes.io/)).
 
 ### Deployment Key Deliverables
 

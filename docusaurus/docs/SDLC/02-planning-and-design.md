@@ -55,3 +55,12 @@ AI is accelerating the transition from concept to blueprint:
 - **Architectural Advice:** AI tools can analyze requirements to suggest optimal system architectures and even creates preliminary code structures (e.g. [Claude Code](https://www.anthropic.com/claude-code)).
 - **Documentation Analysis:** AI can analyze voice transcripts or lengthy discussions on platforms like [Harness](https://harness.io/) or [Bitbucket](https://bitbucket.org/) to extract key design decisions.
   :::
+
+:::info[Case Study: AI in Planning and Design]
+One startup tooling stack was as follows:
+- Figma for designs, which works nicely with Linear. The company has 5 devs and one UX designer.
+- Linear for ticketing and collaborating across UX and development. The UX person creates Linear tickets alongside her Figma designs.
+- Claude Code and Cursor for development, connected to Linear via MCP.
+- Claude Code writes tickets: a recent change which is working nicely with CodeRabbit, as more context is passed downstream for AI code review.
+> <a href="https://newsletter.pragmaticengineer.com/p/measuring-ai-dev-tools#:~:text=Figma%20for%20designs%2C%20which%20works%20nicely%20with%20Linear" target="_blank">Source: The Pragmatic Engineer</a> 
+:::

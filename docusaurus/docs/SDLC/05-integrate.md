@@ -28,7 +28,7 @@ Successful integration ensures that separate components developed by different t
 :::tip[How AI Can Help: Integration]
 AI streamlines specific pain points in integration:
 
-- **Conflict Resolution:** AI can analyze code logic to suggest optimal merge strategies and resolve conflicts (e.g., features in [GitLab](https://about.gitlab.com/) or [GitHub](https://github.com/)).
+- **Conflict Resolution:** AI can analyze code logic to suggest optimal merge strategies and resolve conflicts (e.g., previously mentioned IDEs in the [Code](./03-code.md) section or features in [GitLab](https://about.gitlab.com/) or [GitHub](https://github.com/)).
 - **Smart Builds:** Tools like [Incredibuild](https://www.incredibuild.com/) use AI to distribute build tasks efficiently, significantly reducing build times.
 - **SBOM Management:** AI helps generate and analyze SBOMs for security risks, with tools like [Sonatype Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) and [JFrog Artifactory](https://jfrog.com/artifactory/) providing real-time intelligence on open-source components.
   :::
