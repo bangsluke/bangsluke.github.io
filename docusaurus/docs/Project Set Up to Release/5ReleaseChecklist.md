@@ -7,7 +7,16 @@ description: A checklist developed to confirm the software is ready for release
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
+
+:::info
+See [Release](../SDLC/release) for more information on the release phase of the SDLC.
+:::
+
+## Checklist
+
 Use this checklist tool for each site released - <a href="https://frontendchecklist.io/" target="_blank">frontendchecklist.io</a>
+
+<PageBreak />
 
 ## <Tooltip text="SEO" definition="Search Engine Optimisation: practices that help search engines index and rank your site." /> and Meta Data {#seo-and-meta-data}
 
@@ -126,6 +135,10 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 <PageBreak />
 
 ## GitHub Information
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - Check that the GitHub repo has all the details that it needs, such as:
   - About Section
