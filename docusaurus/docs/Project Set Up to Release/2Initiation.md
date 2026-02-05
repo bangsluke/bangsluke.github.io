@@ -7,6 +7,10 @@ description: The initiation phase of setting up the project
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
+:::info
+See [Code](../SDLC/code) for more information on the code (implementation) phase of the SDLC.
+:::
+
 ## Create the New App
 
 ### Boilerplate Code
@@ -17,6 +21,8 @@ description: The initiation phase of setting up the project
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 
+<PageBreak displayLine={false} size="1rem" />
+
 - `npx create-react-app my-app` - Create a new React app called "my-app"
 - `npx create-react-app my-app --template typescript` - Create a new React app called "my-app" with TypeScript
 - `cd my-app` - Change directory to the new React app
@@ -26,6 +32,8 @@ description: The initiation phase of setting up the project
 ### Vite
 
 <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - To use Vite with Yarn and TypeScript do the following;
   - `yarn create vite my-app --template react-ts`
@@ -40,6 +48,8 @@ description: The initiation phase of setting up the project
 ### Next.js
 
 <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - JavaScript and npm
   - `npx create-next-app@latest` - Create a new Next.JS app (name will be requested)
@@ -61,6 +71,8 @@ description: The initiation phase of setting up the project
 <img src="https://img.shields.io/badge/Git-EA5436?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
 
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - Create a new repository on GitHub
 - In the app terminal, initiate git and push to GitHub (replace the below GitHub URL with your own);
@@ -193,6 +205,8 @@ Structure your components in the following way, using Export Barrelling (point 2
 <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
 <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" alt="Prettier" />
 
+<PageBreak displayLine={false} size="1rem" />
+
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
 - Consider the below references if needed
@@ -206,6 +220,8 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 
+<PageBreak displayLine={false} size="1rem" />
+
 If using React, consider the following links:
 
 - <a href="https://medium.com/@perisicnikola37/dont-use-react-imports-like-this-use-wrapper-pattern-instead-b7a49b864ff4" target="_blank">Don't use React imports like this. Use Wrapper Pattern instead</a> - wrapper to go around library imports
@@ -213,6 +229,8 @@ If using React, consider the following links:
 ## <Tooltip text="GitHub Workflows" definition="Automated jobs (CI/CD, checks) that run on GitHub when you push, open a PR, or on a schedule." /> {#github-workflows}
 
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 - Create the folder structure .github/workflows at the root folder
 - Copy over the workflow .yml files from a good project (e.g. Dorkinians Mobile Stats)
@@ -229,6 +247,8 @@ If using React, consider the following links:
 
 <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
 <img src="https://img.shields.io/badge/Antigravity-2F8EF5?style=for-the-badge&logo=antigravity&logoColor=white" alt="Antigravity" />
+
+<PageBreak displayLine={false} size="1rem" />
 
 If using either Cursor or Antigravity, you will already have a User Rule/Global Rule set up (see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">my Obsidian note on AI Prompts here</a>).
 

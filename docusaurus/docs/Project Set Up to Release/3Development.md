@@ -7,6 +7,10 @@ description: Resources and guide for the development of the software
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
+:::info
+See [Code](../SDLC/code) for more information on the code (implementation) phase of the SDLC.
+:::
+
 ## Framework-specific Development Tips
 
 ### React

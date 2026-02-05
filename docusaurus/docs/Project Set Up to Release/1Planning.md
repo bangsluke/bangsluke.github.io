@@ -7,6 +7,10 @@ description: The planning phase of defining the scope, objectives, and feasibili
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
+:::info
+See [Planning and Design](../SDLC/planning-and-design) for more information on the planning phase of the SDLC.
+:::
+
 ## Decide on Architecture
 
 > If you already have an architecture in mind, jump to [Plan the UI](#plan-the-ui)

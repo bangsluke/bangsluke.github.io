@@ -4,16 +4,6 @@ import styles from './styles.module.css';
 
 const InternalLinks = [
   {
-    title: 'General Documentation',
-    Svg: require('@site/static/img/general-documentation.svg').default,
-    description: (
-      <>
-        General documentation I have accumulated over time
-      </>
-    ),
-    link: '/docs/general-documentation',
-  },
-  {
     title: 'Product Management',
     Svg: require('@site/static/img/product-management.svg').default,
     description: (
@@ -52,6 +42,16 @@ const InternalLinks = [
       </>
     ),
     link: '/docs/projects',
+  },
+  {
+    title: 'General Documentation',
+    Svg: require('@site/static/img/general-documentation.svg').default,
+    description: (
+      <>
+        General documentation I have accumulated over time
+      </>
+    ),
+    link: '/docs/general-documentation',
   },
 ];
 
