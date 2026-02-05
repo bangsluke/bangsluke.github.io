@@ -28,7 +28,8 @@ This phase bridges the gap between development and operations.
 :::tip[How AI Can Help: Release]
 AI enhances decision-making and risk assessment during release:
 
-- **Impact Analysis:** Tools like [Harness](https://harness.io/) use AI to predict the potential impact of changes and identify affected dependencies.
+- **Impact Analysis:** Tools like [Harness](https://harness.io/) and [GitLab](https://gitlab.com/) use AI to predict the potential impact of changes and identify affected dependencies.
 - **Automated Comms:** AI can analyze [Jira](https://www.atlassian.com/software/jira) tickets to automatically generate release notes and announcements for different stakeholders.
 - **Feature Flags:** Platforms like [LaunchDarkly](https://launchdarkly.com/) utilize AI to optimize feature rollout strategies based on real-time user data.
+- **Rollback Planning:** AI such as Hashicorp's [Terraform](https://www.hashicorp.com/products/terraform) has enhanced rollback planning, automatically generating and testing rollback scenarios to ensure smooth recovery in case of issue.
   :::

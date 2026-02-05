@@ -28,7 +28,7 @@ Testing identifies gaps, errors, or missing requirements contrary to the actual 
 - Test Execution Reports
 
 :::tip[How AI Can Help: Verification]
-AI is reimagining verification by automating the most tedious parts of QA:
+AI is reimagining verification by analyzing vast amounts of data to spot patterns and anomalies and automating the most tedious parts of QA:
 
 - **Static Analysis:** Outside of AI in the IDEs listed in the [Code](./03-code.md) section, advanced static analysis tools (e.g., [SonarQube](https://www.sonarqube.org/)) use AI to identify complex bugs and code smells that traditional rules might miss.
 - **Test Generation:** AI can create comprehensive test suites and edge cases automatically from code. Outside of AI in the IDEs listed in the [Code](./03-code.md) section:
