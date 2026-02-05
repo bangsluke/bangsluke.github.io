@@ -54,6 +54,12 @@
   border-color: #f2f2f2 transparent transparent transparent;
 }
 
+.tooltipBubble[data-placement="below"]::after {
+  top: auto;
+  bottom: 100%;
+  border-color: transparent transparent #f2f2f2 transparent;
+}
+
 :global(html[data-theme='dark']) .tooltipBubble {
   background-color: #272729;
   color: #f5f6f7;
@@ -62,6 +68,10 @@
 
 :global(html[data-theme='dark']) .tooltipBubble::after {
   border-color: #272729 transparent transparent transparent;
+}
+
+:global(html[data-theme='dark']) .tooltipBubble[data-placement="below"]::after {
+  border-color: transparent transparent #272729 transparent;
 }
 
 
