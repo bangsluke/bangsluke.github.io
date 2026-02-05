@@ -46,3 +46,11 @@ Generative AI is revolutionizing the SDLC by:
 :::info
 One issue that software teams often face is questions over the positive impact of AI tools. [Jellyfish](https://jellyfish.co/) helps provide productivity insights and usage data to help teams understand the impact of AI tools.
 :::
+
+:::tip
+When developing AI-driven technologies, it is often best to follow an iterative development process, cyclying through the SDLC phases multiple times before entering the maintenance phase, helping fully refining the technology to real world use cases.
+:::
+
+:::note[Sources Used]
+- [AWS - The Role of Generative AI in Software Development](https://drive.google.com/file/d/1u9jnjEW-PBaq70Ulp0gvbRHh6wqzwJTl/view?usp=drive_link)
+:::

@@ -29,7 +29,7 @@ Global AI tools are streamlining the planning process:
 
 - **Meeting Automation:** Tools can transcribe and summarize meetings such as the AI feature in [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), extracting action items automatically.
 - **Agile Enhancements:** In Agile, AI such as [Zenhub](https://www.zenhub.com/) analyzes historical data to predict sprint velocities and suggest optimal backlogs.
-- **Tool Spotlight:** [Atlassian Jira](https://www.atlassian.com/software/jira) uses AI to help teams make data-driven decisions in planning.
+- **Planning Tools:** [Atlassian Jira](https://www.atlassian.com/software/jira) uses AI to help teams make data-driven decisions in planning, and can identify potential risks and bottlenecks.
   :::
 
 <PageBreak />
@@ -51,16 +51,17 @@ Once requirements are clear, the **Design** phase translates them into a bluepri
 :::tip[How AI Can Help: Design]
 AI is accelerating the transition from concept to blueprint:
 
-- **Generative UI:** AI can generate initial UI/UX mockups from text requirements (e.g., [Figma](https://www.figma.com/) with WireGen or [Lovable](https://lovable.dev/)).
+- **Generative UI:** AI can generate initial UI/UX mockups from text requirements (e.g., [Figma](https://www.figma.com/) with WireGen or [Lovable](https://lovable.dev/)). Designers can also iterate quickly through design variations using AI-generated designs.
 - **Architectural Advice:** AI tools can analyze requirements to suggest optimal system architectures and even creates preliminary code structures (e.g. [Claude Code](https://www.anthropic.com/claude-code)).
 - **Documentation Analysis:** AI can analyze voice transcripts or lengthy discussions on platforms like [Harness](https://harness.io/) or [Bitbucket](https://bitbucket.org/) to extract key design decisions.
+- **Security Design:** AI can analyze system designs to identify potential security risks and suggest mitigations.
   :::
 
 :::info[Case Study: AI in Planning and Design]
 One startup tooling stack was as follows:
-- Figma for designs, which works nicely with Linear. The company has 5 devs and one UX designer.
-- Linear for ticketing and collaborating across UX and development. The UX person creates Linear tickets alongside her Figma designs.
-- Claude Code and Cursor for development, connected to Linear via MCP.
-- Claude Code writes tickets: a recent change which is working nicely with CodeRabbit, as more context is passed downstream for AI code review.
+- [Figma](https://www.figma.com/) for designs, which works nicely with [Linear](https://linear.app/). The company has 5 devs and one UX designer.
+- [Linear](https://linear.app/) for ticketing and collaborating across UX and development. The UX person creates [Linear tickets](https://linear.app/tickets) alongside her [Figma designs](https://www.figma.com/designs).
+- [Claude Code](https://www.anthropic.com/claude-code) and [Cursor](https://www.cursor.com/) for development, connected to [Linear](https://linear.app/) via <Tooltip text="MCP" definition="Microservice Communication Protocol: a standard for communication between microservices." />.
+- [Claude Code](https://www.anthropic.com/claude-code) writes tickets: a recent change which is working nicely with [CodeRabbit](https://www.coderabbit.ai/), as more context is passed downstream for AI code review.
 > <a href="https://newsletter.pragmaticengineer.com/p/measuring-ai-dev-tools#:~:text=Figma%20for%20designs%2C%20which%20works%20nicely%20with%20Linear" target="_blank">Source: The Pragmatic Engineer</a> 
 :::
