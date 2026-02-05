@@ -8,13 +8,13 @@ sidebar_position: 4
 
 > [Back to SDLC Intro](../SDLC/introduction)
 
-The **Verify** (or Testing) phase ensures that the software is defect-free and meets the requirements defined in the planning phase. It is critical for quality assurance (QA).
+The **Verify** (or Testing) phase ensures that the software is defect-free and meets the requirements defined in the planning phase. It is critical for <Tooltip text="quality assurance (QA)" definition="Processes and activities that ensure software meets specified requirements and is free of defects." />.
 
 ## Testing Methodologies
 
 Testing identifies gaps, errors, or missing requirements contrary to the actual requirements.
 
-- **Unit Testing:** Testing individual components or functions.
+- **Unit Testing:** <Tooltip text="Testing individual components" definition="Checking the smallest units of code (such as functions or classes) in isolation." /> or functions.
 - **Integration Testing:** Verifying that different modules work together.
 - **End-to-End (E2E) Testing:** Testing the complete user journey from start to finish.
 - **System Testing:** Testing the complete and integrated software product.

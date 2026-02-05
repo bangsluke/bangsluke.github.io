@@ -8,7 +8,7 @@ sidebar_position: 5
 
 > [Back to SDLC Intro](../SDLC/introduction)
 
-The **Integrate** phase involves combining individual software modules into a unified group. In modern DevOps, this is often continuous (CI), but conceptually it represents the assembly of the system.
+The **Integrate** phase involves combining individual software modules into a unified group. In modern <Tooltip text="DevOps" definition="A set of practices that combines software development (Dev) and IT operations (Ops) to shorten delivery cycles and improve reliability." />, this is often continuous (<Tooltip text="CI" definition="Continuous Integration: frequently merging code changes into a shared repository with automated builds and tests." />), but conceptually it represents the assembly of the system.
 
 ## Integration Activities
 
@@ -17,13 +17,13 @@ Successful integration ensures that separate components developed by different t
 - **Dependency Management:** Handling external libraries and internal packages.
 - **Conflict Resolution:** Merging code from different branches and resolving conflicts.
 - **Build Automation:** Compiling code and creating executable artifacts.
-- **Containerization:** Packaging applications with their dependencies (e.g., using [Docker](https://www.docker.com/)).
+- **Containerization:** Packaging applications with their dependencies (e.g., using <Tooltip text="Docker" definition="A platform for building, running, and shipping applications inside lightweight containers." />).
 
 ### Integration Key Deliverables
 
 - Build Artifacts (JARs, WARs, Docker Images)
 - Integrated Codebase
-- Software Bill of Materials (SBOM)
+- Software Bill of Materials (<Tooltip text="SBOM" definition="A complete, machine-readable list of all components, libraries, and dependencies that make up a software application." />)
 
 :::tip[How AI Can Help: Integration]
 AI streamlines specific pain points in integration:

@@ -14,9 +14,9 @@ The **Code** (or Implementation) phase is where the actual software construction
 
 This is typically the longest phase of the SDLC.
 
-- **Environment Setup:** Configuring IDEs, compilers, and necessary tools.
+- **Environment Setup:** Configuring <Tooltip text="IDEs" definition="Integrated Development Environments such as VS Code, Cursor, or JetBrains IDEs that provide editing, debugging, and tooling in one place." />, compilers, and necessary tools.
 - **Coding:** Writing code in the chosen programming languages.
-- **Code Review:** Peer reviews to ensure code quality, readability, and adherence to standards.
+- **Code Review:** <Tooltip text="Peer review of code changes" definition="A process where other developers examine code changes to catch defects early and ensure consistency with team standards." /> to ensure code quality, readability, and adherence to standards.
 - **Documentation:** Writing inline comments in the code and documentation for APIs.
 
 :::tip

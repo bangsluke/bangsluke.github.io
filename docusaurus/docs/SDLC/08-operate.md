@@ -14,9 +14,9 @@ The **Operate** phase involves the day-to-day running of the software. This is w
 
 The goal is to ensure high availability, reliability, and performance.
 
-- **Capacity Planning:** Ensuring there are enough resources (CPU, RAM, Storage) to handle user load.
+- **Capacity Planning:** Ensuring there are enough resources (CPU, RAM, Storage) to handle user load. <Tooltip text="Capacity planning" definition="Forecasting how much compute, memory, and storage your systems will need to serve current and future demand." />
 - **Incident Management:** Responding to outages or service degradations.
-- **Chaos Engineering:** Proactively testing system resilience by simulating failures.
+- **Chaos Engineering:** <Tooltip text="Proactively testing system resilience" definition="Intentionally injecting failures into a system to understand how it behaves under stress and to improve its robustness." /> by simulating failures.
 - **Security Operations (SecOps):** Defending against active threats.
 
 ### Operations Key Deliverables

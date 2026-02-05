@@ -12,9 +12,9 @@ The **Planning** and **Design** phases are the foundational pillars of the SDLC.
 
 ## Planning Phase
 
-**Planning** involves defining the scope, objectives, and feasibility of the project. It starts with requirement gathering - understanding exactly what the stakeholders need.
+**Planning** involves defining the scope, objectives, and <Tooltip text="feasibility" definition="An assessment of whether a project is technically, economically, and legally realistic to deliver." /> of the project. It starts with requirement gathering - understanding exactly what the stakeholders need.
 
-- **Feasibility Study:** Can we build it? (e.g. technical, economic, legal checks).
+- **<Tooltip text="Feasibility Study" definition="A structured analysis to determine if a proposed project is practical and worth pursuing." />:** Can we build it? (e.g. technical, economic, legal checks).
 - **Requirement Analysis:** Detailed breakdown of features (functional and non-functional).
 - **Project Scheduling:** Estimating timelines, resources, and costs (often using Agile methodologies).
 
@@ -38,9 +38,9 @@ Global AI tools are streamlining the planning process:
 
 Once requirements are clear, the **Design** phase translates them into a blueprint for construction. This includes both high-level architecture and low-level component design.
 
-- **System Architecture:** Defining the high-level structure (Monolith vs Microservices, Cloud vs On-prem).
+- **System Architecture:** Defining the high-level structure (<Tooltip text="Monolith" definition="A single, unified application where all features are deployed together." /> vs <Tooltip text="Microservices" definition="An architectural style where a system is built from many small, independently deployable services." />, Cloud vs On-prem).
 - **Data Design:** Database schemas and data flow diagrams.
-- **UI/UX Design:** Wireframes, mockups, and prototypes for the user interface.
+- **UI/UX Design:** <Tooltip text="Wireframes" definition="Simple, low-fidelity layouts that show the structure and flow of a screen without final styling." />, mockups, and prototypes for the user interface.
 
 ### Design Key Deliverables
 

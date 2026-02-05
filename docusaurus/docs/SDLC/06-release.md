@@ -15,9 +15,9 @@ The **Release** phase is where the software is prepared for delivery to the end-
 This phase bridges the gap between development and operations.
 
 - **Release Planning:** Scheduling the release to minimize business impact.
-- **Change Management:** Assessing the impact of the new changes.
+- **Change Management:** <Tooltip text="Assessing the impact of changes" definition="Evaluating how a new release will affect users, systems, and processes before it is rolled out." />.
 - **Documentation:** Creating release notes, updating user manuals, and training support staff.
-- **Staging:** Deploying to a pre-production environment that mirrors production for final sign-off.
+- **Staging:** Deploying to a <Tooltip text="pre-production environment" definition="An environment that closely mirrors production and is used for final testing before a release goes live." /> that mirrors production for final sign-off.
 
 ### Release Key Deliverables
 
