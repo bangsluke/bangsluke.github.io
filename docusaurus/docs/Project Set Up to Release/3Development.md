@@ -127,7 +127,7 @@ description: Resources and guide for the development of the software
 
 #### CSS-in-CSS
 
-- CSS Modules - CSS Modules give you a way to encapsulate your CSS into component co-located modules. This way, styles don't leak accidentally into other components:
+- <Tooltip text="CSS Modules" definition="A way to scope CSS to a component so class names don't clash with other components." /> - CSS Modules give you a way to encapsulate your CSS into component co-located modules. This way, styles don't leak accidentally into other components:
 
   ```CSS
   import styles from './style.module.css';
@@ -138,7 +138,7 @@ description: Resources and guide for the development of the software
     </h1>
   ```
 
-#### Utility-First-CSS
+#### <Tooltip text="Utility-First CSS" definition="A CSS approach (e.g. Tailwind) where you style using small utility classes instead of writing custom CSS." /> {#utility-first-css}
 
 - Tailwind CSS - <a href="https://tailwindcss.com/" target="_blank">https://tailwindcss.com/</a>
 
@@ -149,7 +149,7 @@ const Headline = ({ title }) =>
   </h1>
 ```
 
-#### CSS-in-JS
+#### <Tooltip text="CSS-in-JS" definition="Writing CSS inside JavaScript (e.g. styled-components), often with scoping and dynamic styles." /> {#css-in-js}
 
 Personally I'd not recommended runtime CSS-in-JS anymore due to performance and other problems in server-side environments
 
@@ -173,7 +173,7 @@ const Headline = ({ title }) =>
 
 ## Recommended Libraries & Tools {#recommended-libraries-tools}
 
-### State Management
+### <Tooltip text="State management" definition="How an app stores and updates shared data (e.g. user, theme) so components can read and change it." /> {#state-management}
 
 - <a href="https://github.com/pmndrs/zustand" target="_blank">Zustand</a> - State management library - It allows you to manage global application state which can be read and modified by any React component that is connected to its store(s).
 - Redux
@@ -189,7 +189,7 @@ const Headline = ({ title }) =>
 ### Data Fetching
 
 - TanStack Query (formerly known as React Query) - `yarn add @tanstack/react-query` - <a href="https://tanstack.com/query/latest" target="_blank">https://tanstack.com/query/latest</a>
-  - Works for both REST and GraphQL APIs
+  - Works for both REST and <Tooltip text="GraphQL" definition="A query language and API style that lets the client request exactly the fields it needs in one request." /> APIs
   - <a href="https://javascript.plainenglish.io/mastering-react-query-a-comprehensive-guide-41c07fbcb5e?gi=2d617cfcb4b3" target="_blank">Mastering React Query - A Complete Guide</a>\*\*
 - Apollo Client - `yarn add @apollo/client` - <a href="https://www.apollographql.com/docs/react/" target="_blank">https://www.apollographql.com/docs/react/</a>
   - Works for GraphQL APIs
@@ -306,7 +306,7 @@ In order of recommendation:
 
 <PageBreak />
 
-## Internationalisation (i18n)
+## <Tooltip text="i18n" definition="Internationalisation: designing and building an app so it can support multiple languages and locales." /> (Internationalisation) {#internationalisation-i18n}
 
 - <a href="https://react.i18next.com/" target="_blank">i18n React</a> - i18n React components
   - <a href="https://translate.i18next.com/" target="_blank">i18next</a> - i18next website

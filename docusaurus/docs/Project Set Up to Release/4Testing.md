@@ -14,10 +14,10 @@ description: Links and resources for the testing of the software
 - Review the testing resources saved in <a href="https://todoist.com/showTask?id=6132185936&sync_id=6506084877" target="_blank">Todoist</a>
 - Set up testing throughout the application based on its requirements
 - <a href="https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications" target="_blank">Testing Trophy and Testing Classifications</a>
-  - Static tests (<a href="https://eslint.org/" target="_blank">ESLint</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>) - Done automatically in VS Code e.g. typos and type errors
+  - <Tooltip text="Static tests" definition="Checks run without executing the app (e.g. ESLint, TypeScript) to catch errors and style issues." /> (<a href="https://eslint.org/" target="_blank">ESLint</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>) - Done automatically in VS Code e.g. typos and type errors
   - Unit tests (<a href="https://jestjs.io/" target="_blank">Jest</a> / <a href="https://vitest.dev/" target="_blank">Vitest</a> / <a href="https://react-testing-library.com/" target="_blank">React Testing Library</a>)
   - Integration tests (<a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library</a> / <a href="https://www.cypress.io/" target="_blank">Cypress</a>)
-  - E2E tests (<a href="https://playwright.dev/" target="_blank">Playwright</a> / <a href="https://www.cypress.io/" target="_blank">Cypress</a>)
+  - <Tooltip text="E2E tests" definition="End-to-end tests that run against the full app (often in a browser) to simulate real user flows." /> (<a href="https://playwright.dev/" target="_blank">Playwright</a> / <a href="https://www.cypress.io/" target="_blank">Cypress</a>)
     - <a href="https://medium.com/@lucgagan/efficient-e2e-testing-for-next-js-a-playwright-tutorial-06eadfc59111" target="_blank">E2E Playwright testing with Next.js</a>
     - <a href="https://www.browsercat.com/post/ultimate-guide-visual-testing-playwright" target="_blank">Ultimate Guide to Visual Testing with Playwright</a>
 - Use AI to write some simple tests

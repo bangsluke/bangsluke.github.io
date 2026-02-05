@@ -49,7 +49,7 @@ Summary:
   `‘xau_8Q9v6YrRzXgPcSvgjOvVbYEwkKm1lgBo4’==>ENV[‘XATA_API_KEY’]` would replace the API key with the environment variable name
 - Copy the file "git-filter-repo" from Personal Coding into the repo
 - Open the CMD for the repo
-- Use the command `git filter-repo --replace-text ../BigLynnReplacements.txt --force` to go through the history of the repo and make all the required replacements
+- Use the command `git filter-repo --replace-text ../BigLynnReplacements.txt --force` to go through the <Tooltip text="Git history" definition="The record of all commits in a repository; rewriting it changes past commits and can affect anyone who has cloned the repo." /> of the repo and make all the required replacements
 
 > References
 >

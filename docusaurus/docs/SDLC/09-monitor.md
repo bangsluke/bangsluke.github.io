@@ -10,7 +10,7 @@ sidebar_position: 9
 
 **Monitoring** is the process of collecting, analyzing, and using information to track applications and infrastructure in order to guide business decisions. **<Tooltip text="Observability" definition="How well you can understand the internal state of a system based only on its outputs such as metrics, logs, and traces." />** is the measure of how well internal states of a system can be inferred from knowledge of its external outputs.
 
-## The Three Pillars of Monitoring
+## The Three Pillars of Monitoring {#the-three-pillars}
 
 A robust monitoring strategy typically relies on three pillars:
 

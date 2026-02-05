@@ -7,7 +7,7 @@ description: Installing and updating versions of NPM, Yarn, PNPM, and Node
 
 > [Back to Documentation Intro Contents](../DocumentationIntro.md)
 
-Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" target="_blank">PNPM</a>.
+Before defaulting to <Tooltip text="NPM" definition="Node Package Manager: the default package manager for Node.js, used to install and manage JavaScript dependencies." /> or <Tooltip text="Yarn" definition="A fast, alternative package manager for Node.js that installs and manages JavaScript dependencies." />, consider using <a href="https://pnpm.io/" target="_blank"><Tooltip text="PNPM" definition="A disk-efficient Node.js package manager that uses a single global store and symlinks to reduce duplication." /></a>.
 
 ## NPM
 
@@ -66,6 +66,8 @@ Before defaulting to NPM or Yarn, consider using <a href="https://pnpm.io/" targ
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=black" alt="Node.js" />
 
 ### Node Commands
+
+The following use <Tooltip text="nvm" definition="Node Version Manager: a tool to install and switch between multiple versions of Node.js on the same machine." />:
 
 - `node --version` - Check the current installed version of node
 - `nvm ls` - Find out which versions of Node.js you may have installed and which one of those you're currently using
