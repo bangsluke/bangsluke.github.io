@@ -24,7 +24,7 @@ During this phase, developers should be writing tests as they code to ensure the
 :::
 
 :::info
-Security should also be considered during this phase, with tools such as [Snyk](https://snyk.io/) and [Veracode](https://www.veracode.com/) performing real-time security analysis as code is written, identifying vulnerabilities instantly.
+Security should also be considered during this phase, with tools such as [Snyk](https://snyk.io/) and [Veracode](https://www.veracode.com/) performing real-time security analysis as code is written, identifying vulnerabilities instantly. Ensure at least two tools are used to scan the code for vulnerabilities.
 :::
 
 ### Development Key Deliverables

@@ -294,6 +294,8 @@ In order of recommendation:
 - Set up repository security scanning via Snyk
   - Add the project to Snyk <a href="https://app.snyk.io/org/bangsluke/projects" target="_blank">here</a>
   - Check and close off all vulnerabilities
+- Also set up and use [Trivy](https://trivy.dev/) to scan the code for vulnerabilities as an additional security measure.
+  - Set up Trivy to scan the code for vulnerabilities as part of the CI/CD pipeline.
 
 ### Authentication
 

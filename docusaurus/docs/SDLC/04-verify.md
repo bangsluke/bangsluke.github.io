@@ -37,6 +37,6 @@ AI is reimagining verification by analyzing vast amounts of data to spot pattern
   - **E2E tests:** [Functionize](https://www.functionize.com/) ([Testim](https://www.testim.io/) can also be used)
   - **System tests:** [Katalon](https://katalon.com/)
   - **Performance tests:** [k6](https://k6.io/)
-  - **Security tests:** [Snyk](https://snyk.io/)
+  - **Security tests:** [Snyk](https://snyk.io/) and [Trivy](https://trivy.dev/)
 - **Synthetic Data:** Privacy laws often prevent testing with real user data. AI tools like [Delphix](https://www.delphix.com/) can generate comprehensive synthetic datasets that mimic production data without the privacy risks.
   :::
