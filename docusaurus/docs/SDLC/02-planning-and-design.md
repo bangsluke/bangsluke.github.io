@@ -12,10 +12,10 @@ The **Planning** and **Design** phases are the foundational pillars of the SDLC.
 
 ## Planning Phase
 
-**Planning** involves defining the scope, objectives, and feasibility of the project. It starts with requirement gathering—understanding exactly what the stakeholders need.
+**Planning** involves defining the scope, objectives, and feasibility of the project. It starts with requirement gathering - understanding exactly what the stakeholders need.
 
-- **Feasibility Study:** Can we build it? (Technical, Economic, Legal check).
-- **Requirement Analysis:** Detailed breakdown of features (Functional and Non-functional).
+- **Feasibility Study:** Can we build it? (e.g. technical, economic, legal checks).
+- **Requirement Analysis:** Detailed breakdown of features (functional and non-functional).
 - **Project Scheduling:** Estimating timelines, resources, and costs (often using Agile methodologies).
 
 ### Planning Key Deliverables
@@ -27,8 +27,8 @@ The **Planning** and **Design** phases are the foundational pillars of the SDLC.
 :::tip[How AI Can Help: Planning]
 Global AI tools are streamlining the planning process:
 
-- **Meeting Automation:** Tools can transcribe and summarize meetings, extracting action items automatically.
-- **Agile Enhancements:** In Agile, AI analyzes historical data to predict sprint velocities and suggest optimal backlogs.
+- **Meeting Automation:** Tools can transcribe and summarize meetings such as the AI feature in [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), extracting action items automatically.
+- **Agile Enhancements:** In Agile, AI such as [Zenhub](https://www.zenhub.com/) analyzes historical data to predict sprint velocities and suggest optimal backlogs.
 - **Tool Spotlight:** [Atlassian Jira](https://www.atlassian.com/software/jira) uses AI to help teams make data-driven decisions in planning.
   :::
 
@@ -51,7 +51,7 @@ Once requirements are clear, the **Design** phase translates them into a bluepri
 :::tip[How AI Can Help: Design]
 AI is accelerating the transition from concept to blueprint:
 
-- **Generative UI:** AI can generate initial UI/UX mockups from text requirements (e.g., [Figma](https://www.figma.com/) with WireGen).
-- **Architectural Advice:** AI tools can analyze requirements to suggest optimal system architectures and even creates preliminary code structures.
+- **Generative UI:** AI can generate initial UI/UX mockups from text requirements (e.g., [Figma](https://www.figma.com/) with WireGen or [Lovable](https://lovable.dev/)).
+- **Architectural Advice:** AI tools can analyze requirements to suggest optimal system architectures and even creates preliminary code structures (e.g. [Claude Code](https://www.anthropic.com/claude-code)).
 - **Documentation Analysis:** AI can analyze voice transcripts or lengthy discussions on platforms like [Harness](https://harness.io/) or [Bitbucket](https://bitbucket.org/) to extract key design decisions.
   :::
