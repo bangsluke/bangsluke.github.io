@@ -32,9 +32,9 @@ These metrics measure both speed (throughput) and stability, showing that elite 
 
 > For more information on the Three Ways, see [The Phoenix Project](/docs/product-management/research#the-three-ways-the-phoenix-project)
 
-- **The First Way (Flow)**: Focus on the left-to-right flow of work from Development to Operations. It’s about making work visible, limiting WIP (Work in Progress), and reducing bottlenecks.
-- **The Second Way (Feedback)**: This is about creating fast feedback loops from right to left. If something breaks in production, Dev needs to know now, not in three weeks.
-- **The Third Way (Continual Learning)**: Building a culture that values experimentation, taking risks, and learning from failure so the whole system gets smarter over time.
+1. **The First Way: The Principles of Flow** - This is about making work visible and moving it from left (Dev) to right (Ops) as fast as possible
+2. **The Second Way: The Principles of Feedback** - This is about creating, shortening, and amplifying feedback loops from right (Ops/Users) to left (Dev).
+3. **The Third Way: The Principles of Continual Learning** - This is about creating a culture that fosters two things: continual experimentation (taking risks and learning from failure) and understanding that repetition and practice are the prerequisites to mastery.
 
 ### Prioritization Frameworks
 
