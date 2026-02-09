@@ -72,6 +72,12 @@ The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" by
 
 <!-- TODO: Add summary of key concepts -->
 
+#### The Three Ways (The Phoenix Project)
+
+- **The First Way (Flow)**: Focus on the left-to-right flow of work from Development to Operations. It’s about making work visible, limiting WIP (Work in Progress), and reducing bottlenecks (like Brent!).
+- **The Second Way (Feedback)**: This is about creating fast feedback loops from right to left. If something breaks in production, Dev needs to know now, not in three weeks.
+- **The Third Way (Continual Learning)**: Building a culture that values experimentation, taking risks, and learning from failure so the whole system gets smarter over time.
+
 <PageBreak />
 
 ## The DevOps Handbook

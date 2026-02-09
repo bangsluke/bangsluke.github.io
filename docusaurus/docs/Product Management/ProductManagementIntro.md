@@ -28,6 +28,14 @@ description: Product Management introduction and key concepts
 
 These metrics measure both speed (throughput) and stability, showing that elite teams excel at both. DORA’s findings link strong engineering practices and healthy team culture to better organizational performance, including profitability, productivity, and customer satisfaction. The metrics are widely used across the industry as a standard framework for assessing DevOps maturity and guiding continuous improvement.
 
+### The Three Ways
+
+> For more information on the Three Ways, see [The Phoenix Project](/docs/product-management/research#the-three-ways-the-phoenix-project)
+
+- **The First Way (Flow)**: Focus on the left-to-right flow of work from Development to Operations. It’s about making work visible, limiting WIP (Work in Progress), and reducing bottlenecks.
+- **The Second Way (Feedback)**: This is about creating fast feedback loops from right to left. If something breaks in production, Dev needs to know now, not in three weeks.
+- **The Third Way (Continual Learning)**: Building a culture that values experimentation, taking risks, and learning from failure so the whole system gets smarter over time.
+
 ### Prioritization Frameworks
 
 With limited resources and endless feature requests, structured prioritization is essential. The most effective frameworks include:
