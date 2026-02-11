@@ -30,6 +30,7 @@ Global AI tools are streamlining the planning process:
 - **Meeting Automation:** Tools can transcribe and summarize meetings such as the AI feature in [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), extracting action items automatically.
 - **Agile Enhancements:** In Agile, AI such as [Zenhub](https://www.zenhub.com/) analyzes historical data to predict sprint velocities and suggest optimal backlogs.
 - **Planning Tools:** [Atlassian Jira](https://www.atlassian.com/software/jira) uses AI to help teams make data-driven decisions in planning, and can identify potential risks and bottlenecks.
+- **Customer intelligence:** Tools like [Dovetail](https://dovetail.com/) centralize and analyze customer feedback and research to inform requirements and design.
   :::
 
 <PageBreak />

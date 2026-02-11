@@ -29,5 +29,6 @@ AI optimizes the complex logistics of deployment:
 
 - **Smart Infrastructure:** AI generates and optimizes <Tooltip text="IaC" definition="Defining and provisioning infrastructure (such as servers and networks) using code so it can be versioned and automated." /> scripts for tools like [Terraform](https://www.hashicorp.com/products/terraform) and [Pulumi](https://www.pulumi.com/), ensuring secure cloud configurations.
 - **Continuous Deployment:** AI-powered CI/CD tools (including [GitLab](https://gitlab.com/), [GitHub](https://github.com/) and [CircleCI](https://circleci.com/)) optimize deployment windows and predict potential failures.
+- **Deployment visibility / DORA:** Tools like [Sleuth](https://www.sleuth.io/) provide deployment tracking and DORA-style metrics to improve deployment visibility and delivery performance.
 - **Risk Assessment:** Tools like [Harness](https://harness.io/) perform intelligent verification, analyzing post-deployment behavior to suggest automatic rollbacks if anomalies are detected.
   :::

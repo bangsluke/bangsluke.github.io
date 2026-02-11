@@ -29,6 +29,7 @@ This phase bridges the gap between development and operations.
 AI enhances decision-making and risk assessment during release:
 
 - **Impact Analysis:** Tools like [Harness](https://harness.io/) and [GitLab](https://gitlab.com/) use AI to predict the potential impact of changes and identify affected dependencies.
+- **Delivery and release visibility:** Tools like [Haystack](https://www.usehaystack.io/) connect Git and Jira to surface delivery metrics, risks, and release progress for release planning and reporting.
 - **Automated Comms:** AI can analyze [Jira](https://www.atlassian.com/software/jira) tickets to automatically generate release notes and announcements for different stakeholders.
 - **Feature Flags:** Platforms like [LaunchDarkly](https://launchdarkly.com/) utilize AI to optimize feature rollout strategies based on real-time user data.
 - **Rollback Planning:** AI such as Hashicorp's [Terraform](https://www.hashicorp.com/products/terraform) has enhanced rollback planning, automatically generating and testing rollback scenarios to ensure smooth recovery in case of issue.
