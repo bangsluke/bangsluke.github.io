@@ -28,6 +28,22 @@ description: Product Management introduction and key concepts
 
 These metrics measure both speed (throughput) and stability, showing that elite teams excel at both. DORA’s findings link strong engineering practices and healthy team culture to better organizational performance, including profitability, productivity, and customer satisfaction. The metrics are widely used across the industry as a standard framework for assessing DevOps maturity and guiding continuous improvement.
 
+:::tip[Tools to Help with DORA Metrics]
+You can integrate tools like [LinearB](https://linearb.io/), [Haystack](https://www.usehaystack.io/) and [Sleuth](https://sleuth.io/) with your source control ([GitHub](https://github.com/)) and project management ([Jira](https://www.atlassian.com/software/jira)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)). Even a simple dashboard in Jira that tracks "Issue Created" to "Production Release" can show Lead Time.
+:::
+
+### The Three Ways
+
+> For more information on the Three Ways, see [The Phoenix Project](/docs/product-management/research#the-three-ways-the-phoenix-project)
+
+1. **The First Way: The Principles of Flow  (Backlog Hygiene & Small Batches)** - This is about making work visible and moving it from left (Dev) to right (Ops) as fast as possible. For a PO, it means prioritizing ruthless backlog grooming, breaking down large features into smaller, manageable chunks, and making work visible. If you've helped reduce "work in progress" or made sure tasks didn't sit waiting for weeks, that's demonstrating flow.
+2. **The Second Way: The Principles of Feedback (Telemetry & Rapid Loops)** - This is about creating, shortening, and amplifying feedback loops from right (Ops/Users) to left (Dev). As a PO, you'd ensure your team is using analytics tools to understand how users are interacting with features. Getting user feedback early and often, and then rapidly incorporating that into the next iteration, is key. Think about how you've gathered data to validate a feature or quickly rolled back a change that wasn't working.
+3. **The Third Way: The Principles of Continual Learning  (Spikes & Retrospectives)** - This is about creating a culture that fosters two things: continual experimentation (taking risks and learning from failure) and understanding that repetition and practice are the prerequisites to mastery.
+
+:::tip[Tools to Help with the Three Ways]
+For The Second Way, you can use tools like [Mixpanel](https://mixpanel.com/) or [Amplitude](https://amplitude.com/) to understand how users are interacting with features. For the Third Way, you can use tools like [Spikes](https://www.spikes.com/) to help with continual learning.
+  :::
+
 ### Prioritization Frameworks
 
 With limited resources and endless feature requests, structured prioritization is essential. The most effective frameworks include:
@@ -37,8 +53,6 @@ With limited resources and endless feature requests, structured prioritization i
 | RICE          | Feature-level prioritization with quantifiable metrics | Reach, Impact, Confidence, Effort              | Data-driven, objective    | Can be time-consuming, subjective estimates |
 | MoSCoW        | Sprint planning, stakeholder communication             | Must-have, Should-have, Could-have, Won't-have | Simple, aligns teams      | Can be vague, subjective                    |
 | Cost-of-Delay | Strategic decisions, opportunity cost analysis         | Business value × Urgency                       | Focuses on value, urgency | Requires accurate value estimation          |
-
-
 
 <PageBreak />
 

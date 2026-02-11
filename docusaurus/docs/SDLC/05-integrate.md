@@ -31,4 +31,5 @@ AI streamlines specific pain points in integration:
 - **Conflict Resolution:** AI can analyze code logic to suggest optimal merge strategies and resolve conflicts (e.g., previously mentioned IDEs in the [Code](./03-code.md) section or features in [GitLab](https://about.gitlab.com/) or [GitHub](https://github.com/)).
 - **Smart Builds:** Tools like [Incredibuild](https://www.incredibuild.com/) use AI to distribute build tasks efficiently, significantly reducing build times.
 - **SBOM Management:** AI helps generate and analyze SBOMs for security risks, with tools like [Sonatype Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) and [JFrog Artifactory](https://jfrog.com/artifactory/) providing real-time intelligence on open-source components.
+- **Delivery and flow metrics:** Tools like [LinearB](https://linearb.io/) integrate with Git and project management to measure delivery flow and DORA-style metrics during integration and release.
   :::
