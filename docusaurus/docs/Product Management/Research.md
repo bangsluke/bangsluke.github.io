@@ -62,21 +62,35 @@ Other than the [DORA metrics](../product-management/product-management-intro#dor
 
 ## The Phoenix Project
 
-### The Phoenix Project Summary
+> By Gene Kim, Kevin Behr, and George Spafford
 
-<!-- TODO: Add summary of The Phoenix Project book -->
+### The Phoenix Project Summary
 
 The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" by Gene Kim, Kevin Behr, and George Spafford
 
 ### The Phoenix Project Key Concepts
-
-<!-- TODO: Add summary of key concepts -->
 
 #### The Three Ways (The Phoenix Project)
 
 - **The First Way (Flow)**: Focus on the left-to-right flow of work from Development to Operations. It’s about making work visible, limiting WIP (Work in Progress), and reducing bottlenecks (like Brent!).
 - **The Second Way (Feedback)**: This is about creating fast feedback loops from right to left. If something breaks in production, Dev needs to know now, not in three weeks.
 - **The Third Way (Continual Learning)**: Building a culture that values experimentation, taking risks, and learning from failure so the whole system gets smarter over time.
+
+<PageBreak />
+
+## Inspired - How to Create Products Customers Love
+
+> By Marty Cagan
+
+### Inspired - How to Create Products Customers Love Summary
+
+<!-- TODO: Update the below summary with the book summary -->
+
+Inspired is a book about product management that teaches you how to create products that customers love. It is a must-read for anyone who wants to be a successful product manager.
+
+### Inspired - How to Create Products Customers Love Key Concepts
+
+<!-- TODO: Update the below key concepts with the book key concepts -->
 
 <PageBreak />
 
