@@ -11,6 +11,58 @@ description: The planning phase of defining the scope, objectives, and feasibili
 See [Planning and Design](../SDLC/planning-and-design) for more information on the planning phase of the SDLC.
 :::
 
+## Define the Problem and Requirements
+
+Before writing any code or choosing a tech stack, clearly define **what** you are building and **why**. Even for solo or personal projects, a lightweight requirements process prevents scope creep and wasted effort.
+
+### Problem Statement
+
+Write a brief <Tooltip text="PRD" definition="Product Requirement Document: a document that describes the features, requirements, and purpose of a product." /> or problem statement. This does not need to be a formal document - a single page is sufficient. Answer these questions:
+
+- **Who** is the target user?
+- **What problem** does this solve for them?
+- **What does success look like** (how will you know the project is "done")?
+
+### User Stories
+
+Capture the key functionality as lightweight <Tooltip text="user stories" definition="Short descriptions of a feature from the user's perspective, typically in the format: As a [role], I want [feature] so that [benefit]." />. For example:
+
+- _As a user, I want to sign up with my email so that I can access the app._
+- _As a user, I want to view my dashboard so that I can see my recent activity._
+
+:::tip[Why Bother for Solo Projects?]
+Even for personal projects, writing a one-page PRD and a handful of user stories saves hours of rework. It forces you to think through what you actually need before you get lost in implementation details.
+:::
+
+### Prioritise with MoSCoW
+
+Use <Tooltip text="MoSCoW" definition="A prioritisation method that categorises requirements as Must have, Should have, Could have, and Won't have (this time)." /> to scope your <Tooltip text="MVP" definition="Minimum Viable Product: the smallest version of a product that can be released to validate a hypothesis with real users." />:
+
+- **Must have** - the project is unusable without these
+- **Should have** - important but the project works without them
+- **Could have** - nice-to-have enhancements
+- **Won't have (this time)** - explicitly out of scope for now
+
+This keeps you focused on delivering a working product rather than an ever-expanding feature list.
+
+<PageBreak />
+
+## Assess Feasibility and Risk
+
+Before committing to a build, do a quick feasibility check:
+
+- **Technical feasibility** - Do you have the skills (or can you learn them quickly enough)? Are the required APIs/services available?
+- **Cost feasibility** - What will hosting, databases, and third-party services cost? Is there a free tier that works for your scale?
+- **Time feasibility** - How long will this realistically take? Be honest about your available hours per week.
+
+Identify the top 2-3 risks and think about mitigations. Common risks for solo projects include: underestimating complexity, choosing unfamiliar technology, and depending on unreliable third-party APIs.
+
+:::warning[Solo Dev Pitfall: Over-Scoping]
+The most common mistake for solo developers is trying to build too much at once. Scope aggressively to the MVP - you can always add features later. A shipped MVP beats an unfinished "full product" every time.
+:::
+
+<PageBreak />
+
 ## Decide on Architecture
 
 > If you already have an architecture in mind, jump to [Plan the UI](#plan-the-ui)
@@ -19,6 +71,14 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 1. Ask AI to recommend an architecture with justification - see <a href="obsidian://open?vault=Obsidian%20Personal%20Notes&file=01%20Notes%2F02%20Areas%2FLife%20Notes%2FCoding%20Notes%2FAI%20Vibe%20Code%20Prompts" target="_blank">the Obsidian note on AI Prompts here</a>
 2. Review the below architecture considerations against the AI output and verify it makes sense
+
+:::tip[Record Your Decisions]
+Create an <Tooltip text="ADR" definition="Architecture Decision Record: a short document that captures an important architectural decision, its context, the options considered, and the rationale for the choice made." /> for every significant architecture choice. A simple markdown file in a `/docs/decisions/` folder that records _what you chose_, _what alternatives you considered_, and _why_ pays dividends when you revisit the project in 6 months. See <a href="https://adr.github.io/" target="_blank">adr.github.io</a> for a lightweight template.
+:::
+
+:::info[Monolith First]
+For solo developers, a <Tooltip text="monolith" definition="A single, unified application where all features are deployed together." /> is almost always the right starting architecture. It reduces operational complexity and lets you move fast. Avoid <Tooltip text="microservices" definition="An architectural style where a system is built from many small, independently deployable services." /> unless you have a genuine scaling bottleneck that demands it.
+:::
 
 ### Front End Architecture
 
@@ -90,6 +150,22 @@ If it is just a web app to be built, consider the below Front End, Back End and 
 
 ## Plan the UI
 
+:::info
+See [Planning and Design - UI/UX Design](../SDLC/planning-and-design#design-phase) for more information on design systems, user research, and prototyping.
+:::
+
+### Wireframes and Prototyping
+
+Before jumping into colours and fonts, sketch out the structure and flow of your application using <Tooltip text="wireframes" definition="Simple, low-fidelity layouts that show the structure and flow of a screen without final styling." />. Start low-fidelity (pen and paper or a simple tool) to validate the user flow before investing in high-fidelity mockups.
+
+- <a href="https://www.figma.com/" target="_blank">Figma</a> - Industry-standard design tool (free tier available)
+- <a href="https://excalidraw.com/" target="_blank">Excalidraw</a> - Quick, hand-drawn-style wireframing
+- <a href="https://balsamiq.com/" target="_blank">Balsamiq</a> - Dedicated wireframing tool
+
+:::tip[Validate Before You Build]
+Show your wireframes to at least one other person before coding. Even five minutes of feedback can surface navigation issues or missing flows that would be expensive to fix later.
+:::
+
 ### Inspiration
 
 For inspiration for projects, check out the following resources:
@@ -135,3 +211,24 @@ For inspiration for projects, check out the following resources:
 
 - <a href="https://www.reddit.com/r/webdev/comments/nm6wcl/18_cards_of_how_to_design_web_forms/?utm_source=share&utm_medium=ios_app&utm_name=iossmf" target="_blank">18 Cards of how to design web forms</a>
 - <a href="https://medium.com/design-bootcamp/form-ui-design-36-tips-best-practices-112128c16429" target="_blank">Form UI Design - 36 Tips Best Practices</a>
+
+<PageBreak />
+
+## Estimation
+
+Before starting development, estimate the effort involved so you can set realistic expectations and deadlines for yourself.
+
+### T-Shirt Sizing
+
+Use <Tooltip text="T-shirt sizing" definition="A quick, relative estimation technique using sizes (S, M, L, XL) to categorise work items by effort without committing to precise hours or days." /> to get a rough sense of effort for each feature or user story:
+
+| Size | Meaning | Example |
+|------|---------|---------|
+| **S** | A few hours of work | Add a static page, tweak styling |
+| **M** | 1-2 days of work | Build a form with validation, integrate a simple API |
+| **L** | 3-5 days of work | Authentication flow, complex data dashboard |
+| **XL** | 1-2 weeks of work | Full CRUD feature with backend, real-time functionality |
+
+:::tip[Timebox Your Discovery]
+Do not spend weeks in planning. Timebox your planning phase (1-2 days for a solo project is typically sufficient) and get feedback through working software instead. The goal is to plan enough to start building with confidence, not to predict every detail upfront.
+:::
