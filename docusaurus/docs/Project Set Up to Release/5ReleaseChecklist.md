@@ -18,6 +18,95 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 
 <PageBreak />
 
+## Versioning
+
+Use <Tooltip text="Semantic Versioning (SemVer)" definition="A versioning scheme using MAJOR.MINOR.PATCH where: MAJOR = breaking changes, MINOR = new features (backwards-compatible), PATCH = bug fixes." /> (`MAJOR.MINOR.PATCH`) to communicate the nature of changes:
+
+- **MAJOR** (1.0.0 -> 2.0.0) - Breaking changes that require consumer updates
+- **MINOR** (1.0.0 -> 1.1.0) - New features that are backwards-compatible
+- **PATCH** (1.0.0 -> 1.0.1) - Bug fixes and minor improvements
+
+### <Tooltip text="Conventional Commits" definition="A commit message convention (e.g. feat:, fix:, chore:) that tools can parse to automatically determine version bumps and generate changelogs." /> {#conventional-commits}
+
+Adopt the <a href="https://www.conventionalcommits.org/" target="_blank">Conventional Commits</a> format for your commit messages:
+
+- `feat: add user dashboard` - triggers a MINOR version bump
+- `fix: correct login redirect` - triggers a PATCH version bump
+- `feat!: redesign API response format` - triggers a MAJOR version bump
+
+### Automated Version Bumping
+
+Automate version bumping and changelog generation using one of these tools:
+
+- <a href="https://github.com/semantic-release/semantic-release" target="_blank">semantic-release</a> - Fully automated versioning based on commit messages
+- <a href="https://github.com/changesets/changesets" target="_blank">Changesets</a> - Explicit changeset files for more control
+- <a href="https://github.com/googleapis/release-please" target="_blank">Release Please</a> - GitHub-native release automation
+
+:::tip[Automate Your Changelog]
+Tools like semantic-release parse your Conventional Commits and automatically generate release notes, create GitHub releases, and bump version numbers. This eliminates manual changelog maintenance and ensures every release is properly documented.
+:::
+
+:::info
+See [Release - Versioning](../SDLC/release#versioning) for more detail on versioning strategies and release management.
+:::
+
+<PageBreak />
+
+## <Tooltip text="Feature Flags" definition="Configuration switches that allow you to enable or disable features at runtime without deploying new code, enabling progressive rollout and instant rollback." /> {#feature-flags}
+
+Feature flags decouple **deployment** from **release**. Code can be deployed to production but hidden behind a flag until you are ready to activate it.
+
+### Why Use Feature Flags?
+
+- **Progressive rollout** - Enable a feature for a subset of users first, monitor, then roll out to everyone
+- **Kill switches** - Instantly disable a problematic feature without a new deployment
+- **Incomplete features** - Deploy work-in-progress code safely behind a flag
+
+### Implementation Options
+
+For solo developers, start simple and scale up:
+
+- **Simple:** Environment variables (`NEXT_PUBLIC_ENABLE_NEW_DASHBOARD=true`)
+- **Better:** <a href="https://flagsmith.com/" target="_blank">Flagsmith</a> (open-source, free tier) or <a href="https://www.getunleash.io/" target="_blank">Unleash</a> (self-hosted)
+- **Best:** <a href="https://launchdarkly.com/" target="_blank">LaunchDarkly</a> (managed platform with analytics)
+
+:::note[Flag Hygiene]
+Feature flags are <Tooltip text="technical debt" definition="The accumulated cost of shortcuts, deferred maintenance, and sub-optimal decisions that slow future development." />. Once a feature is fully rolled out and stable, remove the flag and its conditional code. Review and clean up flags quarterly.
+:::
+
+<PageBreak />
+
+## Rollback Plan
+
+Every release needs a tested rollback procedure. "We'll fix forward" is a plan, but it should not be the **only** plan.
+
+### Simple Rollback Strategies
+
+| Strategy | When to use | How |
+|----------|------------|-----|
+| **Git revert** | Any deployment | `git revert <commit>` and redeploy |
+| **PaaS instant rollback** | Netlify, Vercel, Railway | One-click rollback in the dashboard to previous deployment |
+| **Feature flag toggle** | Feature-specific issues | Disable the flag, feature disappears instantly |
+| **Blue/green switch** | Container/cloud deployments | Switch traffic back to the previous environment |
+
+### Pre-Release Rollback Checklist
+
+Before every release, confirm:
+
+- [ ] You know how to roll back (which method, which commands)
+- [ ] Database migrations are backward-compatible (old code works with new schema)
+- [ ] The previous deployment is still available (not overwritten)
+
+:::warning[Non-Negotiable]
+If you cannot roll back a deployment within minutes, you do not have a deployment process - you have a one-way door. Test your rollback procedure before you need it in an emergency.
+:::
+
+:::info
+See [Deploy - Deployment Strategies](../SDLC/deploy#deployment-strategies) for more detail on blue/green, canary, and rolling deployment strategies.
+:::
+
+<PageBreak />
+
 ## <Tooltip text="SEO" definition="Search Engine Optimisation: practices that help search engines index and rank your site." /> and Meta Data {#seo-and-meta-data}
 
 - This will depend on the project and its requirements and if it needs to be SEO friendly (private projects may not need this)
@@ -131,6 +220,113 @@ Use this checklist tool for each site released - <a href="https://frontendcheckl
 - Check that if you have a fixed header, the page scrolls to the correct position when clicking on a link - <a href="https://calvinke.com/seo/fixed-header-anchor-css/" target="_blank">Link</a>
 - Check that the site works on all devices and browsers - <a href="https://www.browserstack.com/" target="_blank">BrowserStack</a>
 - Check that input boxes are using the correct attributes to help user input - <a href="https://better-mobile-inputs.netlify.app/" target="_blank">Better Mobile Inputs</a>
+
+<PageBreak />
+
+## <Tooltip text="Deployment Strategy" definition="The method used to move new code to production while minimising downtime and risk, such as rolling, blue/green, or canary deployments." /> {#deployment-strategy}
+
+:::info
+See [Deploy](../SDLC/deploy) for comprehensive deployment guidance including infrastructure as code and environment management.
+:::
+
+Before releasing, decide on your deployment approach:
+
+| Strategy | Complexity | Downtime | Best for |
+|----------|-----------|----------|----------|
+| **Recreate** | Low | Brief outage | Internal tools, non-critical apps |
+| **Rolling** | Medium | Zero | Stateless apps behind a load balancer |
+| **<Tooltip text="Blue/Green" definition="A deployment strategy using two identical environments - deploy to the idle one, test it, then switch traffic, enabling instant rollback." />** | Medium | Zero | Apps needing instant rollback |
+| **<Tooltip text="Canary" definition="A deployment strategy that rolls out changes to a small subset of users first, monitors for issues, then gradually increases the rollout percentage." />** | High | Zero | High-traffic apps needing real-world validation |
+
+For solo developers using a <Tooltip text="PaaS" definition="Platform as a Service: a cloud service (e.g. Vercel, Netlify, Railway) that handles infrastructure so developers can focus on application code." /> (Netlify, Vercel), the platform handles most of this for you - push to `main` and it deploys automatically with instant rollback available in the dashboard.
+
+### <Tooltip text="Secrets Management" definition="The practice of securely storing, accessing, and rotating sensitive values like API keys, database credentials, and encryption keys." /> {#secrets-management}
+
+:::danger[Production Secrets]
+Never store production secrets in `.env` files committed to source control. Even if `.env` is in `.gitignore`, relying solely on local files for production secrets is fragile and insecure.
+:::
+
+For production deployments:
+
+- **PaaS environment variables:** Use the platform's built-in secrets management (Netlify/Vercel environment variables, set via their dashboard - not committed to code)
+- **Dedicated secrets managers:** For more complex setups, use <a href="https://www.doppler.com/" target="_blank">Doppler</a> (free tier available), <a href="https://www.vaultproject.io/" target="_blank">HashiCorp Vault</a>, or cloud-native solutions (AWS Secrets Manager, Azure Key Vault)
+- **Rotate secrets** on a defined schedule and audit access
+
+<PageBreak />
+
+## Monitoring and Observability Setup
+
+:::info
+See [Monitor](../SDLC/monitor) and [Operate](../SDLC/operate) for comprehensive guidance on monitoring, alerting, and incident management.
+:::
+
+Set up monitoring **before** launch, not after your first outage. Even for solo projects, basic monitoring is essential.
+
+### The Golden Signals {#golden-signals}
+
+Monitor these four signals (<Tooltip text="Golden Signals" definition="The four most important metrics for monitoring any user-facing system: latency, traffic, errors, and saturation." />) for every user-facing service:
+
+1. **Latency** - How long it takes to serve a request
+2. **Traffic** - The volume of demand (requests per second, page views)
+3. **Errors** - The rate of requests that fail (HTTP 5xx, unhandled exceptions)
+4. **Saturation** - How "full" your service is (CPU, memory, bandwidth)
+
+### Minimum Monitoring Stack for Solo Developers
+
+| Need | Tool | Cost |
+|------|------|------|
+| **Uptime monitoring** | <a href="https://betteruptime.com/" target="_blank">BetterUptime</a> or <a href="https://uptimerobot.com/" target="_blank">UptimeRobot</a> | Free tier |
+| **Error tracking** | <a href="https://sentry.io/" target="_blank">Sentry</a> | Free tier |
+| **Product analytics** | <a href="https://posthog.com/" target="_blank">PostHog</a> or <a href="https://umami.is/" target="_blank">Umami</a> | Free / self-hosted |
+| **Performance** | Lighthouse CI (in your GitHub Actions) | Free |
+
+### Basic Alerting
+
+- Set up Sentry email/Slack notifications for new errors
+- Configure uptime monitoring to alert when your site goes down
+- Review error logs weekly to catch recurring issues before users report them
+
+:::tip[Pre-Launch Non-Negotiable]
+Instrument the golden signals and set up error tracking before launch, not after your first outage. Sentry takes 10 minutes to set up and catches errors you would never see otherwise.
+:::
+
+<PageBreak />
+
+## Incident Response Basics
+
+Even as a solo developer, having a basic incident response process prevents panic when things go wrong.
+
+### Severity Levels
+
+| Severity | Impact | Your Response |
+|----------|--------|---------------|
+| **Critical** | Site is down or data is lost | Drop everything, fix immediately |
+| **Major** | Core feature broken, many users affected | Fix within hours |
+| **Minor** | Non-critical bug, workaround exists | Fix in next work session |
+| **Low** | Cosmetic issue, edge case | Add to backlog |
+
+### <Tooltip text="Runbook" definition="A step-by-step guide for responding to specific operational scenarios, designed so any on-call engineer can follow it." /> {#runbook}
+
+Write down the answers to these questions before you need them:
+
+- How do I check if the site is up? (monitoring dashboard URL)
+- How do I view error logs? (Sentry dashboard, hosting logs)
+- How do I roll back to the previous deployment? (platform-specific steps)
+- How do I restart the service? (platform-specific steps)
+- Who do I contact if the hosting provider is down? (support links)
+
+### <Tooltip text="Blameless Postmortem" definition="A structured review after an incident that focuses on understanding systemic causes and improving processes - never on blaming individuals." /> {#postmortem}
+
+After any significant incident, write a brief postmortem (even just for yourself):
+
+1. **What happened?** - Timeline of events
+2. **Why did it happen?** - Root cause
+3. **How was it fixed?** - Resolution steps taken
+4. **How do I prevent it next time?** - Action items (add a test, improve monitoring, update the runbook)
+
+:::info
+See [Operate - Incident Management](../SDLC/operate#incident-management) for more detail on severity levels, on-call rotations, and postmortem processes.
+:::
 
 <PageBreak />
 

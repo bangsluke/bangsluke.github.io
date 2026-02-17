@@ -86,9 +86,26 @@ git push -u origin main
 ```
 
 - Make the repo private or public based on the requirements
-- Protect the main branch from being pushed to directly
-- Create a develop branch
 - Add a .gitignore file to the root of the project
+
+### <Tooltip text="Branching Strategy" definition="A convention for how branches are created, named, and merged in a Git repository to manage parallel work and releases." /> {#branching-strategy}
+
+Choose a branching strategy and stick to it from the start:
+
+- **Recommended for solo developers:** <Tooltip text="GitHub Flow" definition="A lightweight branching model where feature branches are created from main, reviewed via pull requests, and merged back into main." /> - create short-lived feature branches off `main`, merge via pull requests after review
+- **Alternative:** <Tooltip text="GitFlow" definition="A branching model with long-lived develop and main branches plus feature, release, and hotfix branches. Suited to scheduled release cycles." /> with a `develop` branch - more ceremony, but useful if you want a staging buffer before production
+
+### Branch Protection
+
+Set up <Tooltip text="branch protection rules" definition="GitHub settings that prevent direct pushes to important branches and require conditions (e.g. passing CI, PR approval) before merging." /> on your `main` branch:
+
+- Require pull requests before merging (no direct pushes)
+- Require status checks to pass (CI pipeline) before merging
+- In GitHub: Settings > Branches > Add branch protection rule for `main`
+
+:::tip[Solo Dev PRs]
+Even working solo, use pull requests. They create a review checkpoint, a searchable history of changes, and a natural place for AI code review tools to provide feedback. A PR also ensures your CI pipeline runs before code reaches `main`.
+:::
 
 <PageBreak />
 
@@ -200,6 +217,36 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 > 1. <a href="https://www.pluralsight.com/guides/hiding-secret-keys-in-create-react-app" target="_blank">Hiding Secret Keys in React</a>
 
+### <Tooltip text="Pre-commit Hooks" definition="Scripts that run automatically before a commit is created, typically used to lint, format, and validate code before it enters version control." /> {#pre-commit-hooks}
+
+Set up pre-commit hooks to catch issues before code ever reaches a pull request. Use <a href="https://typicode.github.io/husky/" target="_blank">Husky</a> + <a href="https://github.com/lint-staged/lint-staged" target="_blank">lint-staged</a> to automate this:
+
+```powershell
+npx husky init
+npm install --save-dev lint-staged
+```
+
+Configure lint-staged in your `package.json` to run on staged files:
+
+```json
+"lint-staged": {
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.{json,md,css}": ["prettier --write"]
+}
+```
+
+Your pre-commit hooks should run:
+
+- **Linting and formatting** - catch style violations instantly
+- **Type checking** - if using TypeScript, run `tsc --noEmit`
+- **Secrets scanning** - use <a href="https://github.com/gitleaks/gitleaks" target="_blank">gitleaks</a> or <a href="https://github.com/awslabs/git-secrets" target="_blank">git-secrets</a> to prevent accidental credential commits
+
+:::info
+See [Code - Pre-Commit Hooks](../SDLC/code#pre-commit-hooks) for more detail on what to include in pre-commit hooks.
+:::
+
+<PageBreak />
+
 ### <Tooltip text="ESLint" definition="A tool that analyzes JavaScript/TypeScript code for bugs, style issues, and best-practice violations." /> and <Tooltip text="Prettier" definition="A code formatter that enforces a consistent style (indentation, quotes, line breaks) across the codebase." /> Config {#eslint-and-prettier-config}
 
 <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" />
@@ -209,7 +256,14 @@ Structure your components in the following way, using Export Barrelling (point 2
 
 - Copy over the .eslintrc.json and .prettierrc set ups from a good project (e.g. Dorkinians Mobile Stats)
 - Make changes if any are required
+- Adopt an established <Tooltip text="coding standard" definition="A set of guidelines and conventions for how code should be written, formatted, and structured within a team or project." /> rather than inventing your own:
+  - **JavaScript/TypeScript:** <a href="https://github.com/airbnb/javascript" target="_blank">Airbnb</a> or <a href="https://standardjs.com/" target="_blank">Standard</a>
+  - **React:** Extend the Airbnb config with `eslint-config-airbnb`
 - Consider the below references if needed
+
+:::info
+See [Code - Code Quality](../SDLC/code#code-quality) for more detail on coding standards and how they prevent bugs.
+:::
 
 > References
 >
@@ -243,6 +297,34 @@ If using React, consider the following links:
 - Add automated linting to CI/CD
   - <a href="https://github.com/github/super-linter#filter-linted-files" target="_blank">Super Linter GitHub</a>
 
+### <Tooltip text="CI Pipeline" definition="Continuous Integration pipeline: an automated sequence of steps (lint, build, test, scan) that runs on every code change to validate quality." /> Design {#ci-pipeline-design}
+
+:::info
+See [Integrate - CI Pipeline Design](../SDLC/integrate#ci-pipeline-design) for comprehensive CI pipeline guidance.
+:::
+
+Structure your CI pipeline to follow this order (cheapest/fastest checks first):
+
+1. **Lint and Format** - catch style violations instantly
+2. **Type Check** - catch type errors (`tsc --noEmit`)
+3. **Build** - verify the app compiles
+4. **Unit Tests** - run fast, isolated tests
+5. **Integration Tests** - verify cross-module contracts
+6. **Security Scan** - check for known vulnerabilities (CodeQL, Snyk)
+7. **Deploy** - only if all above pass
+
+:::tip[Fail Fast]
+Order your CI pipeline so the fastest checks run first. If linting fails in 10 seconds, there is no point running a 5-minute test suite. This saves CI minutes and gives you faster feedback.
+:::
+
+### Automated Dependency Updates
+
+Set up <Tooltip text="Dependabot" definition="A GitHub tool that automatically creates pull requests to update outdated or vulnerable dependencies in your project." /> or <a href="https://www.mend.io/renovate/" target="_blank">Renovate</a> to keep dependencies current:
+
+- **Dependabot:** Add a `dependabot.yml` to `.github/` (already included in the workflow files above)
+- Configure it to open PRs weekly for patch/minor updates and flag major updates for manual review
+- Never let dependencies go unpatched for months - automated PRs make this near-effortless
+
 ## Cursor/Antigravity Project Rules
 
 <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white" alt="Cursor" />
@@ -260,4 +342,28 @@ For setting up the Project Rules, you can follow the notes in the Obsidian notes
 
 :::note
 If you are using Antigravity, ensure that you copy the rules generated in Cursor over into the Rules section of Antigravity - Settings.
+:::
+
+<PageBreak />
+
+## Development Environment Consistency
+
+Ensure that anyone (including future-you) can set up and run the project quickly and reliably.
+
+### Minimum: Documented Setup
+
+- Include a clear "Getting Started" section in your README with every command needed to run the project from a fresh clone
+- Specify the required Node.js version (use a `.nvmrc` or `.node-version` file)
+- List any system-level dependencies (e.g. database, Redis)
+
+### Recommended: <Tooltip text="Dev Containers" definition="Pre-configured, reproducible development environments packaged in containers (e.g. Docker) that ensure every developer works in an identical setup." /> {#dev-containers}
+
+For any project you might hand off or return to after a break, consider a Dev Container configuration:
+
+- Create a `.devcontainer/devcontainer.json` in the project root
+- Specify the base image, extensions, port forwarding, and post-create commands
+- Works with VS Code, Cursor, and GitHub Codespaces
+
+:::note
+For solo projects, a well-written README setup section is the minimum. For any project you might hand off to someone else or return to after months, a Dev Container config eliminates "works on my machine" problems entirely.
 :::

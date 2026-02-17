@@ -11,6 +11,32 @@ description: Resources and guide for the development of the software
 See [Code](../SDLC/code) for more information on the code (implementation) phase of the SDLC.
 :::
 
+## Code Quality Practices
+
+Before diving into framework-specific tips, establish these habits that compound over time and prevent the most common solo-developer pitfalls.
+
+### <Tooltip text="Code Review" definition="A process where code changes are examined to catch defects early, validate the approach, and ensure consistency with team standards." /> for Solo Developers {#code-review}
+
+Working solo does not mean skipping code review. Use these techniques as your "second pair of eyes":
+
+- **Self-review via PR:** Always merge through a pull request and review your own diff before approving. Reading code in the PR view often surfaces issues you miss in the editor.
+- **AI code review tools:** Set up automated review on every PR:
+  - <a href="https://www.coderabbit.ai/" target="_blank">CodeRabbit</a> - AI-powered code review that catches bugs, security issues, and style problems
+  - <a href="https://cursor.com/bugbot" target="_blank">Cursor Bugbot</a> - Automated bug detection integrated with Cursor
+  - <a href="https://www.graphite.com/" target="_blank">Graphite</a> - PR workflow tools with AI review
+
+:::tip[Your AI Reviewer]
+Use AI code review tools (CodeRabbit, Cursor Bugbot) as your "second pair of eyes" on every PR. They catch issues that are easy to miss when you are deep in the code, and they cost nothing compared to shipping a bug.
+:::
+
+### <Tooltip text="Documentation as Code" definition="Keeping documentation (comments, ADRs, API docs) in the repository alongside the code it describes, so it stays in sync." /> {#documentation-as-code}
+
+- Write code comments that explain **why**, not **what**. The code itself should explain what it does.
+- Keep your <Tooltip text="ADRs" definition="Architecture Decision Records: short documents that capture significant technical decisions, their context, and rationale." /> updated as your architecture evolves (see the `/docs/decisions/` folder set up in [Planning](../project-set-up-to-release/planning))
+- For public APIs, generate documentation from code annotations (JSDoc, TypeDoc) to keep docs in sync with implementation
+
+<PageBreak />
+
 ## Framework-specific Development Tips
 
 ### React
@@ -287,15 +313,58 @@ In order of recommendation:
 
 <PageBreak />
 
+## Dependency Management
+
+Modern applications depend on hundreds of third-party packages. Managing these dependencies is a critical development activity.
+
+### <Tooltip text="Lock Files" definition="Auto-generated files (package-lock.json, yarn.lock) that record the exact version of every dependency installed, ensuring deterministic builds." /> {#lock-files}
+
+- **Always commit lock files** (`package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`) to version control
+- They ensure every build uses exactly the same dependency versions, eliminating "works on my machine" issues
+
+### Vulnerability Scanning
+
+- Set up automated vulnerability checking using <a href="https://snyk.io/" target="_blank">Snyk</a>, <a href="https://github.com/dependabot" target="_blank">Dependabot</a>, or <a href="https://www.mend.io/renovate/" target="_blank">Renovate</a>
+- These tools automatically create PRs to update vulnerable packages
+- Run `npm audit` or `yarn audit` regularly as a manual check
+
+### Update Policy
+
+Define a cadence for dependency updates and stick to it:
+
+- **Patch/minor versions:** Accept automated PRs weekly (low risk)
+- **Major versions:** Review manually - check changelogs for breaking changes
+- **Security patches:** Apply immediately regardless of schedule
+
+:::warning[Dependency Hygiene]
+Never let dependencies go unpatched for months. Automated PRs from Dependabot or Renovate make this near-effortless. Stale dependencies are one of the most common sources of security vulnerabilities.
+:::
+
+### <Tooltip text="License Compliance" definition="Checking that the open-source licences of your dependencies are compatible with your project's licence and intended use." /> {#license-compliance}
+
+Be aware of the licences of your dependencies. Some licences (GPL, AGPL) have implications for commercial or closed-source software. Use `npx license-checker` to audit your dependency licences.
+
+<PageBreak />
+
 ## Security and Authentication
 
 ### Security
+
+:::danger[Shift-Left Security]
+Security is not a phase - it is a practice. Scan code as you write it, not just before release. Use at least two security scanning tools for comprehensive coverage.
+:::
+
+:::info
+See [Verify - Security Testing](../SDLC/verify#non-functional-testing) for more detail on the <Tooltip text="OWASP Top 10" definition="The ten most critical web application security risks as identified by the Open Web Application Security Project, including injection, broken auth, and sensitive data exposure." /> and security testing methodologies.
+:::
 
 - Set up repository security scanning via Snyk
   - Add the project to Snyk <a href="https://app.snyk.io/org/bangsluke/projects" target="_blank">here</a>
   - Check and close off all vulnerabilities
 - Also set up and use [Trivy](https://trivy.dev/) to scan the code for vulnerabilities as an additional security measure.
   - Set up Trivy to scan the code for vulnerabilities as part of the CI/CD pipeline.
+- Test against the <Tooltip text="OWASP Top 10" definition="The ten most critical web application security risks as identified by the Open Web Application Security Project, including injection, broken auth, and sensitive data exposure." /> - the most common security vulnerabilities in web applications
+  - <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a>
 
 ### Authentication
 
@@ -324,6 +393,15 @@ In order of recommendation:
 - Set up documentation for the project via a README.md file
 - Write from scratch or use a template such as <a href="https://readme.so/" target="_blank">readme.so</a>
 - Ensure that there is a Cursor rule for keeping the documentation up to date
+- Keep your <Tooltip text="ADRs" definition="Architecture Decision Records: short documents that capture significant technical decisions, their context, and rationale." /> up to date as the project evolves - every significant decision should be recorded
+- If building an API, generate <Tooltip text="API documentation" definition="Structured reference material (e.g. OpenAPI/Swagger) describing an API's endpoints, request/response formats, and authentication." /> from code annotations:
+  - <a href="https://swagger.io/specification/" target="_blank">OpenAPI/Swagger</a> for REST APIs
+  - <a href="https://typedoc.org/" target="_blank">TypeDoc</a> for TypeScript libraries
+  - <a href="https://jsdoc.app/" target="_blank">JSDoc</a> for JavaScript
+
+:::tip[Definition of Done]
+A feature is not complete until it has appropriate documentation, error handling, and (if applicable) metrics. Undocumented code becomes legacy code - the next person to touch it (including future-you) will either waste time understanding it or rewrite it.
+:::
 
 <PageBreak />
 
