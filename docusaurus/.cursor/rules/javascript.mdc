@@ -3,6 +3,8 @@ description: Modern JavaScript (ES6+) best practices and patterns
 globs:
   - "**/*.js"
   - "**/*.mjs"
+  - "docusaurus.config.js"
+  - "sidebars.js"
 alwaysApply: false
 ---
 

@@ -65,15 +65,20 @@ docusaurus/
 - Use descriptive headings with proper hierarchy (h1 > h2 > h3)
 - Include code examples with syntax highlighting
 
+### Documentation prose and components
+- **Dashes**: Use a single hyphen `-` in prose and in definitions; do not use double hyphen `--`.
+- **PageBreak**: Use `<PageBreak />` on its own line between major sections to match existing docs (no import needed).
+- **Tooltip**: Wrap terms that need definition in `<Tooltip text="Term" definition="Definition." />` on first use; use single `-` in definitions (no import needed).
+
 ### Import Aliases
 - No custom aliases configured
 - Use relative imports from project root
 
 ### Code Style
-- Use modern ES6+ JavaScript
-- Prefer functional components with hooks
-- Add JSDoc comments for complex functions
-- Keep components small and focused
+- Code should be self-documenting (minimal documentation preference).
+- Use modern ES6+ JavaScript; prefer functional components with hooks.
+- Keep components small and focused.
+- Add JSDoc only for public APIs or non-obvious behaviour.
 
 ---
 

@@ -42,9 +42,44 @@ Each folder should have `_category_.json`:
 
 ---
 
+## Documentation Writing Style
+
+### Dashes and hyphens
+In documentation prose, use a **single hyphen** `-` when a dash is needed (e.g. "X - Y" or "X-Y"). Do **not** use double hyphen `--` or em dash in body text or in definitions.
+
+---
+
 ## MDX Components
 
-### Using React Components in MDX
+### PageBreak (no import needed)
+Use `<PageBreak />` to separate major sections for readability and print flow. Match existing patterns:
+
+- Place **on its own line** between logical sections (e.g. after a paragraph or list, before the next heading).
+- Use between major topic blocks, not between every paragraph.
+- Example: after a numbered list and before the next `##` heading, or after a long subsection.
+
+```mdx
+</paragraph or list>
+
+<PageBreak />
+
+## Next Section
+```
+
+### Tooltip (no import needed)
+Wrap terms that need definition in the **Tooltip** component so readers can hover for an explanation. Match existing patterns:
+
+- Use `<Tooltip text="Term or phrase" definition="Clear, concise definition." />`.
+- Use for acronyms, jargon, and domain terms on **first use** (per page or per section).
+- Keep definitions short and accurate. Use a single hyphen `-` in definitions, not `--`.
+- You may bold the term: **<Tooltip text="SDLC" definition="..." />** when it is the subject of the sentence.
+- No import needed; component is provided by the theme.
+
+```mdx
+The <Tooltip text="MVP" definition="Minimum Viable Product - the smallest version of a product that can be released to validate a hypothesis." /> helps validate ideas early.
+```
+
+### Other React Components in MDX
 ```mdx
 import MyComponent from '@site/src/components/MyComponent';
 
