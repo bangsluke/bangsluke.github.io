@@ -1,6 +1,5 @@
 ---
 slug: /projects/dorkinians-website/stats-page
-description: Details on the Stats page and sub-pages of the Dorkinians Website
 ---
 
 # Stats
@@ -28,8 +27,6 @@ description: Details on the Stats page and sub-pages of the Dorkinians Website
   - [Radar Charts](#radar-charts)
   - [Full Comparison](#full-comparison)
 
-<PageBreak />
-
 ## Overview
 
 The Stats section provides comprehensive statistics for players, teams, and the entire club, plus a player comparison section.
@@ -53,8 +50,6 @@ To do this, tap the filter icon in the header to open the [filter sidebar](#filt
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Navigation
 
 The Stats section has four main sub-pages accessible via swiping left or right on mobile devices or using the navigation menu on desktop devices:
@@ -74,7 +69,7 @@ You can also access the [navigation menu](#stats-navigation-menu) by tapping the
 
 ### Stats Navigation Menu
 
-The Stats Navigation Menu provides quick access to all sections within the Stats pages.
+The Stats Navigation Menu provides quick access to all sections within the Stats pages. 
 
 - Access it by tapping the menu icon (three horizontal lines) in the header when viewing any Stats page.
 - Expand the stats page you want to navigate to.
@@ -92,8 +87,6 @@ Use the Stats Navigation Menu to quickly jump to specific sections without scrol
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Filters
 
@@ -117,8 +110,8 @@ Filters allow you to narrow down statistics to specific criteria. Available filt
   />
 </div>
 
-**Using Filters:**
 
+**Using Filters:**
 1. Tap the filter icon to open the filter sidebar
 2. Select your desired filter criteria for each filter type
 3. Click "Apply Filters" to apply your selections
@@ -127,7 +120,6 @@ Filters allow you to narrow down statistics to specific criteria. Available filt
 6. Tap "Clear All Filters" in the filter sidebar to remove all active filters
 
 **Filter Persistence:**
-
 - Filters persist when navigating between Stats sub-pages (Player Stats, Team Stats, Club Stats, Comparison)
 - Filters are cleared when you change the selected player or team
 
@@ -140,8 +132,6 @@ Filters persist when navigating between Stats sub-pages, so remember to clear fi
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Player Stats
 
@@ -161,36 +151,37 @@ The Player Stats section provides comprehensive statistics for individual player
 ### Player Stats Sections
 
 1. **Key Performance Stats** - displays some of the most important metrics for the selected player, including Appearances, Minutes played, Seasons count, Man of the Match awards, Goals scored, and Assists
-2. **Seasonal Performance** - shows how the player's statistics have changed across different seasons displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
-3. **Team Performance** - shows how the player performs for different teams within the club displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
-4. **Positional Stats** - displays statistics broken down by the position the player played in (Goalkeeper, Defender, Midfielder, Forward), including appearances and minutes played in each position
+2. **All Games** - provides a "See All Games" link that opens a full-screen view of all games the player has played in, grouped by season. Expand a season to load and see each game (date, result, competition, home/away). Expand a game to see who played in that game, with position, minutes, goals, assists, and other stats in a table.
+3. **Seasonal Performance** - shows how the player's statistics have changed across different seasons displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
+4. **Team Performance** - shows how the player performs for different teams within the club displayed in a column chart to show trends over time - with the ability to change which metric is displayed in the chart
+5. **Positional Stats** - displays statistics broken down by the position the player played in (Goalkeeper, Defender, Midfielder, Forward), including appearances and minutes played in each position
 
 :::info
 Position is determined by the captain's assessment of where the player played the majority of each match.
 :::
 
-5. **Match Results** - shows the player's record in matches, such as games won, drawn, and lost, and average points per game
-6. **Game Details** - provides a summary of how many games were played in League, Cup, and Friendly matches, how many home and away games the player has played, and some other stats such as how many teammates they have played with
-7. **Monthly Performance** - shows statistics broken down by month, helping identify best performing months - with the ability to change which metric is displayed in the chart
-8. **Defensive Record** - focuses on defensive statistics, including clean sheets, goals conceded and goals conceded per appearance
+6. **Match Results** - shows the player's record in matches, such as games won, drawn, and lost, and average points per game
+7. **Game Details** - provides a summary of how many games were played in League, Cup, and Friendly matches, how many home and away games the player has played, and some other stats such as how many teammates they have played with
+8. **Monthly Performance** - shows statistics broken down by month, helping identify best performing months - with the ability to change which metric is displayed in the chart
+9. **Defensive Record** - focuses on defensive statistics, including clean sheets, goals conceded and goals conceded per appearance
 
 :::info
 If the player selected has ever played as a goalkeeper, the Defensive Record section will also include goalkeeper specific statistics such as saves
 :::
 
-9. **Distance Travelled** - shows the total distance round trip the player has traveled to away matches, calculated from the club's home ground (Pixham Sports Ground) to each opposition ground
-10. **Opposition Locations** - displays a map showing all the locations where the player has played away matches, providing a visual representation of their travel history
-11. **Opposition Performance** - shows how the player performs against different opposition teams, rated by Goals and Assists per appearance against each opposition
-12. **Fantasy Points** - displays the player's fantasy football points total and breakdown, as well as the player's highest scoring week and month
+10. **Distance Travelled** - shows the total distance round trip the player has traveled to away matches, calculated from the club's home ground (Pixham Sports Ground) to each opposition ground
+11. **Opposition Locations** - displays a map showing all the locations where the player has played away matches, providing a visual representation of their travel history
+12. **Opposition Performance** - shows how the player performs against different opposition teams, rated by Goals and Assists per appearance against each opposition
+13. **Fantasy Points** - displays the player's fantasy football points total and breakdown, as well as the player's highest scoring week and month
 
 :::info
 Fantasy points are calculated using the standard Premier League fantasy football scoring system - see the [Points System](4TOTWPage.md#points-system) section for more details.
 :::
 
-13. **Card Stats** - displays the player's yellow and red card statistics and how much it has cost them
-14. **Penalty Stats** - displays the player's penalty statistics, including penalties scored, penalties missed, penalties conceded, and penalties saved - in and out of penalty shootouts
-15. **Minutes per Stats** - displays efficiency metrics, displaying how many minutes of play are required for various statistics including minutes per goal, minutes per assist and minutes per clean sheet
-16. **Captaincies, Awards and Achievements** - displays the player's captaincies, awards and achievements, including Team of the Week appearances, Player of the Month awards, and Milestone achievements
+14. **Card Stats** - displays the player's yellow and red card statistics and how much it has cost them
+15. **Penalty Stats** - displays the player's penalty statistics, including penalties scored, penalties missed, penalties conceded, and penalties saved - in and out of penalty shootouts
+16. **Minutes per Stats** - displays efficiency metrics, displaying how many minutes of play are required for various statistics including minutes per goal, minutes per assist and minutes per clean sheet
+17. **Captaincies, Awards and Achievements** - displays the player's captaincies, awards and achievements, including Team of the Week appearances, Player of the Month awards, and Milestone achievements
 
 > [Back to Table of Contents](#table-of-contents)
 
@@ -267,8 +258,6 @@ Share functionality may not be available on all devices or browsers. If the shar
 
 > [Back to Table of Contents](#table-of-contents) -->
 
-<PageBreak />
-
 ## Team Stats
 
 The Team Stats section provides statistics and analysis for individual teams within the club. Select a team using the team selector, then explore their performance across multiple categories.
@@ -321,8 +310,6 @@ You can click on any stat row in the data table to see a tooltip to help explain
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Club Stats
 
 The Club Stats section provides club-wide statistics and comparisons across all teams. This section gives a comprehensive view of the entire club's performance.
@@ -369,8 +356,6 @@ The Data Table section provides a comprehensive table of all club statistics. To
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Comparison
 
