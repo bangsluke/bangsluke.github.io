@@ -15,6 +15,27 @@ description: Product Management introduction and key concepts
 
 ## Key Concepts
 
+### Product Vision, Strategy and Principles
+
+These three layers help align teams and stakeholders on *why* the product exists, *how* it will win, and *what* behaviour is non-negotiable when making trade-offs.
+
+| Layer | Purpose | Horizon | Example |
+|-------|---------|---------|--------|
+| **Product Vision** | The long-term impact or North Star; why the product exists. | Years | "Enable every small business to compete with big brands through data." |
+| **Product Strategy** | How the product will win in the market; where to play and how to differentiate. | 1–3 years | "Win in SMB by being the easiest to set up and the most transparent on pricing." |
+| **Product Principles** | Guardrails for decisions; what we optimise for and what we won't do. | Stable | "We prioritise clarity over cleverness." / "We never use dark patterns." |
+
+Vision and strategy inform roadmap and <Tooltip text="OKRs" definition="Objectives and Key Results: a goal-setting framework where Objectives are qualitative goals and Key Results are measurable outcomes that indicate success." />; principles help when prioritising features, design choices, and partner deals, speaking the nature of the products you want to create and the values you want to uphold.
+
+:::tip[Example: Principles in practice]
+If a principle is "We never use dark patterns," then a proposal for a pre-checked "opt in to marketing" box is out of scope, regardless of short-term conversion gains. Principles make tough calls consistent.
+:::
+
+:::info[By company stage]
+- **Startup:** Vision might be a single sentence; strategy may live in the founder's head. Writing down 3–5 product principles early still pays off when the team grows.
+- **Growth / Established:** Document vision and strategy in a living doc (e.g. one-pager or wiki). Revisit strategy at least annually; principles rarely change unless the company pivots.
+:::
+
 ### DORA Metrics
 
 <Tooltip text="DORA" definition="DevOps Research and Assessment - Four key measures of software delivery: deployment frequency, lead time for changes, change failure rate, and time to restore service." /> stands for DevOps Research and Assessment, a long‑running research initiative originally formed to understand what makes software teams high‑performing. It is now part of Google Cloud, continuing to publish the annual <Tooltip text="State of DevOps report" definition="An annual research report (now from Google Cloud) on DevOps practices and team performance based on industry data." />. DORA’s research spans more than a decade and includes data from tens of thousands of engineering professionals worldwide. The program identified four key software delivery performance metrics (the “DORA metrics”):
@@ -53,6 +74,8 @@ With limited resources and endless feature requests, structured prioritization i
 | RICE          | Feature-level prioritization with quantifiable metrics | Reach, Impact, Confidence, Effort              | Data-driven, objective    | Can be time-consuming, subjective estimates |
 | MoSCoW        | Sprint planning, stakeholder communication             | Must-have, Should-have, Could-have, Won't-have | Simple, aligns teams      | Can be vague, subjective                    |
 | Cost-of-Delay | Strategic decisions, opportunity cost analysis         | Business value × Urgency                       | Focuses on value, urgency | Requires accurate value estimation          |
+
+For outcome-based planning and aligning roadmap to goals, see [Outcome-based roadmaps and OKRs](/docs/SDLC/planning-and-design#outcome-based-roadmaps-and-okrs) in Planning and Design.
 
 <PageBreak />
 

@@ -18,7 +18,7 @@ How you release software should be a deliberate choice, not an accident of your 
 
 With <Tooltip text="continuous delivery" definition="A practice where every change that passes automated tests is automatically prepared for release to production, though the actual deployment may still require a manual approval." />, every change that passes CI is a release candidate. The team can deploy at any time with confidence because every build is production-ready.
 
-- **Best for:** Teams with strong <Tooltip text="CI/CD" definition="Continuous Integration / Continuous Delivery — the practice of automatically building, testing, and preparing code for release on every change." />, high test coverage, and the ability to roll back quickly.
+- **Best for:** Teams with strong <Tooltip text="CI/CD" definition="Continuous Integration / Continuous Delivery - the practice of automatically building, testing, and preparing code for release on every change." />, high test coverage, and the ability to roll back quickly.
 - **Cadence:** On-demand (potentially multiple times per day).
 
 ### Scheduled Releases
@@ -87,7 +87,7 @@ Automate version bumping and changelog generation using tools like [semantic-rel
 :::info[By Company Stage]
 - **Startup:** Practice **continuous delivery** - ship to production multiple times per day. Lightweight release notes (a Slack message or auto-generated changelog is fine). The founder or CTO is often the release owner by default. <Tooltip text="Feature flags" definition="Configuration switches that allow you to enable or disable features at runtime without deploying new code, enabling progressive rollout and instant rollback." /> are optional but valuable even at small scale for de-risking launches.
 - **Growth Stage:** Introduce **scheduled releases** (bi-weekly or sprint-aligned) with formal release notes. Adopt <Tooltip text="feature flags" definition="Configuration switches that allow you to enable or disable features at runtime without deploying new code, enabling progressive rollout and instant rollback." /> to decouple deploy from release. Establish a rotating release owner role. Set up beta programs or early-access groups to validate releases with a subset of users before full rollout.
-- **Established:** Implement **release trains** or formal release management with CAB approval for high-risk changes. Compliance sign-off (change records, audit trails) becomes mandatory. Release windows defined by <Tooltip text="SLA" definition="Service Level Agreement — a contractual commitment to customers specifying minimum levels of availability, performance, and support response times." /> constraints. Automated release notes generated from Jira tickets and commit messages. Dedicated release management team or role.
+- **Established:** Implement **release trains** or formal release management with CAB approval for high-risk changes. Compliance sign-off (change records, audit trails) becomes mandatory. Release windows defined by <Tooltip text="SLA" definition="Service Level Agreement - a contractual commitment to customers specifying minimum levels of availability, performance, and support response times." /> constraints. Automated release notes generated from Jira tickets and commit messages. Dedicated release management team or role.
 :::
 
 <PageBreak />
