@@ -45,7 +45,66 @@ Not everything can be built at once. Use a structured framework to decide what t
 :::info[By Company Stage]
 - **Startup:** Planning should be **lightweight and fast**. Use a <Tooltip text="Lean Canvas" definition="A one-page business model template adapted from the Business Model Canvas, focused on problems, solutions, key metrics, and unfair advantages." /> to validate the business case. Run week-long design sprints to test assumptions before committing to a build. The founder or CEO is often the Product Owner. Requirements come directly from customer conversations - not lengthy documents.
 - **Growth Stage:** Introduce **formal Product Requirement Documents (PRDs)** and a shared product roadmap (tools like [Linear](https://linear.app/), [Productboard](https://www.productboard.com/), or [Jira](https://www.atlassian.com/software/jira)). Hire a dedicated Product Manager. Start using RICE or MoSCoW consistently to arbitrate between competing priorities. Quarterly planning cycles help balance discovery with delivery.
-- **Established:** Implement **enterprise architecture review boards** and formal requirement sign-off processes. Cross-team dependency mapping becomes essential - use tools like [Jira Align](https://www.atlassian.com/software/jira/align) or program increment planning (<Tooltip text="SAFe" definition="Scaled Agile Framework — an enterprise framework for scaling Agile across large organisations with multiple teams and value streams." />). Compliance and regulatory requirements (GDPR, SOX, HIPAA) become first-class planning inputs. Budget for <Tooltip text="technical debt" definition="The accumulated cost of shortcuts, deferred maintenance, and sub-optimal decisions that slow future development." /> reduction alongside feature work.
+- **Established:** Implement **enterprise architecture review boards** and formal requirement sign-off processes. Cross-team dependency mapping becomes essential - use tools like [Jira Align](https://www.atlassian.com/software/jira/align) or program increment planning (<Tooltip text="SAFe" definition="Scaled Agile Framework - an enterprise framework for scaling Agile across large organisations with multiple teams and value streams." />). Compliance and regulatory requirements (GDPR, SOX, HIPAA) become first-class planning inputs. Budget for <Tooltip text="technical debt" definition="The accumulated cost of shortcuts, deferred maintenance, and sub-optimal decisions that slow future development." /> reduction alongside feature work.
+:::
+
+### Roadmap Planning
+
+Roadmap planning is the process of defining the strategic direction of a software product over time. It lays out what the team intends to build, why it matters, and roughly when key initiatives will happen. Instead of detailing every task, a roadmap focuses on high‑level goals, major features, and expected outcomes.
+A good roadmap helps teams:
+- Align on priorities and long‑term vision
+- Communicate plans clearly to stakeholders
+- Make trade‑offs based on value, effort, and constraints
+- Adapt to new information while keeping the product moving forward
+
+:::danger[The Issue with Roadmaps]
+Even with the best of intentions, product roadmaps typically lead to very poor business results. Most product ideas aren't going to work from lack of value, usability, feasibility or business viability. But roadmaps are needed in most businesses to give visiblity of what items are being worked on and of timing for the business to make plans around the product.
+
+A roadmap is only as good as the team's ability to deliver on it. Often, roadmaps cause issues with people interpreting items on the roadmap as commitments and the roadmap loses credibility quickly when they are not delivered on. A better approach for building a roadmap is to prioritise business results, rather than product ideas and to introduce the concept of **high-integrity commitments**.
+:::
+
+### High-integrity commitments
+
+ **High-integrity commitments** mean the organisation commits to fewer, clearer items and honours those commitments - or renegotiates explicitly when reality changes-instead of overcommitting and slipping silently.
+
+**Practices that support high-integrity roadmaps:**
+
+- **Scope commitments clearly:** For each committed item, define a bounded scope (e.g. "Search by date range" not "Improve search"). Avoid vague or moving targets.
+- **Buffer for uncertainty:** Reserve capacity (e.g. 20–30%) for unknowns, bugs, and rework so committed work is achievable.
+- **Renegotiate, don't hide:** When delivery is at risk, surface it early and adjust scope or date with stakeholders instead of letting dates slip without communication.
+- **Separate commitments from bets:** Label which roadmap items are **commitments** (we will deliver) vs **bets** (we will try; we may learn and change direction). This reduces pressure to "commit" to exploratory work.
+
+:::info[Example: Commitment vs bet]
+- **Commitment:** "Q2: Ship new onboarding flow for signed-in users (defined flows in PRD)."
+- **Bet:** "Q2: Explore and, if validated, ship a first version of in-app recommendations."
+:::
+
+:::warning[Common anti-pattern]
+Loading the roadmap with "best case" dates and then slipping repeatedly erodes trust. Prefer fewer, well-scoped commitments and a clear process for renegotiation over an optimistic, crowded plan.
+:::
+
+### Outcome-based roadmaps and OKRs
+
+An **outcome-based roadmap** focuses on the results you want (e.g. "Increase activation rate") rather than a fixed list of output features. <Tooltip text="OKR" definition="Objectives and Key Results: a goal-setting framework where Objectives are qualitative goals and Key Results are measurable outcomes that indicate success." /> (Objectives and Key Results) is a common way to define outcomes and align roadmap work to them.
+
+- **Objective:** Qualitative, inspiring goal (e.g. "Make onboarding the best part of the product experience").
+- **Key Results:** Measurable outcomes, typically 2–4 per Objective (e.g. "Increase day-1 completion rate from 40% to 65%," "Reduce time-to-first-value to under 2 minutes").
+
+Roadmap initiatives and backlog items then link to Key Results so delivery is evaluated by outcome, not just by "feature shipped."
+
+:::tip[Example OKR set]
+- **Objective:** Improve retention in the first 30 days.
+- **Key Results:**
+  - KR1: Increase 7-day retention from 25% to 35%.
+  - KR2: Increase 30-day retention from 12% to 18%.
+  - KR3: Achieve NPS ≥ 40 for the "onboarding" flow.
+
+Initiatives might include: redesigned onboarding, in-app tips, and email sequence-each tied to one or more KRs.
+:::
+
+:::info[By Company Stage]
+- **Startup:** A single set of company or product OKRs (3–5 Objectives, 2–3 KRs each) is often enough; keep cycles short (e.g. quarterly).
+- **Growth / Established:** Use cascaded OKRs (company → product area → team) so roadmap planning connects to strategic objectives. Review and score KRs at cycle end to inform the next roadmap.
 :::
 
 ### Planning Key Deliverables
@@ -93,7 +152,7 @@ No design is perfect. Explicitly allocate capacity for <Tooltip text="technical 
 
 :::info[By Company Stage]
 - **Startup:** Design for **speed of iteration**, not perfection. A <Tooltip text="monolith" definition="A single, unified application where all features are deployed together." /> is almost always the right starting architecture - it reduces operational complexity and lets you move fast. Use design sprints and rapid prototyping. Skip the design system initially but maintain basic consistency.
-- **Growth Stage:** Introduce a **formal design system** (e.g. a shared Figma library and component kit). Start writing <Tooltip text="ADRs" definition="Architecture Decision Records — short documents that capture significant technical decisions, their context, and rationale." /> for significant decisions. Consider breaking out the first <Tooltip text="microservice" definition="A small, independently deployable service that is part of a larger system, communicating with other services via APIs." /> only when a genuine scaling bottleneck emerges - not before. Hire a dedicated UX designer.
+- **Growth Stage:** Introduce a **formal design system** (e.g. a shared Figma library and component kit). Start writing <Tooltip text="ADRs" definition="Architecture Decision Records - short documents that capture significant technical decisions, their context, and rationale." /> for significant decisions. Consider breaking out the first <Tooltip text="microservice" definition="A small, independently deployable service that is part of a larger system, communicating with other services via APIs." /> only when a genuine scaling bottleneck emerges - not before. Hire a dedicated UX designer.
 - **Established:** Maintain a **centralised architecture team** or guild that reviews designs for consistency, security, and scalability. Use formal threat modelling (STRIDE) during design. Invest in enterprise-grade design systems shared across products. Run architecture fitness functions to ensure designs stay compliant over time.
 :::
 

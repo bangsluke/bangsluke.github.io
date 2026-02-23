@@ -147,7 +147,8 @@ Search is configured via DocSearch:
 3. **Include examples**: Code examples improve comprehension
 4. **Link related docs**: Use internal links liberally
 5. **Keep URLs stable**: Avoid renaming files unnecessarily
-6. **Test locally**: Run `yarn start` before committing
+6. **Don't use the character `—` in the documentation** - use a single hyphen `-` instead.
+7. **Test locally**: Run `yarn start` before committing
 
 ---
 

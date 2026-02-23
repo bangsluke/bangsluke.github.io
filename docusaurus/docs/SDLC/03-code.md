@@ -22,7 +22,7 @@ Before writing a single line of code, ensure the team has a consistent and produ
 
 How you manage code branches directly affects your team's ability to collaborate and ship.
 
-- **<Tooltip text="Trunk-Based Development" definition="A branching strategy where all developers commit to a single shared branch (main/trunk) with short-lived feature branches, enabling continuous integration." />:** All developers commit directly to `main` (or use very short-lived branches that merge within hours). Requires strong <Tooltip text="CI" definition="Continuous Integration — frequently merging code changes into a shared repository with automated builds and tests." /> and <Tooltip text="feature flags" definition="Configuration switches that allow you to enable or disable features at runtime without deploying new code, enabling progressive rollout and instant rollback." />. Minimises merge conflicts and enables continuous deployment.
+- **<Tooltip text="Trunk-Based Development" definition="A branching strategy where all developers commit to a single shared branch (main/trunk) with short-lived feature branches, enabling continuous integration." />:** All developers commit directly to `main` (or use very short-lived branches that merge within hours). Requires strong <Tooltip text="CI" definition="Continuous Integration - frequently merging code changes into a shared repository with automated builds and tests." /> and <Tooltip text="feature flags" definition="Configuration switches that allow you to enable or disable features at runtime without deploying new code, enabling progressive rollout and instant rollback." />. Minimises merge conflicts and enables continuous deployment.
 - **<Tooltip text="GitHub Flow" definition="A lightweight branching model where feature branches are created from main, reviewed via pull requests, and merged back into main." />:** Feature branches off `main`, merged via pull requests after review. Simple and effective for most teams.
 - **<Tooltip text="GitFlow" definition="A branching model with long-lived develop and main branches plus feature, release, and hotfix branches. Suited to scheduled release cycles." />:** Long-lived `develop` and `main` branches with feature, release, and hotfix branches. More ceremony, suited to teams with formal release schedules.
 
@@ -65,7 +65,7 @@ Use <Tooltip text="pre-commit hooks" definition="Scripts that run automatically 
 - **Keep PRs small** - aim for under 400 lines of changes. Large PRs get rubber-stamped.
 - **Review within 24 hours** - long review queues kill velocity.
 - **Be specific and kind** - frame feedback as questions or suggestions, not commands.
-- **Use automated checks first** - let <Tooltip text="CI" definition="Continuous Integration — frequently merging code changes into a shared repository with automated builds and tests." /> catch style/lint issues so humans focus on logic and design.
+- **Use automated checks first** - let <Tooltip text="CI" definition="Continuous Integration - frequently merging code changes into a shared repository with automated builds and tests." /> catch style/lint issues so humans focus on logic and design.
 :::
 
 ### Documentation as Code
