@@ -61,6 +61,16 @@ const config = {
   plugins: [
     'docusaurus-plugin-image-zoom',
     [
+      require.resolve('./plugins/umami-analytics.js'),
+      {
+        // Website ID from Umami dashboard; can use env UMAMI_WEBSITE_ID at build time instead
+        websiteId: process.env.UMAMI_WEBSITE_ID || undefined,
+        // scriptUrl: 'https://cloud.umami.is/script.js', // default for Umami Cloud
+        // dataDomains: 'bangsluke-documentation.netlify.app', // optional: restrict to production
+        // dataDoNotTrack: true, // optional: respect Do Not Track
+      },
+    ],
+    [
       '@docusaurus/plugin-pwa',
       {
         debug: true,
