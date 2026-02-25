@@ -1,11 +1,6 @@
 ---
-description: Docusaurus 3.x documentation patterns and best practices
-globs:
-  - "docs/**/*.md"
-  - "docs/**/*.mdx"
-  - "docusaurus.config.js"
-  - "sidebars.js"
-  - "src/pages/**/*.md"
+description: 
+globs: docusaurus/docs/**/*.md, docusaurus/docs/**/*.mdx, docusaurus/docusaurus.config.js, docusaurus/sidebars.js, docusaurus/src/pages/**/*.md
 alwaysApply: false
 ---
 
@@ -71,7 +66,7 @@ Wrap terms that need definition in the **Tooltip** component so readers can hove
 
 - Use `<Tooltip text="Term or phrase" definition="Clear, concise definition." />`.
 - Use for acronyms, jargon, and domain terms on **first use** (per page or per section).
-- Keep definitions short and accurate. Use a single hyphen `-` in definitions, not `--`.
+- Keep definitions short and accurate. Use a single hyphen `-` in definitions, not `--` or `—`.
 - You may bold the term: **<Tooltip text="SDLC" definition="..." />** when it is the subject of the sentence.
 - No import needed; component is provided by the theme.
 

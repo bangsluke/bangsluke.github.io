@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 slug: /product-management/research
 desciption: Summaries of research such as books read on Product Management
 ---
@@ -78,17 +79,17 @@ The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win" by
 
 <PageBreak />
 
-## Inspired - How to Create Products Customers Love
+## Inspired (How to Create Products Customers Love)
 
 > By Marty Cagan
 
-### Inspired - How to Create Products Customers Love Summary
+### Inspired Summary
 
 <!-- TODO: Update the below summary with the book summary -->
 
 Inspired is a book about product management that teaches you how to create products that customers love. It is a must-read for anyone who wants to be a successful product manager.
 
-### Inspired - How to Create Products Customers Love Key Concepts
+### Inspired Key Concepts
 
 <!-- TODO: Update the below key concepts with the book key concepts -->
 

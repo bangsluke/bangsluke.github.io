@@ -85,6 +85,10 @@ Use <Tooltip text="pre-commit hooks" definition="Scripts that run automatically 
 - **Gold Plating:** Polishing code beyond what the requirement asks for. Ship it, learn from production feedback, then refine.
 :::
 
+:::tip[AI Crawlers]
+Ensuring that there is good online documentation about your product is increasingly important these days as AI crawlers (which often cannot crawl JavaScript hydrated content) can then consume the documentation and understand the content of your application for supporting user's questions and product discovery.
+:::
+
 ### Development Key Deliverables
 
 - Source Code (in version control)

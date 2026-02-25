@@ -410,6 +410,7 @@ A feature is not complete until it has appropriate documentation, error handling
 - Set up analytics for the project if it requires it. Ask AI to define the best solution, however possible options include:
   - <a href="https://umami.is/" target="_blank">Umami</a>
     - Benefits including being self-hosted, no tracking of users, no cookies, no data collection, no data sharing, no data selling
+    - <a href="https://umami.is/docs/exclude-my-own-visits" target="_blank">Exclude my own visits from the analytics</a>
   - <a href="https://analytics.google.com/" target="_blank">Google Analytics</a>
     - Benefits including being free, easy to set up, and has a lot of features
   - <a href="https://www.goatcounter.com/?ref=console.dev" target="_blank">GoatCounter</a>
