@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 slug: /product-management/product-management-intro
 description: Product Management introduction and key concepts
 ---
@@ -10,6 +11,7 @@ description: Product Management introduction and key concepts
 ## Quick Links
 
 - [Product Management Research](../product-management/research)
+- [Product Discovery](../product-management/product-discovery)
 
 <PageBreak />
 
@@ -36,6 +38,8 @@ If a principle is "We never use dark patterns," then a proposal for a pre-checke
 - **Growth / Established:** Document vision and strategy in a living doc (e.g. one-pager or wiki). Revisit strategy at least annually; principles rarely change unless the company pivots.
 :::
 
+<PageBreak />
+
 ### DORA Metrics
 
 <Tooltip text="DORA" definition="DevOps Research and Assessment - Four key measures of software delivery: deployment frequency, lead time for changes, change failure rate, and time to restore service." /> stands for DevOps Research and Assessment, a long‑running research initiative originally formed to understand what makes software teams high‑performing. It is now part of Google Cloud, continuing to publish the annual <Tooltip text="State of DevOps report" definition="An annual research report (now from Google Cloud) on DevOps practices and team performance based on industry data." />. DORA’s research spans more than a decade and includes data from tens of thousands of engineering professionals worldwide. The program identified four key software delivery performance metrics (the “DORA metrics”):
@@ -53,6 +57,8 @@ These metrics measure both speed (throughput) and stability, showing that elite 
 You can integrate tools like [LinearB](https://linearb.io/), [Haystack](https://www.usehaystack.io/) and [Sleuth](https://sleuth.io/) with your source control ([GitHub](https://github.com/)) and project management ([Jira](https://www.atlassian.com/software/jira)/[Azure DevOps](https://azure.microsoft.com/en-us/products/devops)). Even a simple dashboard in Jira that tracks "Issue Created" to "Production Release" can show Lead Time.
 :::
 
+<PageBreak />
+
 ### The Three Ways
 
 > For more information on the Three Ways, see [The Phoenix Project](/docs/product-management/research#the-three-ways-the-phoenix-project)
@@ -64,6 +70,8 @@ You can integrate tools like [LinearB](https://linearb.io/), [Haystack](https://
 :::tip[Tools to Help with the Three Ways]
 For The Second Way, you can use tools like [Mixpanel](https://mixpanel.com/) or [Amplitude](https://amplitude.com/) to understand how users are interacting with features. For the Third Way, you can use tools like [Spikes](https://www.spikes.com/) to help with continual learning.
   :::
+
+<PageBreak />
 
 ### Prioritization Frameworks
 
@@ -92,6 +100,7 @@ For outcome-based planning and aligning roadmap to goals, see [Outcome-based roa
 | Container Orchestration                        | [Kubernetes](https://kubernetes.io/)                                                     | Industry standard for scaling and managing containers.                       |
 | Package Management                             | [Helm](https://helm.sh/), [Kustomize](https://kustomize.io/)                                                | Simplifies Kubernetes app deployment and customization.                      |
 | Continuous Integration & Deployment (CI/CD) | [GitHub Actions](https://github.com/features/actions), [Azure DevOps](https://azure.microsoft.com/en-us/products/devops), [Argo CD](https://argo-cd.readthedocs.io/en/stable/)                  | Automates build, test, and deployment pipelines.                             |
+| Meeting Recording & Transcription               | [Otter](https://otter.ai/) and [Willow Voice](https://www.willow.ai/)                    | Allows fast transcription of meetings and reviews of meeting transcripts              |
 | Observability & Monitoring                     | [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/), [ELK/EFK](https://www.elastic.co/), [OpenTelemetry](https://opentelemetry.io/)                    | Enables proactive monitoring, troubleshooting, and improvement.              |
 | Cloud Platforms                                | [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), [GCP](https://cloud.google.com/) (pick one to master) | Deep expertise in one cloud is more valuable than shallow knowledge of many. |
 | Security / DevSecOps                       | [Snyk](https://snyk.io/), [Trivy](https://trivy.dev/), [Checkov](https://www.checkov.io/), [OPA](https://www.openpolicyagent.org/)                                  | Integrates security into the pipeline ("shift left").                        |

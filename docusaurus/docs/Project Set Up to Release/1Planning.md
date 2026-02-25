@@ -34,6 +34,116 @@ Capture the key functionality as lightweight <Tooltip text="user stories" defini
 Even for personal projects, writing a one-page PRD and a handful of user stories saves hours of rework. It forces you to think through what you actually need before you get lost in implementation details.
 :::
 
+### Example PRD
+
+```markdown
+# Product Requirements Document (PRD)
+## Project: Smart Travel Receipt Scanner (STRS)
+**Version:** 1.0  
+**Owner:**  
+**Last Updated:**  
+
+---
+
+## 1. Overview
+
+### 1.1 Summary
+<!-- Brief description of what the feature does and why it matters. -->
+The Smart Travel Receipt Scanner (STRS) enables travellers to capture a photo of a receipt and automatically extract key expense data using OCR. It reduces manual entry, speeds up expense submission, and improves accuracy by integrating directly into the existing Travel Manager workflow.
+
+### 1.2 Problem Statement
+<!-- What problem users face today and why current solutions fall short. -->
+Travellers currently spend too much time manually entering receipt details, leading to errors, delays, and inconsistent data. Existing OCR tools are generic, often inaccurate for travel receipts, and do not integrate with the company’s expense system — resulting in frustration for travellers and inefficiencies for finance teams.
+
+### 1.3 Goals
+- Reduce manual expense entry  
+- Improve OCR accuracy  
+- Speed up expense submission  
+
+### 1.4 Success Metrics
+| Metric | Target |
+|--------|--------|
+| OCR accuracy | ≥ 95% |
+| Auto‑categorization | ≥ 80% |
+| Time to log expense | ≤ 10 seconds |
+
+---
+
+## 2. Scope
+
+### 2.1 In Scope
+- Receipt capture (camera + upload)  
+- OCR extraction  
+- Auto‑categorization  
+- Duplicate detection  
+- Sync to expense system  
+
+### 2.2 Out of Scope
+- Multi‑page invoices  
+- Desktop upload  
+- Currency conversion logic  
+
+---
+
+## 3. User Stories
+- *As a traveller, I want to scan a receipt so I can log an expense quickly.*  
+- *As a traveller, I want fields auto‑filled so I don’t have to type them.*  
+- *As a finance approver, I want consistent data so reviews are faster.*
+
+---
+
+## 4. Functional Requirements
+
+### 4.1 Capture & Upload
+- Support camera capture and gallery upload  
+- Accept JPG, PNG, HEIC  
+
+### 4.2 OCR & Categorization
+- Extract merchant, date, total, tax, currency  
+- Provide confidence scores  
+- Auto‑categorize receipts  
+
+### 4.3 Sync & Storage
+- Store image + parsed data  
+- Sync within 5 seconds  
+- Offline queueing  
+
+---
+
+## 5. Non‑Functional Requirements
+- OCR processing ≤ 3 seconds  
+- Encrypted at rest and in transit  
+- 99.5% service uptime  
+- Accessible UI (screen readers, contrast)
+
+---
+
+## 6. UX & Design
+- Simple capture → review → save flow  
+- Link to wireframes/prototypes  
+
+---
+
+## 7. Dependencies
+- OCR service  
+- Categorization API  
+- Expense sync service  
+
+---
+
+## 8. Risks
+| Risk | Mitigation |
+|------|------------|
+| Low OCR accuracy | Exclude unsupported formats; allow easy edits |
+| Poor lighting | Auto‑enhancement + retake guidance |
+
+---
+
+## 9. Open Questions
+- Should PDF uploads be supported  
+- Should categorization learn from user corrections
+```
+
 ### Prioritise with MoSCoW
 
 Use <Tooltip text="MoSCoW" definition="A prioritisation method that categorises requirements as Must have, Should have, Could have, and Won't have (this time)." /> to scope your <Tooltip text="MVP" definition="Minimum Viable Product: the smallest version of a product that can be released to validate a hypothesis with real users." />:
@@ -59,6 +169,27 @@ Identify the top 2-3 risks and think about mitigations. Common risks for solo pr
 
 :::warning[Solo Dev Pitfall: Over-Scoping]
 The most common mistake for solo developers is trying to build too much at once. Scope aggressively to the MVP - you can always add features later. A shipped MVP beats an unfinished "full product" every time.
+:::
+
+<PageBreak />
+
+## Estimation
+
+Before starting development, estimate the effort involved so you can set realistic expectations and deadlines for yourself.
+
+### T-Shirt Sizing
+
+Use <Tooltip text="T-shirt sizing" definition="A quick, relative estimation technique using sizes (S, M, L, XL) to categorise work items by effort without committing to precise hours or days." /> to get a rough sense of effort for each feature or user story:
+
+| Size | Meaning | Example |
+|------|---------|---------|
+| **S** | A few hours of work | Add a static page, tweak styling |
+| **M** | 1-2 days of work | Build a form with validation, integrate a simple API |
+| **L** | 3-5 days of work | Authentication flow, complex data dashboard |
+| **XL** | 1-2 weeks of work | Full CRUD feature with backend, real-time functionality |
+
+:::tip[Timebox Your Discovery]
+Do not spend weeks in planning. Timebox your planning phase (1-2 days for a solo project is typically sufficient) and get feedback through working software instead. The goal is to plan enough to start building with confidence, not to predict every detail upfront.
 :::
 
 <PageBreak />
@@ -212,23 +343,3 @@ For inspiration for projects, check out the following resources:
 - <a href="https://www.reddit.com/r/webdev/comments/nm6wcl/18_cards_of_how_to_design_web_forms/?utm_source=share&utm_medium=ios_app&utm_name=iossmf" target="_blank">18 Cards of how to design web forms</a>
 - <a href="https://medium.com/design-bootcamp/form-ui-design-36-tips-best-practices-112128c16429" target="_blank">Form UI Design - 36 Tips Best Practices</a>
 
-<PageBreak />
-
-## Estimation
-
-Before starting development, estimate the effort involved so you can set realistic expectations and deadlines for yourself.
-
-### T-Shirt Sizing
-
-Use <Tooltip text="T-shirt sizing" definition="A quick, relative estimation technique using sizes (S, M, L, XL) to categorise work items by effort without committing to precise hours or days." /> to get a rough sense of effort for each feature or user story:
-
-| Size | Meaning | Example |
-|------|---------|---------|
-| **S** | A few hours of work | Add a static page, tweak styling |
-| **M** | 1-2 days of work | Build a form with validation, integrate a simple API |
-| **L** | 3-5 days of work | Authentication flow, complex data dashboard |
-| **XL** | 1-2 weeks of work | Full CRUD feature with backend, real-time functionality |
-
-:::tip[Timebox Your Discovery]
-Do not spend weeks in planning. Timebox your planning phase (1-2 days for a solo project is typically sufficient) and get feedback through working software instead. The goal is to plan enough to start building with confidence, not to predict every detail upfront.
-:::
