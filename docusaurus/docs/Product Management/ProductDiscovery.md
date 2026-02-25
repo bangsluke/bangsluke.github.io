@@ -53,29 +53,70 @@ The below sections cover the different techniques that can be used to frame, pla
 
 Framing techniques help us quickly identify the underlying issues that must be tackled during the discovery process. We need to clarify the underlying problem to be solved and tease out risks to determine where best to spend our time.
 
-TBC
+There are really two goals to framing:
 
-> More information can be found on page 175 of Marty Cagan's book "[Inspired (How to Create Products Customers Love)](../product-management/research#inspired-how-to-create-products-customers-love)".
+1. Ensure that the team is on the same page about the problem to be solved, agreeing on the business objective we're focusing on, the specific problem we're intending to solve for customers, which customers are we intending to solve it for, and the success criteria for the solution.
+2. To identify the big risks (financial, technical, legal, etc.) that will need to be tackled during the discovery process.
+
+> More information can be found on page 175 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
+
+Three useful framing techniques are:
+
+1. **Opportunity Assessment** - Used for the vast majority of product work, rangeing from simple optimisation, to a feature to a medium sized project.
+2. **Customer Letter** - Designed for larger projects or initiatives.
+3. **Startup Canvas** - For times when you're creating an entirely new product line or new business.
+
+:::tip[Framing Techniques]
+#### Opportunity Assessment
+
+A simple technique with the key being to answer four questions:
+1. What business objective is this work intended to address? (*Objective*)
+2. How will you know if you've succeeded? (*Key Results*)
+3. What problem will this solve for our customers? (*Customer Problem*)
+4. What type of customer are we focused on? (*Target Market*)
 
 <PageBreak />
 
+#### Customer Letter Technique
+
+When embarking on larger efforts, there may in fact be multiple reasons, several customer problems to be solved or business objectives to be addressed. For this, it may take more than the four questions of the Opportunity Assessment to fully frame the work.
+
+Marty Cagan describes a technique where the product team writes a hypothetical letter to the CEO from a very happy and impressed customer, explaining how the customer is using the product and the benefits they are getting from it and how it has changed their business. The letter also includes an imagined congratulary response from the CEO to the engineering team for delivering the solution.
+
+This technique creates empathy for the customer and the problem they are solving, and more clearly emphasizes to the team how their efforts can help the lives of the customers they are serving.
+
+<PageBreak />
+
+#### Startup Canvas Technique
+
+For situations where you're creating an entirely new product line or new business, the Startup Canvas is a useful technique to help frame the work. A startup canvas is close cousin to the Business Model Canvas, but it is specifically designed for startups and early stage businesses. Creating a canvas helps quickly highlight the key assumptions and major risks facing a startup or a significant new product in an existing business. This is a good thing - the idea is to tackle the biggest risks first.
+:::
+
 ### Planning Techniques
 
-These are techniques to help with identifying the bigger challenges and planning how to attack this work.
+These are techniques to help with identifying the bigger challenges and planning how to attack this work. For complicated product efforts, it often helps to have some way to scope out and plan your discovery efforts.
 
-TBC
+> More information can be found on page 191 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
 
-> More information can be found on page 191 of Marty Cagan's book "[Inspired (How to Create Products Customers Love)](../product-management/research#inspired-how-to-create-products-customers-love)".
+Two techniques are:
+
+1. **Story Maps** - Generally useful technique. Major user activities are arrayed on a board along the horizontal axis, loosely ordered by time from left to right. Along the vertical dimension we go into more detail by breaking down the user activity into smaller user tasks and add stories per task, with critical tasks higher than the optional tasks. This allows you to get a holistic view of the of the system and plan workloads.
+2. **Customer Discovery Program Technique** - A very powerful but time costly approach. The approach is to gather <Tooltip text="reference customers" definition="A real customer who is using your tool in production, has paid real money for the product and is willing to tell others about how much they love your product." /> (at least six is best) who feel strongly about your product and are willing to help you build it. The benefit to them is that they get real input to the solution, and the benefit to the product team is that they get a chance to test the solution with real users. Then work with these customers, bouncing possible solutions off them and getting their feedback on the solutions. Read much more information on page 195 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
 
 <PageBreak />
 
 ### Ideation Techniques
 
-Ideation techniques are designed to provide the product team with a wealth of promising solutions to the problems we're focused on.
+Ideation techniques are designed to provide the product team with a wealth of promising solutions to the problems we're focused on. Although if in general, the product team is given actual business problems to solve rather than solutions, and the product team does their job well and interacts directly and frequently with the users and customers, then typically getting sufficient quantity and quality of solutions is not a problem.
 
-TBC
+> More information can be found on page 208 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
 
-> More information can be found on page 208 of Marty Cagan's book "[Inspired (How to Create Products Customers Love)](../product-management/research#inspired-how-to-create-products-customers-love)".
+Four techniques described here are:
+
+1. **Customer Interviews** - There are many forms of customer interviews - but the key is to ensure that the product manager, product designer and at least one developer are involved to get the benefit of the full learning. Key things: Establish regular cadence of interviews, ensure the customer is in your target market, go to the customers location if possible, ask open ended questions, and be prepared to ask follow up questions.
+2. **Concierge Test Technique** - This involves doing the job that the customer is doing, doing the tasks they have to do to understand the problem they are trying to solve, and then bouncing possible solutions off them and getting their feedback on the solutions. They may need to initially train you on how to do the job and it is most valuable when the product manager, designer and developer are all involved.
+3. **The Power of Customer Misbehavior** - This involves allowing or even encouraging the customer to use our product in a way that is not the way it is intended to be used, and then observing and learning from the customer's behavior to evaluate opportunities for improvement.
+4. **Hack Days** - The two main types are directed and undirected. Directed hack days are where the product team is given a specific customer problem to solve and undirected hack days are where the product team is given free reign to explore whatever product related ideas they have. HJack days typically are effective at creating ideation amongst the engineering team by inclusion and builds cultural missonary mindsets amongst employees.
 
 <PageBreak />
 
@@ -85,7 +126,7 @@ Prototyping techniques are used to create a working model of a solution to test 
 
 TBC
 
-> More information can be found on page 223 of Marty Cagan's book "[Inspired (How to Create Products Customers Love)](../product-management/research#inspired-how-to-create-products-customers-love)".
+> More information can be found on page 223 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
 
 <PageBreak />
 
@@ -93,7 +134,7 @@ TBC
 
 Testing techniques are used to validate the assumptions we've made about the problem to be solved and the solutions we've proposed.
 
-> More information can be found on page 241 of Marty Cagan's book "[Inspired (How to Create Products Customers Love)](../product-management/research#inspired-how-to-create-products-customers-love)".
+> More information can be found on page 241 of Marty Cagan's book "[Inspired](../product-management/research#inspired-how-to-create-products-customers-love)".
 
 #### Testing Feasibility
 
