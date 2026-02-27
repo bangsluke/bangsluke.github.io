@@ -19,7 +19,7 @@ Without a defined lifecycle, teams fall into common traps: requirements drift mi
 The classical SDLC typically follows a series of distinct phases. Each phase relies on the information from the previous phase to produce its own deliverables.
 
 <div align="center">
-<img src="https://i.postimg.cc/qvtK0zqx/Dev-Sec-Ops.png" alt="Dev-Sec-Ops" style={{ width: "90vw", height: "auto" }} />
+<img src="https://bangsluke-assets.netlify.app/images/documentation-site/Dev-Sec-Ops.png" alt="Dev-Sec-Ops" style={{ width: "90vw", height: "auto" }} />
 </div>
 
 <br />
