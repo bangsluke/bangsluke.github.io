@@ -1,13 +1,10 @@
 ---
 slug: /projects/dorkinians-website
-description: The starting page for users of the Dorkinians Website
 ---
 
 # Dorkinians Website
 
-> [Back to Projects Page](../projects)
-
-![Dorkinians Website Screenshot](https://i.postimg.cc/Yq7Xvd7n/Dorkinians-Website.png)
+![Dorkinians Website Screenshot](https://bangsluke-assets.netlify.app/images/dorkinians/Dorkinians-Website.png)
 
 :::danger[HOT TIP]
 This app works best when installed as a native app on your phone or tablet and is highly recommended to do so.
@@ -23,8 +20,6 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
 - [Club Info Page Documentation](5ClubInfoPage.md)
 - [Settings Page Documentation](6SettingsPage.md)
 
-<PageBreak />
-
 ## Table of Contents
 
 - [Quick Links](#quick-links)
@@ -39,15 +34,11 @@ Navigate to the Settings Page using the icon in the top right of the screen and 
   - [Settings](#settings)
 - [Dorkinians Website Useful Links](#dorkinians-website-useful-links)
 
-<PageBreak />
-
 ## Overview
 
-The Dorkinians Website is a mobile-first <Tooltip text="Progressive Web App (PWA)" definition="Progressive Web App: a web app that can be installed, work offline, and feel like a native app on supported devices." /> that provides comprehensive statistics and information about Dorkinians Football Club. The app features a chatbot interface, detailed player, team, and club statistics, Team of the Week displays, and club information.
+The Dorkinians Website is a mobile-first Progressive Web App (PWA) that provides comprehensive statistics and information about Dorkinians Football Club. The app features a chatbot interface, detailed player, team, and club statistics, Team of the Week displays, and club information.
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Navigation
 
@@ -55,7 +46,7 @@ On mobile devices, the app uses a bottom navigation bar with four main tabs:
 
 - **Home**: Chatbot interface for asking questions and player selection
 - **Stats**: Player, team, and club statistics along with player comparison
-- **<Tooltip text="TOTW" definition="Team of the Week: in this app, the weekly selection of top-performing players." />**: Team of the Week and Players of the Month
+- **TOTW**: Team of the Week and Players of the Month
 - **Club Info**: Club information, league details, captains, awards, and useful links
 
 Within each tab, there can be multiple pages such as on the Stats tab.
@@ -72,8 +63,6 @@ On desktop devices, a persistent sidebar navigation is available on the left sid
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Site Pages
 
 ### Home
@@ -84,11 +73,11 @@ Example questions are provided to get you started.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/660MVKSh/Homepage_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Homepage-Mobile.png"
     alt="Homepage Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/qMvjjYHR/Homepage_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Homepage-Desktop.png"
     alt="Homepage Desktop Screenshot"
   />
 </div>
@@ -104,7 +93,6 @@ Example questions are provided to get you started.
 The Stats section provides comprehensive statistics for players, teams, and the entire club.
 
 **Sub-sections:**
-
 - **Player Stats**: Individual player performance metrics across multiple categories
 - **Team Stats**: Team-level statistics and performance analysis
 - **Club Stats**: Club-wide statistics and comparisons
@@ -112,11 +100,11 @@ The Stats section provides comprehensive statistics for players, teams, and the 
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/593s5JGk/Player_Stats_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Player-Stats-Mobile.png"
     alt="Player Stats Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/zXG00MYX/Player_Stats_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Player-Stats-Desktop.png"
     alt="Player Stats Desktop Screenshot"
   />
 </div>
@@ -132,17 +120,16 @@ The Stats section provides comprehensive statistics for players, teams, and the 
 The TOTW (Team of the Week) section displays the best performing players each week and monthly award winners.
 
 **Sub-sections:**
-
 - **Team of the Week**: Weekly best XI with visual pitch display
 - **Players of the Month**: Monthly player awards
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/9XpLP2Sg/TOTW_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/TOTW-Mobile.png"
     alt="TOTW Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/8kHZdG9C/Players_of_the_Month_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Players-of-the-Month-Desktop.png"
     alt="Players of the Month Desktop Screenshot"
   />
 </div>
@@ -158,7 +145,6 @@ The TOTW (Team of the Week) section displays the best performing players each we
 The Club Info section contains information about the club, leagues, captains, awards, and useful links.
 
 **Sub-sections:**
-
 - **Club Information**: Club history, milestones, and location
 - **League Information**: League details and standings
 - **Club Captains**: Current and historical captains
@@ -167,11 +153,11 @@ The Club Info section contains information about the club, leagues, captains, aw
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/Wpn5mVKH/Club_Information_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Information-Mobile.png"
     alt="Club Information Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/gk2NN5bb/League_Information_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/League-Information-Desktop.png"
     alt="League Information Desktop Screenshot"
   />
 </div>
@@ -188,11 +174,11 @@ The Settings page provides PWA installation options, links to help documentation
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/qBL1crYP/Settings_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Settings-Mobile.png"
     alt="Settings Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/v8z07yks/Settings_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Settings-Desktop.png"
     alt="Settings Desktop Screenshot"
   />
 </div>
@@ -203,8 +189,6 @@ The Settings page provides PWA installation options, links to help documentation
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Dorkinians Website Useful Links
 
 - <a href="https://dorkinians-website-v3.netlify.app/" target="_blank">Dorkinians Website</a>
@@ -212,3 +196,4 @@ The Settings page provides PWA installation options, links to help documentation
 - <a href="https://app.netlify.com/projects/dorkinians-website-v3/deploys" target="_blank">Netlify Deployment</a>
 
 > [Back to Table of Contents](#table-of-contents)
+

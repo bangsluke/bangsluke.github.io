@@ -1,6 +1,5 @@
 ---
 slug: /projects/dorkinians-website/home-page
-description: Details on the Home page of the Dorkinians Website
 ---
 
 # Home
@@ -20,8 +19,6 @@ description: Details on the Home page of the Dorkinians Website
   - [Example Questions](#example-questions)
   - [Conversation History](#conversation-history)
 
-<PageBreak />
-
 ## Overview
 
 The Home page is the main entry point of the Dorkinians Website app. It features a chatbot interface that allows you to ask questions about player statistics, team performance, and club information.
@@ -40,18 +37,16 @@ E.g. "How many goals has Oli Goddard scored?"
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/660MVKSh/Homepage_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Homepage-Mobile.png"
     alt="Homepage Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/qMvjjYHR/Homepage_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Homepage-Desktop.png"
     alt="Homepage Desktop Screenshot"
   />
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Player Selection
 
@@ -89,8 +84,6 @@ To change your selected player:
 2. **Player Selector**: The player selector will reappear
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Chatbot Interface
 
@@ -147,3 +140,4 @@ Conversation history helps the chatbot understand context for follow-up question
 :::
 
 > [Back to Table of Contents](#table-of-contents)
+

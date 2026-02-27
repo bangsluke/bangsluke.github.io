@@ -1,6 +1,5 @@
 ---
 slug: /projects/dorkinians-website/settings-page
-description: Details on the Settings page of the Dorkinians Website
 ---
 
 # Settings
@@ -19,11 +18,9 @@ description: Details on the Settings page of the Dorkinians Website
   - [Updates To Come](#updates-to-come)
   - [Stat Limitations](#stat-limitations)
   - [Share Site](#share-site)
-  - [Report Bug / Request Feature](#report-bug-request-feature)
-  - [Data \& Privacy](#data-privacy)
+  - [Report Bug / Request Feature](#report-bug--request-feature)
+  - [Data \& Privacy](#data--privacy)
 - [Version Number](#version-number)
-
-<PageBreak />
 
 ## Overview
 
@@ -35,24 +32,22 @@ The Settings page is accessible from the header settings icon (the cog) on any p
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/qBL1crYP/Settings_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Settings-Mobile.png"
     alt="Settings Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/v8z07yks/Settings_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Settings-Desktop.png"
     alt="Settings Desktop Screenshot"
   />
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## PWA Installation
 
 The PWA Installation section provides options for installing the Dorkinians Website as a Progressive Web App on your device. This is highly recommended to do so as it provides a more native, app-like experience compared to using it in a browser.
 
-### <Tooltip text="Install prompt" definition="The browser or app dialog that asks the user if they want to add the PWA to their home screen or device." /> {#install-prompt}
+### Install Prompt
 
 The install prompt appears when:
 
@@ -61,7 +56,6 @@ The install prompt appears when:
 - Your browser supports PWA installation
 
 **To Install:**
-
 1. Tap the "Install App" button
 2. Follow your device's installation prompts
 3. The app will be added to your home screen or app drawer
@@ -71,8 +65,6 @@ PWA installation is supported on most modern mobile browsers and some desktop br
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Available Screens Navigation
 
@@ -99,8 +91,6 @@ Use the sub-page navigation to jump directly to a specific section without havin
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## App Information
 
@@ -130,13 +120,13 @@ A share site button is provided to allow you to share the app with others.
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Report Bug / Request Feature {#report-bug-request-feature}
+### Report Bug / Request Feature
 
 A report bug / request feature button is provided to allow you to report bugs or request features.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/VLTdZbQ4/Report_a_Bug_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Report-a-Bug-Mobile.png"
     alt="Report a Bug Mobile Screenshot"
   />
 </div>
@@ -151,13 +141,14 @@ Your feedback is valuable! The development team reviews all feedback to improve 
 
 > [Back to Table of Contents](#table-of-contents)
 
-### Data & Privacy {#data-privacy}
+
+### Data & Privacy
 
 The Settings page provides the ability to request data removal. To remove your name from the app, please submit a request using this form.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/DyD8pbkB/Data_Removal_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Data-Removal-Mobile.png"
     alt="Data Removal Mobile Screenshot"
   />
 </div>
@@ -213,8 +204,6 @@ If you dismiss the update toast, you can still update the app later from the Set
 :::
 
 > [Back to Table of Contents](#table-of-contents) -->
-
-<PageBreak />
 
 ## Version Number
 

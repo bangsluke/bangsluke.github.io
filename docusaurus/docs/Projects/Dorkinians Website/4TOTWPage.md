@@ -1,6 +1,5 @@
 ---
 slug: /projects/dorkinians-website/totw-page
-description: Details on the TOTW page and sub-pages of the Dorkinians Website
 ---
 
 # TOTW
@@ -20,19 +19,17 @@ description: Details on the TOTW page and sub-pages of the Dorkinians Website
   - [This Months Top Players](#this-months-top-players)
   - [This Month FTP Ranking and This Season FTP Ranking](#this-month-ftp-ranking-and-this-season-ftp-ranking)
 
-<PageBreak />
-
 ## Overview
 
 The TOTW (Team of the Week) section displays the best performing players each week and monthly top players.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/9XpLP2Sg/TOTW_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/TOTW-Mobile.png"
     alt="TOTW Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/8kHZdG9C/Players_of_the_Month_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Players-of-the-Month-Desktop.png"
     alt="Players of the Month Desktop Screenshot"
   />
 </div>
@@ -42,8 +39,6 @@ Team of the Week is calculated based on fantasy points earned in each match, wit
 :::
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Navigation
 
@@ -58,19 +53,17 @@ Navigate between the sub-pages on mobile devices by swiping left or right on the
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Team of the Week
 
 The Team of the Week displays the best performing players from each week, arranged in the highest scoring formation.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/9XpLP2Sg/TOTW_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/TOTW-Mobile.png"
     alt="TOTW Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/v8z07ykB/TOTW_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/TOTW-Desktop.png"
     alt="TOTW Desktop Screenshot"
   />
 </div>
@@ -119,26 +112,24 @@ If two players have the same total fantasy points, the player who has appeared i
 
 The Team of the Week is selected based on a fantasy points system. Points are awarded for various actions:
 
-| Action           | Points                                                                                     |
-| ---------------- | ------------------------------------------------------------------------------------------ |
-| Minutes Played   | 2 points for an appearance over 60 minutes, 1 point for an appearance less than 60 minutes |
-| Man of the Match | 3 points                                                                                   |
-| Goal Scored      | 4 points for a FWD, 5 points for a MID, 6 points for a DEF or GK                           |
-| Assist           | 3 points                                                                                   |
-| Clean Sheet      | 4 points for a DEF or GK, 1 point for a MID                                                |
-| Goal Conceded    | -1 point for each 2 goals conceded for a DEF or GK                                         |
-| Yellow Card      | -1 point                                                                                   |
-| Red Card         | -3 points                                                                                  |
-| Save             | 1 point for every 3 saves                                                                  |
-| Own Goal         | -2 points                                                                                  |
-| Penalty Scored   | Same as a goal scored, done by position                                                    |
-| Penalty Missed   | -2 points                                                                                  |
-| Penalty Conceded | 0 points                                                                                   |
-| Penalty Saved    | 5 points                                                                                   |
+| Action | Points |
+| --- | --- |
+| Minutes Played | 2 points for an appearance over 60 minutes, 1 point for an appearance less than 60 minutes |
+| Man of the Match | 3 points |
+| Goal Scored | 4 points for a FWD, 5 points for a MID, 6 points for a DEF or GK |
+| Assist | 3 points |
+| Clean Sheet | 4 points for a DEF or GK, 1 point for a MID |
+| Goal Conceded | -1 point for each 2 goals conceded for a DEF or GK |
+| Yellow Card | -1 point |
+| Red Card | -3 points |
+| Save | 1 point for every 3 saves |
+| Own Goal | -2 points |
+| Penalty Scored | Same as a goal scored, done by position |
+| Penalty Missed | -2 points |
+| Penalty Conceded | 0 points |
+| Penalty Saved | 5 points |
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Players of the Month
 
@@ -146,11 +137,11 @@ The Players of the Month section displays monthly award winners who have achieve
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/9XpLP2S8/Players_of_the_Month_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Players-of-the-Month-Mobile.png"
     alt="Players of the Month Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/8kHZdG9C/Players_of_the_Month_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Players-of-the-Month-Desktop.png"
     alt="Players of the Month Desktop Screenshot"
   />
 </div>
@@ -173,9 +164,10 @@ This section shows the current selected player's FTP ranking for the month and s
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/j5VzN72q/This-Month-FTP-Ranking-Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/This-Month-FTP-Ranking-Mobile.png"
     alt="This Month FTP Ranking Mobile Screenshot"
   />
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
+

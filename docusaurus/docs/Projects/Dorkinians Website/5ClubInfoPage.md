@@ -1,6 +1,5 @@
 ---
 slug: /projects/dorkinians-website/club-info-page
-description: Details on the Club Info page and sub-pages of the Dorkinians Website
 ---
 
 # Club Info
@@ -23,26 +22,22 @@ description: Details on the Club Info page and sub-pages of the Dorkinians Websi
 - [Club Awards](#club-awards)
 - [Useful Links](#useful-links)
 
-<PageBreak />
-
 ## Overview
 
 The Club Info section provides comprehensive information about Dorkinians FC, including club achievements, player milestones, league information, current and historical captains, individual awards, and useful external links.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/Wpn5mVKH/Club_Information_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Information-Mobile.png"
     alt="Club Information Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/gk2NN5bb/League_Information_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/League-Information-Desktop.png"
     alt="League Information Desktop Screenshot"
   />
 </div>
 
 > [Back to Table of Contents](#table-of-contents)
-
-<PageBreak />
 
 ## Navigation
 
@@ -60,19 +55,17 @@ Navigate between the sub-pages on mobile devices by swiping left or right on the
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Club Information
 
 The Club Information sub-page provides details about Dorkinians FC, including location information, club achievements and player milestones.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/Wpn5mVKH/Club_Information_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Information-Mobile.png"
     alt="Club Information Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/Wpn5mVC1/Club_Information_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Information-Desktop.png"
     alt="Club Information Desktop Screenshot"
   />
 </div>
@@ -97,19 +90,17 @@ The Milestones section displays significant achievements and records reached by 
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## League Information
 
 The League Information sub-page provides details about the leagues in which Dorkinians FC teams compete, and holds historical standings and results for each league.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/Pf4SbHc7/League_Information_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/League-Information-Mobile.png"
     alt="League Information Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/gk2NN5bb/League_Information_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/League-Information-Desktop.png"
     alt="League Information Desktop Screenshot"
   />
 </div>
@@ -141,7 +132,7 @@ The season progress section is an attempt to show the progress of all of the clu
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/tTL4S3WH/Season_Progress_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Season-Progress-Mobile.png"
     alt="Season Progress Mobile Screenshot"
   />
 </div>
@@ -156,7 +147,7 @@ The my seasons section is a list of all of the finishing positions of the select
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/rmvwn1x2/My_Seasons_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/My-Seasons-Mobile.png"
     alt="My Seasons Mobile Screenshot"
   />
 </div>
@@ -165,19 +156,17 @@ It contains all of the same features that the normal league details section has.
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Club Captains
 
 The Club Captains sub-page displays information about current and historical team captains.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/sfcTPz8b/Club_Captains_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Captains-Mobile.png"
     alt="Club Captains Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/pVZsQv42/Club_Captains_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Captains-Desktop.png"
     alt="Club Captains Desktop Screenshot"
   />
 </div>
@@ -188,19 +177,17 @@ Click on a captain's name to view all of their captaincies.
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Club Awards
 
 The Club Awards sub-page provides information about the club's individual awards.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/h4r28nww/Club_Awards_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Awards-Mobile.png"
     alt="Club Awards Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/05fVGvFx/Club_Awards_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Club-Awards-Desktop.png"
     alt="Club Awards Desktop Screenshot"
   />
 </div>
@@ -215,19 +202,17 @@ We have award information going back to the 1973/74 season which can be seen in 
 
 > [Back to Table of Contents](#table-of-contents)
 
-<PageBreak />
-
 ## Useful Links
 
 The Useful Links sub-page provides quick access to external resources and important links related to Dorkinians FC.
 
 <div className="sideBySide">
   <img
-    src="https://i.postimg.cc/MZD90w4N/Useful_Links_Mobile.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Useful-Links-Mobile.png"
     alt="Useful Links Mobile Screenshot"
   />
   <img
-    src="https://i.postimg.cc/nVk3Kxgf/Useful_Links_Desktop.png"
+    src="https://bangsluke-assets.netlify.app/images/dorkinians/Useful-Links-Desktop.png"
     alt="Useful Links Desktop Screenshot"
   />
 </div>
